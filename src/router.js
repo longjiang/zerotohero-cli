@@ -15,43 +15,43 @@ export default new Router({
       component: () => import('./views/Choose.vue')
     },
     {
-      path: '/:l1',
+      path: '/:l1/:l2',
       name: 'home',
       props: true,
       component: () => import('./views/Home.vue'),
       meta: {
-        title: 'English Zero to Hero',
+        title: 'Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Learn English from Zero and progress to Fluency.'
+            content: 'Learn from Zero and progress to Fluency.'
           }
         ]
       }
     },
     {
-      path: '/:l1/about-english-online-courses',
+      path: '/:l1/:l2/about-english-online-courses',
       name: 'courses',
       component: () => import('./views/Courses.vue'),
       props: true,
       meta: {
-        title: 'Online Courses | English Zero to Hero',
+        title: 'Online Courses | Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Achieve fluent communication and outstanding HSK results. Engaging, comprehensive and structured English courses at all CEFR levels. Learning is hard work, but it should never be boring, so we designed our courses to be concise yet fun and engaging.'
+              'Achieve fluent communication and outstanding HSK results. Engaging, comprehensive and structured courses at all CEFR levels. Learning is hard work, but it should never be boring, so we designed our courses to be concise yet fun and engaging.'
           }
         ]
       }
     },
     {
-      path: '/:l1/transfer',
+      path: '/:l1/:l2/transfer',
       name: 'transfer',
       component: () => import('./views/Transfer.vue'),
       props: true,
       meta: {
-        title: 'Transfer Purchases | English Zero to Hero',
+        title: 'Transfer Purchases | Zero to Hero',
         metaTags: [
           {
             name: 'description',
@@ -62,12 +62,12 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/video-count',
+      path: '/:l1/:l2/video-count',
       name: 'video-count',
       component: () => import('./views/VideoCount.vue'),
       props: true,
       meta: {
-        title: 'Video Count | English Zero To Hero',
+        title: 'Video Count | Zero To Hero',
         metaTags: [
           {
             name: 'description',
@@ -78,12 +78,12 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/pricing/:args?',
+      path: '/:l1/:l2/pricing/:args?',
       name: 'pricing',
       component: () => import('./views/Pricing.vue'),
       props: true,
       meta: {
-        title: 'Pricing | English Zero To Hero',
+        title: 'Pricing | Zero To Hero',
         metaTags: [
           {
             name: 'description',
@@ -94,12 +94,12 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/course-release-schedule',
+      path: '/:l1/:l2/course-release-schedule',
       name: 'course-release-schedule',
       component: () => import('./views/ReleaseSchedule.vue'),
       props: true,
       meta: {
-        title: 'Course Release Schedule | English Zero To Hero',
+        title: 'Course Release Schedule | Zero To Hero',
         metaTags: [
           {
             name: 'description',
@@ -110,13 +110,13 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/textbooks-workbooks',
+      path: '/:l1/:l2/textbooks-workbooks',
       name: 'textbooks-workbooks',
       component: () => import('./views/Textbooks.vue'),
       props: true,
       meta: {
         title:
-          'English Course Textbooks and Workbooks | English Zero To Hero',
+          'Course Textbooks and Workbooks | Zero To Hero',
         metaTags: [
           {
             name: 'description',
@@ -127,12 +127,12 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/faq',
+      path: '/:l1/:l2/faq',
       name: 'faq',
       component: () => import('./views/FAQ.vue'),
       props: true,
       meta: {
-        title: 'Frequently Asked Questions | English Zero To Hero',
+        title: 'Frequently Asked Questions | Zero To Hero',
         metaTags: [
           {
             name: 'description',
@@ -143,41 +143,41 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/dictionary/:method?/:args?',
+      path: '/:l1/:l2/dictionary/:method?/:args?',
       name: 'dictionary',
       props: true,
       component: () => import('./views/Dictionary.vue'),
       meta: {
-        title: 'Dictionary | English Zero to Hero',
+        title: 'Dictionary | Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Look up and learn English words.'
+            content: 'Look up and learn words.'
           }
         ]
       }
     },
     {
-      path: '/:l1/phrase/:method?/:args?',
+      path: '/:l1/:l2/phrase/:method?/:args?',
       name: 'phrase',
       component: () => import('./views/Phrase.vue'),
       props: true,
       meta: {
-        title: 'Phrase | English Zero to Hero',
+        title: 'Phrase | Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'See how English phrases are used in real context..'
+            content: 'See how phrases are used in real context..'
           }
         ]
       }
     },
     {
-      path: '/:l1/saved-words',
+      path: '/:l1/:l2/saved-words',
       name: 'saved-words',
       component: () => import('./views/SavedWords.vue'),
       meta: {
-        title: 'Saved Words | English Zero to Hero',
+        title: 'Saved Words | Zero to Hero',
         metaTags: [
           {
             name: 'description',
@@ -187,166 +187,166 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/library',
+      path: '/:l1/:l2/library',
       name: 'library',
       component: () => import('./views/Library.vue'),
       props: true,
       meta: {
-        title: 'Library | English Zero to Hero',
+        title: 'Library | Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Read free, open English books with hover dictionary and save new words for review.'
+              'Read free, open books with hover dictionary and save new words for review.'
           }
         ]
       }
     },
     {
-      path: '/:l1/reader/:method?/:arg?',
+      path: '/:l1/:l2/reader/:method?/:arg?',
       name: 'reader',
       component: () => import('./views/Reader.vue'),
       meta: {
-        title: 'Reader | English Zero to Hero',
+        title: 'Reader | Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Read English text with annotation and save new words for review.'
+              'Read text with annotation and save new words for review.'
           }
         ]
       }
     },
     {
-      path: '/:l1/book/chapter/:args?',
+      path: '/:l1/:l2/book/chapter/:args?',
       name: 'book-chapter',
       component: () => import('./views/BookChapter.vue'),
       props: true,
       meta: {
-        title: 'Book Chapter | English Zero to Hero',
+        title: 'Book Chapter | Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Read free, open English books with hover dictionary and save new words for review.'
+              'Read free, open books with hover dictionary and save new words for review.'
           }
         ]
       }
     },
     {
-      path: '/:l1/book/index/:args?',
+      path: '/:l1/:l2/book/index/:args?',
       name: 'book-index',
       component: () => import('./views/BookIndex.vue'),
       props: true,
       meta: {
-        title: 'Book | English Zero to Hero',
+        title: 'Book | Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Read free, open English books with hover dictionary and save new words for review.'
+              'Read free, open books with hover dictionary and save new words for review.'
           }
         ]
       }
     },
     {
-      path: '/:l1/book/list/:args?',
+      path: '/:l1/:l2/book/list/:args?',
       name: 'book-list',
       component: () => import('./views/BookList.vue'),
       props: true,
       meta: {
-        title: 'Books | English Zero to Hero',
+        title: 'Books | Zero to Hero',
         metaTags: [
           {
             name: 'description',
             content:
-              'Read free, open English books with hover dictionary and save new words for review.'
+              'Read free, open books with hover dictionary and save new words for review.'
           }
         ]
       }
     },
     {
-      path: '/:l1/youtube/search/:args?',
+      path: '/:l1/:l2/youtube/search/:args?',
       name: 'youtube-search',
       component: () => import('./views/YouTubeSearch.vue'),
       props: true,
       meta: {
-        title: 'YouTube Reader | English Zero to Hero',
+        title: 'YouTube Reader | Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Watch English YouTube videos and study the subtitles.'
+            content: 'Watch YouTube videos and study the subtitles.'
           }
         ]
       }
     },
     {
-      path: '/:l1/youtube/view/:args?',
+      path: '/:l1/:l2/youtube/view/:args?',
       name: 'youtube-view',
       component: () => import('./views/YouTubeView.vue'),
       props: true,
       meta: {
-        title: 'YouTube Reader | English Zero to Hero',
+        title: 'YouTube Reader | Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Watch English YouTube videos and study the subtitles.'
+            content: 'Watch YouTube videos and study the subtitles.'
           }
         ]
       }
     },
     {
-      path: '/:l1/youtube/browse/:args?',
+      path: '/:l1/:l2/youtube/browse/:args?',
       name: 'youtube-browse',
       component: () => import('./views/YouTubeBrowse.vue'),
       props: true,
       meta: {
-        title: 'Study YouTube Subtitles | English Zero to Hero',
+        title: 'Study YouTube Subtitles | Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Watch English YouTube videos and study the subtitles.'
+            content: 'Watch YouTube videos and study the subtitles.'
           }
         ]
       }
     },
     {
-      path: '/:l1/youtube/channel/:args?',
+      path: '/:l1/:l2/youtube/channel/:args?',
       name: 'youtube-channel',
       component: () => import('./views/YouTubeChannel.vue'),
       props: true,
       meta: {
-        title: 'Study YouTube Subtitles | English Zero to Hero',
+        title: 'Study YouTube Subtitles | Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Watch English YouTube videos and study the subtitles.'
+            content: 'Watch YouTube videos and study the subtitles.'
           }
         ]
       }
     },
     {
-      path: '/:l1/youtube/playlist/:args?',
+      path: '/:l1/:l2/youtube/playlist/:args?',
       name: 'youtube-playlist',
       component: () => import('./views/YouTubePlaylist.vue'),
       props: true,
       meta: {
-        title: 'Study YouTube Subtitles | English Zero to Hero',
+        title: 'Study YouTube Subtitles | Zero to Hero',
         metaTags: [
           {
             name: 'description',
-            content: 'Watch English YouTube videos and study the subtitles.'
+            content: 'Watch YouTube videos and study the subtitles.'
           }
         ]
       }
     },
     {
-      path: '/:l1/contact-us',
+      path: '/:l1/:l2/contact-us',
       name: 'contact',
       component: () => import('./views/Contact.vue'),
       props: true,
       meta: {
-        title: 'Contact Us | English Zero to Hero',
+        title: 'Contact Us | Zero to Hero',
         metaTags: [
           {
             name: 'description',
@@ -356,12 +356,12 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/faq',
+      path: '/:l1/:l2/faq',
       name: 'faq',
       component: () => import('./views/FAQ.vue'),
       props: true,
       meta: {
-        title: 'Frequently Asked Questions | English Zero To Hero',
+        title: 'Frequently Asked Questions | Zero To Hero',
         metaTags: [
           {
             name: 'description',
@@ -372,12 +372,12 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/affiliate-program',
+      path: '/:l1/:l2/affiliate-program',
       name: 'affiliate-program',
       component: () => import('./views/Affiliate.vue'),
       props: true,
       meta: {
-        title: 'Affiliate Program | English Zero To Hero',
+        title: 'Affiliate Program | Zero To Hero',
         metaTags: [
           {
             name: 'description',
@@ -387,11 +387,11 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/settings',
+      path: '/:l1/:l2/settings',
       name: 'settings',
       component: () => import('./views/Settings.vue'),
       meta: {
-        title: 'Settings | English Zero to Hero',
+        title: 'Settings | Zero to Hero',
         metaTags: [
           {
             name: 'description',
