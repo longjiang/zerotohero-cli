@@ -1,5 +1,5 @@
 <template>
-  <a :href="`#/${$lang.code}/youtube/channel/${channel.id}`" class="link-unstyled channel">
+  <a :href="`#/${$l1.code}/youtube/channel/${channel.id}`" class="link-unstyled channel">
     <img :src="channel.avatar" class="channel-avatar" alt />
     <div class="channel-body">
       <h6>

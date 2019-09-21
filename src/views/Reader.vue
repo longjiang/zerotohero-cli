@@ -52,7 +52,7 @@
             <li>
               {{ $t('Look for English music lyrics on Google.') }}
             </li>
-            <li v-html="$t('libraryIntro', {lang: $lang.code})" />
+            <li v-html="$t('libraryIntro', {lang: $l1.code})" />
           </ul>
         </div>
       </div>

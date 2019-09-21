@@ -12,7 +12,7 @@
           <li v-for="booklist in booklists" class="text-center mb-5">
             <a
               class="link-unstyled"
-              :href="`#/${$lang.code}/book/list/${encodeURIComponent(booklist.url)}`"
+              :href="`#/${$l1.code}/book/list/${encodeURIComponent(booklist.url)}`"
             >
               <img
                 :src="`/img/books-${Math.floor(Math.random() * 10)}.png`"
@@ -39,7 +39,7 @@
             placeholder="Enter the URL of a book from one of the sites below."
             :action="
               url => {
-                location.hash = `#/${$lang.code}/book/index/${encodeURIComponent(url)}`
+                location.hash = `#/${$l1.code}/book/index/${encodeURIComponent(url)}`
               }
             "
             class="mb-3"
@@ -53,7 +53,7 @@
           <ul>
             <li v-for="source in sources">
               {{ source.name }}, example URL:
-              <code v-html="`${source.example($lang.code)}`"></code>
+              <code v-html="`${source.example($l1.code)}`"></code>
             </li>
           </ul>
         </div>

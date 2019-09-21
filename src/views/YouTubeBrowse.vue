@@ -8,7 +8,7 @@
           :placeholder="$t('Enter a search term in English...')"
           :action="
             url => {
-              location.hash = `#/${$lang.code}/youtube/search/${encodeURIComponent(url)}`
+              location.hash = `#/${$l1.code}/youtube/search/${encodeURIComponent(url)}`
             }
           "
           ref="search"
@@ -81,7 +81,7 @@ export default {
   data() {
     return {
       location,
-      channels: this.$lang.options.youtube.channels
+      channels: this.$l1.options.youtube.channels
     }
   }
 }

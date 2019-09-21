@@ -96,15 +96,15 @@ export default {
   },
   computed: {
     stateSavedWords() {
-      return this.$store.state.savedWords[this.$lang.code]
+      return this.$store.state.savedWords[this.$l1.code]
     }
   },
   methods: {
     async updateWords() {
       this.savedWords = []
       this.savedTexts = []
-      if(this.$store.state.savedWords && this.$store.state.savedWords[this.$lang.code]) {
-        for (let wordForms of this.$store.state.savedWords[this.$lang.code]) {
+      if(this.$store.state.savedWords && this.$store.state.savedWords[this.$l1.code]) {
+        for (let wordForms of this.$store.state.savedWords[this.$l1.code]) {
           let word = await (await this.$dictionary).lookup(wordForms[0])
           if (word) {
             this.savedWords.push(word)
@@ -151,7 +151,7 @@ export default {
         'Are you sure you want to remove all your saved words?'
       )
       if (confirmed) {
-        this.$store.dispatch('removeAllSavedWords', this.$lang.code)
+        this.$store.dispatch('removeAllSavedWords', this.$l1.code)
         $('.export-wrapper').toggleClass('hidden', true)
       }
     }

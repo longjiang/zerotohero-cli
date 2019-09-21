@@ -18,7 +18,7 @@ export default {
     goto() {
       if (this.url) {
         let id = this.url.replace('https://youtu.be/', '').replace(/.*\?v=([^&]*).*/, '$1')
-        location.hash = `#/${this.$lang.code}/youtube/view/` + id
+        location.hash = `#/${this.$l1.code}/youtube/view/` + id
       }
     }
   }

@@ -5,7 +5,7 @@
       placeholder="Enter the URL of a book list from a variety of eBook websites"
       :action="
         url => {
-          location.hash = `#/${this.$lang.code}/book/list/${encodeURIComponent(url)}`
+          location.hash = `#/${this.$l1.code}/book/list/${encodeURIComponent(url)}`
         }
       "
       ref="search"
@@ -13,7 +13,7 @@
     />
     <ul class="list-unstyled booklist">
       <li v-for="book in booklist" class="booklist-item text-center">
-        <a :href="`#/${$lang.code}/book/index/${encodeURIComponent(book.url)}`" class="link-unstyled">
+        <a :href="`#/${$l1.code}/book/index/${encodeURIComponent(book.url)}`" class="link-unstyled">
           <img
             :src="
               book.thumbnail
@@ -69,7 +69,7 @@ export default {
       let url = decodeURIComponent(this.args)
       this.$refs.search.text = url
       this.booklist = []
-      this.booklist = await Library.getBooklist(url, this.$lang.code)
+      this.booklist = await Library.getBooklist(url, this.$l1.code)
     }
   },
   async mounted() {

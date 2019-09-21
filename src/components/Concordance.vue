@@ -25,7 +25,7 @@
       <div v-if="examples && examples.length === 0">
         Sorry, we could not find any “{{ term }}” examples. You can set a
         different corpus in
-        <a :href="`#/${$lang.code}/settings`">Settings</a>.
+        <a :href="`#/${$l1.code}/settings`">Settings</a>.
       </div>
       <hr v-if="examples && examples.length === 0" />
       <div class="mt-4">
@@ -108,7 +108,7 @@ export default {
       this.words = [this.term].concat(forms)
       this.examples = await SketchEngine.concordance({
         term: this.term,
-        lang: this.$lang.code
+        lang: this.$l1.code
       })
       this.concordanceKey += 1
     }

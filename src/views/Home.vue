@@ -100,11 +100,11 @@ export default {
     redirect() {
       if (
         !(
-          this.$lang.options.features &&
-          this.$lang.options.features.includes('home')
+          this.$l1.options.features &&
+          this.$l1.options.features.includes('home')
         )
       ) {
-        location.hash = `/${this.$lang.code}/dictionary`
+        location.hash = `/${this.$l1.code}/dictionary`
       }
     }
   }

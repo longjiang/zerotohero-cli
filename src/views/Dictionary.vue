@@ -124,7 +124,7 @@ export default {
   },
   data() {
     return {
-      langName: this.$lang.name,
+      langName: this.$l1.name,
       entry: undefined,
       characters: [],
       character: {},
@@ -139,7 +139,7 @@ export default {
     },
     show(entry) {
       this.entry = entry
-      document.title = `${entry.bare} (${entry.l1}) | ${this.$lang ? this.$lang.name : ''} Zero to Hero`
+      document.title = `${entry.bare} (${entry.l1}) | ${this.$l1 ? this.$l1.name : ''} Zero to Hero`
     },
     async route() {
       if (this.method && this.args) {
@@ -158,7 +158,7 @@ export default {
     },
     async random() {
       let randomId = (await (await this.$dictionary).random()).id
-      location.hash = `#/${this.$lang.code}/dictionary/freedict/${randomId}`
+      location.hash = `#/${this.$l1.code}/dictionary/freedict/${randomId}`
     }
   },
   watch: {

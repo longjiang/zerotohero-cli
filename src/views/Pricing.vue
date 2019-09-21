@@ -203,7 +203,7 @@ export default {
       this.currency = this.args
     },
     currency() {
-      location.hash = `#/${this.$lang.code}/pricing/${this.currency}`
+      location.hash = `#/${this.$l1.code}/pricing/${this.currency}`
     }
   },
   created() {

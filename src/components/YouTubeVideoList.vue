@@ -1,7 +1,7 @@
 <template>
   <div class="youtube-videos">
     <div v-for="video of videos" class="youtube-video media rounded shadow">
-      <a :href="`#/${$lang.code}/youtube/view/${video.id}`" class="youtube-link">
+      <a :href="`#/${$l1.code}/youtube/view/${video.id}`" class="youtube-link">
         <div class="youtube-thumbnail-wrapper aspect-wrapper">
           <img :src="video.thumbnail" class="youtube-thumbnail aspect" />
         </div>

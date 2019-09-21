@@ -29,7 +29,7 @@
         Sorry, we could not find any “{{ term }}” collocations in this corpus
         (dataset). You can set a different corpus in
         <a
-          :href="`#/${$lang.code}/settings`"
+          :href="`#/${$l1.code}/settings`"
         >Settings</a>.
       </div>
       <hr />
@@ -75,7 +75,7 @@ export default {
       this.sketch = undefined
       this.sketch = await SketchEngine.wsketch({
         term: this.term,
-        lang: this.$lang.code
+        lang: this.$l1.code
       })
       this.colDesc = await SketchEngine.collocationDescription(this.term)
     },

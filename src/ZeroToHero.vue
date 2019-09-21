@@ -5,11 +5,11 @@
         <div class="container">
           <div class="row mb-4">
             <div class="col-sm-12 text-center pt-3">
-              <router-link :to="`/${$lang.code}`">
-                <EnglishLogo :language="$lang" style="transform: scale(1.5)" />
+              <router-link :to="`/${$l1.code}`">
+                <EnglishLogo :language="$l1" style="transform: scale(1.5)" />
               </router-link>
               <a
-                v-if="$lang.options.features && $lang.options.features.includes('courses')"
+                v-if="$l1.options.features && $l1.options.features.includes('courses')"
                 class="btn btn-success btn-sign-in text-white"
                 href="https://wazuc.duanshu.com/#/"
                 target="_blank"
@@ -56,15 +56,15 @@
               <p>
                 <b>Zero to Hero Education, Canada.</b>
               </p>
-              <p v-if="$lang.enDictionary">
+              <p v-if="$l1.enDictionary">
                 <b>Credits:</b>
-                {{ $lang.name }}-English dictionary data from
+                {{ $l1.name }}-English dictionary data from
                 <span
-                  v-if="$lang.enDictionary === 'freedict'"
+                  v-if="$l1.enDictionary === 'freedict'"
                 >
                   <a href="https://freedict.org/">freedict.org</a>
                 </span>
-                <span v-if="$lang.enDictionary === 'ecdict'">
+                <span v-if="$l1.enDictionary === 'ecdict'">
                   <a href="https://github.com/skywind3000/ECDICT">ECDICT</a>
                 </span>
                 .
@@ -136,25 +136,25 @@ export default {
         } else {
           // first time loading, set the language
           this.lang = this.$route.params.lang
-          Vue.prototype.$lang = this.languages.find(
+          Vue.prototype.$l1 = this.languages.find(
             lang => lang.code === this.$route.params.lang
           )
           if (!Vue.prototype.$dictionary) {
             Vue.prototype.$dictionary = Dict.load({
-              dict: this.$lang.enDictionary,
+              dict: this.$l1.enDictionary,
               lang: this.lang
             })
           }
-          this.$lang.options = (await import(
-            `@/lib/langs/${this.$lang.code}.js`
+          this.$l1.options = (await import(
+            `@/lib/langs/${this.$l1.code}.js`
           )).default
           let enOptions = (await import(`@/lib/langs/en.js`)).default
           this.$i18n.setLocaleMessage('en', enOptions.translations)
           this.$i18n.setLocaleMessage(
-            this.$lang.code,
-            this.$lang.options.translations
+            this.$l1.code,
+            this.$l1.options.translations
           )
-          this.$i18n.locale = this.$lang.code
+          this.$i18n.locale = this.$l1.code
           this.langLoaded = true
         }
       }

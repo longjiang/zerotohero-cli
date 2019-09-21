@@ -6,7 +6,7 @@
           placeholder="Enter the URL of a book chapter from a variety of eBook websites"
           :action="
             url => {
-              location.hash = `#/${$lang.code}/book/chapter/${encodeURIComponent(url)}`
+              location.hash = `#/${$l1.code}/book/chapter/${encodeURIComponent(url)}`
             }
           "
           ref="search"
@@ -33,7 +33,7 @@
               chapterContent.replace(
                 /href=&quot;([^&quot;]+)&quot;/g,
                 (match, p1) =>
-                  `href=&quot;#/${$lang.code}/book/chapter/${encodeURIComponent(p1)}&quot;`
+                  `href=&quot;#/${$l1.code}/book/chapter/${encodeURIComponent(p1)}&quot;`
               )
             "
           />
@@ -51,7 +51,7 @@
       <div class="col-md-4 text-center" :key="'book-' + bookTitle">
         <a
           :href="
-            bookURL ? `#/${$lang.code}/book/index/${encodeURIComponent(bookURL)}` : false
+            bookURL ? `#/${$l1.code}/book/index/${encodeURIComponent(bookURL)}` : false
           "
           class="link-unstyled"
         >
@@ -98,9 +98,9 @@
               'link-unstyled': true,
               active:
                 location.hash ===
-                `#/${$lang.code}/book/chapter/${encodeURIComponent(chapter.url)}`
+                `#/${$l1.code}/book/chapter/${encodeURIComponent(chapter.url)}`
             }"
-            :href="`#/${$lang.code}/book/chapter/${encodeURIComponent(chapter.url)}`"
+            :href="`#/${$l1.code}/book/chapter/${encodeURIComponent(chapter.url)}`"
             ><span>{{ chapter.title }}</span></Annotate
           >
         </div>
@@ -185,8 +185,8 @@ export default {
       this.$refs.search.text = url
       this.chapterTitle = ''
       this.chapterContent = ''
-      if(this.$lang.options.library && this.$lang.options.library.sources) {
-        await Library.setLangSources(this.$lang.options.library.sources)
+      if(this.$l1.options.library && this.$l1.options.library.sources) {
+        await Library.setLangSources(this.$l1.options.library.sources)
       }
       let chapter = await Library.getChapter(url)
       if (chapter) {
@@ -202,10 +202,10 @@ export default {
       }
     },
     previousClick() {
-      location.hash = `#/${this.$lang.code}/book/chapter/${encodeURIComponent(this.previous)}`
+      location.hash = `#/${this.$l1.code}/book/chapter/${encodeURIComponent(this.previous)}`
     },
     nextClick() {
-      location.hash = `#/${this.$lang.code}/book/chapter/${encodeURIComponent(this.next)}`
+      location.hash = `#/${this.$l1.code}/book/chapter/${encodeURIComponent(this.next)}`
     }
   },
   async mounted() {

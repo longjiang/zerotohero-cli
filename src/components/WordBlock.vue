@@ -47,7 +47,7 @@
             <span style="color: #999" v-if="word.pronunciation">/{{ word.pronunciation }}/</span>
             <Speak :text="word.bare" :mp3="word.audio" class="ml-1" />
           </div>
-          <a :href="`#/${$lang.code}/dictionary/freedict/${words[0].id}`">
+          <a :href="`#/${$l1.code}/dictionary/freedict/${words[0].id}`">
             <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ word.accented }}</b>
           </a>
           <span
@@ -151,7 +151,7 @@ export default {
         this.speak(this.text)
         this.$store.dispatch('addSavedWord', {
           wordForms: await this.allForms(),
-          lang: this.$lang.code
+          lang: this.$l1.code
         })
       }
       this.saved = !this.saved

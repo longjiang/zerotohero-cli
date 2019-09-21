@@ -35,19 +35,19 @@
             v-else-if="!loading && hasSubtitles"
           />
           <div v-else-if="!loading && !hasSubtitles" class="jumbotron pt-4 pb-3 bg-light">
-            <h6>Sorry, this YouTube video does not have {{ $lang.name }} closed captions.</h6>
+            <h6>Sorry, this YouTube video does not have {{ $l1.name }} closed captions.</h6>
             <p>
               You can tell if a YouTube video has closed captions by clicking on
               the
               <b>CC</b> icon in the player bar, and click on the
               <i class="fas fa-cog"></i>next to it. If you can find the
               subtitle with the language
-              <b>{{ $lang.name }}</b>
-              then the video has {{ $lang.name }}
+              <b>{{ $l1.name }}</b>
+              then the video has {{ $l1.name }}
               subtitles.
             </p>
             <p>
-              To look for videos with t{{ $lang.name }} subtitles, search with a {{ $lang.name }}
+              To look for videos with t{{ $l1.name }} subtitles, search with a {{ $l1.name }}
               keyword, and click
               <b>Filter</b>, then
               <b>CC</b>.
@@ -121,9 +121,9 @@ export default {
       this.loading = true
       let chosenLanguage
       const promises = []
-      let languages = [this.$lang.code]
-      if (this.$lang.options.locales) {
-        languages = languages.concat(this.$lang.options.locales)
+      let languages = [this.$l1.code]
+      if (this.$l1.options.locales) {
+        languages = languages.concat(this.$l1.options.locales)
       }
       for (let language of languages) {
         promises.push(

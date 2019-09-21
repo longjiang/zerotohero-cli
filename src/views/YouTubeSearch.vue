@@ -5,7 +5,7 @@
       :placeholder="`Enter a search term in English...`"
       :action="
         url => {
-          location.hash = `#/${$lang.code}/youtube/search/${encodeURIComponent(url)}`
+          location.hash = `#/${$l1.code}/youtube/search/${encodeURIComponent(url)}`
         }
       "
       ref="search"

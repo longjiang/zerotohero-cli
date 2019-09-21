@@ -8,7 +8,7 @@
           </h1>
           <div>
             <h4>{{ $t('Text Corpus Settings') }}</h4>
-            <p v-if="$lang.code === 'zh'">
+            <p v-if="$l1.code === 'zh'">
               <a
                 href="https://baike.baidu.com/item/%E8%AF%AD%E6%96%99%E5%BA%93"
                 target="_blank"

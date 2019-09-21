@@ -13,7 +13,7 @@
       <a
         v-if="random"
         class="btn btn-secondary btn-random ml-2"
-        :href="`#/${$lang.code}/dictionary/freedict/random`"
+        :href="`#/${$l1.code}/dictionary/freedict/random`"
       >
         <i class="fas fa-random mr-1"></i>
         <span>{{ $t('Random') }}</span>
@@ -92,7 +92,7 @@ export default {
       type: Function,
       default: function(entry) {
         if (entry) {
-          return `#/${this.$lang.code}/dictionary/freedict/${entry.id}`
+          return `#/${this.$l1.code}/dictionary/freedict/${entry.id}`
         }
       }
     },

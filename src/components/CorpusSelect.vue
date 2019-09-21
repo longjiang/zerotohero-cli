@@ -22,7 +22,7 @@
             <input
               type="radio"
               :value="corpus.corpname"
-              :checked="corpus.corpname === SketchEngine.corpname($lang.code)"
+              :checked="corpus.corpname === SketchEngine.corpname($l1.code)"
               v-model="corpname"
             />
           </td>
@@ -54,13 +54,13 @@ export default {
   data() {
     return {
       SketchEngine,
-      corpname: SketchEngine.corpname(this.$lang.code)
+      corpname: SketchEngine.corpname(this.$l1.code)
     }
   },
   watch: {
     corpname() {
       let corpnames = JSON.parse(localStorage.getItem('ezhCorpnames')) || {}
-      corpnames[this.$lang.code] = this.corpname
+      corpnames[this.$l1.code] = this.corpname
       localStorage.setItem('ezhCorpnames', JSON.stringify(corpnames))
       location.reload() // Otherwise users won't see the new collocations and example sentences, leaving them confused.
     }

@@ -4,7 +4,7 @@
       v-for="playlist of playlists"
       class="youtube-playlist media rounded shadow"
     >
-      <a :href="`#/${$lang.code}/youtube/playlist/${playlist.id}`" class="playlist-link">
+      <a :href="`#/${$l1.code}/youtube/playlist/${playlist.id}`" class="playlist-link">
         <div class="youtube-thumbnail-wrapper aspect-wrapper">
           <img :src="playlist.thumbnail" class="youtube-thumbnail aspect" />
         </div>

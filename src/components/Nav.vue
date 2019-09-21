@@ -1,7 +1,7 @@
 <template>
   <nav class="tabs">
     <router-link
-      v-if="$lang.options.features && $lang.options.features.includes('courses')"
+      v-if="$l1.options.features && $l1.options.features.includes('courses')"
       :class="{
         tab: true,
         'router-link-active':
@@ -78,7 +78,7 @@
 export default {
   data() {
     return {
-      lang: this.$lang
+      lang: this.$l1
     }
   }
 }
