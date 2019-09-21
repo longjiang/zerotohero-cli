@@ -1,0 +1,2831 @@
+
+00-database-dictfmt-1.12.1
+English-Irish FreeDict Dictionary
+
+Maintainer: [up for grabs]
+
+Edition: 0.3.2
+Size: 1359 headwords
+
+Publisher: FreeDict.
+
+
+Availability:
+
+    Copyright (C) 1999-2017 by various authors listed below.
+    Available under the terms of the GNU General Public License ver. 2.0 and
+  any later version.
+    This program is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by the
+  Free Software Foundation; either version 2 of the License, or (at your
+  option) any later version.
+    This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+  Public License for more details.
+    You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+Published at: http://freedict.org/
+
+Notes:
+
+ * Database Status: too small
+
+
+Source(s):
+
+  Home: http://www.travlang.com/ This Database was generated from Ergane.
+
+The Project:
+
+  This dictionary comes to you through nice people making it available for
+  free and for good. It is part of the FreeDict project,
+  http://freedict.org/. This project aims to make translating dictionaries
+  available for free. Your contributions are welcome!
+
+Changelog:
+
+ * 2017-12-02 Sebastian Humenda ver. 0.3.2:
+   * update licencing stanza (Thanks to Karl Bartel)
+   * remove duplicated translations and empty XML nodes
+ * 2010-10-30 Piotr Bański:
+   Conversion of TEI P4 source into P5 via tools/freedict_P4toP5.xsl;
+   manual clean-up. Database name changed from eng-iri to eng-gle, in
+   accordance with ISO 639-3.
+ * 2007-09-20 Jimmy O'Regan:
+   Fixed some spelling mistakes: Ú instead of á, bh instead of v
+ * 2005-06-13 Michael Bunk:
+   Deleted line 95-11797 of the previous revision, since all entries
+   appeared twice, first without pronunciation then with pronunciation.
+ * 2005-02-11 Michael Bunk:
+   Converted file to TEI P4
+ * 2000-04-09 Horst Eyermann:
+   Phonetics added - machine generated from MBRODICT,
+   http://tcts.fpms.ac.be/synthesis/mbrdico
+ * 2000-04-03 Horst Eyermann:
+   Database was converted to TEI format and checked into CVS
+ * 2000-01-01 Horst Eyermann:
+   This Database was generated from ergane, http://www.travlang.com -
+   Thanks!
+English-Irish FreeDict Dictionary ver. 0.3.2
+Abyssinia /əbisiniə/
+An Aetóip
+Afghanistan /æfgænistɑːn/
+An Afganastáin
+Africa /æfrikə/
+An Afraic
+Albania /ælbeiniə/
+An Albáin
+Albanian /ælbeiniən/
+Albáinis
+Albanian language /ælbeiniənlæŋgwidʒ/
+Albáinis
+Algeria /ældʒiəriə/
+An Ailgéir
+Alps /ælps/
+Alpa
+Amazon /æməzən/
+Amasóin
+America /əmerikə/
+Meiriceá
+Amsterdam /æmstədæm/
+Amsterdam
+Andes /ændez/
+Aindéis
+Apennines /əpenainz/
+Aipiníní
+April /eiprəl/
+an tAibreán
+Argentina /ɑːdʒəntiːnə/
+An Airgintín
+Asia /əʃiə/
+An Áise
+Athens /æθinz/
+An Aithin
+Atlantic /ætlæntik/
+Aigéan Alantach
+Atlantic Ocean /ætlæntikouʃən/
+Aigéan Alantach
+August /ɔːgəst/
+mí na Lúnasa
+Australia /ɔstreiliə/
+An Astráil
+Austria /ɔstriə/
+An Ostair
+Balkans /bəkænz/
+Balcáin
+Bangladesh /bæŋglədeʃ/
+An Bhanglaidéis
+Basque /beisk/
+Bascais
+Basque language /beisklæŋgwidʒ/
+Bascais
+Belfast /belfɑːst/
+Béal Feirste
+Belgium /beldʒəm/
+An Bheilg
+Berlin /bəːlin/
+Beirlín
+Bethlehem /beθliːhiːm/
+An Bheithil
+Bible /baibl/
+Bíobla
+Brazil /brəzil/
+An Bhrasaíl
+Bretagne /britæn/
+An Bhriotáin
+Bristol /bristl/
+Briostó
+Britain /britn/
+An Bhreatain, An Bhreatain Mhór
+Brittany /britɑːniː/
+An Bhriotáin
+Brussels /brʌslz/
+An Bhruiséil
+Bucharest /butʃɛərist/
+Búcairist
+Budapest /bjuːdəpest/
+Búdaipeist
+Bulgaria /bʌlgɛəriə/
+An Bhulgáir
+Burma /bəːmə/
+Burma
+Byzantium /bizænʃaim/
+An Bhiosáint
+Cairo /kairou/
+Caireo
+Calcutta /kælkʌtə/
+Calcúta
+Cameroon /kæməruːn/
+Camarún
+Canada /kænədə/
+Ceanada
+Capricorn /kæprikɔːn/
+an Gabhar
+Celt /kelt/
+Ceilteach
+Celtic /keltik/
+Ceilteach
+Chile /kiəl/
+An tSile
+China /tʃainə/
+An tSín
+Chinese /tʃainiːz/
+Sínis
+Chinese language /tʃainiːzlæŋgwidʒ/
+Sínis
+Christ /kraist/
+Críost
+Cork /kɔːk/
+Corcaigh
+Corsica /kɔːsikə/
+An Chorsaic
+Costa Rica /kɔstəraikə/
+Cósta Ríce
+Crete /kret/
+An Chréit
+Cuba /kjuːbə/
+Cúba
+Cyprus /saiprəs/
+An Chipir
+Danish /deiniʃ/
+Danmhairgis
+Danish language /deiniʃlæŋgwidʒ/
+Danmhairgis
+December /disembər/
+mí na Nollag
+Denmark /denmɑːk/
+An Danmhairg
+Derry /dɑːriː/
+Doire
+Dublin /dʌblin/
+Baile Átha Cliath
+Dutch /dʌtʃ/
+Ollainnis
+Dutch language /dʌtʃlæŋgwidʒ/
+Ollainnis
+Easter /iːstər/
+Cáisc
+Ecuador /ekwədɔːr/
+Eacuadór
+Edinburgh /edinbrə/
+Dún Éideann
+Egypt /edʒipt/
+An Éigipt
+England /iŋglənd/
+Sasana
+English /iŋgliʃ/
+Béarla
+English language /iŋgliʃlæŋgwidʒ/
+Béarla
+Ethiopia /iːθioupiə/
+An Aetóip
+Europa /jeəroupə/
+An Eoraip
+Europe /jeərəp/
+An Eoraip
+February /febjeəriː/
+Feabhra, mí na Feabhra
+Finland /finlənd/
+An Fhionlainn
+France /frɑːns/
+An Fhrainc
+French /frentʃ/
+Fraincis
+French language /frentʃlæŋgwidʒ/
+Fraincis
+Friday /fraidiː/
+an Aoine
+Gaelic /geilik/
+Gaeilge
+Gaelic language /geiliklæŋgwidʒ/
+Gaeilge
+German /dʒəːmən/
+1. Gearmánach
+2. Gearmáinis
+Germany /dʒəːməniː/
+An Ghearmáin
+German language /dʒəːmənlæŋgwidʒ/
+Gearmáinis
+Ghana /gɑːnə/
+Gána
+Glasgow /glæzgou/
+Glaschú
+God /gɔd/
+Dia
+God's acre /gɔdzeikər/
+cill, reilig
+Great Britain /greitbritn/
+An Bhreatain, An Bhreatain Mhór
+Greece /gris/
+An Ghréig
+Greenland /griːenlənd/
+An Ghraonlainn
+Guatemala /gwɑːtəmɑːlə/
+Guatemala
+Hebrew /hiːbruː/
+Eabhrais
+Hebrew language /hiːbruːlæŋgwidʒ/
+Eabhrais
+Helsinki /helsiŋkiː/
+Heilsincí
+Holland /hɔlənd/
+1. An Ollainn
+2. An Ísiltír
+Hungary /hʌŋgəriː/
+An Ungáir
+Iceland /aislənd/
+An Íoslainn
+India /indiə/
+An India
+Indonesia /indəniːziə/
+An Indinéis
+Iran /irɑːn/
+An Iaráin
+Iraq /irɑːk/
+An Iaráic
+Ireland /aiələnd/
+Éire
+Israel /izreil/
+Iosrael
+Istanbul /istænbul/
+Iostanbúl
+Italian /itæliən/
+Iodáilis
+Italian language /itæliənlæŋgwidʒ/
+Iodáilis
+Italy /itəliː/
+An Iodáil
+Jamaica /dʒəmeikə/
+Iamáice
+January /dʒænjuriː/
+Eanáir
+Japan /dʒəpæn/
+An tSeapáin
+Japanese /dʒæpəniːz/
+Seapáinis
+Japanese language /dʒæpəniːzlæŋgwidʒ/
+Seapáinis
+Jerusalem /dʒəːruːzæləm/
+Iarúsailéim
+Jordan /dʒɔːdn/
+An Iordáin
+July /dʒuːlai/
+Iúil
+June /dʒuːn/
+an Meitheamh
+Kenya /kenjə/
+An Chéinia
+Kerry /keriː/
+Ciarraí
+Kildare /kildɛər/
+Cill Dara
+Korea /kəriə/
+An Chóiré
+Kuwait /kuweit/
+Cuáit
+Latin /lætin/
+Laidin
+Libya /libiə/
+An Libia
+Limerick /limərik/
+Luimneach
+Lisbon /lizbən/
+Liospóin
+Liverpool /livəpuːl/
+Learpholl
+London /lʌndən/
+Londain
+Londonderry /lʌndənderiː/
+Doire
+Luxemburg /lʌksəmbəːg/
+Lucsamburg
+Madagascar /mædəgæskər/
+Madagascar
+Madrid /mədrid/
+Maidrid
+Malta /mɔːltə/
+Málta
+Manchester /mˈantʃɛstə/
+Manchain
+March /mɑːtʃ/
+an Márta
+Mars /mɑːz/
+Mars
+May /mei/
+an Bhealtaine
+Mexico /meksikou/
+Meicsiceo
+Monaco /mɔnəkou/
+Monacó
+Monday /mʌndiː/
+an Luan
+Mongolia /mɔŋgouliə/
+An Mhonghóil
+Morocco /mərɔkou/
+Maracó
+Moscow /mɔskou/
+Moscó
+Mozambique /mouzæmbiːk/
+Mósaimbíc
+Nepal /nipɔːl/
+Neipeál
+Neptune /neptjuːn/
+Neiptiún
+Newfoundland /njuːfənlənd/
+Talamh an Éisc
+New Amsterdam /njuːæmstədæm/
+Nua-Eabhrac
+New York /njuːjɔːk/
+Nua-Eabhrac
+New York City /njuːjɔːksitiː/
+Nua-Eabhrac
+New Zealand /njuːzilənd/
+An Nua-Shéalainn
+Nicaragua /nikərægjeə/
+Nicearagua
+Niger /niːʒɛər/
+An Nígir
+Nigeria /naidʒiəriə/
+An Nigéir
+Nile /nail/
+An Níl
+North /nɔːθ/
+tuaisceart
+Norway /nɔːwei/
+An Iorua
+November /nouvembər/
+mí na Samhna
+October /ɔktoubər/
+Deireadh Fómhair
+Oslo /ɔzlou/
+Osló
+Pacific /pəsifik/
+Aigéan Ciúin
+Pacific Ocean /pəsifikouʃən/
+Aigéan Ciúin
+Pakistan /pɑːkistɑːn/
+An Phacastáin
+Palestine /pɔːlstin/
+An Phalaistín
+Paraguay /pærəgwai/
+Paragua
+Paris /pæris/
+Páras
+Persia /pəːʃə/
+An Iaráin
+Peru /pəruː/
+Peiriú
+Philippines /filipiːnz/
+Na hOileáin Fhilipíneacha
+Philippine Islands /filipiːnailəndz/
+Na hOileáin Fhilipíneacha
+Pluto /pluːtou/
+Plútón
+Poland /poulənd/
+An Pholainn
+Portuguese /pɔːtʃugiːz/
+Portaingéilis
+Portuguese language /pɔːtʃugiːzlæŋgwidʒ/
+Portaingéilis
+Prague /prɑːg/
+Prág
+Quaker /kweikər/
+ball de Chumann na gCarad, Caecar
+Rhine /rain/
+Réin
+Roman /roumən/
+Rómhánach
+Romania /rəmeiniə/
+An Rómáin
+Rome /roum/
+An Róimh
+Russia /rʌʃə/
+An Rúis
+Russian /rʌʃən/
+Rúisis
+Russian language /rʌʃənlæŋgwidʒ/
+Rúisis
+Sardinia /sɑːdiniə/
+An tSairdín
+Saturday /sætədiː/
+an Satharn
+Saudi Arabia /sɔːdiːəreibiə/
+An Araib Shádach
+Scandinavia /skændineiviə/
+Críoch Lochlann
+Scotland /skɔtlənd/
+Albain
+September /septembər/
+Meán Fhómhair
+Siberia /saibiəriə/
+An tSibéir
+Sicily /sisəliː/
+An tSicil
+Singapore /siŋəpɔːr/
+Singeapór
+Sofia /soufiə/
+Sóifia
+South Africa /sauθæfrikə/
+An Afraic Theas
+Spain /spein/
+An Spáinn
+Spanish /spæniʃ/
+Spáinnis
+Spanish language /spæniʃlæŋgwidʒ/
+Spáinnis
+Stockholm /stɔkhoum/
+Stócólm
+Sudan /suːdɑːn/
+An tSúdáin
+Sunday /sʌndiː/
+an Domhnach
+Sweden /swiːdn/
+An tSualainn
+Swedish /swiːdiʃ/
+Sualainnis
+Swedish language /swiːdiʃlæŋgwidʒ/
+Sualainnis
+Switzerland /switsəlænd/
+An Eilbhéis
+Syria /siriə/
+An tSiria
+Tanzania /tænzəniə/
+An Tansáin
+Tasmania /tæzmeiniə/
+An Tasmáin
+The Hague /ðhəg/
+An Háig
+Thursday /θəːzdei/
+an Déardaoin
+Tibet /tibet/
+An Tibéid
+Trinity /trinitiː/
+Tríonóid
+Tuesday /tjuːzdei/
+an Mháirt
+Tunisia /tjuːniziə/
+An Túinéis
+Turkey /təːkiː/
+An Tuirc
+USA /juːzə/
+Stáit Aontaithe Mheiriceá
+Uganda /juːgændə/
+Uganda
+United States of America /juːnaitidsteitsɔfəmerikə/
+Stáit Aontaithe Mheiriceá
+Uranus /jureinəs/
+Úránas
+Uruguay /jeərəgwai/
+Uragua
+Vatican City /vætikənsitiː/
+Cathair na Vatacáine
+Venezuela /venizweilə/
+Veiniséala
+Vienna /vienə/
+Vín
+Vietnam /vietnɑːm/
+Vítneam
+Volt /voult/
+volta
+Wales /weilz/
+An Bhreatain Bheag
+Warsaw /wɔːsɔː/
+Vársá
+Wednesday /wenzdei/
+an Chéadaoin
+Welsh /welʃ/
+Breatnais
+Welsh language /welʃlæŋgwidʒ/
+Breatnais
+West /west/
+iarthar
+Yemen /jemən/
+Éimin
+York /jɔːk/
+Eabhrac
+Zambia /zæmbiə/
+An tSaimbia
+Zaïre /zˈaiːɹə/
+An tSáír
+Zimbabwe /zimbɑːbwiː/
+An tSiombáib
+a /ə/
+1. i
+2. duine éigin
+abbess /æbes/
+ban-ab, máthairab
+abbey /əbei/
+mainistir
+abbot /æbət/
+ab
+abdomen /æbdəmən/
+bolg, tarr
+abide /əbaid/
+fair, fan le
+abode /əboud/
+cónaí
+above /əbouv/
+lastuas
+academic /ækədemik/
+acadúil
+academy /əkædəmiː/
+acadamh
+accept /æksept/
+faomh, glac
+accident /æksidənt/
+taisme, timpiste, tionóisc
+accommodation /əkɔmədeiʃən/
+cónaí
+accompany /əkʌmpəniː/
+comóir, tionlaic
+account /əkaunt/
+1. cuntas
+2. creid
+accredit /əkredit/
+creid
+accuse /əkjuːz/
+ciontaigh, cúisigh, gearán, iomardaigh
+acerbic /əsəːbik/
+géar
+acetous /æsitəs/
+aigéadach, searbh
+ache /eik/
+pian
+achieve /ətʃiːv/
+déanamh, déantús
+acid /æsid/
+1. aigéadach, searbh
+2. aigéad
+acorn /eikɔːn/
+dearcán
+acquire /əkwaiər/
+ceannaigh
+acre /eikər/
+acra
+acrobat /ækrəbæt/
+cleasaí, gleacaí
+across /əkrɔs/
+thar
+across from /əkrɔsfrɔm/
+faoi, i gcoinne, in aghaidh, in éadan
+act /ækt/
+déanamh, déantús
+actor /æktər/
+aisteoir
+actress /æktris/
+ban-aisteoir
+ad /əd/
+fógra, fógraíocht
+add /ədd/
+suimigh
+add up /əddʌp/
+suimigh
+adieu /ədjuː/
+beannacht, slán
+adjutant /ædʒutənt/
+aidiúnach
+administration /ədministreiʃən/
+reachtas, riar, riarachán
+admiral /ædmərəl/
+aimiréal
+ado /ədou/
+gleo
+adopt /ədɔpt/
+uchtaigh
+adore /ədɔːr/
+adhair
+advertise /ædvətaiz/
+fógair
+advertisement /ədvəːtismənt/
+fógra, fógraíocht
+advice /ədvais/
+comhairle, moladh
+advise /ədvaiz/
+comhairligh, mol
+aeroplane /ɛərəplein/
+eitleán
+affluent /æfleənt/
+saibhir
+afraid /əfreid/
+eaglach, faiteach
+afresh /əfreʃ/
+arís, athuair, fós
+afternoon /ɑːftənuːn/
+iarnóin, tráthnóna
+again /əgein/
+arís, athuair, fós
+against /əgenst/
+faoi, i gcoinne, in aghaidh, in éadan
+age /eidʒ/
+aois, ré
+agent /eidʒənt/
+feidhmeannach, gníomhaire, ionadaí
+aid /eid/
+1. cuiditheoir, cúntóir
+2. cúnamh
+aide-de-camp /eiddkæmp/
+aidiúnach
+air /ɛər/
+aer
+aircraft /ɛəkrɑːft/
+aerárthach
+airplane /ɛəplein/
+eitleán
+airport /ɛəpɔːt/
+aerfort
+alarm /əlɑːm/
+1. aláram, rabhadh, scaoll
+2. clog aláraim
+alarmclock /əlɑːmklɔk/
+clog aláraim
+albatross /ælbətrɔs/
+albatras
+alcohol /ælkəhɔl/
+alcól
+ale /l/
+beoir, leann
+algebra /ældʒibrə/
+ailgéabar
+alibi /ælibai/
+ailibí
+alive /əlaiv/
+beo, i do bheatha
+alligator /æligeitər/
+ailigéadar
+alloy /ælɔi/
+cóimhiotal
+all the /lð/
+gach
+almost /æmoust/
+beagnach, nach mór
+aloe /ælou/
+aló
+alphabet /ælfəbet/
+aibítir
+already /ɔːlrediː/
+cheana
+also /ælsou/
+fosta, freisin, leis
+altar /ɔːltər/
+altóir
+alter /ɔːltər/
+athraigh
+although /ɔːlthau/
+bíodh go, bíodh is go, cé go
+aluminium /æljuminiəm/
+alúmanam
+aluminum /æljuminəm/
+alúmanam
+always /ɔːlweiz/
+ar fad, choíche, go buan, go brách, i dtólamh, i gcónaí
+ambassador /æmbæsədər/
+ambasadóir
+ambulance /æmbjuləns/
+otharcharr
+among /əmʌŋ/
+ar fud, idir, i measc, trí
+ampère /ˈampeə/
+aimpéar
+anchor /æŋkər/
+ancaire
+and /ænd/
+agus, is
+angel /eindʒl/
+aingeal
+angle /æŋgl/
+cearn, cúinne, uillinn
+angry /æŋgriː/
+colgach, feargach
+animal /æniməl/
+ainmhí, beithíoch, míol
+ankle /æŋkl/
+caol na coise, murnán, rúitín
+announce /ənauns/
+fógair
+another /ənʌðər/
+eile
+answer /ænsər/
+1. freagair
+2. freagra
+ant /ænt/
+seangán
+anus /einəs/
+anas, áthán, timpireacht
+anvil /ænvil/
+inneoin
+any /æniː/
+duine éigin
+anybody /enibɔdiː/
+duine éigin
+anyway /æniwei/
+ar chaoi éigin, ar chuma éigin, ar dhoigh éigin
+apart from /əpɑːtfrɔm/
+ach
+ape /eip/
+ápa, moncaí
+appear /əpiər/
+láithrigh, nocht, taibhsigh, taispeáin
+appellation /æpəleiʃən/
+ainm
+apple /æpl/
+úll
+arm /ɑːm/
+lámh
+army /ɑːmiː/
+arm
+arouse /ərauz/
+dúisigh, múscail
+arrive /əraiv/
+ráinigh, tar
+arse /ɑːs/
+anas, áthán, timpireacht
+ash /əʃou/
+1. luaith
+2. fuinseog
+ashtray /æʃtrei/
+luaithreadán
+ask /əsk/
+1. fiafraigh, iarr
+2. achainigh, impigh
+ask for /əskfər/
+achainigh, impigh
+asphalt /æsfælt/
+asfalt
+ass /əs/
+asal
+assault /əsɔːlt/
+ionsaigh
+assistant /əsistənt/
+cuiditheoir, cúntóir
+assistent /əsistənt/
+cuiditheoir, cúntóir
+asthma /æsmə/
+múchadh, plúchadh
+asthmatic /æsmætik/
+gearranálach, múchtach
+at /eit/
+1. chun, do, go
+2. i n-aice
+atheist /eiθiist/
+aindiachaí
+athlete /æθliːt/
+lúthchleasaí, lúithnire
+atom /ætəm/
+adamh
+attack /ətæk/
+ionsaigh
+attempt /ətempt/
+iarracht, iarraidh, ionsaí
+at night /eitnait/
+istóiche
+at present /eitprizent/
+anois
+aunt /ɑːnt/
+aintín
+author /ɔːθər/
+údar
+autobus /ɔːtɔbəs/
+bus
+autumn /ɔːtəm/
+Fómhar
+avoid /əvɔid/
+seachain, teith ó
+await /əweit/
+fair, fan le
+awaken /əweikən/
+dúisigh, múscail
+axe /æks/
+tua
+a little /əlitl/
+beagán
+baby /beibiː/
+babaí, leanbaí
+back /bæk/
+cúl, droim, muin
+backward /bækwəd/
+ar gcúl, siar
+backwards /bækwədz/
+ar gcúl, siar
+bacon /beikən/
+bagún
+bad /bæd/
+dona, olc
+badger /bædʒər/
+broc
+bag /bæg/
+bolg, mála
+baggage /bægidʒ/
+bagáiste
+bairn /bɛən/
+leanbh, gasúr, páiste
+baker /beikər/
+báicéir
+ballet /bælit/
+bailé
+bamboo /bæmbuː/
+bambú
+banana /bənɑːnə/
+banana
+bandit /bændit/
+meirleach, tóraí
+bank /bæŋk/
+banc
+basket /bɑːskit/
+bascaed, ciseán, cliabh
+beach /biːtʃ/
+trá
+bear /bɛər/
+béar
+beard /biəd/
+féasóg, meigeall, ulcha
+beautiful /bjuːtifəl/
+álainn, dathúil, dóighiúil, gnaíúil, maisiúil, sciamhach
+beauty /bjuːtiː/
+áilleacht, breáthacht, gnaoi, maise, scéimh
+beaver /biːvər/
+bébhar
+bed /bd/
+leaba, nead
+bedroom /bedruːm/
+seomra leapa, seomra codlata
+bee /biː/
+beach
+beech /biːtʃ/
+fáibhile, feá
+beef /biːf/
+mairteoil
+beer /biər/
+beoir, leann
+beetle /biːtl/
+ciaróg
+before /bfɔːr/
+roimh, os comhair, os coinne
+beg /beg/
+achainigh, impigh
+begin /bigin/
+tionscain, tosaigh
+behind /biːhaind/
+thiar
+believe /biliːv/
+creid
+belly /beliː/
+bolg, tarr
+below /bilou/
+1. laistíos, thíos
+2. faoi, faoi bhun, taobh thíos de
+belt /belt/
+beilt
+bench /bentʃ/
+binse, forma
+beneath /benəːθ/
+faoi, faoi bhun, taobh thíos de
+berry /beriː/
+caor, sméar
+beside /bisaid/
+i n-aice
+better /betər/
+fearr
+between /bitwiːn/
+ar fud, idir, i measc, trí
+beyond /beiənd/
+thar
+bicycle /baisikl/
+rothar
+bid /baid/
+achainigh, impigh
+big /big/
+mór
+bike /baik/
+rothar
+bill /bil/
+ticéad
+birch /bəːtʃ/
+beith
+bird /bəːd/
+éan
+birth /bəːθ/
+breith, gin, saolú
+birthday /bəːθdei/
+lá breithe
+bishop /biʃəp/
+easpag
+bison /baisn/
+bíosún
+black /blæk/
+dubh
+blackberry /blækbəriː/
+sméar dubh
+blackbird /blækbəːd/
+lon, lon dubh
+blank /blæŋk/
+bán, fionn, geal
+blanket /blæŋkit/
+plaincéad
+blond /blɔnd/
+fionn, foltbhuí
+blood /blʌd/
+cró, folracht, fuil
+bloom /bluːm/
+bláth
+blue /bluː/
+gorm
+blushing /blʌʃiŋ/
+dearg
+boat /bout/
+árthach, bád
+body /boudiː/
+cabhail, colainn, corp, corpán
+bomb /bɔm/
+buama
+bone /boun/
+cnámh
+book /buk/
+leabhar
+bottle /bɔtl/
+buidéal
+bough /bau/
+brainse, craobh, gabhal, gasra
+boutique /buːtiːk/
+siopa
+box /bɔks/
+1. araid, ciste, cófra
+2. bosca
+boy /bɔi/
+buachaill, garsún, gasúr
+brain /brein/
+inchinn
+branch /brɑːntʃ/
+brainse, craobh, gabhal, gasra
+brandy /brændiː/
+coinneac
+bread /bred/
+arán
+breed /briːd/
+cine
+brick /brik/
+bríce
+bridge /bridʒ/
+droichead
+bright /brait/
+geal
+brimstone /brimstoun/
+ruibh, sulfar
+bring /briŋ/
+beir, tabhair
+broad /brɔːd/
+leathan
+bronze /brɔnz/
+umha, cré-umha
+brothel /brɔθl/
+drúthlann
+brother /brʌðər/
+deartháir
+brown /braun/
+donn
+bucket /bʌkit/
+buicéad
+buffalo /bʌfəlou/
+bíosún
+bull /bul/
+tarbh
+burden /bəːdn/
+ualach
+burdensome /bəːdnsəm/
+trom
+burglar /bəːglər/
+buirgléir
+bus /bəs/
+bus
+but /bʌt/
+ach
+butcher /butʃər/
+búistéir
+butcher's shop /butʃəzʃɔp/
+seamlas
+butter /bʌtər/
+im
+butterfly /bʌtəflai/
+féileacán
+buy /bəiː/
+ceannaigh
+buyer /baiər/
+ceannaí
+by /biː/
+1. i n-aice
+2. de
+bye /biː/
+beannacht, slán
+by night /biːnait/
+istóiche
+by now /biːnau/
+cheana
+cake /keik/
+císte
+calcium /kælsiəm/
+cailciam
+canal /kənæl/
+canáil
+capital /kæpitəl/
+caipiteal, rachmas
+capitalist /kæpitəlist/
+caipitlí, rachmasaí
+captain /kæptin/
+captaen
+car /kɑːr/
+carr, gluaisteán
+carbon /kɑːbən/
+carbón
+carburettor /kɑːbəretər/
+carbradóir
+card /kɑːd/
+cárta
+carp /kɑːp/
+carbán
+carpenter /kɑːpintər/
+siúnéir
+carpet /kɑːpit/
+brat urláir, cairpéad
+carrot /kærət/
+cairéad, meacan dearg
+carry /kæriː/
+iompair
+castle /kɑːsl/
+caisleán
+cat /kæt/
+cat
+cathedral /kəθiːdrəl/
+ardeaglais
+cello /tʃelou/
+dordbhdhil
+cement /semənt/
+suimint, stroighin
+cemetery /semətriː/
+cill, reilig
+cent /sent/
+ceint
+centennial /senteniəl/
+céad
+centimetre /sentimiːtər/
+ceintiméadar
+centipede /sentipt/
+céadchosach
+century /sentʃəriː/
+céad
+ceremony /seriməniː/
+deasghnáth, searmanas
+chair /tʃɛər/
+cathaoir
+change /tʃeindʒ/
+athraigh
+channel /tʃænl/
+canáil
+charge /tʃɑːdʒ/
+ualach
+cheap /tʃiːp/
+saor
+check /tʃek/
+seic
+cheese /tʃiːz/
+cáis
+cheque /tʃek/
+seic
+cherry /tʃeriː/
+silín
+chest /tʃest/
+araid, ciste, cófra
+chicken /tʃikən/
+cearc
+child /tʃaild/
+leanbh, gasúr, páiste
+chin /tʃin/
+smig
+chlorine /klɔːriːn/
+clóirín
+choice /tʃɔis/
+rogha
+chromium /kroumiəm/
+cróimiam
+church-building /tʃəːtʃbildiŋ/
+eaglais, séipéal, teach pobail
+church /tʃəːtʃ/
+eaglais, séipéal, teach pobail
+cigar /sigɑːr/
+todóg
+cigarette /sigəret/
+toitín
+cinder /sindər/
+luaith
+city /sitiː/
+1. cathair
+2. baile mór
+class /klɑːs/
+buíon
+clay /klei/
+cré, créafóg
+clean /kliːn/
+glan
+clear /kliər/
+geal
+clergyman /kləːdʒimən/
+sagart
+clerk /klɑːk/
+scríbhneoir
+client /kliːənt/
+1. ceannaí
+2. cliant
+climate /klaimət/
+aeráid, clíoma
+climb /klaim/
+dreap, tóg
+clock /klɔk/
+clog
+cloud /klaud/
+néal, scamall, smál
+coat /kout/
+1. casóg
+2. cóta mór
+cobalt /koubɔːlt/
+cóbalt
+cocaine /koukein/
+cócaon
+cocoa /koukou/
+cócó
+coconut /koukənʌt/
+cnó cócó
+cocoon /kəkuːn/
+cocún
+cod /koud/
+trosc
+code /koud/
+cód
+codfish /kɔdfiʃ/
+trosc
+coffee /kɔfiː/
+caife
+coffin /kɔfin/
+cónra
+cognac /kɔnjæk/
+coinneac
+colour /kʌlər/
+dath, lí, snua
+comb /koum/
+cior, raca
+come /kʌm/
+tar
+comfortable /kʌmftəbl/
+compordach
+commence /kəmens/
+tionscain, tosaigh
+complete /kəmpliːt/
+lán
+connect /kənekt/
+ceangail, cónaisc
+connect up /kənektʌp/
+ceangail, cónaisc
+conversation /kɔnvəseiʃən/
+comhrá
+copper /kɔpər/
+copar
+cord /kɔːd/
+téad
+corner /kɔːnər/
+binn, cearn, coirnéal, clúid, cúil, cúinne
+costly /kɔstliː/
+daor
+cougar /kuːgər/
+púma
+counsel /kaunsl/
+1. comhairligh, mol
+2. comhairle, moladh
+count in /kauntin/
+suimigh
+cow /kau/
+bó
+crazy /kreiziː/
+dásachtach
+crocodile /krɔkədail/
+crogall
+cross /krɔs/
+colgach, feargach
+cuckoo /kukuː/
+cuach
+cup /kʌp/
+cupán
+curry /kʌriː/
+curaí
+customer /kʌstəmər/
+cliant
+cycle /saikl/
+rothar
+cyclone /saikloun/
+cioclón
+cylinder /silindər/
+sorcóir
+cymbal /simbl/
+ciombal
+cynical /sinikl/
+ciniciúil
+cypres /saiprəz/
+cugróg
+czar /zɑːr/
+sár
+dad /dæd/
+daid, daidí
+daddy /dædiː/
+daid, daidí
+dance /dɑːns/
+rince
+danger /deindʒər/
+baol, dainséar, contúirt, gábh, guais
+daughter /dɔːtər/
+iníon
+day /dei/
+lá
+dear /diər/
+daor
+death /deθ/
+bás
+deem /diːm/
+creid
+deep /diːp/
+doimhin
+deer /diər/
+fia
+den /den/
+nead
+difficult /difikəlt/
+deacair
+diminutive /diminjutiv/
+beag, beagán
+din /din/
+gleo
+diplomat /dipləmæt/
+taidhleoir
+direct /direkt/
+díreach
+dirty /dəːtiː/
+salach
+dismal /dizməl/
+brónach
+do /dou/
+déanamh, déantús
+doctor /dɔktər/
+dochtúir
+dog /dɔg/
+cú, gadhar
+donkey /dɔŋkiː/
+asal
+doubt /daut/
+amhras
+downstairs /daunstɛəz/
+laistíos, thíos
+dress /dres/
+gúna
+drunk /drʌŋk/
+ólta
+dry /driː/
+tirim
+duck /dʌk/
+lacha
+during /djeəriŋ/
+ar feadh
+during the night /djeəriŋðnait/
+istóiche
+dwelling /dweliŋ/
+cónaí
+dye /diː/
+dath, lí, snua
+each /iːtʃ/
+gach
+eagle /iːgl/
+iolair
+ear /iər/
+cluas
+early /əːliː/
+go moch
+east /iːst/
+soir
+eastward /iːstwəd/
+soir
+eastwards /iːstwədz/
+soir
+egg /eg/
+ubh
+eight /eit/
+ocht
+election /ilekʃən/
+rogha
+elephant /elifɑːnt/
+eilifint
+eleven /ilevn/
+aon déag
+elk /elk/
+eilc, fia mór
+else /els/
+eile
+emerge /iməːdʒ/
+láithrigh, nocht, taibhsigh, taispeáin
+emmet /emit/
+seangán
+empty /emptiː/
+folamh
+end /ənd/
+deireadh
+ending /endiŋ/
+deireadh
+end up /əndʌp/
+ráinigh, tar
+enough /inʌf/
+leor
+equal /iːkwəl/
+cuma
+erroneous /irouniəs/
+cearr, contráilte
+estate /isteit/
+feirm
+evade /iveid/
+seachain, teith ó
+even /iːvn/
+cuma
+ever /evər/
+ar fad, choíche, go buan, go brách, i dtólamh, i gcónaí
+every /evriː/
+gach
+everybody /evribɔdiː/
+gach
+every one /evriːwʌn/
+gach
+except /eksept/
+ach
+exist /igzist/
+bheith ann
+expect /ikspekt/
+fair, fan le
+expensive /ikspensiv/
+daor
+eye /iː/
+súil
+face /feis/
+aghaidh
+fair /fɛər/
+fionn, foltbhuí
+family /fæməliː/
+clann, cúram, fine, líon tí, muintir, muirear, teaghlach
+farewell /fɛəwel/
+beannacht, slán
+farm /fɑːm/
+feirm
+fast /fɑːst/
+tapaidh
+fat /feit/
+ramhar
+father /fɑːðər/
+athair
+fatherland /fɑːðəlænd/
+athartha
+feed /fiːd/
+beathaigh, cothaigh
+feel /fiːl/
+ceint
+feeling /fiːliŋ/
+ceint
+fellow /felou/
+fear
+fetch /fetʃ/
+beir, tabhair
+field /fiːld/
+páirc
+field hospital /fiːldhɔspitəl/
+otharcharr
+fifty /fiftiː/
+caoga
+fig /fig/
+fige
+filthy /filθiː/
+salach
+fine /fain/
+álainn, dathúil, dóighiúil, gnaíúil, maisiúil, sciamhach
+finished /finiʃt/
+ullamh
+fish /fiʃ/
+iasc
+fisherman /fiʃəmən/
+iascaire
+five /faiv/
+cúig
+floor /flɔːr/
+urlár
+flour /flauər/
+plúr
+flower /flauər/
+bláth
+fly /flai/
+cuil, cuileog
+food /fuːd/
+bia
+foot /fut/
+cos
+football /futbɔːl/
+sacar
+for /fər/
+ar feadh
+foreigner /fɔrənər/
+stróinséir
+forest /fɔrist/
+coill, foraois
+forget /fəget/
+dearmad
+forgetful /fəgetfəl/
+dearmadach
+forgive /fəgiv/
+logh, maith
+fork /fɔːk/
+forc, gabhlóg, píce
+four /fɔːr/
+cheithre
+fowl /faul/
+cearc
+fox /fɔks/
+madra rua, sionnach
+freezing cold /friːziŋkould/
+sioc
+fresh /freʃ/
+úr
+friend /frend/
+cara
+frog /frɔg/
+frog, loscann
+from /frɔm/
+1. de
+2. as
+frost /frɔst/
+sioc
+full /ful/
+lán
+game /geim/
+cluiche
+garden /gɑːdn/
+gairdín
+gasolene /gæsəliːn/
+beinsín
+gasoline /gæsəliːn/
+beinsín
+gaunt /gɔːnt/
+brónach
+gentle /dʒentl/
+milis
+germ /dʒəːm/
+bitheog, miocrób
+get /get/
+ráinigh, tar
+giraffe /dʒirɑːf/
+sioráf
+girdle /gəːdl/
+beilt
+girl /gəːl/
+cailín
+give notice /givnoutis/
+fógair
+gladness /glædnəs/
+áthas
+glass /glɑːs/
+gloine
+gold /gould/
+ór
+good /gud/
+leas, maith, maitheas, tairbhe
+goodbye /gudbai/
+beannacht, slán
+goodness /gudnəs/
+feabhas
+goose /guːs/
+gé
+gooseberry /guzbəriː/
+spíonán
+gown /gaun/
+gúna
+gram /græm/
+gram
+grammar /græmər/
+gramadach
+gramme /græm/
+gram
+grandfather /grænfɑːðər/
+athair críonna, athair mór, seanathair
+grandmother /grænmʌðər/
+máthair chríonna, máthair mhor, seanmháthair
+grass /grɑːs/
+féar
+graveyard /greivjɑːd/
+cill, reilig
+grease /griːs/
+ramhar
+great /greit/
+mór
+green /griːn/
+glas
+gun /gʌn/
+gunna
+hail /heil/
+cloch shneachta
+hair /hɛər/
+ribe
+hammer /hæmər/
+casúr
+hand /hænd/
+lámh
+handsome /hænsəm/
+álainn, dathúil, dóighiúil, gnaíúil, maisiúil, sciamhach
+harbor /hɑːbər/
+caladh, calafort, cuan, port
+harbour /hɑːbər/
+caladh, calafort, cuan, port
+hard /hɑːd/
+deacair
+harvest /hɑːvist/
+fómhar
+hat /heit/
+hata
+hawk /hɔːk/
+seabhac
+hay /hei/
+féar
+he-goat /hgout/
+pocán
+head /hed/
+ceann
+heaven /hevn/
+aer, neamh, spéir
+heavy /heviː/
+trom
+hectometre /hektɔmitər/
+heictiméadar
+hedonism /hiːdənizəm/
+héadónachas
+heel /hiːl/
+sáil
+height /hait/
+airde
+hell /hel/
+ifreann
+helmet /helmit/
+cafarr, ceannbheart, clogad
+help /help/
+cúnamh
+helper /helpər/
+cuiditheoir, cúntóir
+her /hər/
+sé
+herb /həːb/
+féar
+hero /hiərou/
+curadh, gaiscíoch, laoch
+heroin /herɔin/
+hearóin
+heroine /herouin/
+banlaoch
+heron /herən/
+corr éisc
+herpes /həps/
+deir
+herring /heriŋ/
+scadán
+hexagon /heksəgən/
+heicseagán
+hiccup /hikʌp/
+fail, snag
+high /hai/
+ard
+hill /hil/
+cnoc
+hippo /hipou/
+dobhareach
+hippopotamus /hipəpɔtəməs/
+dobhareach
+hog /hɔg/
+muc
+hole /houl/
+poll
+holly /hɔliː/
+cuileann
+hooker /hukər/
+fraochán
+hooter /huːtər/
+adharc, beann
+horn /hɔːn/
+adharc, beann
+horse /hɔːs/
+capall
+hospital /hɔspitəl/
+ospídéal
+hot /hɔt/
+bruithneach, te
+hotel /houtel/
+óstlann
+hour /auər/
+uair
+housefly /hausflai/
+cuil, cuileog
+house of worship /hausɔfwəːʃip/
+eaglais, séipéal, teach pobail
+hunger /hʌŋgər/
+ocras
+hyaena /haiiːnə/
+hiéana
+ill /il/
+breoite
+in /in/
+i
+inch /intʃ/
+orlach
+inconvenient /inkənviːniənt/
+deacair
+inexpensive /inikspensiv/
+saor
+infant /infənt/
+leanbh, gasúr, páiste
+infernal /infəːnl/
+ifreanda
+insane /insein/
+dásachtach
+inside /insaid/
+i
+instant /instənt/
+móimint, nóiméad
+instructor /instrʌktər/
+múinteoir
+into /intə/
+i
+intoxicated /intɔksikeitid/
+ólta
+in exchange for /inikstʃeindʒfər/
+faoi, i gcoinne, in aghaidh, in éadan
+in front of /infrʌntɔf/
+roimh, os comhair, os coinne
+iodine /aiədiːn/
+iaidín
+iron /aiən/
+iarann
+jam /dʒæm/
+marmaláid
+journey /dʒəːniː/
+aistear farraige
+joy /dʒɔi/
+áthas
+key /kiː/
+eochair
+keyboard /kiːbɔːd/
+méarchlár
+kidney /kidniː/
+ára, duán
+kill /kil/
+maraigh
+kilo /kiːlou/
+cileagram
+kilometre /kilɔmitər/
+ciliméadar
+kind /kaind/
+saghas
+king /kiŋ/
+rí
+kingdom /kiŋdəm/
+flaitheas, ríocht
+kiss /kis/
+póg
+kitchen /kitʃin/
+cistin
+klaxon /klæksn/
+adharc, beann
+knife /naif/
+scian
+lad /leid/
+buachaill, garsún, gasúr
+laddie /lædiː/
+buachaill, garsún, gasúr
+lake /leik/
+loch
+lamp /læmp/
+lampa
+language /læŋgwidʒ/
+teanga
+large /lɑːdʒ/
+mór
+lass /læs/
+cailín
+law /lɔː/
+dlí, reacht
+laziness /leizinəs/
+leisce
+lead /led/
+luaidhe
+leather /leðər/
+leathar
+leg /leg/
+cos
+lesson /lesn/
+ceacht
+letter /letər/
+litir
+level /levəl/
+cuma
+lie /liː/
+bréag
+light /lait/
+1. geal
+2. éadrom
+likewise /laikjuːiːz/
+fosta, freisin, leis
+lime-tree /laimtriː/
+crann teile
+linden-tree /lindəntriː/
+crann teile
+lip /lip/
+béal, bruas, cab, liopa
+liquidate /likwideit/
+maraigh
+liter /litər/
+lítear
+litre /liːtər/
+lítear
+little /litl/
+beag, beagán
+liver /livər/
+ae, crua-ae
+load /loud/
+ualach
+loaf /louf/
+arán
+location /loukeiʃən/
+áit
+loch /lɔk/
+loch
+lofty /lɔftiː/
+ard
+long /lɔŋ/
+cian, fada
+love /lʌv/
+grá
+lovely /lʌvliː/
+1. álainn, dathúil, dóighiúil, gnaíúil, maisiúil, sciamhach
+2. daor
+low /lou/
+íseal
+luggage /lʌgidʒ/
+bagáiste
+mackerel /mækrəl/
+maircréal
+mad /meid/
+dásachtach
+magnesium /mægniːziəm/
+maignéisiam
+magnet /mægnit/
+adhmait, maighnéad
+make /meik/
+déanamh, déantús
+mam /mɑːm/
+mam, mamaí, mamanna
+mammy /mæmiː/
+mam, mamaí, mamanna
+man /mein/
+fear
+management /mænidʒmənt/
+reachtas, riar, riarachán
+map /meip/
+cárta
+marmelade /mɑːməleid/
+marmaláid
+mast /mɑːst/
+crann
+mature /mətjeər/
+aibidh
+meal /miːl/
+1. plúr
+2. béile
+meat /miːt/
+feoil
+menu /menjuː/
+cárta
+mercury /məːkjuriː/
+airgead beo, mearcair
+metre /miːtər/
+méadar
+metropolis /mətrɔpəlis/
+cathair
+microbe /maikroub/
+bitheog, miocrób
+microphone /maikrəfoun/
+micreafón
+microscope /maikrəskoup/
+micreascóp
+mile /mail/
+míle
+milk /milk/
+bainne
+millet /milit/
+muiléad
+millimetre /milimiːtər/
+milliméadar
+million /miliən/
+milliún
+miserable /mizrəbl/
+1. dona, olc
+2. brónach
+mistaken /misteikən/
+cearr, contráilte
+mole /moul/
+caochán
+molecule /mɔlikjuːl/
+móilín
+mom /məm/
+mam, mamaí, mamanna
+moment /moumənt/
+móimint, nóiméad
+mommy /moumiː/
+mam, mamaí, mamanna
+money /mʌniː/
+airgead
+monk /mʌŋk/
+manach
+monkey /mʌŋkiː/
+ápa, moncaí
+month /mʌnθ/
+mí
+moon /muːn/
+gealach
+moose /muːs/
+eilc, fia mór
+mother /mʌðər/
+máthair
+mountain /mauntn/
+sliabh
+mountain lion /mauntnlaiən/
+púma
+mouse /maus/
+luch
+mouth /mauθ/
+béal, cab
+music /mjuːzik/
+ceol, oirfide
+mutton /mʌtn/
+caoireoil
+name /neim/
+ainm
+narrative /nærətiv/
+scéal
+narrow /nærou/
+caol
+nasty /nɑːstiː/
+dona, olc
+near /niər/
+i n-aice
+nearby /niəbiː/
+i n-aice
+nearly /niːliː/
+beagnach, nach mór
+near to /niərtou/
+i n-aice
+neighbour /neibər/
+comharsa
+neon /niːɔn/
+neon
+nephew /nevjuː/
+nia, mac dearthair, mac deirféar
+nest /nest/
+nead
+net /net/
+líon
+network /netwəːk/
+líon
+new /njuː/
+nua, úr
+next to /neksttou/
+i n-aice
+nice /nais/
+leas, maith, maitheas, tairbhe
+nickel /nikl/
+nicil
+night /nait/
+oíche
+nine /nain/
+naoi
+nitrogen /naitrədʒən/
+nítrigin
+no /nou/
+ní
+noise /nɔiz/
+gleo
+north /nɔːθ/
+tuaisceart
+northern /nɔːðən/
+tuaisceartach
+nose /nouz/
+srón
+not /nout/
+ní
+note /nout/
+ticéad
+nothing /nʌθiŋ/
+pioc
+noun /naun/
+ainm, ainmfhocal
+nourish /nʌriʃ/
+beathaigh, cothaigh
+novel /nɔvəl/
+1. nua, úr
+2. úrsceal
+now /nau/
+anois
+nun /nʌn/
+bean rialta
+nurse /nəːs/
+banaltra
+nuts /nʌts/
+dásachtach
+nylon /nailɔn/
+níolón
+oak /ouk/
+dair
+oar /ɔːr/
+rámh
+oasis /oueisis/
+ósais
+oath /ouθ/
+eascainne, mionn
+oats /outs/
+coirce
+oboe /oubou/
+óbó
+ocean /ouʃən/
+aigéan, bóchna, farraige mhór
+of /ɔf/
+de
+oil /ɔil/
+ola
+okay /oukei/
+1. leas, maith, maitheas, tairbhe
+2. go maith
+omnibus /ɔmnibəs/
+bus
+on /wʌn/
+1. i
+2. ar
+once more /wʌnsmɔːr/
+arís, athuair, fós
+one /wʌn/
+1. duine éigin
+2. aon
+onerous /ɔnərəs/
+trom
+one thousand /wʌnθauznd/
+míle
+on the other side of /wʌnðʌðərsaidɔf/
+thar
+on top /wʌntoup/
+lastuas
+opera /ɔpərə/
+ceoldráma
+opinion /əpiniən/
+tuairim
+opposed to /əpouzdtou/
+faoi, i gcoinne, in aghaidh, in éadan
+opposite /ɔpəzit/
+faoi, i gcoinne, in aghaidh, in éadan
+optimist /ɔptimist/
+soirbhíoch
+or /ər/
+nó
+other /ʌðər/
+eile
+other than /ʌðərθein/
+ach
+out of /autɔf/
+as
+over /ouvər/
+lastuas
+overcoat /ouvəkout/
+1. casóg
+2. cóta mór
+overhead /ouvəhed/
+lastuas
+oxygen /ɔksidʒən/
+ocsaigin
+o'clock /əklɔk/
+uair
+pail /peil/
+buicéad
+pain /pein/
+pian
+pants /pænts/
+bríste, treabhsar, truís
+paper /peipər/
+páipéar
+pardon /pɑːdn/
+logh, maith
+parish /pæriʃ/
+paróiste
+pastor /pɑːstər/
+sagart
+pate /peit/
+ceann
+paw /pɔː/
+cos
+pawn /pɔːn/
+saighdiúir
+peat /piːt/
+móin
+penny /peniː/
+pingin
+per /pər/
+i
+perform /pəfɔːm/
+1. láithrigh, nocht, taibhsigh, taispeáin
+2. déanamh, déantús
+peril /perəl/
+baol, dainséar, contúirt, gábh, guais
+permission /pəmiʃən/
+cead
+person /pəːsn/
+duine
+petrol /pitroul/
+beinsín
+phosphorus /fɔsfərəs/
+fosfar
+physician /fiziʃən/
+dochtúir
+pig /pig/
+muc
+pine-tree /paintriː/
+giúis
+pine /pain/
+giúis
+place /pleis/
+áit
+place of worship /pleisɔfwəːʃip/
+eaglais, séipéal, teach pobail
+plane /plein/
+eitleán
+platinum /pleitinəm/
+platanam
+plug in /plʌgin/
+ceangail, cónaisc
+plutonium /pluːtouniəm/
+plútóiniam
+poem /pouim/
+dán, duan, laoi
+poor /peər/
+dona, olc
+pope /poup/
+pápa
+pork /pɔːk/
+muiceoil
+port /pɔːt/
+caladh, calafort, cuan, port
+potassium /pətæsiəm/
+potaisiam
+potato /pɔteitou/
+práta
+pound /paund/
+punt
+prejudice /predʒudis/
+claontacht, réamhchlaonadh
+prepare /pripɛər/
+cóirigh, déan réidh, gléas, ullmhaigh
+pretty /pritiː/
+deas
+price /prais/
+praghas
+pricey /praisiː/
+daor
+priest /priːst/
+sagart
+probably /prɔbəbliː/
+is dócha
+profound /prəfaund/
+doimhin
+property /prɔpətiː/
+feirm
+psalm /sɑːm/
+salm
+pseudonym /sjuːdənim/
+ainm cleite
+psychiatrist /sikaiətrist/
+síciatraí
+psychiatry /sikaiətriː/
+síciatracht
+psychologist /saikɔlədʒist/
+síceolaí
+psychology /saikɔlədʒiː/
+aigneolaíocht, síceolaíocht
+puma /pjuːmə/
+púma
+purchase /pəːtʃəs/
+ceannaigh
+purchaser /pəːtʃəsər/
+ceannaí
+pure /pjeər/
+glan
+pyjamas /pədʒɑːməz/
+pitseámaí
+pyramid /pirəmid/
+pirimid
+queen /kwiːn/
+banríon
+question /kwestʃən/
+ceist
+quick /kwik/
+tapaidh
+quicksilver /kwiksilvər/
+airgead beo, mearcair
+quite /kwait/
+ana-
+rabbi /ræbai/
+raibí
+rabbit /ræbit/
+coinín
+rabies /reibiːz/
+confadh
+raccoon /rəkuːn/
+racún
+race /reis/
+cine
+racoon /rəkuːn/
+racún
+radar /reidɑːr/
+radar
+radiator /reidieitər/
+radaitheoir
+radio /reidiəə/
+raidió
+radish /rædiʃ/
+raidis
+radium /reidiəm/
+raidiam
+radius /reidiəs/
+cnámh radúil
+rain /rein/
+báisteach
+rainbow /reinbou/
+bogha báistí, tuar ceatha
+ranch /rɑːntʃ/
+feirm
+rapid /ræpit/
+tapaidh
+raspberry /rɑːzbəriː/
+sú craobh
+rat /ræt/
+francach, luch mhor
+rather /ræðər/
+beagán
+ready /rediː/
+ullamh
+reality /riælitiː/
+fírinne
+receive /risiːv/
+faomh, glac
+recent /riːsnt/
+úr
+red /rid/
+dearg
+rent /rent/
+cíos
+rent money /rentmʌniː/
+cíos
+reply /riplai/
+1. freagair
+2. freagra
+request /rikwest/
+achainigh, impigh
+residence /rezidəns/
+cónaí
+respond /rispɔnd/
+freagair
+revolver /rivɔlvər/
+gunnán
+rhino /rainou/
+srónbheannach
+rhinoceros /rainɔsərəz/
+srónbheannach
+rich /ritʃ/
+saibhir
+rifle /raifəl/
+gunna
+ripe /raip/
+aibidh
+river /rivər/
+abhainn, sruth
+road /roud/
+bóthar
+robber /rɔbər/
+robálaí
+robe /roub/
+gúna
+robot /roubɔt/
+robat
+rock /rɔk/
+carracán, carraig, creig
+rocket /rɔkit/
+roicéad
+roe /rou/
+eochraí, pis
+roller /roulər/
+sorcóir
+root /ruːt/
+préamh
+rope /roup/
+téad
+route /ruːt/
+bóthar
+sack /sæk/
+bolg, mála
+sad /sæd/
+brónach
+saddle /sædl/
+diallait
+sagacious /səgeiʃəs/
+ciallmhar
+sage /seidʒ/
+ciallmhar
+sail /seil/
+seol
+sailor /seilər/
+loingseoir, mairnéalach, maraí
+salmon /sæmən/
+bradán
+school /sʃuːl/
+scoil
+sea-dog /siədɔg/
+rón
+sea /siə/
+farraige
+seal /siːl/
+rón
+seed /siːd/
+síol
+seldom /sldəm/
+go hannamh
+sensation /sinseiʃən/
+ceint
+serpent /səːpənt/
+nathair
+seven /sevn/
+seacht
+shame /ʃeim/
+náire
+sharp /ʃɑːp/
+géar
+she /ʃou/
+sé
+sheep /ʃiːp/
+caora
+shilling /ʃiliŋ/
+scilling
+shoe /ʃuː/
+bróg
+shop /ʃɔp/
+siopa
+shortness of breath /ʃɔːtnəsɔfbreθ/
+múchadh, plúchadh
+sick /sik/
+breoite
+side /said/
+taobh
+silver /silvər/
+airgead
+since /sins/
+de
+sister /sistər/
+deirfiúr
+sit /sit/
+suigh
+six /siks/
+sé
+sixteen /sikstiːn/
+sé déag
+sixty /sikstiː/
+seasca
+skin /skin/
+craiceann, cneas, leathar, seithe
+sky /skiː/
+aer, neamh, spéir
+slave /sleiv/
+daor, sclábhaí, tráill
+slay /slei/
+maraigh
+sleep /sliːp/
+codlach, suan
+slow /slou/
+mall
+slug /slʌg/
+drúchtín, seilide
+small /smɔːl/
+beag, beagán
+smith /smiθ/
+gabha
+smoke /smouk/
+deatach
+smuggle /smʌgl/
+smuigleáil
+smuggler /smʌglər/
+smuigléir
+snail /sneil/
+seilide
+snake /sneik/
+nathair
+snow /snou/
+sneachta
+snowflake /snoufleik/
+bratóg shneachta, calóg shneachta, lubhóg shneachta
+soap /soup/
+gallúnach
+soccer /sɔkər/
+sacar
+socialism /souʃəlizəm/
+sóisialachas
+socialist /souʃəlist/
+sóisialaí
+sociology /souʃiɔlədʒiː/
+socheolaíocht
+sock /sɔk/
+stoca gearr
+sodium /soudiəm/
+sóidiam
+sofa /soufə/
+tolg
+soft /sɔft/
+milis
+soiled /sɔild/
+salach
+soldier /souldiər/
+saighdiúir
+some /sʌm/
+1. beagán
+2. duine éigin
+somebody /sʌmbədiː/
+duine éigin
+somehow /sɔmhau/
+ar chaoi éigin, ar chuma éigin, ar dhoigh éigin
+someone /sʌmwʌn/
+duine éigin
+somewhat /soumwɔt/
+beagán
+some one /sʌmwʌn/
+duine éigin
+son /sɔn/
+mac
+song /sɔŋ/
+amhrán
+sort /sɔːt/
+saghas
+sour /sauər/
+aigéadach, searbh
+sow /sou/
+cráin
+sparrow /spærou/
+gealbhan
+speedy /spiːdiː/
+tapaidh
+spiderweb /spaidəwiːb/
+damháin alla, líon, téad
+spot /spɔt/
+áit
+spring /spriŋ/
+Earrach
+springtime /spriŋtaim/
+Earrach
+squirrel /skwirəl/
+iora
+staircase /stɛəkeis/
+staighre
+stairs /stɛəz/
+staighre
+star /stɑːr/
+réalta
+start /stɑːt/
+tionscain, tosaigh
+station /steiʃən/
+stáisiún
+stone /stoun/
+cloch
+stool /stuːl/
+stól
+store /stɔːr/
+siopa
+storm /stɔːm/
+stoirm
+story /stɔːriː/
+scéal
+straight /streit/
+díreach
+stranger /streindʒər/
+stróinséir
+street /striːt/
+sráid
+string /striŋ/
+téad
+strong /strɔŋ/
+láidir
+substantive /sʌbstəntiv/
+ainm, ainmfhocal
+suck /sʌk/
+diúl, súigh, súraic, tarraing
+sufficient /səfiʃənt/
+leor
+sugar /ʃugər/
+siúcra
+sulphur /sʌlfər/
+ruibh, sulfar
+sultan /sʌltɑːn/
+sabhdán
+summer /sʌmər/
+Samhradh
+sun /sn/
+grian
+superstition /suːpəːstiʃən/
+piseog
+swan /swɔn/
+eala
+sweet /swiːt/
+milis
+swift /swift/
+tapaidh
+swine /swain/
+muc
+table /teibl/
+bord
+take /teik/
+faomh, glac
+take in /teikin/
+faomh, glac
+take over /teikouvər/
+ceannaigh
+tale /teil/
+scéal
+tall /tɔːl/
+ard
+tart /tɑːt/
+aigéadach, searbh
+taste /teist/
+blas, tástáil
+teacher /tiːtʃər/
+múinteoir
+ten /tn/
+deich
+tender /tendər/
+milis
+test /tist/
+iarracht, iarraidh, ionsaí
+that /ðæt/
+1. go, gur
+2. céa, céacu
+the /ð/
+an, na
+they /ðei/
+siad
+the Netherlands /ðneðəlændz/
+An Ísiltír
+the day after tomorrow /ðdeiɑːftərtəmɔrou/
+amanathar
+thirst /θəːst/
+tart
+though /ðau/
+bíodh go, bíodh is go, cé go
+thousand /θauznd/
+míle
+three /θriː/
+trí
+through /θruː/
+1. ullamh
+2. thar, trasna
+thumb /θʌm/
+ordóg
+ticket /tikit/
+ticéad
+timber /timbər/
+adhmad
+time /taim/
+1. uair
+2. am
+tin /tain/
+stán
+tired /taiəd/
+tuirseach
+to /tou/
+chun, do, go
+toad /toud/
+buaf
+tobacco /təbækou/
+tobac
+today /tədei/
+inniu
+toe /tou/
+ladhar, méar coise
+together /təgeðər/
+i dteannta a chéile, i gceann a chéile, in éineacht, le chéile
+tomorrow /təmɔrou/
+amáireach
+tongue /tʌŋ/
+teanga
+too /tuː/
+fosta, freisin, leis
+tooth /tuːθ/
+fiacail
+tortoise /tɔːtouis/
+turtar
+toward /təwɔːd/
+chun, do, go
+towards /təwɔːdz/
+chun, do, go
+town /taun/
+baile mór
+to some extent /tousʌmikstent/
+beagán
+train /trein/
+traein
+tree /triː/
+crann
+triangle /traiæŋgl/
+triantán
+triangular /traiæŋgjulər/
+triantánach
+tribunal /traibjuːnl/
+binse breithimh
+trigonometry /trigənɔmətriː/
+triantánacht
+trilogy /trilədʒiː/
+triológ
+trip /trip/
+aistear farraige
+triumph /traiʌmf/
+1. buaigh
+2. bua, caithréim
+trombone /trɔmboun/
+trombón
+tropical /trɔpikl/
+teochreasach, trópaiceach
+trousers /trauzəz/
+bríste, treabhsar, truís
+trout /traut/
+breac
+trumpet /trʌmpit/
+stoc, troimpéad, trumpa
+truth /truːθ/
+fírinne
+tuberculosis /tjuːbəːkjulousis/
+eitinn
+tulip /tjuːlip/
+tiúilip
+tummy /tʌmiː/
+bolg, tarr
+tumor /tjuːmər/
+meall, siad
+tumour /tjuːmər/
+meall, siad
+tunnel /tʌnl/
+tollán
+turkey /təːkiː/
+turcaí
+two /twou/
+dá
+uncle /ʌŋkl/
+uncail
+unclean /ʌnkliːn/
+salach
+under /ʌndər/
+faoi, faoi bhun, taobh thíos de
+underneath /ʌndənəːθ/
+1. laistíos, thíos
+2. faoi, faoi bhun, taobh thíos de
+upon /əpɔn/
+1. faoi, i gcoinne, in aghaidh, in éadan
+2. ar
+upstairs /ʌpstɛəz/
+lastuas
+uranium /jureiniəm/
+úráiniam
+valuable /væljeəbl/
+daor
+very /veriː/
+ana-
+very much /veriːmʌtʃ/
+ana-
+village /vilidʒ/
+baile beag, gráig, sráidbhaile
+void /vɔid/
+folamh
+vowel /vauəl/
+guta
+voyage /vɔiidʒ/
+aistear farraige
+wait /weit/
+fair, fan le
+wait for /weitfər/
+fair, fan le
+wake /weik/
+dúisigh, múscail
+wake up /weikʌp/
+dúisigh, múscail
+wall /wɔːl/
+falla
+walnut /wɔːlnʌt/
+gallchnó
+waltz /wɔːls/
+válsa
+war /ər/
+cogadh
+warm /wɔːm/
+te
+washing-bear /wɔʃiŋbɛər/
+racún
+wasp /wɔsp/
+foiche
+watch /wɔtʃ/
+1. uaireadóir láimhe
+2. clog
+water /wɔːtər/
+uisce
+waterfall /wɔːtəfɔːl/
+eas
+watt /wɔt/
+vat
+wax /wæks/
+céir
+way /wei/
+bealach, slí
+wealthy /welθiː/
+saibhir
+wear /wɛər/
+iompair
+weather /weðər/
+aimsir
+week /wiːk/
+seachtain
+well-off /welɔf/
+saibhir
+well /wel/
+go maith
+wench /wentʃ/
+cailín
+west /west/
+iarthar
+wet /wet/
+fliuch
+what for /wɔtfər/
+cadchuige, cadinathaobh, cénfáth
+wheeziness /wiːzinəs/
+múchadh, plúchadh
+wheezy /wiːziː/
+gearranálach, múchtach
+when /n/
+cathain, nuair
+where /wɛər/
+cá, cáháit, cénáit
+whereas /wɛəriːz/
+ar feadh
+which /witʃ/
+céa, céacu
+while /wail/
+1. ar feadh
+2. am
+whilst /wilst/
+ar feadh
+whiskey /wiskiː/
+fuisce, uisce beatha
+whisky /wiskiː/
+fuisce, uisce beatha
+white /wait/
+bán, fionn, geal
+who /hou/
+céa, céacu
+whore /hɔːr/
+fraochán
+whose? /huːz/
+cé leis?
+why /wiː/
+cadchuige, cadinathaobh, cénfáth
+why? /wiː/
+cad 'na thaobh?
+widow /widou/
+baintreach
+wife /waif/
+bean
+wind /waind/
+gaoth
+window /windou/
+fuinneag
+wine /wain/
+fíon
+wireless /waiələs/
+raidió
+wise /waiz/
+ciallmhar
+within /wiθin/
+i
+without /wiθɔːt/
+gan
+wolf /wulf/
+faolchu, mac tíre
+woman /wumən/
+bean
+wood /wud/
+adhmad
+woods /wudz/
+coill, foraois
+word /wəːd/
+focal
+world /wəːld/
+domhan
+worship /wəːʃip/
+adhair
+wrench /rentʃ/
+eochair
+wrist-watch /ristwɔtʃ/
+uaireadóir láimhe
+writer /raitər/
+údar
+wrong /rɔŋ/
+cearr, contráilte
+xylophone /zailəfoun/
+csileafón
+yacht /jɔt/
+luamh
+yard /jɑːd/
+slat
+year /jəːr/
+bliain
+yellow /jelou/
+buí
+yesterday /jestədiː/
+inné
+yet /jet/
+cheana
+yew-tree /aijuːtriː/
+iúr
+yoghourt /jɔgət/
+iógart
+yoghurt /jɔgət/
+iógart
+young /jʌŋ/
+óg
+youngster /jʌŋstər/
+ógánach, ógfhear
+young woman /jʌŋwumən/
+ógbhean
+youth /juːθ/
+ógánach, ógfhear
+zebra /zebrə/
+séabra
+zenith /zeniθ/
+buaic
+zinc /ziŋk/
+sinc
+zodiac /zoudiæk/
+stoidiaca
+zone /zoun/
+crios
+zoo /zuː/
+sú
+unknown
+ abcdefghijklmnopqrstuvwxyzèï

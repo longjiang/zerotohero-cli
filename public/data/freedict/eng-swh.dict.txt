@@ -1,0 +1,4414 @@
+
+00-database-dictfmt-1.12.1
+English-Swahili xFried/FreeDict Dictionary
+
+Compiled by : Beata Wójtowicz <wierzchob@wp.pl>
+Maintainer: Beata Wójtowicz <wierzchob@wp.pl>
+
+Edition: 0.2.2
+Size: 1450 headwords
+
+Publisher: FreeDict.
+
+
+Availability:
+
+    Copyright (C) 1999-2017 by various authors listed below.
+    Available under the terms of the GNU General Public License ver. 2.0 and
+  any later version.
+
+Publication date: Dec 03, 2017.
+Published at: http://freedict.org/
+
+Notes:
+
+ * Database Status: too small
+
+
+Source(s):
+
+  This file was compiled from other electronic documents. It is based on
+  Swahili-Kiswahili to English Translation Program by Morris Fried
+  available from http://www.dict.org/links.html, which has been
+  supplemented by entries from Freedict Swahili-English Dictionary created
+  by Horst Eyermann (http://www.freedict.de/) from the Swahili-Esperanto
+  and Esperanto-English Ergane dictionaries, available from
+  http://www.travlang.com/.
+
+The Project:
+
+  This dictionary comes to you through nice people making it available for
+  free and for good. It is part of the FreeDict project,
+  http://freedict.org/. This project aims to make available many
+  translating dictionaries for free. Your contributions are welcome!
+
+Changelog:
+
+ * 2017-12-03 Sebastian Humenda ver. 0.2.2:
+   Update licence stanza (thanks to Karl Bartel)
+ * 2010-11-02 Piotr Bański:
+   Changed database name from eng-swa to eng-swh (by ISO 639-3).
+ * 2010-02-25 Piotr Bański:
+   Upgraded to TEI P5, removed whitespace from equivalents, sorted
+   entries, sorted entry insides, wrapped <def> in <sense> and added
+   <gramGrp> with an empty <pos> in the entries that had no POS. This is
+   now an example of minimal TEI P5 conformance. Changed the header very
+   slightly. Added brackets around "plural" in headwords.
+ * 2007-02-13 Michael Bunk:
+   Enabled phonetics import.
+ * 2004 Beata Wójtowicz:
+   Compiled swa-eng from two sources (see the sourceDesc) and got it
+   reversed to create this one.
+English-Swahili xFried/FreeDict Dictionary ver. 0.2.2
+10c piece /tˈɛn sˈiː pˈiːs/ <n>
+
+kikumi
+5c piece /fˈaɪv sˈiː pˈiːs/ <n>
+
+kitano
+a while /ɐ wˈaɪl/ <n>
+
+kitambo
+above /əbˈʌv/ <adv>
+
+juu
+abundance /ɐbˈʌndəns/ <n>
+
+wingi
+abundant /ɐbˈʌndənt/ <adj>
+
+tele
+abuse /ɐbjˈuːs/ <n>
+
+matukano
+accident /ˈaksɪdənt/ <n>
+
+ajali
+accustom /ɐkˈʌstəm/ <v>
+
+zoeza
+acid /ˈasɪd/ <n>
+
+asidi
+act /ˈakt/ <n>
+
+mpango
+address /ɐdɹˈɛs/ <n>
+
+anwani
+Africa /ˈafɹɪkə/ <n>
+
+Afrika
+African /ˈafɹɪkən/ <n>
+
+Mwafrika
+after /ˈaftə/ <adv>
+
+baada
+afternoon /ˌaftənˈuːn/ <n>
+
+alasiri
+afterwards /ˈaftəwədz/ <adv>
+
+baadaye
+afterwards /ˈaftəwədz/ <adv>
+
+halafu
+again /ɐɡˈɛn/ <adv>
+
+tena
+agree /ɐɡɹˈiː/ <v>
+
+kubali
+agree /ɐɡɹˈiː/ <v>
+
+ patana
+agreement /ɐɡɹˈiːmənt/ <n>
+
+mapatano
+air /ˈeə/ <n>
+
+hewa
+airplane /ˈeəpleɪn/ <n>
+
+eropleni
+alive /ɐlˈaɪv/ <adj>
+
+hai
+all /ˈɔːl/ <adj>
+
+ote
+all /ˈɔːl/ <adj>
+
+pia
+all of you /ˈɔːl ɒv juː/
+
+nyote
+alone /ɐlˈəʊn/ <adj>
+
+peke
+although /ɒlðˈəʊ/ <conj>
+
+ingawa
+always /ˈɔːlweɪz/ <adv>
+
+sikuzote
+amount /ɐmˈaʊnt/ <n>
+
+kiasi
+amuse /ɐmjˈuːs/ <v>
+
+chekesha
+and /ˈand/ <conj>
+
+na
+and I /and ˈaɪ/
+
+nami
+and they /and ðˈeɪ/
+
+nao
+angel /ˈeɪndʒəl/ <n>
+
+malaika
+animal /ˈanɪməl/ <n>
+
+mnyama
+answer /ˈansə/ <n>
+
+jibu
+answer /ˈansə/ <v>
+
+itika
+answer /ˈansə/ <v>
+
+jibu
+appear /ɐpˈiə/ <v>
+
+tokea
+apply /ɐplˈaɪ/ <v>
+
+paka
+appointment /ɐpˈɔɪntmənt/ <n>
+
+miadi
+April /ˈeɪpɹəl/ <n>
+
+Aprili
+Arabia /əɹˈeɪbiə/ <n>
+
+Manga
+are /ˈɑː/ <irrv>
+
+ni
+arm /ˈɑːm/ <n>
+
+mkono
+arrange /ɐɹˈeɪndʒ/ <v>
+
+panga
+arrive /ɐɹˈaɪv/ <v>
+
+fika
+arrive at /ɐɹˈaɪv at/ <v>
+
+fikia
+art /ˈɑːt/ <n>
+
+sanaa
+as /ˈaz/ <conj>
+
+kama
+ash /ˈaʃ/ <n>
+
+jivu
+ask /ˈask/ <v>
+
+uliza
+association /ɐsˌəʊsɪˈeɪʃən/ <n>
+
+chama
+attention /ɐtˈɛnʃən/ <n>
+
+uangalifu
+August /ˈɔːɡəst/ <n>
+
+Agosti
+aunt /ˈant/ <n>
+
+shangazi
+authority /ɐθˈɒɹɪti/ <n>
+
+mamlaka
+awaken /ɐwˈeɪkən/ <v>
+
+amsha
+baboon /babˈuːn/ <n>
+
+nyani
+back /bˈak/ <n>
+
+mgongo
+bad /bˈad/ <adj>
+
+baya
+bag /bˈaɡ/ <n>
+
+mfuko
+bag /bˈaɡ/ <n>
+
+mkoba
+balcony /bˈalkəni/ <n>
+
+roshani
+banana /bɐnˈɑːnə/ <n>
+
+ndizi
+banana plant /bɐnˈɑːnə plˈant/ <n>
+
+mgomba
+barbarous /bˈɑːbəɹəs/ <adj>
+
+shenzi
+barber /bˈɑːbə/ <n>
+
+kinyozi
+basket /bˈaskɪt/ <n>
+
+kikapu
+bathe /bˈeɪð/ <v>
+
+oga
+bathe in /bˈeɪð ˈɪn/ <v>
+
+ogea
+bathing suit /bˈeɪðɪŋ sˈuːt/ <n>
+
+kiogeo
+be /bˈiː/ <v>
+
+wa
+be able /biː ˈeɪbəl/ <v>
+
+weza
+be apparent /biː ɐpˈaɹənt/ <v>
+
+onekana
+be awakened /biː ɐwˈeɪkənd/ <v>
+
+amshwa
+be boiled /biː bˈɔɪld/ <v>
+
+chemshwa
+be born /biː bˈɔːn/ <v>
+
+zaliwa
+be broken /biː bɹˈəʊkən/ <v>
+
+vunjika
+be bruised /biː bɹˈuːzd/ <v>
+
+chubuka
+be called /biː kˈɔːld/ <v>
+
+itwa
+be careful /biː kˈeəfəl/ <v>
+
+tahadhari
+be changed /biː tʃˈeɪndʒd/ <v>
+
+badilishwa
+be clear /biː klˈiə/ <v>
+
+elea
+be closed /biː klˈəʊzd/ <v>
+
+fungwa
+be collected /biː kəlˈɛktɪd/ <v>
+
+tozwa
+be comfortable /biː kˈʌmftəbəl/ <v>
+
+starehe
+be complete /biː kəmplˈiːt/ <v>
+
+timia
+be cut /biː kˈʌt/ <v>
+
+katwa
+be delivered /biː dɪlˈɪvəd/ <v>
+
+fikishwa
+be disturbed /biː dɪstˈɜːbd/ <v>
+
+ghasiwa
+be done /biː dˈʌn/ <v>
+
+fanyika
+be dried up /biː dɹˈaɪd ˈʌp/ <v>
+
+kaukwa
+be enough /biː ɪnˈʌf/ <v>
+
+tosha
+be full /biː fˈʊl/ <v>
+
+shiba
+be given /biː ɡˈɪvən/ <v>
+
+pewa
+be helped /biː hˈɛlpt/ <v>
+
+saidiwa
+be in service /biː ɪn sˈɜːvɪs/ <v>
+
+tumika
+be in time /biː ɪn tˈaɪm/ <v>
+
+wahi
+be injured /biː ˈɪndʒəd/ <v>
+
+umia
+be kneaded /biː nˈiːdɪd/ <v>
+
+kandwa
+be laid out /biː lˈeɪd ˈaʊt/ <v>
+
+tandikwa
+be loose /biː lˈuːs/ <v>
+
+pwaya
+be married /biː mˈaɹid/ <v>
+
+olewa
+be obtainable /biː ɒbtˈeɪnəbəl/ <v>
+
+patikana
+be opened /biː ˈəʊpənd/ <v>
+
+funguliwa
+be ordered /biː ˈɔːdəd/ <v>
+
+amriwa
+be overcome /biː ˌəʊvəkˈʌm/ <v>
+
+shindwa
+be permitted /biː pəmˈɪtɪd/ <v>
+
+ruhusiwa
+be possible /biː pˈɒsəbəl/ <v>
+
+wezekana
+be put /biː pˈʊt/ <v>
+
+ tiwa
+be put /biː pˈʊt/ <v>
+
+wekwa
+be quiet /biː kwˈaɪət/ <v>
+
+nyamaza
+be rented /biː ɹˈɛntɪd/ <v>
+
+kodishwa
+be repaired /biː ɹɪpˈeəd/ <v>
+
+tengenezwa
+be requested /biː ɹɪkwˈɛstɪd/ <v>
+
+takiwa
+be required of /biː ɹɪkwˈaɪəd ɒv/ <v>
+
+lazimu
+be robbed /biː ɹˈɒbd/ <v>
+
+ibiwa
+be sent /biː sˈɛnt/ <v>
+
+pelekwa
+be sent to /biː sˈɛnt tuː/ <v>
+
+pelekewa
+be sick /biː sˈɪk/ <v>
+
+umwa
+be sorry /biː sˈɒɹi/ <v>
+
+sikitika
+be torn /biː tˈɔːn/ <v>
+
+chanika
+be twisted /biː twˈɪstɪd/ <v>
+
+pindwa
+be used /biː jˈuːzd/ <v>
+
+tumiwa
+be useful /biː jˈuːsfəl/ <v>
+
+faa
+be washed /biː wˈɒʃt/ <v>
+
+fuliwa
+be written /biː ɹˈɪtən/ <v>
+
+andikwa
+bean /bˈiːn/ <n>
+
+ukunde
+bean cake /bˈiːn kˈeɪk/ <n>
+
+bajia
+bear offspring /bˈeəɹ ˈɒfspɹɪŋ/ <v>
+
+zaa
+beard /bˈiəd/ <n>
+
+ndevu
+beauty /bjˈuːti/ <n>
+
+uzuri
+bed /bˈɛd/ <n>
+
+kitanda
+bee /bˈiː/ <n>
+
+nyuki
+beer /bˈiə/ <n>
+
+pombe
+before /bɪfˈɔː/ <prep>
+
+kabla
+before dawn /bɪfˌɔː dˈɔːn/ <n>
+
+alfajiri
+beg /bˈɛɡ/ <v>
+
+omba
+beggar /bˈɛɡə/ <n>
+
+mwombaji
+begin /bɪɡˈɪn/ <v>
+
+anza
+behavior /bɪhˈeɪvjə/ <n>
+
+mwenendo
+behind /bɪhˈaɪnd/ <adv>
+
+nyuma
+believe /bɪlˈiːv/ <v>
+
+amini
+believe /bɪlˈiːv/ <v>
+
+sadiki
+bell /bˈɛl/ <n>
+
+kengele
+below /bɪlˈəʊ/ <adv>
+
+chini
+bend /bˈɛnd/ <n>
+
+pindi
+bend down /bˈɛnd dˈaʊn/ <v>
+
+inama
+beverage /bˈɛvəɹɪdʒ/ <n>
+
+kinywaji
+Bible /bˈaɪbəl/ <n>
+
+biblia
+big /bˈɪɡ/ <adj>
+
+ kubwa
+bird /bˈɜːd/ <n>
+
+ndege
+bite /bˈaɪt/ <v>
+
+uma
+biting ant /bˈaɪtɪŋ ˈant/ <n>
+
+siafu
+bitter /bˈɪtə/ <adj>
+
+chungu
+black /blˈak/ <adj>
+
+eusi
+bless /blˈɛs/ <v>
+
+bariki
+blessing /blˈɛsɪŋ/ <n>
+
+baraka
+blind person /blˈaɪnd pˈɜːsən/ <n>
+
+kipofu
+blister /blˈɪstə/ <n>
+
+lengelenge
+blood /blˈʌd/ <n>
+
+damu
+blue /blˈuː/ <adj>
+
+buluu
+board /bˈɔːd/ <n>
+
+bao
+boat /bˈəʊt/ <n>
+
+mashua
+body /bˈɒdi/ <n>
+
+mwili
+body organ /bˈɒdi ˈɔːɡən/ <n>
+
+mshipa
+boil /bˈɔɪl/ <n>
+
+jipu
+boil /bˈɔɪl/ <v>
+
+chemsha
+bone /bˈəʊn/ <n>
+
+mfupa
+book /bˈʊk/ <n>
+
+kitabu
+book /bˈʊk/ <n>
+
+msahafu
+borrow /bˈɒɹəʊ/ <v>
+
+kopa
+bottle /bˈɒtəl/ <n>
+
+chupa
+box /bˈɒks/ <n>
+
+sanduku
+boy /bˈɔɪ/ <n>
+
+mvulana
+bracelet /bɹˈeɪslət/ <n>
+
+kikuku
+brain /bɹˈeɪn/ <n>
+
+ubongo
+brake /bɹˈeɪk/ <n>
+
+kizuizo
+brass /bɹˈas/ <n>
+
+shaba
+brassiere /bɹˌasiˈeə/ <n>
+
+sidiria
+brave /bɹˈeɪv/ <adj>
+
+hodari
+bread /bɹˈɛd/ <n>
+
+mkate
+break /bɹˈeɪk/ <v>
+
+vunja
+break down /bɹˈeɪk dˈaʊn/ <v>
+
+bomoa
+break down /bɹˈeɪk dˈaʊn/ <v>
+
+haribika
+bream /bɹˈiːm/ <n>
+
+changu
+bridge /bɹˈɪdʒ/ <n>
+
+daraja
+brightness /bɹˈaɪtnəs/ <n>
+
+mwangaza
+bring /bɹˈɪŋ/ <v>
+
+leta
+bring to /bɹˈɪŋ tuː/ <v>
+
+letea
+bring up /bɹˈɪŋ ˈʌp/ <v>
+
+lea
+broom /bɹˈuːm/ <n>
+
+ufagio
+brother /bɹˈʌðə/ <n>
+
+kaka
+brown /bɹˈaʊn/ <adj>
+
+kahawia
+bubble up /bˈʌbəl ˈʌp/ <v>
+
+chemka
+buffalo /bˈʌfəlˌəʊ/ <n>
+
+nyati
+build /bˈɪld/ <v>
+
+jenga
+bunch /bˈʌntʃ/ <n>
+
+shada
+bundle /bˈʌndəl/ <n>
+
+furushi
+bundle /bˈʌndəl/ <n>
+
+tita
+burn /bˈɜːn/ <v>
+
+waka
+but /bˈʌt/ <conj>
+
+bali
+but /bˈʌt/ <conj>
+
+lakini
+butter /bˈʌtə/ <n>
+
+siagi
+buttock /bˈʌtək/ <n>
+
+kitako
+buy /bˈaɪ/ <v>
+
+nunua
+cafe /kˈafeɪ/ <n>
+
+mkahawa
+calf /kˈɑːf/ <n>
+
+ndama
+call /kˈɔːl/ <v>
+
+ ita
+call on /kˈɔːl ˈɒn/ <v>
+
+tembelea
+camel /kˈaməl/ <n>
+
+ngamia
+can /kˈan/ <n>
+
+mkebe
+captain /kˈaptɪn/ <n>
+
+nahodha
+care for /kˈeə fɔː/ <v>
+
+tunza
+carelessly /kˈeələsli/ <adv>
+
+ovyo
+caretaker /kˈeəteɪkə/ <n>
+
+mtunza
+carpenter /kˈɑːpəntə/ <n>
+
+seremala
+carry /kˈaɹi/ <v>
+
+beba
+carry /kˈaɹi/ <v>
+
+chukua
+carry for /kˈaɹi fɔː/ <v>
+
+chukulia
+cassava /kasˈɑːvə/ <n>
+
+muhogo
+cat /kˈat/ <n>
+
+paka
+caution /kˈɔːʃən/ <n>
+
+hadhari
+cent /sˈɛnt/ <n>
+
+senti
+centipede /sˈɛntɪpˌiːd/ <n>
+
+tandu
+ceremonial dance /sˌɛɹɪmˈəʊnɪəl dˈans/ <n>
+
+unyago
+certainly not /sˈɜːtənli nˈɒt/ <interj>
+
+hasha!
+certainty /sˈɜːtənti/ <n>
+
+hakika
+certificate /sətˈɪfɪkət/ <n>
+
+cheti
+chain /tʃˈeɪn/ <n>
+
+mnyororo
+chair /tʃˈeə/ <n>
+
+kiti
+change /tʃˈeɪndʒ/ <v>
+
+badilisha
+cheap /tʃˈiːp/ <adj>
+
+rahisi
+check /tʃˈɛk/ <n>
+
+hundi
+cheek /tʃˈiːk/ <n>
+
+shavu
+cheese /tʃˈiːz/ <n>
+
+jibini
+chest /tʃˈɛst/ <n>
+
+kifua
+chest cold /tʃˈɛst kˈəʊld/ <n>
+
+mafua
+chew /tʃˈuː/ <v>
+
+tafuna
+chicken pox /tʃˈɪkɪn pˈɒks/ <n>
+
+tetekuwanga
+chief /tʃˈiːf/ <n>
+
+jumbe
+child /tʃˈaɪld/ <n>
+
+mtoto
+childhood /tʃˈaɪldhʊd/ <n>
+
+utoto
+chin /tʃˈɪn/ <n>
+
+kidevu
+choose /tʃˈuːz/ <v>
+
+chagua
+church /tʃˈɜːtʃ/ <n>
+
+kanisa
+circuit /sˈɜːkɪt/ <n>
+
+mzunguko
+citizen /sˈɪtɪzən/ <n>
+
+raia
+class /klˈas/ <n>
+
+darasa
+clean /klˈiːn/ <adj>
+
+safi
+clean /klˈiːn/ <adj>
+
+takatifu
+cleanse /klˈɛnz/ <v>
+
+safisha
+clerk /klˈɑːk/ <n>
+
+karani
+close /klˈəʊs/ <v>
+
+fumba
+cloth /klˈɒθ/ <n>
+
+kitambaa
+clothes /klˈəʊðz/ <n>
+
+nguo
+clothes iron /klˈəʊðz ˈaɪən/ <n>
+
+pasi
+coast /kˈəʊst/ <n>
+
+pwani
+coat /kˈəʊt/ <n>
+
+koti
+cock /kˈɒk/ <n>
+
+jogoo
+coconut /kˈəʊkənˌʌt/ <n>
+
+dafu
+coconut /kˈəʊkənˌʌt/ <n>
+
+nazi
+coconut palm /kˈəʊkənˌʌt pˈɑːm/ <n>
+
+mnazi
+cod /kˈɒd/ <n>
+
+chewa
+coffee /kˈɒfi/ <n>
+
+kahawa
+coin /kˈɔɪn/ <n>
+
+sarafu
+cold /kˈəʊld/ <n>
+
+baridi
+collarbone /kˈɒləbˌəʊn/ <n>
+
+mtulinga
+collect /kəlˈɛkt/ <v>
+
+toza
+collective work /kəlˈɛktɪv wˈɜːk/ <n>
+
+ujima
+collector /kəlˈɛktə/ <n>
+
+mkusanya
+color /kˈʌlə/ <n>
+
+rangi
+comb /kˈəʊm/ <n>
+
+kitana
+come /kˈʌm/ <v>
+
+ja
+come across /kˈʌm əkɹˈɒs/ <v>
+
+kuta
+come! /kˈʌm/ <irrv>
+
+njoo!
+commerce /kˈɒmɜːs/ <n>
+
+biashara
+companion /kəmpˈaniən/ <n>
+
+mwenzi
+competition /kˌɒmpətˈɪʃən/ <n>
+
+shindano
+complete /kəmplˈiːt/ <v>
+
+kamili
+complete /kəmplˈiːt/ <adj>
+
+kamili
+conductor /kəndˈʌktə/ <n>
+
+utingo
+confuse /kənfjˈuːz/ <v>
+
+ghasi
+confusion /kənfjˈuːʒən/ <n>
+
+ghasia
+congratulations /kənɡɹˈatʃʊlˈeɪʃənz/ <n>
+
+pongezi
+consider /kənsˈɪdə/ <v>
+
+fikiri
+content /kˈɒntɛnt/ <adj>
+
+radhi
+continue /kəntˈɪnjuː/ <v>
+
+endelea
+contradict /kˌɒntɹədˈɪkt/ <v>
+
+gomba
+converse /kˈɒnvɜːs/ <v>
+
+ongea
+converse in /kˈɒnvɜːs ˈɪn/ <v>
+
+zungumzia
+cook /kˈʊk/ <n>
+
+mpishi
+cook /kˈʊk/ <v>
+
+pika
+cook in /kˈʊk ˈɪn/ <v>
+
+pikia
+cooking pot /kˈʊkɪŋ pˈɒt/ <n>
+
+chungu
+cool /kˈuːl/ <v>
+
+poza
+cool down /kˈuːl dˈaʊn/ <v>
+
+poa
+cool season /kˈuːl sˈiːzən/ <n>
+
+kipupwe
+cool south wind /kˈuːl sˈaʊθ wˈɪnd/ <n>
+
+kusi
+copy /kˈɒpɪ/ <v>
+
+fuatisha
+cord /kˈɔːd/ <n>
+
+uzi
+cork /kˈɔːk/ <n>
+
+kizibo
+corpse /kˈɔːps/ <n>
+
+maiti
+correct /kəɹˈɛkt/ <v>
+
+sahihisha
+correct /kəɹˈɛkt/ <adj>
+
+sahihi
+cotton /kˈɒtən/ <n>
+
+pamba
+cough /kˈɒf/ <n>
+
+kikohozi
+count /kˈaʊnt/ <v>
+
+hesabu
+country /kˈʌntɹi/ <n>
+
+nchi
+course /kˈɔːs/ <n>
+
+mwendo
+cover /kˈʌvə/ <v>
+
+funika
+cow /kˈaʊ/ <n>
+
+ng'ombe
+crack /kɹˈak/ <n>
+
+ufa
+craftsman /kɹˈaftsmən/ <n>
+
+fundi
+create /kɹiːˈeɪt/ <v>
+
+umba
+crocodile /kɹˈɒkədˌaɪl/ <n>
+
+mamba
+cross /kɹˈɒs/ <n>
+
+msalaba
+cross over /kɹˈɒs ˈəʊvə/ <v>
+
+vuka
+crossing /kɹˈɒsɪŋ/ <n>
+
+kivuko
+crowbar /kɹˈəʊbɑː/ <n>
+
+mtalimbo
+crush /kɹˈʌʃ/ <v>
+
+ponda
+cry out /kɹˈaɪ ˈaʊt/ <v>
+
+lia
+cucumber /kjˈuːkʌmbə/ <n>
+
+tango
+cunning /kˈʌnɪŋ/ <adj>
+
+erevu
+cup /kˈʌp/ <n>
+
+kikombe
+cure /kjˈʊə/ <v>
+
+ponya
+custom /kˈʌstəm/ <n>
+
+desturi
+custom /kˈʌstəm/ <n>
+
+kawaida
+Custom House /kˈʌstəm hˈaʊs/ <n>
+
+forodha
+cut /kˈʌt/ <v>
+
+kata
+danger /dˈeɪndʒə/ <n>
+
+hatari
+darkness /dˈɑːknəs/ <n>
+
+giza
+date /dˈeɪt/ <n>
+
+tarehe
+date /dˈeɪt/ <n>
+
+tende
+date palm /dˈeɪt pˈɑːm/ <n>
+
+mtende
+daughter /dˈɔːtə/ <n>
+
+binti
+dawn /dˈɔːn/ <v>
+
+pambazuka
+day /dˈeɪ/ <n>
+
+siku
+daytime /dˈeɪtaɪm/ <n>
+
+mchana
+deaf person /dˈɛf pˈɜːsən/ <n>
+
+kiziwi
+December /dɪsˈɛmbə/ <n>
+
+Desemba
+deck /dˈɛk/ <n>
+
+sitaha
+deed /dˈiːd/ <n>
+
+tendo
+delay /dɪlˈeɪ/ <v>
+
+chelewa
+deny /dɪnˈaɪ/ <v>
+
+kana
+descent /dɪsˈɛnt/ <n>
+
+mtelemko
+desire /dɪzˈaɪə/ <v>
+
+tumai
+despise /dɪspˈaɪz/ <v>
+
+dharau
+destroy /dɪstɹˈɔɪ/ <v>
+
+haribu
+dictionary /dˈɪkʃənəɹi/ <n>
+
+kamusi
+die /dˈaɪ/ <v>
+
+fa
+difference /dˈɪfɹəns/ <n>
+
+tofauti
+different /dˈɪfɹənt/ <adj>
+
+mbalimbali
+diminish /dɪmˈɪnɪʃ/ <v>
+
+pungua
+direct /daɪɹˈɛkt/ <v>
+
+elekeza
+dirty /dˈɜːti/ <adj>
+
+chafu
+discount /dˈɪskaʊnt/ <n>
+
+kipunguzi
+distance /dˈɪstəns/ <n>
+
+mbali
+divide /dɪvˈaɪd/ <v>
+
+gawa
+division /dɪvˈɪʒən/ <n>
+
+panda
+do for /dˈuː fɔː/ <v>
+
+fanyia
+doctor /dˈɒktə/ <n>
+
+daktari
+document /dˈɒkjuːmənt/ <n>
+
+hati
+dog /dˈɒɡ/ <n>
+
+mbwa
+doll /dˈɒl/ <n>
+
+bandia
+donkey /dˈɒŋki/ <n>
+
+punda
+door /dˈɔː/ <n>
+
+mlango
+dormitory /dˈɔːmɪtəɹi/ <n>
+
+bweni
+dream /dɹˈiːm/ <n>
+
+ndoto
+dress /dɹˈɛs/ <v>
+
+vaa
+drink /dɹˈɪŋk/ <v>
+
+nywa
+drinking glass /dɹˈɪŋkɪŋ ɡlˈas/ <n>
+
+bilauri
+drive /dɹˈaɪv/ <v>
+
+ongoza
+drive away /dɹˈaɪv ɐwˈeɪ/ <v>
+
+kimbiza
+drive out /dɹˈaɪv ˈaʊt/ <v>
+
+fukuza
+drop /dɹˈɒp/ <n>
+
+tone
+drum /dɹˈʌm/ <n>
+
+ngoma
+dry /dɹˈaɪ/ <adj>
+
+kavu
+dry up /dɹˈaɪ ˈʌp/ <v>
+
+ kauka
+dry with /dɹˈaɪ wɪð/ <v>
+
+kaushia
+duck /dˈʌk/ <n>
+
+bata
+eagle /ˈiːɡəl/ <n>
+
+tai
+ear /ˈiə/ <n>
+
+sikio
+early /ˈɜːlɪ/ <adv>
+
+mapema
+east /ˈiːst/ <n>
+
+mashariki
+eat /ˈiːt/ <v>
+
+la
+economics /ˌiːkənˈɒmɪks/ <n>
+
+uchumi
+effort /ˈɛfət/ <n>
+
+bidii
+egg /ˈɛɡ/ <n>
+
+yai
+eight /ˈeɪt/ <num>
+
+nane
+eighty /ˈeɪti/ <num>
+
+themanini
+elder /ˈɛldə/ <n>
+
+mzee
+elephant /ˈɛlɪfənt/ <n>
+
+tembo
+eleven /ɪlˈɛvən/ <num>
+
+edashara
+embassy /ˈɛmbəsi/ <n>
+
+ubalozi
+empty /ˈɛmpti/ <adj>
+
+tupu
+enable /ɛnˈeɪbəl/ <v>
+
+wezesha
+enemy /ˈɛnəmi/ <n>
+
+adui
+English language /ˈɪŋɡlɪʃ lˈaŋɡwɪdʒ/ <n>
+
+Kiingereza
+enlarge /ɛnlˈɑːdʒ/ <v>
+
+kuza
+enter /ˈɛntə/ <v>
+
+ingia
+enter into /ˈɛntəɹ ˌɪntʊ/ <v>
+
+ingilia
+entirely /ɛntˈaɪəli/ <adv>
+
+kabisa
+entry /ˈɛntɹi/ <n>
+
+kiingilio
+envelope /ˈɛnvəlˌəʊp/ <n>
+
+bahasha
+equal /ˈiːkwəl/ <adj>
+
+sawa
+especially /ɪspˈɛʃəli/ <adv>
+
+hasa
+even if /ˈiːvən ɪf/ <conj>
+
+ijapo
+evening /ˈiːvnɪŋ/ <n>
+
+jioni
+every /ˈɛvɹɪ/ <adj>
+
+kila
+exactly /ɛɡzˈaktli/ <adv>
+
+halisi
+excellent /ˈɛksələnt/ <adj>
+
+bora
+except /ɛksˈɛpt/ <conj>
+
+ila
+expense /ɛkspˈɛns/ <n>
+
+gharama
+expensive /ɛkspˈɛnsɪv/ <adj>
+
+ghali
+explain /ɛksplˈeɪn/ <v>
+
+eleza
+explanation /ɛksplɐnˈeɪʃən/ <n>
+
+elezo
+eye /ˈaɪ/ <n>
+
+jicho
+eyeglasses /ˈaɪɡlasɪz/ <n>
+
+miwani
+face /fˈeɪs/ <n>
+
+uso
+face /fˈeɪs/ <v>
+
+elekea
+fade /fˈeɪd/ <v>
+
+ kwajuka
+fail /fˈeɪl/ <v>
+
+kosekana
+faint /fˈeɪnt/ <v>
+
+zimia
+faith /fˈeɪθ/ <n>
+
+imani
+fall /fˈɔːl/ <v>
+
+anguka
+family  /fˈamɪli/ <n>
+
+jamaa
+far /fˈɑː/ <adv>
+
+mbali
+fare /fˈeə/ <n>
+
+nauli
+farmer /fˈɑːmə/ <n>
+
+mlimaji
+farther /fˈɑːðə/ <n>
+
+ng'ambo
+fasten /fˈasən/ <v>
+
+funga
+fasten with /fˈasən wɪð/ <v>
+
+fungia
+fastening /fˈasənɪŋ/ <n>
+
+kifungo
+fat /fˈat/ <adj>
+
+nene
+fat /fˈat/ <adj>
+
+nono
+father /fˈɑːðə/ <n>
+
+baba
+fault /fˈɒlt/ <n>
+
+kosa
+favor /fˈeɪvə/ <v>
+
+pendelea
+fear /fˈiə/ <n>
+
+hofu
+fear /fˈiə/ <v>
+
+ogopa
+February /fˈɛbɹuːəɹi/ <n>
+
+Februari
+feed /fˈiːd/ <v>
+
+lisha
+female /fˈiːmeɪl/ <n>
+
+kike
+ferry /fˈɛɹi/ <n>
+
+likoni
+fever /fˈiːvə/ <n>
+
+homa
+few /fjˈuː/ <adj>
+
+chache
+few /fjˈuː/ <adj>
+
+haba
+fiance /fɪˈɒnseɪ/ <n>
+
+mchumba
+fiancee /fɪˈɒnseɪ/ <n>
+
+mchumba
+fifty /fˈɪfti/ <num>
+
+hamsini
+fifty /fˈɪfti/ <num>
+
+khamsini
+fig /fˈɪɡ/ <n>
+
+tini
+fig tree /fˈɪɡ tɹˈiː/ <n>
+
+mtini
+fight /fˈaɪt/ <v>
+
+pigana
+file /fˈaɪl/ <n>
+
+tupa
+fill /fˈɪl/ <v>
+
+jaza
+fill up /fˈɪl ˈʌp/ <v>
+
+jaa
+finally /fˈaɪnəli/ <adv>
+
+hatimaye
+finger /fˈɪŋɡə/ <n>
+
+kidole
+fingernail /fˈɪŋɡənˌeɪl/ <n>
+
+ukucha
+finish /fˈɪnɪʃ/ <v>
+
+isha
+finish /fˈɪnɪʃ/ <v>
+
+maliza
+fire /fˈaɪə/ <n>
+
+moto
+fireplace /fˈaɪəpleɪs/ <n>
+
+jiko
+first /fˈɜːst/ <adj>
+
+kwanza
+fish /fˈɪʃ/ <n>
+
+samaki
+five /fˈaɪv/ <num>
+
+tano
+flour /flˈaʊə/ <n>
+
+unga
+flower  /flˈaʊə/ <n>
+
+ua
+fly /flˈaɪ/ <n>
+
+inzi
+fold /fˈəʊld/ <v>
+
+kunja
+follow /fˈɒləʊ/ <v>
+
+fuata
+folly /fˈɒli/ <n>
+
+ujinga
+food /fˈuːd/ <n>
+
+chakula
+fool /fˈuːl/ <n>
+
+mjinga
+for /fˈɔː/ <prep>
+
+kwa
+forbid /fəbˈɪd/ <v>
+
+kataza
+foreign /fˈɒɹən/ <adj>
+
+geni
+forest /fˈɒɹɪst/ <n>
+
+msitu
+forget /fəɡˈɛt/ <v>
+
+sahau
+forgive /fəɡˈɪv/ <v>
+
+achilia
+forgive /fəɡˈɪv/ <v>
+
+samehe
+fork /fˈɔːk/ <n>
+
+uma
+forty /fˈɔːti/ <num>
+
+arobaini
+four /fˈɔː/ <adj>
+
+nne
+four /fˈɔː/ <num>
+
+nne
+fowl /fˈaʊl/ <n>
+
+kuku
+freedom /fɹˈiːdəm/ <n>
+
+uhuru
+French language /fɹˈɛntʃ lˈaŋɡwɪdʒ/ <n>
+
+Kifaransa
+Friday /fɹˈaɪdeɪ/ <n>
+
+Ijumaa
+friend /fɹˈɛnd/ <n>
+
+rafiki
+frog /fɹˈɒɡ/ <n>
+
+chura
+fruit /fɹˈuːt/ <n>
+
+tunda
+fry /fɹˈaɪ/ <v>
+
+kaanga
+gain /ɡˈeɪn/ <n>
+
+nafuu
+game /ɡˈeɪm/ <n>
+
+mchezo
+garden /ɡˈɑːdən/ <n>
+
+bustani
+gas /ɡˈas/ <n>
+
+hewa
+gasoline /ɡˈasəlˌiːn/ <n>
+
+petroli
+gather /ɡˈaðə/ <v>
+
+chuma
+gauze /ɡˈɔːz/ <n>
+
+shashi
+gem /dʒˈɛm/ <n>
+
+kito
+gentle /dʒˈɛntəl/ <adj>
+
+pole
+gentleman /dʒˈɛntəlmən/ <n>
+
+bwana
+gentleness /dʒˈɛntəlnəs/ <n>
+
+upole
+get /ɡˈɛt/ <v>
+
+pata
+get drunk /ɡɛt dɹˈʌŋk/ <v>
+
+lewa
+get for /ɡˈɛt fɔː/ <v>
+
+patia
+get lost /ɡɛt lˈɒst/ <v>
+
+potea
+get tired /ɡɛt tˈaɪəd/ <v>
+
+choka
+get well /ɡɛt wˈɛl/ <v>
+
+pona
+giant /dʒˈaɪənt/ <n>
+
+jitu
+giraffe /dʒɪɹˈaf/ <n>
+
+twiga
+girl /ɡˈɜːl/ <n>
+
+msichana
+give /ɡˈɪv/ <v>
+
+pa
+give a share /ɡˈɪv ɐ ʃˈeə/ <v>
+
+husu
+give for /ɡˈɪv fɔː/ <v>
+
+pia
+glass /ɡlˈas/ <n>
+
+kioo
+go /ɡˈəʊ/ <v>
+
+enda
+go /ɡˈəʊ/ <irrv>
+
+nenda!
+go away /ɡˌəʊ ɐwˈeɪ/ <v>
+
+ondoka
+go out /ɡˌəʊ ˈaʊt/ <v>
+
+toka
+go round /ɡˌəʊ ɹˈaʊnd/ <v>
+
+zunguka
+go to /ɡˈəʊ tuː/ <v>
+
+endea
+goat /ɡˈəʊt/ <n>
+
+mbuzi
+God /ɡˈɒd/ <n>
+
+Mungu
+gold /ɡˈəʊld/ <n>
+
+dhahabu
+good /ɡˈʊd/ <adj>
+
+ema
+good /ɡˈʊd/ <adj>
+
+zuri
+good fortune /ɡˈʊd fˈɔːtʃuːn/ <n>
+
+heri
+gown /ɡˈaʊn/ <n>
+
+kanzu
+grape /ɡɹˈeɪp/ <n>
+
+zabibu
+grape vine /ɡɹˈeɪp vˈaɪn/ <n>
+
+mzabibu
+grapefruit /ɡɹˈeɪpfɹuːt/ <n>
+
+balungi
+great /ɡɹˈeɪt/ <adj>
+
+kuu
+greater rains /ɡɹˈeɪtə ɹˈeɪnz/ <n>
+
+masika
+greet /ɡɹˈiːt/ <v>
+
+amkia
+greet /ɡɹˈiːt/ <v>
+
+salimu
+greetings /ɡɹˈiːtɪŋz/ <n>
+
+salamu
+grind /ɡɹˈaɪnd/ <v>
+
+saga
+grow /ɡɹˈəʊ/ <v>
+
+ota
+grow up /ɡɹˈəʊ ˈʌp/ <v>
+
+kua
+guarantee /ɡˌaɹəntˈiː/ <n>
+
+kithibitisho
+guard /ɡˈɑːd/ <n>
+
+mlinzi
+guard /ɡˈɑːd/ <v>
+
+linda
+guava /ɡwˈɑːvə/ <n>
+
+pera
+guide /ɡˈaɪd/ <n>
+
+kiongozi
+gum /ɡˈʌm/ <n>
+
+gundi
+gums /ɡˈʌmz/ <n>
+
+ufizi
+hair /hˈeə/ <n>
+
+nywele
+half /hˈɑːf/ <n>
+
+nusu
+half gallon /hˈɑːf ɡˈalən/ <n>
+
+pishi
+hammer /hˈamə/ <n>
+
+nyundo
+hang up on /hˈaŋ ˌʌp ˈɒn/ <v>
+
+tundikia
+hard /hˈɑːd/ <adj>
+
+gumu
+hare /hˈeə/ <n>
+
+sungura
+harm /hˈɑːm/ <v>
+
+dhuru
+harvest /hˈɑːvɪst/ <n>
+
+mavuno
+haste /hˈeɪst/ <n>
+
+haraka
+hat /hˈat/ <n>
+
+kofia
+hate /hˈeɪt/ <v>
+
+chukia
+have /hˈav/ <v>
+
+na
+having /hˈavɪŋ/ <adj>
+
+enye
+he /hˈiː/ <pron>
+
+yeye
+he she is /hiː ʃiː ˈɪz/ <irrv>
+
+yu
+head /hˈɛd/ <n>
+
+kichwa
+health /hˈɛlθ/ <n>
+
+afya
+hear /hˈiə/ <v>
+
+sikia
+heart /hˈɑːt/ <n>
+
+moyo
+heat /hˈiːt/ <n>
+
+joto
+heavy /hˈɛvi/ <adj>
+
+zito
+heel /hˈiːl/ <n>
+
+kisigino
+hello /həlˈəʊ/
+
+jambo
+help /hˈɛlp/ <n>
+
+msaada
+help /hˈɛlp/ <v>
+
+saidia
+herdsman /hˈɜːdzmən/ <n>
+
+mchungaji
+here /hˈiə/ <adv>
+
+hapa
+here /hˈiə/ <adv>
+
+huku
+hers /hˈɜːz/ <adj>
+
+ake
+hesitate /hˈɛsɪtˌeɪt/ <v>
+
+sita
+hide /hˈaɪd/ <v>
+
+ficha
+highway /hˈaɪweɪ/ <n>
+
+barabara
+hill /hˈɪl/ <n>
+
+kilima
+hinder /hˈɪndə/ <v>
+
+zuia
+hip /hˈɪp/ <n>
+
+nyonga
+hippo /hˈɪpəʊ/ <n>
+
+kiboko
+his /hˈɪz/ <adj>
+
+ake
+hit /hˈɪt/ <v>
+
+piga
+hit for /hˈɪt fɔː/ <v>
+
+pigia
+hoe /hˈəʊ/ <n>
+
+jembe
+hoe /hˈəʊ/ <v>
+
+lima
+hold on to /hˈəʊld ˈɒn tuː/ <v>
+
+shika
+holder /hˈəʊldə/ <n>
+
+mshika
+hole /hˈəʊl/ <n>
+
+tundu
+holiday /hˈɒlɪdˌeɪ/ <n>
+
+sikukuu
+honey /hˈʌni/ <n>
+
+asali
+horn /hˈɔːn/ <n>
+
+honi
+horse /hˈɔːs/ <n>
+
+farasi
+hospital /hˈɒspɪtəl/ <n>
+
+hospitali
+hot season /hˈɒt sˈiːzən/ <n>
+
+kaskazi
+hot season /hˈɒt sˈiːzən/ <n>
+
+kiangazi
+hotel /həʊtˈɛl/ <n>
+
+hoteli
+hour /ˈaʊə/ <n>
+
+saa
+house /hˈaʊs/ <n>
+
+nyumba
+how /hˈaʊ/ <adv>
+
+je?
+how many /hˌaʊ mˈɛni/ <adj>
+
+ngapi?
+hundred /hˈʌndɹəd/ <num>
+
+mia
+hundred thousand /hˈʌndɹəd θˈaʊzənd/ <adj>
+
+laki
+hundred thousand /hˈʌndɹəd θˈaʊzənd/ <num>
+
+laki
+hunger /hˈʌŋɡə/ <n>
+
+njaa
+hunt /hˈʌnt/ <v>
+
+winda
+husband /hˈʌsbənd/ <n>
+
+mume
+hut /hˈʌt/ <n>
+
+kibanda
+hyena /haɪˈiːnə/ <n>
+
+fisi
+I /ˈaɪ/ <pron>
+
+mimi
+I do not have /aɪ duːnˌɒt hˈav/ <irrv>
+
+sina
+I have /aɪ hˈav/ <irrv>
+
+nina
+ice /ˈaɪs/ <n>
+
+barafu
+idle /ˈaɪdəl/ <adj>
+
+vivu
+if /ˈɪf/ <conj>
+
+iwapo
+ill-feeling /ˈɪlfˈiːlɪŋ/ <n>
+
+chuki
+implement /ˈɪmplɪmənt/ <n>
+
+kifaa
+importance /ɪmpˈɔːtəns/ <n>
+
+umuhimu
+important /ɪmpˈɔːtənt/ <adj>
+
+muhimu
+improve /ɪmpɹˈuːv/ <v>
+
+boresha
+in /ˈɪn/ <prep>
+
+katika
+in a corner /ɪn ɐ kˈɔːnə/ <adv>
+
+pembeni
+in front /ɪn fɹˈʌnt/ <adv>
+
+mbele
+in front /ɪn fɹˈʌnt/ <adv>
+
+mkabala
+in here /ɪn hˈiə/ <adv>
+
+humu
+in order that /ɪn ˈɔːdə ðˈat/ <conj>
+
+ili
+in there /ɪn ðˈeə/ <adv>
+
+mle
+in vain /ɪn vˈeɪn/ <adv>
+
+bure
+in-law /ɪnlˈɔː/ <n>
+
+mkwe
+increase /ˈɪnkɹiːs/ <v>
+
+ongeza
+increase /ˈɪnkɹiːs/ <v>
+
+zidi
+infect /ɪnfˈɛkt/ <v>
+
+ambukiza
+infidel /ˈɪnfɪdəl/ <n>
+
+kafiri
+inform /ɪnfˈɔːm/ <v>
+
+arifu
+inhabitant /ɪnhˈabɪtənt/ <n>
+
+mwenyeji
+initiation rite /ɪnˌɪʃɪˈeɪʃən ɹˈaɪt/ <n>
+
+jando
+ink /ˈɪŋk/ <n>
+
+wino
+inquisitiveness /ɪnkwˈɪzɪtˌɪvnəs/ <n>
+
+utafiti
+insect /ˈɪnsɛkt/ <n>
+
+mdudu
+inside /ɪnsˈaɪd/ <adv>
+
+ndani
+instrument /ˈɪnstɹəmənt/ <n>
+
+ala
+insult /ˈɪnsʌlt/ <n>
+
+tusi
+insurance /ɪnʃˈʊəɹəns/ <n>
+
+bima
+intention /ɪntˈɛnʃən/ <n>
+
+kusudi
+intention /ɪntˈɛnʃən/ <n>
+
+mradi
+intestines /ɪntˈɛstɪnz/ <n>
+
+utumbo
+is /ˈɪz/ <irrv>
+
+ni
+island /ˈaɪlənd/ <n>
+
+kisiwa
+it is I /ɪt ɪz ˈaɪ/
+
+ndimi
+it is we /ɪt ɪz wˈiː/
+
+ndisi
+its /ˈɪts/ <adj>
+
+ake
+January /dʒˈanjuːəɹi/ <n>
+
+Januari
+jaw /dʒˈɔː/ <n>
+
+taya
+jealous /dʒˈɛləs/ <adj>
+
+wivu
+jeweller /dʒˈuːələ/ <n>
+
+sonara
+join /dʒˈɔɪn/ <v>
+
+unga
+journey /dʒˈɜːni/ <n>
+
+safari
+joy /dʒˈɔɪ/ <n>
+
+furaha
+July /dʒuːlˈaɪ/ <n>
+
+Julai
+jump /dʒˈʌmp/ <v>
+
+ruka
+June /dʒˈuːn/ <n>
+
+Juni
+key /kˈiː/ <n>
+
+ufunguo
+kidney /kˈɪdni/ <n>
+
+figo
+kill /kˈɪl/ <v>
+
+ua
+kilogram /kˈɪləɡɹˌam/ <n>
+
+kilo
+kind /kˈaɪnd/ <n>
+
+aina
+kind /kˈaɪnd/ <n>
+
+jinsi
+kind /kˈaɪnd/ <n>
+
+namna
+king /kˈɪŋ/ <n>
+
+mfalme
+kingdom /kˈɪŋdəm/ <n>
+
+ufalme
+kingfish /kˈɪŋfɪʃ/ <n>
+
+nguru
+knead /nˈiːd/ <v>
+
+kanda
+knee /nˈiː/ <n>
+
+goti
+knife /nˈaɪf/ <n>
+
+kisu
+know /nˈəʊ/ <v>
+
+elewa
+know /nˈəʊ/ <v>
+
+jua
+knowledge /nˈɒlɪdʒ/ <n>
+
+elimu
+knowledge /nˈɒlɪdʒ/ <n>
+
+maarifa
+Koran /kɔːɹˈɑːn/ <n>
+
+Kurani
+lace /lˈeɪs/ <n>
+
+almaria
+lady /lˈeɪdi/ <n>
+
+bibi
+lamp /lˈamp/ <n>
+
+taa
+land /lˈand/ <n>
+
+ardhi
+language /lˈaŋɡwɪdʒ/ <n>
+
+lugha
+large basket /lˈɑːdʒ bˈaskɪt/ <n>
+
+kapu
+last /lˈast/ <adj>
+
+mwisho
+latrine /lɐtɹˈiːn/ <n>
+
+choo
+laugh /lˈaf/ <v>
+
+cheka
+laxative /lˈaksətˌɪv/ <n>
+
+haluli
+lay down /lˈeɪ dˈaʊn/ <v>
+
+laza
+lay out /lˈeɪ ˈaʊt/ <v>
+
+tandika
+leader /lˈiːdə/ <n>
+
+mkurugenzi
+leaf /lˈiːf/ <n>
+
+jani
+leak /lˈiːk/ <v>
+
+vuja
+learn /lˈɜːn/ <v>
+
+jifunza
+leather strap /lˈɛðə stɹˈap/ <n>
+
+ukanda
+leave /lˈiːv/ <v>
+
+acha
+left hand /lˈɛft hˈand/ <n>
+
+shoto
+left side /lˈɛft sˈaɪd/ <n>
+
+kushoto
+leg /lˈɛɡ/ <n>
+
+mguu
+lemon /lˈɛmən/ <n>
+
+limau
+lend /lˈɛnd/ <v>
+
+kopesha
+length /lˈɛŋθ/ <n>
+
+urefu
+leopard /lˈɛpəd/ <n>
+
+chui
+less /lˈɛs/ <adv>
+
+kasa
+less /lˈɛs/ <adv>
+
+kasoro
+less a quarter /lˈɛs ɐ kwˈɔːtə/
+
+kasorobo
+lesser rains /lˈɛsə ɹˈeɪnz/ <n>
+
+vuli
+lesson /lˈɛsən/ <n>
+
+fundisho
+letter /lˈɛtə/ <n>
+
+barua
+lid /lˈɪd/ <n>
+
+kifuniko
+lie down /lˈaɪ dˈaʊn/ <v>
+
+lala
+life /lˈaɪf/ <n>
+
+maisha
+life /lˈaɪf/ <n>
+
+uhai
+lift up /lˈɪft ˈʌp/ <v>
+
+inua
+light weight /lˈaɪt wˈeɪt/ <adj>
+
+epesi
+lightning /lˈaɪtnɪŋ/ <n>
+
+umeme
+like /lˈaɪk/ <conj>
+
+kama
+liken /lˈaɪkən/ <v>
+
+fananisha
+lime /lˈaɪm/ <n>
+
+ndimu
+line /lˈaɪn/ <n>
+
+mstari
+link /lˈɪŋk/ <n>
+
+kiungo
+lion /lˈaɪən/ <n>
+
+simba
+lip /lˈɪp/ <n>
+
+mdomo
+list /lˈɪst/ <n>
+
+orodha
+listen /lˈɪsən/ <v>
+
+sikiliza
+liver /lˈɪvə/ <n>
+
+ini
+load /lˈəʊd/ <n>
+
+mzigo
+lock /lˈɒk/ <n>
+
+kitasa
+locust /lˈəʊkʌst/ <n>
+
+nzige
+long /lˈɒŋ/ <adj>
+
+refu
+look at /lˈʊk at/ <v>
+
+tazama
+look for /lˈʊk fɔː/ <v>
+
+tafuta
+lose /lˈuːz/ <v>
+
+poteza
+loss /lˈɒs/ <n>
+
+hasara
+lot /lˈɒt/ <n>
+
+kura
+love /lˈʌv/ <v>
+
+penda
+lung /lˈʌŋ/ <n>
+
+pafu
+machine /məʃˈiːn/ <n>
+
+mashine
+maiden /mˈeɪdən/ <n>
+
+mwali
+mail /mˈeɪl/ <n>
+
+posta
+maize /mˈeɪz/ <n>
+
+hindi
+maize plant /mˈeɪz plˈant/ <n>
+
+muhindi
+make /mˈeɪk/ <v>
+
+fanya
+male /mˈeɪl/ <n>
+
+kiume
+man  /mˈan/ <n>
+
+mwanamume
+mango /mˈaŋɡəʊ/ <n>
+
+embe
+mango tree /mˈaŋɡəʊ tɹˈiː/ <n>
+
+mwembe
+manners /mˈanəz/ <n>
+
+adabu
+mansion /mˈanʃən/ <n>
+
+jumba
+manure /mənjˈʊə/ <n>
+
+mbolea
+manure /mənjˈʊə/ <n>
+
+samadi
+many /mˈɛni/ <adj>
+
+ingi
+map /mˈap/ <n>
+
+ramani
+March /mˈɑːtʃ/ <n>
+
+machi
+mark /mˈɑːk/ <n>
+
+chapa
+market /mˈɑːkɪt/ <n>
+
+soko
+marriage /mˈaɹɪdʒ/ <n>
+
+ndoa
+marry /mˈaɹi/ <v>
+
+oa
+match /mˈatʃ/ <n>
+
+kiberiti
+matter /mˈatə/ <n>
+
+jambo
+May /mˈeɪ/ <n>
+
+Mei
+meaning /mˈiːnɪŋ/ <n>
+
+maana
+measles /mˈiːsəlz/ <n>
+
+shurua
+measure /mˈɛʒə/ <n>
+
+cheo
+measure /mˈɛʒə/ <v>
+
+pima
+measurement /mˈɛʒəmənt/ <n>
+
+kipimo
+meat /mˈiːt/ <n>
+
+nyama
+meat pie /mˈiːt pˈaɪ/ <n>
+
+sambusa
+medicine /mˈɛdsən/ <n>
+
+dawa
+meet /mˈiːt/ <v>
+
+kutana
+meet /mˈiːt/ <v>
+
+onana
+men /mˈɛn/ <n>
+
+wanaume
+mercy /mˈɜːsi/ <n>
+
+huruma
+merge /mˈɜːdʒ/ <v>
+
+unganisha
+messenger /mˈɛsɪndʒə/ <n>
+
+mjumbe
+metal /mˈɛtəl/ <n>
+
+madini
+midday /mˌɪddˈeɪ/ <n>
+
+adhuhuri
+middle /mˈɪdəl/ <adv>
+
+kati
+middle /mˈɪdəl/ <adv>
+
+katikati
+mile /mˈaɪl/ <n>
+
+maili
+milk /mˈɪlk/ <n>
+
+maziwa
+millet /mˈɪlɪt/ <n>
+
+mtama
+million /mˈɪliən/ <num>
+
+milioni
+mimic /mˈɪmɪk/ <v>
+
+igiza
+minister /mˈɪnɪstə/ <n>
+
+kasisi
+minute /mˈɪnɪt/ <n>
+
+dakika
+mirage /mˈɪɹɑːʒ/ <n>
+
+sarabi
+miss /mˈɪs/ <v>
+
+kosa
+mix /mˈɪks/ <v>
+
+changanya
+mixture /mˈɪkstʃə/ <n>
+
+mchanganyiko
+molar /mˈəʊlə/ <n>
+
+gego
+Monday /mˈʌndeɪ/ <n>
+
+Jumatatu
+money /mˈʌni/ <n>
+
+fedha
+money /mˈʌni/ <n>
+
+pesa
+money order /mˈʌni ˈɔːdə/ <n>
+
+hawala
+monkey /mˈʌnki/ <n>
+
+tumbili
+moon /mˈuːn/ <n>
+
+mwezi
+more /mˈɔː/ <adv>
+
+zaidi
+morning /mˈɔːnɪŋ/ <n>
+
+asubuhi
+mosque /mˈɒsk/ <n>
+
+msikiti
+mosquito /məskˈiːtəʊ/ <n>
+
+mbu
+mosquito net /məskˈiːtəʊ nˈɛt/ <n>
+
+chandarua
+mother /mˈʌðə/ <n>
+
+mama
+mountain /mˈaʊntɪn/ <n>
+
+mlima
+mouth /mˈaʊθ/ <n>
+
+kinywa
+move from /mˈuːv fɹɒm/ <v>
+
+hama
+move to /mˈuːv tuː/ <v>
+
+hamia
+movies /mˈuːvɪz/ <n>
+
+sinema
+much /mˈʌtʃ/ <adj>
+
+ingi
+mud /mˈʌd/ <n>
+
+tope
+multiply /mˈʌltɪplˌaɪ/ <v>
+
+zidisha
+muscle /mˈʌsəl/ <n>
+
+musuli
+mushroom /mˈʌʃɹuːm/ <n>
+
+uyoga
+music /mjˈuːzɪk/ <n>
+
+muziki
+my /mˈaɪ/ <adj>
+
+angu
+nail /nˈeɪl/ <n>
+
+msumari
+naked /nˈeɪkɪd/ <adj>
+
+tupu
+name /nˈeɪm/ <n>
+
+jina
+narrow /nˈaɹəʊ/ <adj>
+
+embamba
+nation /nˈeɪʃən/ <n>
+
+taifa
+nausea /nˈɔːsɪə/ <n>
+
+kichefuchefu
+near /nˈiə/ <adv>
+
+karibu
+necessity /nəsˈɛsɪti/ <n>
+
+lazima
+neck /nˈɛk/ <n>
+
+shingo
+necklace /nˈɛkləs/ <n>
+
+kidani
+need /nˈiːd/ <v>
+
+hitaji
+needle /nˈiːdəl/ <n>
+
+sindano
+nephew /nˈɛfjuː/ <n>
+
+mpwa
+nest /nˈɛst/ <n>
+
+kiota
+net /nˈɛt/ <n>
+
+wavu
+new /njˈuː/ <adj>
+
+pya
+New Testament /njˈuː tˈɛstəmənt/ <n>
+
+injili
+news /njˈuːz/ <n>
+
+habari
+newspaper /njˈuːzpeɪpə/ <n>
+
+gazeti
+niece /nˈiːs/ <n>
+
+mpwa
+night /nˈaɪt/ <n>
+
+usiku
+nine /nˈaɪn/ <num>
+
+tisa
+ninety /nˈaɪnti/ <num>
+
+tisini
+no /nˈəʊ/ <interj>
+
+la
+no /nˈəʊ/ <adv>
+
+siyo
+north /nˈɔːθ/ <n>
+
+kaskazini
+nose /nˈəʊz/ <n>
+
+pua
+not /nˈɒt/ <adv>
+
+si
+not at all /nˌɒt at ˈɔːl/ <adv>
+
+kamwe
+not inside /nˌɒt ɪnsˈaɪd/ <irrv>
+
+hamna
+not only /nˌɒt ˈəʊnli/ <prep>
+
+licha
+not so /nˌɒt sˈəʊ/ <adv>
+
+siyo
+not yet /nˌɒt jˈɛt/ <adv>
+
+bado
+notebook /nˈəʊtbʊk/ <n>
+
+daftari
+November /nəʊvˈɛmbə/ <n>
+
+Novemba
+now /nˈaʊ/ <adv>
+
+sasa
+number /nˈʌmbə/ <n>
+
+hesabu
+number /nˈʌmbə/ <n>
+
+nambari
+oblige /əblˈaɪdʒ/ <v>
+
+bidi
+October /ɒktˈəʊbə/ <n>
+
+Oktoba
+of /ˈɒv/ <prep>
+
+a
+offend /əfˈɛnd/ <v>
+
+chukiza
+office /ˈɒfɪs/ <n>
+
+ofisi
+officer /ˈɒfɪsə/ <n>
+
+afisa
+official /əfˈɪʃəl/ <adj>
+
+rasmi
+oil /ˈɔɪl/ <n>
+
+mafuta
+ointment /ˈɔɪntmənt/ <n>
+
+marhamu
+okra /ˈəʊkɹə/ <n>
+
+bamia
+old /ˈəʊld/ <adj>
+
+ kukuu
+old times /ˈəʊld tˈaɪmz/ <n>
+
+kale
+one /wˈɒn/ <num>
+
+moja
+one who sews /wˈɒn hˌuː sˈəʊz/ <n>
+
+mshonaji
+onion /ˈʌniən/ <n>
+
+kitunguu
+only /ˈəʊnli/ <adv>
+
+tu
+open /ˈəʊpən/ <v>
+
+fumbua
+open /ˈəʊpən/ <adj>
+
+wazi
+opportunity /ɒpətjˈuːnɪti/ <n>
+
+nafasi
+or /ˈɔː/ <conj>
+
+ama
+or /ˈɔː/ <conj>
+
+au
+orange /ˈɒɹɪndʒ/ <n>
+
+chungwa
+orange tree /ˈɒɹɪndʒ tɹˈiː/ <n>
+
+mchungwa
+orator /ˈɒɹətə/ <n>
+
+msemaji
+order /ˈɔːdə/ <v>
+
+agiza
+order for /ˈɔːdə fɔː/ <v>
+
+agizia
+ornament /ˈɔːnəmənt/ <n>
+
+pambo
+ornamentation /ˌɔːnəməntˈeɪʃən/ <n>
+
+nakshi
+other /ˈʌðə/ <adj>
+
+ingine
+our /ˈaʊə/ <adj>
+
+etu
+outside /aʊtsˈaɪd/ <adv>
+
+nje
+overcome /ˌəʊvəkˈʌm/ <v>
+
+shinda
+overseer /ˌəʊvəsˈiːə/ <n>
+
+msimamizi
+owner /ˈəʊnə/ <n>
+
+mwenye
+owner /ˈəʊnə/ <n>
+
+mwenyewe
+oyster /ˈɔɪstə/ <n>
+
+chaza
+pacify /pˈasɪfˌaɪ/ <v>
+
+tuliza
+package /pˈakɪdʒ/ <n>
+
+kifurushi
+page /pˈeɪdʒ/ <n>
+
+ukurasa
+pail /pˈeɪl/ <n>
+
+ndoo
+pain /pˈeɪn/ <n>
+
+umivu
+pair /pˈeə/ <n>
+
+jozi
+palm /pˈɑːm/ <n>
+
+kofi
+pants /pˈants/ <n>
+
+suruali
+papaya /pɐpˈaɪə/ <n>
+
+papai
+paper /pˈeɪpə/ <n>
+
+karatasi
+paradise /pˈaɹədˌaɪs/ <n>
+
+peponi
+parent /pˈeəɹənt/ <n>
+
+mzazi
+park /pˈɑːk/ <v>
+
+egesha
+part /pˈɑːt/ <n>
+
+sehemu
+pass /pˈas/ <v>
+
+pita
+pass by /pˈas bˈaɪ/ <v>
+
+pitia
+passenger /pˈasɪndʒə/ <n>
+
+abiria
+paste /pˈeɪst/ <n>
+
+gundi
+pay /pˈeɪ/ <v>
+
+lipa
+payment /pˈeɪmənt/ <n>
+
+lipo
+peace /pˈiːs/ <n>
+
+amani
+pen /pˈɛn/ <n>
+
+kalamu
+pencil /pˈɛnsəl/ <n>
+
+kalamu
+penknife /pˈɛnnaɪf/ <n>
+
+kijembe
+pepper /pˈɛpə/ <n>
+
+pilipili
+peppermint /pˈɛpəmˌɪnt/ <n>
+
+peremende
+perhaps /pəhˈaps/ <adv>
+
+huenda
+perhaps /pəhˈaps/ <adv>
+
+labda
+period /pˈiəɹɪəd/ <n>
+
+kipindi
+period of time /pˈiəɹɪəd ɒv tˈaɪm/ <n>
+
+muda
+permission /pəmˈɪʃən/ <n>
+
+ruhusa
+permit /pˈɜːmɪt/ <v>
+
+ruhusu
+person /pˈɜːsən/ <n>
+
+mtu
+phonograph /fˈɒnəɡɹˌaf/ <n>
+
+santuri
+picture /pˈɪktʃə/ <n>
+
+picha
+piece /pˈiːs/ <n>
+
+kipande
+pier /pˈiə/ <n>
+
+gati
+pig /pˈɪɡ/ <n>
+
+nguruwe
+pigeon /pˈɪdʒən/ <n>
+
+njiwa
+pill /pˈɪl/ <n>
+
+kidonge
+pillar /pˈɪlə/ <n>
+
+nguzo
+pillow case /pˈɪləʊ kˈeɪs/ <n>
+
+foronya
+pineapple /pˈaɪnapəl/ <n>
+
+nanasi
+pint /pˈaɪnt/ <n>
+
+kibaba
+pipe /pˈaɪp/ <n>
+
+kiko
+pit /pˈɪt/ <n>
+
+shimo
+place /plˈeɪs/ <n>
+
+mahali
+plague /plˈeɪɡ/ <n>
+
+tauni
+plaited mat /plˈeɪtɪd mˈat/ <n>
+
+mkeka
+planet /plˈanɪt/ <n>
+
+sayari
+plank /plˈaŋk/ <n>
+
+ubao
+plate /plˈeɪt/ <n>
+
+sahani
+play /plˈeɪ/ <v>
+
+cheza
+play at /plˈeɪ at/ <v>
+
+chezacheza
+playing cards /plˈeɪɪŋ kˈɑːdz/ <n>
+
+karata
+please /plˈiːz/ <v>
+
+pendeza
+please /plˈiːz/ <adv>
+
+tafadhali
+plot /plˈɒt/ <n>
+
+kiwanja
+poor /pˈʊə/ <adj>
+
+maskini
+poor quality /pˈʊə kwˈɒlɪti/ <adj>
+
+hafifu
+port /pˈɔːt/ <n>
+
+bandari
+porter /pˈɔːtə/ <n>
+
+mchukuzi
+possessions /pəzˈɛʃənz/ <n>
+
+mali
+post /pˈəʊst/ <n>
+
+posta
+potato /pətˈeɪtəʊ/ <n>
+
+kiazi
+pound /pˈaʊnd/ <n>
+
+ratli
+pray /pɹˈeɪ/ <v>
+
+sali
+prayer /pɹˈeə/ <n>
+
+sala
+precede /pɹɪsˈiːd/ <v>
+
+tangulia
+prefer /pɹɪfˈɜː/ <v>
+
+hiari
+prepare for /pɹɪpˈeə fɔː/ <v>
+
+tayarishia
+present /pɹˈɛzənt/ <n>
+
+zawadi
+press upon /pɹˈɛs əpˌɒn/ <v>
+
+lemea
+price /pɹˈaɪs/ <n>
+
+bei
+priest /pɹˈiːst/ <n>
+
+kahini
+proclaim /pɹəklˈeɪm/ <v>
+
+tangaza
+produce /pɹədjˈuːs/ <n>
+
+zao
+profit  /pɹˈɒfɪt/ <n>
+
+faida
+program /pɹˈəʊɡɹam/ <n>
+
+utaratibu
+progress /pɹˈəʊɡɹɛs/ <n>
+
+maendeleo
+prohibition /pɹəhɪbˈɪʃən/ <n>
+
+marufuku
+prophet /pɹˈɒfɪt/ <n>
+
+mtume
+prophet /pɹˈɒfɪt/ <n>
+
+nabii
+pull /pˈʊl/ <v>
+
+vuta
+pump /pˈʌmp/ <n>
+
+bomba
+pupil /pjˈuːpəl/ <n>
+
+mwanafunzi
+purple /pˈɜːpəl/ <adj>
+
+zambarau
+purpose /pˈɜːpəs/ <n>
+
+nia
+push /pˈʊʃ/ <v>
+
+sukuma
+put /pˈʊt/ <v>
+
+tia
+put /pˈʊt/ <v>
+
+weka
+put aside for /pˌʊt ɐsˈaɪd fɔː/ <v>
+
+wekea
+put in /pˌʊt ˈɪn/ <v>
+
+ingiza
+put in /pˌʊt ˈɪn/ <v>
+
+tilia
+put out /pˌʊt ˈaʊt/ <v>
+
+zima
+put out for /pˌʊt ˈaʊt fɔː/ <v>
+
+tolea
+quarrel /kwˈɒɹəl/ <n>
+
+ugomvi
+quarrel /kwˈɒɹəl/ <v>
+
+gombana
+quarrel /kwˈɒɹəl/ <v>
+
+kosana
+quarter /kwˈɔːtə/ <n>
+
+robo
+question /kwˈɛstʃən/ <n>
+
+swali
+quickly /kwˈɪkli/ <adv>
+
+upesi
+rain /ɹˈeɪn/ <n>
+
+mvua
+rain /ɹˈeɪn/ <v>
+
+nyesha
+rat /ɹˈat/ <n>
+
+panya
+ration /ɹˈaʃən/ <n>
+
+posho
+raw /ɹˈɔː/ <adj>
+
+bichi
+razor /ɹˈeɪzə/ <n>
+
+wembe
+read /ɹˈiːd/ <v>
+
+soma
+reader /ɹˈiːdə/ <n>
+
+msomaji
+ready /ɹˈɛdi/ <adj>
+
+tayari
+reap /ɹˈiːp/ <v>
+
+vuna
+reason /ɹˈiːzən/ <n>
+
+sababu
+rebuke /ɹɪbjˈuːk/ <v>
+
+kanya
+recommend /ɹˌɛkəmˈɛnd/ <v>
+
+sifia
+red /ɹˈɛd/ <adj>
+
+ekundu
+reduce /ɹɪdjˈuːs/ <v>
+
+punguza
+refuse /ɹɪfjˈuːz/ <v>
+
+kataa
+rejoice /ɹɪdʒˈɔɪs/ <v>
+
+furahi
+relative /ɹˈɛlətˌɪv/ <n>
+
+ndugu
+religion /ɹɪlˈɪdʒən/ <n>
+
+dini
+remain /ɹɪmˈeɪn/ <v>
+
+baki
+remember /ɹɪmˈɛmbə/ <v>
+
+kumbuka
+remind /ɹɪmˈaɪnd/ <v>
+
+kumbusha
+rent /ɹˈɛnt/ <v>
+
+kodi
+rent out /ɹˈɛnt ˈaʊt/ <v>
+
+kodisha
+repair /ɹɪpˈeə/ <v>
+
+tengeneza
+repair for /ɹɪpˈeə fɔː/ <v>
+
+tengenezea
+repent /ɹɪpˈɛnt/ <v>
+
+tubu
+resemble /ɹɪsˈɛmbəl/ <v>
+
+fanana
+reserve /ɹɪzˈɜːv/ <n>
+
+akiba
+respect /ɹɪspˈɛkt/ <n>
+
+heshima
+rest /ɹˈɛst/ <v>
+
+pumzika
+rest-place/time /ɹˈɛstplˈeɪs slˈaʃ tˈaɪm/ <n>
+
+pumziko
+return /ɹɪtˈɜːn/ <v>
+
+rudi
+rhino /ɹˈaɪnəʊ/ <n>
+
+kifaru
+rib /ɹˈɪb/ <n>
+
+ubavu
+rice /ɹˈaɪs/ <n>
+
+mchele
+rice plant /ɹˈaɪs plˈant/ <n>
+
+mpunga
+right side /ɹˈaɪt sˈaɪd/ <n>
+
+kulia
+righteousness /ɹˈaɪtʃəsnəs/ <n>
+
+haki
+ring /ɹˈɪŋ/ <n>
+
+pete
+rinse mouth /ɹˈɪns mˈaʊθ/ <v>
+
+sukutua
+ripe /ɹˈaɪp/ <adj>
+
+bivu
+rise up /ɹˈaɪz ˈʌp/ <v>
+
+ondokea
+river /ɹˈɪvə/ <n>
+
+mto
+road /ɹˈəʊd/ <n>
+
+njia
+rob /ɹˈɒb/ <v>
+
+nyang'anya
+roll /ɹˈəʊl/ <n>
+
+kikuto
+room /ɹˈuːm/ <n>
+
+chumba
+root /ɹˈuːt/ <n>
+
+mzizi
+rope /ɹˈəʊp/ <n>
+
+kamba
+rot /ɹˈɒt/ <v>
+
+oza
+rotten /ɹˈɒtən/ <adj>
+
+bovu
+rug /ɹˈʌɡ/ <n>
+
+zulia
+run away /ɹˈʌn ɐwˈeɪ/ <v>
+
+kimbia
+run away /ɹˈʌn ɐwˈeɪ/ <v>
+
+toroka
+run to /ɹˈʌn tuː/ <v>
+
+kimbilia
+sack /sˈak/ <n>
+
+gunia
+sailor /sˈeɪlə/ <n>
+
+baharia
+sake /sˈeɪk/ <n>
+
+ajili
+saliva /səlˈaɪvə/ <n>
+
+mate
+salt /sˈɒlt/ <n>
+
+chumvi
+Saturday /sˈatədˌeɪ/ <n>
+
+Jumamosi
+save /sˈeɪv/ <v>
+
+okoa
+scarf /skˈɑːf/ <n>
+
+leso
+schedule /ʃˈɛdjuːl/ <n>
+
+ratiba
+school /skˈuːl/ <n>
+
+chuo
+school /skˈuːl/ <n>
+
+shule
+school /skˈuːl/ <n>
+
+skuli
+scissors /sˈɪsəz/ <n>
+
+mkasi
+score (twenty) /skˈɔː twˈɛnti/ <n>
+
+korija
+scorpion /skˈɔːpiən/ <n>
+
+nge
+screw /skɹˈuː/ <n>
+
+parafujo
+screw /skɹˈuː/ <n>
+
+skrubu
+screwdriver /skɹˈuːdɹaɪvə/ <n>
+
+bisibisi
+sea /sˈiː/ <n>
+
+bahari
+second /sˈɛkənd/ <adj>
+
+pili
+secret /sˈiːkɹət/ <n>
+
+siri
+see /sˈiː/ <v>
+
+ ona
+seed /sˈiːd/ <n>
+
+mbegu
+sell /sˈɛl/ <v>
+
+uza
+send /sˈɛnd/ <v>
+
+peleka
+send back /sˈɛnd bˈak/ <v>
+
+rudisha
+send for /sˈɛnd fɔː/ <v>
+
+pelekea
+send off /sˈɛnd ˈɒf/ <v>
+
+safirisha
+sense /sˈɛns/ <n>
+
+akili
+September /sɛptˈɛmbə/ <n>
+
+Septemba
+serpent /sˈɜːpənt/ <n>
+
+joka
+servant /sˈɜːvənt/ <n>
+
+mtumishi
+service /sˈɜːvɪs/ <n>
+
+uandikiaji
+set down /sˈɛt dˈaʊn/ <v>
+
+tua
+seven /sˈɛvən/ <num>
+
+saba
+seventy /sˈɛvənti/ <num>
+
+sabini
+sew /sˈəʊ/ <v>
+
+shona
+shadow /ʃˈadəʊ/ <n>
+
+kivuli
+share /ʃˈeə/ <v>
+
+gawanya
+shark /ʃˈɑːk/ <n>
+
+papa
+sharp /ʃˈɑːp/ <adj>
+
+kali
+sharpness /ʃˈɑːpnəs/ <n>
+
+ukali
+shave /ʃˈeɪv/ <v>
+
+nyoa
+she /ʃˈiː/ <pron>
+
+yeye
+shed /ʃˈɛd/ <n>
+
+banda
+sheep /ʃˈiːp/ <n>
+
+kondoo
+shell /ʃˈɛl/ <n>
+
+bufuru
+shilling /ʃˈɪlɪŋ/ <n>
+
+shilingi
+shine on /ʃˈaɪn ˈɒn/ <v>
+
+angazia
+shirt /ʃˈɜːt/ <n>
+
+shati
+shiver /ʃˈɪvə/ <v>
+
+tetemeka
+shoe /ʃˈuː/ <n>
+
+kiatu
+shop /ʃˈɒp/ <n>
+
+duka
+short /ʃˈɔːt/ <adj>
+
+fupi
+short-cut /ʃˈɔːtkˈʌt/ <n>
+
+mkato
+shorten /ʃˈɔːtən/ <v>
+
+fupisha
+shoulder /ʃˈəʊldə/ <n>
+
+bega
+show /ʃˈəʊ/ <n>
+
+tamasha
+show /ʃˈəʊ/ <v>
+
+onyesha
+sick person /sˈɪk pˈɜːsən/ <n>
+
+mgonjwa
+sickle /sˈɪkəl/ <n>
+
+mundu
+sickness /sˈɪknəs/ <n>
+
+maradhi
+sickness /sˈɪknəs/ <n>
+
+ugonjwa
+side /sˈaɪd/ <n>
+
+kando
+side /sˈaɪd/ <n>
+
+upande
+silk /sˈɪlk/ <n>
+
+hariri
+since /sˈɪns/ <prep>
+
+tangu
+sing /sˈɪŋ/ <v>
+
+imba
+sister /sˈɪstə/ <n>
+
+dada
+sit /sˈɪt/ <v>
+
+kaa
+six /sˈɪks/ <num>
+
+sita
+sixty /sˈɪksti/ <num>
+
+sitini
+size /sˈaɪz/ <n>
+
+ukubwa
+skin /skˈɪn/ <n>
+
+ngozi
+sky /skˈaɪ/ <n>
+
+mbingu
+slaughter /slˈɔːtə/ <v>
+
+chinja
+slave /slˈeɪv/ <n>
+
+mtumwa
+sleep /slˈiːp/ <n>
+
+usingizi
+sleep in /slˈiːp ˈɪn/ <v>
+
+lalia
+slippers /slˈɪpəz/ <n>
+
+sapatu
+slippery place /slˈɪpəɹi plˈeɪs/ <n>
+
+utelezi
+slit /slˈɪt/ <v>
+
+chana
+slowly /slˈəʊli/ <adv>
+
+polepole
+small /smˈɔːl/ <adj>
+
+dogo
+small fish /smˈɔːl fˈɪʃ/ <n>
+
+dagaa
+small lump /smˈɔːl lˈʌmp/ <n>
+
+kinundu
+small thing /smˈɔːl θˈɪŋ/ <n>
+
+kidude
+smallpox /smˈɔːlpɒks/ <n>
+
+ndui
+smell /smˈɛl/ <n>
+
+harufu
+smell /smˈɛl/ <v>
+
+nusa
+smell bad /smˈɛl bˈad/ <v>
+
+nuka
+smell good /smˈɛl ɡˈʊd/ <v>
+
+nukia
+smile /smˈaɪl/ <v>
+
+chekelea
+smoke /smˈəʊk/ <n>
+
+moshi
+smooth /smˈuːð/ <v>
+
+lainisha
+smooth /smˈuːð/ <adj>
+
+laini
+snake /snˈeɪk/ <n>
+
+nyoka
+so /sˈəʊ/ <interj>
+
+basi
+so /sˈəʊ/ <adv>
+
+kumbe
+soap /sˈəʊp/ <n>
+
+sabuni
+socks /sˈɒks/ <n>
+
+soksi
+soft /sˈɒft/ <adj>
+
+laini
+soil /sˈɔɪl/ <n>
+
+udongo
+soldier /sˈəʊldʒə/ <n>
+
+askari
+sole /sˈəʊl/ <n>
+
+unyayo
+solitary /sˈɒlɪtəɹi/ <adj>
+
+gumba
+some /sˈʌm/ <n>
+
+baadhi
+son /sˈʌn/ <n>
+
+mwana
+song /sˈɒŋ/ <n>
+
+wimbo
+sorceror /sˈɔːsəɹə/ <n>
+
+mchawi
+sore /sˈɔː/ <n>
+
+kidonda
+sorrow /sˈɒɹəʊ/ <n>
+
+huzuni
+soul /sˈəʊl/ <n>
+
+roho
+sound /sˈaʊnd/ <n>
+
+sauti
+soup /sˈuːp/ <n>
+
+supu
+south /sˈaʊθ/ <n>
+
+kusini
+sparkle /spˈɑːkəl/ <n>
+
+kimeta
+speak /spˈiːk/ <v>
+
+nena
+speak /spˈiːk/ <v>
+
+sema
+special /spˈɛʃəl/ <adj>
+
+maalumu
+spice /spˈaɪs/ <n>
+
+bizari
+spider /spˈaɪdə/ <n>
+
+buibui
+spinach /spˈɪnɪtʃ/ <n>
+
+mchicha
+split /splˈɪt/ <v>
+
+pasua
+spoon /spˈuːn/ <n>
+
+kijiko
+spot /spˈɒt/ <n>
+
+doa
+spring /spɹˈɪŋ/ <n>
+
+kamani
+spring-mechanism /spɹˈɪŋmˈɛkənˌɪzəm/ <n>
+
+mtambo
+sprout /spɹˈaʊt/ <v>
+
+chipua
+squeeze /skwˈiːz/ <v>
+
+bana
+squeeze /skwˈiːz/ <v>
+
+kama
+squeeze out /skwˈiːz ˈaʊt/ <v>
+
+kamua
+stage /stˈeɪdʒ/ <n>
+
+jukwaa
+stairs /stˈeəz/ <n>
+
+daraja
+stairs /stˈeəz/ <n>
+
+ngazi
+stand /stˈand/ <v>
+
+simama
+star /stˈɑː/ <n>
+
+nyota
+start up /stˈɑːt ˈʌp/ <v>
+
+anzisha
+state /stˈeɪt/ <n>
+
+hali
+station /stˈeɪʃən/ <n>
+
+stesheni
+steal /stˈiːl/ <v>
+
+iba
+steamship /stˈiːmʃɪp/ <n>
+
+meli
+steering-gear /stˈiəɹɪŋɡˈiə/ <n>
+
+usukani
+step /stˈɛp/ <n>
+
+hatua
+step- /stˈɛp/ <n>
+
+kambo
+stick /stˈɪk/ <n>
+
+fimbo
+stick /stˈɪk/ <v>
+
+kwama
+stick on /stˈɪk ˈɒn/ <v>
+
+bandika
+stiff porridge /stˈɪf pˈɒɹɪdʒ/ <n>
+
+ugali
+still /stˈɪl/ <adv>
+
+bado
+stir up /stˈɜːɹ ˈʌp/ <v>
+
+vuruga
+stomach /stˈʌmək/ <n>
+
+tumbo
+stone /stˈəʊn/ <n>
+
+jiwe
+stop /stˈɒp/ <n>
+
+kituo
+stop up /stˈɒp ˈʌp/ <v>
+
+ziba
+story /stˈɔːɹi/ <n>
+
+hadithi
+stranger /stɹˈeɪndʒə/ <n>
+
+mgeni
+stream /stɹˈiːm/ <n>
+
+kijito
+strength /stɹˈɛŋθ/ <n>
+
+nguvu
+strengthen /stɹˈɛŋθən/ <v>
+
+imarisha
+striped /stɹˈaɪpt/ <adj>
+
+milia
+strong /stɹˈɒŋ/ <adj>
+
+imara
+succeed /səksˈiːd/ <v>
+
+fanikiwa
+such a one /sˈʌtʃ ɐ wˌɒn/ <n>
+
+fulani
+suddenly /sˈʌdənli/ <adv>
+
+ghafula
+sugar /ʃˈʊɡə/ <n>
+
+sukari
+sugar cane /ʃˈʊɡə kˈeɪn/ <n>
+
+muwa
+sun /sˈʌn/ <n>
+
+jua
+Sunday /sˈʌndeɪ/ <n>
+
+Jumapili
+Swahili language /swɑːhˈiːli lˈaŋɡwɪdʒ/ <n>
+
+Kiswahili
+sweep /swˈiːp/ <v>
+
+fagia
+sweet /swˈiːt/ <adj>
+
+tamu
+swell /swˈɛl/ <v>
+
+vimba
+swim /swˈɪm/ <v>
+
+ogelea
+table /tˈeɪbəl/ <n>
+
+meza
+tail /tˈeɪl/ <n>
+
+mkia
+tailor /tˈeɪlə/ <n>
+
+mshoni
+take away /tˈeɪk ɐwˈeɪ/ <v>
+
+ondoa
+take leave of /tˈeɪk lˈiːv ɒv/ <v>
+
+aga
+take off /tˈeɪk ˈɒf/ <v>
+
+bandua
+take on /tˈeɪk ˈɒn/ <v>
+
+pakia
+take out /tˈeɪk ˈaʊt/ <v>
+
+toa
+tamarind /tˈaməɹˌɪnd/ <n>
+
+ukwaju
+tank /tˈaŋk/ <n>
+
+tangi
+tap /tˈap/ <v>
+
+gogota
+tape /tˈeɪp/ <n>
+
+utepe
+tar  /tˈɑː/ <n>
+
+lami
+tax /tˈaks/ <n>
+
+ushuru
+tea  /tˈiː/ <n>
+
+chai
+teach /tˈiːtʃ/ <v>
+
+fundisha
+teach /tˈiːtʃ/ <v>
+
+funza
+teach /tˈiːtʃ/ <v>
+
+somesha
+teacher /tˈiːtʃə/ <n>
+
+mwalimu
+teapot /tˈiːpɒt/ <n>
+
+buli
+telephone /tˈɛlɪfˌəʊn/ <n>
+
+simu
+tell /tˈɛl/ <v>
+
+ambia
+temple /tˈɛmpəl/ <n>
+
+hekalu
+ten /tˈɛn/ <num>
+
+kumi
+termite /tˈɜːmaɪt/ <n>
+
+mchwa
+test /tˈɛst/ <v>
+
+jaribu
+thank /θˈaŋk/ <v>
+
+shukuru
+thank you /θˈaŋk juː/
+
+asante
+that /ðˈat/ <adj>
+
+le
+that place /ðat plˈeɪs/ <adv>
+
+hapo
+theft /θˈɛft/ <n>
+
+wizi
+their /ðˈeə/ <adj>
+
+ao
+then /ðˈɛn/ <adv>
+
+huko
+then /ðˈɛn/ <adv>
+
+kisha
+then /ðˈɛn/ <adv>
+
+ndipo
+there /ðˈeə/ <adv>
+
+huko
+there /ðˈeə/ <adv>
+
+kule
+there /ðˈeə/ <adv>
+
+pale
+there is /ðeəɹˈɪz/ <irrv>
+
+mna
+there is not there /ðeəɹ ɪz nˌɒt ðˈeə/
+
+hapana
+there is/are not /ðeəɹ ɪz slˈaʃ ɑː nˈɒt/
+
+hakuna
+they /ðˈeɪ/ <pron>
+
+wao
+thief /θˈiːf/ <n>
+
+mwizi
+thin porridge /θˈɪn pˈɒɹɪdʒ/ <n>
+
+uji
+thing /θˈɪŋ/ <n>
+
+kitu
+think /θˈɪŋk/ <v>
+
+dhani
+think /θˈɪŋk/ <v>
+
+waza
+thirst /θˈɜːst/ <n>
+
+kiu
+thirty /θˈɜːti/ <num>
+
+thelathini
+thorn /θˈɔːn/ <n>
+
+mwiba
+those /ðˈəʊz/ <adj>
+
+le
+thought /θˈɔːt/ <n>
+
+wazo
+thousand /θˈaʊzənd/ <adj>
+
+elfu
+three /θɹˈiː/ <num>
+
+tatu
+throat /θɹˈəʊt/ <n>
+
+koo
+throw /θɹˈəʊ/ <v>
+
+tupa
+Thursday /θˈɜːzdeɪ/ <n>
+
+Alhamisi
+tighten /tˈaɪtən/ <v>
+
+kaza
+time /tˈaɪm/ <n>
+
+mara
+time  /tˈaɪm/ <n>
+
+wakati
+tin can /tˈɪn kˈan/ <n>
+
+kopo
+to /tˈuː/ <prep>
+
+kwa
+today /tədˈeɪ/ <adv>
+
+leo
+together /təɡˈɛðə/ <adv>
+
+pamoja
+tomato /təmˈɑːtəʊ/ <n>
+
+tungule
+tomorrow /təmˈɒɹəʊ/ <adv>
+
+kesho
+tongs /tˈɒŋz/ <n>
+
+koleo
+tongue /tˈʌŋ/ <n>
+
+ulimi
+tooth /tˈuːθ/ <n>
+
+jino
+toothbrush /tˈuːθbɹʌʃ/ <n>
+
+mswaki
+top /tˈɒp/ <n>
+
+kipeo
+tortoise /tˈɔːtəs/ <n>
+
+kobe
+touch /tˈʌtʃ/ <v>
+
+gusa
+tourniquet /tˈʊənɪkˌeɪ/ <n>
+
+kisongo
+tow /tˈəʊ/ <v>
+
+fungasha
+town /tˈaʊn/ <n>
+
+mji
+train /tɹˈeɪn/ <n>
+
+reli
+translate /tɹanslˈeɪt/ <v>
+
+fasiri
+travel /tɹˈavəl/ <v>
+
+safiri
+travel by /tɹˈavəl bˈaɪ/ <v>
+
+safiria
+traveller /tɹˈavələ/ <n>
+
+msafiri
+tray /tɹˈeɪ/ <n>
+
+sinia
+treasury /tɹˈɛʒəɹi/ <n>
+
+hazina
+tree /tɹˈiː/ <n>
+
+mti
+tribe /tɹˈaɪb/ <n>
+
+kabila
+trouble /tɹˈʌbəl/ <n>
+
+matata
+trouble /tɹˈʌbəl/ <n>
+
+shida
+trouble /tɹˈʌbəl/ <v>
+
+sumbua
+truly /tɹˈuːli/ <adv>
+
+kweli
+trunk /tɹˈʌŋk/ <n>
+
+uti
+trust /tɹˈʌst/ <v>
+
+tumaini
+Tuesday /tjˈuːzdeɪ/ <n>
+
+Jumanne
+turmeric /tɜːmˈɛɹɪk/ <n>
+
+manjano
+turn /tˈɜːn/ <v>
+
+pinda
+turn around /tˈɜːn ɐɹˈaʊnd/ <v>
+
+geuka
+twelve /twˈɛlv/ <num>
+
+thenashara
+twenty /twˈɛnti/ <num>
+
+ishirini
+two /tˈuː/ <num>
+
+wili
+umbrella /ʌmbɹˈɛlə/ <n>
+
+mwavuli
+uncle /ˈʌŋkəl/ <n>
+
+mjomba
+uncover /ʌnkˈʌvə/ <v>
+
+funua
+undershirt /ˌʌndəʃˈɜːt/ <n>
+
+fulana
+understand /ˌʌndəstˈand/ <v>
+
+fahamu
+undress /ʌndɹˈɛs/ <v>
+
+vua
+unfasten /ʌnfˈasən/ <v>
+
+fungua
+unfold /ʌnfˈəʊld/ <v>
+
+kunjua
+unity /jˈuːnɪti/ <n>
+
+umoja
+unravel /ʌnɹˈavəl/ <v>
+
+fumua
+unripe /ʌnɹˈaɪp/ <adj>
+
+bichi
+unstop /ʌnstˈɒp/ <v>
+
+zibua
+until /ʌntˈɪl/ <prep>
+
+hadi
+until /ʌntˈɪl/ <prep>
+
+hata
+until /ʌntˈɪl/ <prep>
+
+mpaka
+up to /ˈʌp tuː/ <prep>
+
+mpaka
+upbringing /ʌpbɹˈɪŋɪŋ/ <n>
+
+malezi
+upper floor /ˌʌpə flˈɔː/ <n>
+
+ghorofa
+uproot /ʌpɹˈuːt/ <v>
+
+ng'oa
+us /ˈʌs/ <pron>
+
+sisi
+use /jˈuːs/ <v>
+
+tumia
+use for /jˈuːs fɔː/ <v>
+
+tumilia
+vacation /veɪkˈeɪʃən/ <n>
+
+likizo
+vaccinate /vˈaksɪnˌeɪt/ <v>
+
+chanjia
+value /vˈaljuː/ <n>
+
+thamani
+vegetable /vˈɛdʒɪtəbəl/ <n>
+
+mboga
+very /vˈɛɹi/ <adv>
+
+mno
+very /vˈɛɹi/ <adv>
+
+sana
+vessel /vˈɛsəl/ <n>
+
+chombo
+view /vjˈuː/ <n>
+
+mandhari
+village /vˈɪlɪdʒ/ <n>
+
+kijiji
+vinegar /vˈɪnɪɡə/ <n>
+
+siki
+wage /wˈeɪdʒ/ <n>
+
+mshahara
+wages /wˈeɪdʒɪz/ <n>
+
+ujira
+wait /wˈeɪt/ <v>
+
+ngoja
+wait for /wˈeɪt fɔː/ <v>
+
+ngojea
+waiter /wˈeɪtə/ <n>
+
+mwandishi
+wake /wˈeɪk/ <v>
+
+amka
+walk /wˈɔːk/ <v>
+
+tembea
+wall /wˈɔːl/ <n>
+
+ukuta
+want /wˈɒnt/ <v>
+
+taka
+warm /wˈɔːm/ <adj>
+
+vuguvugu
+warn /wˈɔːn/ <v>
+
+onya
+wash /wˈɒʃ/ <v>
+
+fua
+wash /wˈɒʃ/ <v>
+
+osha
+wash /wˈɒʃ/ <v>
+
+oshea
+wash hands /wˈɒʃ hˈandz/ <v>
+
+nawa
+watch out /wˈɒtʃ ˈaʊt/ <v>
+
+angalia
+watch over /wˈɒtʃ ˈəʊvə/ <v>
+
+chunga
+water /wˈɔːtə/ <n>
+
+maji
+water bottle /wˈɔːtə bˈɒtəl/ <n>
+
+kiriba
+water-channel /wˈɔːtətʃˈanəl/ <n>
+
+mfereji
+wave /wˈeɪv/ <n>
+
+wimbi
+wax /wˈaks/ <n>
+
+nta
+we /wˈiː/ <pron>
+
+sisi
+wealthy /wˈɛlθi/ <adj>
+
+tajiri
+weave /wˈiːv/ <v>
+
+fuma
+wedding /wˈɛdɪŋ/ <n>
+
+arusi
+Wednesday /wˈɛnzdeɪ/ <n>
+
+Jumatano
+week /wˈiːk/ <n>
+
+juma
+week /wˈiːk/ <n>
+
+wiki
+weight /wˈeɪt/ <n>
+
+uzito
+well /wˈɛl/ <n>
+
+kisima
+well /wˈɛl/ <adv>
+
+vizuri
+west /wˈɛst/ <n>
+
+magharibi
+what /wˈɒt/ <pron>
+
+nini?
+what kind /wˌɒt kˈaɪnd/ <adj>
+
+gani?
+wheat /wˈiːt/ <n>
+
+ngano
+wheel /wˈiːl/ <n>
+
+gurudumu
+wheeled vehicle /wˈiːld vˈiəkəl/ <n>
+
+gari
+when /wˈɛn/ <adv>
+
+lini?
+where /wˈeə/ <adv>
+
+wapi?
+which /wˈɪtʃ/ <adj>
+
+pi?
+which is /wˈɪtʃ ɪz/ <irrv>
+
+kuliko
+white /wˈaɪt/ <adj>
+
+eupe
+white hair /wˈaɪt hˈeə/ <n>
+
+mvi
+who /hˈuː/ <pron>
+
+nani?
+whole /hˈəʊl/ <adj>
+
+zima
+whole day /hˈəʊl dˈeɪ/ <n>
+
+kutwa
+why /wˈaɪ/ <adv>
+
+kwani?
+why /wˈaɪ/ <adv>
+
+mbona?
+wickedness /wˈɪkɪdnəs/ <n>
+
+ubaya
+wide /wˈaɪd/ <adj>
+
+pana
+widow /wˈɪdəʊ/ <n>
+
+mjane
+widower /wˈɪdəʊə/ <n>
+
+mjane
+width /wˈɪdθ/ <n>
+
+upana
+wife /wˈaɪf/ <n>
+
+mke
+wind /wˈɪnd/ <n>
+
+upepo
+window /wˈɪndəʊ/ <n>
+
+dirisha
+wine /wˈaɪn/ <n>
+
+mvinyo
+wing /wˈɪŋ/ <n>
+
+ubawa
+wipe /wˈaɪp/ <v>
+
+futa
+wipe with /wˈaɪp wɪð/ <v>
+
+futia
+with /wˈɪð/ <prep>
+
+kwa
+with me /wɪð mˈiː/
+
+nami
+withhold from /wɪðhˈəʊld fɹɒm/ <v>
+
+zuilia
+without /wɪðˈaʊt/ <prep>
+
+bila
+without /wɪðˈaʊt/ <prep>
+
+pasipo
+woman  /wˈʊmən/ <n>
+
+mwanamke
+women /wˈɪmɪn/ <n>
+
+wanawake
+word /wˈɜːd/ <n>
+
+neno
+work /wˈɜːk/ <n>
+
+kazi
+world /wˈɜːld/ <n>
+
+dunia
+worship /wˈɜːʃɪp/ <n>
+
+ibada
+worship /wˈɜːʃɪp/ <v>
+
+abudu
+wound /wˈuːnd/ <n>
+
+jeraha
+wrist /ɹˈɪst/ <n>
+
+kiwiko
+write /ɹˈaɪt/ <v>
+
+andika
+writing /ɹˈaɪtɪŋ/ <n>
+
+andiko
+yard /jˈɑːd/ <n>
+
+yadi
+year /jˈiə/ <n>
+
+mwaka
+yes /jˈɛs/ <adv>
+
+naam
+yes /jˈɛs/ <adv>
+
+ndiyo
+yesterday /jˈɛstədˌeɪ/ <adv>
+
+jana
+you /jˈuː/ <pron>
+
+wewe
+you (plural) /juː plˈʊəɹəl/ <pron>
+
+ninyi
+your /jˈɔː/ <adj>
+
+ako
+your (plural) /jɔː plˈʊəɹəl/ <adj>
+
+enu
+youth /jˈuːθ/ <n>
+
+kijana
+Zanzibar /zˈanzɪbˌɑː/ <n>
+
+Unguja
+unknown
+ 015abcdefghijklmnopqrstuvwxyz

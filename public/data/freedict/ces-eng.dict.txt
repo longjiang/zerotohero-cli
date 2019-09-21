@@ -1,0 +1,983 @@
+Czech-English FreeDict Dictionary ver. 0.2.3
+Američan /ˈamerˌitʃan/
+American, US-citizen
+Angličan /ˈaŋɡlitʃan/
+Englishman, Sassenach
+Bulharsko /bˈulharsko/
+Bulgaria
+Bůh /bˈuːx/
+God
+Francie /frˈantsije/
+France
+Labe /lˈabe/
+Elbe
+Londýn /lˈondiːn/
+London
+Londýňan /lˈondiːɲan/
+Londoner
+Morava /mˈorava/
+Moravia
+Norsko /nˈorsko/
+Norway
+Němec /ɲˈemets/
+German
+Německo /ɲˈemetsko/
+Germany
+Odra /ˈodra/
+Oder
+Paříž /pˈar̝iːʃ/
+Paris
+Polsko /pˈolsko/
+Poland
+Polák /pˈolaːk/
+Pole
+Praha /prˈaha/
+Prague
+Rakousko /rˈakoʊsko/
+Austria
+Rus /rˈus/
+Russian
+Rusko /rˈusko/
+Russia
+Slovák /slˈovaːk/
+Slovak
+Srb /sˈr̩p/
+Serb
+Svédsko /svˈeːtsko/
+Sweden
+VarŠava /vˈar ʃˈava/
+Warsaw
+Vídeň /vˈiːdeɲ/
+Vienna
+a /ˈaː/
+and
+aby /ˈabi/
+for, to, inorderto, per
+adresa /ˈadresa/
+address
+ale /ˈale/
+but
+anebo /ˈanebo/
+or
+angina /ˈaŋɡina/
+angina, quinsy
+anglický /ˈaŋɡlitskiː/
+English
+ani ... ani /ˈaɲi/
+neither...nor
+ano /ˈaɲi/
+yes
+armáda /ˈano/
+army
+asi /ˈarmaːda/
+1. about, approximately
+2. probably
+aspoň /ˈasi/
+atleast
+auto /ˈaspoɲ/
+car
+autobus /ˈaʊto/
+bus, autobus, omnibus
+autor /ˈaʊtobus/
+1. author
+2. writer
+avŠak /ˈaʊtor/
+but, however, nevertheless, yet
+ačkoliv /ˈaf ʃˈak/
+though, although
+až /ˈatʃkoliv/
+until, till
+babička /ˈaʃ/
+grandmother
+balík /bˈabitʃka/
+packet, parcel
+barva /bˈaliːk/
+colour, dye
+bedna /bˈarva/
+box
+bez /bˈedna/
+without
+bledý /bˈes/
+pale, sallow
+bluza /blˈediː/
+blouse
+blízko /blˈuza/
+at, beside, by, near, nearby, nearto, nextto
+bohatý /blˈiːsko/
+affluent, rich, wealthy, well‐off
+bolení /bˈohatiː/
+ache, pain
+bolest /bˈoleɲiː/
+ache, pain
+boleti /bˈolest/
+ache, bepainful, hurt
+bomba /bˈoleci/
+bomb
+borůvka /bˈomba/
+blueberry
+bota /bˈoruːfka/
+shoe
+bouda /bˈota/
+cabin, hut, shack
+bouře /bˈoʊda/
+storm
+bouřka /bˈoʊr̝e/
+storm
+brambor /bˈoʊr̝ka/
+potato
+bratr /brˈambor/
+brother
+bratranec /brˈatr̩/
+cousin
+brouček /brˈatranets/
+beetle
+brzo /brˈoʊtʃek/
+soon
+brzy /bˈr̩zo/
+soon
+bráti /bˈr̩zi/
+get, layholdof, pickup, take
+brýle /brˈaːci/
+glasses, spectacles
+buditi /brˈiːle/
+arouse, wake, awaken, wakeup
+budova /bˈuɟici/
+building
+bydleti /bˈudova/
+dwell, live
+bydliti /bˈidleci/
+dwell, live
+bůh /bˈidlici/
+god
+báseň /bˈuːx/
+poem
+básník /bˈaːseɲ/
+poet
+bílý /bˈaːsɲiːk/
+white
+bíti /bˈiːliː/
+beat, hit, strike
+běžeti /bˈiːci/
+run
+březen /bjˈeʒeci/
+March
+břicho /br̝ˈezen/
+abdomen, belly, tummy
+cena /br̝ˈixo/
+price
+cesta /tsˈena/
+road, route, way
+cestička /tsˈesta/
+path
+chalupa /tsˈescitʃka/
+cabin, hut, shack
+chladný /xˈalupa/
+cool
+chlapec /xlˈadniː/
+boy, lad, laddie
+chléb /xlˈapets/
+bread, loaf
+chutný /xlˈeːp/
+nice, tasty
+chytrý /xˈutniː/
+clever, cunning, sly, smart
+chřipka /xˈitriː/
+flu, grip, influenza
+cibule /xr̝ˈipka/
+onion
+cizina /tsˈibule/
+foreigncountry
+cukr /tsˈizina/
+sugar
+cíl /tsˈukr̩/
+aim, goal, purpose, target
+dcera /tsˈiːl/
+daughter
+dcerka /ttsˈera/
+daughter
+dceruŠka /ttsˈerka/
+daughter
+den /ttsˈeru ʃkˈa/
+day
+deset /dˈen/
+ten
+devět /dˈeset/
+nine
+deŠtník /dˈevjet/
+umbrella
+dilemma /dˈe ʃtɲˈiːk/
+dilemma
+divadlo /ɟˈilemma/
+theatre
+dlouhý /ɟˈivadlo/
+long
+dnes /dlˈoʊhiː/
+today
+dneska /dnˈes/
+today
+dobrý /dnˈeska/
+good, nice, okay
+doma /dˈobriː/
+athome
+donésti /dˈoma/
+bring, fetch
+dopis /dˈoneːsci/
+letter
+dopoledne /dˈopis/
+morning
+doproviditi /dˈopolˌedne/
+accompany
+dost /dˈoprovˌiɟici/
+enough, quite, rather, sufficiently
+dostati /dˈost/
+get, have, receive
+dosti /dˈostaci/
+enough, quite, rather, sufficiently
+doufati /dˈosci/
+hope
+duben /dˈoʊfaci/
+April
+dva /dˈuben/
+two
+dveře /dvˈa/
+door
+dvě /dvˈer̝e/
+two
+dům /dvjˈe/
+house
+dáti /dˈuːm/
+give
+dávati /dˈaːci/
+give
+dýmka /dˈaːvaci/
+pipe
+děd /dˈiːmka/
+grandfather
+dělník /ɟˈet/
+hand, laborer, labourer, operative, worker, workingman, workman
+děvče /ɟˈelɲiːk/
+girl, lass, wench
+dřevo /ɟˈeftʃe/
+timber, wood
+elektrika /dr̝ˈevo/
+streetcar, tram
+filosofie /ˈelektrˌika/
+philosophy
+fotografie /fˈilosˌofije/
+photography
+fysika /fˈotoɡrˌafije/
+physics
+garáž /fˈisika/
+garage
+halenka /ɡˈaraːʃ/
+blouse
+harmonika /hˈaleŋka/
+accordion
+herec /hˈarmonˌika/
+actor
+hlad /hˈerets/
+hunger
+hladový /hlˈat/
+hungry
+hlava /hlˈadoviː/
+head, pate
+hluchý /hlˈava/
+deaf
+hnědý /hlˈuxiː/
+brown
+hoch /hɲˈediː/
+boy, lad, laddie
+hodina /hˈox/
+hour, o'clock, time
+hodiny /hˈoɟina/
+clock, watch
+hoditi /hˈoɟini/
+throw
+hodný /hˈoɟici/
+good, nice, okay
+holandsky /hˈodniː/
+Dutch
+hora /hˈolantski/
+mountain
+hrdina /hˈora/
+hero
+hrdlo /hˈr̩ɟina/
+throat
+hruŠka /hˈr̩dlo/
+pear
+hudba /hrˈu ʃkˈa/
+music
+husa /hˈudba/
+goose
+hvězda /hˈusa/
+star
+hymna /hvjˈezda/
+anthem, hymn
+házeti /hˈimna/
+throw
+hřeben /hˈaːzeci/
+comb
+inkoust /hr̝ˈeben/
+ink
+inzerát /ˈiŋkoʊst/
+ad, advertisement
+istivý /ˈinzeraːt/
+acute, astute, shrewd
+jablko /ˈisciviː/
+apple
+jabloň /jˈabl̩ko/
+apple‐tree
+jahoda /jˈabloɲ/
+strawberry
+jaksi /jˈahoda/
+anyway, somehow
+jazyk /jˈaksi/
+1. tongue
+2. language
+jeden /jˈazik/
+one
+jehně /jˈeden/
+lamb
+jeho /jˈehɲe/
+his
+jejich /jˈeho/
+their
+její /jˈejix/
+her
+játra /jˈejiː/
+liver
+kasárna /jˈaːtra/
+barracks
+kniha /kˈasaːrna/
+book
+knihovna /kɲˈiha/
+bookcase
+kolega /kɲˈihovna/
+colleague
+komár /kˈoleɡa/
+moon
+kost /kˈomaːr/
+bone
+kvalita /kˈost/
+property, quality
+květen /kvˈalita/
+May
+květina /kvjˈeten/
+bloom, flower
+labuť /kvjˈecina/
+swan
+led /lˈabuc/
+ice
+leden /lˈet/
+January
+les /lˈeden/
+forest, woods
+letadlo /lˈes/
+aeroplane, airplane, plane
+letiŠtě /lˈetadlo/
+airport
+lev /lˈeci ʃcˈe/
+lion
+libra /lˈev/
+pound
+list /lˈibra/
+leaf, sheet
+listopad /lˈist/
+November
+literatura /lˈistopat/
+literature
+loď /lˈiterˌatura/
+ship, vessel
+loďka /lˈoc/
+boat
+ložnice /lˈocka/
+bedroom
+lupič /lˈoʒɲitse/
+bandit
+láhev /lˈupitʃ/
+bottle
+láska /lˈaːhev/
+affection, love
+lék /lˈaːska/
+drug, medicine, pharmaceutical
+lékař /lˈeːk/
+doctor, physician
+lékárna /lˈeːkar̝/
+chemist'sshop, drugstore
+léto /lˈeːkaːrna/
+summer
+líný /lˈeːto/
+lazy
+lžíce /lˈiːniː/
+spoon
+malina /ˈl̩ʒiːtse/
+raspberry
+maminka /mˈalina/
+mother
+manžel /mˈamiŋka/
+husband
+manželka /mˈanʒel/
+wife
+maso /mˈanʒelka/
+meat
+matka /mˈaso/
+mother
+maďarsky /mˈatka/
+Hungarian
+medvěd /mˈaɟarski/
+bear
+meruňka /mˈedvjet/
+apricot
+mezinárodní /mˈeruɲka/
+international
+mléko /mˈezinˌaːrodɲiː/
+milk
+modrý /mlˈeːko/
+blue
+most /mˈodriː/
+bridge
+motorka /mˈost/
+motorcycle
+moucha /mˈotorka/
+fly, housefly
+moře /mˈoʊxa/
+sea
+mrkev /mˈor̝e/
+carrot
+muž /mˈr̩kev/
+fellow, man
+my /mˈuʃ/
+us, we
+myŠ /mˈi/
+mouse
+můj /mˈi ˈeʃ/
+my
+máslo /mˈuːj/
+butter
+míč /mˈaːslo/
+ball
+mýdlo /mˈiːtʃ/
+soap
+město /mˈiːdlo/
+city, town
+měsíc /mɲˈesto/
+month
+nebo /mɲˈesiːts/
+or
+neděle /nˈebo/
+Sunday
+nepřítomný /nˈeɟele/
+absent
+než /nˈepr̝̊iːtˌomniː/
+than
+nikdo /nˈeʃ/
+neither, nobody, none, no‐one
+noc /ɲˈikdo/
+night
+noha /nˈots/
+leg, paw
+nos /nˈoha/
+nose
+nosič /nˈos/
+porter
+nový /nˈositʃ/
+new, novel
+nůž /nˈoviː/
+knife
+nůžky /nˈuːʃ/
+scissors
+nádraží /nˈuːʃki/
+station
+námořník /nˈaːdraʒiː/
+sailor
+nápad /nˈaːmor̝ɲiːk/
+idea
+národ /nˈaːpat/
+nation
+národní /nˈaːrot/
+national
+nízko /nˈaːrodɲiː/
+low
+něco /ɲˈiːsko/
+anything, something
+německy /ɲˈetso/
+German
+oblíbený /ɲˈemetski/
+popular
+obraz /ˈobliːbˌeniː/
+image, picture
+obvyklý /ˈobras/
+accustomed, customary, usedto, usual, wonted
+obyčejně /ˈobvikliː/
+ordinarily, usually
+odpoledne /ˈobitʃˌeɪɲe/
+afternoon
+okno /ˈotpolˌedne/
+window
+oko /ˈokno/
+eye
+olej /ˈoko/
+oil
+omáčka /ˈoleɪ/
+gravy, sauce
+on /ˈomaːtʃka/
+he, him
+ona /ˈon/
+her, she
+ono /ˈona/
+it
+opět /ˈono/
+afresh, again, alloveragain, anew
+osm /ˈopjet/
+eight
+osoba /ˈosm/
+person
+otec /ˈosoba/
+father
+otevřený /ˈotets/
+open
+otázka /ˈotevr̝ˌeniː/
+question
+ovce /ˈotaːska/
+sheep
+oves /ˈoftse/
+oats
+ovčák /ˈoves/
+shepherd
+papír /ˈoftʃaːk/
+paper
+parno /pˈapiːr/
+heat
+pasažér /pˈarno/
+passenger
+patro /pˈasaʒeːr/
+floor
+pekař /pˈatro/
+baker
+pekárna /pˈekar̝/
+bakery
+peníze /pˈekaːrna/
+money
+pes /pˈeɲiːze/
+dog
+pianista /pˈes/
+pianist
+pivo /piˈanista/
+ale, beer
+plyn /pˈivo/
+gas
+po /plˈin/
+after, behind
+pod /pˈo/
+below, beneath, under, underneath
+podlaha /pˈot/
+floor
+podzim /pˈodlaha/
+autumn
+pohodlný /pˈodʑim/
+comfortable
+pokoj /pˈohodˌl̩niː/
+chamber, room
+pole /pˈokoj/
+field
+polsky /pˈole/
+Polish
+polévka /pˈolski/
+soup
+pondělí /pˈoleːfka/
+Monday
+poschodí /pˈonɟeliː/
+floor, storey, story
+postel /pˈosxoɟiː/
+bed
+počasí /pˈostel/
+weather
+prapor /pˈotʃasiː/
+banner, flag
+prase /prˈapor/
+hog, pig, swine
+profesor /prˈase/
+professor
+prosinec /prˈofesor/
+December
+proti /prˈosinets/
+acrossfrom, against, inexchangefor, opposedto, opposite, upon
+prst /prˈoci/
+finger
+prsten /pˈr̩st/
+ring
+prázdný /pˈr̩sten/
+empty, void
+párek /prˈaːzdniː/
+sausage
+pátek /pˈaːrek/
+Friday
+písek /pˈaːtek/
+sand
+píseň /pˈiːsek/
+song
+pět /pˈiːseɲ/
+five
+přes /pjˈet/
+across, beyond, ontheothersideof
+přijmouti /pr̝̊ˈes/
+accept, receive, take, takein
+přátelství /pr̝̊ˈijmoʊci/
+friendship
+přítel /pr̝̊ˈaːtelstviː/
+friend
+přítelkyně /pr̝̊ˈiːtel/
+friend
+rada /pr̝̊ˈiːtelkˌiɲe/
+advice, counsel
+restaurace /rˈada/
+restaurant
+rodina /rˈestaʊrˌatse/
+family
+rodiče /rˈoɟina/
+parents
+ruka /rˈoɟitʃe/
+hand
+rusky /rˈuka/
+Russian
+ryba /rˈuski/
+fish
+rybář /rˈiba/
+fisherman
+rytmus /rˈibaːr̝/
+rhythm
+růže /rˈitmus/
+rose
+rána /rˈuːʒe/
+injury, wound
+ráno /rˈaːna/
+morning
+sbohem /rˈaːno/
+adieu, farewell, bye, goodbye
+schopný /zbˈohem/
+able, capable
+sedm /sxˈopniː/
+seven
+serum /sˈedm/
+serum
+sestra /sˈerum/
+sister
+sestřenice /sˈestra/
+cousin
+sever /sˈestr̝̊eɲˌitse/
+north, North
+sklep /sˈever/
+basement, cellar
+skála /sklˈep/
+rock
+sladký /skˈaːla/
+gentle, soft, sweet, tender
+slepice /slˈatkiː/
+chicken, fowl
+slovo /slˈepitse/
+word
+sluha /slˈovo/
+boy, servant
+slunce /slˈuha/
+sun
+snacha /slˈuntse/
+daughter‐in‐law
+snad /snˈaxa/
+maybe, mayhap, perchance, perhaps, possibly
+snídaně /snˈat/
+breakfast
+soudce /sɲˈiːdaɲe/
+judge
+souhlasiti /sˈoʊttse/
+accede, agree, consent
+soused /sˈoʊhlasˌici/
+neighbour
+spaní /sˈoʊset/
+sleep
+spolu /spˈaɲiː/
+together
+srdce /spˈolu/
+heart
+starý /sˈr̩ttse/
+1. old
+stroj /stˈariː/
+engine, machine
+strom /strˈoj/
+tree
+strážník /strˈom/
+policeman
+strýc /strˈaːʒɲiːk/
+uncle
+studený /strˈiːts/
+bleak, chilly, cold
+stůl /stˈudeniː/
+table
+stěna /stˈuːl/
+wall
+střecha /scˈena/
+roof
+středa /str̝̊ˈexa/
+Wednesday
+stříbrný /str̝̊ˈeda/
+silver
+sud /str̝̊ˈiːbr̩niː/
+barrel
+svět /sˈut/
+world
+světlo /svjˈet/
+light
+sympatie /svjˈetlo/
+sympathy
+syn /sˈimpatˌie/
+son
+sám /sˈin/
+alone, only, sole, solitary
+sýr /sˈaːm/
+cheese
+také /sˈiːr/
+also, likewise, too
+tele /tˈakeː/
+calf
+teplo /tˈele/
+warmth
+teta /tˈeplo/
+aunt
+teď /tˈeta/
+atpresent, now
+thema /tˈec/
+theme, topic, subject
+theorie /thˈema/
+theory
+tma /thˈeorˌije/
+darkness, murk
+tmavý /tmˈa/
+dark, dim
+tupý /tmˈaviː/
+1. blunt
+2. dull, obtuse
+turecký /tˈupiː/
+Turkish
+tužka /tˈuretskiː/
+pencil
+tvář /tˈuʃka/
+face
+týden /tvˈaːr̝/
+week
+tělo /tˈiːden/
+body
+tři /cˈelo/
+three
+třída /tr̝̊ˈi/
+class
+ucho /tr̝̊ˈiːda/
+ear
+uhlí /ˈuxo/
+coal
+ulice /ˈuhliː/
+street
+umění /ˈulitse/
+art
+učitel /ˈumɲeɲiː/
+instructor, teacher
+už /ˈutʃitel/
+already, bynow, yet
+vagon /ˈuʃ/
+carriage, coach, railwaycarriage, waggon
+vajíčko /vˈaɡon/
+egg
+vchod /vˈajiːtʃko/
+entrance, portal
+vdova /fxˈot/
+widow
+vdovec /vdˈova/
+widower
+vejce /vdˈovets/
+egg
+venkov /vˈeɪtse/
+country, land
+ves /vˈeŋkov/
+village
+vesnice /vˈes/
+village
+večer /vˈesɲitse/
+evening
+vlas /vˈetʃer/
+hair
+vlaŠtovka /vlˈas/
+swallow
+voda /vlˈa ʃtˈofka/
+water
+voják /vˈoda/
+pawn, soldier
+vstup /vˈojaːk/
+entrance, portal
+vychytralý /fstˈup/
+acute, astute, shrewd
+vzduch /vˈixitrˌaliː/
+air
+válka /vzdˈux/
+war
+váza /vˈaːlka/
+vase, vessel
+víno /vˈaːza/
+wine
+vítr /vˈiːno/
+wind
+výběr /vˈiːtr̩/
+choice, election
+východ /vˈiːbjer/
+exit, wayout
+výŠka /vˈiːxot/
+altitude, height
+včela /vˈiː ʃkˈa/
+bee
+včera /ftʃˈela/
+yesterday
+věc /ftʃˈera/
+thing
+věk /vjˈets/
+age
+větev /vjˈek/
+bough, branch
+věž /vjˈetev/
+castle, tower
+vŠechno /vjˈeʃ/
+all, altogether, everything
+vŠude /v ʃˈexno/
+allabout, everywhere
+vždy /v ʃˈude/
+always, ever
+vždycky /vʒdˈi/
+always, ever
+xylofon /vʒdˈitski/
+xylophone
+z /ksˈilofon/
+from, outof
+zahrada /zˈet/
+garden
+zahradník /zˈahrada/
+gardener
+zdraví /zˈahradɲiːk/
+health
+zdravý /zdrˈaviː/
+healthy, well
+ze /zdrˈaviː/
+from, outof
+zelený /zˈe/
+green
+země /zˈeleniː/
+earth, land, soil
+zima /zˈemɲe/
+1. cold
+2. winter
+zloděj /zˈima/
+thief
+znovu /zlˈoɟej/
+afresh, again, oncemore
+zrcadlo /znˈovu/
+looking‐glass, mirror
+zvírě /zˈr̩tsadlo/
+animal, beast
+zvíře /zvˈiːre/
+animal
+záchod /zvˈiːr̝e/
+toilet
+záležitost /zˈaːxot/
+affair, business, businessdeal, case, matter
+západ /zˈaːleʒˌitost/
+west, West
+zápalná bomba /zˈaːpat/
+incendiarybomb
+září /zˈaːpalnaː bˈomba/
+September
+zítra /zˈaːr̝iː/
+tomorrow
+únor /zˈiːtra/
+February
+úraz /ˈuːnor/
+accident
+úterý /ˈuːras/
+Tuesday
+účet /ˈuːteriː/
+account
+účetní /ˈuːtʃet/
+book‐keeper
+úřad /ˈuːtʃetɲiː/
+bureau, office
+Čech /ˈuːr̝at/
+Czech
+Čechy /tʃˈex/
+Bohemia
+Československo /tʃˈexi/
+Czechoslovakia
+Česká Respublika /tʃˈeskoslˌovensko/
+CzechRepublic
+Čina /tʃˈeskaː rˈespublˌika/
+China
+Řím /tʃˈina/
+Rome
+Švýcarsko /r̝ˈiːm/
+Switzerland
+čaj /ʃvˈiːtsarsko/
+tea
+časem /tʃˈaj/
+severaltimes, sometimes
+často /tʃˈasem/
+frequently, often, regularly
+černý /tʃˈasto/
+black
+červen /tʃˈerniː/
+June
+červenec /tʃˈerven/
+July
+červený /tʃˈervenets/
+red
+český /tʃˈerveniː/
+Czech
+člověk /tʃˈeskiː/
+man, humanbeing
+člun /tʃlˈovjek/
+boat
+čokoláda /tʃlˈun/
+chocolate
+čtvrtek /tʃˈokolˌaːda/
+Thursday
+čtyři /tʃtvˈr̩tek/
+four
+čí /tʃtˈir̝i/
+ofwhich, whichone's, whose
+čísti /tʃˈiː/
+read
+řeka /tʃˈiːsci/
+river
+řezník /r̝ˈeka/
+butcher
+Šedivý /r̝ˈezɲiːk/
+grey
+Šest /ʃˈeɟiviː/
+six
+Škola /ʃˈest/
+school
+Španělsky /ʃkˈola/
+Spanish
+Špatný /ʃpˈaɲelski/
+bad, miserable, nasty, poor
+Špenát /ʃpˈatniː/
+spinach
+Špinavý /ʃpˈenaːt/
+dirty, filthy, nasty, soiled, unclean
+Šunka /ʃpˈinaviː/
+ham
+Švagr /ʃˈuŋka/
+brother‐in‐law
+žena /ʃvˈaɡr̩/
+woman
+židle /ʒˈena/
+chair
+žito /ʒˈidle/
+rye
+život /ʒˈito/
+life
+žlutý /ʒˈivot/
+yellow
+ abcdefghijklmnoprstuvxyzáéíúýčďěňřšťůž

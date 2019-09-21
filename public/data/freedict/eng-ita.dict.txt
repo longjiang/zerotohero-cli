@@ -1,0 +1,9896 @@
+
+00-database-dictfmt-1.12.1
+English-Italian FreeDict Dictionary
+
+Maintainer: [up for grabs]
+
+Edition: 0.1.2
+Size: 4519 headwords
+
+Publisher: FreeDict.
+
+
+Availability:
+
+    Copyright (C) 1999-2017 by various authors listed below.
+    Available under the terms of the GNU General Public License ver. 2.0 and
+  any later version.
+
+Published at: http://freedict.org/
+
+Notes:
+
+ * Database Status: too small
+
+
+Source(s):
+
+  Home: http://freedict.org/ [http://freedict.org/] This Database was
+  originally generated from ergane, http://www.travlang.com
+  [http://www.travlang.com].
+
+The Project:
+
+  This dictionary comes to you through nice people making it available for
+  free and for good. It is part of the FreeDict project,
+  http://freedict.org/. This project aims to make translating dictionaries
+  available for free. Your contributions are welcome!
+
+Changelog:
+
+ * 2017-12-02 Sebastian Humenda ver. 0.1.2:
+   * update licencing stanza (thanks to Karl Bartel)
+   * remove duplicated entries
+ * 2010-10-25 Piotr Bański:
+   Conversion of TEI P4 source into P5 via tools/freedict_P4toP5.xsl;
+   manual clean-up. We are back to version from before Michael Bunk's
+   re-import from Ergane of 2006-12-19 that was rolled back due to
+   Ergane's cryptic change of database licensing.
+ * 2005-02-11 Michael Bunk:
+   Converted file to TEI P4
+ * 2000-12-10 Horst Eyermann:
+   Database was converted to TEI format and checked into CVS
+ * 2000-12-10 Horst Eyermann:
+   This Database was generated from ergane, http://www.travlang.com -
+   Thanks!
+English-Italian FreeDict Dictionary ver. 0.1.2
+http://freedict.org/
+ABC /ˌeɪbˌiːsˈiː/
+alfabeto
+Abyssinia /ɐbɪsˈɪniə/
+1. Abissinia
+2. Etiopia
+Abyssinian /ɐbɪsˈɪniən/
+abissino
+Acheron /ˈeɪkɹɒn/
+Acheronte
+Achilles /ɐkˈɪliːz/
+Achille
+Achilles' /ɐkˈɪliːz/
+tallone d'Achille
+Achilles' /ɐkˈɪliːz/
+tendine d'Achille
+Adam /ˈadəm/
+Adamo
+Adam's /ˈadəmz/
+pomo d'Adamo
+Adonis /adˈəʊniz/
+Adone
+Adriatic /ˌadɹɪˈatɪk/
+Mar Adriatico
+Adriatic /ˌadɹɪˈatɪk/
+Mar Adriatico
+Aeolus /ˈiːɒləs/
+Eolo
+Afghan /ˈafɡan/
+afgano
+Afghanistan /afɡˈanɪstˌɑːn/
+Afghanistan
+Africa /ˈafɹɪkə/
+Africa
+African /ˈafɹɪkən/
+africano
+Aix‐la‐Chapelle /ˈeɪks lˌa tʃeɪpˈɛl/
+Aquisgrana
+Ajax /ˈeɪdʒaks/
+Aiace
+Alaska /ɐlˈaskə/
+Alasca
+Albania /albˈeɪniə/
+Albania
+Albanian /albˈeɪniən/
+albanese
+Alexander /ˌalɪɡzˈandə/
+Alessandro
+Alexandria /ˌalɪɡzˈandɹiə/
+Alessandria d'Egitto
+Algeria /aldʒˈiəɹɪə/
+Algeria
+Algerian /aldʒˈiəɹɪən/
+algerino
+Algiers /aldʒˈiəz/
+Algeri
+All /ˈɔːl/
+Ognissanti
+All /ˈɔːl/
+Ognissanti
+All /ˈɔːl/
+il giorno dei Morti
+Alps /ˈalps/
+Alpi
+Alsace‐Lorraine /ˈalseɪs ləɹˈeɪn/
+Alsazia‐Lorena
+Alsatian /alsˈeɪʃən/
+alsaziano
+Amazon /ˈaməzən/
+1. Rio delle Amazzoni
+2. amazzone
+America /ɐmˈɛɹɪkə/
+America
+American /ɐmˈɛɹɪkən/
+americano
+American /ɐmˈɛɹɪkən/
+indiano, indiano americano
+Anatolia /ˌanɐtˈəʊliə/
+Anatolia
+Andalusia /ˈandɐlˌuːzɪə/
+Andalusia
+Andalusian /ˈandɐlˌuːzɪən/
+1. andaluso
+Andes /ˈandiːz/
+Ande
+Andorra /ˈandɒɹə/
+Andorra
+Andorrian /andˈɒɹiən/
+andorrano
+Angola /aŋɡˈəʊlə/
+Angola
+Angolan /aŋɡˈəʊlən/
+angolano
+Angolese /ˌaŋɡəʊlˈiːz/
+angolano
+Annunciation /ɐnˌʌnsɪˈeɪʃən/
+Annunciazone
+Antarctic /antˈɑːktɪk/
+1. Antartico
+2. Antartide, Polo Sud
+3. antartico
+Antarctic /antˈɑːktɪk/
+Oceano Antartico
+Antilles /antˈɪliːz/
+Antille
+Antillian /ˌantɪlˈaɪən/
+1. delle Antille
+2. uomo delle Antille
+Antwerp /ˈantwɜːp/
+Anversa
+Apennines /ˈapənˌaɪnz/
+Appennini
+Apocalypse /ɐpˈɒkɐlˌɪps/
+Apocalisse
+April /ˈeɪpɹəl/
+aprile
+Arab /ˈaɹəb/
+arabo
+Arabia /əɹˈeɪbiə/
+Arabia
+Arabian /əɹˈeɪbiən/
+arabo
+Arabian /əɹˈeɪbiən/
+Mare Arabico
+Arabic /ˈaɹɐbˌɪk/
+arabo
+Arcadia /ɑːkˈeɪdiə/
+Arcadia
+Archimedes /ˌɑːkɪmˈiːdiːz/
+Archimede
+Arctic /ˈɑːktɪk/
+Artico
+Ardennes /ɑːdˈɛnz/
+Ardenne
+Argentina /ˌɑːdʒəntˈiːnə/
+Argentina
+Argentine /ˈɑːdʒəntˌaɪn/
+argentino
+Aristotle /ˈaɹɪstˌɒtəl/
+Aristotele
+Armenia /ɑːmˈiːniə/
+Armenia
+Armenian /ɑːmˈiːniən/
+armeno
+Ascension /ɐsˈɛnʃən/
+Ascensione
+Asia /ˈeɪʃə/
+Asia
+Asian /ˈeɪʒən/
+asiatico
+Asiatic /ˌeɪʒɪˈatɪk/
+asiatico
+Asia /ˈeɪʃə/
+1. Anatolia
+2. Asia Minore
+Assisi /ɐsˈɪsi/
+Assisi
+Assumption /ɐsˈʌmpʃən/
+Assunzione
+Assyria /ɐsˈɪɹiə/
+Assiria
+Assyrian /ɐsˈɪɹiən/
+assiro
+Athena /aθˈiːnə/
+Atene
+Athene /ˈaθiːn/
+Atene
+Athenian /aθˈiːniən/
+ateniese
+Athens /ˈaθɪnz/
+Atene
+Atlantic /ɐtlˈantɪk/
+1. Atlantico
+2. atlantico
+Atlantic /ɐtlˈantɪk/
+Atlantico
+Atlantis /atlˈantɪs/
+Atlantide
+August /ˈɔːɡəst/
+agosto
+Australia /ɒstɹˈeɪliə/
+Australia
+Australian /ɒstɹˈeɪliən/
+australiano
+Austria /ˈɒstɹiə/
+Austria
+Austrian /ˈɒstɹiən/
+austriaco
+Azerbaijan /ˌazəbaɪdʒˈɑːn/
+Azerbaigian
+Bacchus /bˈakəs/
+Bacco
+Balkans /bˈɔːlkənz/
+Balcani
+Baltic /bˈɒltɪk/
+Baltico
+Belgian /bˈɛldʒən/
+belga
+Belgium /bˈɛldʒəm/
+Belgio
+Berlin /bɜːlˈɪn/
+Berlino
+Bible /bˈaɪbəl/
+Bibbia
+Brazil /bɹɐzˈɪl/
+Brasile
+Brazilian /bɹazˈɪliən/
+brasiliano
+Bretagne /bɹˈɛtaɡnɪ/
+Bretagna
+Britain /bɹˈɪtən/
+Gran Bretagna
+Brittany /bɹˈɪtəni/
+Bretagna
+Burgundy /bˈɜːɡʌndi/
+Borgogna
+Burma /bˈɜːmə/
+Birmania
+Caesar /sˈiːzə/
+Cesare
+Cain /kˈeɪn/
+Caino
+Cairo /kˈaɪɹəʊ/
+Cairo
+Canada /kˈanədə/
+Canadà
+Canary /kənˈeəɹi/
+Canarie
+Cape /kˈeɪp/
+Città del Capo
+Capricorn /kˈapɹɪkˌɔːn/
+Capricorno
+Carthage /kˈɑːθɪdʒ/
+Cartagine
+Castile /kˈastaɪl/
+Castiglia
+Cato /kˈɑːtəʊ/
+Catone
+Cerberus /sˈɜːbəɹəs/
+Cerbero
+Chile /tʃˈɪli/
+Cile
+China /tʃˈaɪnə/
+Cina
+Chinaman /tʃˈaɪnamən/
+cinese
+Chinese /tʃaɪnˈiːz/
+cinese
+Christ /kɹˈaɪst/
+Cristo
+Christian /kɹˈɪstʃən/
+cristiano
+Christian /kɹˈɪstʃən/
+nome di battetismo
+Christmas /kɹˈɪsməs/
+Natale
+Corsica /kˈɔːsɪkə/
+Corsica
+Croatia /kɹəʊˈeɪʃə/
+Croazia
+Cyprus /sˈaɪpɹəs/
+Cipro
+Czechoslovakia /tʃˌɛkəsləvˈakiə/
+Cecoslovacchia
+Dalmatia /dalmˈeɪʃə/
+Dalmazia
+Damascus /dɐmˈaskəs/
+Damasco
+Dane /dˈeɪn/
+danese
+Danube /dˈanjuːb/
+Danubio
+December /dɪsˈɛmbə/
+dicembre
+Denmark /dˈɛnmɑːk/
+Danimarca
+Dublin /dˈʌblɪn/
+Dublino
+Dutchman /dˈʌtʃmən/
+1. olandese
+2. Olandese
+East /ˈiːst/
+est
+Easter /ˈiːstə/
+Pasqua
+Egypt /ˈiːdʒɪpt/
+Egitto
+England /ˈɪŋɡlənd/
+Inghilterra
+English /ˈɪŋɡlɪʃ/
+inglese
+Englishman /ˈɪŋɡlɪʃmən/
+inglese
+Epiphany /ɪpˈɪfənˌɪ/
+Befana, Epifania
+Ethiopia /ˌiːθɪˈəʊpiə/
+Etiopia
+Europa /jʊəɹˈəʊpə/
+Europa
+Europe /jˈʊəɹəp/
+Europa
+European /jˌʊəɹəpˈiən/
+europeo
+European /jˌʊəɹəpˈiən/
+Unione Europea
+Eva /ˈiːvə/
+Eva
+Evening /ˈiːvnɪŋ/
+Venere
+February /fˈɛbɹuːəɹi/
+febbraio
+Finland /fˈɪnlənd/
+Finlandia
+Finn /fˈɪn/
+finlandese
+France /fɹˈans/
+Francia
+French /fɹˈɛntʃ/
+francese
+Frenchman /fɹˈɛntʃmən/
+francese
+Friday /fɹˈaɪdeɪ/
+venerdì
+Gascony /ɡˈaskəni/
+Guascogna
+Geneva /dʒənˈiːvə/
+Ginevra
+Genoa /dʒɛnˈəʊə/
+Genova
+German /dʒˈɜːmən/
+tedesco
+Germany /dʒˈɜːməni/
+Germania
+God /ɡˈɒd/
+Dio, Iddio
+God's /ɡˈɒdz/
+camposanto, cimitero
+Great /ɡɹˈeɪt/
+Gran Bretagna
+Greece /ɡɹˈiːs/
+Grecia
+Greek /ɡɹˈiːk/
+greco
+Greenland /ɡɹˈiːnlənd/
+Groenlandia
+Guinea /ɡˈɪni/
+Guinea
+Hades /hˈeɪdiːz/
+Ade
+Hamburg /hˈambɜːɡ/
+Amburgo
+Holland /hˈɒlənd/
+1. Olanda
+Hollander /hˈɒləndə/
+olandese
+Hungarian /hʌŋɡˈeəɹiən/
+ungherese
+Hungary /hˈʌŋɡəɹi/
+Ungheria
+Iceland /ˈaɪslənd/
+Islanda
+India /ˈɪndiə/
+India
+Indian /ˈɪndiən/
+indiano, indiano americano
+Indian /ˈɪndiən/
+granturco
+Indo‐China /ˈɪndəʊ tʃˈaɪnə/
+Indocina
+Ireland /ˈaɪələnd/
+Irlanda
+Irishman /ˈaɪɹɪʃmən/
+irlandese
+Islam /ɪslˈɑːm/
+Islam
+Istria /ˈɪstɹiə/
+Istria
+Italian /ɪtˈalɪən/
+italiano
+Italy /ˈɪtəli/
+Italia
+January /dʒˈanjuːəɹi/
+gennaio
+Japan /dʒəpˈan/
+Giappone
+Japanese /dʒˌapənˈiːz/
+giapponese
+Jericho /dʒˈɛɹɪkˌəʊ/
+Gerico
+Jerusalem /dʒəɹˈuːsələm/
+Gerusalemme
+Jordan /dʒˈɔːdən/
+1. Giordania
+2. Giordano
+Joseph /dʒˈəʊsəf/
+Giuseppe
+Joshua /dʒˈɒʃjuːə/
+Giosuè
+Jove /dʒˈəʊv/
+Giove
+July /dʒuːlˈaɪ/
+luglio
+June /dʒˈuːn/
+giugno
+Juno /dʒˈuːnəʊ/
+Giunone
+Jupiter /dʒˈuːpɪtə/
+Giove
+Koran /kɔːɹˈɑːn/
+Corano
+Korea /kɔɹˈiːə/
+Corea
+Kremlin /kɹˈɛmlɪn/
+Cremlino
+Lady /lˈeɪdi/
+Annunciazone
+Lapland /lˈaplənd/
+Lapponia
+Latvia /lˈatviə/
+Lettonia
+Lebanon /lˈɛbənˌɒn/
+Libano
+Leghorn /lˈɛɡhɔːn/
+Livorno
+Lisbon /lˈɪsbən/
+Lisbona
+Lithuania /lˌɪθjuːˈeɪniə/
+Lituania
+Little /lˈɪtəl/
+Cappuccetto Rosso
+London /lˈʌndən/
+Londra
+Lucifer /lˈuːsɪfə/
+Satana
+Machiavelli /mˌakiəvˈɛlɪ/
+Machiavelli
+March /mˈɑːtʃ/
+marzo
+May /mˈeɪ/
+maggio
+Mecca /mˈɛkə/
+Mecca
+Messiah /mɛsˈaɪə/
+Messia
+Mexico /mˈɛksɪkˌəʊ/
+Messico
+Mexico /mˈɛksɪkˌəʊ/
+Città del Messico
+Milan /mɪlˈan/
+Milano
+Mister /mˈɪstə/
+signore
+Mohammed /məʊhˈamɪd/
+Maometto
+Monday /mˈʌndeɪ/
+lunedì
+Moscow /mˈɒskəʊ/
+Mosca
+Mr. /mˈɪstə/
+signore
+Mrs. /mˈɪsɪz/
+signora
+Muhammad /məhˈamɪd/
+Maometto
+Nebuchadnezzar /nˈɛbətʃˌadnɪzˌɑː/
+Nabucodonosor
+Neptune /nˈɛptjuːn/
+Nettuno
+Newfoundland /njˈuːfəndlɐnd/
+Terranova
+New /njˈuː/
+Nuova York
+New /njˈuː/
+Nuova York
+New /njˈuː/
+Nuova York
+Nimrod /nˈɪmɹɒd/
+Nembrod
+North /nˈɔːθ/
+nord
+North /nˈɔːθ/
+America del Nord
+Norway /nˈɔːweɪ/
+Norvegia
+Norwegian /nɔːwˈiːdʒən/
+norvegese
+November /nəʊvˈɛmbə/
+novembre
+October /ɒktˈəʊbə/
+ottobre
+Orkneys /ˈɔːkniz/
+Orcadi
+Orkney /ˈɔːkni/
+Orcadi
+Orpheus /ˈɔːfɪəs/
+Orfeo
+Pakistan /pˌakɪstˈɑːn/
+Pakistan
+Paris /pˈaɹɪs/
+Parigi
+Parthian /pˈɑːθiən/
+1. parziale
+2. parte, porzione
+Po /pˈəʊ/
+Po
+Poland /pˈəʊlənd/
+Polonia
+Pole /pˈəʊl/
+polacco
+Portugal /pˈɔːtʃəɡəl/
+Portogallo
+Portuguese /pˌɔːtʃəɡˈiːz/
+portoghese
+Rhine /ɹˈaɪn/
+Reno
+Rhineland /ɹˈaɪnlənd/
+Renania
+Rhine /ɹˈaɪn/
+chiatta
+Roman /ɹˈəʊmən/
+romano
+Rome /ɹˈəʊm/
+Roma
+Russia /ɹˈʌʃə/
+Russia
+Russian /ɹˈʌʃən/
+russo
+Sabbath /sˈabəθ/
+sabato
+Sardina /sˈɑːdɪnə/
+Sardegna
+Sardinia /sɑːdˈɪniə/
+Sardegna
+Sassenach /sˈasənˌak/
+inglese
+Satan /sˈeɪtən/
+Satana
+Saturday /sˈatədˌeɪ/
+sabato
+Saudi /sˈaʊdi/
+Arabia Saudita
+Scot /skˈɒt/
+scozzese
+Scotland /skˈɒtlənd/
+Scozia
+Scotsman /skˈɒtsmən/
+scozzese
+September /sɛptˈɛmbə/
+settembre
+Shanghai /ʃaŋhˈaɪ/
+Sciangai
+Siam /saɪˈam/
+Tailandia
+Sicily /sˈɪsɪli/
+Sicilia
+South /sˈaʊθ/
+America del Sud
+Spain /spˈeɪn/
+Spagna
+Spaniard /spˈanɪəd/
+spagnolo, spagnuolo
+Stockholm /stˈɒkhəʊm/
+Stoccolma
+Sunday /sˈʌndeɪ/
+domenica
+Swede /swˈiːd/
+svedese
+Sweden /swˈiːdən/
+Svezia
+Swiss /swˈɪs/
+svizzero
+Switzerland /swˈɪtsələnd/
+Svizzera
+Tangier /tˈaŋiə/
+Tangeri
+Thailand /tˈaɪlənd/
+Tailandia
+Thames /tˈɛmz/
+Tamigi
+The /ðˈə/
+L'Aia
+Thursday /θˈɜːzdeɪ/
+giovedì
+Tuesday /tjˈuːzdeɪ/
+martedì
+Turin /tjəɹˈɪn/
+Torino
+Turk /tˈɜːk/
+turco
+Turkey /tˈɜːki/
+Turchia
+Twelfth‐night /twˈɛlfθ nˈaɪt/
+Befana, Epifania
+Tyrrhenian /tɪrhˈiːniən/
+Mar Tirreno
+‐in‐law /ɪn lˈɔː/
+per via di matrimonio
+USA /jˌuːˌɛsˈeɪ/
+America, Stati Uniti
+US /jˌuːˈɛs/
+americano
+United /juːnˈaɪtɪd/
+America, Stati Uniti
+Uruguay /jˈʊəɹuːɡwˌaɪ/
+Uruguai
+VAT /vˈat/
+IVA
+Vatican /vˈatɪkən/
+Città del Vaticano
+Venetia /vɛnˈiːʃə/
+Venezia
+Venice /vˈɛnɪs/
+Venecia
+Venus /vˈiːnəs/
+Venere
+Vienna /vɪˈɛnə/
+Vienna
+Vietnam /vˌiːətnˈɑːm/
+Vietnam
+Wales /wˈeɪlz/
+Galles
+Wednesday /wˈɛnzdeɪ/
+mercoledì
+West /wˈɛst/
+ovest
+Xanthippe /zˈanθɪp/
+megera
+Yugoslavia /jˌuːɡəslˈɑːviə/
+Iugoslavia
+Yule /jˈuːl/
+Natale
+ZIP /zˈɪp/
+CAP, codice di avviamento postale
+Zurich /zjˈʊɹɪk/
+Zurigo
+... //
+... fa
+a /ˈeɪ/
+a, dentro
+abacus /ˈabakəs/
+1. abaco
+2. pallottoliere
+abandon /ɐbˈandən/
+abbandonare
+abandonment /ɐbˈandənmənt/
+cessione
+abashed /ɐbˈaʃt/
+timido
+abate /ɐbˈeɪt/
+1. diminuire
+abbess /ˈabɛs/
+badessa
+abbey /ˈabi/
+badia
+abbot /ˈabət/
+abate
+abbreviation /ɐbɹˌiːvɪˈeɪʃən/
+abbreviazione
+abdication /ˌabdɪkˈeɪʃən/
+abdicazione
+abdomen /ˈabdəmən/
+ventre
+aberration /ˌabəɹˈeɪʃən/
+errore, sbaglio
+abet /ɐbˈɛt/
+1. aiutare, assistere
+2. incitare, spronare
+3. poggiare, appoggiare, sostenere
+abhor /ɐbhˈɔː/
+detestare
+abhorrence /ɐbhˈɒɹəns/
+orrore, ribrezzo
+abhorrent /ɐbhˈɒɹənt/
+orrendo, orribile
+abide /ɐbˈaɪd/
+aspettare
+abiding /ɐbˈaɪdɪŋ/
+continuo, durevole, permanente
+ability /ɐbˈɪləti/
+abilità, capacità
+abject /ˈabdʒɛkt/
+miserabile, misero, povero
+abjure /ɐbdʒjˈʊə/
+annullare
+ablaze /ɐblˈeɪz/
+ardente
+able /ˈeɪbəl/
+abile, adatto, capace, idoneo
+abnormal /ɐbnˈɔːməl/
+anormale
+abode /ɐbˈəʊd/
+1. alloggio, appartamento
+2. residenza
+abolish /ɐbˈɒlɪʃ/
+1. abolire, abrogare
+2. annullare
+abolition /ˌabəlˈɪʃən/
+1. abolizione, abrogazione
+abominable /ɐbˈɒmɪnəbəl/
+orrendo, orribile
+abominate /ɐbˈɒmɪnˌeɪt/
+detestare
+abomination /ɐbˌɒmɪnˈeɪʃən/
+orrore, ribrezzo
+abort /ɐbˈɔːt/
+abortire
+abortion /ɐbˈɔːʃən/
+aborto
+about‐face /ɐbˌaʊt fˈeɪs/
+cambiamento
+about /ɐbˈaʊt/
+1. concernere
+2. circa, verso
+3. intorno a
+above‐board /əbˌʌv bˈɔːd/
+1. onesto
+2. sincero
+above /əbˈʌv/
+1. sopra
+2. di sopra
+above /əbˈʌv/
+1. soprattutto
+2. principalmente
+abridge /ɐbɹˈɪdʒ/
+limitare, restringere
+abridgement /ɐbɹˈɪdʒmənt/
+sommario
+abroad /ɐbɹˈɔːd/
+1. fuori
+2. all'estero
+abrogate /ˈabɹəɡˌeɪt/
+1. abolire, abrogare
+2. annullare
+abrogation /ˌabɹəɡˈeɪʃən/
+1. abolizione, abrogazione
+abrupt /ɐbɹˈʌpt/
+1. ripido
+2. subitaneo
+abscess /ˈabsɛs/
+ascesso
+abscond /ɐbskˈɒnd/
+fuggire
+absence /ˈabsəns/
+1. assenza
+2. mancanza
+absent /ˈabsənt/
+assente
+absent /ˈabsənt/
+andarsene, partire
+absolute /ˈabsəlˌuːt/
+completo
+absolutely /ˌabsəlˈuːtli/
+davvero, infatti
+absolute /ˈabsəlˌuːt/
+autocrate
+absorb /ɐbsˈɔːb/
+disporre
+abstract /ˈabstɹakt/
+1. astratto
+2. ritirare
+3. concludere, dedurre
+4. sommario
+abstraction /ɐbstɹˈakʃən/
+furto
+abstruse /ɐbstɹˈuːs/
+misterioso
+absurd /ɐbsˈɜːd/
+assurdo
+abundance /ɐbˈʌndəns/
+1. abbondanza
+2. affluenza
+3. ricchezza
+abuse /ɐbjˈuːs/
+insultare, offendere
+abysmal /ɐbˈɪsməl/
+terribile
+abyss /ɐbˈɪs/
+abisso, burrone
+academic /ˌakədˈɛmɪk/
+studente
+academy /ɐkˈadəmi/
+accademia
+academy /ɐkˈadəmi/
+conservatorio
+accede /ɐksˈiːd/
+concordare, esserer d'accordo
+accelerate /ɐksˈɛləɹˌeɪt/
+accelerare
+accelerator /ɐksˈɛləɹˌeɪtə/
+acceleratore
+accelerator /ɐksˈɛləɹˌeɪtə/
+acceleratore
+accent /ˈaksənt/
+1. accentare
+2. accento
+accentuate /aksˈɛntʃuːˌeɪt/
+accentare
+accept /ɐksˈɛpt/
+accettare, accogliere
+acceptable /ɐksˈɛptəbəl/
+accettabile
+acceptance /ɐksˈɛptəns/
+accoglienza, accoglimento
+access /ˈaksɛs/
+assalto, attacco
+accession /ɐksˈɛʃən/
+guadagno
+accidence /ˈaksɪdəns/
+caso
+accident /ˈaksɪdənt/
+accidente, disgrazia, incidente
+acclaim /ɐklˈeɪm/
+1. acclamare
+2. applaudire, battere le mani
+3. applausi
+4. approvazione
+acclamation /ɐklɐmˈeɪʃən/
+applausi
+accommodating /ɐkˈɒmədˌeɪtɪŋ/
+servizievole
+accommodation /ɐkˌɒmədˈeɪʃən/
+1. aggiustamento
+2. accomodamento
+3. accordo, patto
+4. compromesso
+5. alloggio, appartamento
+accomodate /ɐkˈɒmədˌeɪt/
+1. finire, terminare
+2. aiutare
+accompany /ɐkˈʌmpəni/
+accompagnare
+accomplish /ɐkˈɒmplɪʃ/
+1. arrivare
+2. compiere, eseguire
+accord /ɐkˈɔːd/
+1. accordo
+2. accomodamento, patto
+3. permettere
+accordance /ɐkˈɔːdəns/
+accordo
+accordion /ɐkˈɔːdiən/
+fisarmonica
+account /ɐkˈaʊnt/
+1. spiegazione
+2. fattura
+3. considerare
+4. conto
+5. credere
+6. pareggiamento dei conti
+accountable /ɐkˈaʊntəbəl/
+responsabile
+accountant /ɐkˈaʊntənt/
+perito contabile
+accounting /ɐkˈaʊntɪŋ/
+contabilità
+account /ɐkˈaʊnt/
+spiegare
+accredit /ɐkɹˈɛdɪt/
+credere
+accretion /ɐkɹˈɛʃən/
+crescimento
+accrue /ɐkɹˈuː/
+1. discendere
+2. crescere
+accumulation /ɐkjˌuːmjʊlˈeɪʃən/
+1. accumulazione
+2. folla
+accumulator /ɐkjˈuːmjʊlˌeɪtə/
+accumulatore
+accurate /ˈakjʊɹət/
+esatto, preciso
+accusal /ɐkjˈuːzəl/
+accusa, imputazione, incriminazione
+accusation /ˌakjuːzˈeɪʃən/
+1. accusa, imputazione, incriminazione
+2. denuncia
+accuse /ɐkjˈuːz/
+1. accusare, caricare
+2. denunciare
+accused /ɐkjˈuːzd/
+accusato, imputato
+accuser /ɐkjˈuːzə/
+accusatore
+accustom /ɐkˈʌstəm/
+solere
+accustomed /ɐkˈʌstəmd/
+consueto, usuale
+accustom /ɐkˈʌstəm/
+abituarsi, avvezzarsi
+ace /ˈeɪs/
+asso
+acerbic /ɐsˈɜːbɪk/
+1. acuto, affilato, aguzzo, appuntito, aspro, piccante, tagliente
+2. amaro
+acetous /asˈɪtəs/
+acido, agro
+ache /ˈeɪk/
+1. far male
+2. dolore
+achieve /ɐtʃˈiːv/
+1. arrivare
+2. commettere, fare
+3. compiere, eseguire
+achievement /ɐtʃˈiːvmənt/
+1. azione
+2. successo
+acid /ˈasɪd/
+acido, agro
+acknowledge /ɐknˈɒlɪdʒ/
+1. confessare
+2. confermare
+acknowledgement /ɐknˈɒlɪdʒmənt/
+1. confessione
+2. ricevuta
+acolyte /ˈakəlˌaɪt/
+membro
+acorn /ˈeɪkɔːn/
+ghianda
+acquaint /ɐkwˈeɪnt/
+1. informare, insegnare
+acquaintance /ɐkwˈeɪntəns/
+conoscenza
+acquire /ɐkwˈaɪə/
+comperare, comprare
+acquisition /ɐkwɪsˈɪʃən/
+1. guadagno
+2. acquisto, compra
+acquisitive /ɐkwˈɪzɪtˌɪv/
+avido, bramoso
+acquittal /ɐkwˈɪtəl/
+pagamento
+across /əkɹˈɒs/
+attraverso
+across /əkɹˈɒs/
+contro
+act /ˈakt/
+1. agire
+2. azione
+3. atto, documento
+4. commettere, fare
+action /ˈakʃən/
+1. azione
+2. battaglia
+3. processo
+activate /ˈaktɪvˌeɪt/
+causare
+active /ˈaktɪv/
+1. attivo, operoso
+2. laborioso
+activity /aktˈɪvɪti/
+occupazione
+actor /ˈaktə/
+attore
+actress /ˈaktɹəs/
+attrice
+actual /ˈaktʃuːəl/
+reale
+actually /ˈaktʃuːəli/
+di fatto
+actuate /ˈaktʃuːˌeɪt/
+muovere
+act /ˈakt/
+rappresentare
+act /ˈakt/
+amnistia
+acuity /ɐkjˈuːɪti/
+attenzione
+acute /ɐkjˈuːt/
+acuto
+ad /ˈad/
+annuncio, avviso, inserzione
+adapt /ɐdˈapt/
+1. adattare, aggiustare
+add /ˈad/
+aggiungere
+adder /ˈadə/
+vipera
+addled /ˈadəld/
+ignorante, sciocco, stupido
+address /ɐdɹˈɛs/
+1. indirizzare
+2. indirizzo
+address /ɐdɹˈɛs/
+indirizzario
+adherents /ɐdhˈiəɹənts/
+partito, seguito
+adieu /ɐdjˈuː/
+addio
+adjacent /ɐdʒˈeɪsənt/
+vicino
+adjectival /ˌadʒɪktˈaɪvəl/
+aggettivo
+adjective /ˈadʒɪktˌɪv/
+aggettivo
+adjust /ɐdʒˈʌst/
+adattare, aggiustare
+adjustable /ɐdʒˈʌstəbəl/
+chiave
+adjustment /ɐdʒˈʌstmənt/
+accomodamento
+adjutant /ˈadʒuːtənt/
+aiutante
+administer /ɐdmˈɪnɪstə/
+1. amministrare, dirigere
+administer /ɐdmˈɪnɪstə/
+amministrare gli ultimi sacramenti
+administration /ɐdmˌɪnɪstɹˈeɪʃən/
+1. amministrazione
+2. direzione, gestione
+3. governo
+admirable /ˈadməɹəbəl/
+ammirabile
+admiral /ˈadmɜːɹəl/
+ammiraglio
+admiration /ˌadməɹˈeɪʃən/
+ammirazione
+admire /ɐdmˈaɪə/
+ammirare
+admission /ɐdmˈɪʃən/
+1. accoglienza, accoglimento
+2. confessione
+admit /ɐdmˈɪt/
+1. confessare
+2. permettere
+admixture /ɐdmˈɪkstʃə/
+mistura
+admonition /ˌadmənˈɪʃən/
+ammonimento, esortazione
+ado /ɐdˈuː/
+rumore
+adopt /ɐdˈɒpt/
+adottare
+adopted /ɐdˈɒptɪd/
+adottivo
+adore /ɐdˈɔː/
+adorare, venerare
+adorn /ɐdˈɔːn/
+decorare
+adroit /ɐdɹˈɔɪt/
+abile, destro, lesto, sveglio
+adulterer /ɐdˈʌltəɹə/
+adultero
+adulterous /ɐdˈʌltəɹəs/
+adultero
+adultery /ɐdˈʌltəɹi/
+adulterio
+advance /ɐdvˈans/
+avvicinarsi
+advancement /ɐdvˈansmənt/
+progresso
+advantage /ɐdvˈantɪdʒ/
+beneficio, guadagno, profitto, vantaggio
+advantageous /ɐdvantˈeɪdʒəs/
+utile
+adventure /ɐdvˈɛntʃə/
+avventura
+adverb /ˈadvɜːb/
+avverbio
+adversary /ˈadvəsəɹi/
+nemico
+adverse /advˈɜːs/
+nocivo
+advert /ˈadvɜːt/
+aspettare, attendere
+advertence /ɐdvˈɜːtəns/
+attenzione
+advertency /ɐdvˈɜːtənsi/
+attenzione
+advertise /ˈadvətˌaɪz/
+annunciare, annunziare, pubblicare
+advertisement /ɐdvˈɜːtɪsmənt/
+annuncio, avviso, inserzione
+advice /ɐdvˈaɪs/
+1. avviso, consiglio
+2. annunzio, comunicato
+advise /ɐdvˈaɪz/
+consigliare, raccomandare
+advise /ɐdvˈaɪz/
+sconsigliare
+advocate /ˈadvəkˌeɪt/
+avvocato
+aerate /eəɹˈeɪt/
+aerare, arieggiare, ventilare
+aerial /ˈeəɹɪəl/
+antenna
+aeronautics /ˌeəɹəʊnˈɔːtɪks/
+aviazione
+aeroplane /ˈeəɹəplˌeɪn/
+aereo, aeroplano
+affable /ˈafəbəl/
+amichevole, benevole, carino, cortese, gradevole, grazioso
+affair /ɐfˈeə/
+1. affare, faccenda
+2. caso
+affectation /ɐfɪktˈeɪʃən/
+affettazione, posa
+affection /ɐfˈɛkʃən/
+1. amore
+2. affetto, affezione
+affiliation /ɐfˌɪlɪˈeɪʃən/
+parentado, parentela
+affined /ɐfˈaɪnd/
+congiunto, parento
+affinity /ɐfˈɪnɪti/
+parentado, parentela
+affirm /ɐfˈɜːm/
+1. assicurare
+2. affermare
+affirmation /ˌafəmˈeɪʃən/
+promessa
+affix /ɐfˈɪks/
+fissare
+affluence /ˈafluːəns/
+ricchezza
+affluent /ˈafluːənt/
+ricco
+afford /ɐfˈɔːd/
+1. permettere
+2. produrre
+afire /ɐfˈaɪə/
+ardente
+aflame /ɐflˈeɪm/
+ardente
+afraid /ɐfɹˈeɪd/
+1. inquieto
+2. angoscioso, pauroso
+afresh /ɐfɹˈɛʃ/
+1. ancora, di nuovo
+after /ˈaftə/
+1. dietro, dopo
+afternoon /ˌaftənˈuːn/
+pomeriggio
+afterwards /ˈaftəwədz/
+dietro, dopo
+again /ɐɡˈɛn/
+ancora, di nuovo
+against /ɐɡˈɛnst/
+contro
+age /ˈeɪdʒ/
+età
+agency /ˈeɪdʒənsi/
+agenzia
+agent /ˈeɪdʒənt/
+1. agente
+2. arnese, strumento
+aggrandize /ɐɡɹˈandaɪz/
+ingrandire
+aggravating /ˈaɡɹɐvˌeɪtɪŋ/
+indecente, scandaloso
+aggression /ɐɡɹˈɛʃən/
+assalto, attacco
+aggressive /ɐɡɹˈɛsɪv/
+aggressivo
+aggressor /ɐɡɹˈɛsə/
+aggressore, assalitore
+agile /ˈadʒaɪl/
+agile, snello
+agitation /ˌadʒɪtˈeɪʃən/
+agitazione
+aglow /ɐɡlˈəʊ/
+ardente
+agog /ɐɡˈɒɡ/
+curioso
+agonize /ˈaɡənˌaɪz/
+torturare
+agonizing /ˈaɡənˌaɪzɪŋ/
+orrendo, orribile
+agony /ˈaɡəni/
+1. agonia
+2. angoscia
+agrarian /aɡɹˈeəɹiən/
+agricoltore
+agree /ɐɡɹˈiː/
+1. convenire, pattuire
+2. concordare, esserer d'accordo
+agreeable /ɐɡɹˈiːəbəl/
+gradevole, piacevole
+agreeably /ɐɡɹˈiːəbli/
+piacevolmente
+agreement /ɐɡɹˈiːmənt/
+1. accordo
+2. accomodamento, patto
+agriculture /ˈaɡɹɪkˌʌltʃə/
+agricoltura
+ague /ˈeɪɡjuː/
+febbre
+ahead /ɐhˈɛd/
+1. davanti
+2. avanti
+aid /ˈeɪd/
+1. assistente
+2. aiutare, assistere
+3. aiuto, assistenza
+aide‐de‐camp /ˈeɪd də kˈamp/
+aiutante
+ailment /ˈeɪlmənt/
+malattia
+aim /ˈeɪm/
+proposito, scopo
+air /ˈeə/
+aria
+airplane /ˈeəpleɪn/
+aereo, aeroplano
+airport /ˈeəpɔːt/
+aeroporto
+airy‐fairy /ˈeəɹi fˈeəɹi/
+cattivo
+air /ˈeə/
+aerare, arieggiare, ventilare
+akin /ɐkˈɪn/
+congiunto, parento
+alacrity /ɐlˈakɹɪti/
+entusiasmo
+alarm /ɐlˈɑːm/
+1. allarme
+2. sveglia
+alarmclock /ɐlˈɑːmklɒk/
+sveglia
+album /ˈalbəm/
+album
+alcohol /ˈalkəhˌɒl/
+alcool
+alcoholic /ˌalkəhˈɒlɪk/
+alcoolico
+alcove /ˈalkəʊv/
+alcova
+alder /ˈɔːldə/
+ontano
+ale /ˈeɪl/
+birra
+alien /ˈeɪliən/
+1. orrendo, orribile
+2. straniera
+alike /ɐlˈaɪk/
+simile
+all‐knowing /ˈɔːl nˈəʊɪŋ/
+onnisciente
+all‐powerful /ˈɔːl pˈaʊəfəl/
+onnipotente
+all /ˈɔːl/
+tutto
+alley /ˈalɪ/
+vicolo
+allow /ɐlˈaʊ/
+permettere
+allude /ɐlˈuːd/
+alludere
+all /ˈɔːl/
+dappertutto
+all /ˈɔːl/
+ad un tratto, improvvisamente
+all /ˈɔːl/
+ancora, di nuovo
+all /ˈɔːl/
+di ogni genere, ogni sorta di
+all /ˈɔːl/
+di ogni genere, ogni sorta di
+all /ˈɔːl/
+ogni, ognuno, tutto
+almighty /ɒlmˈaɪti/
+onnipotente
+almond /ˈɒlmənd/
+mandorla
+almost /ˈɔːlməʊst/
+quasi
+alms /ˈɑːmz/
+elemosina
+alone /ɐlˈəʊn/
+solo
+alongside /ɐlˈɒŋsaɪd/
+accanto
+alphabet /ˈalfəbˌɛt/
+1. alfabeto
+2. alfabet
+already /ɔːlɹˈɛdi/
+già
+also /ˈɒlsəʊ/
+anche
+altar /ˈɒltə/
+altare
+alter /ˈɒltə/
+cambiarsi
+alteration /ˌɒltəɹˈeɪʃən/
+cambiamento
+alternative /ɔːltˈɜːnətˌɪv/
+alternativa
+although /ɒlðˈəʊ/
+benche, sebbene
+altitude /ˈaltɪtjˌuːd/
+altitudine
+altogether /ˌɔːltəɡˈɛðə/
+tutto
+alum /ˈaləm/
+allume
+always /ˈɔːlweɪz/
+sempre
+amateur /ˈamətə/
+dilettante
+amaze /ɐmˈeɪz/
+sbalordire
+ambassador /ɐmbˈasədə/
+ambasciatore
+amber /ˈambə/
+ambra gialla
+ambiguous /ambˈɪɡjuːəs/
+1. ambiguo, equivoco
+ambition /ambˈɪʃən/
+ambizione
+ambulance /ˈambjʊləns/
+ambulanza
+amnesty /ˈamnəsti/
+amnistia
+amortize /ɐmˈɔːtaɪz/
+ammortizzare
+amount /ɐmˈaʊnt/
+1. numero
+2. importo, somma
+amount /ɐmˈaʊnt/
+ammontare a
+amputate /ˈampjuːtˌeɪt/
+amputare
+amuse /ɐmjˈuːs/
+divertire
+amusement /ɐmjˈuːsmənt/
+divertimento
+amusing /ɐmjˈuːsɪŋ/
+divertente
+anaemia /ɐnˈiːmiə/
+anemia
+analyse /ˈanɐlˌaɪz/
+analizzare
+analyst /ˈanɐlˌɪst/
+analizzatore
+analytical /ˌanɐlˈɪtɪkəl/
+analizzatore
+anathema /ɐnˈaθəmə/
+1. anatema
+2. scomunica
+anchor /ˈankə/
+ancora
+anchovy /ˈantʃəʊvi/
+acciuga, alice
+ancient /ˈeɪnʃənt/
+antico
+and /ˈand/
+eccetera
+anemone /ɐnˈɛməni/
+anemone
+anew /ɐnjˈuː/
+ancora, di nuovo
+angel /ˈeɪndʒəl/
+angelo
+angle /ˈaŋɡəl/
+angolo
+angry /ˈaŋɡɹi/
+irato
+anguish /ˈaŋɡwɪʃ/
+angoscia
+animal /ˈanɪməl/
+1. animale
+2. bestia
+animate /ˈanɪmˌeɪt/
+animare
+ankle /ˈaŋkəl/
+caviglia
+annexation /ˌanɪksˈeɪʃən/
+annessione
+anniversary /ˌanɪvˈɜːsəɹi/
+compleanno
+annotation /ˌanətˈeɪʃən/
+annotazione, nota
+announce /ɐnˈaʊns/
+annunciare, annunziare, pubblicare
+announcement /ɐnˈaʊnsmənt/
+annunzio, comunicato
+annual /ˈanjuːəl/
+annuale
+annul /ɐnˈʌl/
+annullare
+another /ɐnˈʌðə/
+altro
+answer /ˈansə/
+1. replicare, rispondere
+2. rispondere a
+3. risposta
+ant /ˈant/
+formica
+antenna /antˈɛnə/
+antenna
+anthology /anθˈɒlədʒi/
+antologia
+anthracite /ˈanθɹɐsˌaɪt/
+antracite
+antibiotic /ˌantɪbaɪˈɒtɪk/
+antibiotico
+anticipate /antˈɪsɪpˌeɪt/
+anticipare
+antifreeze /ˈantɪfɹˌiːz/
+anticongelante
+antique /antˈiːk/
+antico
+antiseptic /ˌantɪsˈɛptɪk/
+antisettico
+anvil /ˈanvəl/
+incudine
+anxiety /aŋzˈaɪəti/
+ansia, ansietà
+anywhere /ˈɛnɪwˌeə/
+in qualche luogo
+apart /ɐpˈɑːt/
+separato
+apartment /ɐpˈɑːtmənt/
+appartamento
+apart /ɐpˈɑːt/
+eccetto, salvo
+apathy /ˈapəθi/
+apatia
+ape /ˈeɪp/
+scimmia
+apiarist /ˈeɪpiəɹˌɪst/
+apicoltore, apicultore
+apologize /ɐpˈɒlədʒˌaɪz/
+scusarsi
+apology /ɐpˈɒlədʒi/
+scusa
+apoplectic /ˌapəplˈɛktɪk/
+apoplessia
+apostle /ɐpˈɒsəl/
+apostolo
+apparatus /ˌapəɹˈeɪtəs/
+apparecchio
+apparently /ɐpˈaɹəntli/
+evidentemente
+appeal /ɐpˈiːl/
+domanda, preghiera
+appear /ɐpˈiə/
+1. apparire
+2. parere
+appearance /ɐpˈiəɹəns/
+1. apparenza, aria, aspetto
+appear /ɐpˈiə/
+parere
+appease /ɐpˈiːz/
+calmare, placare
+appellation /ɐpɪlˈeɪʃən/
+nome
+appetite /ˈapɪtˌaɪt/
+appetito
+applaud /ɐplˈɔːd/
+1. acclamare
+2. applaudire, battere le mani
+apple‐tree /ˈapəl tɹˈiː/
+melo
+apple /ˈapəl/
+mela
+applicant /ˈaplɪkənt/
+petente, postulante, supplicante
+apply /ɐplˈaɪ/
+applicare
+appoint /ɐpˈɔɪnt/
+nominare
+appointment /ɐpˈɔɪntmənt/
+1. nomina
+2. appuntamento
+appointment /ɐpˈɔɪntmənt/
+nomina
+appraise /ɐpɹˈeɪz/
+apprezzare, stimare, valutare
+appreciate /ɐpɹˈiːʃɪˌeɪt/
+apprezzare
+apprehension /ˌapɹɪhˈɛnʃən/
+arresto
+approach /ɐpɹˈəʊtʃ/
+accesso
+appropriate /ɐpɹˈəʊpɹɪət/
+conveniente
+approval /ɐpɹˈuːvəl/
+1. applausi
+2. approvazione
+approve /ɐpɹˈuːv/
+approvare
+approximately /ɐpɹˈɒksɪmətli/
+circa, verso
+apricot /ˈeɪpɹɪkˌɒt/
+albicocca
+aptitude /ˈaptɪtjˌuːd/
+ingegno, talento
+arbiter /ˈɑːbɪtə/
+arbitro
+arbitrary /ˈɑːbɪtɹəɹi/
+arbitrario
+arbitrator /ˈɑːbɪtɹˌeɪtə/
+arbitro
+arbor /ˈɑːbə/
+albero
+arc /ˈɑːk/
+arco
+archbishop /ˌɑːtʃbˈɪʃəp/
+arcivescovo
+archduke /ˌɑːtʃdjˈuːk/
+arciduca
+architect /ˈɑːkɪtˌɛkt/
+architetto
+archivist /ˈɑːkaɪvˌɪst/
+archivista
+ardent /ˈɑːdənt/
+ardente
+are /ˈɑː/
+gruppo
+arena /ɐɹˈiːnə/
+arena
+argument /ˈɑːɡjuːmənt/
+argomento
+aria /ˈeəɹiə/
+aria
+arise /ɐɹˈaɪz/
+1. salire
+2. nascere
+aristocratic /ˌaɹɪstəkɹˈatɪk/
+aristocratico
+arm /ˈɑːm/
+1. armare
+2. bracchio
+armchair /ˈɑːmtʃeə/
+poltrona
+armoury /ˈɑːmɜːɹi/
+arsenale
+army /ˈɑːmi/
+esercito
+army /ˈɑːmi/
+cappellano militare
+aroma /ɐɹˈəʊmə/
+aroma
+around /ɐɹˈaʊnd/
+intorno a
+arrange /ɐɹˈeɪndʒ/
+predisporre, sistemare
+arrangement /ɐɹˈeɪndʒmənt/
+accomodamento
+arrest /ɐɹˈɛst/
+1. arrestare
+2. arresto
+arrested /ɐɹˈɛstɪd/
+arrestato, detenuto, prigioniero
+arrival /ɐɹˈaɪvəl/
+arrivo, venuta
+arrive /ɐɹˈaɪv/
+arrivare
+arsenal /ˈɑːsənəl/
+arsenale
+art /ˈɑːt/
+arte
+artery /ˈɑːtəɹi/
+arteria
+artichoke /ˈɑːtɪtʃˌəʊk/
+carciofo
+article /ˈɑːtɪkəl/
+1. merce, prodotto
+2. articolo
+3. cosa, ogetto
+article /ˈɑːtɪkəl/
+abito
+artillery /ɑːtˈɪləɹi/
+artiglieria
+as /ˈaz/
+1. come
+2. così
+3. considerato che, visto che
+asbestos /asbˈɛstəs/
+amianto
+ascend /ɐsˈɛnd/
+salire
+ascertain /ˌasətˈeɪn/
+constatare
+ash /ˈaʃ/
+1. cenere
+2. frassino
+ashtray /ˈaʃtɹeɪ/
+portacenere
+ask /ˈask/
+1. domandare
+2. chiedere
+ask /ˈask/
+chiedere
+asparagus /ɐspˈaɹəɡəs/
+asparago
+aspect /ˈaspɛkt/
+apparenza, aria, aspetto
+asphalt /ˈasfɒlt/
+asfalto
+ass /ˈas/
+asino, ciuco
+assailant /ɐsˈeɪlənt/
+aggressore, assalitore
+assault /ɐsˈɒlt/
+1. attaccare
+2. aggredire, assalire
+3. attentato
+assemblage /ɐsˈɛmblɪdʒ/
+convegno
+assembly /ɐsˈɛmblɪ/
+accumulazione
+assent /ɐsˈɛnt/
+affermare
+assert /ɐsˈɜːt/
+asserire, sostenere
+assertion /ɐsˈɜːʃən/
+asserzione
+assets /ˈasɛts/
+attivo
+assigned /ɐsˈaɪnd/
+compito
+assist /ɐsˈɪst/
+1. aiutare, assistere
+assistant /ɐsˈɪstənt/
+assistente
+associate /ɐsˈəʊsɪˌeɪt/
+unirsi
+assure /əʃjˈʊə/
+assicurare
+asthma /ˈasmə/
+asma
+asylum /ɐsˈaɪləm/
+asilo, ricovero
+as /ˈaz/
+di fatto
+as /ˈaz/
+d'altronde, inoltre
+as /ˈaz/
+come se
+as /ˈaz/
+come se
+at /ˈat/
+1. a
+2. su
+atmosphere /ˈatməsfˌiə/
+atmosfera
+atom /ˈatəm/
+atomo
+atomic /ɐtˈɒmɪk/
+energia atomica
+atom /ˈatəm/
+bomba atomica
+atpersand /ˈatpəsˌand/
+chiocciola, chiocciolina
+attach /ɐtˈatʃ/
+1. affigere
+2. fissare
+attack /ɐtˈak/
+1. attaccare
+2. assalto, attacco
+attacker /ɐtˈakə/
+aggressore, assalitore
+attain /ɐtˈeɪn/
+arrivare
+attempt /ɐtˈɛmpt/
+provare
+attend /ɐtˈɛnd/
+1. curare
+2. visitare
+attendance /ɐtˈɛndəns/
+servizio
+attention /ɐtˈɛnʃən/
+attenzione
+attentive /ɐtˈɛntɪv/
+attento
+attitudinize /ˈatɪtjˌuːdɪnˌaɪz/
+posare
+attract /ɐtɹˈakt/
+1. attrarre
+2. attirare
+attraction /ɐtɹˈakʃən/
+forza attrativa
+attractive /ɐtɹˈaktɪv/
+allettante, attraente, seducente
+attune /ɐtjˈuːn/
+adattare, aggiustare
+at /ˈat/
+all'inizio, dapprima, dapprincipio
+at /ˈat/
+a casa, in casa
+at /ˈat/
+alla fine, finalmente
+at /ˈat/
+almeno, per lo meno
+at /ˈat/
+tutt'al più
+at /ˈat/
+1. direttamente
+2. fra poco, immediatamente, subito
+at /ˈat/
+là, laggiú, li
+at /ˈat/
+all'inizio, dapprima, dapprincipio
+at /ˈat/
+in tempo
+at /ˈat/
+allo stesso tempo
+aubergine /ˈəʊbəʒˌiːn/
+melanzana
+audience /ˈɔːdiəns/
+1. udienza
+2. uditorio
+audit /ˈɔːdɪt/
+controllare, verificare
+auditory /ˈɔːdɪtəɹi/
+uditorio
+augment /ɔːɡmˈɛnt/
+ingrandire
+aunt /ˈant/
+zia
+aurora /ɐɹˈɔːɹə/
+alba, aurora
+author /ˈɔːθə/
+1. autore
+authority /ɐθˈɒɹɪti/
+autorità
+autobus /ˌɔːtəʊbˈʌs/
+autobus
+autocrat /ˌɔːtəʊkɹˈat/
+autocrate
+automoton /ˌɔːtəʊmˈɒtən/
+automa
+autumn /ˈɔːtʌm/
+autunno
+avail /ɐvˈeɪl/
+essere utile, giovare, servire, utilizzare
+available /ɐvˈeɪləbəl/
+disponibile
+avaricious /ˌavəɹˈɪʃəs/
+avaro
+average /ˈavɹɪdʒ/
+1. medio
+2. mezzo
+aversion /ɐvˈɜːʃən/
+avversione, ripugnanza
+aviation /ˌeɪvɪˈeɪʃən/
+aviazione
+avoid /ɐvˈɔɪd/
+evitare
+await /ɐwˈeɪt/
+aspettare
+aware /ɐwˈeə/
+cosciente
+awareness /ɐwˈeənəs/
+consapevolezza, coscienza
+away /ɐwˈeɪ/
+lontano
+awful /ˈɔːfəl/
+orrendo, orribile
+axe /ˈaks/
+ascia, scure
+axiom /ˈaksɪəm/
+assioma
+axis /ˈaksɪs/
+assale, asse, perno
+axle /ˈaksəl/
+assale, asse, perno
+a /ˈeɪ/
+a lungo, da molto, per molto tempo
+a /ˈeɪ/
+molto
+babysitter /bˈeɪbɪsˌɪtə/
+bambinaia
+back‐door /bˈak dˈɔː/
+porta di dietro
+back /bˈak/
+dorso
+backbiting /bˈakbɪtɪŋ/
+maldicenza
+background /bˈakɡɹaʊnd/
+fondo, sfondo
+backside /bˈaksaɪd/
+sedere
+backward /bˈakwəd/
+1. a rovescio, supino
+2. indietro
+3. deficiente
+backwards /bˈakwədz/
+1. indietro
+2. a rovescio, all'indietro, supino
+back /bˈak/
+quartiere popolare, rione popolare
+bacon /bˈeɪkən/
+lardo
+bacterium /baktˈiəɹɪəm/
+batterio
+bad /bˈad/
+cattivo
+badger /bˈadʒə/
+tasso
+badly /bˈadli/
+male
+bag /bˈaɡ/
+borsa
+bagasse /bˈaɡas/
+bagassa
+baggage /bˈaɡɪdʒ/
+bagaglio
+bairn /bˈeən/
+bambino, fianciullo
+bait /bˈeɪt/
+esca
+baize /bˈeɪz/
+tessuto di lana
+bake /bˈeɪk/
+cuocere
+baker /bˈeɪkə/
+fornaio
+bakery /bˈeɪkəɹi/
+panetteria
+balance /bˈaləns/
+bilancio
+balcony /bˈalkəni/
+balcone, terrazzo
+bale /bˈeɪl/
+balla
+baleen /bˈaliːn/
+osso di balena
+ball‐bearing /bˈɔːl bˈeəɹɪŋ/
+globo
+ball‐frame /bˈɔːl fɹˈeɪm/
+pallottoliere
+ball /bˈɔːl/
+1. ballo
+2. globo
+3. palla
+4. sfera
+ballad /bˈaləd/
+ballata
+ballade /bˈaleɪd/
+ballata
+ballast /bˈaləst/
+zavorra
+ballet /bˈaleɪ/
+balletto
+ballet /bˈaleɪ/
+ballerino
+balloon /bəlˈuːn/
+pallone
+ballpoint /bˈɔːlpɔɪnt/
+penna a sfera
+balustrade /bˈaləstɹˌeɪd/
+parapetto
+bamboo /bambˈuː/
+bambù
+ban /bˈan/
+1. anatema
+2. scomunica
+banana /bɐnˈɑːnə/
+banana
+bandit /bˈandɪt/
+bandito, brigante
+banisters /bˈanɪstəz/
+parapetto
+bank‐note /bˈaŋk nˈəʊt/
+banconota
+bank /bˈaŋk/
+banca
+banking /bˈaŋkɪŋ/
+conto bancario
+bankrupt /bˈaŋkɹʌpt/
+bancarotta, fallimento
+bankruptcy /bˈaŋkɹʌptsi/
+fallimento
+bank /bˈaŋk/
+conto bancario
+bank /bˈaŋk/
+banchiere
+bank /bˈaŋk/
+banchiere
+banner /bˈanə/
+bandiera
+baptism /bˈaptɪzəm/
+battesimo
+baptismal /bˈaptɪsməl/
+fonte battesimale
+baptize /bˈaptaɪz/
+battezzare
+bar /bˈɑː/
+1. sbarrare
+2. eccetto, salvo
+3. impedire
+4. bar
+barbarian /bɑːbˈeəɹiən/
+barbaro
+barbaric /bɑːbˈaɹɪk/
+barbaro
+barber /bˈɑːbə/
+1. barbiere
+2. parrucchiere
+bare /bˈeə/
+nudo
+barely /bˈeəli/
+appena
+bargain /bˈɑːɡɪn/
+mercanteggiare
+barge /bˈɑːdʒ/
+chiatta
+bark /bˈɑːk/
+corteccia
+barley /bˈɑːli/
+orzo
+barn /bˈɑːn/
+1. baracca
+2. granaio
+barometer /bəɹˈɒmɪtə/
+barometro
+baron /bˈaɹən/
+barone
+barrack /bˈaɹək/
+baracca
+barracks /bˈaɹəks/
+1. caserma
+barrel /bˈaɹəl/
+1. barile
+2. condotto
+barren /bˈaɹən/
+sterile
+barrier /bˈaɹiə/
+barriera
+barring /bˈɑːɹɪŋ/
+eccetto, salvo
+barrister‐at‐law /bˈaɹɪstəɹ at lˈɔː/
+avvocato
+barrister /bˈaɹɪstə/
+avvocato
+base /bˈeɪs/
+basare, fondare
+basin /bˈeɪsən/
+bacino
+basket /bˈaskɪt/
+cesto
+bass /bˈeɪs/
+pesce persico
+bast /bˈast/
+corteccia, scorza
+bastard /bˈastəd/
+bastardo
+bastion /bˈastiən/
+baluardo, bastione
+bath /bˈaθ/
+1. vasca da bagno
+2. bagno
+bathe /bˈeɪð/
+1. bagnare
+2. bagnarsi
+bathing‐suit /bˈeɪðɪŋ sˈuːt/
+costume da bagno
+bathing /bˈeɪðɪŋ/
+costume da bagno
+bathroom /bˈaθɹuːm/
+1. stabilimento balneare
+2. sala da bagno, stanza da bagno
+battalion /bɐtˈaliən/
+battaglione
+battery /bˈatəɹi/
+1. accumulatore
+2. batteria
+battle /bˈatəl/
+battaglia
+bay /bˈeɪ/
+baia
+bayonet /bˈeɪənˌɛt/
+baionetta
+bazaar /bɐzˈɑː/
+bazar
+beach /bˈiːtʃ/
+spiaggia
+beacon /bˈiːkən/
+boa, gavitello
+beak /bˈiːk/
+becco
+beam /bˈiːm/
+1. sciopero
+2. trave
+bean /bˈiːn/
+fava
+bear /bˈeə/
+1. produrre
+2. orso
+beard /bˈiəd/
+barba
+beast /bˈiːst/
+animale, bestia
+beat /bˈiːt/
+battere
+beautiful /bjˈuːtifəl/
+bello, carino
+beauty /bjˈuːti/
+bellezza
+because /bɪkˈʌz/
+considerato che, visto che
+become /bɪkˈʌm/
+acclimarsi, ambientarsi
+becoming /bɪkˈʌmɪŋ/
+conveniente
+bed‐clothes /bˈɛd klˈəʊðz/
+biancheria da letto
+bed /bˈɛd/
+letto
+bedding /bˈɛdɪŋ/
+biancheria da letto
+bedridden /bˈɛdɹɪdən/
+costretto a letto
+bedroom /bˈɛdɹuːm/
+camera da letto
+bee‐keeper /bˈiː kˈiːpə/
+apicoltore, apicultore
+bee‐keeping /bˈiː kˈiːpɪŋ/
+apicoltura, apicultura
+bee‐master /bˈiː mˈastə/
+apicoltore, apicultore
+bee /bˈiː/
+ape
+beech /bˈiːtʃ/
+faggio
+beef /bˈiːf/
+manzo
+beefsteak /bˈiːfsteɪk/
+bistecca
+beehive /bˈiːhaɪv/
+alveare, arnia
+beer /bˈiə/
+birra
+beet /bˈiːt/
+barbabietola
+befit /bɪfˈɪt/
+convenire
+beg /bˈɛɡ/
+1. mendicare
+2. chiedere
+beggar /bˈɛɡə/
+mendicante
+begin /bɪɡˈɪn/
+cominciare
+beginning /bɪɡˈɪnɪŋ/
+inizio, principio
+behave /bɪhˈeɪv/
+comportarsi, condursi
+behavior /bɪhˈeɪvjə/
+condotta
+behaviour /bɪhˈeɪvjə/
+condotta
+behind /bɪhˈaɪnd/
+1. di dietro, in fondo
+2. dietro, dopo
+behind /bɪhˈaɪnd/
+di nascosto
+believe /bɪlˈiːv/
+credere
+bell /bˈɛl/
+campana
+belly /bˈɛlɪ/
+ventre
+belong /bɪlˈɒŋ/
+appartenere
+below /bɪlˈəʊ/
+1. sotto
+2. dabbasso, giú
+belt /bˈɛlt/
+cintura
+bench /bˈɛntʃ/
+panka
+bend /bˈɛnd/
+1. curvarsi
+2. curva
+beneath /bɪnˈiːθ/
+sotto
+benefit /bˈɛnɪfˌɪt/
+beneficio, guadagno, profitto, vantaggio
+bent /bˈɛnt/
+curvo
+beret /bˈɛɹeɪ/
+beretta
+berry /bˈɛɹi/
+bacca
+beside /bɪsˈaɪd/
+1. accanto
+2. a, su
+besides /bɪsˈaɪdz/
+1. d'altronde, inoltre
+besiege /bɪsˈiːdʒ/
+assediare
+best /bˈɛst/
+migliore
+bet /bˈɛt/
+scommettere
+better /bˈɛtə/
+migliore
+beverage /bˈɛvəɹɪdʒ/
+bevanda, bibita
+bevy /bˈɛvi/
+gruppo
+beyond /bɪjˈɒnd/
+1. dopo, in seguito, poi
+2. attraverso
+be /bˈiː/
+potere
+be /bˈiː/
+conoscere
+be /bˈiː/
+aver timore, temere
+be /bˈiː/
+vivere
+be /bˈiː/
+vergognarsi
+be /bˈiː/
+dormire
+be /bˈiː/
+combattere, duellare, picchiarsi
+be /bˈiː/
+osare
+be /bˈiː/
+nascere
+be /bˈiː/
+chiamarsi
+be /bˈiː/
+dipendere da
+be /bˈiː/
+resti dietro
+be /bˈiː/
+convenire
+be /bˈiː/
+trovarsi
+be /bˈiː/
+avere fame
+be /bˈiː/
+solere
+be /bˈiː/
+resti dietro
+be /bˈiː/
+trovarsi
+be /bˈiː/
+1. maritarsi
+2. ammogliarsi
+3. sposare
+be /bˈiː/
+far male
+be /bˈiː/
+tacere
+be /bˈiː/
+rassomiglare
+be /bˈiː/
+rincrescere
+be /bˈiː/
+prosperare
+be /bˈiː/
+ammalarsi
+be /bˈiː/
+volere
+be /bˈiː/
+valere
+be /bˈiː/
+meritare
+bicuit /bˈɪkjuːˌɪt/
+biscotto
+bicycle /bˈaɪsɪkəl/
+bicicletta
+bid /bˈɪd/
+1. offrire
+2. chiedere
+big /bˈɪɡ/
+grande
+bike /bˈaɪk/
+bicicletta
+bile /bˈaɪl/
+bile
+bill /bˈɪl/
+1. becco
+2. biglietto
+3. fattura
+4. conto
+billiards /bˈɪlɪədz/
+biliardo
+bill /bˈɪl/
+cambiale
+bind /bˈaɪnd/
+1. rilegare
+2. legare
+binding /bˈaɪndɪŋ/
+legatura
+birch /bˈɜːtʃ/
+betulla
+bird /bˈɜːd/
+uccello
+birth /bˈɜːθ/
+nascita
+birthday /bˈɜːθdeɪ/
+compleanno
+biscuit /bˈɪskɪt/
+biscotto
+bishop /bˈɪʃəp/
+vescovo
+bit /bˈɪt/
+pezzo
+bite /bˈaɪt/
+mordere
+bitter /bˈɪtə/
+amaro
+black /blˈak/
+nero
+blackbird /blˈakbɜːd/
+merlo
+bladder /blˈadə/
+vescica
+blame /blˈeɪm/
+riprendere
+blameworthy /blˈeɪmwɜːði/
+biasimevole
+blank /blˈaŋk/
+bianco
+blanket /blˈaŋkɪt/
+coperta
+blaspheme /blasfˈiːm/
+bestemmiare
+bleak /blˈiːk/
+1. sgradevole, spiacevole
+2. afflitto, triste
+3. buio, scuro
+4. freddo
+bleat /blˈiːt/
+belare
+bleed /blˈiːd/
+sanguinare
+bleeding /blˈiːdɪŋ/
+salasso
+blind /blˈaɪnd/
+cieco
+blindness /blˈaɪndnəs/
+cecita
+blister /blˈɪstə/
+bolla
+block /blˈɒk/
+1. bloccare
+2. blocco
+blockade /blɒkˈeɪd/
+bloccare
+blond /blˈɒnd/
+biondo
+blood‐letting /blˈʌd lˈɛtɪŋ/
+salasso
+blood‐relationship /blˈʌd ɹɪlˈeɪʃənʃˌɪp/
+parentado, parentela
+blood /blˈʌd/
+sangue
+bloom /blˈuːm/
+fiore
+blotter /blˈɒtə/
+carta asciugante, carta assorbente
+blotting /blˈɒtɪŋ/
+carta asciugante, carta assorbente
+blouse /blˈaʊz/
+blusa
+blow /blˈəʊ/
+1. colpo
+2. soffiare
+blue /blˈuː/
+azzurro, blu
+blueberry /blˈuːbɛɹi/
+bacca di mirtillo
+blunt /blˈʌnt/
+1. smussato, spuntato
+blushing /blˈʌʃɪŋ/
+rosso
+boarding /bˈɔːdɪŋ/
+pensione
+boarding /bˈɔːdɪŋ/
+pensione
+boat /bˈəʊt/
+barca
+body /bˈɒdi/
+corpo
+boil /bˈɔɪl/
+1. bollire
+2. far bollire
+boiler /bˈɔɪlə/
+calderotto
+bold /bˈəʊld/
+grosso, spesso
+bomb /bˈɒm/
+bomba
+bon‐bon /bˈɒn bˈɒn/
+confetto
+bonbon /bˈɒnbɒn/
+confetto
+bond /bˈɒnd/
+legame
+bone /bˈəʊn/
+osso
+bonnet /bˈɒnɪt/
+cappotta
+book‐keeper /bˈʊk kˈiːpə/
+contabile
+book‐keeping /bˈʊk kˈiːpɪŋ/
+contabilità
+book /bˈʊk/
+1. libro
+2. ordinare
+bookcase /bˈʊkkeɪs/
+libreria
+bookseller /bˈʊksɛlə/
+librario
+bookshop /bˈʊkʃɒp/
+libreria
+bookstore /bˈʊkstɔː/
+libreria
+border /bˈɔːdə/
+orlo
+bore /bˈɔː/
+1. succiello
+2. annoiare
+bosom /bˈʊzəm/
+petto
+boss /bˈɒs/
+1. capo
+2. maestro, padrone, principale
+bother /bˈɒðə/
+disturbare
+bottle /bˈɒtəl/
+bottiglia
+bottom /bˈɒtəm/
+fondo
+bough /bˈaʊ/
+ramo
+boundary /bˈaʊndəɹi/
+confine, frontiera
+boutique /buːtˈiːk/
+negozio
+bow /bˈəʊ/
+1. arco
+2. prua
+bowl /bˈəʊl/
+bacino
+box /bˈɒks/
+1. fare il pugilato
+2. scatola
+3. cassa, tinozza, vaso
+boy /bˈɔɪ/
+1. ragazzo
+2. servire
+bra /bɹˈɑː/
+reggiseno
+bracelet /bɹˈeɪslət/
+braccialetto
+brain /bɹˈeɪn/
+cervello
+brake /bɹˈeɪk/
+1. frenare
+2. freno
+branch /bɹˈantʃ/
+ramo
+brandy /bɹˈandi/
+cognac
+brass /bɹˈas/
+ottone
+bread /bɹˈɛd/
+pane
+bread /bɹˈɛd/
+fetta di pane
+break /bɹˈeɪk/
+1. rompere, spezzare
+2. rompersi
+breakfast /bɹˈɛkfəst/
+colazione, prima colazione
+break /bɹˈeɪk/
+demolire
+break /bɹˈeɪk/
+perdere l'abitunide di
+bream /bɹˈiːm/
+scardola
+breast /bɹˈɛst/
+petto
+breath /bɹˈɛθ/
+alito
+breathe /bɹˈiːð/
+respirare
+breed /bɹˈiːd/
+razza
+breeze /bɹˈiːz/
+brezza
+brew /bɹˈuː/
+far la birra
+brick /bɹˈɪk/
+mattone
+bride /bɹˈaɪd/
+1. fidanzata
+2. novella sposa, sposa
+bridegroom /bɹˈaɪdɡɹuːm/
+sposo
+bridge /bɹˈɪdʒ/
+1. ponte, ponte di comando
+brief /bɹˈiːf/
+corto
+bright /bɹˈaɪt/
+brillante
+brilliant /bɹˈɪlɪənt/
+brillante
+brim /bɹˈɪm/
+orlo
+bring /bɹˈɪŋ/
+portare
+brinjal /bɹˈɪndʒəl/
+melanzana
+brink /bɹˈɪŋk/
+orlo
+broad /bɹˈɔːd/
+largo
+broadcast /bɹˈɔːdkast/
+trasmettere
+bronze /bɹˈɒnz/
+bronzo
+broom /bɹˈuːm/
+granata, scopa
+brother‐in‐law /bɹˈʌðəɹ ɪn lˈɔː/
+cognato
+brother /bɹˈʌðə/
+fratello
+brow /bɹˈaʊ/
+sopracciglio
+brown /bɹˈaʊn/
+bruno, marrone
+brush /bɹˈʌʃ/
+1. spazzolare
+2. spazzola
+brutal /bɹˈuːtəl/
+brusco, rude
+bubble /bˈʌbəl/
+vescica
+bucket /bˈʌkɪt/
+secchia, secchio
+budget /bˈʌdʒɪt/
+bilancio
+buffalo /bˈʌfəlˌəʊ/
+bufalo
+buffet /bˈʌfɪt/
+bar
+bug /bˈʌɡ/
+1. insetto
+2. origliare
+build /bˈɪld/
+costruire
+building /bˈɪldɪŋ/
+edificio
+bulb /bˈʌlb/
+ampolla, lampadina
+bull /bˈʊl/
+toro
+bullet /bˈʊlɪt/
+palla
+burden /bˈɜːdən/
+1. caricare
+2. carico
+bureau /bjˈʊəɹəʊ/
+ufficio
+burn /bˈɜːn/
+1. ardere
+2. accendere, bruciare
+burn /bˈɜːn/
+bruciare
+burst /bˈɜːst/
+crepa, fessura, screpolatura
+bury /bˈɛɹi/
+seppellire
+bus /bˈʌs/
+autobus
+bush /bˈʊʃ/
+arbusto
+business /bˈɪznəs/
+1. affare, faccenda
+2. commercio
+businessman /bˈɪznəsmən/
+commerciante
+business /bˈɪznəs/
+affare, faccenda
+busk /bˈʌsk/
+osso di balena
+busy /bˈɪzi/
+occupato
+but /bˈʌt/
+eccetto, salvo
+butcher /bˈʊtʃə/
+macellaio
+butcher's /bˈʊtʃəz/
+macelleria
+butter /bˈʌtə/
+burro
+butterfly /bˈʌtəflˌaɪ/
+farfalla
+button /bˈʌtən/
+pulsante
+buy /bˈaɪ/
+1. comperare, comprare
+2. acquisto, compra
+buyer /bˈaɪə/
+cliente, compratore
+by /bˈaɪ/
+1. di
+2. mediante, per mezzo di
+bye /bˈaɪ/
+1. addio
+2. arrivederci
+byname /bˈaɪneɪm/
+soprannome
+by /bˈaɪ/
+a caso
+by /bˈaɪ/
+a caso
+by /bˈaɪ/
+a memoria
+by /bˈaɪ/
+1. per via di matrimonio
+2. imparentato
+by /bˈaɪ/
+mediante, per mezzo di
+by /bˈaɪ/
+già
+by /bˈaɪ/
+in nessun modo
+by /bˈaɪ/
+a proposito
+cabbage /kˈabɪdʒ/
+cavolo
+cabin /kˈabɪn/
+1. capanna
+2. cabina
+cabinet /kˈabɪnət/
+armadio
+cable /kˈeɪbəl/
+cavo
+cactus /kˈaktəs/
+cacto
+cake /kˈeɪk/
+torta
+calabash /kˈalɐbˌaʃ/
+zucca
+calculate /kˈalkjʊlˌeɪt/
+calcolare
+calculation /kˌalkjʊlˈeɪʃən/
+conto
+calf /kˈɑːf/
+1. vitello
+2. polpaccio
+call /kˈɔːl/
+chiamare
+call /kˈɔːl/
+visitare
+calm /kˈɑːm/
+1. calmo, tranquillo
+2. calmare, placare
+cancel /kˈansəl/
+1. annullare un ordine
+2. annullare
+candle /kˈandəl/
+candela
+capable /kˈeɪpəbəl/
+abile, adatto, capace, idoneo
+capitulate /kɐpˈɪtʃʊlˌeɪt/
+arrendersi
+captain /kˈaptɪn/
+capitano
+capture /kˈaptʃə/
+prendere
+car /kˈɑː/
+auto, automobile
+card /kˈɑːd/
+carta
+care /kˈeə/
+cura
+careful /kˈeəfəl/
+cauto
+careless /kˈeələs/
+negligente, noncurante, sbadato
+caress /kəɹˈɛs/
+accarezzare
+care /kˈeə/
+guarire
+carnation /kɑːnˈeɪʃən/
+garofano
+carpet /kˈɑːpɪt/
+tappeto
+carriage /kˈaɹɪdʒ/
+vagone, vettura
+carrot /kˈaɹət/
+carota
+carry /kˈaɹi/
+portare
+case /kˈeɪs/
+1. affare, faccenda
+2. caso
+cash /kˈaʃ/
+contante
+casserole /kˈasəɹˌəʊl/
+casseruola
+cast /kˈast/
+calco
+castle /kˈasəl/
+1. castello
+2. torre
+cat /kˈat/
+gatto
+catalogue /kˈatɐlˌɒɡ/
+catalogo
+catch /kˈatʃ/
+1. prendere
+2. colpire
+catching /kˈatʃɪŋ/
+1. infettivo
+2. contagioso
+caterpillar /kˈatəpˌɪlə/
+bruco
+cathedral /kɐθˈiːdɹəl/
+catedrale, duomo
+cauldron /kˈɔːldɹən/
+calderotto
+cauliflower /kˈɒlɪflˌaʊə/
+cavolfiore
+cause /kˈɔːz/
+1. causare
+2. causa
+caution /kˈɔːʃən/
+avvertire
+cautious /kˈɔːʃəs/
+cauto
+cease /sˈiːs/
+cessare
+cede /sˈiːd/
+cedere
+ceiling /sˈiːlɪŋ/
+soffitto
+celebrate /sˈɛləbɹˌeɪt/
+celebrare
+celebration /sˌɛləbɹˈeɪʃən/
+festa
+celery /sˈɛləɹi/
+sedano
+cello /tʃˈɛləʊ/
+violoncello
+cemetery /sˈɛmɪtəɹi/
+camposanto, cimitero
+censor /sˈɛnsə/
+censura
+censurable /sˈɛnʃəɹəbəl/
+biasimevole
+censure /sˈɛnʃə/
+1. criticare
+2. disapprovazione
+cent /sˈɛnt/
+centesimo
+centennial /sɛntˈɛnɪəl/
+secolo
+centimetre /sˈɛntɪmˌiːtə/
+centimetro
+centipede /sˈɛntɪpˌiːd/
+millepiedi
+central /sˈɛntɹəl/
+centrale
+centre /sˈɛntə/
+centro
+century /sˈɛntʃəɹi/
+secolo
+certain /sˈɜːtən/
+certo
+certainly /sˈɜːtənli/
+certamente
+certificate /sətˈɪfɪkət/
+1. atto, azione, documento
+2. certificato attestato
+chain /tʃˈeɪn/
+catena
+chair /tʃˈeə/
+sedia
+chalk /tʃˈɔːk/
+creta
+challenge /tʃˈalɪndʒ/
+contestare, disputare
+chamber /tʃˈeɪmbə/
+camera
+champagne /ʃampˈeɪn/
+champagne
+champion /tʃˈampiən/
+campione
+chance /tʃˈans/
+caso
+change /tʃˈeɪndʒ/
+1. variazone
+2. cambiare
+3. cambiarsi
+4. spicciole
+5. cambiamento
+channel /tʃˈanəl/
+condotto
+chaplain /tʃˈaplɪn/
+cappellano militare
+character /kˈaɹɪktə/
+1. carattere, indole, natura
+2. segno
+characteristic /kˌaɹɪktəɹˈɪstɪk/
+caratteristico
+charge /tʃˈɑːdʒ/
+1. spese
+2. carico
+charitable /tʃˈaɹɪtəbəl/
+misericordioso
+charity /tʃˈaɹɪti/
+elemosina
+charm /tʃˈɑːm/
+fascino, incanto
+charming /tʃˈɑːmɪŋ/
+affascinante, amabile, grazioso
+chase /tʃˈeɪs/
+1. perseguire, perseguitare
+2. cacciare
+chasm /kˈazəm/
+abisso, burrone
+chat /tʃˈat/
+1. pettegolezzo
+2. chiacchierare
+chatter /tʃˈatə/
+chiacchierare
+chatterbox /tʃˈatəbˌɒks/
+chiacchierone
+chauffeur /ʃəʊfˈɜː/
+autista
+cheap /tʃˈiːp/
+a buon mercato
+cheat /tʃˈiːt/
+1. imbroglione
+2. ingannare, truffare
+check /tʃˈɛk/
+1. controllare, verificare
+2. assegno, assegno bancario
+checker /tʃˈɛkə/
+controlore
+check /tʃˈɛk/
+controllare, verificare
+cheek /tʃˈiːk/
+guancia
+cheerful /tʃˈiəfəl/
+allegro
+cheers /tʃˈiəz/
+salute
+cheese /tʃˈiːz/
+formaggio
+chef /ʃˈɛf/
+capocuoco
+chemist /kˈɛmɪst/
+1. farmacista
+2. chimico
+chemistry /kˈɛmɪstɹi/
+chimica
+chemist's /kˈɛmɪsts/
+farmacia
+cheque /tʃˈɛk/
+assegno, assegno bancario
+cherry‐tree /tʃˈɛɹi tɹˈiː/
+ciliegio
+cherry /tʃˈɛɹi/
+ciliegia
+chest /tʃˈɛst/
+1. petto
+2. torace
+chestnut‐tree /tʃˈɛstnʌt tɹˈiː/
+castagno
+chestnut /tʃˈɛstnʌt/
+castagna
+chew /tʃˈuː/
+masticare
+chicken /tʃˈɪkɪn/
+1. gallina
+2. pollo
+chief /tʃˈiːf/
+capo
+chiefly /tʃˈiːfli/
+1. principalmente, soprattutto
+chief /tʃˈiːf/
+commissario
+child /tʃˈaɪld/
+bambino, fianciullo
+chilly /tʃˈɪli/
+freddo
+chimney /tʃˈɪmni/
+fumaiuolo
+chin /tʃˈɪn/
+mento
+chisel /tʃˈɪzəl/
+scalpello
+chive /tʃˈaɪv/
+cipollina
+chlorine /klˈɔːɹiːn/
+cloro
+chocolate /tʃˈɒklət/
+cioccolata
+choice /tʃˈɔɪs/
+scelta
+choke /tʃˈəʊk/
+soffocare
+choose /tʃˈuːz/
+eleggere, scegliere
+chord /kˈɔːd/
+accordo
+christen /kɹˈɪsən/
+battezzare
+christening /kɹˈɪsənɪŋ/
+battesimo
+chuck /tʃˈʌk/
+accarezzare
+church‐building /tʃˈɜːtʃ bˈɪldɪŋ/
+chiesa
+church /tʃˈɜːtʃ/
+chiesa
+cider /sˈaɪdə/
+sidro
+cinder /sˈɪndə/
+cenere
+cinema /sˈɪnəmə/
+1. cinema
+2. cinese
+circle /sˈɜːkəl/
+1. circolo
+2. compagnia
+circus /sˈɜːkəs/
+circo
+citadel /sˈɪtədˌɛl/
+cittadella
+citation /saɪtˈeɪʃən/
+citazione
+cite /sˈaɪt/
+citare
+city /sˈɪti/
+città
+civil /sˈɪvəl/
+civile
+civilian /sɪvˈɪliən/
+civile
+clap /klˈap/
+applaudire, battere le mani
+clarify /klˈaɹɪfˌaɪ/
+spiegare
+claw /klˈɔː/
+artiglio
+clay /klˈeɪ/
+argilla
+clean /klˈiːn/
+1. puro
+2. pulire
+cleanliness /klˈɛnlɪnəs/
+pulizia
+cleanse /klˈɛnz/
+pulire
+clear /klˈiə/
+distinto
+clergyman /klˈɜːdʒɪmən/
+1. ecclesiastico
+2. curato, prete, sacerdate
+clever /klˈɛvə/
+abile, destro, lesto, sveglio
+client /klˈaɪənt/
+1. cliente, compratore
+climate /klˈaɪmət/
+aria, clima
+climb /klˈaɪm/
+salire
+cloakroom /klˈəʊkɹuːm/
+guardaroba
+clock /klˈɒk/
+orologio
+close /klˈəʊs/
+1. chiudere
+2. prossimo
+3. vicino
+closed /klˈəʊzd/
+chiuso
+closet /klˈɒzɪt/
+armadio
+clothe /klˈəʊð/
+vestire
+cloud /klˈaʊd/
+nube, nuvola, nuvolo
+club /klˈʌb/
+compagnia
+clutch /klˈʌtʃ/
+1. afferrare
+2. frizione
+coach /kˈəʊtʃ/
+vagone, vettura
+coal /kˈəʊl/
+carbone
+coast /kˈəʊst/
+costa
+cock /kˈɒk/
+1. cazzo
+2. gallo
+cocoa /kˈəʊkəʊ/
+cacao
+cod /kˈɒd/
+merluzzo
+code /kˈəʊd/
+codice
+codfish /kˈɒdfɪʃ/
+merluzzo
+coffee‐pot /kˈɒfi pˈɒt/
+caffettiera
+coffee /kˈɒfi/
+caffé
+coffin /kˈɒfɪn/
+cassa sa morto
+cognac /kˈɒnjak/
+cognac
+coin /kˈɔɪn/
+moneta
+coition /kˈɔɪʃən/
+coito
+cold /kˈəʊld/
+1. freddo
+2. raffreddore
+colleague /kˈɒliːɡ/
+collegio
+collect /kəlˈɛkt/
+raccogliere
+collection /kəlˈɛkʃən/
+gruppo
+college /kˈɒlɪdʒ/
+collega
+colour /kˈʌlə/
+colore
+comb /kˈəʊm/
+pettinare
+come /kˈʌm/
+1. discendere
+2. venire
+comedy /kˈɒmədi/
+commedia
+come /kˈʌm/
+accadere, arrivare, succedere
+come /kˈʌm/
+incontrare
+come /kˈʌm/
+rivenire
+come /kˈʌm/
+avvicinarsi
+come /kˈʌm/
+avvicinarsi
+come /kˈʌm/
+avvicinarsi
+come /kˈʌm/
+unirsi
+come /kˈʌm/
+fermarsi
+comfort /kˈʌmfət/
+consolare
+comfortable /kˈʌmftəbəl/
+comodo
+comfortably /kˈʌmftəbli/
+piacevolmente
+comic /kˈɒmɪk/
+comico
+comical /kˈɒmɪkəl/
+comico
+command /kəmˈand/
+1. comando
+2. ordine
+commander /kəmˈandə/
+comandante
+commence /kəmˈɛns/
+cominciare
+commencement /kəmˈɛnsmənt/
+inizio, principio
+commend /kəmˈɛnd/
+1. lodare
+2. raccomandare, vantare
+commerce /kˈɒmɜːs/
+commercio
+commercial‐at /kəmˈɜːʃəl at/
+chiocciola, chiocciolina
+committee /kəmˈɪti/
+comitato
+commodity /kəmˈɒdɪti/
+merce, prodotto
+common /kˈɒmən/
+1. comune
+2. volgare
+commonplace /kˈɒmənplˌeɪs/
+banale
+commotion /kəmˈəʊʃən/
+1. agitazione
+2. scandalo
+communicate /kəmjˈuːnɪkˌeɪt/
+1. annunciare, comunicare
+2. infettare
+communication /kəmjˌuːnɪkˈeɪʃən/
+annunzio, comunicato
+communist /kˈɒmjuːnˌɪst/
+comunista
+company /kˈʌmpəni/
+compagnia
+compare /kəmpˈeə/
+confrontare
+compartment /kəmpˈɑːtmənt/
+scompartimento
+compass /kˈʌmpəs/
+bussola
+compel /kəmpˈɛl/
+costringere, forzare
+compensate /kˈɒmpənsˌeɪt/
+ricompensare
+compensation /kˌɒmpənsˈeɪʃən/
+ricompensa
+competition /kˌɒmpətˈɪʃən/
+1. concorrenza
+2. concorso
+complain /kəmplˈeɪn/
+lagnarsi
+complete /kəmplˈiːt/
+1. completo
+2. completare
+3. pieno
+completed /kəmplˈiːtɪd/
+finito, terminato
+completely /kəmplˈiːtli/
+completamente
+complexion /kəmplˈɛkʃən/
+carnagione
+compliment /kˈɒmplɪmənt/
+complimento
+component /kəmpˈəʊnənt/
+ingrediente
+composer /kəmpˈəʊzə/
+compositore
+comprise /kəmpɹˈaɪz/
+contenere
+computer /kəmpjˈuːtə/
+computer
+concave /kɒnkˈeɪv/
+cavo
+conceal /kənsˈiːl/
+nascondere
+conceited /kənsˈiːtɪd/
+vanitoso
+concentrated /kˈɒnsəntɹˌeɪtɪd/
+denso
+concern /kənsˈɜːn/
+1. importanza
+2. concernere, riguardare
+3. cura
+concerning /kənsˈɜːnɪŋ/
+concernere
+concert /kˈɒnsət/
+concerto
+concise /kənsˈaɪs/
+breve, conciso, succinto
+conclusion /kənklˈuːʒən/
+1. conclusione
+2. risultato
+concord /kənkˈɔːd/
+accordo
+concrete /kˈɒŋkɹiːt/
+calcestruzzo
+concurrence /kənkˈʌɹəns/
+accordo
+condemn /kəndˈɛm/
+1. condannare
+2. biasimare, disapprovare
+condemnable /kəndˈɛməbəl/
+biasimevole
+condemnation /kɒndɛmnˈeɪʃən/
+disapprovazione
+conduct /kˈɒndʌkt/
+1. condurre, guidare
+2. condotta
+conduct /kˈɒndʌkt/
+comportarsi, condursi
+confectioner /kənfˈɛkʃənə/
+pasticciere
+conference /kˈɒnfɹəns/
+conferenza
+confess /kənfˈɛs/
+confessare
+confession /kənfˈɛʃən/
+confessione
+confidence /kˈɒnfɪdəns/
+fiducia
+confine /kənfˈaɪn/
+limitare, restringere
+confined /kənfˈaɪnd/
+costretto a letto
+confirm /kənfˈɜːm/
+confermare
+conflict /kˈɒnflɪkt/
+conflitto
+confront /kənfɹˈʌnt/
+1. far fronte a
+2. opporsi a
+congratulate /kənɡɹˈatʃʊlˌeɪt/
+felicitare
+congress /kˈɒŋɡɹɛs/
+congresso
+connect /kənˈɛkt/
+legare
+connection /kənˈɛkʃən/
+1. coincidenza
+2. banda
+conquer /kˈɒnkə/
+conquistare
+conscious /kˈɒnʃəs/
+cosciente
+consciousness /kˈɒnʃəsnəs/
+consapevolezza, coscienza
+consecutively /kənsˈɛkjuːtˌɪvli/
+successivamente
+consent /kənsˈɛnt/
+1. concordare, esserer d'accordo
+2. accordo
+conservation /kˌɒnsəvˈeɪʃən/
+conservazione, preservazione
+conserve /kənsˈɜːv/
+conservare
+consider /kənsˈɪdə/
+1. considerare
+2. guardare
+considerable /kənsˈɪdəɹəbəl/
+considerevole, notevole, ragguardevole
+consignee /kənsˈaɪniː/
+destinario
+console /kˈɒnsəʊl/
+consolare
+constant /kˈɒnstənt/
+costante
+construct /kˈɒnstɹʌkt/
+costruire
+consul /kˈɒnsəl/
+console
+consulate /kˈɒnsjʊlət/
+consolato
+consultation /kɒnsəltˈeɪʃən/
+consulto
+contact /kˈɒntakt/
+contatto
+contagion /kəntˈeɪdʒən/
+contagio
+contagious /kəntˈeɪdʒəs/
+1. infettivo
+2. contagioso
+contain /kəntˈeɪn/
+contenere
+container /kəntˈeɪnə/
+cassa, tinozza, vaso
+contamination /kəntˌamɪnˈeɪʃən/
+contagio
+contempt /kəntˈɛmpt/
+sprezzo
+contented /kəntˈɛntɪd/
+contento
+contention /kəntˈɛnʃən/
+asserzione
+contents /kˈɒntɛnts/
+contenuto
+contest /kˈɒntɛst/
+concorso
+continual /kəntˈɪnjuːəl/
+costante
+continue /kəntˈɪnjuː/
+1. durare
+2. continuare
+contract /kˈɒntɹakt/
+contratto
+contradict /kˌɒntɹədˈɪkt/
+contraddire
+contrast /kˈɒntɹast/
+contrasto
+contribute /kəntɹˈɪbjuːt/
+contribuire
+contribution /kˌɒntɹɪbjˈuːʃən/
+contributo
+contrite /kəntɹˈaɪt/
+pentito
+control /kəntɹˈəʊl/
+dominare, governare
+controller /kəntɹˈəʊlə/
+controlore
+convention /kənvˈɛnʃən/
+congresso
+conversation /kɒnvəsˈeɪʃən/
+conversazione
+conversion /kənvˈɜːʃən/
+cambiamento
+convert /kənvˈɜːt/
+1. convertire
+2. convertito
+convince /kənvˈɪns/
+convincere
+convoke /kənvˈəʊk/
+convocare
+cook /kˈʊk/
+cuoca
+cooked /kˈʊkt/
+cotto
+cookie /kˈʊki/
+biscotto
+cool /kˈuːl/
+1. raffreddare
+2. fresco
+cool /kˈuːl/
+raffreddare
+coping /kˈəʊpɪŋ/
+cresta
+copper /kˈɒpə/
+rame
+copy /kˈɒpɪ/
+copiare
+cork /kˈɔːk/
+sughero
+corkscrew /kˈɔːkskɹuː/
+cavatappi
+corn /kˈɔːn/
+1. callo
+2. granturco
+corner /kˈɔːnə/
+angolo
+corpulent /kˈɔːpjʊlənt/
+grosso, spesso
+correct /kəɹˈɛkt/
+1. corretto
+2. correggere
+correspond /kˌɒɹɪspˈɒnd/
+avere la coincidenza
+corridor /kˈɒɹɪdˌɔː/
+corridoio
+corroborate /kəɹˈɒbəɹˌeɪt/
+confermare
+cost /kˈɒst/
+1. costare
+2. spese
+costly /kˈɒstli/
+caro, costoso
+costume /kˈɒstjuːm/
+abito, costume
+cough /kˈɒf/
+tossire
+counsel /kˈaʊnsəl/
+1. avvocato
+2. consigliare, raccomandare
+3. avviso, consiglio
+counsellor /kˈaʊnsələ/
+consigliere
+count /kˈaʊnt/
+1. calcolare
+2. contare
+counter /kˈaʊntə/
+banco
+countermand /kˈaʊntəmˌand/
+annullare un ordine
+counting‐frame /kˈaʊntɪŋ fɹˈeɪm/
+pallottoliere
+country /kˈʌntɹi/
+1. campagna
+2. paese
+countryside /kˈʌntɹɪsˌaɪd/
+campagna
+couple /kˈʌpəl/
+coniugi, consorti
+coupon /kˈuːpɒn/
+cedola
+coupé /kuːpˈeɪ/
+scompartimento
+courage /kˈʌɹɪdʒ/
+coraggio
+course /kˈɔːs/
+piatto
+court /kˈɔːt/
+cortile
+courteous /kˈɜːtiəs/
+cortese
+courtyard /kˈɔːtjɑːd/
+cortile
+cousin /kˈʌzən/
+1. cugina
+2. cugino
+cover /kˈʌvə/
+1. legatura
+2. coprire
+3. coperta
+4. percorrere
+covered /kˈʌvəd/
+coperto
+cow /kˈaʊ/
+vacca
+cowardice /kˈaʊədˌɪs/
+codardia
+crack /kɹˈak/
+crepa, fessura, screpolatura
+cradle /kɹˈeɪdəl/
+culla, luogo d'origine
+crayfish /kɹˈeɪfɪʃ/
+gambero
+crazy /kɹˈeɪzi/
+matto
+cream /kɹˈiːm/
+1. panna
+2. crema
+3. scremare
+credit /kɹˈɛdɪt/
+avere, credito
+crevice /kɹˈɛvɪs/
+crepa, fessura, screpolatura
+crew /kɹˈuː/
+equipaggio
+crime /kɹˈaɪm/
+delitto
+crisis /kɹˈaɪsɪs/
+crisi
+criticism /kɹˈɪtɪsˌɪzəm/
+critica
+criticize /kɹˈɪtɪsˌaɪz/
+criticare
+crockery /kɹˈɒkəɹi/
+stoviglie
+crocodile /kɹˈɒkədˌaɪl/
+coccodrillo
+cross‐cut /kɹˈɒs kˈʌt/
+tabacco da fumo
+cross /kɹˈɒs/
+1. irato
+2. croce
+3. attraversare
+crowd /kɹˈaʊd/
+1. folla
+2. affluenza
+crude /kɹˈuːd/
+crudo
+cruel /kɹˈuːəl/
+crudele
+crumble /kɹˈʌmbəl/
+sgretolarsi
+crumble /kɹˈʌmbəl/
+sgretolarsi
+crumble /kɹˈʌmbəl/
+sgretolarsi
+cry /kɹˈaɪ/
+1. grido
+2. piangere
+cry /kɹˈaɪ/
+gridare
+cultivate /kˈʌltɪvˌeɪt/
+coltivare
+cup /kˈʌp/
+tazza
+cupboard /kˈʌbəd/
+armadio
+cure /kjˈʊə/
+guarire
+currant /kˈʌɹənt/
+ribes
+current /kˈʌɹənt/
+1. corrente
+2. attuale
+currently /kˈʌɹəntli/
+oggigiorno
+curse /kˈɜːs/
+bestemmiare
+curtain /kˈɜːtən/
+cortina
+curve /kˈɜːv/
+curva
+curved /kˈɜːvd/
+curvo
+cushion /kˈʊʃən/
+cuscino
+cuss /kˈʌs/
+bestemmiare
+custom /kˈʌstəm/
+costume
+customary /kˈʌstəməɹi/
+consueto, usuale
+customer /kˈʌstəmə/
+cliente, compratore
+customs /kˈʌstəmz/
+dogana
+cut /kˈʌt/
+tagliare
+cutlet /kˈʌtlət/
+costoletta
+cycle /sˈaɪkəl/
+bicicletta
+cylinder /sˈɪlɪndə/
+cilindro
+cypres /sˈɪpəz/
+cipresso
+dagger /dˈaɡə/
+pugnale
+daily /dˈeɪli/
+1. giornaliero, quotidiano
+2. ogni giorno, quotidianamente
+daily /dˈeɪli/
+giornale
+dainty /dˈeɪnti/
+delicato
+damage /dˈamɪdʒ/
+1. avaria
+2. danno
+3. danneggiare
+4. difetto
+damp /dˈamp/
+umido
+dance /dˈans/
+1. ballo
+2. ballare
+3. danza
+dancer /dˈansə/
+1. ballerina
+2. ballerino
+danger /dˈeɪndʒə/
+pericolo
+dangerous /dˈeɪndʒəɹəs/
+pericoloso
+dare /dˈeə/
+osare
+dark /dˈɑːk/
+1. buio, scuro
+2. oscuro, tenebroso
+darkness /dˈɑːknəs/
+oscurità, tenebre
+dark /dˈɑːk/
+blu scuro
+darling /dˈɑːlɪŋ/
+prediletto
+data /dˈeɪtə/
+materiale
+date /dˈeɪt/
+1. dattero
+2. datare
+3. data
+4. appuntamento
+daughter /dˈɔːtə/
+figlia, figliuola, figliola
+dawn /dˈɔːn/
+1. alba, aurora
+day /dˈeɪ/
+giorno
+daybreak /dˈeɪbɹeɪk/
+alba
+daylight /dˈeɪlaɪt/
+luce del giorno
+dazed /dˈeɪzd/
+confuso, turbato
+dead /dˈɛd/
+morto
+deaden /dˈɛdən/
+ammortizzare
+deadly /dˈɛdli/
+mortale
+deaf /dˈɛf/
+sordo
+deaf /dˈɛf/
+sordomuto
+deal /dˈiːl/
+trattare
+dear /dˈiə/
+1. caro
+2. costoso
+death /dˈɛθ/
+morte
+death /dˈɛθ/
+agonia
+debt /dˈɛt/
+debito
+decayed /dɪkˈeɪd/
+decrepito
+deceive /dɪsˈiːv/
+ingannare, truffare
+deceiver /dɪsˈiːvə/
+imbroglione
+decent /dˈiːsənt/
+decente
+decide /dɪsˈaɪd/
+decidere
+decimetre /dˈɛsɪmˌiːtə/
+decimetro
+decision /dɪsˈɪʒən/
+1. decisione
+2. decreto, deliberazione
+decisive /dɪsˈaɪsɪv/
+decisivo
+deck /dˈɛk/
+coperta, ponte
+declaration /dˌɛkləɹˈeɪʃən/
+dichiarazione
+decline /dɪklˈaɪn/
+1. declinare, deperire, peggiorare
+2. regressione
+decorate /dˈɛkəɹˌeɪt/
+decorare
+decrease /dˈiːkɹiːs/
+diminuire
+decree /dɪkɹˈiː/
+decreto
+decrepit /dɪkɹˈɛpɪt/
+decrepito
+deduce /dɪdjˈuːs/
+concludere, dedurre
+deem /dˈiːm/
+1. credere
+2. guardare
+deep /dˈiːp/
+fondo, profondo
+defeat /dɪfˈiːt/
+disfatta
+defence /dɪfˈɛns/
+1. difesa
+2. retroguardia
+defend /dɪfˈɛnd/
+difendere
+defendant /dɪfˈɛndənt/
+accusato, imputato
+defense /dɪfˈɛns/
+difesa
+define /dɪfˈaɪn/
+definire
+defining /dɪfˈaɪnɪŋ/
+definito, determinato, fissato
+definite /dˈɛfɪnət/
+definitivo
+definitive /dɪfˈɪnɪtˌɪv/
+definitivo
+degree /dɪɡɹˈiː/
+grado
+delay /dɪlˈeɪ/
+ritardo
+delegate /dˈɛlɪɡˌeɪt/
+1. delegato, deputato
+deliberately /dɪlˈɪbəɹətli/
+apposta
+delicate /dˈɛlɪkət/
+delicato
+delivery /dɪlˈɪvəɹi/
+consegna
+demand /dɪmˈand/
+smercio, vendita
+democratic /dˌɛməkɹˈatɪk/
+democratico
+demolish /dɪmˈɒlɪʃ/
+demolire
+demolition /dˌɛməlˈɪʃən/
+demolizione
+demonstration /dˌɛmənstɹˈeɪʃən/
+manifestazione
+denounce /dɪnˈaʊns/
+denunciare
+dense /dˈɛns/
+denso
+dentist /dˈɛntɪst/
+dentista
+deny /dɪnˈaɪ/
+negare
+depart /dɪpˈɑːt/
+andarsene, partire
+departure /dɪpˈɑːtʃə/
+partenza
+depend /dɪpˈɛnd/
+dipendere
+dependent /dɪpˈɛndənt/
+dipendente
+depend /dɪpˈɛnd/
+dipendere da
+deportment /dɪpˈɔːtmənt/
+condotta
+depression /dɪpɹˈɛʃən/
+crisi
+depth /dˈɛpθ/
+profondità
+deputy /dˈɛpjuːti/
+delegato, deputato
+derive /dɪɹˈaɪv/
+1. derivare
+2. discendere
+descend /dɪsˈɛnd/
+scendere
+describe /dɪskɹˈaɪb/
+descrivere
+descry /dɪskɹˈeɪ/
+1. accorgersi
+2. intravedere, scorgere
+desert /dˈɛsət/
+1. deserto
+2. abbandonare
+deserve /dɪzˈɜːv/
+meritare
+design /dɪzˈaɪn/
+1. disegnare
+2. disegno
+3. progetto
+desirable /dɪzˈaɪəɹəbəl/
+desiderabile
+desire /dɪzˈaɪə/
+1. desiderare
+2. desiderio
+desk /dˈɛsk/
+banco, scrivania
+despise /dɪspˈaɪz/
+disprezzare
+despot /dˈɛspɒt/
+despota
+dessert /dɪzˈɜːt/
+dessert
+destine /dˈɛstɪn/
+destinare
+destroy /dɪstɹˈɔɪ/
+distruggere
+detachment /dɪtˈatʃmənt/
+brigata
+detail /dˈiːteɪl/
+dettaglio, particolare
+detain /dɪtˈeɪn/
+ritenere
+detention /dɪtˈɛnʃən/
+arresto
+deter /dɪtˈɜː/
+impaurire, spaventare
+determine /dɪtˈɜːmɪn/
+1. definire
+2. fissare
+determining /dɪtˈɜːmɪnɪŋ/
+definito, determinato, fissato
+deterrent /dɪtˈɜːɹənt/
+spaventevole
+develop /dɪvˈɛləp/
+svilupparsi
+device /dɪvˈaɪs/
+apparecchio
+devil /dˈɛvəl/
+demonio, diavolo
+devilish /dˈɛvɪlɪʃ/
+diabolico
+dew /djˈuː/
+rugiada
+dexterous /dˈɛkstəɹəs/
+abile, destro, lesto, sveglio
+diabolical /dˌaɪəbˈɒlɪkəl/
+diabolico
+diagram /dˈaɪəɡɹˌam/
+1. figura
+2. progetto
+dialect /dˈaɪəlɛkt/
+dialetto
+diamond /dˈaɪəmənd/
+diamante
+diarrhoea /dˌaɪəɹˈiə/
+diarrea
+diary /dˈaɪəɹi/
+diario
+dictionary /dˈɪkʃənəɹi/
+dizionario
+die /dˈaɪ/
+1. morire
+2. cubo, dado
+diet /dˈaɪət/
+dieta, regime
+die /dˈaɪ/
+morire
+different /dˈɪfɹənt/
+differente
+differently /dˈɪfɹəntli/
+diversamente, in modo diverso
+difficult /dˈɪfɪkəlt/
+difficile, pesante
+dilapidated /dɪlˈapɪdˌeɪtɪd/
+decrepito
+dim /dˈɪm/
+oscuro, scuro, tenebroso
+dimension /daɪmˈɛnʃən/
+dimensione
+diminish /dɪmˈɪnɪʃ/
+diminuire
+diminutive /dɪmˈɪnjuːtˌɪv/
+piccolo
+din /dˈɪn/
+rumore
+dining‐room /dˈaɪnɪŋ ɹˈuːm/
+sala da pranzo
+dinner /dˈɪnə/
+colazione
+diploma /dɪplˈəʊmə/
+1. atto, azione, documento
+2. diploma
+diplomat /dˈɪpləmˌat/
+diplomatico
+direct /daɪɹˈɛkt/
+1. condurre, guidare
+2. destro
+director /daɪɹˈɛktə/
+amministratore delegato, direttore
+directory /daɪɹˈɛktəɹi/
+catalogo
+disapprobation /dˌɪsɐpɹəbˈeɪʃən/
+disapprovazione
+disapproval /dˌɪsɐpɹˈuːvəl/
+disapprovazione
+disapprove /dˌɪsɐpɹˈuːv/
+biasimare, disapprovare
+disapprove /dˌɪsɐpɹˈuːv/
+biasimare, disapprovare
+disciples /dɪsˈaɪpəlz/
+partito, seguito
+discourage /dɪskˈʌɹɪdʒ/
+impaurire, spaventare
+discover /dɪskˈʌvə/
+scoprire
+discovery /dɪskˈʌvəɹi/
+scoperta
+discrete /dɪskɹˈiːt/
+discreto
+discuss /dɪskˈʌs/
+discutere
+disease /dɪzˈiːz/
+malattia
+disgust /dɪsɡˈʌst/
+avversione, ripugnanza
+dish /dˈɪʃ/
+piatto
+dislike /dɪslˈaɪk/
+avversione, ripugnanza
+dismal /dˈɪzməl/
+1. banale
+2. sgradevole, spiacevole
+3. mostruoso, schifoso
+4. afflitto, triste
+5. buio, scuro
+6. miserabile, misero, povero
+dismount /dɪsmˈaʊnt/
+scendere
+dispose /dɪspˈəʊz/
+vendere
+disposition /dˌɪspəzˈɪʃən/
+1. disposizione
+2. ingegno, talento
+dissolve /dɪsˈɒlv/
+risolvere
+dissuade /dɪswˈeɪd/
+sconsigliare
+distance /dˈɪstəns/
+distanza
+distant /dˈɪstənt/
+distante, lontano
+distil /dɪstˈɪl/
+distillare
+distinct /dɪstˈɪŋkt/
+distinto
+distinguish /dɪstˈɪŋɡwɪʃ/
+distinguere
+distribute /dˈɪstɹɪbjˌuːt/
+distribuire
+district /dˈɪstɹɪkt/
+1. circondario, distretto
+disturb /dɪstˈɜːb/
+disturbare
+dive /dˈaɪv/
+tuffarsi
+divide /dɪvˈaɪd/
+1. separare
+2. dividere
+divorce /dɪvˈɔːs/
+divorzio
+do /dˈuː/
+commettere, fare
+doctor /dˈɒktə/
+1. dottore
+2. medico
+document /dˈɒkjuːmənt/
+1. atto, azione, documento
+dog /dˈɒɡ/
+cane
+doll /dˈɒl/
+bambola
+dolphin /dˈɒlfɪn/
+delfino
+done /dˈʌn/
+finito, terminato
+donkey /dˈɒŋki/
+asino, ciuco
+door /dˈɔː/
+porta, uscio
+dose /dˈəʊs/
+dose
+dot /dˈɒt/
+punto
+double /dˈʌbəl/
+doppio
+doubt /dˈaʊt/
+dubitare
+doubtful /dˈaʊtfəl/
+dubbioso
+dough /dˈəʊ/
+pasta
+dove /dˈʌv/
+piccione
+dowry /dˈaʊɹi/
+dote
+dozen /dˈʌzən/
+dozzina
+draft /dɹˈaft/
+cambiale
+drag /dɹˈaɡ/
+tirare
+dragon /dɹˈaɡən/
+drago, dragone
+draw /dɹˈɔː/
+1. attrarre
+2. disegnare
+3. eguaglianza
+4. tirare
+drawer /dɹˈɔː/
+cassetto
+drawers /dɹˈɔːz/
+mutande
+drawing /dɹˈɔːɪŋ/
+disegno
+dreadful /dɹˈɛdfəl/
+terribile
+dream /dɹˈiːm/
+1. sognare
+2. sogno
+dreary /dɹˈiəɹi/
+1. sgradevole, spiacevole
+2. mostruoso, schifoso
+3. afflitto, triste
+4. buio, scuro
+dress /dɹˈɛs/
+1. abito
+2. vestire
+3. vestirsi
+drink /dɹˈɪŋk/
+1. bevanda, bibita
+2. bere
+drinkable /dɹˈɪŋkəbəl/
+potabile
+drip /dɹˈɪp/
+goccia
+driver /dɹˈaɪvə/
+autista
+droop /dɹˈuːp/
+pendere
+drop /dɹˈɒp/
+1. goccia
+2. diminuire
+drown /dɹˈaʊn/
+1. annegarsi
+2. annegare
+drugstore /dɹˈʌɡstɔː/
+farmacia
+drunk /dɹˈʌŋk/
+1. brillo, ubriaco
+2. ubriacone
+dry‐nurse /dɹˈaɪ nˈɜːs/
+asciutta, balia
+dry /dɹˈaɪ/
+1. secco
+2. seccare
+dual /djˈuːəl/
+doppio
+duck /dˈʌk/
+anitra
+dull /dˈʌl/
+smussato, spuntato
+dumb /dˈʌm/
+muto
+duplicate /djˈuːplɪkˌeɪt/
+moltiplicare
+during /djˈʊəɹɪŋ/
+durante
+dusk /dˈʌsk/
+crepuscolo
+dust /dˈʌst/
+polvere
+duty /djˈuːti/
+dovere
+dwarf /dwˈɔːf/
+nano
+dwell /dwˈɛl/
+abitare, dimorare, stare
+dwelling‐place‐residence /dwˈɛlɪŋ plˈeɪs ɹˈɛzɪdəns/
+residenza
+dwelling‐place /dwˈɛlɪŋ plˈeɪs/
+residenza
+dwelling /dwˈɛlɪŋ/
+alloggio, appartamento
+dye /dˈaɪ/
+colore
+dynamite /dˈaɪnɐmˌaɪt/
+dinamite
+each /ˈiːtʃ/
+ogni, ognuno, tutto
+eager /ˈiːɡə/
+avido, bramoso
+eagle /ˈiːɡəl/
+aquila
+ear /ˈiə/
+1. orecchio
+2. spiga
+early /ˈɜːlɪ/
+di buon'ora
+earmark /ˈiəmɑːk/
+destinare
+earn /ˈɜːn/
+guadagnare
+earnest /ˈɜːnəst/
+serio
+earth /ˈɜːθ/
+terra
+earthen /ˈɜːðən/
+terrestre
+earthenware /ˈɜːθənwˌeə/
+stoviglie
+earthly /ˈɜːθli/
+terrestre
+earthquake /ˈɜːθkweɪk/
+terremoto
+east /ˈiːst/
+est
+easy /ˈiːzi/
+facile
+eavesdrop /ˈiːvzdɹɒp/
+origliare
+edge /ˈɛdʒ/
+orlo
+edging /ˈɛdʒɪŋ/
+orlo
+edible /ˈɛdəbəl/
+commestibile, mangiabile
+eel /ˈiːl/
+anguilla
+effect /ɪfˈɛkt/
+risultato
+effective /ɪfˈɛktɪv/
+efficace
+effectual /ɪfˈɛktʃuːəl/
+efficace
+efficacious /ˌɛfɪkˈeɪʃəs/
+efficace
+egg /ˈɛɡ/
+uovo
+eggfruit /ˈɛɡfɹuːt/
+melanzana
+eggplant /ˈɛɡplənt/
+melanzana
+eight /ˈeɪt/
+otto
+eighteen /ˈeɪtiːn/
+diciotto
+eighth /ˈeɪtθ/
+ottavo
+eighty /ˈeɪti/
+ottanta
+elbow /ˈɛlbəʊ/
+gomito
+elect /ɪlˈɛkt/
+eleggere, scegliere
+election /ɪlˈɛkʃən/
+scelta
+electricity /ɪlɛktɹˈɪsɪti/
+elettricità
+electronic /ɪlɛktɹˈɒnɪk/
+elettronico
+elegant /ˈɛlɪɡənt/
+elegante
+element /ˈɛlɪmənt/
+1. elemento
+2. fondamento
+3. ingrediente
+elements /ˈɛlɪmənts/
+alfabeto
+elephant /ˈɛlɪfənt/
+elefante
+elevator /ˈɛlɪvˌeɪtə/
+ascensore
+eleven /ɪlˈɛvən/
+undici
+elm /ˈɛlm/
+olmo
+else /ˈɛls/
+1. altro
+2. diversamente, in modo diverso
+elsewhere /ˈɛlsweə/
+altrove
+embassy /ˈɛmbəsi/
+ambasciata
+embrace /ɛmbɹˈeɪs/
+abbracciare
+emerge /ɪmˈɜːdʒ/
+apparire
+emergency /ɪmˈɜːdʒənsi/
+crisi
+emmet /ˈɛmɪt/
+formica
+empire /ˈɛmpaɪə/
+impero
+employ /ɛmplˈɔɪ/
+impiegare, usare
+employee /ɛmplˈɔɪiː/
+impiegato
+employment /ɛmplˈɔɪmənt/
+ufficio di collocamento
+empty /ˈɛmpti/
+1. vuoto
+2. vuotare
+encounter /ɛnkˈaʊntə/
+1. incontrare
+2. incontro
+encouragement /ɛnkˈʌɹɪdʒmənt/
+incoraggiamento
+end /ˈɛnd/
+1. finire, terminare
+2. fine
+ending /ˈɛndɪŋ/
+fine
+endive /ˈɛndɪv/
+indivia
+endure /ɛndjˈʊə/
+1. durare
+2. sopportare, tollerare
+end /ˈɛnd/
+arrivare
+enemy /ˈɛnəmi/
+nemico
+energetic /ˌɛnədʒˈɛtɪk/
+energico
+engine /ˈɛndʒɪn/
+1. locomotiva
+2. macchina
+3. motore
+engineer /ˌɛndʒɪnˈiə/
+ingegnere
+enjoyable /ɛndʒˈɔɪəbəl/
+gradevole, piacevole
+enlarge /ɛnlˈɑːdʒ/
+ingrandire
+enlighten /ɛnlˈaɪtən/
+illuminare
+enormous /ɪnˈɔːməs/
+enorme
+enough /ɪnˈʌf/
+1. sufficiente
+2. abbastanza
+enter /ˈɛntə/
+entrare
+enterprise /ˈɛntəpɹˌaɪz/
+impresa
+entertaining /ˌɛntətˈeɪnɪŋ/
+divertente
+entertainment /ˌɛntətˈeɪnmənt/
+divertimento
+enthusiasm /ɛnθjˈuːzɪˌazəm/
+entusiasmo
+entire /ɛntˈaɪə/
+completo, intero, totale, tutto
+entirely /ɛntˈaɪəli/
+completamente
+entomb /ɛntˈuːm/
+seppellire
+entrance /ˈɛntɹəns/
+entrata
+entreaty /ɛntɹˈiːti/
+domanda, preghiera
+envelope /ˈɛnvəlˌəʊp/
+busta
+environment /ɛnvˈaɪɹənmənt/
+ambiente
+environs /ɛnvˈaɪɹənz/
+ambiente
+envy /ˈɛnvi/
+1. invidiare
+2. invidia
+epic /ˈɛpɪk/
+epopea, poema epico
+equal /ˈiːkwəl/
+eguale
+equality /iːkwˈɒlɪti/
+eguaglianza
+equator /ɪkwˈeɪtə/
+equatore
+equilibrium /ˌiːkwɪlˈɪbɹiəm/
+equilibrio
+erect /ɪɹˈɛkt/
+fondere
+err /ˈɜː/
+errare, sbagliarsi
+errand /ˈɛɹənd/
+messaggio
+error /ˈɛɹə/
+errore, sbaglio
+especially /ɪspˈɛʃəli/
+1. soprattutto
+2. principalmente
+establish /ɪstˈablɪʃ/
+1. fondere
+2. constatare
+estate /ɪstˈeɪt/
+fattoria
+esteem /ɛstˈiːm/
+1. rispettare, stimare
+2. considerazione, stima, riguardo, rispetto
+3. considerare
+estimate /ˈɛstɪmət/
+apprezzare, stimare, valutare
+etc. /ɛtsˈɛtɹə/
+ecc.
+etching /ˈɛtʃɪŋ/
+acquaforte
+eternal /ɪtˈɜːnəl/
+eterno
+ethos /ˈiːθəʊz/
+atmosfera
+etiquette /ˈɛtɪkˌɛt/
+etichetta
+et /ˈɛt/
+eccetera
+evade /ɪvˈeɪd/
+evitare
+even /ˈiːvən/
+1. piano
+2. eguale
+3. perfino
+4. regolare
+evening /ˈiːvnɪŋ/
+sera
+evening /ˈiːvnɪŋ/
+cena
+evening /ˈiːvnɪŋ/
+edizione della sera, giornale della sera
+even /ˈiːvən/
+anche se
+ever /ˈɛvə/
+sempre
+every /ˈɛvɹɪ/
+ogni, ognuno, tutto
+everybody /ˈɛvɹɪbˌɒdi/
+ogni, ognuno, tutto
+everyday /ˈɛvɹɪdˌeɪ/
+volgare
+everything /ˈɛvɹɪθˌɪŋ/
+tutto
+everywhere /ˈɛvɹɪwˌeə/
+dappertutto
+every /ˈɛvɹɪ/
+ogni, ognuno, tutto
+evident /ˈɛvɪdənt/
+chiaro, evidente, palese
+evolve /ɪvˈɒlv/
+svilupparsi
+exact /ɛɡzˈakt/
+esatto, preciso
+exactly /ɛɡzˈaktli/
+1. giustamente, giusto
+exaggerate /ɛɡzˈadʒəɹˌeɪt/
+esagerare
+examination /ɛɡzˌamɪnˈeɪʃən/
+esame
+examine /ɛɡzˈamɪn/
+esaminare
+example /ɛɡzˈampəl/
+esempio
+except /ɛksˈɛpt/
+eccetto, salvo
+except /ɛksˈɛpt/
+eccetto, salvo
+excise‐duty /ɛksˈaɪz djˈuːti/
+dazio consumo
+excise /ɛksˈaɪz/
+dazio consumo
+excite /ɛksˈaɪt/
+incitare, spronare
+exclude /ɛksklˈuːd/
+escludere
+exclusively /ɛksklˈuːsɪvli/
+non ... che, soltanto
+excommunication /ɛkskəmjˌuːnɪkˈeɪʃən/
+1. anatema
+2. scomunica
+excuse /ɛkskjˈuːs/
+le domando scusa, scusatemi, permesso
+executioner /ˌɛksɪkjˈuːʃənə/
+boia
+exercise‐book /ˈɛksəsˌaɪz bˈʊk/
+fascicolo
+exercise /ˈɛksəsˌaɪz/
+esercizio
+exert /ɛɡzˈɜːt/
+praticare
+exhausted /ɛɡzˈɔːstɪd/
+esausto, sfinito
+exhibition /ɛksɪbˈɪʃən/
+esposizione
+exhortation /ɛɡzɔːtˈeɪʃən/
+ammonimento, esortazione
+exile /ˈɛɡzaɪl/
+1. bandire, esiliare
+2. esiliato, esule
+3. esilio
+exist /ɛɡzˈɪst/
+esistere
+existence /ɛɡzˈɪstəns/
+esistenza
+exit /ˈɛɡzɪt/
+1. uscita
+2. uscire
+expect /ɛkspˈɛkt/
+aspettare
+expense /ɛkspˈɛns/
+spese
+expensive /ɛkspˈɛnsɪv/
+1. caro, costoso
+expertness /ˈɛkspɜːtnəs/
+abilità, destrezza
+expire /ɛkspˈaɪə/
+morire
+explain /ɛksplˈeɪn/
+spiegare
+explanation /ɛksplɐnˈeɪʃən/
+1. spiegazione
+exploit /ˈɛksplɔɪt/
+sfruttare
+exposition /ɛkspəzˈɪʃən/
+esposizione
+expression /ɛkspɹˈɛʃən/
+aria
+extension /ɛkstˈɛnʃən/
+suffisso
+exterior /ɛkstˈiəɹɪə/
+esteriore
+external /ɛkstˈɜːnəl/
+esterne
+extinguish /ɛkstˈɪŋɡwɪʃ/
+spegnere, spengere
+extort /ɛkstˈɔːt/
+estorcere
+extraordinary /ɛkstɹˈɔːdɪnəɹi/
+straordinario
+extreme /ɛkstɹˈiːm/
+estremo
+extremely /ɛkstɹˈiːmli/
+1. assai, molto
+2. estremamente
+eyebrow /ˈaɪbɹaʊ/
+sopracciglio
+eyelid /ˈaɪlɪd/
+palpebra
+fabricate /fˈabɹɪkˌeɪt/
+fabbricare
+face /fˈeɪs/
+1. far fronte a
+2. faccia, viso
+facile /fˈasaɪl/
+facile
+fact /fˈakt/
+fatto
+faction /fˈakʃən/
+partito
+factory /fˈaktəɹi/
+fabbrica
+fag /fˈaɡ/
+1. affaticare, stancare
+2. spossare
+fail /fˈeɪl/
+morire
+failure /fˈeɪliə/
+fallimento
+faint /fˈeɪnt/
+1. debole
+2. svenirsi
+fair /fˈeə/
+1. bazar
+2. biondo
+fairy /fˈeəɹi/
+fata
+fairy /fˈeəɹi/
+favola, fiaba
+faith /fˈeɪθ/
+fiducia
+faithful /fˈeɪθfəl/
+fedele
+fall /fˈɔːl/
+diminuire
+fall /fˈɔːl/
+ammalarsi
+fall /fˈɔːl/
+declinare, deperire, peggiorare
+false /fˈɒls/
+falso
+family /fˈamɪli/
+famiglia
+famous /fˈeɪməs/
+1. celebre, famoso, rinomato
+fanatical /fɐnˈatɪkəl/
+fanatico
+fancier /fˈansiə/
+dilettante
+fancy /fˈansi/
+figurarsi
+fantasy /fˈantəsi/
+fantasia
+far /fˈɑː/
+distante, lontano
+farewell /feəwˈɛl/
+1. addio
+2. congedo
+farm /fˈɑːm/
+fattoria
+farmer /fˈɑːmə/
+1. mezzadro
+2. contadino
+3. agricoltore
+fast /fˈast/
+presto
+fasten /fˈasən/
+fissare
+fast /fˈast/
+treno rapido
+fat /fˈat/
+1. grosso, spesso
+2. grasso
+father‐in‐law /fˈɑːðəɹ ɪn lˈɔː/
+suocero
+father /fˈɑːðə/
+padre
+fatherland /fˈɑːðələnd/
+patria
+fatigue /fɐtˈiːɡ/
+affaticare, stancare
+fatty /fˈati/
+grasso
+favor /fˈeɪvə/
+favorire
+favour /fˈeɪvə/
+favorire
+fear /fˈiə/
+1. angoscia
+2. aver timore, temere
+3. paura
+feather /fˈɛðə/
+penna
+feed /fˈiːd/
+alimentare
+feel /fˈiːl/
+sentirsi
+fellow /fˈɛləʊ/
+uomo
+female /fˈiːmeɪl/
+femminile
+female /fˈiːmeɪl/
+cuoca
+female /fˈiːmeɪl/
+parrucchiera
+female /fˈiːmeɪl/
+giornalista
+female /fˈiːmeɪl/
+parente
+female /fˈiːmeɪl/
+cantante
+female /fˈiːmeɪl/
+dattilografa
+female /fˈiːmeɪl/
+sasta
+female /fˈiːmeɪl/
+maestra
+female /fˈiːmeɪl/
+ladra
+feminine /fˈɛmənˌɪn/
+femminile
+fertile /fˈɜːtaɪl/
+fecondo
+fertilize /fˈɜːtɪlˌaɪz/
+concimare
+fervor /fˈɜːvə/
+ardore, zelo
+fervour /fˈɜːvə/
+ardore, zelo
+festival /fˈɛstɪvəl/
+festa
+fetch /fˈɛtʃ/
+1. portare
+2. ottenere
+fever /fˈiːvə/
+febbre
+fiancée /fɪˈɒnsˈeɪ/
+fidanzata
+field /fˈiːld/
+campo
+field /fˈiːld/
+ambulanza
+fifteen /fˈɪftiːn/
+quindici
+fifth /fˈɪfθ/
+quinto
+fifty /fˈɪfti/
+cinquanta
+fig‐tree /fˈɪɡ tɹˈiː/
+fico
+fig /fˈɪɡ/
+fico
+fight /fˈaɪt/
+combattere, duellare, picchiarsi
+figure /fˈɪɡə/
+1. figura
+2. calcolare
+file /fˈaɪl/
+lima
+film /fˈɪlm/
+film, pellicola
+filter /fˈɪltə/
+filtro
+fin /fˈɪn/
+pinna
+finally /fˈaɪnəli/
+alla fine, finalmente
+financial /faɪnˈanʃəl/
+finanziario
+find /fˈaɪnd/
+trovare
+find /fˈaɪnd/
+trovarsi
+fine /fˈaɪn/
+1. bello, carino
+2. delicato
+3. multare
+4. contravvenzione, multa
+finger /fˈɪŋɡə/
+dito
+finish /fˈɪnɪʃ/
+1. finire, terminare
+2. apprestare, preparare
+finished /fˈɪnɪʃt/
+1. finito, terminato
+2. pronto
+fir /fˈɜː/
+abete
+fire /fˈaɪə/
+fuoco
+firebrand /fˈaɪəbɹand/
+attizzatore
+first /fˈɜːst/
+1. primo
+2. dapprima, in primo luogo, prima
+firstly /fˈɜːstli/
+dapprima, in primo luogo, prima
+first /fˈɜːst/
+prenome
+first /fˈɜːst/
+dapprima, in primo luogo, prima
+fish /fˈɪʃ/
+1. pescare
+2. pesce
+fisherman /fˈɪʃəmən/
+pescatore
+fishing /fˈɪʃɪŋ/
+canna
+fission /fˈɪʃən/
+disintegrazione nukleare
+fist /fˈɪst/
+pugno
+fit /fˈɪt/
+1. adattare, aggiustare
+2. apoplessia
+fitting /fˈɪtɪŋ/
+decente
+five /fˈaɪv/
+cinque
+fix /fˈɪks/
+1. adattare, aggiustare
+2. fissare
+3. riparare
+fixed /fˈɪkst/
+fermo
+fix /fˈɪks/
+predisporre, sistemare
+flag /flˈaɡ/
+1. bandiera
+2. stendardo
+flame /flˈeɪm/
+fiamma
+flannel /flˈanəl/
+flanella
+flat‐iron /flˈat ˈaɪən/
+ferro da stiro
+flat /flˈat/
+1. appartamento
+2. piano
+flatter /flˈatə/
+lusingare
+flavour /flˈeɪvə/
+aroma
+flaw /flˈɔː/
+crepa, fessura, screpolatura
+flea /flˈiː/
+pulce
+flee /flˈiː/
+fuggire
+flesh /flˈɛʃ/
+carne
+flight /flˈaɪt/
+fuga
+float /flˈəʊt/
+nuotare
+flood /flˈʌd/
+alta marea
+floor /flˈɔː/
+1. piano
+2. pavimento
+flour /flˈaʊə/
+fiore della farina
+flow /flˈəʊ/
+1. fluire, scorrere
+2. corrente
+flower /flˈaʊə/
+fiore
+flowerpot /flˈaʊəpˌɒt/
+vaso da fiori
+flute /flˈuːt/
+flauto
+fly /flˈaɪ/
+1. volare
+2. mosca
+foam /fˈəʊm/
+schiuma
+focus /fˈəʊkəs/
+foco
+fog /fˈɒɡ/
+nebbia
+fold /fˈəʊld/
+piegare
+folder /fˈəʊldə/
+fascicolo
+folk /fˈəʊk/
+popolo
+follow /fˈɒləʊ/
+seguire
+following /fˈɒləʊɪŋ/
+1. partito, seguito
+2. seguente
+fondle /fˈɒndəl/
+accarezzare
+font /fˈɒnt/
+fonte battesimale
+food /fˈuːd/
+alimento, cibo
+foolish /fˈuːlɪʃ/
+ignorante, sciocco, stupido
+foot /fˈʊt/
+piede
+for /fˈɔː/
+1. durante
+2. considerato che, visto che
+forbid /fəbˈɪd/
+vietare
+forbidding /fəbˈɪdɪŋ/
+spaventevole
+force /fˈɔːs/
+1. costringere, forzare
+2. forza
+forecast /fˈɔːkast/
+predire
+forefather /fˈɔːfɑːðə/
+antenato
+forehead /fˈɔːhɛd/
+fronte
+foreign /fˈɒɹən/
+straniera
+foreigner /fˈɒɹənə/
+forestiere
+foreign /fˈɒɹən/
+estero
+forest /fˈɒɹɪst/
+bosco
+foretell /fɔːtˈɛl/
+predire
+foreward /fˈɔːwɔːd/
+avanti
+forget /fəɡˈɛt/
+dimenticare
+fork /fˈɔːk/
+forchetta
+formal /fˈɔːməl/
+formale
+former /fˈɔːmə/
+passato
+formerly /fˈɔːməli/
+davanti
+formidable /fɔːmˈɪdəbəl/
+straordinario
+formula /fˈɔːmjʊlə/
+formula
+formulate /fˈɔːmjʊlˌeɪt/
+formulare
+forsake /fɔːsˈeɪk/
+abbandonare
+fortunate /fˈɔːtʃənət/
+felice
+fortunately /fˈɔːtʃənətli/
+per fortuna
+fortune /fˈɔːtʃuːn/
+fortuna
+forty /fˈɔːti/
+quaranta
+for /fˈɔː/
+a lungo, da molto, per molto tempo
+for /fˈɔː/
+per esempio
+for /fˈɔː/
+per esempio
+for /fˈɔː/
+per lo più
+for /fˈɔː/
+per lo più
+for /fˈɔː/
+d'altronde, inoltre
+foster‐parents /fˈɒstə pˈeəɹənts/
+genitori adottivi
+foster‐son /fˈɒstə sˈʌn/
+figlio adottivo
+found /fˈaʊnd/
+fondere
+foundation /faʊndˈeɪʃən/
+1. fondamento
+2. fondo
+fountain‐pen /fˈaʊntɪn pˈɛn/
+penna stilografica
+fountain /fˈaʊntɪn/
+1. fontana
+2. fonte, sorgente
+fountain /fˈaʊntɪn/
+penna stilografica
+four /fˈɔː/
+quattro
+fourteen /fˈɔːtiːn/
+quattordici
+fourth /fˈɔːθ/
+1. quarto
+fowl /fˈaʊl/
+1. gallina
+2. pollo
+fox /fˈɒks/
+volpe
+freeze /fɹˈiːz/
+congelare, gelare
+freezing /fɹˈiːzɪŋ/
+gelo
+frequently /fɹˈiːkwəntli/
+frequentemente, sovente, spesso
+fresh /fɹˈɛʃ/
+fresco
+friend /fɹˈɛnd/
+1. amica
+2. amico
+friendly /fɹˈɛndli/
+1. amichevole, benevole, carino, cortese, gradevole, grazioso
+2. amicale
+friendship /fɹˈɛndʃɪp/
+amicizia
+fright /fɹˈaɪt/
+angoscia, paura, timore
+frindge /fɹˈɪndʒ/
+frangia
+fringe /fɹˈɪndʒ/
+orlo
+frivolous /fɹˈɪvələs/
+vanitoso
+frog /fɹˈɒɡ/
+rana, ranocchio
+frolic /fɹˈɒlɪk/
+cattivo
+frolicsome /fɹˈɒlɪksˌʌm/
+cattivo
+from /fɹˈɒm/
+di
+from /fɹˈɒm/
+da qui
+from /fɹˈɒm/
+di là
+frontier /fɹˈʌntiə/
+confine, frontiera
+frost /fɹˈɒst/
+gelo
+froth /fɹˈɒθ/
+schiuma
+fruit /fɹˈuːt/
+frutta
+fruitful /fɹˈuːtfəl/
+fecondo
+fry /fɹˈaɪ/
+friggere
+full /fˈʊl/
+pieno
+fully /fˈʊli/
+completamente
+full /fˈʊl/
+pagamento
+fun /fˈʌn/
+1. divertimento
+2. piacere
+function /fˈʌŋkʃən/
+1. funzione
+2. impiego
+fund /fˈʌnd/
+capitale, fondo
+fungus /fˈʌŋɡəs/
+fungo
+funny /fˈʌni/
+1. divertente
+2. comico
+fur /fˈɜː/
+pelle
+furious /fjˈʊəɹɪəs/
+furibondo, furioso
+furniture /fˈɜːnɪtʃə/
+mobili
+furthermore /fˌɜːðəmˈɔː/
+inoltre
+future /fjˈuːtʃə/
+avvenire
+gag /ɡˈaɡ/
+scherzo
+gain /ɡˈeɪn/
+1. guadagno
+2. guadagnare
+3. beneficio, profitto, vantaggio
+gall /ɡˈɔːl/
+bile
+gallery /ɡˈaləɹi/
+galleria
+gallop /ɡˈaləp/
+galoppare
+game /ɡˈeɪm/
+giuoco
+gang /ɡˈaŋ/
+compagnia
+gaol /dʒˈeɪl/
+prigione
+garage /ɡˈaɹɪdʒ/
+autorimessa
+garbage /ɡˈɑːbɪdʒ/
+cestino dei rifiuti
+garden /ɡˈɑːdən/
+giardino
+gardener /ɡˈɑːdənə/
+giardiniere
+garlic /ɡˈɑːlɪk/
+aglio
+garment /ɡˈɑːmənt/
+abito
+garrison /ɡˈaɹɪsən/
+guarnigione
+gas /ɡˈas/
+gas
+gasolene /ɡˈasəʊlˌiːn/
+benzina
+gasoline /ɡˈasəlˌiːn/
+benzina
+gather /ɡˈaðə/
+1. concludere, dedurre
+2. raccogliere
+gathering /ɡˈaðəɹɪŋ/
+convegno
+gaunt /ɡˈɔːnt/
+1. magro
+2. sottile
+3. afflitto, triste
+gay /ɡˈeɪ/
+allegro
+gaze /ɡˈeɪz/
+fissare
+general /dʒˈɛnəɹəl/
+1. universale
+2. generale
+generally /dʒˈɛnəɹəli/
+generalmente
+generation /dʒˌɛnəɹˈeɪʃən/
+generazione
+gentle /dʒˈɛntəl/
+1. dolce
+2. mite
+gentleman /dʒˈɛntəlmən/
+signore
+genuinly /dʒˈɛnjuːˌɪnli/
+davvero, infatti
+geography /dʒɪˈɒɡɹəfi/
+geografia
+gesture /dʒˈɛstʃə/
+gesto
+get /ɡˈɛt/
+1. arrivare
+2. ottenere
+3. prendere
+4. ricevere
+get /ɡˈɛt/
+raffreddarsi
+get /ɡˈɛt/
+1. maritarsi
+2. ammogliarsi
+3. sposare
+get /ɡˈɛt/
+scendere
+get /ɡˈɛt/
+perdere l'abitunide di
+get /ɡˈɛt/
+1. salire
+2. alzarsi
+get /ɡˈɛt/
+abituarsi, avvezzarsi
+ghastly /ɡˈastli/
+1. sgradevole, spiacevole
+2. orrendo, orribile
+gherkin /ɡˈɜːkɪn/
+cetriolino
+gift /ɡˈɪft/
+dono, presente, regalo
+gifted /ɡˈɪftɪd/
+dotato
+gill /ɡˈɪl/
+branchia
+giraffe /dʒɪɹˈaf/
+giraffa
+girder /ɡˈɜːdə/
+trave
+girdle /ɡˈɜːdəl/
+cintura
+girl /ɡˈɜːl/
+piccola, ragazza
+give /ɡˈɪv/
+1. dare
+2. presentare
+give /ɡˈɪv/
+aerare, arieggiare, ventilare
+give /ɡˈɪv/
+restituire
+give /ɡˈɪv/
+cedere
+give /ɡˈɪv/
+annunciare, annunziare, pubblicare
+give /ɡˈɪv/
+sentire
+give /ɡˈɪv/
+causare
+give /ɡˈɪv/
+cedere
+give /ɡˈɪv/
+cedere
+gladness /ɡlˈadnəs/
+gioia
+glass /ɡlˈas/
+1. bicchiere
+2. vetro
+glasses /ɡlˈasɪz/
+occhiali
+globe /ɡlˈəʊb/
+globo
+glow /ɡlˈəʊ/
+ardore
+glue /ɡlˈuː/
+appiccicare
+go /ɡˈəʊ/
+1. andare, camminare
+goal /ɡˈəʊl/
+proposito, scopo
+goat /ɡˈəʊt/
+capra
+goblet /ɡˈɒblət/
+calice, bicchiere, boccale
+god /ɡˈɒd/
+dio
+godfather /ɡˈɒdfɑːðə/
+compare
+going /ɡˈəʊɪŋ/
+regressione
+gold /ɡˈəʊld/
+oro
+good‐bye /ɡˈʊd bˈaɪ/
+addio, congedo
+good‐natured /ɡˈʊd nˈeɪtʃəd/
+amichevole, benevole, carino, cortese, gradevole, grazioso
+good /ɡˈʊd/
+buono
+goodbye /ɡʊdbˈaɪ/
+1. addio
+2. congedo
+3. arrivederci
+good /ɡˈʊd/
+buongiorno
+good /ɡˈʊd/
+buonasera
+good /ɡˈʊd/
+salute
+good /ɡˈʊd/
+buongiorno
+good /ɡˈʊd/
+buona notte, buonanotte
+goose /ɡˈuːs/
+oca
+gooseberry /ɡˈuːsbəɹi/
+ribes
+gospel /ɡˈɒspəl/
+vangelo
+gourd /ɡˈʊəd/
+zucca
+govern /ɡˈʌvən/
+dominare, governare
+government /ɡˈʌvənmənt/
+governo
+gown /ɡˈaʊn/
+abito
+go /ɡˈəʊ/
+perdersi, smarrirsi
+go /ɡˈəʊ/
+andarsene, partire
+go /ɡˈəʊ/
+1. declinare, deperire, peggiorare
+2. indietreggiare
+3. ritornare
+go /ɡˈəʊ/
+indietreggiare
+go /ɡˈəʊ/
+attraversare
+go /ɡˈəʊ/
+1. diminuire, ribassare
+2. scendere
+go /ɡˈəʊ/
+affrettarsi
+go /ɡˈəʊ/
+entrare
+go /ɡˈəʊ/
+sparare
+go /ɡˈəʊ/
+continuare
+go /ɡˈəʊ/
+uscire
+go /ɡˈəʊ/
+percorrere
+go /ɡˈəʊ/
+coricarsi
+go /ɡˈəʊ/
+salire
+grab /ɡɹˈab/
+afferrare
+grade /ɡɹˈeɪd/
+grado
+gradually /ɡɹˈadʒuːəli/
+poco a poco
+grammophone /ɡɹˈaməfˌəʊn/
+disco
+grand‐nephew /ɡɹˈand nˈɛfjuː/
+pronipote
+grandchild /ɡɹˈandtʃaɪld/
+nipote
+granddaughter /ɡɹˈandɔːtə/
+nipote
+grandfather /ɡɹˈandfɑːðə/
+nonno
+grandmother /ɡɹˈandmʌðə/
+nonna
+grandparents /ɡɹˈandpeəɹənts/
+nonni
+grandson /ɡɹˈandsʌn/
+nipote
+grape /ɡɹˈeɪp/
+acino, chicco d'uva, uva
+grapevine /ɡɹˈeɪpvaɪn/
+vite
+grapple /ɡɹˈapəl/
+prendere
+grasp /ɡɹˈasp/
+afferrare
+grass /ɡɹˈas/
+erba
+grasshopper /ɡɹˈashɒpə/
+cavalletta
+gratitude /ɡɹˈatɪtjˌuːd/
+1. gratitudine, riconoscenza
+2. grazie
+graveyard /ɡɹˈeɪvjɑːd/
+camposanto, cimitero
+gravy /ɡɹˈeɪvi/
+salsa
+grease /ɡɹˈiːs/
+grasso
+greasy /ɡɹˈiːzi/
+grasso
+great‐grandfather /ɡɹˈeɪt ɡɹˈandfɑːðə/
+bisnonno
+great‐grandmother /ɡɹˈeɪt ɡɹˈandmʌðə/
+bisnonna
+great /ɡɹˈeɪt/
+grande
+greatgrandson /ɡɹˈeɪtɡɹandsən/
+pronipote
+greedy /ɡɹˈiːdi/
+avido, bramoso
+green /ɡɹˈiːn/
+verde
+greet /ɡɹˈiːt/
+salutare
+greeting /ɡɹˈiːtɪŋ/
+accoglienza, saluto
+grey /ɡɹˈeɪ/
+bigio, grigio
+grind /ɡɹˈaɪnd/
+macinare
+grip /ɡɹˈɪp/
+afferrare
+grisly /ɡɹˈɪsli/
+sgradevole, spiacevole
+groan /ɡɹˈəʊn/
+gemere
+ground‐floor /ɡɹˈaʊnd flˈɔː/
+pianterreno
+ground /ɡɹˈaʊnd/
+fondo
+group /ɡɹˈuːp/
+gruppo
+grow /ɡɹˈəʊ/
+1. crescere
+2. coltivare
+growth /ɡɹˈəʊθ/
+crescimento
+gruesome /ɡɹˈuːsʌm/
+1. orrendo, orribile
+2. terribile
+gruff /ɡɹˈʌf/
+brusco, rude
+guarantee /ɡˌaɹəntˈiː/
+garanzia
+guard /ɡˈɑːd/
+capotreno
+guess /ɡˈɛs/
+supporre
+guest /ɡˈɛst/
+ospite
+guide /ɡˈaɪd/
+condurre, guidare
+guilty /ɡˈɪlti/
+colpevole
+guitar /ɡɪtˈɑː/
+chitarra
+gulf /ɡˈʌlf/
+abisso, burrone
+gum /ɡˈʌm/
+gengiva
+gun /ɡˈʌn/
+fucile
+habit /hˈabɪt/
+1. abitudine, vizio
+2. costume
+hackneyed /hˈaknid/
+trito e ritrito
+haggle /hˈaɡəl/
+mercanteggiare
+hail /hˈeɪl/
+grandine
+hair /hˈeə/
+capelli
+hairdresser /hˈeədɹɛsə/
+1. parrucchiera
+2. parrucchiere
+hairs /hˈeəz/
+capelli
+half‐brother /hˈɑːf bɹˈʌðə/
+fratellastro
+half‐sister /hˈɑːf sˈɪstə/
+sorellastra
+half /hˈɑːf/
+1. mezzo
+2. metà
+halt /hˈɒlt/
+1. fermarsi
+2. fermare
+ham /hˈam/
+prosciutto
+hamlet /hˈamlət/
+paesello
+hammer /hˈamə/
+martello
+hamper /hˈampə/
+rendere difficile
+hand /hˈand/
+1. operaio
+2. mano
+handicraft /hˈandɪkɹˌaft/
+mestiere
+handle /hˈandəl/
+1. tenaglie
+2. trattare
+handlebars /hˈandəlbˌɑːz/
+remo
+handsome /hˈandsʌm/
+bello, carino
+hang /hˈaŋ/
+1. pendere
+2. sospendere
+hangman /hˈaŋmən/
+boia
+hang /hˈaŋ/
+tenere
+happen /hˈapən/
+accadere, arrivare, succedere
+happy /hˈapi/
+felice
+harbor /hˈɑːbə/
+porto
+harbour /hˈɑːbə/
+porto
+hard‐worked /hˈɑːd wˈɜːkt/
+trito e ritrito
+hard /hˈɑːd/
+1. duro
+2. difficile, pesante
+3. dura
+hardly /hˈɑːdli/
+appena
+hardworking /hˈɑːdwɜːkɪŋ/
+attivo, laborioso
+hare /hˈeə/
+lepre
+haricot /hˈaɹɪkˌɒt/
+fagiolo, fagiuolo
+harm /hˈɑːm/
+nuocere
+harmful /hˈɑːmfəl/
+nocivo
+harmony /hˈɑːməni/
+accordo
+harsh /hˈɑːʃ/
+brusco, rude
+haste /hˈeɪst/
+fretta
+hate /hˈeɪt/
+1. odiare
+2. odio
+haul /hˈɔːl/
+tirare
+have /hˈav/
+1. avere
+2. ricevere
+have /hˈav/
+disporre
+have /hˈav/
+bagnarsi
+have /hˈav/
+avere
+hay /hˈeɪ/
+fieno
+hazard /hˈazəd/
+1. caso
+2. arrischiare
+3. rischio
+hazelnut /hˈeɪzəlnˌʌt/
+nocciola, nocciuola
+he‐goat /hiː ɡˈəʊt/
+capro becco
+he /hˈiː/
+lui
+head /hˈɛd/
+1. condurre, guidare
+2. testa
+health /hˈɛlθ/
+salute
+heap /hˈiːp/
+1. folla
+2. gruppo
+hear /hˈiə/
+udire
+heart /hˈɑːt/
+cuore
+heat /hˈiːt/
+1. ardore
+2. riscaldare
+3. calore
+heaven /hˈɛvən/
+cielo
+heel /hˈiːl/
+tallone
+height /hˈaɪt/
+1. altitudine, altura
+helix /hˈiːlɪks/
+elica
+hello /həlˈəʊ/
+ciao
+helm /hˈɛlm/
+remo
+help /hˈɛlp/
+1. aiutare, assistere
+2. aiuto, assistenza
+helper /hˈɛlpə/
+assistente
+helpful /hˈɛlpfəl/
+servizievole
+hence /hˈɛns/
+da qui
+her /hˈɜː/
+lei
+herb /hˈɜːb/
+erba
+herd /hˈɜːd/
+gruppo
+here /hˈiə/
+quà, qui
+hereditary /həɹˈɛdɪtəɹi/
+ereditario
+herring /hˈɛɹɪŋ/
+aringa
+herself /hɜːsˈɛlf/
+stesso
+hesitate /hˈɛsɪtˌeɪt/
+esitare, titubare
+hide /hˈaɪd/
+1. pelle
+2. nascondere
+3. nascondersi
+hideous /hˈɪdiəs/
+orrendo, orribile
+hide /hˈaɪd/
+nascondersi
+high /hˈaɪ/
+alto
+high /hˈaɪ/
+alta marea
+hill /hˈɪl/
+collina, colle
+him /hˈɪm/
+lui
+himself /hɪmsˈɛlf/
+stesso
+hind /hˈaɪnd/
+ultimo
+hinder /hˈɪndə/
+1. rendere difficile
+2. impedire
+3. disturbare
+hindmost /hˈaɪndməʊst/
+ultimo
+hint /hˈɪnt/
+alludere
+hinterland /hˈɪntələnd/
+1. retroterra
+hip /hˈɪp/
+anca
+hippo /hˈɪpəʊ/
+ippopotamo
+hippopotamus /hˈɪpəpˌɒtaməs/
+ippopotamo
+hire /hˈaɪə/
+prendere in affitto
+his /hˈɪz/
+suo
+history /hˈɪstəɹi/
+storia
+hit /hˈɪt/
+1. battere
+2. colpire, picchiare
+hither /hˈɪðə/
+quà, qui
+hog /hˈɒɡ/
+porco
+hold /hˈəʊld/
+tenere
+hold /hˈəʊld/
+ritenere
+hole /hˈəʊl/
+buco
+hollow /hˈɒləʊ/
+cavo
+home /hˈəʊm/
+casa
+honest /ˈɒnɪst/
+onesto
+honey /hˈʌni/
+miele
+honor /ˈɒnə/
+onore
+honour /ˈɒnə/
+onore
+hood /hˈʊd/
+1. cappotta
+2. coperta
+hoof /hˈuːf/
+zoccolo
+hook /hˈʊk/
+amo
+hooter /hˈuːtə/
+tromba
+hope /hˈəʊp/
+1. sperare
+2. speranza
+horizon /həɹˈaɪzən/
+orizzonte
+horn /hˈɔːn/
+1. corno
+2. tromba
+horrible /hˈɒɹɪbəl/
+1. orrendo, orribile
+2. sgradevole, spiacevole
+3. mostruoso, schifoso
+4. terribile
+horror /hˈɒɹə/
+1. orrore, ribrezzo
+horse‐chestnut /hˈɔːs tʃˈɛstnʌt/
+castagna
+horse‐radish /hˈɔːs ɹˈadɪʃ/
+barbaforte
+horse /hˈɔːs/
+cavallo
+horsepower /hˈɔːspaʊə/
+cavallo vapore
+horseradish /hˈɔːsɹɐdˌɪʃ/
+barbaforte
+hospitable /hɒspˈɪtəbəl/
+ospitale
+hospital /hˈɒspɪtəl/
+ospedale
+host /hˈəʊst/
+ospite
+hotel /həʊtˈɛl/
+albergo
+house /hˈaʊs/
+casa
+housefly /hˈaʊsflaɪ/
+mosca
+house /hˈaʊs/
+chiesa
+how /hˈaʊ/
+come
+howl /hˈaʊl/
+muggire
+how /hˈaʊ/
+come sta?
+how /hˈaʊ/
+come sta?
+hug /hˈʌɡ/
+abbracciare
+huge /hjˈuːdʒ/
+enorme
+human /hjˈuːmən/
+umano
+humble /hˈʌmbəl/
+umile
+humid /hjˈuːmɪd/
+umido
+humour /hjˈuːmə/
+umore
+hundred /hˈʌndɹəd/
+cento
+hunger /hˈʌŋɡə/
+fame
+hunt /hˈʌnt/
+cacciare
+hurry /hˈʌɹi/
+affrettarsi
+hurt /hˈɜːt/
+1. far male
+2. ferire
+husband /hˈʌsbənd/
+marito, sposo
+hut /hˈʌt/
+capanna
+ice /ˈaɪs/
+ghiaccio
+idea /aɪdˈiə/
+idea, nozione
+idol /ˈaɪdəl/
+idolo
+if /ˈɪf/
+se
+ill /ˈɪl/
+malato
+illness /ˈɪlnəs/
+malattia
+illuminate /ɪlˈuːmɪnˌeɪt/
+1. illuminare
+2. accendere
+image /ˈɪmɪdʒ/
+1. illustrazione, immagine, pittura
+2. figura
+imagination /ɪmˌadʒɪnˈeɪʃən/
+immagine
+imagine /ɪmˈadʒɪn/
+figurarsi
+imitate /ˈɪmɪtˌeɪt/
+imitare
+immediately /ɪmˈiːdɪətli/
+1. direttamente
+2. fra poco, immediatamente, subito
+immense /ɪmˈɛns/
+enorme
+impertinent /ɪmpˈɜːtɪnənt/
+impertinente, insolente
+imply /ɪmplˈaɪ/
+significare
+important /ɪmpˈɔːtənt/
+grave, importante
+impossible /ɪmpˈɒsəbəl/
+impossibile
+imposter /ɪmpˈɒstə/
+imbroglione
+improve /ɪmpɹˈuːv/
+migliorare
+in /ˈɪn/
+a, dentro
+incendiary /ɪnsˈɛndjəɹi/
+bomba incendaria
+incite /ɪnsˈaɪt/
+incitare, spronare
+inclined /ɪnklˈaɪnd/
+disposto
+include /ɪnklˈuːd/
+contenere
+inconvenient /ɪnkənvˈiːnɪənt/
+difficile, pesante
+increase /ˈɪnkɹiːs/
+ingrandire
+increasingly /ɪnkɹˈiːsɪŋli/
+di più in più
+incredible /ɪnkɹˈɛdɪbəl/
+incredibile
+incubate /ˈɪnkjuːbˌeɪt/
+covare
+indeed /ˌɪndˈiːd/
+1. di fatto
+2. davvero, infatti
+indicate /ˈɪndɪkˌeɪt/
+1. indicare, mostrare
+indication /ˌɪndɪkˈeɪʃən/
+1. augurio
+2. indicazione
+induce /ɪndjˈuːs/
+concludere, dedurre
+indulgence /ɪndˈʌldʒəns/
+indulgenza
+industry /ˈɪndʌstɹi/
+applicazione, diligenza
+inexpensive /ˌɪnɛkspˈɛnsɪv/
+a buon mercato
+infant /ˈɪnfənt/
+bambino, fianciullo
+infect /ɪnfˈɛkt/
+infettare
+infection /ɪnfˈɛkʃən/
+1. infezione
+2. contagio
+infectious /ɪnfˈɛkʃəs/
+1. infettivo
+2. contagioso
+infer /ɪnfˈɜː/
+concludere, dedurre
+inference /ˈɪnfəɹəns/
+conclusione
+inform /ɪnfˈɔːm/
+1. informare, insegnare
+ingredient /ɪnɡɹˈiːdiənt/
+ingrediente
+inhabitant /ɪnhˈabɪtənt/
+abitante
+inherit /ɪnhˈɛɹɪt/
+ereditare
+inhibit /ɪnhˈɪbɪt/
+impedire
+injure /ˈɪndʒə/
+danneggiare
+injury /ˈɪndʒəɹi/
+ferita
+ink /ˈɪŋk/
+inchiostro
+inner /ˈɪnə/
+interno
+inquiry‐office /ɪnkwˈaɪəɹi ˈɒfɪs/
+ufficio d'informazioni
+inquisitive /ɪnkwˈɪzɪtˌɪv/
+curioso
+insane /ɪnsˈeɪn/
+matto
+insect /ˈɪnsɛkt/
+insetto
+inside /ɪnsˈaɪd/
+1. a, dentro
+2. interno
+insist /ɪnsˈɪst/
+insistere
+installment /ɪnstˈɔːlmənt/
+pagamento a rate
+instantly /ˈɪnstəntli/
+direttamente
+instigator /ˈɪnstɪɡˌeɪtə/
+attizzatore
+instructor /ɪnstɹˈʌktə/
+maestro
+instrument /ˈɪnstɹəmənt/
+strumento
+insult /ˈɪnsʌlt/
+1. insultare, offendere
+insurance /ɪnʃˈʊəɹəns/
+assicurazione
+intend /ɪntˈɛnd/
+intendere
+intention /ɪntˈɛnʃən/
+intenzione
+inter /ɪntˈɜː/
+seppellire
+intercessor /ˌɪntəsˈɛsə/
+avvocato
+interest /ˈɪntɹəst/
+1. interessare
+2. interesse
+interesting /ˈɪntɹəstɪŋ/
+interessante
+internal /ɪntˈɜːnəl/
+interno
+interrupt /ˈɪntəɹˌʌpt/
+interrompere
+intestine /ɪntˈɛstɪn/
+intestino
+into /ˈɪntʊ/
+a, dentro
+intoxicated /ɪntˈɒksɪkˌeɪtɪd/
+brillo, ubriaco
+introduce /ˌɪntɹədjˈuːs/
+presentare
+invent /ɪnvˈɛnt/
+inventare
+invest /ɪnvˈɛst/
+investire
+investigation /ɪnvˌɛstɪɡˈeɪʃən/
+esame
+invite /ɪnvˈaɪt/
+invitare
+invoice /ˈɪnvɔɪs/
+fattura
+in /ˈɪn/
+attivo
+in /ˈɪn/
+1. inoltre
+2. d'altronde
+in /ˈɪn/
+come se
+in /ˈɪn/
+contante
+in /ˈɪn/
+contro
+in /ˈɪn/
+di fatto
+in /ˈɪn/
+in nessun modo
+in /ˈɪn/
+all'inizio, dapprima, dapprincipio
+in /ˈɪn/
+di sera
+in /ˈɪn/
+di mattina
+in /ˈɪn/
+in tempo
+in /ˈɪn/
+invano
+in /ˈɪn/
+come
+iron /ˈaɪən/
+1. ferro
+2. ferro da stiro
+irrigate /ˈɪɹɪɡˌeɪt/
+annaffiare, bagnare, innaffiare
+island /ˈaɪlənd/
+isola
+issue /ˈɪʃuː/
+proclamare, pubblicare
+itself /ɪtsˈɛlf/
+stesso
+jack /dʒˈak/
+cricco
+jade /dʒˈeɪd/
+1. affaticare, stancare
+2. spossare
+jail /dʒˈeɪl/
+prigione
+jam /dʒˈam/
+marmelata
+jaw /dʒˈɔː/
+mascella
+jawbone /dʒˈɔːbəʊn/
+mascella
+jealousy /dʒˈɛləsi/
+gelosia
+jest /dʒˈɛst/
+scherzare
+jeweller /dʒˈuːələ/
+gioielliere
+job /dʒˈɒb/
+1. lavoro
+2. funzione, impiego
+3. compito
+join /dʒˈɔɪn/
+1. congiungere
+2. unirsi
+3. legare
+joint /dʒˈɔɪnt/
+comune
+joke /dʒˈəʊk/
+1. scherzare
+2. scherzo
+journal /dʒˈɜːnəl/
+giornale
+journalist /dʒˈɜːnəlˌɪst/
+giornalista
+journey /dʒˈɜːni/
+viaggio
+joy /dʒˈɔɪ/
+gioia
+judge /dʒˈʌdʒ/
+1. giudice
+2. critico
+3. giudicare
+judgement /dʒˈʌdʒmənt/
+decreto, deliberazione
+judgment /dʒˈʌdʒmənt/
+giudizio
+jug /dʒˈʌɡ/
+1. brocca
+2. cassa, tinozza, vaso
+jump /dʒˈʌmp/
+1. saltare
+2. salto
+just /dʒˈʌst/
+1. non ... che, soltanto
+2. fra poco, immediatamente, subito
+keel /kˈiːl/
+chiglia
+keep /kˈiːp/
+1. conservare
+2. osservare
+3. compiere, eseguire
+4. salvare
+keeper /kˈiːpə/
+archivista
+keepsake /kˈiːpseɪk/
+memoria
+keep /kˈiːp/
+durare
+keep /kˈiːp/
+non toccare
+kettle /kˈɛtəl/
+calderotto
+key /kˈiː/
+chiave
+keyboard /kˈiːbɔːd/
+pianola, tastiera
+kidney /kˈɪdni/
+rene
+kill /kˈɪl/
+ammazzare, uccidere
+kind /kˈaɪnd/
+1. amichevole, benevole, carino, cortese, gradevole, grazioso
+2. genere, specie
+kindle /kˈɪndəl/
+accendere
+kingdom /kˈɪŋdəm/
+regno
+kiss /kˈɪs/
+1. baciare
+2. bacio
+kitchen /kˈɪtʃən/
+cucina
+klaxon /klˈaksən/
+tromba
+knee /nˈiː/
+ginocchio
+kneel /nˈiːl/
+inginocchiarsi
+knife /nˈaɪf/
+coltello
+knob /nˈɒb/
+tenaglie
+knock /nˈɒk/
+colpire, picchiare
+knot /nˈɒt/
+nodo
+know /nˈəʊ/
+1. conoscere
+2. sapere
+knowledge /nˈɒlɪdʒ/
+conoscenza
+know /nˈəʊ/
+1. sapere
+2. conoscenze
+laborer /lˈeɪbəɹə/
+operaio
+labor /lˈeɪbə/
+ufficio di collocamento
+labourer /lˈeɪbɜːɹə/
+operaio
+labour /lˈeɪbə/
+ufficio di collocamento
+lack /lˈak/
+mancanza
+lad /lˈad/
+ragazzo
+ladder /lˈadə/
+scala
+laddie /lˈadi/
+ragazzo
+lady /lˈeɪdi/
+signora
+lady /lˈeɪdi/
+assistente
+laggard /lˈaɡəd/
+ritardatario
+laid /lˈeɪd/
+costretto a letto
+lake /lˈeɪk/
+lago
+lamb /lˈam/
+agnello
+land /lˈand/
+1. paese
+2. terra
+lane /lˈeɪn/
+vicolo
+language /lˈaŋɡwɪdʒ/
+lingua
+lapsed /lˈapsd/
+decrepito
+large /lˈɑːdʒ/
+grande
+lark /lˈɑːk/
+allodola
+lass /lˈas/
+piccola, ragazza
+last /lˈast/
+1. durare
+2. scorso, ultimo
+3. passato
+lasting /lˈastɪŋ/
+continuo, durevole, permanente
+last /lˈast/
+ieri sera
+late /lˈeɪt/
+tardo
+laud /lˈɔːd/
+lodare
+laugh /lˈaf/
+1. ridere
+2. riso
+laughter /lˈaftə/
+risa
+laundry /lˈɔːndɹi/
+lavanderia
+laurel /lˈɔːɹəl/
+alloro
+lawless /lˈɔːləs/
+dissoluto, licenzioso
+lawn /lˈɔːn/
+tappeto erboso
+lawsuit /lˈɔːsuːt/
+processo
+lawyer /lˈɔɪə/
+avvocato
+lay /lˈeɪ/
+mettere, ponere
+lay /lˈeɪ/
+prendere
+lazy /lˈeɪzi/
+pigro
+lead /lˈiːd/
+1. condurre, guidare
+2. piombo
+leader /lˈiːdə/
+capo
+leaf /lˈiːf/
+foglia, foglio
+league /lˈiːɡ/
+banda
+lean /lˈiːn/
+1. sostenere
+2. appoggiarsi
+3. magro
+4. sottile
+leap‐year /lˈiːp jˈiə/
+anno bisestile
+leap /lˈiːp/
+1. saltare
+2. salto
+learn /lˈɜːn/
+imparare
+leather /lˈɛðə/
+cuoio
+leave /lˈiːv/
+1. andarsene, partire
+2. abbandonare
+leave /lˈiːv/
+abbandonare, lasciare
+leek /lˈiːk/
+aglio
+left /lˈɛft/
+1. sinistro
+2. sinistra
+left /lˈɛft/
+sinistra
+leg /lˈɛɡ/
+gamba
+lemon /lˈɛmən/
+limone
+lentil /lˈɛntəl/
+lenticchia
+lesson /lˈɛsən/
+lezione
+less /lˈɛs/
+di meno in meno
+let /lˈɛt/
+affittare
+letter /lˈɛtə/
+lettera
+letterbox /lˈɛtəbˌɒks/
+buca delle lettere
+lettuce /lˈɛtɪs/
+lattuga
+let /lˈɛt/
+insegnare
+level‐crossing /lˈɛvəl kɹˈɒsɪŋ/
+passaggio a livello
+level /lˈɛvəl/
+1. piano
+2. eguale
+3. livello
+lever /lˈiːvə/
+alzare
+librarian /laɪbɹˈeəɹiən/
+bibliotecario
+library /lˈaɪbɹəɹi/
+biblioteca
+licentious /laɪsˈɛnʃəs/
+dissoluto, licenzioso
+lid /lˈɪd/
+coperta
+lie /lˈaɪ/
+1. mentire
+2. bugia
+life /lˈaɪf/
+vita
+lift /lˈɪft/
+1. alzare
+2. salire
+3. ascensore
+light /lˈaɪt/
+1. accendere
+2. illuminare
+3. luce
+4. debole
+5. leggero
+lighter /lˈaɪtə/
+accendino
+lighthouse /lˈaɪthaʊs/
+faro
+lightning /lˈaɪtnɪŋ/
+baleno
+like /lˈaɪk/
+1. come
+2. simile
+3. apprezzare
+likely /lˈaɪkli/
+probabile
+likewise /lˈaɪkwaɪz/
+anche
+like /lˈaɪk/
+così
+limb /lˈɪm/
+membro
+lime‐tree /lˈaɪm tɹˈiː/
+tiglio
+lime /lˈaɪm/
+calce
+limit /lˈɪmɪt/
+1. limitare, restringere
+2. confine, frontiera
+limp /lˈɪmp/
+zoppicare
+linden‐tree /lˈɪndən tɹˈiː/
+tiglio
+line /lˈaɪn/
+1. lenza
+2. linea
+lineage /lˈɪnɪɪdʒ/
+discendenza, nascita, origine
+lion /lˈaɪən/
+leone
+lip /lˈɪp/
+labbro
+liquid /lˈɪkwɪd/
+liquido
+liquidate /lˈɪkwɪdˌeɪt/
+ammazzare, uccidere
+list /lˈɪst/
+lista
+listen /lˈɪsən/
+ascoltare
+listen /lˈɪsən/
+origliare
+little /lˈɪtəl/
+piccolo
+little /lˈɪtəl/
+poco a poco
+live /lˈaɪv/
+1. abitare, dimorare, stare
+2. vivere
+lively /lˈaɪvlɪ/
+spiritoso
+liver /lˈɪvə/
+fegato
+living‐room /lˈɪvɪŋ ɹˈuːm/
+stanza
+load /lˈəʊd/
+1. caricare
+2. carico
+loaf /lˈəʊf/
+pane
+loathe /lˈəʊð/
+detestare
+lobster /lˈɒbstə/
+aragosta
+location /ləʊkˈeɪʃən/
+luogo
+loch /lˈɒx/
+lago
+lock /lˈɒk/
+1. serratura
+2. serrare a chiave
+locust /lˈəʊkʌst/
+cavalletta
+lofty /lˈɒfti/
+alto
+logical /lˈɒdʒɪkəl/
+ragione
+long /lˈɒŋ/
+1. lungo
+2. a lungo, da molto, per molto tempo
+look /lˈʊk/
+1. parere
+2. apparenza, aria, aspetto
+3. guardare
+looking‐glass /lˈʊkɪŋ ɡlˈas/
+specchio
+look /lˈʊk/
+1. prendere a cuore
+2. badare
+look /lˈʊk/
+guardare
+look /lˈʊk/
+cercare
+lord /lˈɔːd/
+signore
+lorry /lˈɒɹi/
+1. autocarro, camion
+lose /lˈuːz/
+perdere
+loss /lˈɒs/
+perdita
+lost /lˈɒst/
+perduto
+loudly /lˈaʊdli/
+ad alta voce, forte
+lounge /lˈaʊndʒ/
+salotto
+louse /lˈaʊs/
+pidocchio
+lovable /lˈʌvəbəl/
+amabile, grazioso
+love /lˈʌv/
+1. amare, volere bene
+2. amore
+lovely /lˈʌvli/
+1. gradevole, piacevole
+2. bello, carino
+3. caro
+4. affascinante, amabile, grazioso
+low /lˈəʊ/
+basso
+lower‐arm /lˈəʊəɹ ˈɑːm/
+avambraccio
+low /lˈəʊ/
+bassa marea
+loyal /lˈɔɪəl/
+fedele
+luggage‐van /lˈʌɡɪdʒ vˈan/
+bagagliaio
+luggage /lˈʌɡɪdʒ/
+bagaglio
+lukewarm /lˈuːkwɔːm/
+tiepido
+lump /lˈʌmp/
+1. massa
+2. pezzo
+lunatic /lˈuːnətˌɪk/
+pazzo
+lung /lˈʌŋ/
+polmone
+luxury /lˈʌkʃəɹi/
+lusso
+machine /məʃˈiːn/
+macchina
+mackerel /mˈakəɹəl/
+sgombro
+mad /mˈad/
+1. matto
+2. rabbioso
+madam /mˈadəm/
+signora
+magazine /mˌaɡɐzˈiːn/
+rivista
+magpie /mˈaɡpaɪ/
+gazza
+maid /mˈeɪd/
+cameriera
+mail /mˈeɪl/
+posta
+mailbox /mˈeɪlbɒks/
+buca delle lettere
+mainly /mˈeɪnli/
+principalmente, soprattutto
+maintain /meɪntˈeɪn/
+conservare
+maintenance /mˈeɪntənəns/
+conservazione, preservazione
+maize /mˈeɪz/
+granturco
+majority /mədʒˈɒɹɪti/
+maggioranza
+make /mˈeɪk/
+commettere, fare
+make /mˈeɪk/
+offrire
+make /mˈeɪk/
+concludere
+make /mˈeɪk/
+errare, sbagliarsi
+make /mˈeɪk/
+progettare
+make /mˈeɪk/
+pulire
+make /mˈeɪk/
+fissare
+make /mˈeɪk/
+1. impiegare
+2. usare
+male /mˈeɪl/
+maschio
+man /mˈan/
+uomo
+manage /mˈanɪdʒ/
+1. amministrare, dirigere
+management /mˈanɪdʒmənt/
+1. amministrazione, direzione, gestione
+manager /mˈanɪdʒə/
+1. amministratore, direttore
+2. amministratore delegato
+manner /mˈanə/
+maniera, modo
+manufacture /mˌanjuːfˈaktʃə/
+fabbricare
+map /mˈap/
+carta
+marble /mˈɑːbəl/
+marmo
+march /mˈɑːtʃ/
+camminare
+mark /mˈɑːk/
+segno
+market /mˈɑːkɪt/
+1. bazar
+2. sbocco
+3. mercato
+marketplace /mˈɑːkɪtplˌeɪs/
+mercato
+mark /mˈɑːk/
+delimitare
+marmelade /mˈɑːmɪlˌeɪd/
+marmelata
+marriage /mˈaɹɪdʒ/
+matrimonio
+married /mˈaɹid/
+1. sposato
+married /mˈaɹid/
+coniugi, consorti
+marry /mˈaɹi/
+1. maritarsi
+2. ammogliarsi
+3. sposare
+marvel /mˈɑːvəl/
+stupirsi
+marvel /mˈɑːvəl/
+stupirsi
+masculine /mˈaskjʊlˌɪn/
+maschio
+mass /mˈas/
+1. folla
+2. affluenza
+3. massa
+mast /mˈast/
+albero
+master /mˈastə/
+maestro, padrone, principale
+match /mˈatʃ/
+fiammifero
+material /mətˈiəɹɪəl/
+materiale
+matter /mˈatə/
+1. affare, faccenda
+2. caso
+3. materia
+mattress /mˈatɹəs/
+materasso
+mature /mətʃˈʊə/
+maturo
+maximum /mˈaksɪməm/
+massimo
+maybe /mˈeɪbiː/
+forse
+mayhap /mˈeɪhap/
+forse
+mayor /mˈeə/
+sindaco
+meager /mˈiːɡə/
+1. magro
+2. miserabile, misero, povero
+meal /mˈiːl/
+fiore della farina
+mealies /mˈiːliz/
+granturco
+mean /mˈiːn/
+1. intendere
+2. medio
+3. mezzo
+4. significare
+5. mirare a
+meaning /mˈiːnɪŋ/
+1. intenzione
+2. significato
+means /mˈiːnz/
+1. arnese, strumento
+2. arnesi
+measure /mˈɛʒə/
+1. misurare
+2. misura
+measured /mˈɛʒəd/
+misurato
+measurement /mˈɛʒəmənt/
+1. dimensione
+2. misura
+meat /mˈiːt/
+carne
+mechanic /mɪkˈanɪk/
+meccanico
+meet /mˈiːt/
+incontrare
+meeting /mˈiːtɪŋ/
+convegno
+melon /mˈɛlən/
+melone
+melt /mˈɛlt/
+sgelare
+member /mˈɛmbə/
+membro
+memento /məmˈɛntəʊ/
+memoria
+memorable /mˈɛməɹəbəl/
+memorabile
+memorize /mˈɛməɹˌaɪz/
+imparare a memoria, memorizzare
+memory /mˈɛməɹi/
+memoria
+menace /mˈɛnɪs/
+1. minacciare
+2. minaccia
+mentally /mˈɛntəli/
+deficiente
+mention /mˈɛnʃən/
+menzionare
+menu /mˈɛnjuː/
+1. carta
+2. lista
+merchant /mˈɜːtʃənt/
+commerciante
+merciful /mˈɜːsifəl/
+misericordioso
+merit /mˈɛɹɪt/
+meritare
+merry /mˈɛɹi/
+allegro
+message /mˈɛsɪdʒ/
+1. messaggio
+2. annunzio, comunicato
+metal /mˈɛtəl/
+metallo
+method /mˈɛθəd/
+metodo
+methylated /mˈɛθɪlˌeɪtɪd/
+alcool denaturato
+midday /mˌɪddˈeɪ/
+mezzodì
+midday /mˌɪddˈeɪ/
+colazione
+middle /mˈɪdəl/
+1. medio
+2. mezzo
+midget /mˈɪdʒɪt/
+nano
+midnight /mˈɪdnaɪt/
+mezzanotte
+mild /mˈaɪld/
+mite
+milk /mˈɪlk/
+latte
+milliner /mˈɪlɪnə/
+modista
+million /mˈɪliən/
+milione
+mind /mˈaɪnd/
+osservare
+mineral /mˈɪnəɹəl/
+minerale
+ministry /mˈɪnɪstɹi/
+ministero
+minority /maɪnˈɒɹɪti/
+minorità
+mint /mˈɪnt/
+menta
+minutes /mˈɪnɪts/
+contravvenzione
+mirror /mˈɪɹə/
+specchio
+miscarriage /mɪskˈaɹɪdʒ/
+aborto
+miscarry /mɪskˈaɹi/
+abortire
+miscellaneous /mˌɪsəlˈeɪniəs/
+di ogni genere, ogni sorta di
+miserable /mˈɪzɹəbəl/
+1. cattivo
+2. povero
+3. afflitto, triste
+4. miserabile, misero
+miserly /mˈaɪzəli/
+avaro
+misery /mˈɪzəɹi/
+miseria
+mist /mˈɪst/
+nebbia
+mistake /mɪstˈeɪk/
+errore, sbaglio
+mixture /mˈɪkstʃə/
+mistura
+moan /mˈəʊn/
+gemere
+mobile /mˈəʊbaɪl/
+mobile
+mode /mˈəʊd/
+maniera, modo
+modest /mˈɒdəst/
+modesto
+moist /mˈɔɪst/
+1. umido
+money /mˈʌni/
+denaro, soldi
+monitor /mˈɒnɪtə/
+origliare
+monkey /mˈʌnki/
+scimmia
+monologue /mˈɒnəʊlˌɒɡ/
+monologo
+monotonous /mənˈɒtənəs/
+monotono
+monster /mˈɒnstə/
+mostro
+month /mˈʌnθ/
+mese
+monthly /mˈʌnθli/
+al mese, mensilmente
+monthly /mˈʌnθli/
+asciutta, balia
+monument /mˈɒnjuːmənt/
+monumento
+mood /mˈuːd/
+1. atmosfera
+2. umore
+moon /mˈuːn/
+luna
+moped /mˈəʊpɛd/
+ciclomotore
+morality /mɒɹˈalɪti/
+virtú
+moreover /mɔːɹˈəʊvə/
+d'altronde, inoltre
+more /mˈɔː/
+di più in più
+morning /mˈɔːnɪŋ/
+mattina
+mosquito /məskˈiːtəʊ/
+zanzara
+most /mˈəʊst/
+estremamente
+mother‐in‐law /mˈʌðəɹ ɪn lˈɔː/
+suocera
+mother /mˈʌðə/
+madre
+motion /mˈəʊʃən/
+film, pellicola
+motor /mˈəʊtə/
+motore
+motorcycle /mˈəʊtəsˌaɪkəl/
+motocicletto
+mouldy /mˈəʊldi/
+ammuffito
+mount /mˈaʊnt/
+adattare, aggiustare
+mountain /mˈaʊntɪn/
+montagna, monte
+mountain /mˈaʊntɪn/
+montagne
+mountain /mˈaʊntɪn/
+spigolo
+mouse /mˈaʊs/
+sorcio, topo
+moustache /məstˈaʃ/
+baffi
+mouth /mˈaʊθ/
+1. bocca
+2. imboccatura
+move /mˈuːv/
+1. muovere
+2. muoversi
+movement /mˈuːvmənt/
+movimento
+movie /mˈuːvi/
+film, pellicola
+movie /mˈuːvi/
+cinema
+much /mˈʌtʃ/
+molto
+mud /mˈʌd/
+fango
+mudguard /mˈʌdɡɑːd/
+parafango
+mulberry‐tree /mˈʌlbəɹi tɹˈiː/
+gelso
+mule /mjˈuːl/
+mulo
+multiply /mˈʌltɪplˌaɪ/
+moltiplicare
+multitude /mˈʌltɪtjˌuːd/
+1. folla
+2. affluenza
+murk /mˈɜːk/
+oscurità, tenebre
+muscle /mˈʌsəl/
+muscolo
+museum /mjuːzˈiəm/
+museo
+mushroom /mˈʌʃɹuːm/
+fungo
+musician /mjuːzˈɪʃən/
+musicista
+mussel /mˈʌsəl/
+vongola
+mustard /mˈʌstəd/
+mostarda
+mute /mjˈuːt/
+muto
+mutton /mˈʌtən/
+carne di montone
+my /mˈaɪ/
+mio
+mysterious /mɪstˈiəɹɪəs/
+misterioso
+nail /nˈeɪl/
+1. chiodo
+2. unghia
+naked /nˈeɪkɪd/
+nudo
+name /nˈeɪm/
+nome
+napkin /nˈapkɪn/
+tovagliolo
+narrate /nɐɹˈeɪt/
+raccontare
+narrow /nˈaɹəʊ/
+stretto
+nasty /nˈasti/
+1. sgradevole, spiacevole
+2. mostruoso, schifoso
+3. cattivo
+4. disonesto
+nation /nˈeɪʃən/
+popolo
+national /nˈaʃənəl/
+nazionale
+nationality /nˌaʃənˈalɪti/
+cittadinanza
+naturally /nˈatʃəɹəli/
+naturalmente
+nature /nˈeɪtʃə/
+1. natura
+2. carattere, indole
+nausea /nˈɔːsɪə/
+avversione, ripugnanza
+navy /nˈeɪvi/
+marina
+near‐sighted /nˌiə sˈaɪtɪd/
+miope
+near /nˈiə/
+1. prossimo
+2. vicino
+nearby /niəbˈaɪ/
+1. prossimo
+2. vicino
+nearly /nˈiəli/
+quasi
+necessary /nˈɛsəsəɹi/
+necessario, occorrente
+neck /nˈɛk/
+collo
+necktie /nˈɛktaɪ/
+cravatta
+need /nˈiːd/
+1. aver bisogno di
+2. bisogno, fabbisogno
+needle /nˈiːdəl/
+ago
+neglect /nɪɡlˈɛkt/
+trascurare
+negligent /nˈɛɡlɪdʒənt/
+negligente, noncurante, sbadato
+neighbour /nˈeɪbə/
+vicino
+neighbourhood /nˈeɪbəhˌʊd/
+circondario, distretto
+neighbouring /nˈeɪbəɹɪŋ/
+vicino
+nephew /nˈɛfjuː/
+nipote
+nerve /nˈɜːv/
+nervo
+net /nˈɛt/
+rete
+nettle /nˈɛtəl/
+ortica
+network /nˈɛtwɜːk/
+rete
+never /nˈɛvə/
+mai, non ... mai
+new /njˈuː/
+nuovo
+newspaper /njˈuːzpeɪpə/
+giornale
+next /nˈɛkst/
+1. dietro, dopo
+2. in seguito, poi
+3. prossimo
+4. seguente
+next /nˈɛkst/
+accanto
+nice /nˈaɪs/
+1. gradevole, piacevole
+2. buono
+nickname /nˈɪkneɪm/
+soprannome
+niece /nˈiːs/
+nipote
+night /nˈaɪt/
+notte
+nightingale /nˈaɪtɪŋɡˌeɪl/
+usignolo, usignuolo
+nine /nˈaɪn/
+nove
+nineteen /nˈaɪntiːn/
+diciannove
+ninety /nˈaɪnti/
+novanta
+no /nˈəʊ/
+non
+nobility /nəʊbˈɪlɪti/
+nobiltà
+node /nˈəʊd/
+nodo
+noise /nˈɔɪz/
+rumore
+non‐military /nˈɒn mˈɪlɪtəɹi/
+civile
+noon /nˈuːn/
+mezzodì
+north /nˈɔːθ/
+nord
+nose /nˈəʊz/
+naso
+not /nˈɒt/
+no
+notary /nˈəʊtəɹi/
+notaio
+note /nˈəʊt/
+1. biglietto
+2. annotazione, nota
+notebook /nˈəʊtbʊk/
+1. fascicolo
+2. taccuino
+notice /nˈəʊtɪs/
+1. affisso, cartellone
+2. avviso
+3. osservare
+4. osservazione
+5. annunzio, comunicato
+notification /nˌəʊtɪfɪkˈeɪʃən/
+avviso
+notion /nˈəʊʃən/
+idea, nozione
+not /nˈɒt/
+1. in nessun modo
+2. niente affatto
+not /nˈɒt/
+in nessun modo
+nourish /nˈʌɹɪʃ/
+alimentare
+nourishment /nˈʌɹɪʃmənt/
+alimento, cibo
+novel /nˈɒvəl/
+1. nuovo
+2. romanzo
+nowadays /nˈaʊədˌeɪz/
+oggigiorno
+nowhere /nˈəʊweə/
+in nessun luogo
+now /nˈaʊ/
+di quando in quando, ogni tanto
+no /nˈəʊ/
+si capisce
+no /nˈəʊ/
+non ... più
+nude /njˈuːd/
+nudo
+number /nˈʌmbə/
+numero
+numeral /njˈuːməɹəl/
+numero
+nurse /nˈɜːs/
+1. curare
+2. infermiera
+3. badare
+4. asciutta, balia
+nut /nˈʌt/
+1. noce
+2. madrevite
+nuts /nˈʌts/
+matto
+oak /ˈəʊk/
+quercia
+oath /ˈəʊθ/
+giuramento
+oats /ˈəʊts/
+avena
+obedient /əʊbˈiːdiənt/
+ubbidiente
+obey /əʊbˈeɪ/
+ubbidire
+object /ˈɒbdʒɛkt/
+cosa, ogetto
+objectionable /ɒbdʒˈɛkʃənəbəl/
+biasimevole
+obligation /ˌɒblɪɡˈeɪʃən/
+dovere
+observation /ɒbzəvˈeɪʃən/
+osservazione
+observe /ɒbzˈɜːv/
+1. osservare
+2. compiere, eseguire
+obstinate /ˈɒbstɪnət/
+ostinato
+obstruct /ɒbstɹˈʌkt/
+sbarrare
+obtuse /ɒbtjˈuːs/
+smussato, spuntato
+obvious /ˈɒbvɪəs/
+chiaro, evidente, palese
+obviously /ˈɒbvɪəsli/
+evidentemente
+occupation /ˌɒkjʊpˈeɪʃən/
+1. mestiere
+2. occupazione
+occupy /ˈɒkjʊpˌaɪ/
+occupare
+occur /əkˈɜː/
+accadere, arrivare, succedere
+odd /ˈɒd/
+strano
+of /ˈɒv/
+di
+offence /əfˈɛns/
+scandalo
+offend /əfˈɛnd/
+1. insultare, offendere
+offer /ˈɒfə/
+1. offrire
+2. offerta
+3. presentare
+4. proporre
+office /ˈɒfɪs/
+1. ufficio
+2. funzione, impiego
+officer /ˈɒfɪsə/
+funzionario, impiegato
+official /əfˈɪʃəl/
+1. ufficiale
+2. funzionario, impiegato
+offset /ˈɒfsɛt/
+distanza
+offspring /ˈɒfspɹɪŋ/
+1. generazione
+2. discendente
+often /ˈɒfən/
+frequentemente, sovente, spesso
+of /ˈɒv/
+di ogni genere, ogni sorta di
+of /ˈɒv/
+famigerato
+of /ˈɒv/
+aristocratico, nobile
+of /ˈɒv/
+1. adatto, capace, idoneo
+2. utilizzabile, utile
+oil /ˈɔɪl/
+olio
+okay /əʊkˈeɪ/
+1. buono
+2. bene
+old /ˈəʊld/
+1. vecchio
+2. antico
+old /ˈəʊld/
+macerie
+olive‐tree /ˈɒlɪv tɹˈiː/
+olivo
+olive /ˈɒlɪv/
+oliva
+omen /ˈəʊmɛn/
+augurio
+omnibus /ˈɒmnɪbəs/
+autobus
+omnipotent /ɒmnˈɪpətənt/
+onnipotente
+omniscient /ɒmnˈɪsiənt/
+onnisciente
+on /ˈɒn/
+1. avanti
+2. a, dentro
+3. mediante, per mezzo di
+once /wˈɒns/
+una volta
+once /wˈɒns/
+ancora, di nuovo
+one /wˈɒn/
+un, un', una, uno
+one /wˈɒn/
+cento
+one /wˈɒn/
+mille
+one /wˈɒn/
+una volta
+onion /ˈʌniən/
+cipolla
+only /ˈəʊnli/
+1. non ... che, soltanto
+2. solo
+only /ˈəʊnli/
+appena
+on /ˈɒn/
+a rovescio, supino
+on /ˈɒn/
+apposta
+on /ˈɒn/
+perciò, per quésto
+on /ˈɒn/
+a sinistra
+on /ˈɒn/
+attraverso
+on /ˈɒn/
+a destra
+on /ˈɒn/
+esatto, preciso
+on /ˈɒn/
+di sopra
+open /ˈəʊpən/
+1. aprire
+2. aperto
+open /ˈəʊpən/
+aprire
+operative /ˈɒpəɹətˌɪv/
+operaio
+opposed /əpˈəʊzd/
+contro
+opposite /ˈɒpəsˌɪt/
+1. dirimpetto
+2. contro
+oppress /əpɹˈɛs/
+premere, serrare, stringere
+optician /ɒptˈɪʃən/
+ottico
+option /ˈɒpʃən/
+alternativa
+orange‐tree /ˈɒɹɪndʒ tɹˈiː/
+arancio
+orange /ˈɒɹɪndʒ/
+arancia
+orchard /ˈɔːtʃəd/
+frutteto
+ordain /ɔːdˈeɪn/
+destinare
+order /ˈɔːdə/
+1. ordinare
+2. ordine
+origin /ˈɒɹɪdʒˌɪn/
+nascita, origine
+originate /əɹˈɪdʒɪnˌeɪt/
+discendere
+ornament /ˈɔːnəmənt/
+decorare
+other /ˈʌðə/
+altro
+other /ˈʌðə/
+eccetto, salvo
+out /ˈaʊt/
+fuori
+outer /ˈaʊtə/
+esterne
+outfit /ˈaʊtfɪt/
+abito, costume
+outline /ˈaʊtlaɪn/
+progetto
+outside /aʊtsˈaɪd/
+1. esterne
+2. fuori
+over /ˈəʊvə/
+1. finito, terminato
+2. sopra
+overall /ˌəʊvəɹˈɔːl/
+completo, intero, totale, tutto
+overdrive /ˈəʊvədɹˌaɪv/
+1. affaticare, stancare
+2. spossare
+overhead /ˌəʊvəhˈɛd/
+di sopra
+override /ˌəʊvəɹˈaɪd/
+1. affaticare, stancare
+2. spossare
+overthrow /ˌəʊvəθɹˈəʊ/
+rovesciare
+over /ˈəʊvə/
+laggiú
+owe /ˈəʊ/
+dovere
+owl /ˈaʊl/
+gufo
+own /ˈəʊn/
+1. possedere
+2. proprio
+ox /ˈɒks/
+bue
+oyster /ˈɔɪstə/
+ostrica
+pace /pˈeɪs/
+passo
+pack /pˈak/
+avvolgere
+package /pˈakɪdʒ/
+avvolgere
+packet /pˈakɪt/
+pacco
+pad /pˈad/
+blocco
+padre /pˈɑːdɹeɪ/
+cappellano militare
+page /pˈeɪdʒ/
+pagina
+pail /pˈeɪl/
+secchia, secchio
+pain /pˈeɪn/
+dolore
+painful /pˈeɪnfəl/
+doloroso
+paint /pˈeɪnt/
+1. tingere
+2. dipingere
+painter /pˈeɪntə/
+pittore
+painting /pˈeɪntɪŋ/
+pittura
+palace /pˈalɪs/
+palazzo
+pale /pˈeɪl/
+pallido
+palm /pˈɑːm/
+palma
+panties /pˈantiz/
+mutande
+pants /pˈants/
+calzoni, pantaloni
+paper‐basket /pˈeɪpə bˈaskɪt/
+cestino per la carta
+paper /pˈeɪpə/
+1. documento
+2. carta
+3. tappezzare
+parade /pəɹˈeɪd/
+chiamata
+paraffin‐oil /pˈaɹəfˌɪn ˈɔɪl/
+petrolio
+paragraph /pˈaɹəɡɹˌaf/
+capoverso
+parallel /pˈaɹəlˌɛl/
+parallelo
+parapet /pˈaɹəpɪt/
+parapetto
+parcel /pˈɑːsəl/
+pacco
+parents‐in‐law /pˈeəɹənts ɪn lˈɔː/
+suoceri
+parents /pˈeəɹənts/
+genitori, padre e madre
+parlour /pˈɑːlə/
+salotto
+parrot /pˈaɹət/
+pappagallo
+parsley /pˈɑːsli/
+prezzemolo
+part /pˈɑːt/
+1. ingrediente
+2. parte, porzione
+partial /pˈɑːʃəl/
+parziale
+partially /pˈɑːʃəli/
+in parte, parzialmente
+participate /pɑːtˈɪsɪpˌeɪt/
+spartire
+participle /pɑːtˈɪsɪpəl/
+participio
+particular /pətˈɪkjʊlə/
+1. separato
+2. speciale
+partly /pˈɑːtli/
+in parte, parzialmente
+partridge /pˈɑːtɹɪdʒ/
+pernice
+party /pˈɑːti/
+1. partito, seguito
+2. festa
+pass /pˈas/
+passare
+passable /pˈasəbəl/
+praticabile
+passage /pˈasɪdʒ/
+corridoio
+passenger /pˈasɪndʒə/
+passagiere
+passenger /pˈasɪndʒə/
+treno omnibus
+passion /pˈaʃən/
+ardore
+passport /pˈaspɔːt/
+passaporto
+pass /pˈas/
+morire
+pass /pˈas/
+percorrere
+past /pˈast/
+passato
+paste /pˈeɪst/
+pasta
+pastor /pˈastə/
+1. curato
+2. prete, sacerdate
+pate /pˈateɪ/
+testa
+path /pˈaθ/
+sentiero
+patience /pˈeɪʃəns/
+pazienza
+paw /pˈɔː/
+gamba
+pay /pˈeɪ/
+pagare
+payment /pˈeɪmənt/
+pagamento
+pay /pˈeɪ/
+aspettare, attendere
+pay /pˈeɪ/
+aspettare, attendere
+pay /pˈeɪ/
+spendere
+pea /pˈiː/
+pisello
+peace /pˈiːs/
+pace
+peak /pˈiːk/
+punta
+peanut /pˈiːnʌt/
+arachide
+pear‐tree /pˈeə tɹˈiː/
+pero
+pear /pˈeə/
+pera
+peculiar /pɪkjˈuːliə/
+strano
+peer /pˈiə/
+fissare
+pelvis /pˈɛlvɪs/
+bacino
+pencil /pˈɛnsəl/
+lapis, matita
+penetrate /pˈɛnɪtɹˌeɪt/
+penetrare
+peninsula /pənˈɪnsjʊlə/
+penisola
+penitent /pˈɛnɪtənt/
+pentito
+penthouse /pˈɛnthaʊs/
+tettoia
+people /pˈiːpəl/
+1. gente
+2. popolo
+pepper /pˈɛpə/
+pepe
+per /pˈɜː/
+a, dentro
+perceive /pəsˈiːv/
+1. accorgersi
+2. intravedere, scorgere
+perchance /pətʃˈans/
+forse
+perfect /pˈɜːfɛkt/
+perfetto
+perform /pəfˈɔːm/
+1. apparire
+2. entrare
+3. commettere, fare
+4. compiere, eseguire
+5. presentare
+perhaps /pəhˈaps/
+forse
+peril /pˈɛɹəl/
+pericolo
+period /pˈiəɹɪəd/
+punto
+periodical /pˌiəɹɪˈɒdɪkəl/
+rivista
+permanent /pˈɜːmənənt/
+costante
+permission /pəmˈɪʃən/
+accordo
+permit /pˈɜːmɪt/
+permettere
+perplexed /pəplˈɛkst/
+confuso, turbato
+persecute /pˈɜːsɪkjˌuːt/
+perseguire, perseguitare
+persecution /pˌɜːsɪkjˈuːʃən/
+1. inseguimento
+person /pˈɜːsən/
+persona
+personal /pˈɜːsənəl/
+1. personale
+2. proprio
+persuade /pəswˈeɪd/
+convincere
+petition /pətˈɪʃən/
+petizione
+petitioner /pətˈɪʃənə/
+petente, postulante, supplicante
+petrol /pˈɛtɹəl/
+benzina
+petroleum /pətɹˈəʊliːəm/
+petrolio
+petulant /pˈɛtjʊlənt/
+cattivo
+pheasant /fˈɛzənt/
+fagiano
+philosopher /fɪlˈɒsəfə/
+filosofo
+photograph /fˈəʊtəɡɹˌaf/
+1. fotografo
+photography /fətˈɒɡɹəfi/
+fotografia
+physical /fˈɪzɪkəl/
+fisico
+physician /fɪzˈɪʃən/
+dottore, medico
+pick /pˈɪk/
+1. rompere, staccare
+2. pungere
+pick /pˈɪk/
+eleggere, scegliere
+pick /pˈɪk/
+1. ottenere
+2. raccogliere
+3. prendere
+picture /pˈɪktʃə/
+1. illustrazione, immagine, pittura
+2. figura
+picture /pˈɪktʃə/
+cartolina illustrata
+piece /pˈiːs/
+1. parte, porzione
+2. pezzo
+pig /pˈɪɡ/
+porco
+pigeon /pˈɪdʒən/
+piccione
+pike /pˈaɪk/
+luccio
+pile /pˈaɪl/
+folla
+pilgrimage /pˈɪlɡɹɪmɪdʒ/
+pelegrinaggio
+pillow /pˈɪləʊ/
+guanciale
+pincers /pˈɪnsəz/
+pinzette
+pine‐tree /pˈaɪn tɹˈiː/
+pino
+pine /pˈaɪn/
+pino
+pineapple /pˈaɪnapəl/
+ananas, ananasso
+pink /pˈɪŋk/
+1. garofano
+2. rosa
+pioneer /paɪənˈiə/
+iniziatore, pioniere
+pipe /pˈaɪp/
+condotto
+pitcher /pˈɪtʃə/
+brocca
+placard /plˈakɑːd/
+affisso, cartellone
+place /plˈeɪs/
+1. adattare, aggiustare
+2. luogo
+3. mettere, ponere
+place /plˈeɪs/
+culla, luogo d'origine
+place /plˈeɪs/
+chiesa
+plain /plˈeɪn/
+1. piano
+2. distinto
+plan /plˈan/
+1. intenzione
+2. progetto
+3. progettare
+plane /plˈeɪn/
+1. aereo, aeroplano
+2. progetto
+3. pialla
+plant /plˈant/
+1. piantare
+2. pianta
+plate /plˈeɪt/
+piatto
+platform /plˈatfɔːm/
+piattaforma
+platter /plˈatə/
+piatto
+play /plˈeɪ/
+1. giocare, suonare
+plaza /plˈɑːzə/
+piazza
+plea /plˈiː/
+argomento
+pleasant /plˈɛzənt/
+gradevole, piacevole
+pleasantly /plˈɛzəntli/
+piacevolmente
+please /plˈiːz/
+piacere
+pleased /plˈiːzd/
+contento
+pleasure /plˈɛʒə/
+piacere
+plenty /plˈɛnti/
+abbondanza, affluenza
+plough /plˈaʊ/
+aratro
+pluck /plˈʌk/
+rompere, staccare
+plug /plˈʌɡ/
+candela
+plume /plˈuːm/
+penna
+plunge /plˈʌndʒ/
+tuffarsi
+poem /pˈəʊɪm/
+poema
+poet /pˈəʊɪt/
+poeta
+poetry /pˈəʊɪtɹi/
+poesia
+point /pˈɔɪnt/
+1. punta
+2. punto
+pointed /pˈɔɪntɪd/
+appuntato
+point /pˈɔɪnt/
+mostrare
+poison /pˈɔɪzən/
+1. avvelenare
+2. veleno
+poisonous /pˈɔɪzənəs/
+velenoso
+pole /pˈəʊl/
+barra
+police‐station /pəlˈiːs stˈeɪʃən/
+questura
+police /pəlˈiːs/
+polizia
+policeman /pəlˈiːsmən/
+1. guardia, poliziotto
+policy /pˈɒlɪsi/
+politica
+polite /pəlˈaɪt/
+cortese
+politeness /pəlˈaɪtnəs/
+cortesia
+political /pəlˈɪtɪkəl/
+politico
+politics /pˈɒlətˌɪks/
+politica
+pond /pˈɒnd/
+stagno
+pool /pˈuːl/
+unirsi
+poop /pˈuːp/
+poppa
+poopdeck /pˈuːpdɛk/
+1. poppa
+poor /pˈʊə/
+1. cattivo
+2. povero
+poplar /pˈɒplə/
+albero, pioppo
+population /pˌɒpjʊlˈeɪʃən/
+populazione
+pork /pˈɔːk/
+maiale
+port /pˈɔːt/
+porto
+portable /pˈɔːtəbəl/
+portabile, portatile
+portal /pˈɔːtəl/
+entrata
+portent /pˈɔːtənt/
+augurio
+porter /pˈɔːtə/
+facchino
+port /pˈɔːt/
+babordo
+pose /pˈəʊz/
+posare
+possess /pəzˈɛs/
+possedere
+possession /pəzˈɛʃən/
+possesso
+possible /pˈɒsəbəl/
+possibile
+possibly /pˈɒsəbli/
+forse
+post /pˈəʊst/
+1. funzione, impiego
+2. posta
+postage /pˈəʊstɪdʒ/
+affrancatura
+postage /pˈəʊstɪdʒ/
+bollo, francobollo
+postal /pˈəʊstəl/
+CAP, codice di avviamento postale
+postcard /pˈəʊstkɑːd/
+cartolina postale
+poster /pˈəʊstə/
+affisso, cartellone
+postman /pˈəʊstmən/
+portalettere, postino
+post /pˈəʊst/
+ufficio postale
+potato /pətˈeɪtəʊ/
+patata
+pottery /pˈɒtəɹi/
+stoviglie
+pour /pˈɔː/
+versare
+poverty /pˈɒvəti/
+povertà
+power /pˈaʊə/
+potere
+practicable /pɹˈaktɪkəbəl/
+praticabile
+practical /pɹˈaktɪkəl/
+reale
+practice /pɹˈaktɪs/
+1. applicare
+2. esercizio
+3. praticare
+praise /pɹˈeɪz/
+lodare
+prawn /pɹˈɔːn/
+granchiolino
+pray /pɹˈeɪ/
+pregare
+prayer /pɹˈeə/
+preghiera
+precipice /pɹˈɛsɪpˌɪs/
+abisso, burrone
+precursor /pɹɪkˈɜːsə/
+augurio
+preferably /pɹˈɛfɹəblˌɪ/
+piuttosto
+pregnant /pɹˈɛɡnənt/
+incinta
+prejudice /pɹˈɛdʒuːdˌɪs/
+pregiudizio
+premium /pɹˈiːmiəm/
+premio
+prepare /pɹɪpˈeə/
+1. allestire, preparare
+2. apprestare
+prepay /pɹɪpˈeɪ/
+affrancare, pestare
+presage /pɹˈɛsɪdʒ/
+augurio
+presence /pɹˈɛzəns/
+presenza
+present‐day /pɹˈɛzənt dˈeɪ/
+attuale
+present /pɹˈɛzənt/
+1. attuale
+2. dono, presente, regalo
+3. presentare
+present /pɹˈɛzənt/
+presentare
+preservation /pɹˌɛzəvˈeɪʃən/
+conservazione, preservazione
+preserve /pɹɪzˈɜːv/
+conservare
+press /pɹˈɛs/
+premere, serrare, stringere
+pressure /pɹˈɛʃə/
+pressione
+presume /pɹɪzjˈuːm/
+supporre
+pretty /pɹˈɪti/
+bellino, grazioso
+prevent /pɹɪvˈɛnt/
+impedire
+previously /pɹˈiːvɪəsli/
+davanti
+price /pɹˈaɪs/
+prezzo
+pricey /pɹˈaɪsi/
+caro, costoso
+prick /pɹˈɪk/
+cazzo
+priest /pɹˈiːst/
+1. curato, prete, sacerdate
+2. sacerdote
+principally /pɹˈɪnsɪpəli/
+principalmente, soprattutto
+principle /pɹˈɪnsɪpəl/
+principio
+print /pɹˈɪnt/
+stampare
+printer /pɹˈɪntə/
+tipografo
+prison /pɹˈɪzən/
+prigione
+prisoner /pɹˈɪzənə/
+arrestato, detenuto, prigioniero
+private /pɹˈaɪvət/
+1. particulare, privado
+2. senza impiego
+prize /pɹˈaɪz/
+premio
+probable /pɹˈɒbəbəl/
+probabile
+probably /pɹˈɒbəbli/
+probabilmente
+problem /pɹˈɒbləm/
+problema
+proceed /pɹəsˈiːd/
+continuare
+process /pɹˈəʊsɛs/
+azione, processo
+proclaim /pɹəklˈeɪm/
+proclamare, pubblicare
+proclamation /pɹˌɒklɐmˈeɪʃən/
+1. dichiarazione
+2. pubblicazione
+produce /pɹədjˈuːs/
+produrre
+product /pɹˈɒdʌkt/
+prodotto
+profess /pɹəfˈɛs/
+confessare
+profession /pɹəfˈɛʃən/
+professione
+profit /pɹˈɒfɪt/
+1. approfittare
+2. beneficio, guadagno, profitto, vantaggio
+profound /pɹəfˈaʊnd/
+fondo, profondo
+progress /pɹˈəʊɡɹɛs/
+1. miglioramento
+2. progresso
+prohibit /pɹəhˈɪbɪt/
+vietare
+project /pɹˈɒdʒɛkt/
+progetto
+promenade /pɹˌɒmənˈɑːd/
+passeggiata
+promise /pɹˈɒmɪs/
+1. promettere
+2. promessa
+promote /pɹəmˈəʊt/
+promuovere
+promotion /pɹəmˈəʊʃən/
+promozione
+prompt /pɹˈɒmpt/
+esatto, preciso
+pronounce /pɹənˈaʊns/
+pronunciare
+proof /pɹˈuːf/
+prova
+propeller /pɹəpˈɛlə/
+elica
+proper /pɹˈɒpə/
+decente
+property /pɹˈɒpəti/
+1. fattoria
+2. possesso
+prophesy /pɹˈɒfəsi/
+predire
+proportional /pɹəpˈɔːʃənəl/
+proporzionale
+prosecute /pɹˈɒsɪkjˌuːt/
+perseguire, perseguitare
+proselyte /pɹˈɒslaɪt/
+convertito
+prosper /pɹˈɒspə/
+prosperare
+protect /pɹətˈɛkt/
+1. proteggere
+2. riparare
+protection /pɹətˈɛkʃən/
+1. protezione
+protest /pɹˈəʊtɛst/
+1. protestare
+2. protesta
+protocol /pɹˈəʊtəkˌɒl/
+contravvenzione
+protégé /pɹˈɒtəʒˌeɪ/
+protetto
+protégée /pɹˌɒteɪɡˈeɪ/
+protetta
+proud /pɹˈaʊd/
+fiero, orgoglioso
+prove /pɹˈuːv/
+provare
+provided /pɹəvˈaɪdɪd/
+se
+provoke /pɹəvˈəʊk/
+incitare, spronare
+prow /pɹˈaʊ/
+prua
+prudent /pɹˈuːdənt/
+sensato
+pub /pˈʌb/
+bar
+public /pˈʌblɪk/
+pubblico
+publication /pˌʌblɪkˈeɪʃən/
+pubblicazione
+public /pˈʌblɪk/
+piazza
+publish /pˈʌblɪʃ/
+pubblicare
+pull /pˈʊl/
+tirare
+pull /pˈʊl/
+demolire
+pulse /pˈʌls/
+polso
+pulverize /pˈʌlvəɹˌaɪz/
+macinare
+pump /pˈʌmp/
+1. pompare
+2. pompa
+punctual /pˈʌŋktʃuːəl/
+esatto, preciso
+punish /pˈʌnɪʃ/
+castigare, punire
+punishment /pˈʌnɪʃmənt/
+punizione
+pupil /pjˈuːpəl/
+1. allievo, scolaro
+2. pupillo
+puppet /pˈʌpɪt/
+bambola
+purchase /pˈɜːtʃɪs/
+1. comperare, comprare
+2. acquisto, compra
+purchaser /pˈɜːtʃɪsə/
+cliente, compratore
+pure /pjˈʊə/
+puro
+purge /pˈɜːdʒ/
+pulire
+purity /pjˈʊɹɪti/
+pulizia
+purpose /pˈɜːpəs/
+proposito, scopo
+purser /pˈɜːsə/
+commissario
+pursue /pəsjˈuː/
+perseguire, perseguitare
+pursuit /pəsˈuːt/
+1. inseguimento
+push /pˈʊʃ/
+1. spingere
+2. spinta, urto
+put /pˈʊt/
+mettere, ponere
+put /pˈʊt/
+mettere, ponere
+put /pˈʊt/
+1. togliere
+2. imbarcare, sbrigarsi di
+put /pˈʊt/
+affigere
+put /pˈʊt/
+posare
+put /pˈʊt/
+affrancare, pestare
+put /pˈʊt/
+presentare
+put /pˈʊt/
+spegnere, spengere
+put /pˈʊt/
+adattare, aggiustare
+put /pˈʊt/
+sopportare, tollerare
+quarter /kwˈɔːtə/
+circondario, distretto
+quarter /kwˈɔːtə/
+quarto d'ora
+quash /kwˈɒʃ/
+distruggere
+quay /kˈiː/
+piattaforma
+quell /kwˈɛl/
+soffocare
+question /kwˈɛstʃən/
+1. domanda
+2. contestare, disputare
+quickly /kwˈɪkli/
+presto
+quiet /kwˈaɪət/
+calmare, placare
+quit /kwˈɪt/
+abbandonare
+quite /kwˈaɪt/
+1. abbastanza
+2. assai, molto
+quiver /kwˈɪvə/
+tremare
+quotation /kwəʊtˈeɪʃən/
+citazione
+quotation /kwəʊtˈeɪʃən/
+virgolette
+quote /kwˈəʊt/
+citare
+quotes /kwˈəʊts/
+virgolette
+rabbit /ɹˈabɪt/
+coniglio
+rabid /ɹˈeɪbɪd/
+rabbioso
+race /ɹˈeɪs/
+razza
+radiation /ɹˌeɪdɪˈeɪʃən/
+radioterapia
+radio /ɹˈeɪdɪˌəʊ/
+radio
+radish /ɹˈadɪʃ/
+ravanello
+ragout /ɹˈaɡaʊt/
+cibreo
+railing /ɹˈeɪlɪŋ/
+parapetto
+railroad /ɹˈeɪlɹəʊd/
+ferrovia
+railway /ɹˈeɪlweɪ/
+ferrovia
+railway /ɹˈeɪlweɪ/
+vagone, vettura
+rain /ɹˈeɪn/
+1. piovere
+2. pioggia
+rainbow /ɹˈeɪnbəʊ/
+arcobaleno
+raise /ɹˈeɪz/
+alzare
+ranch /ɹˈantʃ/
+fattoria
+rand /ɹˈand/
+orlo
+rapier /ɹˈeɪpiə/
+spada
+rare /ɹˈeə/
+raro
+raspberry /ɹˈasbəɹi/
+lampone
+rat /ɹˈat/
+topo
+rate /ɹˈeɪt/
+apprezzare, stimare, valutare
+rather /ɹˈɑːðə/
+1. piuttosto
+2. abbastanza
+raven /ɹˈeɪvən/
+corvo
+raw /ɹˈɔː/
+crudo
+ray /ɹˈeɪ/
+sciopero
+reach /ɹˈiːtʃ/
+arrivare
+react /ɹɪˈakt/
+reagire
+read /ɹˈiːd/
+leggere
+ready /ɹˈɛdi/
+pronto
+real /ɹˈiəl/
+reale
+reality /ɹɪˈalɪti/
+verità
+realize /ɹˈiəlaɪz/
+capire, comprendere
+really /ɹˈiəlɪ/
+davvero, infatti
+rear‐lamp /ɹˈiə lˈamp/
+luce di posizione, fanale posteriore
+rear‐light /ɹˈiə lˈaɪt/
+luce di posizione, fanale posteriore
+rear /ɹˈiə/
+retroguardia
+rearguard /ɹˈiəɡɑːd/
+retroguardia
+reason /ɹˈiːzən/
+1. causa
+2. ragione
+reasonable /ɹˈiːzənəbəl/
+sensato
+rebuke /ɹɪbjˈuːk/
+1. biasimare, disapprovare
+2. riprendere
+receipt /ɹɪsˈiːt/
+ricevuta
+receive /ɹɪsˈiːv/
+1. accettare, accogliere
+2. ricevere
+recent /ɹˈiːsənt/
+fresco
+recently /ɹˈiːsəntli/
+recentemente
+recess /ɹˈiːsɛs/
+alcova
+recipient /ɹɪsˈɪpiənt/
+destinario
+recite /ɹɪsˈaɪt/
+recitare
+recognize /ɹˈɛkəɡnˌaɪz/
+riconoscere
+recollection /ɹɪkəlˈɛkʃən/
+memoria
+recommend /ɹˌɛkəmˈɛnd/
+raccomandare, vantare
+recommendable /ɹˌɛkəmˈɛndəbəl/
+raccomandabile
+recommendation /ɹˌɛkəmɛndˈeɪʃən/
+raccomandazione
+recruit /ɹɪkɹˈuːt/
+1. arruolare, ingaggiare
+red /ɹˈɛd/
+rosso
+redeemable /ɹɪdˈiːməbəl/
+rimborsabile, estinguibile
+redemption /ɹɪdˈɛmpʃən/
+ammortizzamento
+reduce /ɹɪdjˈuːs/
+respingere
+reek /ɹˈiːk/
+sentire
+referee /ɹˌɛfəɹˈiː/
+arbitro
+refined /ɹɪfˈaɪnd/
+delicato
+refusal /ɹɪfjˈuːzəl/
+rifiuto
+refuse /ɹɪfjˈuːz/
+rifiutarsi
+regard /ɹɪɡˈɑːd/
+1. considerazione, stima, riguardo, rispetto
+2. considerare
+3. guardare
+register /ɹˈɛdʒɪstə/
+raccomandare, vantare
+regret /ɹɪɡɹˈɛt/
+rincrescere
+regular /ɹˈɛɡjuːlə/
+regolare
+regularly /ɹˈɛɡjuːləli/
+frequentemente, sovente, spesso
+regulation /ɹˌɛɡjuːlˈeɪʃən/
+regola
+reject /ɹɪdʒˈɛkt/
+1. rifiutare
+2. rigettare
+3. rifiutarsi
+relate /ɹɪlˈeɪt/
+raccontare
+related /ɹɪlˈeɪtɪd/
+congiunto, parento
+related /ɹɪlˈeɪtɪd/
+imparentato
+relation /ɹɪlˈeɪʃən/
+relazione
+relations /ɹɪlˈeɪʃənz/
+parentado
+relationship /ɹɪlˈeɪʃənʃˌɪp/
+parentado, parentela
+relative /ɹˈɛlətˌɪv/
+1. parente
+2. relativo
+relatives /ɹˈɛlətˌɪvz/
+parentado
+release /ɹɪlˈiːs/
+liberare
+relinquish /ɹɪlˈɪnkwɪʃ/
+cedere
+remain /ɹɪmˈeɪn/
+1. resti dietro
+2. stare, restare, rimanere
+remit /ɹˈiːmɪt/
+annullare
+remote /ɹɪmˈəʊt/
+1. isolato
+2. distante, lontano
+remote /ɹɪmˈəʊt/
+telecomando
+rendezvous /ɹˈɒndɪvˌuː/
+appuntamento
+rent /ɹˈɛnt/
+affittare
+repair /ɹɪpˈeə/
+riparare
+repayable /ɹɪpˈeɪəbəl/
+rimborsabile, estinguibile
+repeat /ɹɪpˈiːt/
+ripetere
+repentance /ɹɪpˈɛntəns/
+pentimento, rimpianto
+repentant /ɹɪpˈɛntənt/
+pentito
+reply /ɹɪplˈaɪ/
+1. replicare, rispondere
+2. risposta
+report /ɹɪpˈɔːt/
+1. informare, insegnare
+2. annunciare, comunicare
+3. annunzio, comunicato
+repose /ɹɪpˈəʊz/
+1. riposarsi
+2. riposo
+represent /ɹˌɛpɹɪzˈɛnt/
+rappresentare
+representation /ɹˌɛpɹɪzˈɛntˈeɪʃən/
+figura
+representative /ɹˌɛpɹɪzˈɛntətˌɪv/
+delegato, deputato
+reproach /ɹɪpɹˈəʊtʃ/
+riprendere
+reprove /ɹɪpɹˈuːv/
+riprendere
+republic /ɹɪpˈʌblɪk/
+repubblica
+request /ɹɪkwˈɛst/
+chiedere
+require /ɹɪkwˈaɪə/
+aver bisogno di
+rescue /ɹˈɛskjuː/
+salvare
+resemble /ɹɪsˈɛmbəl/
+rassomiglare
+reserve /ɹɪzˈɜːv/
+1. ordinare
+2. riservare
+residence /ɹˈɛzɪdəns/
+1. residenza
+2. alloggio, appartamento
+respect /ɹɪspˈɛkt/
+1. rispettare
+2. rispetto
+respectable /ɹɪspˈɛktəbəl/
+onorevole, rispettabile
+respiration /ɹˌɛspɪɹˈeɪʃən/
+respirazione
+respond /ɹɪspˈɒnd/
+1. reagire
+2. replicare, rispondere
+responsible /ɹɪspˈɒnsəbəl/
+responsabile
+rest /ɹˈɛst/
+1. riposarsi
+2. riposo
+restaurant /ɹˈɛstɹɒnt/
+ristorante
+restrain /ɹɪstɹˈeɪn/
+dominare, governare
+restrict /ɹɪstɹˈɪkt/
+limitare, restringere
+result /ɹɪzˈʌlt/
+1. discendere
+2. risultato
+3. esito
+resumé /ɹɪzjuːmˈeɪ/
+sommario
+retain /ɹɪtˈeɪn/
+ritenere
+retardation /ɹɪtɑːdˈeɪʃən/
+ritardo
+retarded /ɹɪtˈɑːdɪd/
+deficiente
+retention /ɹɪtˈɛnʃən/
+conservazione, preservazione
+return‐ticket /ɹɪtˈɜːn tˈɪkɪt/
+biglietto d'andata e ritorno
+return /ɹɪtˈɜːn/
+1. restituire
+2. ritornare
+3. rivenire
+reveal /ɹɪvˈiːl/
+pubblicare
+revenge /ɹɪvˈɛndʒ/
+vendetta
+revue /ɹɪvjˈuː/
+rivista
+reward /ɹɪwˈɔːd/
+1. ricompensare
+2. ricompensa
+rhino /ɹˈaɪnəʊ/
+rinoceronte
+rhinoceros /ɹaɪnˈɒsəɹəs/
+rinoceronte
+ribbon /ɹˈɪbən/
+nastro
+rice /ɹˈaɪs/
+riso
+rich /ɹˈɪtʃ/
+ricco
+rickety /ɹˈɪkɪti/
+decrepito
+ride /ɹˈaɪd/
+camminare
+ridiculous /ɹɪdˈɪkjʊləs/
+ridicolo
+rifle /ɹˈaɪfəl/
+fucile
+right‐hand /ɹˈaɪt hˈand/
+destra
+right /ɹˈaɪt/
+1. destro
+2. corretto
+3. diritto
+righthand /ɹˈaɪthand/
+destro
+right /ɹˈaɪt/
+fra poco, immediatamente, subito
+right /ɹˈaɪt/
+fra poco, immediatamente, subito
+rigid /ɹˈɪdʒɪd/
+rigido
+rim /ɹˈɪm/
+orlo
+ring /ɹˈɪŋ/
+anello
+riotous /ɹˈaɪətəs/
+dissoluto, licenzioso
+ripe /ɹˈaɪp/
+maturo
+rise /ɹˈaɪz/
+1. salire
+2. alzarsi
+risk /ɹˈɪsk/
+1. arrischiare
+2. rischio
+river /ɹˈɪvə/
+fiume
+road /ɹˈəʊd/
+cammino, corsia, pista, strada, via
+roar /ɹˈɔː/
+muggire
+rob /ɹˈɒb/
+derubare
+robe /ɹˈəʊb/
+abito
+rock /ɹˈɒk/
+roccia
+rod /ɹˈɒd/
+barra
+roll‐call /ɹˈəʊl kˈɔːl/
+chiamata
+roll /ɹˈəʊl/
+panino
+roller‐blind /ɹˈəʊlə blˈaɪnd/
+persiana
+roller /ɹˈəʊlə/
+cilindro
+roof /ɹˈuːf/
+tetto
+room /ɹˈuːm/
+1. spazio
+2. camera
+rooster /ɹˈuːstə/
+gallo
+rough /ɹˈʌf/
+1. crudo
+2. brusco, rude
+round /ɹˈaʊnd/
+1. rotondo
+2. arrotondare
+3. intorno a
+round /ɹˈaʊnd/
+arrotondare
+rouse /ɹˈaʊz/
+1. incitare, spronare
+2. stimolare
+route /ɹˈuːt/
+cammino, corsia, pista, strada, via
+rubber /ɹˈʌbə/
+gomma
+rubbish /ɹˈʌbɪʃ/
+macerie
+rudder /ɹˈʌdə/
+remo
+rude /ɹˈuːd/
+rozzo, scortese
+rudiments /ɹˈuːdɪmənts/
+alfabeto
+ruin /ɹˈuːɪn/
+rovinare
+rule /ɹˈuːl/
+1. dominare, governare
+2. regola
+rump /ɹˈʌmp/
+sedere
+run /ɹˈʌn/
+1. fuga
+2. correre
+run /ɹˈʌn/
+colpire
+run /ɹˈʌn/
+fuggire
+rush /ɹˈʌʃ/
+affrettarsi
+rusty /ɹˈʌsti/
+arrugginito
+rye /ɹˈaɪ/
+segale
+sack /sˈak/
+borsa
+sad /sˈad/
+afflitto, triste
+sadness /sˈadnəs/
+tristezza
+safety /sˈeɪfti/
+sicurezza
+sagacious /saɡˈeɪʃəs/
+saggio
+sage /sˈeɪdʒ/
+1. salvia
+2. saggio
+sail /sˈeɪl/
+vela
+sailor /sˈeɪlə/
+marinaio
+salad /sˈaləd/
+insalata
+salary /sˈaləɹi/
+paga, salario
+sale /sˈeɪl/
+1. smercio, vendita
+sales /sˈeɪlz/
+sbocco
+sallow /sˈaləʊ/
+pallido
+salmon /sˈamən/
+salmone
+salon /sˈalɒn/
+salotto
+salt /sˈɒlt/
+sale
+salute /səlˈuːt/
+salutare
+sample /sˈampəl/
+campione
+sand /sˈand/
+sabbia
+satisfied /sˈatɪsfˌaɪd/
+contento
+sauce /sˈɔːs/
+salsa
+saucepan /sˈɔːspən/
+casseruola
+saucer /sˈɔːsə/
+piattino
+sausage /sˈɒsɪdʒ/
+salsiccia
+savage /sˈavɪdʒ/
+selvaggio
+save /sˈeɪv/
+salvare
+saw /sˈɔː/
+sega
+say /sˈeɪ/
+dire
+say /sˈeɪ/
+dire addio
+say /sˈeɪ/
+dire addio
+say /sˈeɪ/
+affermare
+scale /skˈeɪl/
+squama
+scales /skˈeɪlz/
+bilancia
+scandal /skˈandəl/
+1. maldicenza
+2. scandalo
+scarcely /skˈeəsli/
+appena
+scare /skˈeə/
+impaurire, spaventare
+scatter /skˈatə/
+versare
+schedule /ʃˈɛdjuːl/
+orario
+scheme /skˈiːm/
+progetto
+scholar /skˈɒlə/
+1. allievo, scolaro
+2. dotto, erudito
+school /skˈuːl/
+scuola
+science /sˈaɪəns/
+scienza
+scientist /sˈaɪəntɪst/
+scienziato
+scissors /sˈɪsəz/
+forbici
+scold /skˈəʊld/
+riprendere
+scratch /skɹˈatʃ/
+raschiare
+scream /skɹˈiːm/
+gridare
+screen /skɹˈiːn/
+schermo
+screw /skɹˈuː/
+vite
+screwdriver /skɹˈuːdɹaɪvə/
+cacciavite
+scuffle /skˈʌfəl/
+battaglia
+sculptor /skˈʌlptə/
+scultore
+sculpture /skˈʌlptʃə/
+scultura
+scythe /sˈaɪð/
+falce
+sea‐dog /sˈiː dˈɒɡ/
+foca
+sea /sˈiː/
+mare
+seagull /sˈiːɡʌl/
+gabbiano
+seal /sˈiːl/
+foca
+seasickness /sˈiːsɪknəs/
+mal di mare
+seaside /sˈiːsaɪd/
+costa
+season /sˈiːzən/
+stagione
+seat /sˈiːt/
+posto
+second /sˈɛkənd/
+secondo
+second /sˈɛkənd/
+pronipote
+secret /sˈiːkɹət/
+segreto
+secretion /sɪkɹˈiːʃən/
+secrezione
+section /sˈɛkʃən/
+divisione
+secure /sɪkjˈʊə/
+fissare
+security /sɪkjˈʊəɹɪti/
+sicurezza
+see /sˈiː/
+1. incontrare
+2. vedere
+3. visitare
+seek /sˈiːk/
+cercare
+seem /sˈiːm/
+parere
+seemly /sˈiːmli/
+conveniente
+seize /sˈiːz/
+afferrare
+seizure /sˈiːʒə/
+apoplessia
+seldom /sˈɛldəm/
+raramente
+self‐conscious /sˈɛlf kˈɒnʃəs/
+timido
+self‐interested /sˈɛlf ˈɪntɹəstɪd/
+egoistico
+self /sˈɛlf/
+stesso
+selfish /sˈɛlfɪʃ/
+egoistico
+sell /sˈɛl/
+vendere
+send /sˈɛnd/
+mandare
+send /sˈɛnd/
+imbarcare, sbrigarsi di
+sensible /sˈɛnsəbəl/
+sensato
+sensitive /sˈɛnsɪtˌɪv/
+sensibile
+sentence /sˈɛntəns/
+1. frase
+2. condannare
+separate /sˈɛpɹət/
+1. separato
+2. separare
+3. dividere
+serious /sˈiəɹɪəs/
+1. grave, importante
+2. serio
+serpent /sˈɜːpənt/
+serpente
+servant /sˈɜːvənt/
+servire
+serve /sˈɜːv/
+servire
+service /sˈɜːvɪs/
+1. uffizio divino
+2. servizio
+set /sˈɛt/
+1. apparecchio
+2. gruppo
+settlement /sˈɛtəlmənt/
+pareggiamento dei conti
+seven /sˈɛvən/
+sette
+seventeen /sˈɛvəntˌiːn/
+diciasette
+seventh /sˈɛvənθ/
+settimo
+seventy /sˈɛvənti/
+settanta
+several /sˈɛvɹəl/
+qualche volta, talvolta
+severe /sɪvˈiə/
+severo
+sex /sˈɛks/
+sesso
+shack /ʃˈak/
+1. baracca
+2. capanna
+shade /ʃˈeɪd/
+ombra
+shadow /ʃˈadəʊ/
+ombra
+shaft /ʃˈaft/
+albero
+shallow /ʃˈaləʊ/
+basso
+shame /ʃˈeɪm/
+vergogna
+shanty /ʃˈanti/
+baracca
+share /ʃˈeə/
+1. azione
+2. dividere
+3. parte, porzione
+4. spartire
+shareholder /ʃˈeəhəʊldə/
+azionista
+shark /ʃˈɑːk/
+pescecane
+sharp /ʃˈɑːp/
+1. affilato, tagliente
+2. acuto, aguzzo, appuntito, aspro, piccante
+3. giustamente, giusto
+shave /ʃˈeɪv/
+far la barba
+she‐goat /ʃiː ɡˈəʊt/
+capra
+she /ʃˈiː/
+lei
+shed /ʃˈɛd/
+1. tettoia
+2. baracca
+3. granaio
+4. versare
+sheep /ʃˈiːp/
+pecora
+sheet /ʃˈiːt/
+1. foglia, foglio
+2. lenzuolo
+sheet /ʃˈiːt/
+latta
+shelf /ʃˈɛlf/
+asse
+shell /ʃˈɛl/
+conchiglia
+shelter /ʃˈɛltə/
+1. riparo, rifugio
+2. riparare
+shine /ʃˈaɪn/
+brillare, risplendere
+shiver /ʃˈɪvə/
+tremare
+shoe /ʃˈuː/
+scarpa
+shoemaker /ʃˈuːmeɪkə/
+calzolaio
+shoot /ʃˈuːt/
+fucilare
+shop /ʃˈɒp/
+negozio
+shore /ʃˈɔː/
+costa
+short‐sighted /ʃˈɔːt sˈaɪtɪd/
+miope
+short /ʃˈɔːt/
+corto
+shortage /ʃˈɔːtɪdʒ/
+mancanza
+shortcoming /ʃˈɔːtkʌmɪŋ/
+mancanza
+shortness /ʃˈɔːtnəs/
+asma
+shoulder /ʃˈəʊldə/
+spalla
+shout /ʃˈaʊt/
+1. gridare
+2. grido
+show /ʃˈəʊ/
+mostrare
+shower /ʃˈaʊə/
+doccia
+shrew /ʃɹˈuː/
+megera
+shrub /ʃɹˈʌb/
+arbusto
+shut /ʃˈʌt/
+1. chiudere
+2. chiuso
+shy /ʃˈaɪ/
+timido
+sick /sˈɪk/
+malato
+side‐whiskers /sˈaɪd wˈɪskəz/
+baffi
+side /sˈaɪd/
+1. fianco, lato
+2. partito
+sideboard /sˈaɪdbɔːd/
+armadio
+siege /sˈiːdʒ/
+assedio
+sigh /sˈaɪ/
+sospirare
+sight /sˈaɪt/
+1. apparenza, aria, aspetto
+2. vista
+sightless /sˈaɪtləs/
+cieco
+sign /sˈaɪn/
+1. augurio
+2. prova
+3. segno
+4. firmare
+signal /sˈɪɡnəl/
+segno
+signalman /sˈɪɡnalmən/
+cantoniere, casellante
+signature /sˈɪɡnɪtʃə/
+firma
+signify /sˈɪɡnɪfˌaɪ/
+significare
+silent /sˈaɪlənt/
+silenzioso
+sill /sˈɪl/
+soglia
+silver /sˈɪlvə/
+argento
+similar /sˈɪmɪlə/
+simile
+simple /sˈɪmpəl/
+semplice
+since /sˈɪns/
+1. di
+2. considerato che, visto che
+sincere /sɪnsˈiə/
+sincero
+sing /sˈɪŋ/
+cantare
+singer /sˈɪŋə/
+1. cantante
+sir /sˈɜː/
+signore
+sister‐in‐law /sˈɪstəɹ ɪn lˈɔː/
+cognata
+sister /sˈɪstə/
+sorella
+sit /sˈɪt/
+1. covare
+2. essere seduto
+sitting‐room /sˈɪtɪŋ ɹˈuːm/
+1. stanza
+2. salotto
+sit /sˈɪt/
+1. sedersi
+six /sˈɪks/
+sei
+sixteen /sˈɪkstiːn/
+sedici
+sixth /sˈɪksθ/
+sesto
+sixty /sˈɪksti/
+sessanta
+sizable /sˈaɪzəbəl/
+considerevole, notevole, ragguardevole
+size /sˈaɪz/
+grandezza
+skeleton /skˈɛlɪtən/
+scheletro
+sketch /skˈɛtʃ/
+1. progettare
+2. progetto
+skilfulness /skˈɪlfəlnəs/
+abilità, destrezza
+skill /skˈɪl/
+abilità, destrezza
+skillful /skˈɪlfəl/
+abile, destro, lesto, sveglio
+skillfulness /skˈɪlfəlnəs/
+abilità, destrezza
+skim /skˈɪm/
+scremare
+skimpy /skˈɪmpi/
+magro
+skin /skˈɪn/
+pelle
+skinny /skˈɪni/
+magro
+skull /skˈʌl/
+cranio
+sky /skˈaɪ/
+cielo
+sky /skˈaɪ/
+azzurro
+slander /slˈandə/
+1. calunniare
+2. maldicenza
+slay /slˈeɪ/
+ammazzare, uccidere
+sleep /slˈiːp/
+1. dormire
+2. sonno
+sleeping‐car /slˈiːpɪŋ kˈɑː/
+vettura letti
+slender /slˈɛndə/
+sottile
+slice /slˈaɪs/
+tagliare
+slow /slˈəʊ/
+lento
+slug /slˈʌɡ/
+lumaca
+slum /slˈʌm/
+quartiere popolare, rione popolare
+small /smˈɔːl/
+piccolo
+smell /smˈɛl/
+sentire
+smell /smˈɛl/
+sentire di
+smile /smˈaɪl/
+1. sorridere
+2. sorriso
+smoke /smˈəʊk/
+1. fumare
+2. fumo
+smokers /smˈəʊkəz/
+fumatori
+smokestack /smˈəʊkstak/
+fumaiuolo
+smooth /smˈuːð/
+1. piano
+2. liscio
+snail /snˈeɪl/
+1. chiocciola
+2. chiocciolina
+snake /snˈeɪk/
+serpente
+snore /snˈɔː/
+russare
+snow /snˈəʊ/
+1. nevicare
+2. neve
+so /sˈəʊ/
+così
+sober /sˈəʊbə/
+sobrio
+sobriquet /sˈɒbɹɪkˌeɪ/
+soprannome
+social /sˈəʊʃəl/
+sociale
+society /səsˈaɪəti/
+compagnia
+soft /sˈɒft/
+1. dolce
+2. molle
+soil /sˈɔɪl/
+1. insudiciare, sporcare
+2. terra
+sole /sˈəʊl/
+1. pianta
+2. solo
+3. sogliola
+solicitor /səlˈɪsɪtə/
+avvocato
+soliloquy /səlˈɪləkwˌɪ/
+monologo
+solitary /sˈɒlɪtəɹi/
+solo
+solve /sˈɒlv/
+risolvere
+somber /sˈɒmə/
+afflitto, triste
+sometimes /sˈʌmtaɪmz/
+qualche volta, talvolta
+somewhere /sˈʌmweə/
+in qualche luogo
+son‐in‐law /sˈʌn ɪn lˈɔː/
+genero
+son /sˈʌn/
+figlio, figliolo
+song /sˈɒŋ/
+canzone
+soon /sˈuːn/
+fra poco
+soothe /sˈuːð/
+calmare, placare
+sorrow /sˈɒɹəʊ/
+tristezza
+sort /sˈɔːt/
+genere, specie
+sound /sˈaʊnd/
+1. sonare
+2. suono
+soup /sˈuːp/
+minestra
+sour /sˈaʊə/
+1. acido, agro
+2. brusco, rude
+source /sˈɔːs/
+fonte, sorgente
+south /sˈaʊθ/
+sud
+souvenir /sˌuːvənˈiə/
+memoria
+sow /sˈəʊ/
+seminare
+so /sˈəʊ/
+arrivederci
+so /sˈəʊ/
+così così
+so /sˈəʊ/
+per così dire
+spa /spˈɑː/
+bagni, stazione balneare
+space /spˈeɪs/
+spazio
+spanner /spˈanə/
+chiave
+spark /spˈɑːk/
+scintilla
+spark /spˈɑːk/
+candela
+sparrow /spˈaɹəʊ/
+passero
+speak /spˈiːk/
+parlare
+special /spˈɛʃəl/
+1. separato
+2. speciale
+specimen /spˈɛsɪmən/
+campione
+spectacles /spˈɛktəkəlz/
+occhiali
+speechless /spˈiːtʃləs/
+muto
+speed /spˈiːd/
+1. velocità
+2. andatura
+speed /spˈiːd/
+accelerare
+spell /spˈɛl/
+compitare
+spend /spˈɛnd/
+1. spendere
+2. passare
+sphere /sfˈiə/
+sfera
+spider /spˈaɪdə/
+ragno
+spiked /spˈaɪkt/
+appuntato
+spinach /spˈɪnɪtʃ/
+spinaci
+spindle /spˈɪndəl/
+albero
+spine /spˈaɪn/
+spina dorsale
+spirit /spˈɪɹɪt/
+spirito
+spiritual /spˈɪɹɪtʃˌuːəl/
+spirituale
+spit /spˈɪt/
+sputare
+split /splˈɪt/
+fendere
+spoil /spˈɔɪl/
+danneggiare
+spoon /spˈuːn/
+cucchiaio
+sport /spˈɔːt/
+sport
+spot /spˈɒt/
+1. luogo
+2. punto
+spring /spɹˈɪŋ/
+1. fonte, sorgente
+2. primavera
+3. molla
+4. saltare
+springtime /spɹˈɪŋtaɪm/
+primavera
+spy /spˈaɪ/
+spiare
+squad /skwˈɒd/
+compagnia
+square /skwˈeə/
+piazza
+square /skwˈeə/
+gruppo
+squeeze /skwˈiːz/
+premere, serrare, stringere
+squirrel /skwˈɪɹəl/
+scoiattolo
+stab /stˈab/
+pungere
+stable /stˈeɪbəl/
+1. stabile
+2. stalla
+staid /stˈeɪd/
+serio
+staircase /stˈeəkeɪs/
+scala
+stairs /stˈeəz/
+scala
+stale /stˈeɪl/
+trito e ritrito
+stall /stˈɔːl/
+stalla
+stamp /stˈamp/
+bollo, francobollo
+stand /stˈand/
+1. granaio
+2. stare in piedi
+3. alzarsi
+standard /stˈandəd/
+stendardo
+stand /stˈand/
+alzarsi
+stand /stˈand/
+far fronte a, opporsi a
+star /stˈɑː/
+stella
+stare /stˈeə/
+fissare
+start /stˈɑːt/
+1. cominciare
+2. inizio, principio
+state /stˈeɪt/
+1. asserire, sostenere
+2. stato
+statement /stˈeɪtmənt/
+dichiarazione
+station‐master /stˈeɪʃən mˈastə/
+capostazione
+station /stˈeɪʃən/
+stazione
+statue /stˈatʃuː/
+statua
+stay /stˈeɪ/
+stare, restare, rimanere
+stay /stˈeɪ/
+resti dietro
+stay /stˈeɪ/
+stare, restare, rimanere
+steak /stˈeɪk/
+bistecca
+steal /stˈiːl/
+rubare
+steam‐boiler /stˈiːm bˈɔɪlə/
+caldaia
+steel /stˈiːl/
+1. osso di balena
+2. acciaio
+steep /stˈiːp/
+ripido
+steering‐wheel /stˈiəɹɪŋ wˈiːl/
+timone, volante
+stem /stˈɛm/
+tronco
+stenotypist /stˈɛnətˌaɪpɪst/
+dattilografa
+step‐brother /stˈɛp bɹˈʌðə/
+fratellastro
+step‐father /stˈɛp fˈɑːðə/
+patrigno
+step‐mother /stˈɛp mˈʌðə/
+matrigno
+step‐sister /stˈɛp sˈɪstə/
+sorellastra
+step /stˈɛp/
+passo
+sterile /stˈɛɹaɪl/
+sterile
+stern /stˈɜːn/
+poppa
+stew /stjˈuː/
+cibreo
+stick /stˈɪk/
+appiccicare
+sticky /stˈɪki/
+appiccicaticcio
+stiff /stˈɪf/
+rigido
+still /stˈɪl/
+1. ancora
+2. calmare, placare
+stimulate /stˈɪmjʊlˌeɪt/
+1. incitare, spronare
+2. stimolare
+sting /stˈɪŋ/
+1. pungere
+2. aculeo, pungiglione
+stingy /stˈɪndʒi/
+avaro
+stir /stˈɜː/
+1. incitare, spronare
+2. stimolare
+stoke /stˈəʊk/
+riscaldare
+stomach /stˈʌmək/
+stomaco
+stomach /stˈʌmək/
+mal di pancia
+stone /stˈəʊn/
+pierra
+stoop /stˈuːp/
+curvarsi
+stop /stˈɒp/
+1. fermata
+2. fermarsi
+3. fermare
+4. cessare
+5. interrompere
+storage /stˈɔːɹɪdʒ/
+accumulatore
+store /stˈɔː/
+negozio
+storey /stˈɔːɹi/
+piano
+storm /stˈɔːm/
+tempesta
+story /stˈɔːɹi/
+1. piano
+2. storia
+straggler /stɹˈaɡlə/
+ritardatario
+straight /stɹˈeɪt/
+destro
+straightforward /stɹeɪtfˈɔːwəd/
+semplice
+strait /stɹˈeɪt/
+stretto
+strange /stɹˈeɪndʒ/
+strano
+strawberry /stɹˈɔːbəɹi/
+fragola
+stray /stɹˈeɪ/
+perdersi, smarrirsi
+stream /stɹˈiːm/
+1. corrente
+2. ruscello
+strech /stɹˈɛtʃ/
+caricare
+street /stɹˈiːt/
+via
+streetcar /stɹˈiːtkɑː/
+tram
+strength /stɹˈɛŋθ/
+forza
+stress /stɹˈɛs/
+1. accentare
+2. accento
+stretcher /stɹˈɛtʃə/
+1. barella
+strict /stɹˈɪkt/
+severo
+stride /stɹˈaɪd/
+passo
+strike /stɹˈaɪk/
+1. battere
+2. colpire, picchiare
+3. fare sciopero
+strike /stɹˈaɪk/
+saldare
+stroke /stɹˈəʊk/
+1. apoplessia
+2. accarezzare
+stroke /stɹˈəʊk/
+apoplessia
+strong /stɹˈɒŋ/
+forte
+struggle /stɹˈʌɡəl/
+battaglia
+stubborn /stˈʌbən/
+ostinato
+student /stjˈuːdənt/
+studente
+study /stˈʌdi/
+studiare
+stupid /stjˈuːpɪd/
+ignorante, sciocco, stupido
+sty /stˈaɪ/
+stalla
+subject /sˈʌbdʒɛkt/
+eccetto, salvo
+subject /sˈʌbdʒɛkt/
+tassabile
+subscriber /səbskɹˈaɪbə/
+abbonato
+subscription /sʌbskɹˈɪpʃən/
+abbonamento
+subsequently /sˈʌbsɪkwəntli/
+dietro, dopo
+succeed /səksˈiːd/
+riuscire, succedere
+success /səksˈɛs/
+successo
+successor /səksˈɛsə/
+discendente
+such /sˈʌtʃ/
+così
+such /sˈʌtʃ/
+come
+such /sˈʌtʃ/
+come
+suck /sˈʌk/
+succhiare
+suckle /sˈʌkəl/
+allattare
+sudden /sˈʌdən/
+subitaneo
+suddenly /sˈʌdənli/
+ad un tratto, improvvisamente
+suffice /səfˈaɪs/
+bastare
+sufficient /səfˈɪʃənt/
+sufficiente
+sufficiently /səfˈɪʃəntli/
+abbastanza
+suffix /sˈʌfɪks/
+suffisso
+suffocate /sˈʌfəkˌeɪt/
+soffocare
+sugar /ʃˈʊɡə/
+zucchero
+suggest /sədʒˈɛst/
+indicare, mostrare
+suggestion /sədʒˈɛstʃən/
+suggerimento
+suit /sˈuːt/
+abito, costume
+suitable /sˈuːtəbəl/
+1. decente
+2. conveniente
+3. adatto, capace, idoneo
+4. utilizzabile, utile
+suitcase /sˈuːtkeɪs/
+valigia
+sum /sˈʌm/
+importo, somma
+summer /sˈʌmə/
+estate
+summery /sˈʌməɹi/
+sommario
+summit /sˈʌmɪt/
+1. punta
+2. cima
+summon /sˈʌmən/
+chiamare
+sun /sˈʌn/
+sole
+sunrise /sˈʌnɹaɪz/
+levar del sole
+sunset /sˈʌnsɛt/
+tramonto
+superficial /sˈuːpəfˈɪʃəl/
+1. basso
+superior /suːpˈiəɹɪə/
+superiore
+superstition /sˈuːpəstˈɪʃən/
+superstizione
+superstitious /sˌuːpəstˈɪʃəs/
+superstizioso
+supervise /sˈuːpəvˌaɪz/
+controllare, verificare
+supper /sˈʌpə/
+cena
+supplication /sˌʌplɪkˈeɪʃən/
+domanda, preghiera
+support /səpˈɔːt/
+1. sostenere
+2. poggiare, appoggiare
+supporter /səpˈɔːtə/
+membro
+supporters /səpˈɔːtəz/
+partito, seguito
+suppose /sʌpˈəʊz/
+supporre
+suppress /səpɹˈɛs/
+1. opprimere
+2. soffocare
+sure /ʃˈʊə/
+certo
+surface /sˈɜːfɪs/
+1. cima
+2. superficie
+surgeon /sˈɜːdʒən/
+chirurgo
+surly /sˈɜːli/
+brusco, rude
+surmise /səmˈaɪz/
+supporre
+surname /sˈɜːneɪm/
+cognome
+surprise /səpɹˈaɪz/
+1. sorprendere
+2. sorpresa
+surrender /səɹˈɛndə/
+arrendersi
+surround /səɹˈaʊnd/
+circondare
+surroundings /səɹˈaʊndɪŋz/
+ambiente
+suspect /sˈʌspɛkt/
+sospettare
+suspicion /səspˈɪʃən/
+sospetto
+sustain /səstˈeɪn/
+1. sostenere
+2. poggiare, appoggiare
+sustained /səstˈeɪnd/
+costante
+swallow /swˈɒləʊ/
+rondine
+swear /swˈeə/
+1. bestemmiare
+2. giurare
+sweat /swˈɛt/
+sudare, traspirare
+sweet /swˈiːt/
+dolce
+swiftly /swˈɪftli/
+presto
+swim /swˈɪm/
+nuotare
+swindle /swˈɪndəl/
+1. imbroglio, inganno, truffa
+swindling /swˈɪndlɪŋ/
+imbroglio, inganno, truffa
+swine /swˈaɪn/
+porco
+switch /swˈɪtʃ/
+1. accendere
+2. interruttore
+swoon /swˈuːn/
+svenirsi
+system /sˈɪstəm/
+sistema
+table‐cloth /tˈeɪbəl klˈɒθ/
+toviglia
+table /tˈeɪbəl/
+tavolo
+tail‐light /tˈeɪl lˈaɪt/
+luce di posizione, fanale posteriore
+tail /tˈeɪl/
+coda
+tailor /tˈeɪlə/
+1. sasta
+2. sarto
+take /tˈeɪk/
+1. accettare, accogliere
+2. occupare
+3. prendere
+take /tˈeɪk/
+agire
+take /tˈeɪk/
+ritirare
+take /tˈeɪk/
+demolire
+take /tˈeɪk/
+accettare, accogliere
+take /tˈeɪk/
+considerare
+take /tˈeɪk/
+dire addio
+take /tˈeɪk/
+dire addio
+take /tˈeɪk/
+constatare
+take /tˈeɪk/
+togliere
+take /tˈeɪk/
+comperare, comprare
+take /tˈeɪk/
+spartire
+take /tˈeɪk/
+rilevare
+taking /tˈeɪkɪŋ/
+acquisto, compra
+taking /tˈeɪkɪŋ/
+acquisto, compra
+talent /tˈalənt/
+ingegno, talento
+talented /tˈaləntɪd/
+dotato
+talk /tˈɔːk/
+parlare
+tall /tˈɔːl/
+alto
+tap /tˈap/
+origliare
+tape‐recorder /tˈeɪp ɹɪkˈɔːdə/
+registratore
+tar /tˈɑː/
+catrame
+tardy /tˈɑːdi/
+tardo
+target /tˈɑːɡɪt/
+proposito, scopo
+tart /tˈɑːt/
+acido, agro
+task /tˈask/
+compito
+taste /tˈeɪst/
+1. gustare
+2. gusto
+tattler /tˈatlə/
+chiacchierone
+tax /tˈaks/
+1. tassare
+2. contribuzione, imposta, tassa
+tea‐pot /tˈiː pˈɒt/
+teiera
+tea /tˈiː/
+tè
+teach /tˈiːtʃ/
+insegnare, instruire
+teacher /tˈiːtʃə/
+1. maestra
+2. maestro
+tear /tˈiə/
+lagrima
+tear /tˈiə/
+rompere, staccare
+tease /tˈiːz/
+irritare
+teeth /tˈiːθ/
+dentatura, denti
+tell /tˈɛl/
+1. dire
+2. raccontare
+telltale /tˈɛlteɪl/
+chiacchierone
+tell /tˈɛl/
+mentire
+temper /tˈɛmpə/
+umore
+temple /tˈɛmpəl/
+tempia
+ten /tˈɛn/
+dieci
+tender /tˈɛndə/
+1. dolce
+2. presentare
+3. proporre
+tend /tˈɛnd/
+curare
+terminate /tˈɜːmɪnˌeɪt/
+finire, terminare
+terrestrial /təɹˈɛstɹɪəl/
+terrestre
+terrible /tˈɛɹəbəl/
+terribile
+territory /tˈɛɹɪtəɹi/
+teritorio
+test /tˈɛst/
+1. esame
+2. provare
+testimony /tˈɛstɪməni/
+certificato attestato
+than /ðˈɐn/
+che, di
+thank /θˈaŋk/
+ringraziare
+thankful /θˈaŋkfəl/
+grato, riconoscente
+thankless /θˈaŋkləs/
+ingrato
+thanks /θˈaŋks/
+grazie
+that /ðˈat/
+1. che
+2. così
+that /ðˈat/
+cioé
+that /ðˈat/
+tanto
+that /ðˈat/
+1. così
+2. là, lì
+thaw /θˈɔː/
+sgelare
+the /ðˈə/
+i, il, gli, la, le, lo
+theatre /θˈiətə/
+teatro
+thee /ðˈiː/
+dar del tu a
+theft /θˈɛft/
+furto
+their /ðˈeə/
+di loro
+then /ðˈɛn/
+1. dopo, in seguito, poi
+2. allora
+thence /ðˈɛns/
+di là
+there /ðˈeə/
+1. là, lì
+2. li
+3. laggiú
+thereafter /ðeəɹˈaftə/
+dopo, in seguito, poi
+therefore /ðˈeəfɔː/
+perciò, per quésto
+these /ðˈiːz/
+oggigiorno
+they /ðˈeɪ/
+essi
+the /ðˈə/
+Antartico, Antartide, Polo Sud
+the /ðˈə/
+Artico
+the /ðˈə/
+Olanda
+the /ðˈə/
+dopodomani, posdomani
+the /ðˈə/
+ieri l'altro
+thick /θˈɪk/
+1. denso
+2. grosso, spesso
+thief /θˈiːf/
+1. ladra
+2. ladro
+thigh /θˈaɪ/
+coscia
+thin /θˈɪn/
+1. magro
+2. sottile
+thing /θˈɪŋ/
+1. cosa
+2. ogetto
+think /θˈɪŋk/
+pensare
+think /θˈɪŋk/
+anticipare
+think /θˈɪŋk/
+rispettare, stimare
+third /θˈɜːd/
+1. terzo
+thirst /θˈɜːst/
+sete
+thirteen /θˈɜːtiːn/
+tredici
+thirty /θˈɜːti/
+trenta
+this /ðˈɪs/
+stasera
+this /ðˈɪs/
+stamattina
+this /ðˈɪs/
+quà, qui
+thither /ðˈɪðə/
+là, lì
+thorn /θˈɔːn/
+spina
+thou /ðˈaʊ/
+1. tu, voi
+though /ðˈəʊ/
+benche, sebbene
+thought /θˈɔːt/
+pensiero
+thousand /θˈaʊzənd/
+mille
+thread /θɹˈɛd/
+filo
+threat /θɹˈɛt/
+minaccia
+threaten /θɹˈɛtən/
+minacciare
+three /θɹˈiː/
+tre
+three /θɹˈiː/
+tre volte
+thresh /θɹˈɛʃ/
+trebbiare
+threshold /θɹˈɛʃəʊld/
+soglia
+thrice /θɹˈaɪs/
+tre volte
+throat /θɹˈəʊt/
+gola, gorga
+through /θɹˈuː/
+1. finito, terminato
+2. completamente
+3. mediante, per mezzo di
+4. pronto
+5. attraverso
+throw /θɹˈəʊ/
+gettare
+throw /θɹˈəʊ/
+vomitare
+thrust /θɹˈʌst/
+spingere
+thumb /θˈʌm/
+pollice
+thunder /θˈʌndə/
+1. tuonare
+2. tuono
+thus /ðˈʌs/
+così
+thwart /θwˈɔːt/
+rendere difficile
+ticket‐window /tˈɪkɪt wˈɪndəʊ/
+sportello
+ticket /tˈɪkɪt/
+biglietto
+tie /tˈaɪ/
+1. cravatta
+2. legare
+3. legame
+tie /tˈaɪ/
+legare
+tiger /tˈaɪɡə/
+tigre
+timber /tˈɪmbə/
+legno
+time‐table /tˈaɪm tˈeɪbəl/
+orario
+time /tˈaɪm/
+tempo
+timid /tˈɪmɪd/
+angoscioso, pauroso
+tin /tˈɪn/
+1. latta
+2. stagno
+tin /tˈɪn/
+latta
+tip /tˈɪp/
+1. punta
+2. mancia
+tire /tˈaɪə/
+gomma
+tired /tˈaɪəd/
+stanco
+tired /tˈaɪəd/
+esausto, sfinito
+tire /tˈaɪə/
+affaticare, stancare
+to /tˈuː/
+a
+toad /tˈəʊd/
+rospo
+today /tədˈeɪ/
+oggi
+toe /tˈəʊ/
+dito del piede
+together /təɡˈɛðə/
+insieme
+toilet‐paper /tˈɔɪlət pˈeɪpə/
+carta igienica
+toilet /tˈɔɪlət/
+cesso, gabinetto, ritirata
+token /tˈəʊkən/
+1. prova
+2. segno
+tolerate /tˈɒləɹˌeɪt/
+sopportare, tollerare
+tomato /təmˈɑːtəʊ/
+pomodoro
+tomorrow /təmˈɒɹəʊ/
+domani
+tomorrow /təmˈɒɹəʊ/
+domani sera
+tomorrow /təmˈɒɹəʊ/
+domattina
+tongs /tˈɒŋz/
+pinzette
+tongue /tˈʌŋ/
+lingua
+too /tˈuː/
+1. anche
+2. troppo
+tool /tˈuːl/
+arnese, strumento
+too /tˈuː/
+troppo
+top /tˈɒp/
+cima
+topgallant /tˈɒpɡalənt/
+scardola
+topical /tˈɒpɪkəl/
+attuale
+torch /tˈɔːtʃ/
+fiaccola, torcia
+torture /tˈɔːtʃə/
+torturare
+torturer /tˈɔːtʃəɹə/
+boia
+touch /tˈʌtʃ/
+toccare
+touch /tˈʌtʃ/
+menzionare
+touch /tˈʌtʃ/
+menzionare
+toward /təwˈɔːd/
+a
+towards /təwˈɔːdz/
+1. a
+2. intorno a
+towel /tˈaʊəl/
+asciugamano
+tower /tˈaʊə/
+torre
+town‐hall /tˈaʊn hˈɔːl/
+municipio
+town /tˈaʊn/
+città
+township /tˈaʊnʃɪp/
+paesello
+toy /tˈɔɪ/
+giuocattolo
+trace /tɹˈeɪs/
+delimitare
+trace /tɹˈeɪs/
+delimitare
+trade /tɹˈeɪd/
+1. commercio
+2. mestiere
+train /tɹˈeɪn/
+treno
+tram /tɹˈam/
+tram
+tranquil /tɹˈankwɪl/
+calmo, tranquillo
+transfer /tɹˈansfɜː/
+attraversare
+transformation /tɹansfɔːmˈeɪʃən/
+cambiamento
+translate /tɹanslˈeɪt/
+tradurre
+translation /tɹanslˈeɪʃən/
+traduzione
+transmit /tɹansmˈɪt/
+mandare
+transparant /tɹanspˈaɹənt/
+trasparente
+transport /tɹˈanspɔːt/
+1. trasportare
+2. trasporto
+travel /tɹˈavəl/
+1. camminare
+2. viaggiare
+treat /tɹˈiːt/
+1. guarire
+2. trattare
+treatment /tɹˈiːtmənt/
+trattamento
+treaty /tɹˈiːti/
+trattato
+tree‐trunk /tɹˈiː tɹˈʌŋk/
+tronco
+tree /tɹˈiː/
+albero
+tremble /tɹˈɛmbəl/
+tremare
+triangle /tɹˈaɪaŋɡəl/
+triangolo
+trick /tɹˈɪk/
+abitudine, vizio
+tricycle /tɹˈaɪsɪkəl/
+triciclo
+trifle /tɹˈaɪfəl/
+inezia
+trip /tɹˈɪp/
+viaggio
+trite /tɹˈaɪt/
+1. banale
+2. trito e ritrito
+triumph /tɹˈaɪʌmf/
+vittoria
+trouble /tɹˈʌbəl/
+1. problema
+2. disturbare
+trousers /tɹˈaʊsəz/
+calzoni, pantaloni
+trout /tɹˈaʊt/
+trota
+truck /tɹˈʌk/
+autocarro, camion
+true /tɹˈuː/
+vero
+truly /tɹˈuːli/
+davvero, infatti
+trumpet /tɹˈʌmpɪt/
+tromba
+trunk /tɹˈʌŋk/
+1. baule
+2. tronco
+trust /tɹˈʌst/
+fiducia
+truth /tɹˈuːθ/
+verità
+try /tɹˈaɪ/
+provare
+tube /tjˈuːb/
+1. condotto
+2. valvola
+tug /tˈʌɡ/
+1. tirare
+2. rimorchiatore
+tugboat /tˈʌɡbəʊt/
+rimorchiatore
+tummy /tˈʌmi/
+ventre
+tummy /tˈʌmi/
+mal di pancia
+tuna‐fish /tjˈuːnə fˈɪʃ/
+tonno
+tuna /tjˈuːnə/
+tonno
+tune /tjˈuːn/
+1. adattare, aggiustare
+2. sintonizzare
+tunny /tˈʌni/
+tonno
+turn /tˈɜːn/
+1. svoltare
+2. rovesciare
+3. girare
+turnip /tˈɜːnɪp/
+rapa
+turn /tˈɜːn/
+accendere
+turn /tˈɜːn/
+rovesciare
+turn /tˈɜːn/
+impiegare
+tussle /tˈʌsəl/
+combattere, duellare, picchiarsi
+twelve /twˈɛlv/
+dodici
+twenty /twˈɛnti/
+venti
+twice /twˈaɪs/
+due volte
+twin /twˈɪn/
+gemelli
+two /tˈuː/
+due
+type /tˈaɪp/
+scrivere a macchina
+typewriter /tˈaɪpɹaɪtə/
+macchina da scrivere
+tyrant /tˈaɪɹənt/
+tiranno
+tyre /tˈaɪə/
+gomma
+ultimately /ˈʌltɪmətli/
+alla fine, finalmente
+umpire /ˈʌmpaɪə/
+arbitro
+uncle /ˈʌŋkəl/
+zio
+unconscious /ʌnkˈɒnʃəs/
+privo di sensi, svenuto
+uncover /ʌnkˈʌvə/
+scoprire
+under /ˈʌndə/
+sotto
+underhand /ˌʌndəhˈand/
+di nascosto
+underneath /ˌʌndənˈiːθ/
+1. sotto
+2. dabbasso, giú
+underpants /ˌʌndəpˈants/
+mutande
+understand /ˌʌndəstˈand/
+capire, comprendere
+understandable /ˌʌndəstˈandəbəl/
+comprensibile
+undoubtedly /ʌndˈaʊtɪdli/
+si capisce
+unfaithful /ʌnfˈeɪθfəl/
+infedele
+unfortunately /ʌnfˈɔːtʃənətli/
+1. per fortuna
+2. per sfortuna
+ungrateful /ʌnɡɹˈeɪtfəl/
+ingrato
+unhappy /ʌnhˈapi/
+infelice
+unique /juːnˈiːk/
+solo, unico
+unite /juːnˈaɪt/
+congiungere
+unity /jˈuːnɪti/
+unità
+universal /jˌuːnɪvˈɜːsəl/
+universale
+university /jˌuːnɪvˈɜːsɪti/
+università
+unkind /ʌnkˈaɪnd/
+brusco, rude
+unknown /ʌnnˈəʊn/
+sconosciuto
+unlearn /ʌnlˈɜːn/
+1. perdere l'abitunide di
+2. disimparare
+unpleasant /ʌnplˈɛzənt/
+brusco, rude
+unthankful /ʌnθˈaŋkfəl/
+ingrato
+up‐to‐date /ˌʌp tə dˈeɪt/
+attuale
+upon /əpˈɒn/
+contro
+upper‐arm /ˌʌpəɹ ˈɑːm/
+omero
+upper /ˈʌpə/
+omero
+upset /ʌpsˈɛt/
+1. confuso, turbato
+2. rovesciare
+upstairs /ʌpstˈeəz/
+di sopra
+urinate /jˈʊəɹɪnˌeɪt/
+orinare, pisciare
+us /ˈʌs/
+noi
+use /jˈuːs/
+1. impiegare, usare
+2. impiego, uso
+used /jˈuːzd/
+consueto, usuale
+useful /jˈuːsfəl/
+utile
+use /jˈuːs/
+logorare
+usual /jˈuːʒuːəl/
+1. consueto, usuale
+2. generale
+utilize /jˈuːtɪlˌaɪz/
+1. sfruttare
+2. impiegare
+vain /vˈeɪn/
+vanitoso
+valise /vɐlˈiːs/
+valigia
+valley /vˈalɪ/
+valle
+valuable /vˈaljuːəbəl/
+caro, costoso
+value /vˈaljuː/
+valore
+valve /vˈalv/
+valvola
+van /vˈan/
+furgone
+variable /vˈeəɹɪəbəl/
+variabile
+variation /vˌeəɹɪˈeɪʃən/
+variazone
+variety /vəɹˈaɪəti/
+variazone
+veal /vˈiːl/
+carne di vitello
+vegetable /vˈɛdʒɪtəbəl/
+legume
+vein /vˈeɪn/
+vena
+vend /vˈɛnd/
+vendere
+vengeance /vˈɛndʒəns/
+vendetta
+ventilate /vˈɛntɪlˌeɪt/
+aerare, arieggiare, ventilare
+venture /vˈɛntʃə/
+arrischiare
+verify /vˈɛɹɪfˌaɪ/
+controllare, verificare
+very /vˈɛɹi/
+assai, molto
+very /vˈɛɹi/
+assai, molto
+vessel /vˈɛsəl/
+cassa, tinozza, vaso
+veterinarian /vˌɛtəɹɪnˈeəɹiən/
+veterinario
+vicar /vˈɪkə/
+curato
+vice /vˈaɪs/
+virtú
+victory /vˈɪktəɹi/
+vittoria
+view /vjˈuː/
+1. apparenza, aria, aspetto
+2. vista
+3. guardare
+vigour /vˈɪɡə/
+forza
+village /vˈɪlɪdʒ/
+villaggio
+vine /vˈaɪn/
+1. vigna
+2. vite
+vinegar /vˈɪnɪɡə/
+aceto
+violate /vˈaɪəleɪt/
+aggredire, assalire
+viper /vˈaɪpə/
+vipera
+visit /vˈɪzɪt/
+1. visitare
+2. visita
+vixen /vˈɪksən/
+megera
+vocabulary /vəʊkˈabjʊləɹi/
+dizionario
+voice /vˈɔɪs/
+voce
+void /vˈɔɪd/
+vuoto
+volume /vˈɒljuːm/
+tomo, volume
+vomit /vˈɒmɪt/
+vomitare
+vote /vˈəʊt/
+1. votare
+2. voce
+voyage /vˈɔɪɪdʒ/
+viaggio
+vulgar /vˈʌlɡə/
+volgare
+wage /wˈeɪdʒ/
+paga, salario
+wager /wˈeɪdʒə/
+scommettere
+wages /wˈeɪdʒɪz/
+paga, salario
+waggon /wˈaɡən/
+vagone, vettura
+wait /wˈeɪt/
+aspettare
+waiter /wˈeɪtə/
+cameriere
+waiting‐room /wˈeɪtɪŋ ɹˈuːm/
+sala d'aspetto
+waiting /wˈeɪtɪŋ/
+servizio
+waiting /wˈeɪtɪŋ/
+sala d'aspetto
+wait /wˈeɪt/
+aspettare
+walk /wˈɔːk/
+camminare
+wall /wˈɔːl/
+1. muro
+2. parete
+walnut‐tree /wˈɔːlnʌt tɹˈiː/
+noce
+want /wˈɒnt/
+1. bisogno, fabbisogno
+2. desiderio
+3. volere
+wanton /wˈɒntən/
+scatenato, sfrenato
+war /wˈɔː/
+guerra
+warm /wˈɔːm/
+caldo
+warn /wˈɔːn/
+avvertire
+warning /wˈɔːnɪŋ/
+avviso
+warrant /wˈɒɹənt/
+garanzia
+wash /wˈɒʃ/
+lavare
+wasp /wˈɒsp/
+vespa
+waste /wˈeɪst/
+sottoprodotto
+watch /wˈɒtʃ/
+1. orologio
+2. guardare
+watchmaker /wˈɒtʃmeɪkə/
+orlogiaio
+watch /wˈɒtʃ/
+aspettare, attendere
+water /wˈɔːtə/
+1. acqua
+2. annaffiare, bagnare, innaffiare
+waterfall /wˈɔːtəfˌɔːl/
+cascata
+wave /wˈeɪv/
+onda
+waver /wˈeɪvə/
+esitare, titubare
+way /wˈeɪ/
+1. costume
+2. maniera, modo
+3. cammino, corsia, pista, strada, via
+way /wˈeɪ/
+uscita
+we /wˈiː/
+noi
+weak /wˈiːk/
+debole
+weaken /wˈiːkən/
+debilitare
+wealth /wˈɛlθ/
+ricchezza
+wealthy /wˈɛlθi/
+ricco
+weapon /wˈɛpən/
+arma
+wear /wˈeə/
+portare
+wear /wˈeə/
+logorare
+weather /wˈɛðə/
+tempo
+week /wˈiːk/
+settimana
+weekly /wˈiːkli/
+settimanalmente
+weep /wˈiːp/
+piangere
+weigh /wˈeɪ/
+1. pesare
+weight /wˈeɪt/
+peso
+welcome /wˈɛlkʌm/
+bene arrivate, benvenuto
+well‐known /wˈɛl nˈəʊn/
+conosciuto, noto
+well‐mannered /wˈɛl mˈanəd/
+cortese
+well‐off /wˈɛl ˈɒf/
+ricco
+well /wˈɛl/
+bene
+wench /wˈɛntʃ/
+piccola, ragazza
+west /wˈɛst/
+ovest
+wet /wˈɛt/
+bagnato
+whale /wˈeɪl/
+balena
+whalebone /wˈeɪlbəʊn/
+osso di balena
+wharf /wˈɔːf/
+piattaforma
+what's /wˈɒts/
+d'altronde, inoltre
+what /wˈɒt/
+come
+what /wˈɒt/
+che ora è?
+wheat /wˈiːt/
+frumento
+wheel /wˈiːl/
+ruota
+wheeziness /wˈiːzinəs/
+asma
+when /wˈɛn/
+quando
+whereas /wˈeəɹaz/
+durante
+while /wˈaɪl/
+1. durante
+2. tempo
+whilst /wˈaɪlst/
+durante
+whiskers /wˈɪskəz/
+baffi
+whisper /wˈɪspə/
+bisbigliare, sussurrare
+whistle /wˈɪsəl/
+fischiare
+white /wˈaɪt/
+1. bianco
+whole /hˈəʊl/
+1. completo, intero, totale, tutto
+width /wˈɪdθ/
+larghezza
+wife /wˈaɪf/
+moglie
+wild /wˈaɪld/
+selvaggio
+wild /wˈaɪld/
+cinghiale
+will /wˈɪl/
+volontà
+willingly /wˈɪlɪŋli/
+volentieri
+willingness /wˈɪlɪŋnəs/
+volontà
+willow /wˈɪləʊ/
+salcio, salice
+win /wˈɪn/
+guadagnare
+wind /wˈɪnd/
+vento
+window /wˈɪndəʊ/
+1. finestra
+2. sportello
+wind /wˈɪnd/
+caricare
+wine /wˈaɪn/
+vino
+wing /wˈɪŋ/
+ala
+winter /wˈɪntə/
+inverno
+wire /wˈaɪə/
+filo
+wireless /wˈaɪələs/
+radio
+wisdom /wˈɪzdəm/
+freccia
+wise /wˈaɪz/
+saggio
+wish /wˈɪʃ/
+1. desiderare
+2. desiderio
+3. volere
+4. volontà
+with /wˈɪð/
+1. mediante, per mezzo di
+2. a, su
+within /wɪðˈɪn/
+a, dentro
+without /wɪðˈaʊt/
+direttamente
+without /wɪðˈaʊt/
+eccetto, salvo
+withstand /wɪðstˈand/
+far fronte a, opporsi a
+with /wˈɪð/
+incinta
+witty /wˈɪti/
+spiritoso
+wolf /wˈʊlf/
+lupo
+woman /wˈʊmən/
+donna
+wonder /wˈʌndə/
+stupirsi
+wonted /wˈɒntɪd/
+consueto, usuale
+wood /wˈʊd/
+legno
+woods /wˈʊdz/
+bosco
+word /wˈɜːd/
+parola
+work /wˈɜːk/
+1. lavorare
+2. lavoro
+3. opera
+worker /wˈɜːkə/
+operaio
+working /wˈɜːkɪŋ/
+operaio
+workman /wˈɜːkmən/
+operaio
+work /wˈɜːk/
+calcolare
+world /wˈɜːld/
+mondo
+worldwide /wˈɜːldwaɪd/
+universale
+worm /wˈɜːm/
+verme
+worn‐out /wˈɔːn ˈaʊt/
+trito e ritrito
+worn /wˈɔːn/
+esausto, sfinito
+worship /wˈɜːʃɪp/
+adorare, venerare
+worship /wˈɜːʃɪp/
+uffizio divino
+worth /wˈɜːθ/
+valore
+wound /wˈuːnd/
+1. ferire
+2. ferita
+wrap /ɹˈap/
+avvolgere
+wrench /ɹˈɛntʃ/
+chiave
+wrest /ɹˈɛst/
+estorcere
+wretched /ɹˈɛtʃɪd/
+miserabile, misero, povero
+wring /ɹˈɪŋ/
+estorcere
+wrist /ɹˈɪst/
+polso
+write /ɹˈaɪt/
+scrivere
+writer /ɹˈaɪtə/
+autore
+writing‐desk /ɹˈaɪtɪŋ dˈɛsk/
+banco, scrivania
+writing /ɹˈaɪtɪŋ/
+banco, scrivania
+yard /jˈɑːd/
+cortile
+yawn /jˈɔːn/
+1. sbadigliare
+2. sbadiglio
+ye /jˈiː/
+1. tu, voi
+year /jˈiə/
+anno
+yearly /jˈiəli/
+1. annuale
+2. annualmente
+yellow /jˈɛləʊ/
+giallo
+yes /jˈɛs/
+sì
+yesterday /jˈɛstədˌeɪ/
+ieri
+yet /jˈɛt/
+1. ancora
+2. già
+yield /jˈiːld/
+cedere
+yon /jˈɒn/
+laggiú
+yonder /jˈɒndə/
+1. là, lì
+2. laggiú
+you /jˈuː/
+1. tu, voi
+young /jˈʌŋ/
+giovane
+your /jˈɔː/
+1. tuo
+2. vostro
+zeal /zˈiːl/
+ardore, zelo
+zodiac /zˈəʊdɪˌak/
+zodiaco
+zone /zˈəʊn/
+cintura
+abcdefghijklmnopqrstuvwxyzé

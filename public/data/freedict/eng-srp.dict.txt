@@ -1,0 +1,1267 @@
+
+00-database-dictfmt-1.12.1
+English-Serbian FreeDict Dictionary
+
+Maintainer: [up for grabs]
+
+Edition: 0.1.3
+Size: 590 headwords
+
+Publisher: FreeDict.
+
+
+Availability:
+
+    Copyright (C) 1999-2017 by various authors listed below.
+    Available under the terms of the GNU General Public License ver. 2.0 and
+  any later version.
+    This program is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by the
+  Free Software Foundation; either version 2 of the License, or (at your
+  option) any later version.
+    This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+  Public License for more details.
+    You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+Published at: http://freedict.org/
+ID# (svn): $Id$
+
+Notes:
+
+ * Database Status: too small
+
+
+Source(s):
+
+  Home: http://www.travlang.com/ This Database was generated from Ergane.
+
+The Project:
+
+  This dictionary comes to you through nice people making it available for
+  free and for good. It is part of the FreeDict project,
+  http://freedict.org/. This project aims to make translating dictionaries
+  available for free. Your contributions are welcome!
+
+Changelog:
+
+ * 2017-12-03 Sebastian Humenda ver. 0.1.3:
+   update licence stanza (thanks to Karl Bartel)
+ * 2010-12-09 Piotr Bański:
+   Added @xml:lang attributes and profileDesc/langUsage.
+ * 2010-12-01 Piotr Bański:
+   Database name changed from eng-scr to eng.srp. I assume this
+   dictionary to be close in nature to the previous scr-eng (current
+   srp-eng) in that the latter contained Serbian with Montenegrin
+   dialectal additions (thanks to Dr. Jerzy Molas of the University of
+   Warsaw for his remarks on scr-eng, which I assume to hold for eng-scr,
+   because they have the same origin in Ergane). TODO: identify the
+   Montenegrin additions and mark them with <usg> elements.
+ * 2010-11-01 Piotr Bański:
+   Conversion of TEI P4 source into P5 via
+   tools/xsl/freedict_P4toP5.xsl; manual clean-up.
+ * 2005-02-11 Michael Bunk:
+   Converted file to TEI P4
+ * 2000-04-27 Horst Eyermann:
+   Database was converted to TEI format and checked into CVS
+ * 2000-01-10 Horst Eyermann:
+   This Database was generated from ergane, http://www.travlang.com -
+   Thanks!
+English-Serbian FreeDict Dictionary ver. 0.1.3
+April /eiprəl/
+април, травањ
+August /ɔːgəst/
+август, коловоз
+Croat /krouit/
+Хрват
+Croatia /krouʃə/
+Хрватска
+Czech /tʃek/
+Чех
+December /disembər/
+децембар, просинац
+England /iŋglənd/
+Енглеска
+English /iŋgliʃ/
+Енглескиња
+Englishman /iŋgliʃmən/
+Енглез
+Englishwoman /iŋgliʃwumən/
+Енглескиња
+February /febjeəriː/
+фебруар, вељача
+Frenchman /frentʃmən/
+Француз
+Frenchwoman /frentʃwumən/
+Францускиња
+Friday /fraidiː/
+петак
+Germany /dʒəːməniː/
+Немачка, Њемачка
+God /gɔd/
+Бог
+Gypsy /dʒipsiː/
+Циганин
+January /dʒænjuriː/
+јануар, сијечањ
+July /dʒuːlai/
+јул, српањ
+June /dʒuːn/
+јун, лиспањ
+March /mɑːtʃ/
+март, ожујак
+May /mei/
+мај, свибањ
+Miss /mis/
+госпођица
+Mister /mistər/
+господин
+Monday /mʌndiː/
+понедељак
+Mr /mr/
+господин
+Mrs /mz/
+госпођа
+November /nouvembər/
+новембар
+October /ɔktoubər/
+листопад, октобар
+Roman /roumən/
+роман
+Sabbath /sæbəθ/
+субота
+Sassenach /sæsənæk/
+Енглез
+Saturday /sætədiː/
+субота
+September /septembər/
+рујан, септембар
+Serb /səb/
+Србин
+Sunday /sʌndiː/
+недеља, неђеља
+Thursday /θəːzdei/
+четвртак
+Tuesday /tjuːzdei/
+уторак
+Wednesday /wenzdei/
+среда, сриједа
+Yugoslav /juːgousleiv/
+Југославен, Југословен
+Yugoslavia /juːgouslɑːviə/
+Југославија
+Yugoslavian /juːgouslɑːviən/
+Југославен, Југословен
+a /ə/
+1. у
+2. когод, неко
+aberration /æbəreiʃən/
+погрешка
+able /eibl/
+способан
+abroad /əbrɔːd/
+иностранство
+absent /æbsənt/
+отсутан
+academic /ækədemik/
+студент
+accede /əksiːd/
+сагласитисе
+accept /æksept/
+прихватити
+accident /æksidənt/
+незгода
+accompany /əkʌmpəniː/
+пратити
+accordion /əkɔːdiən/
+хармоника
+account /əkaunt/
+рачун
+ache /eik/
+бол
+achievement /ətʃiːvmənt/
+успех, успјех
+across /əkrɔs/
+преко
+across /əkrɔsfrɔm/
+против
+actor /æktər/
+глумац
+actress /æktris/
+глумица
+ad /əd/
+оглас
+address /ədres/
+адреса
+adieu /ədjuː/
+збогом
+ado /ədou/
+галама
+adversary /ædvəsəriː/
+непријатељ
+advertisement /ədvəːtismənt/
+оглас
+advice /ədvais/
+савет, савјет
+advocate /ædvəkeit/
+адвокат
+aeroplane /ɛərəplein/
+аероплан, авион
+affair /əfɛər/
+ствар
+affection /əfekʃən/
+љубав
+afoot /əfut/
+песма, пешице, пјесма, пјешице
+afresh /əfreʃ/
+опет
+after /ɑːftər/
+после
+afternoon /ɑːftənuːn/
+поподне
+again /əgein/
+опет
+against /əgenst/
+против
+age /eidʒ/
+доба
+agree /əgriː/
+сагласитисе
+aim /eim/
+циљ
+air /ɛər/
+ваздух
+aircraft /ɛəkrɑːft/
+авион
+airplane /ɛəplein/
+аероплан, авион
+airport /ɛəpɔːt/
+аеродром
+ale /l/
+пиво
+all /l/
+све
+all /ləbaut/
+свуда
+all /lɔfəsʌdn/
+ођедном
+all /louvərəgein/
+опет
+all /lð/
+сви
+alone /əloun/
+сам
+already /ɔːlrediː/
+веђ
+also /ælsou/
+такоде
+although /ɔːlthau/
+иако
+altitude /æltitjuːd/
+висина
+altogether /ɔːltədʒeðər/
+све
+always /ɔːlweiz/
+увек, увијек
+among /əmʌŋ/
+између
+and /ænd/
+и
+anew /ənjuː/
+опет
+any /æniː/
+когод, неко
+anybody /enibɔdiː/
+когод, неко
+anything /eniθiŋ/
+нешто
+anywhere /æniwɛər/
+негде, негђе
+appellation /æpəleiʃən/
+име
+apple /æpl/
+јабука
+arm /ɑːm/
+рука
+army /ɑːmiː/
+војска
+as /əz/
+како
+at /eit/
+к, ка
+at /eitprizent/
+сад, сада
+at /eitðætpleis/
+тамо, ту
+aunt /ɑːnt/
+тетка
+back /bæk/
+леђа
+bag /bæg/
+торба
+bairn /bɛən/
+дијете, дете
+balcony /bælkəniː/
+балкон
+barber /bɑːbər/
+берберин
+barrister /bæristər/
+адвокат
+bathroom /bɑːθrum/
+купатило
+be /b/
+бити
+beam /biːm/
+радио
+bed /bd/
+кревет, постеља
+beefsteak /biːfsteik/
+бифтек
+beer /biər/
+пиво
+behind /biːhaind/
+после
+below /bilou/
+под
+beneath /benəːθ/
+под
+between /bitwiːn/
+између
+beyond /beiənd/
+преко
+bit /bit/
+комад
+bloom /bluːm/
+цвијет, цвет
+bomb /bɔm/
+бомба
+bone /boun/
+кост
+book /buk/
+књига
+both /bɔθ/
+обоје
+bough /bau/
+грана
+boutique /buːtiːk/
+дућан, радња
+box /bɔks/
+ковчег
+boy /bɔi/
+слуга
+branch /brɑːntʃ/
+грана
+bread /bred/
+хлеб, хљеб
+breakfast /brekfəst/
+доручак
+bridge /bridʒ/
+мост
+brother /brʌðər/
+брат
+brow /brau/
+обрва
+building /bildiŋ/
+зграда
+bureau /bjeərou/
+канцеларија
+business /biznəs/
+ствар
+but /bʌt/
+1. али
+2. већ
+button /bʌtn/
+дугме
+bye /biː/
+1. збогом
+2. довиђења
+by /biːnau/
+веђ
+cabin /kæbin/
+шупа
+cabinet /kæbinət/
+ормар
+caf /kˈaf/
+кафана
+capable /keipəbl/
+способан
+car /kɑːr/
+аутомобил
+card /kɑːd/
+карта
+case /keis/
+ствар
+cat /kæt/
+мачка
+chair /tʃɛər/
+столица
+chamber /tʃeimbər/
+соба
+chauffeur /ʃoufər/
+шофер
+check /tʃek/
+чек
+cheese /tʃiːz/
+сир
+cheque /tʃek/
+чек
+chest /tʃest/
+ковчег
+child /tʃaild/
+дијете, дете
+church /tʃəːtʃ/
+црква
+cigarette /sigəret/
+цигарета
+cinema /sinəmə/
+биоскоп
+city /sitiː/
+град, варош
+class /klɑːs/
+клас
+climate /klaimət/
+клима
+closet /klɔzit/
+ормар
+coast /koust/
+обала
+coffee /kˈɒfi/
+кафана
+coffee /kɔfiː/
+кафа
+colour /kʌlər/
+боја
+compartment /kəmpɑːtmənt/
+купе
+concert /kənsəːt/
+концерат, концерт
+consent /kənsent/
+сагласитисе
+consul /kənsl/
+конзул
+couch /kautʃ/
+диван
+counsel /kaunsl/
+1. адвокат
+2. савет, савјет
+coup /kˈuːp/
+купе
+courage /kʌridʒ/
+храброст
+cup /kʌp/
+шоља
+cupboard /kʌbəd/
+ормар
+cushion /kuʃən/
+јастук
+custom /kʌstəm/
+обичај
+danger /deindʒər/
+опасност
+darkness /dɑːknəs/
+мрак
+date /deit/
+датум
+daughter /dˈɔːtə/
+снаха
+daughter /dɔːtər/
+кћерка, кћи
+day /dei/
+дан
+devil /devəl/
+враг
+dictionary /dikʃənriː/
+речник, ријечник
+din /din/
+галама
+divan /divæn/
+диван
+doctor /dɔktər/
+лекар, љекар
+dog /dɔg/
+пас
+door /dɔːr/
+врата
+driver /drivər/
+шофер
+duty /djuːtiː/
+дужност
+dye /diː/
+боја
+each /iːtʃ/
+сви
+ear /iər/
+уво, ухо
+earth /əːθ/
+земља
+eight /eit/
+осам
+enemy /enəmiː/
+непријатељ
+engine /endʒin/
+машина
+error /erər/
+погрешка
+evening /iːvniŋ/
+вече
+ever /evər/
+увек, увијек
+every /evriː/
+сви
+everybody /evribɔdiː/
+сви
+everything /evriθiŋ/
+све
+everywhere /evriwɛər/
+свуда
+exactly /igzætliː/
+баш
+eye /iː/
+око
+eyebrow /aibrau/
+обрва
+face /feis/
+лице
+family /fæməliː/
+породица
+farewell /fɛəwel/
+збогом
+fast /fɑːst/
+брзо
+father /fɑːðər/
+отац
+feather /feðər/
+перо
+female /fiːmeilstjuːdnt/
+студенткиња
+field /fiːld/
+поље
+fig /fig/
+смоква
+finger /fiŋgər/
+прст
+fish /fiʃ/
+риба
+five /faiv/
+пет
+floor /flɔːr/
+под
+flower /flauər/
+цвијет, цвет
+fog /fɔg/
+магла
+foot /fut/
+нога
+foreigner /fɔrənər/
+странац
+forest /fɔrist/
+шума
+four /fɔːr/
+четири
+frequently /frikwentliː/
+често
+friend /frend/
+1. пријатељица
+2. пријатељ
+from /frɔm/
+из
+fruit /fruːt/
+воће
+garden /gɑːdn/
+башта, врт
+gentleman /dʒentlmən/
+господин
+girl /gəːl/
+девојка
+gladness /glædnəs/
+радост
+glove /glʌv/
+рукавица
+goal /goul/
+циљ
+goodbye /gudbai/
+1. збогом
+2. довиђења
+grandmother /grænmʌðər/
+баба
+grass /grɑːs/
+трава
+guest /gest/
+гост
+habit /hæbit/
+обичај
+hairdresser /hɛədresər/
+берберин
+hammer /hæmər/
+чекић
+hand /hænd/
+1. радник
+2. рука
+hat /heit/
+шешир
+he /h/
+он
+head /hed/
+глава
+heart /hɑːt/
+срце
+heat /hiːt/
+врућина
+heaven /hevn/
+небо
+height /hait/
+висина
+her /hər/
+она
+herb /həːb/
+трава
+hero /hiərou/
+јунак
+hill /hil/
+брег, бријег
+him /him/
+он
+honey /hʌniː/
+мед
+horse /hɔːs/
+коњ
+hostel /hɔstl/
+гостионица
+hotel /houtel/
+хотел
+hour /auər/
+сат
+house /haus/
+кућа
+house /hausɔfwəːʃip/
+црква
+how /hau/
+како
+however /hauwevər/
+већ
+husband /hʌzbənd/
+муж
+hut /hʌt/
+шупа
+ice /ais/
+лед
+if /aif/
+ако
+in /in/
+у
+infant /infənt/
+дијете, дете
+injury /indʒəriː/
+рана
+inn /in/
+гостионица
+inside /insaid/
+у
+instructor /instrʌktər/
+учитељ
+intercessor /intəsesər/
+адвокат
+into /intə/
+у
+in /inikstʃeindʒfər/
+против
+in /inwɔtwei/
+како
+it /it/
+оно
+job /dʒɔb/
+рад
+joy /dʒɔi/
+радост
+judge /dʒʌdʒ/
+судац
+kidney /kidniː/
+бубрег
+kilo /kiːlou/
+килограм
+king /kiŋ/
+краљ
+kitchen /kitʃin/
+кухиња
+knee /niː/
+колено, кољено
+knife /naif/
+нож
+laborer /ləbɔːrər/
+радник
+labourer /leibərər/
+радник
+lady /leidiː/
+госпођа
+lake /leik/
+језеро
+lamb /læm/
+јагње
+land /lænd/
+земља
+language /læŋgwidʒ/
+језик
+lass /læs/
+девојка
+lawyer /lɔːjər/
+адвокат
+leg /leg/
+нога
+letter /letər/
+писмо
+library /laibrəriː/
+библиотека
+life /laif/
+живот
+like /laik/
+како
+likewise /laikjuːiːz/
+такоде
+lip /lip/
+усна
+list /list/
+списак
+liter /litər/
+литар
+litre /liːtər/
+литар
+loaf /louf/
+хлеб, хљеб
+location /loukeiʃən/
+место, мјесто
+loch /lɔk/
+језеро
+lock /lɔk/
+кључ
+lord /lɔːd/
+господин
+love /lʌv/
+љубав
+lump /lʌmp/
+комад
+machine /məʃiːn/
+машина
+madam /mædəm/
+госпођа
+map /meip/
+карта
+matter /mætər/
+ствар
+maybe /meiib/
+можда
+mayhap /meiieip/
+можда
+meat /miːt/
+месо
+menu /menjuː/
+карта
+metre /miːtər/
+метар
+mile /mail/
+миља
+minister /ministər/
+министар
+mist /mist/
+магла
+mistake /misteik/
+погрешка
+mitten /mitn/
+рукавица
+month /mʌnθ/
+месец, мјесец
+moon /muːn/
+месец, мјесец
+mother /mʌðər/
+мајка, мати
+mountain /mauntn/
+планина
+movie /muːviːθiətər/
+биоскоп
+murk /məːk/
+мрак
+museum /mjuːziəm/
+музеј
+music /mjuːzik/
+музика
+name /neim/
+име
+neither /naiðər/
+нико
+never /nevər/
+никад, никада
+nevertheless /nivəːθləs/
+већ
+night /nait/
+ноћ
+nine /nain/
+девет
+no /nˈəʊ/
+нико
+no /nou/
+не
+nobody /noubədiː/
+нико
+noise /nɔiz/
+галама
+none /nɔn/
+нико
+nose /nouz/
+нос
+not /nout/
+не
+nothing /nʌθiŋ/
+ништа
+novel /nɔvəl/
+роман
+now /nau/
+сад, сада
+nowhere /nauwɛər/
+нигде, нигђе
+obligation /ɔbligeiʃən/
+дужност
+office /ɔfis/
+канцеларија
+often /ɔfn/
+често
+on /wʌn/
+у
+once /wʌnsmɔːr/
+опет
+one /wʌn/
+1. когод, неко
+2. један, једна, једно
+only /ounliː/
+сам
+on /wʌnfut/
+песма, пешице, пјесма, пјешице
+on /wʌnðʌðərsaidɔf/
+преко
+operative /ɔpərətiv/
+радник
+opposed /əpouzdtou/
+против
+opposite /ɔpəzit/
+против
+or /ər/
+или
+ordinarily /ɔːdinəriliː/
+обично
+out /autɔf/
+из
+over /ouvərðər/
+тамо, ту
+o /əklɔk/
+сат
+page /pædʒ/
+страница
+pain /pein/
+бол
+painter /peintər/
+сликар
+painting /peintiŋ/
+слика
+pair /pɛər/
+двоје, пар
+paper /peipər/
+хартија
+park /pɑːk/
+парк
+passport /pɑːspɔːt/
+пасош
+pate /peit/
+глава
+path /pɑːθ/
+стаза
+pawn /pɔːn/
+војник
+peace /piːs/
+мир
+peach /piːtʃ/
+бресква
+pencil /pensl/
+оловка
+people /piːpl/
+људи
+per /pər/
+у
+perchance /pəːtʃəns/
+можда
+perhaps /pəhæps/
+можда
+peril /perəl/
+опасност
+physician /fiziʃən/
+лекар, љекар
+picture /piktʃər/
+слика
+piece /pis/
+комад
+place /pleis/
+место, мјесто
+place /pleisɔfwəːʃip/
+црква
+plane /plein/
+аероплан, авион
+plate /pleit/
+тањир
+platform /plætfɔːm/
+перон
+plume /pluːm/
+перо
+pocket /pɔkit/
+джеп
+police /pəliːs/
+полиција
+policeman /pəliːsmən/
+милицајац
+possibly /pɔsəbliː/
+можда
+postage /poustidʒstæmp/
+марка
+pound /paund/
+фунта
+prince /prins/
+кнез
+professor /prəfesər/
+професор
+provided /prəvaididðæt/
+ако
+purpose /pʌpouz/
+циљ
+quay /kweiiː/
+перон
+question /kwestʃən/
+питање
+quickly /kwikliː/
+брзо
+quite /kwait/
+врло
+radio /reidiəə/
+радио
+ray /rei/
+радио
+reality /riælitiː/
+истина
+receive /risiːv/
+прихватити
+regularly /regjuləliː/
+често
+restaurant /restrɔnt/
+ресторан
+ring /riŋ/
+прстен
+river /rivər/
+река, ријека
+roof /ruːf/
+кров
+room /ruːm/
+соба
+sack /sæk/
+торба
+salary /sæləriː/
+плата
+school /sʃuːl/
+школа
+sea /siə/
+море
+seaside /siːsaid/
+обала
+secret /siːkrit/
+тајна
+seed /siːd/
+семе, сјеме
+servant /səːvənt/
+слуга
+seven /sevn/
+седам
+several /sevrəltaimz/
+понекад
+shack /ʃæk/
+шупа
+shade /ʃeid/
+сенка, сјенка
+shadow /ʃædou/
+сенка, сјенка
+sharp /ʃɑːp/
+баш
+she /ʃou/
+она
+ship /ʃip/
+брод
+shoe /ʃuː/
+ципела
+shop /ʃɔp/
+дућан, радња
+shore /ʃɔːr/
+обала
+shoulder /ʃouldər/
+плеће
+sideboard /saidbɔːd/
+ормар
+sir /saiər/
+господин
+sister /sistər/
+сестра
+six /siks/
+шест
+sky /skiː/
+небо
+snow /snou/
+снег, снијег
+soil /sɔil/
+земља
+soldier /souldiər/
+војник
+sole /soul/
+сам
+solicitor /səlisitər/
+адвокат
+solitary /sɔlitriː/
+сам
+some /sʌm/
+когод, неко
+somebody /sʌmbədiː/
+когод, неко
+someone /sʌmwʌn/
+когод, неко
+something /səmiːθiŋ/
+нешто
+sometimes /səmetaimz/
+понекад
+somewhere /soumwɛər/
+негде, негђе
+son /sɔn/
+син
+soup /suːp/
+супа
+so /soulɔŋ/
+довиђења
+spinster /spinstər/
+госпођица
+spoon /spuːn/
+кашика
+spot /spɔt/
+место, мјесто
+stamp /stæmp/
+марка
+station /steiʃən/
+станица
+steak /steik/
+бифтек
+stone /stoun/
+камен
+store /stɔːr/
+дућан, радња
+student /stjuːdnt/
+1. студенткиња
+2. студент
+suburb /sʌbəːb/
+предграђе
+success /səkses/
+успех, успјех
+such /sʌtʃə/
+како
+suddenly /sʌdnliː/
+ођедном
+sugar /ʃugər/
+шећер
+summer /sʌmər/
+лето, љето
+sun /sn/
+сунце
+swiftly /swiftliː/
+брзо
+take /teik/
+прихватити
+target /tɑːgit/
+циљ
+taxi /tæksiː/
+такси
+tea /tiə/
+чај
+teacher /tiːtʃər/
+учитељ
+ten /tn/
+десет
+than /θein/
+него
+that /ðæt/
+1. шта
+2. ко, који, тко
+theatre /θiətər/
+позориште
+there /ðər/
+тамо, ту
+they /ðei/
+она, оне, они
+the /ðdeiɑːftərtəmɔrou/
+прексутра, прекосутра
+the /ðdeibfɔːrjestədiː/
+прекјуче
+thou /ðau/
+ти, ви
+though /ðau/
+иако
+three /θriː/
+три
+through /θruː/
+кроз
+throw /θrou/
+бацати, бацити
+time /taim/
+1. сат
+2. пут, време, вријеме
+to /tou/
+к, ка
+today /tədei/
+данас
+together /təgeðər/
+скупа, заједно
+tomorrow /təmɔrou/
+сутра
+tongue /tʌŋ/
+језик
+too /tuː/
+такоде
+tooth /tuːθ/
+зуб
+tourist /teərist/
+турист
+toward /təwɔːd/
+к, ка
+towards /təwɔːdz/
+к, ка
+town /taun/
+град, варош
+toy /tɔi/
+играчка
+traffic /træfik/
+саобраћај
+truth /truːθ/
+истина
+two /twou/
+два, две
+typewriter /taipraitər/
+машина
+uncle /ʌŋkl/
+стриц
+under /ʌndər/
+под
+underneath /ʌndənəːθ/
+под
+university /juːnivəːsitiː/
+универзитет
+unmarried /ʌnmæridwumən/
+госпођица
+upon /əpɔn/
+против
+us /juːs/
+ми
+usually /juːʒəliː/
+обично
+vehicle /viːikl/
+кола
+very /veriː/
+врло
+vessel /vesəl/
+брод
+village /vilidʒ/
+село
+vocabulary /vəkæbjuləriː/
+речник, ријечник
+voice /vɔis/
+глас
+vote /vout/
+глас
+wage /weidʒ/
+плата
+wages /weidʒiz/
+плата
+waiter /weitər/
+келнер
+wall /wɔːl/
+зид
+walnut /wɔːlnʌt/
+орах
+war /ər/
+рат
+water /wɔːtər/
+вода
+way /wei/
+обичај
+we /wˈiː/
+ми
+weather /weðər/
+време, вријеме
+wench /wentʃ/
+девојка
+wharf /wɔːf/
+перон
+what /wɔt/
+шта
+what /wɔtə/
+како
+what /wɔtfər/
+зашто
+when /n/
+кад, када
+where /wɛər/
+гдје, где
+which /witʃ/
+ко, који, тко
+while /wail/
+пут, време, вријеме
+who /hou/
+ко, који, тко
+why /wiː/
+зашто
+window /windou/
+прозор
+wine /wain/
+вино
+winter /wintər/
+зима
+wireless /waiələs/
+радио
+within /wiθin/
+у
+without /wiθɔːt/
+без
+woman /wumən/
+жена
+woods /wudz/
+шума
+word /wəːd/
+реч, ријеч
+work /wəːk/
+рад
+worker /wəːkər/
+радник
+working /wəːkiŋmein/
+радник
+workman /wəːkmən/
+радник
+world /wəːld/
+свет, свијет
+wound /waund/
+рана
+ye /iː/
+ти, ви
+year /jəːr/
+година
+yes /jez/
+да
+yesterday /jestədiː/
+јуче
+yet /jet/
+1. веђ
+2. већ
+yon /jɔn/
+тамо, ту
+yonder /jɔndər/
+тамо, ту
+unknown
+abcdefghijklmnopqrstuvwxyz

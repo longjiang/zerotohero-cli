@@ -1,0 +1,9149 @@
+Swahili-English xFried/FreeDict Dictionary ver. 0.4.4
+abiria <n> (pl: {maabiria})
+
+passenger
+abudu <v>
+
+worship, revere, adore
+acha <v>
+1.
+leave
+2.
+quit, stop doing sth
+achana <v>
+1.
+leave one another, separate, divorce
+2.
+differ, diverge
+achilia <v>
+
+forgive
+achilio <n> (pl: {maachilio})
+
+forgiveness
+ada <n> [sg=pl]
+
+fee, payment
+adabu <n> [sg=pl]
+
+manners, etiquette
+adhabu <n> [sg=pl]
+1.
+punishment, penalty
+2.
+reprimand, lesson
+adhuhuri <n> [sg=pl]
+
+midday
+ period between noon and 2 p.m.
+
+adili <n> (pl: {maadili})
+
+ethics, morals, good conduct
+adui <n> (pl: {maadui})
+1.
+enemy
+2.
+opponent (in games or sports)
+afadhali <adv>
+
+better, preferably, rather
+afisa, ofisa <n> (pl: {maafisa}, {maofisa})
+
+officer
+afisi, ofisi <n> [sg=pl]
+
+office, bureau
+Afrika <n>
+
+Africa
+afya <n> [sg=pl]
+
+health
+aga <v>
+
+leave, say goodbye
+agana <v>
+1.
+agree, make an agreement
+2.
+say goodbye, exchange farewells
+agano <n> (pl: {maagano})
+1.
+promise
+2.
+agreement, contract
+   See also: {ahadi}
+
+Agano Jipya <n>
+
+New Testament
+Agano la Kale <n>
+
+Old Testament
+agiza <v, caus>
+1.
+order, command, instruct
+; direct, instruct, give instructions
+2.
+order, place an order
+agizia <v, caus>
+
+order for
+Agosti <n> [sg=pl]
+
+August
+ahadi <n> [sg=pl]
+
+promise, pledge, vow
+   See also: {agano}
+
+aibisha <v, caus>
+
+embarrass, shame
+; humiliate
+aibu <n> [sg=pl]
+
+shame, embarrassment
+; humiliation
+aina <n> [sg=pl]
+
+kind, sort
+ajabu <n> (pl: {maajabu})
+1.
+wonder, marvel, miracle
+; surprise
+2.
+awe, amazement, astonishment
+ajali <n> [sg=pl]
+1.
+accident
+2.
+destiny, fate
+ajili <n> [sg=pl]
+
+reason, sake, cause
+ake <pron, poss>
+
+his
+; hers
+; its
+akiba <n> [sg=pl]
+
+reserve, savings
+akili <n> [sg=pl]
+
+intelligence, intellect
+; sense
+; brain, brains
+ako <pron, poss>
+
+your (sg.)
+ala <n> [sg=pl]
+
+tool, instrument
+alama <n> [sg=pl]
+1.
+sign
+2.
+mark
+alasiri <n> [sg=pl]
+
+afternoon
+ period between 3 p.m. and 5 p.m.
+
+alfajiri <n> [sg=pl]
+
+before dawn
+ around 4 a.m.
+
+Alhamisi <n> [sg=pl]
+
+Thursday
+alika <v>
+
+invite
+Allah <n>
+
+God
+almaria <n> [sg=pl]
+
+lace
+ama <conj>
+
+or
+amani <n> [sg=pl]
+
+peace
+ambia <v>
+
+tell
+ambukiza <v>
+
+infect
+amini <v>
+
+believe
+amka <v>
+
+wake, get up
+amkia <v>
+
+greet
+amkiana <v>
+
+greet each other
+amri <n> [sg=pl]
+
+command, order
+amriwa <v>
+
+be ordered
+amsha <v, caus>
+
+awaken
+amshwa <v, caus>
+
+be awakened
+amua <v>
+
+decide
+amuru <v>
+
+command, order
+ana <v, infl>
+
+he has
+; she has
+; it has
+   See also: {wa na}
+
+andazi <n> (pl: {maandazi})
+
+doughnut, pastry
+andika <v>
+
+write
+andiko <n> (pl: {maandiko})
+
+writing
+andikwa <v>
+
+be written
+anga <n> [sg=pl]
+
+sky
+anga <v>
+
+fly
+angalia <v>
+1.
+look at, observe
+2.
+be careful, watch out
+3.
+take care of
+4.
+pay attention
+angaza <v>
+1.
+shine, glow
+2.
+illuminate, brighten
+3.
+observe, look intently
+angazia <v>
+
+shine on
+angu <pron, poss>
+
+my
+angua <v>
+
+knock down, throw down
+anguka <v>
+
+fall
+angukia <v>
+
+fall into, fall on, fall onto
+angusha <v, caus>
+1.
+drop
+2.
+topple, tumble, overthrow (esp. government, ruler)
+3.
+let down, disappoint
+anwani <n> [sg=pl]
+
+address
+anza <v>
+
+begin, initiate, launch
+   See also: {anzisha}
+
+anzisha <v, caus>
+
+start up, begin, initiate, launch
+   See also: {anza}
+
+ao <pron, poss>
+
+their
+Aprili <n> [sg=pl]
+
+April
+ardhi <n> [sg=pl]
+1.
+land, soil
+2.
+earth
+arifu <v>
+
+inform
+arobaini <num>
+
+forty
+arusi, harusi <n> [sg=pl]
+
+wedding
+asali <n> [sg=pl]
+
+honey
+asante <interj>
+
+thank you
+asidi <n> [sg=pl]
+
+acid
+asilimia <n> [sg=pl]
+
+per cent
+askari <n> [sg=pl]
+
+soldier, police, guard
+asubuhi <n> [sg=pl]
+
+morning
+ period between 6 a.m. and 10 a.m.
+
+atlasi <n> [sg=pl]
+
+satin
+au <conj>
+
+or
+azima <v>
+
+borrow, lend
+azimio <n> (pl: {maazimio})
+
+declaration
+baa <n> [sg=pl]
+
+bar
+; pub
+baada <adv>
+
+after
+baada ya <adv>
+
+after, behind
+baadaye <adv>
+
+afterwards
+baadhi <n>
+
+some
+baba <n> [sg=pl]
+
+father
+baba mdogo <n>
+
+(paternal) uncle
+ father's younger brother
+
+baba mkubwa <n>
+
+(paternal) uncle
+ father's older brother
+
+baba mkwe <n>
+
+father-in-law
+baba wa kambo <n>
+
+stepfather
+babaika <v>
+
+be confused, hesitate
+babaisha <v, caus>
+
+confuse
+babu <n> [sg=pl]
+
+grandfather
+badala ya <adv>
+
+instead of
+badili <v>
+1.
+substitute, change
+2.
+exchange, barter
+badilisha <v, caus>
+
+exchange, change
+badilishwa <v, caus>
+
+be changed
+bado <adv>
+1.
+still
+2.
+not yet
+bafu <n> [sg=pl]
+1.
+bathroom
+2.
+bathtub
+bahari <n> [sg=pl]
+
+sea, ocean
+Bahari ya Atlantiki <n>
+
+the Atlantic Ocean
+Bahari ya Hindi <n>
+
+the Indian Ocean
+Bahari ya Pasifiki <n>
+
+the Pacific Ocean
+Bahari ya Sham <n>
+
+the Red Sea
+baharia <n> (pl: {mabaharia})
+
+sailor
+bahasha <n> [sg=pl]
+
+envelope
+bahati <n> [sg=pl]
+1.
+luck, chance
+2.
+fate
+bahatisha <v, caus>
+
+hazard
+; take a chance
+baisikeli, baiskeli <n> [sg=pl]
+
+bike, cycle, bicycle
+bajia <n> [sg=pl]
+
+bean cake
+baki <v>
+
+remain
+bakuli <n> (pl: {mabakuli})
+
+bowl
+balaa <n> [sg=pl]
+
+misfortune
+bali <conj>
+
+but, however, nevertheless, yet
+balozi <n> (pl: {mabalozi})
+
+ambassador
+balungi <n> (pl: {mabalungi})
+
+grapefruit
+bamia <n> [sg=pl]
+
+okra
+bana <v>
+
+squeeze
+banda <n> (pl: {mabanda})
+
+shed
+banda la motokaa <n>
+
+garage
+bandari <n> [sg=pl]
+
+port
+bandia <n> [sg=pl]
+
+doll
+bandika <v>
+
+stick on
+bandua <v>
+
+take off
+bangili <n> [sg=pl]
+
+bracelet
+bao <n> (pl: {mabao})
+
+board
+bara <n> (pl: {mabara})
+
+continent, land
+Bara Hindi <n>
+
+India
+barabara <n> [sg=pl]
+
+road, way, highway
+barabara <adv>
+
+exactly, precisely
+barafu <n> [sg=pl]
+
+ice
+baraka <n> [sg=pl]
+
+blessing
+baraza <n> [sg=pl]
+
+living room, sitting room
+baridi <n> [sg=pl]
+
+cold
+bariki <v>
+
+bless
+barua <n> [sg=pl]
+
+letter, mail
+basi <interj>
+
+so
+bata <n> (pl: {mabata})
+
+duck
+baya <adj>
+
+bad
+beba <v>
+
+carry
+bega <n> (pl: {mabega})
+
+shoulder
+begi <n> (pl: {mabegi})
+
+bag
+behewa <n> (pl: {mabehewa})
+
+train carriage
+bei <n> [sg=pl]
+
+price
+benki <n> (pl: {mabenki}) [sg=pl]
+
+bank
+bia <n> [sg=pl]
+
+beer
+biarusi <n> (pl: {mabiarusi})
+
+bride
+biashara <n> [sg=pl]
+
+commerce
+bibi <n> (pl: {mabibi})
+
+lady
+Biblia <n> [sg=pl]
+
+Bible
+bichi <adj>
+1.
+raw
+2.
+unripe
+bidhaa <n> [sg=pl]
+
+goods
+bidi <v>
+
+oblige
+bidii <n> [sg=pl]
+
+effort
+bila <prep>
+
+without
+bilauri <n> [sg=pl]
+
+drinking glass
+bima <n> [sg=pl]
+
+insurance
+binadamu <n> [sg=pl]
+
+human being, person
+binafsi <adj>
+
+personal, private
+binamu <n> [sg=pl]
+
+cousin
+bingwa <n> (pl: {mabingwa})
+1.
+specialist, expert
+2.
+clever person
+3.
+champion
+binti <n> (pl: {mabinti})
+1.
+daughter
+2.
+miss
+; young lady
+birika <n> (pl: {mabirika})
+
+kettle
+bisha <v>
+
+knock at the door
+bisha hodi <v>
+
+ask permission to enter
+; knock at the door
+   See also: {piga hodi}
+
+bishana <v>
+
+argue
+bisibisi <n> [sg=pl]
+
+screwdriver
+bivu <adj>
+
+ripe
+bizari <n> [sg=pl]
+
+curry
+; turmeric
+bomba <n> (pl: {mabomba})
+
+pump
+bomoa <v>
+
+break down
+bonde <n> (pl: {mabonde})
+
+valley
+; depression
+Bonde la Ufa <n>
+
+the Rift Valley
+bora <adj>
+
+excellent
+boresha <v, caus>
+
+improve
+bosi <n> (pl: {mabosi})
+
+boss
+bovu <adj>
+
+rotten
+bufuu <n> (pl: {mabufuu})
+
+shell
+buibui <n> (pl: {mabuibui})
+1.
+spider
+2.
+purdah
+buli <n> (pl: {mabuli})
+
+teapot
+buluu <adj>
+
+blue
+bure <adv>
+
+in vain
+burudani <n> [sg=pl]
+
+entertainment, recreation
+busara <n> [sg=pl]
+
+wisdom
+bustani <n> (pl: {mabustani}) [sg=pl]
+
+garden
+bwana <n> (pl: {mabwana})
+
+gentleman
+bwanaarusi <n> (pl: {mabwanaarusi})
+
+groom
+bweni <n> (pl: {mabweni})
+
+dormitory
+cha <prt, poss, agr: 7>
+
+of
+chache <adj>
+
+few
+chafu <adj>
+
+dirty
+chafya <n> [sg=pl]
+
+sneeze
+chagua <v>
+
+choose
+chaguo <n> (pl: {machaguo})
+
+choice
+chai <n> [sg=pl]
+1.
+tea
+2.
+bribe
+chake <pron, poss, agr: 7>
+
+his, her, hers, its
+chaki <n> [sg=pl]
+
+chalk
+chako <pron, poss, agr: 7>
+
+your (sg.), yours (sg.)
+chakula <n> (pl: {vyakula})
+1.
+food
+2.
+meal
+chama <n> (pl: {vyama})
+
+association
+; party
+chana <v>
+
+slit
+chandarua <n> (pl: {vyandarua})
+
+mosquito net
+changamano <n> (pl: {machangamano})
+1.
+mixture, blend
+2.
+cooperation
+3.
+association, union
+changamfu <adj>
+
+cheerful
+changanya <v>
+
+mix
+changia <v>
+
+contribute to
+changu <n> [sg=pl]
+
+bream
+ a kind of sea fish of genus Lethrinops
+
+changu <pron, poss, agr: 7>
+
+my, mine
+changua <v>
+
+separate
+chanika <v>
+
+be torn
+chanjia <v>
+
+vaccinate
+chao <pron, poss, agr: 7>
+
+their
+chapa <n> [sg=pl]
+
+brand, trade mark
+chapa <v>
+
+beat, hit
+chapa <v>
+
+print
+chaza <n> [sg=pl]
+
+oyster
+cheka <v>
+
+laugh
+chekelea <v>
+
+smile
+chekesha <v, caus>
+
+amuse
+cheko <n> [sg=pl]
+
+laughter
+cheleo <n> (pl: {macheleo})
+
+delay
+chelewa <v>
+
+delay
+chemka <v>
+
+boil, seethe
+chemsha <v, caus>
+
+boil, heat up
+chemshabongo <n> [sg=pl]
+
+crossword
+chemshwa <v, caus>
+
+be boiled
+chenji <n> [sg=pl]
+
+small money, change
+chenu <pron, poss, agr: 7>
+
+your (pl.), yours (pl.)
+chenye <cop, poss, agr: 7>
+
+having
+; with
+cheo <n> (pl: {vyeo})
+1.
+measure
+2.
+grade, rank, rate
+cheti <n> (pl: {vyeti})
+1.
+certificate
+2.
+testimony
+chetu <pron, poss, agr: 7>
+
+our, ours
+chewa <n> [sg=pl]
+
+cod
+cheza <v>
+
+play
+chezacheza <v>
+
+play at
+chini <adv>
+
+below, downstairs, underneath
+chini ya <adv>
+
+below, beneath, under, underneath
+chinja <v>
+
+slaughter
+chipua <v>
+
+sprout
+choka <v>
+
+get tired
+choma <v>
+1.
+burn, roast
+2.
+pierce, stab
+chombo <n> (pl: {vyombo})
+1.
+jug, box, container
+2.
+vase, vessel
+choo <n> (pl: {vyoo})
+1.
+dung, excrement
+2.
+latrine
+chote <pron, agr: 7>
+
+all, whole
+chubuka <v>
+
+be bruised
+chui <n> [sg=pl]
+
+leopard
+chuki <n> [sg=pl]
+
+ill-feeling
+chukia <v>
+
+hate
+chukiza <v, caus>
+
+offend
+chukua <v>
+
+carry
+; take
+chukulia <v>
+
+carry for
+chuma <n> (pl: {vyuma})
+
+iron, metal
+chuma <v>
+
+gather
+chumba <n> (pl: {vyumba})
+
+room, chamber
+chumvi <n> [sg=pl]
+
+salt
+chunga <v>
+
+watch over
+chungu <n> (pl: {vyungu})
+1.
+cooking pot
+2.
+jug
+chungu <adj>
+
+bitter
+chungwa <n> (pl: {machungwa})
+
+orange
+chuo <n> (pl: {vyuo})
+
+school
+chuo kikuu <n>
+
+university
+chupa <n> [sg=pl]
+
+bottle
+chura <n> (pl: {vyura})
+
+frog
+dada <n> [sg=pl]
+
+sister
+daftari <n> (pl: {madaftari})
+
+notebook
+dafu <n> (pl: {madafu})
+
+coconut
+dagaa <n> [sg=pl]
+
+small fish
+dai <v>
+
+claim, demand
+dakika <n> [sg=pl]
+
+minute
+daktari <n> (pl: {madaktari})
+
+doctor, physician
+daladala <n> (pl: {madaladala})
+
+local minibus in Tanzania
+   See also: {matatu}
+
+damu <n> [sg=pl]
+
+blood
+danganya <v>
+
+lie, deceive, cheat
+danganyifu <adj>
+
+false
+dansi, densi <n> [sg=pl]
+
+dance
+daraja <n> (pl: {madaraja})
+1.
+stairs
+2.
+bridge
+3.
+rank, position
+darasa <n> (pl: {madarasa})
+
+class
+dawa <n> (pl: {madawa}) [sg=pl]
+
+drug, medicine, pharmaceutical
+deni <n> (pl: {madeni})
+
+debt, loan
+Desemba, Disemba <n> [sg=pl]
+
+December
+deski <n> (pl: {madeski})
+
+desk
+desturi <n> [sg=pl]
+
+custom, habit, way
+dhahabu <n> [sg=pl]
+
+gold
+dhaifu <adj>
+
+faint, weak
+dhambi <n> [sg=pl]
+
+sin
+dhani <v>
+
+think
+dharau <v>
+
+despise
+dhuru <v>
+
+harm
+digrii <n> [sg=pl]
+
+degree
+dini <n> [sg=pl]
+
+religion
+dirisha <n> (pl: {madirisha})
+
+window
+diwani <n> [sg=pl]
+
+collected works
+doa <n> (pl: {madoa})
+
+spot
+dobi <n> (pl: {madobi})
+
+launderer, laundryman, laundrywoman
+; washer, washerman, washerwoman
+dogo <adj>
+
+small, little
+dola <n> [sg=pl]
+
+dollar
+duka <n> (pl: {maduka})
+
+shop, store, boutique
+dunda <v>
+
+bounce
+dunia <n> [sg=pl]
+
+world
+   Synonym: {ulimwengu}
+
+duru <v>
+
+rotate
+edashara <num>
+
+eleven
+egesha <v, caus>
+
+park
+ekundu <adj>
+
+red
+elea <v>
+1.
+be clear
+2.
+float, levitate
+elekea <v>
+
+face
+elekeza <v, caus>
+
+direct
+elewa <v>
+
+know
+elewana <v>
+
+reach an agreement
+eleza <v, caus>
+
+explain
+elezo <n> (pl: {maelezo})
+
+explanation
+elfu <adj>
+
+thousand
+elimika <v>
+
+be educated
+elimu <n> [sg=pl]
+
+knowledge
+ema <adj>
+
+good
+embamba <adj>
+
+narrow
+embe <n> (pl: {maembe})
+
+mango
+enda <v> (imp: {nenda})
+
+go
+enda na <v>
+
+accompany
+endea <v>
+
+go to
+endelea <v>
+
+continue
+endesha <v, caus>
+
+manage, drive
+eneo <n> (pl: {maeneo})
+
+area
+enu <pron, poss>
+
+your (pl.)
+enye <cop, poss>
+
+having
+; with
+ (the forms of -enye display pronominal agreement)
+
+enye akili <adj>
+1.
+able
+2.
+capable
+enye giza <adj>
+1.
+dark
+2.
+dim
+enye nguvu <adj>
+
+strong
+enyewe <adj>
+
+oneself
+epesi <adj>
+
+light (of weight or colour)
+epua <v>
+
+take off, remove
+epuka <v>
+
+avoid
+erevu <adj>
+
+cunning
+eropleni <n> [sg=pl]
+
+airplane, plane
+   Synonym: {ndege}
+
+etu <pron, poss>
+
+our
+eupe <adj>
+
+white
+eusi <adj>
+
+black
+fa <v>
+
+die
+faa <v>
+
+be useful, be suitable, be proper
+fagia <v>
+
+sweep
+fagio <n>
+
+ Plural of {ufagio}: broom
+
+fahamu <v>
+
+understand
+faida <n> [sg=pl]
+
+profit, gain
+faidi <v>
+
+profit, benefit
+faidika <v>
+
+profit from
+falme <n>
+
+ Plural of {ufalme}: kingdom
+
+fanana <v>
+
+resemble
+fananisha <v, caus>
+
+liken
+fanikio <n> (pl: {mafanikio})
+
+success, achievement
+fanikiwa <v>
+
+succeed
+fanya <v>
+
+make
+fanyia <v>
+
+do for
+fanyika <v>
+
+be done
+faraja <n> [sg=pl]
+
+comfort
+; relief
+farasi <n> [sg=pl]
+
+horse
+fariki <v>
+
+die
+fasihi <n> [sg=pl]
+
+literature
+fasiri <v>
+
+translate
+faulu <v>
+
+be successful, achieve
+Februari <n> [sg=pl]
+
+February
+fedha <n> [sg=pl]
+1.
+money
+   Synonyms: {hela}, {pesa}
+
+2.
+silver
+ficha <v>
+
+hide
+fichua <v>
+
+uncover, reveal
+figo <n> (pl: {mafigo})
+
+kidney
+fika <v>
+
+arrive
+fikia <v>
+
+arrive at
+fikiri <v>
+
+consider
+fikisha <v, caus>
+
+deliver
+fikishwa <v, caus>
+
+be delivered
+fimbo <n> [sg=pl]
+
+stick
+fisi <n> [sg=pl]
+
+hyena
+fizi <n>
+
+ Plural of {ufizi}: gum, gingiva
+
+fofofo <adv>
+
+completely, heavily, deeply
+ (occurs in compounds with 'lala' and 'fa')
+
+fomu <n> [sg=pl]
+
+form
+forodha <n> [sg=pl]
+
+customs
+foronya <n> [sg=pl]
+
+pillow case
+friji <n> [sg=pl]
+
+fridge
+fua <v>
+
+wash
+fuata <v>
+
+follow
+fuatilia <v>
+
+investigate
+fuatisha <v, caus>
+
+copy
+fujo <n> (pl: {mafujo})
+
+chaos
+fukuza <v, caus>
+
+drive out
+fulana <n> [sg=pl]
+
+undershirt
+fulani <adj>
+
+certain, some, such-and-such
+fuliwa <v>
+
+be washed
+fuma <v>
+
+weave
+fumba <v>
+
+close
+fumbua <v>
+
+open
+fumua <v>
+
+unravel
+fundi <n> (pl: {mafundi})
+
+craftsman
+fundisha <v, caus>
+
+teach
+fundisho <n> (pl: {mafundisho})
+
+lesson
+fundo <n> (pl: {mafundo})
+
+knot
+funga <v>
+
+fasten, close
+fungasha <v, caus>
+
+tow
+fungia <v>
+
+fasten with
+fungua <v>
+
+unfasten, open
+funguliwa <v>
+
+be opened
+funguo <n>
+
+ Plural of {ufunguo}: key, wrench
+
+fungwa <v>
+
+be closed
+funika <v>
+
+cover
+funua <v>
+
+uncover
+funza <v, caus>
+
+teach
+fupi <adj>
+
+short
+fupisha <v, caus>
+
+shorten
+furaha <n> [sg=pl]
+
+gladness, joy
+furahi <v>
+
+rejoice
+furushi <n> (pl: {mafurushi})
+
+bundle
+futa <v>
+
+wipe
+futia <v>
+
+wipe with
+ganda <n> (pl: {maganda})
+
+bark, husk, peel, shell
+ganga <v>
+
+cure
+gani <pron, inter>
+
+what kind
+gari <n> (pl: {magari}) [sg=pl]
+
+wheeled vehicle
+gati <n> [sg=pl]
+
+pier
+gauni <n> (pl: {magauni})
+
+dress, gown
+gawa <v>
+
+divide
+gawanya <v>
+
+share
+gazeti <n> (pl: {magazeti})
+
+newspaper
+gego <n> (pl: {magego})
+
+molar
+geni <adj>
+
+foreign
+gereza <n> (pl: {magereza})
+
+prison, jail
+geuka <v>
+
+turn around
+ghafla <adv>
+
+suddenly
+ghali <adj>
+
+expensive
+gharama <n> [sg=pl]
+
+expense
+ghasi <v>
+
+confuse
+ghasia <n> [sg=pl]
+
+confusion
+ghasiwa <v>
+
+be disturbed
+ghorofa <n> [sg=pl]
+
+upper floor
+giza <n>
+
+darkness, murk
+glasi <n> [sg=pl]
+
+glass
+glovu <n> [sg=pl]
+
+glove
+gogota <v>
+
+tap
+gomba <v>
+
+contradict
+gombana <v>
+
+quarrel
+gonga <v>
+
+beat, hit
+gongana <v>
+
+collide with, bump into one another
+gonjwa <adj>
+
+ill, sick
+goti <n> (pl: {magoti})
+
+knee
+gumba <adj>
+
+solitary
+gumu <adj>
+1.
+hard
+2.
+difficult
+gundi <n> [sg=pl]
+1.
+gum
+2.
+paste
+gunia <n> (pl: {magunia})
+
+sack
+gurudumu <n> (pl: {magurudumu})
+
+wheel
+gusa <v>
+
+touch
+haba <adj>
+
+few
+habari <n> [sg=pl]
+
+news, novelty(used also in greetings (e.g. Habari yako?, Habari za hapa?, etc.))
+
+Habeshi <n>
+
+Ethiopia, Abyssinia
+hadhari <n> [sg=pl]
+
+caution, warning
+; precaution, vigilance
+hadi <prep>
+
+until
+hadithi <n> [sg=pl]
+
+story
+hafifu <adj>
+1.
+faint, light, weak
+2.
+miserable
+3.
+poor
+hai <adj>
+
+alive
+haidhuru <interj>
+
+it does not matter, never mind
+haina <v, infl, agr: 4,9>
+
+it does not have
+   See also: {wa na}
+
+haja <n> [sg=pl]
+
+need, want
+haki <n> [sg=pl]
+
+righteousness
+hakika <n> [sg=pl]
+
+certainty
+hakikisha <v, caus>
+
+make sure, make certain
+hakina <v, infl, agr: 7>
+
+it does not have
+   See also: {wa na}
+
+hakuna <v, infl, agr: 17>
+
+there is not
+; there are not
+   See also: {wa na}
+
+halafu <adv>
+
+afterwards
+halali <adj>
+
+legal, valid
+hali <n> [sg=pl]
+
+state, condition
+halina <v, infl, agr: 5>
+
+it does not have
+   See also: {wa na}
+
+halisi <adv>
+
+exactly
+haluli <n> [sg=pl]
+
+laxative
+hama <v>
+
+move from
+hamasa <n> [sg=pl]
+
+motivation
+hamia <v>
+
+move to
+hamna <v, infl>
+
+you (pl.) do not have
+hamna <v, infl, agr: 18>
+
+is not inside
+; are not inside
+hamsini <num>
+
+fifty
+hamu <n> [sg=pl]
+
+longing
+hana <v, infl>
+
+he does not have
+; she does not have
+; it does not have
+   See also: {wa na}
+
+hao <pron, dem ref, agr: 2>
+
+these, those, the persons referred to previously or close to the hearer
+hapa <adv>
+
+here
+hapa <pron, dem prox, agr: 16>
+
+this
+hapana <v, infl, agr: 16>
+
+there is not
+; there are not
+   See also: {wa na}
+
+hapana <interj>
+
+no
+   Synonym: {la}
+
+hapo <adv>
+1.
+there (specified)
+2.
+then
+hapo <pron, dem ref, agr: 16>
+
+this, that, the one referred to previously or close to the hearer
+haraka <n> [sg=pl]
+
+haste
+haramu <adj>
+
+forbidden
+haribika <v>
+
+break down
+haribu <v>
+
+destroy
+hariri <n> [sg=pl]
+
+silk
+harufu <n> [sg=pl]
+
+smell
+hasa <adv>
+
+especially
+hasara <n> [sg=pl]
+
+loss
+hasha <interj>
+
+certainly not!
+hasira <n> [sg=pl]
+
+anger
+hasiri <v>
+
+damage
+hata <prep>
+
+until, till
+hata kidogo <interj>
+
+not at all
+hatari <n> [sg=pl]
+
+danger
+hati <n> [sg=pl]
+
+document
+hatibu <n> (pl: {mahatibu})
+
+speaker
+hatima <n> [sg=pl]
+
+conclusion
+hatimaye <adv>
+
+finally
+hatua <n> [sg=pl]
+
+step
+hatuna <v, infl>
+
+we do not have
+   See also: {wa na}
+
+hauna <v, infl, agr: 3,11>
+
+it does not have
+   See also: {wa na}
+
+havina <v, infl, agr: 8>
+
+it does not have
+   See also: {wa na}
+
+hawa <pron, dem prox, agr: 2>
+
+these
+hawala <n> [sg=pl]
+
+money order
+hawana <v, infl>
+
+they do not have
+   See also: {wa na}
+
+haya <pron, dem prox, agr: 6>
+
+these
+hayana <v, infl, agr: 6>
+
+it does not have
+   See also: {wa na}
+
+hayo <pron, dem ref, agr: 6>
+
+these, those, the ones referred to previously or close to the hearer
+hazina <n> [sg=pl]
+
+treasury
+hazina <v, infl, agr: 10>
+
+it does not have
+   See also: {wa na}
+
+hekalu <n> (pl: {mahekalu})
+
+temple
+hekima <n> [sg=pl]
+1.
+wisdom
+2.
+knowledge
+hela <n> [sg=pl]
+
+money
+   Synonyms: {fedha}, {pesa}
+
+hema <n> (pl: {mahema})
+
+tent
+hereni, herini <n> [sg=pl]
+
+earring
+heri <n> [sg=pl]
+
+good fortune
+hesabu <n> [sg=pl]
+1.
+mathematics
+2.
+account
+3.
+number
+hesabu <v>
+
+count
+heshima <n> [sg=pl]
+
+respect
+heshimu <v>
+
+show respect, honour
+hewa <n> [sg=pl]
+1.
+air
+2.
+gas
+hiari <v>
+
+choose, prefer
+hiari <n> [sg=pl]
+
+choice
+hicho <pron, dem ref, agr: 7>
+
+this, that, the one referred to previously or close to the hearer
+hii <pron, dem prox, agr: 4,9>
+
+this, these
+hiki <pron, dem prox, agr: 7>
+
+this
+hili <pron, dem prox, agr: 5>
+
+this
+hilo <pron, dem ref, agr: 5>
+
+this, that, the one referred to previously or close to the hearer
+hindi <n> (pl: {mahindi})
+
+maize
+hisi <v>
+
+sense, feel
+hisia <n> [sg=pl]
+
+feeling
+hitaji <v>
+
+need
+hivi <pron, dem prox, agr: 8>
+
+these
+hivyo <pron, dem ref, agr: 8>
+
+these, those, the ones referred to previously or close to the hearer
+hiyo <pron, dem ref, agr: 4,9>
+
+this,these, that, those, the one/ones referred to previously or close to the hearer
+hizi <pron, dem prox, agr: 10>
+
+these
+hizo <pron, dem ref, agr: 10>
+
+these, those, the ones referred to previously or close to the hearer
+hodari <adj>
+
+brave
+hodi <interj>
+
+May I come in?
+; Hello! (while knocking on someone's door)
+   See also: {karibu}
+
+hofu <n> [sg=pl]
+
+fear
+homa <n> [sg=pl]
+
+fever
+hongera <n> [sg=pl]
+
+congratulations(used as a congratulatory expression)
+
+   See also: {pongezi}
+
+honi <n> [sg=pl]
+
+horn
+hospitali <n> [sg=pl]
+
+hospital
+hoteli <n> [sg=pl]
+
+hotel
+hotuba <n> [sg=pl]
+
+speech
+hudhuria <v>
+
+attend, participate, be present
+huduma <n> [sg=pl]
+
+service
+hudumia <v>
+
+assist
+hudumu <v>
+
+serve
+huenda <adv>
+
+perhaps
+huko <adv>
+1.
+there (unspecified)
+2.
+then
+huko <pron, dem ref, agr: 15,17>
+
+this, that, the one referred to previously or close to the hearer
+huku <pron, dem prox, agr: 15,17>
+
+this
+huku <adv>
+
+here, hereabouts
+humo <pron, dem ref, agr: 18>
+
+this, that, the one referred to previously or close to the hearer
+humu <adv>
+
+in here
+humu <pron, dem prox, agr: 18>
+
+this
+huna <v, infl>
+
+you (sg.) do not have
+   See also: {wa na}
+
+hundi <n> [sg=pl]
+
+cheque, check
+huo <pron, dem ref, agr: 3,11>
+
+this, that, the one referred to previously or close to the hearer
+huria <n>
+
+freedom
+huria <adj>
+
+free, independent
+   See also: {huru}
+
+huru <adj>
+
+free, independent
+   See also: {huria}
+
+huruma <n> [sg=pl]
+1.
+mercy
+2.
+sympathy
+husiana <v>
+
+be related
+husika <v>
+
+be involved
+husu <v>
+1.
+give a share
+2.
+concern
+huu <pron, dem prox, agr: 3,11>
+
+this
+huyo <pron, dem ref, agr: 1>
+
+this, the person referred to previously or close to the hearer
+huyu <pron, dem prox, agr: 1>
+
+this
+huzuni <n> [sg=pl]
+
+sorrow, sadness
+iba <v>
+
+steal
+ibada <n> [sg=pl]
+
+worship
+ibilisi <n> (pl: {maibilisi})
+
+lucifer, satan
+ibiwa <v>
+
+be robbed
+idadi <n> [sg=pl]
+
+total, quantity, number
+idara <n> [sg=pl]
+
+department
+idhini <n> [sg=pl]
+
+permission, approval
+iga <v>
+
+immitate
+igiza <v, caus>
+
+mimic
+ijapo <conj>
+
+even if
+Ijumaa <n> [sg=pl]
+
+Friday
+ikiwa <conj>
+
+if, provided that
+iko <cop, loc unspec, agr: 4,9>
+
+is (in an unspecified place)
+ila <conj>
+
+except
+ile <pron, dem nprox, agr: 4,9>
+
+that, those, yonder, the one/those over there (distant from both the speaker and the hearer)
+ili <conj>
+
+in order that, for, to, per
+imani <n> [sg=pl]
+
+faith
+imara <adj>
+
+strong
+imarisha <v, caus>
+
+strengthen
+imba <v>
+
+sing
+imo <cop, loc in, agr: 4,9>
+
+is (within, in there)
+ina <v, infl, agr: 4,9>
+
+it has
+   See also: {wa na}
+
+inama <v>
+
+bend down
+ingawa <conj>
+
+although
+ingi <adj>
+
+many, much
+ingia <v>
+
+enter
+ingilia <v>
+
+enter into
+ingine <adj>
+
+other
+ingiza <v, caus>
+
+put in
+ini <n> (pl: {maini})
+
+liver
+Injili <n>
+
+New Testament
+insha <n> [sg=pl]
+
+essay
+Inshallah <interj>
+
+God willing!
+inua <v>
+
+lift up
+inuka <v>
+
+get up
+inzi <n> [sg=pl]
+
+fly
+ipo <cop, loc spec, agr: 4,9>
+
+is (in a specified place)
+isha <v>
+
+finish
+ishi <v>
+
+live
+ishirini <num>
+
+twenty
+isimu <n> [sg=pl]
+
+linguistics
+isipokuwa <prep>
+
+except
+ita <v>
+
+call
+itika <v>
+
+answer
+itwa <v>
+
+be called
+iwapo <conj>
+
+if
+ja <v> (imp: {njoo})
+
+come
+jaa <v>
+
+fill up
+jadi <n> [sg=pl]
+1.
+tradition
+2.
+origin
+jahazi <n> (pl: {majahazi})
+
+dhow
+jamaa <n> [sg=pl]
+
+family
+jamani <interj>
+
+my goodness!
+jambo <n> (pl: {mambo})
+
+affair, business, case, matter
+jambo <interj>
+
+hello(used as a greeting; most often prefixed with participant and negative markers (Hujambo? - Sijambo, etc.))
+
+jamhuri <n> [sg=pl]
+
+republic
+jamii <n> [sg=pl]
+
+society, community
+jana <n> [sg=pl]
+
+yesterday
+jando <n> [sg=pl]
+
+initiation rite
+jani <n> (pl: {majani})
+1.
+leaf
+2.
+blade of grass
+Januari <n> [sg=pl]
+
+January
+jaribu <v>
+
+test
+jasho <n> (pl: {majasho})
+
+sweat
+jawabu <n> (pl: {majawabu})
+
+answer
+jaza <v, caus>
+
+fill
+je <prt, inter>
+
+how
+ (often used as a question marker)
+
+jela <n> [sg=pl]
+
+prison
+jembe <n> (pl: {majembe})
+
+hoe
+jenga <v>
+
+build
+jengo <n> (pl: {majengo})
+
+building
+jeraha <n> (pl: {majeraha})
+
+wound
+jeruhi <v>
+
+injure, wound
+jeshi <n> (pl: {majeshi})
+
+army
+jibini <n> [sg=pl]
+
+cheese
+jibu <n> (pl: {majibu})
+
+answer
+jibu <v>
+
+answer
+jicho <n> (pl: {macho})
+
+eye
+jifunza <v, caus>
+
+learn
+jiji <n> (pl: {majiji})
+
+city
+jiko <n> (pl: {majiko})
+1.
+kitchen
+2.
+fireplace
+jina <n> (pl: {majina})
+
+name
+jino <n> (pl: {meno})
+
+tooth
+jinsi <n> [sg=pl]
+
+kind, sort
+jinsia <n> [sg=pl]
+
+gender, sex
+jioni <n> [sg=pl]
+
+evening
+ period between 5 p.m. and 8 p.m.
+
+jipu <n> (pl: {majipu})
+
+boil
+; abscess
+jirani <n> (pl: {majirani})
+
+neighbour
+jitu <n> (pl: {majitu})
+
+giant
+jivu <n> (pl: {majivu})
+
+ash
+jiwe <n> (pl: {mawe})
+
+stone
+jogoo <n> (pl: {majogoo})
+
+cock, rooster
+joka <n> (pl: {majoka})
+
+serpent
+joto <n> [sg=pl]
+
+heat
+jozi <n> [sg=pl]
+
+pair
+jua <n> (pl: {majua})
+
+sun
+jua <v>
+
+know
+jukwaa <n> (pl: {majukwaa})
+
+stage
+Julai <n> [sg=pl]
+
+July
+julikana <v>
+
+be known
+julisha <v, caus>
+1.
+inform
+2.
+introduce someone
+juma <n> (pl: {majuma})
+
+week
+Jumamosi <n> [sg=pl]
+
+Saturday
+Jumanne <n> [sg=pl]
+
+Tuesday
+Jumapili <n> [sg=pl]
+
+Sunday
+Jumatano <n> [sg=pl]
+
+Wednesday
+Jumatatu <n> [sg=pl]
+
+Monday
+jumba <n> (pl: {majumba})
+
+mansion, palace
+jumbe <n> (pl: {majumbe})
+
+chief, boos, leader
+jumla <n> [sg=pl]
+
+sum, total
+jumuia, jumuiya <n> [sg=pl]
+
+community, association
+Juni <n> [sg=pl]
+
+June
+juta <v>
+
+regret
+juu <adv>
+
+above
+juu ya <adv>
+1.
+across from, against, in exchange for, opposed to
+2.
+on, upon
+3.
+above, over
+juzi <n> [sg=pl]
+
+the day before yesterday
+kaa <v>
+1.
+sit
+2.
+stay, reside, live
+3.
+fit
+; suit
+kaa <n> [sg=pl]
+
+crab
+kaa <n> (pl: {makaa})
+1.
+charcoal
+2.
+ember
+kaanga <v>
+
+fry
+kabila <n> (pl: {makabila})
+
+tribe
+kabisa <adv>
+
+at all, entirely, quite, wholly
+kabla <prep>
+
+before
+kabla ya <conj>
+
+before, in front of
+kaburi <n> (pl: {makaburi})
+
+grave
+kadha <adj>
+
+certain, various
+kafara <n> (pl: {makafara}) [sg=pl]
+
+sacrifice
+kafiri <n> (pl: {makafiri})
+1.
+infidel
+; heathen
+2.
+atheist
+; pagan
+kahawa <n> [sg=pl]
+
+coffee
+kahawia <adj>
+
+brown
+kahini <n> (pl: {makahini})
+1.
+soothsayer
+2.
+witch
+3.
+deceiver
+kaka <n> [sg=pl]
+
+brother
+kalamu <n> [sg=pl]
+
+pen
+kalamu ya risasi <n> [sg=pl]
+
+pencil
+kale <n> [sg=pl]
+
+old times
+kali <adj>
+1.
+sharp
+2.
+hot
+kama <v>
+
+squeeze
+kama <conj>
+1.
+like
+2.
+as
+kamani <n> [sg=pl]
+
+(clock) mainspring
+; spiral spring
+kamata <v>
+
+catch
+; hold
+kamba <n> [sg=pl]
+
+rope
+kamili <v>
+
+complete
+kamili <adj>
+1.
+exactly
+2.
+complete
+kampuni <n> (pl: {makampuni}) [sg=pl]
+
+company
+kamua <v>
+
+squeeze out
+kamusi <n> [sg=pl]
+
+dictionary
+kamwe <adv>
+
+not at all
+kana <v>
+
+deny
+kanda <n>
+
+ Plural of {ukanda}: leather strap
+
+kanda <v>
+
+knead
+kando <adv>
+
+beside
+; next to
+; aside
+kandwa <v>
+
+be kneaded
+kanisa <n> (pl: {makanisa})
+
+church
+kanusha <v, caus>
+
+deny
+kanya <v>
+
+rebuke
+kanzu <n> [sg=pl]
+
+gown
+kapu <n> (pl: {makapu})
+
+large basket
+karakana <n> [sg=pl]
+
+factory
+; workshop
+   See also: {kiwanda}
+
+karani <n> (pl: {makarani})
+
+clerk
+karata <n> [sg=pl]
+
+playing card
+karatasi <n> [sg=pl]
+
+paper
+karibia <v>
+
+approach
+karibisha <v, caus>
+
+welcome, invite
+karibu <adv>
+
+near
+karibu <interj>
+
+Welcome!
+; reply to '{Hodi}!'
+kasa <adv>
+
+less
+kasi <n> [sg=pl]
+
+speed
+kasi <adv>
+
+very fast, quickly
+kasirika <v>
+
+be angry
+kasisi <n> (pl: {makasisi})
+
+minister
+kaskazi <n> [sg=pl]
+1.
+northern wind
+2.
+hot season
+kaskazini <n>
+
+north
+kasoro <adv>
+
+less
+kasorobo <adv>
+
+less a quarter
+kata <v>
+
+cut
+kataa <v>
+
+refuse
+kataza <v, caus>
+
+forbid
+katazo <n> (pl: {makatazo})
+
+objection, prohibition
+kati <adv>
+
+middle
+kati ya <adv>
+
+among, between
+katika <prep>
+
+in
+katikati <n> [sg=pl]
+
+middle
+katikati <prep>
+
+between
+katwa <v>
+
+be cut
+kauka <v>
+
+dry up
+kaukwa <v>
+
+be dried up
+kaushia <v, caus>
+
+dry with
+kavu <adj>
+
+dry
+kawaida <n> [sg=pl]
+
+custom
+kaza <v>
+
+tighten
+kazi <n> [sg=pl]
+
+work, job
+keki <n> [sg=pl]
+
+cake
+kelele <n> [sg=pl]
+
+ado, din, noise
+kenda <num>
+
+nine
+kengele <n> [sg=pl]
+
+bell
+Kenya <n>
+
+Kenya
+kesho <n> [sg=pl]
+
+tomorrow
+kesho kutwa <n>
+
+day after tomorrow
+khamsini <num>
+
+fifty
+Kiafrika <adj>
+
+African
+kiangazi <n> (pl: {viangazi})
+
+hot season
+Kiarabu <n>
+
+Arabic, Arabic language
+kiasi <n> (pl: {viasi})
+
+amount
+kiatu <n> (pl: {viatu})
+
+shoe
+kiazi <n> (pl: {viazi})
+
+potato
+kibaba <n> (pl: {vibaba})
+
+pint
+kibanda <n> (pl: {vibanda})
+
+hut
+kibiriti <n> (pl: {vibiriti})
+
+match
+kiboko <n> (pl: {viboko})
+
+hippo
+kichefuchefu <n> (pl: {vichefuchefu})
+
+nausea
+kicheko <n> (pl: {vicheko})
+
+laugh
+Kichina <n>
+
+Chinese, Chinese language
+kichwa <n> (pl: {vichwa})
+
+head
+kidani <n> (pl: {vidani})
+
+necklace
+kidevu <n> (pl: {videvu})
+
+chin
+kidogo <adv>
+
+a little, a bit
+kidole <n> (pl: {vidole})
+1.
+finger
+2.
+toe
+kidonda <n> (pl: {vidonda})
+
+sore, ulcer
+kidonge <n> (pl: {vidonge})
+
+pill
+kidude <n> (pl: {vidude})
+1.
+thingamajig, whatchamacallit
+2.
+trifle
+; valueless thing
+3.
+gadget, gizmo
+kielezi <n> (pl: {vielezi})
+
+beginning
+; introduction
+kifaa <n> (pl: {vifaa})
+
+implement
+Kifaransa <n>
+
+French, French language
+kifaru <n> (pl: {vifaru})
+
+rhino
+kifo <n> (pl: {vifo})
+
+death
+kifua <n> (pl: {vifua})
+
+chest, breast
+kifungo <n> (pl: {vifungo})
+
+fastening
+kifungua kopo <n>
+
+can opener, tin-opener
+kifuniko <n> (pl: {vifuniko})
+
+lid, hood, cover
+kifurushi <n> (pl: {vifurushi})
+
+package
+Kihindi <n>
+
+Hindi, Hindi language
+Kihispania <n>
+
+Spanish, Spanish language
+Kiingereza <n>
+
+English, English language
+kiingilio <n> (pl: {viingilio})
+
+entry fee
+; admission fee
+kijana <n> (pl: {vijana})
+
+youth, youngster
+kijembe <n> (pl: {vijembe})
+
+penknife
+Kijerumani <n>
+
+German, German language
+kijiji <n> (pl: {vijiji})
+
+village
+kijiko <n> (pl: {vijiko})
+
+spoon
+kijito <n> (pl: {vijito})
+
+stream
+kikapu <n> (pl: {vikapu})
+
+basket
+kike <adj>
+
+female
+; feminine
+kiko <n> (pl: {viko})
+
+pipe
+kiko <cop, loc unspec, agr: 7>
+
+is (in an unspecified place)
+kikohozi <n> (pl: {vikohozi})
+
+cough
+kikombe <n> (pl: {vikombe})
+
+cup
+kikuku <n> (pl: {vikuku})
+
+bracelet
+kikumi <n>
+
+10c coin
+kikuto <n> (pl: {vikuto})
+
+roll
+ something rolled up
+
+kila <adj>
+
+every
+kile <pron, dem nprox, agr: 7>
+
+that, yonder, the one over there (distant from both the speaker and the hearer)
+kilima <n> (pl: {vilima})
+
+hill
+kilimo <n> (pl: {vilimo})
+
+agriculture
+kilio <n> (pl: {vilio})
+
+cry
+; shout
+kilo <n> [sg=pl]
+
+kilogram
+kilometa, kilomita <n> [sg=pl]
+
+kilometre
+kima <n> [sg=pl]
+
+monkey, mangabey
+kima <n> (pl: {vima})
+
+amount, price, value
+kimbia <v>
+
+run away
+kimbilia <v>
+
+run to
+kimbiza <v, caus>
+
+drive away
+kimeta <n> (pl: {vimeta})
+
+anthrax
+kimetameta <n> (pl: {vimetameta})
+
+brightness
+; shine
+; glitter
+kimo <cop, loc in, agr: 7>
+
+is (within, in there)
+kimya <n>
+
+silence
+kimya <adj>
+
+silent
+; quiet
+kina <v, infl, agr: 7>
+
+it has
+   See also: {wa na}
+
+kinundu <n>
+
+small lump
+; nodule
+kinyozi <n> (pl: {vinyozi})
+
+barber
+kinywa <n> (pl: {vinywa})
+
+mouth
+kinywaji <n> (pl: {vinywaji})
+
+beverage
+kiogeo <n> (pl: {viogeo})
+
+bathing suit
+kiongozi <n> (pl: {viongozi})
+
+guide, leader
+kioo <n> (pl: {vioo})
+1.
+mirror
+2.
+glass
+kiota <n> (pl: {viota})
+
+nest
+kipande <n> (pl: {vipande})
+1.
+fragment, piece
+2.
+part, share
+3.
+bit, lump, piece
+kipeo <n> (pl: {vipeo})
+
+top
+; climax
+kipimo <n> (pl: {vipimo})
+
+measurement
+; measure
+kipindi <n> (pl: {vipindi})
+
+period
+; extent of time
+kipo <cop, loc spec, agr: 7>
+
+is (in a specified place)
+kipofu <n> (pl: {vipofu})
+
+blind person
+kipunguzo <n> (pl: {vipunguzo})
+
+discount
+kipupwe <n> (pl: {vipupwe})
+
+cool season
+Kireno <n>
+
+Portuguese, Portuguese language
+kiriba <n> (pl: {viriba})
+
+water bottle
+; water skin
+Kirusi <n>
+
+Russian, Russian language
+kisha <adv>
+
+then
+kisigino <n> (pl: {visigino})
+
+heel
+kisima <n> (pl: {visima})
+
+well
+kisiwa <n> (pl: {visiwa})
+
+island
+kisongo <n> (pl: {visongo})
+
+tourniquet
+kisu <n> (pl: {visu})
+
+knife
+Kiswahili <n>
+
+Swahili, Swahili language
+kitabu <n> (pl: {vitabu})
+
+book
+kitako <n> (pl: {vitako})
+
+buttock, buttocks, butt
+kitambaa <n> (pl: {vitambaa})
+
+cloth, fabric
+kitambo <n> (pl: {vitambo})
+
+while
+; moment
+kitana <n> (pl: {vitana})
+
+comb
+kitanda <n> (pl: {vitanda})
+
+bed
+kitano <n> (pl: {vitano})
+
+5c coin
+kitasa <n> (pl: {vitasa})
+
+lock
+kithibitisho <n> (pl: {vithibitisho})
+
+guarantee, proof, document
+kiti <n> (pl: {viti})
+
+chair
+kito <n> (pl: {vito})
+
+gem
+kitu <n> (pl: {vitu})
+1.
+thing
+2.
+article, object
+kitunguu <n> (pl: {vitunguu})
+
+onion
+kituo <n> (pl: {vituo})
+1.
+stop, stopping place
+2.
+station
+ (usually in compounds)
+
+kituo cha basi <n>
+
+bus stop
+kituo cha polisi <n>
+
+police station
+kituo cha treni <n>
+
+train station
+kiu <n> [sg=pl]
+
+thirst
+kiume <adj>
+
+male
+; masculine
+kiungo <n> (pl: {viungo})
+1.
+connection, link
+2.
+spice, seasoning
+kiuno <n> (pl: {viuno})
+
+waist
+kivuko <n> (pl: {vivuko})
+1.
+bridge
+; crossing
+2.
+ferry
+kivuli <n> (pl: {vivuli})
+
+shadow
+kiwanda <n> (pl: {viwanda})
+
+factory
+   See also: {karakana}
+
+kiwanja <n> (pl: {viwanja})
+
+open field
+; earth, land, soil,
+kiwanja cha ndege <n>
+
+airport
+kiwiko <n> (pl: {viwiko})
+
+wrist
+Kiyahudi <n>
+
+Hebrew, Hebrew language
+kizibo <n> (pl: {vizibo})
+
+cork
+kiziwi <n> (pl: {viziwi})
+
+deaf person
+klabu, kilabu <n> [sg=pl]
+
+club
+kobe <n> [sg=pl]
+
+tortoise
+kodi <v> [sg=pl]
+
+rent
+; tax
+kodisha <v, caus>
+
+rent out
+kodishwa <v, caus>
+
+be rented
+kofi <n> (pl: {makofi})
+1.
+palm (of the hand)
+2.
+applause
+kofia <n> [sg=pl]
+
+hat
+kohoa <v>
+
+cough
+koleo <n> (pl: {makoleo})
+
+tongs
+komesha <v, caus>
+
+bring to an end, stop
+konde <n> (pl: {makonde})
+
+fist
+kondoo <n> [sg=pl]
+
+sheep
+kongoni <n> [sg=pl]
+
+gnu, wilde beest
+koo <n> (pl: {makoo})
+
+throat
+kopa <v>
+
+borrow
+kope <n>
+
+ Plural of {ukope}: 1. eyelid 2. eyelash
+
+kopesha <v, caus>
+
+lend
+kopo <n> (pl: {makopo})
+
+tin can
+korija <n> [sg=pl]
+
+score
+ a unit of twenty items
+
+koroga <v>
+
+stir, mix (e.g. ingredients)
+kosa <n> (pl: {makosa})
+
+fault
+kosa <v>
+
+miss
+kosana <v>
+
+quarrel
+kosea <v>
+
+be mistaken
+kosekana <v>
+
+fail
+kote <pron, agr: 15,17>
+
+all, whole
+koti <n> (pl: {makoti})
+
+coat
+Krismasi <n> [sg=pl]
+
+Christmas
+kua <v>
+
+grow up
+kubali <v>
+
+agree
+kubwa <adj>
+1.
+big, great, large
+2.
+important, serious
+kucha <n>
+
+ Plural of {ukucha}: fingernail
+
+kuku <n> [sg=pl]
+1.
+chicken
+2.
+fowl
+kule <adv>
+
+there
+kule <pron, dem nprox, agr: 15,17>
+
+that, yonder, the one over there (distant from both the speaker and the hearer)
+kulia <adv>
+
+right, right side
+kuliko <conj>
+
+than
+kumbe <adv>
+
+So!
+kumbuka <v>
+
+remember
+kumbusha <v, caus>
+
+remind
+kumi <num>
+
+ten
+kuna <v, infl, agr: 17>
+
+there is
+; there are
+   See also: {wa na}
+
+kunde <n>
+
+ Plural of {ukunde}: bean
+
+kunja <v>
+
+fold
+kunjua <v>
+
+unfold
+kura <n> [sg=pl]
+
+vote
+Kurani <n>
+
+Koran
+kurasa <n>
+
+ Plural of {ukurasa}: 1. page, leaf 2. leaflet
+
+kushoto <adv>
+
+left, left side
+kusi <n> [sg=pl]
+
+cool south wind
+kusini <n>
+
+south
+kusudi <n> (pl: {makusudi})
+
+intention
+kuta <n>
+
+ Plural of {ukuta}: wall
+
+kuta <v>
+
+come across, meet
+kutana <v>
+
+meet one another
+kutwa <n>
+
+whole day
+kuu <adj>
+1.
+chief, main, major, principal
+2.
+great
+kuza <v, caus>
+
+enlarge
+kwa <prep>
+1.
+with
+2.
+to
+3.
+for
+kwa <prt, poss, agr: 15,17>
+
+of
+kwa ajili <conj>
+because, because of, due to
+kwa heri, kwaheri <interj>
+
+goodbye, bye, farewell, adieu
+kwa hiyo <conj>
+
+on that account, therefore
+kwa mfano <conj>
+
+for example
+kwa sababu <conj>
+1.
+because, for the reason that
+2.
+as, because, for, since
+kwajuka <v>
+
+fade
+kwake <pron, poss, agr: 15,17>
+
+his, her, hers, its
+kwako <pron, poss, agr: 15,17>
+
+your (sg.), yours (sg.)
+kwama <v>
+
+stick
+kwamba <conj>
+
+that
+kwangu <pron, poss, agr: 15,17>
+
+my, mine
+kwani <pron, inter>
+
+why
+kwanza <adj>
+
+first
+kwao <pron, poss, agr: 15,17>
+
+their
+kweli <adv>
+
+truly
+kwenu <pron, poss, agr: 15,17>
+
+your (pl.), yours (pl.)
+kwenye <prep>
+
+in
+; at
+; on
+ (this is a form of {enye}, lexicalized in a prepositional/locative
+ function)
+
+kwenye <cop, poss, agr: 15,17>
+
+having
+; with
+kwetu <pron, poss, agr: 15,17>
+
+our, ours
+la <v>
+
+eat
+la <interj>
+
+no
+   Synonym: {hapana}
+
+la <prt, poss, agr: 5>
+
+of
+labda <adv>
+
+perhaps, maybe
+laini <adj>
+1.
+smooth
+2.
+soft
+lainisha <v, caus>
+
+smooth
+lake <pron, poss, agr: 5>
+
+his, her, hers, its
+laki <num>
+
+hundred thousand
+lakini <conj>
+1.
+but
+2.
+however, nevertheless, yet
+lako <pron, poss, agr: 5>
+
+your (sg.), yours (sg.)
+lala <v>
+1.
+sleep
+2.
+lie down, sleep
+lalia <v>
+
+sleep in
+lami <n> [sg=pl]
+
+tar
+langu <pron, poss, agr: 5>
+
+my, mine
+lao <pron, poss, agr: 5>
+
+their
+laza <v, caus>
+
+lay down
+lazima <n> [sg=pl]
+
+necessity, must
+lazimu <v>
+
+be required of
+le <adj>
+1.
+that
+2.
+those
+lea <v>
+
+bring up
+lemea <v>
+
+press upon
+lengelenge <n> (pl: {malengelenge})
+
+blister
+lenu <pron, poss, agr: 5>
+
+your (pl.), yours (pl.)
+lenye <cop, poss, agr: 5>
+
+having
+; with
+leo <n> [sg=pl]
+
+today
+leso <n> [sg=pl]
+
+scarf
+leta <v>
+
+bring
+letea <v>
+
+bring to
+letu <pron, poss, agr: 5>
+
+our, ours
+lewa <v>
+
+get drunk
+lia <v>
+
+cry out
+licha <prep>
+
+not only
+likizo <n> [sg=pl]
+
+vacation
+liko <cop, loc unspec, agr: 5>
+
+is (in an unspecified place)
+lile <pron, dem nprox, agr: 5>
+
+that, yonder, the one over there (distant from both the speaker and the hearer)
+lima <v>
+
+hoe
+limau <n> (pl: {malimau})
+
+lemon
+limo <cop, loc in, agr: 5>
+
+is (within, in there)
+lina <v, infl, agr: 5>
+
+it has
+   See also: {wa na}
+
+linda <v>
+
+guard
+lini <pron, inter>
+
+when
+lipa <v>
+
+pay
+lipo <n> (pl: {malipo})
+
+payment
+lipo <cop, loc spec, agr: 5>
+
+is (in a specified place)
+lisha <v, caus>
+
+feed
+lote <pron, agr: 5>
+
+all, whole
+lugha <n> [sg=pl]
+
+language, tongue
+maabiria <n>
+
+ Plural of {abiria}: passenger
+
+maachilio <n>
+
+ Plural of {achilio}: forgiveness
+
+maadili <n>
+
+ Plural of {adili}: ethics, morals, good conduct
+
+maadui <n>
+
+ Plural of {adui}: 1. enemy 2. opponent (in games or sports)
+
+maafisa <n>
+
+ Plural of {afisa}: officer
+
+maagano <n>
+
+ Plural of {agano}: 1. promise 2. agreement, contract. See also: ,
+ {ahadi}
+
+maajabu <n>
+
+ Plural of {ajabu}: 1. wonder, marvel, miracle; surprise 2. awe,
+ amazement, astonishment
+
+maalumu <adj>
+
+special
+maana <n> [sg=pl]
+
+meaning
+maandazi <n>
+
+ Plural of {andazi}: doughnut, pastry
+
+maandiko <n>
+
+ Plural of {andiko}: writing
+
+maarifa <n>
+
+knowledge
+maazimio <n>
+
+ Plural of {azimio}: declaration
+
+mabaharia <n>
+
+ Plural of {baharia}: sailor
+
+mabakuli <n>
+
+ Plural of {bakuli}: bowl
+
+mabalozi <n>
+
+ Plural of {balozi}: ambassador
+
+mabalungi <n>
+
+ Plural of {balungi}: grapefruit
+
+mabanda <n>
+
+ Plural of {banda}: shed
+
+mabao <n>
+
+ Plural of {bao}: board
+
+mabara <n>
+
+ Plural of {bara}: continent, land
+
+mabata <n>
+
+ Plural of {bata}: duck
+
+mabega <n>
+
+ Plural of {bega}: shoulder
+
+mabegi <n>
+
+ Plural of {begi}: bag
+
+mabehewa <n>
+
+ Plural of {behewa}: train carriage
+
+mabenki <n>
+
+ Plural of {benki}: bank
+
+mabiarusi <n>
+
+ Plural of {biarusi}: bride
+
+mabibi <n>
+
+ Plural of {bibi}: lady
+
+mabingwa <n>
+
+ Plural of {bingwa}: 1. specialist, expert 2. clever person 3. champion
+
+mabinti <n>
+
+ Plural of {binti}: 1. daughter 2. miss; young lady
+
+mabirika <n>
+
+ Plural of {birika}: kettle
+
+mabishano <n>
+
+dispute, argument, quarrel
+mabomba <n>
+
+ Plural of {bomba}: pump
+
+mabonde <n>
+
+ Plural of {bonde}: valley; depression
+
+mabosi <n>
+
+ Plural of {bosi}: boss
+
+mabufuu <n>
+
+ Plural of {bufuu}: shell
+
+mabuibui <n>
+
+ Plural of {buibui}: 1. spider 2. purdah
+
+mabuli <n>
+
+ Plural of {buli}: teapot
+
+mabustani <n>
+
+ Plural of {bustani}: garden
+
+mabwana <n>
+
+ Plural of {bwana}: gentleman
+
+mabwanaarusi <n>
+
+ Plural of {bwanaarusi}: groom
+
+mabweni <n>
+
+ Plural of {bweni}: dormitory
+
+machaguo <n>
+
+ Plural of {chaguo}: choice
+
+machangamano <n>
+
+ Plural of {changamano}: 1. mixture, blend 2. cooperation 3. association,
+ union
+
+macheleo <n>
+
+ Plural of {cheleo}: delay
+
+Machi <n> [sg=pl]
+
+March
+macho <n>
+
+ Plural of {jicho}: eye
+
+machungwa <n>
+
+ Plural of {chungwa}: orange
+
+madaftari <n>
+
+ Plural of {daftari}: notebook
+
+madafu <n>
+
+ Plural of {dafu}: coconut
+
+madaktari <n>
+
+ Plural of {daktari}: doctor, physician
+
+madaladala <n>
+
+ Plural of {daladala}: local minibus in Tanzania. See also: , {matatu}
+
+madaraja <n>
+
+ Plural of {daraja}: 1. stairs 2. bridge 3. rank, position
+
+madarasa <n>
+
+ Plural of {darasa}: class
+
+madawa <n>
+
+ Plural of {dawa}: drug, medicine, pharmaceutical
+
+madeni <n>
+
+ Plural of {deni}: debt, loan
+
+madeski <n>
+
+ Plural of {deski}: desk
+
+madini <n>
+
+metal
+madirisha <n>
+
+ Plural of {dirisha}: window
+
+madoa <n>
+
+ Plural of {doa}: spot
+
+madobi <n>
+
+ Plural of {dobi}: launderer, laundryman, laundrywoman; washer,
+ washerman, washerwoman
+
+maduka <n>
+
+ Plural of {duka}: shop, store, boutique
+
+maelezo <n>
+
+ Plural of {elezo}: explanation
+
+maembe <n>
+
+ Plural of {embe}: mango
+
+maendeleo <n>
+
+progress, advancement, advance
+maeneo <n>
+
+ Plural of {eneo}: area
+
+mafanikio <n>
+
+ Plural of {fanikio}: success, achievement
+
+mafigo <n>
+
+ Plural of {figo}: kidney
+
+mafua <n>
+
+flu, chest cold
+mafujo <n>
+
+ Plural of {fujo}: chaos
+
+mafundi <n>
+
+ Plural of {fundi}: craftsman
+
+mafundisho <n>
+
+ Plural of {fundisho}: lesson
+
+mafundo <n>
+
+ Plural of {fundo}: knot
+
+mafurushi <n>
+
+ Plural of {furushi}: bundle
+
+mafuta <n>
+
+oil
+maganda <n>
+
+ Plural of {ganda}: bark, husk, peel, shell
+
+magari <n>
+
+ Plural of {gari}: wheeled vehicle
+
+magauni <n>
+
+ Plural of {gauni}: dress, gown
+
+magazeti <n>
+
+ Plural of {gazeti}: newspaper
+
+magego <n>
+
+ Plural of {gego}: molar
+
+magereza <n>
+
+ Plural of {gereza}: prison, jail
+
+magharibi <n> [sg=pl]
+1.
+west
+2.
+sunset
+magomvi <n>
+
+ Plural of {ugomvi}: quarrel, dispute
+
+magonjwa <n>
+
+ Plural of {ugonjwa}: sickness
+
+magoti <n>
+
+ Plural of {goti}: knee
+
+magunia <n>
+
+ Plural of {gunia}: sack
+
+magurudumu <n>
+
+ Plural of {gurudumu}: wheel
+
+mahali <n>
+1.
+place, location
+2.
+plaza, square, public square
+mahali po pote <n>
+
+wherever
+mahatibu <n>
+
+ Plural of {hatibu}: speaker
+
+mahekalu <n>
+
+ Plural of {hekalu}: temple
+
+mahema <n>
+
+ Plural of {hema}: tent
+
+mahindi <n>
+
+ Plural of {hindi}: maize
+
+maibilisi <n>
+
+ Plural of {ibilisi}: lucifer, satan
+
+maili <n> [sg=pl]
+
+mile
+maini <n>
+
+ Plural of {ini}: liver
+
+maisha <n>
+
+life
+maiti <n> [sg=pl]
+
+corpse
+majahazi <n>
+
+ Plural of {jahazi}: dhow
+
+majani <n>
+
+grass
+ Plural of {jani}: 1. leaf 2. blade of grass
+
+majasho <n>
+
+ Plural of {jasho}: sweat
+
+majawabu <n>
+
+ Plural of {jawabu}: answer
+
+majembe <n>
+
+ Plural of {jembe}: hoe
+
+majengo <n>
+
+ Plural of {jengo}: building
+
+majeraha <n>
+
+ Plural of {jeraha}: wound
+
+majeshi <n>
+
+ Plural of {jeshi}: army
+
+maji <n>
+
+water
+majibu <n>
+
+ Plural of {jibu}: answer
+
+majiji <n>
+
+ Plural of {jiji}: city
+
+majiko <n>
+
+ Plural of {jiko}: 1. kitchen 2. fireplace
+
+majina <n>
+
+ Plural of {jina}: name
+
+majipu <n>
+
+ Plural of {jipu}: boil; abscess
+
+majirani <n>
+
+ Plural of {jirani}: neighbour
+
+majitu <n>
+
+ Plural of {jitu}: giant
+
+majivu <n>
+
+ Plural of {jivu}: ash
+
+majogoo <n>
+
+ Plural of {jogoo}: cock, rooster
+
+majoka <n>
+
+ Plural of {joka}: serpent
+
+majua <n>
+
+ Plural of {jua}: sun
+
+majukwaa <n>
+
+ Plural of {jukwaa}: stage
+
+majuma <n>
+
+ Plural of {juma}: week
+
+majumba <n>
+
+ Plural of {jumba}: mansion, palace
+
+majumbe <n>
+
+ Plural of {jumbe}: chief, boos, leader
+
+makaa <n>
+
+ Plural of {kaa}: 1. charcoal 2. ember
+
+makabila <n>
+
+ Plural of {kabila}: tribe
+
+makaburi <n>
+
+ Plural of {kaburi}: grave
+
+makafara <n>
+
+ Plural of {kafara}: sacrifice
+
+makafiri <n>
+
+ Plural of {kafiri}: 1. infidel; heathen 2. atheist; pagan
+
+makahini <n>
+
+ Plural of {kahini}: 1. soothsayer 2. witch 3. deceiver
+
+makala <n> [sg=pl]
+
+article
+makalio <n>
+
+buttocks
+makampuni <n>
+
+ Plural of {kampuni}: company
+
+makanisa <n>
+
+ Plural of {kanisa}: church
+
+makapu <n>
+
+ Plural of {kapu}: large basket
+
+makarani <n>
+
+ Plural of {karani}: clerk
+
+makasisi <n>
+
+ Plural of {kasisi}: minister
+
+makatazo <n>
+
+ Plural of {katazo}: objection, prohibition
+
+makofi <n>
+
+ Plural of {kofi}: 1. palm (of the hand) 2. applause
+
+makoleo <n>
+
+ Plural of {koleo}: tongs
+
+makonde <n>
+
+ Plural of {konde}: fist
+
+makoo <n>
+
+ Plural of {koo}: throat
+
+makopo <n>
+
+ Plural of {kopo}: tin can
+
+makosa <n>
+
+ Plural of {kosa}: fault
+
+makoti <n>
+
+ Plural of {koti}: coat
+
+maktaba <n> [sg=pl]
+
+library
+makusudi <n>
+
+ Plural of {kusudi}: intention
+
+malaika <n> [sg=pl]
+
+angel
+malengelenge <n>
+
+ Plural of {lengelenge}: blister
+
+malezi <n>
+
+upbringing
+mali <n> [sg=pl]
+
+possessions
+maliki <n> [sg=pl]
+
+king, ruler
+malimau <n>
+
+ Plural of {limau}: lemon
+
+malipo <n>
+
+ Plural of {lipo}: payment
+
+maliza <v>
+
+finish
+malkia <n> [sg=pl]
+
+queen
+mama <n> [sg=pl]
+
+mother
+mama mdogo <n>
+
+(maternal) aunt
+ mother's younger sister
+
+mama mkubwa <n>
+
+(maternal) aunt
+ mother's older sister
+
+mama mkwe <n>
+
+mother-in-law
+mama wa kambo <n>
+
+stepmother
+mamba <n> [sg=pl]
+
+crocodile
+mambo <n>
+
+ Plural of {jambo}: affair, business, case, matter
+
+mamlaka <n> [sg=pl]
+
+authority
+manabii <n>
+
+ Plural of {nabii}: prophet
+
+manahodha <n>
+
+ Plural of {nahodha}: captain
+
+mananasi <n>
+
+ Plural of {nanasi}: pineapple
+
+mandhari <n> [sg=pl]
+
+scenery, view, landscape
+maneno <n>
+
+ Plural of {neno}: word
+
+Manga <n>
+
+Arabia
+manjano <n> [sg=pl]
+
+turmeric
+maofisa <n>
+
+ Plural of {ofisa}: officer
+
+mapacha <n>
+
+ Plural of {pacha}: twin
+
+mapafu <n>
+
+ Plural of {pafu}: lung
+
+mapaja <n>
+
+ Plural of {paja}: thigh
+
+mapaji <n>
+
+ Plural of {paji}: forehead
+
+mapambo <n>
+
+ Plural of {pambo}: ornament, decoration. See also: , {nakshi}
+
+mapanga <n>
+
+ Plural of {panga}: machete
+
+mapapai <n>
+
+ Plural of {papai}: papaya
+
+mapatano <n>
+
+agreement, contract
+mapema <adv>
+
+early
+mapera <n>
+
+ Plural of {pera}: guava
+
+mapindi <n>
+
+ Plural of {pindi}: bend, turn
+
+mapumziko <n>
+
+ Plural of {pumziko}: pause; breake
+
+mara <n> [sg=pl]
+
+time, turn
+mara kwa mara <adv>
+
+now and then
+mara moja <adv>
+
+once, one time
+mara nyingi <adv>
+
+frequently, often, regularly
+maradhi <n>
+
+sickness
+marafiki <n>
+
+ Plural of {rafiki}: friend
+
+marahaba <interj>
+
+reply to "shikamoo"
+   See also: {shikamoo}
+
+marehemu <n> [sg=pl]
+
+deceased person
+Marekani <n>
+1.
+America
+2.
+United States of America, U.S.A.
+marhamu <n> [sg=pl]
+
+ointment
+marufuku <n> [sg=pl]
+
+prohibition
+masaa <n>
+
+hours
+masafa <n>
+
+range, distance
+masanduku <n>
+
+ Plural of {sanduku}: box
+
+maseremala <n>
+
+ Plural of {seremala}: carpenter
+
+mashada <n>
+
+ Plural of {shada}: bunch
+
+mashairi <n>
+
+ Plural of {shairi}: poem
+
+mashaka <n>
+
+ Plural of {shaka}: doubt
+
+mashamba <n>
+
+ Plural of {shamba}: field
+
+mashangazi <n>
+
+ Plural of {shangazi}: (paternal) aunt
+
+mashariki <n>
+
+east
+masharubu <n>
+
+moustache
+mashati <n>
+
+ Plural of {shati}: shirt
+
+mashauri <n>
+
+ Plural of {shauri}: 1. advice, counsel 2. design, diagram, plan, plane
+ 3. plan, project, scheme
+
+mashavu <n>
+
+ Plural of {shavu}: cheek
+
+mashimo <n>
+
+ Plural of {shimo}: pit, well
+
+mashindano <n>
+
+ Plural of {shindano}: competition
+
+mashine <n> [sg=pl]
+
+engine, machine
+mashoka <n>
+
+ Plural of {shoka}: axe
+
+mashua <n> [sg=pl]
+
+boat
+mashuhuri <adj>
+
+famous, known
+masika <n> [sg=pl]
+
+greater rains
+masikio <n>
+
+ Plural of {sikio}: ear
+
+masimulizi <n>
+
+ Plural of {simulizi}: story, tale, narrative
+
+maskini <adj>
+
+poor, miserable
+masoko <n>
+
+ Plural of {soko}: market, bazaar, fair
+
+masokwe <n>
+
+ Plural of {sokwe}: ape
+
+masomo <n>
+
+ Plural of {somo}: 1. lesson 2. study 3. reading
+
+masonara <n>
+
+ Plural of {sonara}: jeweller
+
+maswali <n>
+
+ Plural of {swali}: question
+
+mataifa <n>
+
+ Plural of {taifa}: nation
+
+matamasha <n>
+
+ Plural of {tamasha}: show
+
+matangazo <n>
+
+ Plural of {tangazo}: ad, advertisement, announcement
+
+matangi <n>
+
+ Plural of {tangi}: tank
+
+matango <n>
+
+ Plural of {tango}: cucumber
+
+matanki <n>
+
+ Plural of {tanki}: tank
+
+matata <n>
+
+trouble
+matatizo <n>
+
+ Plural of {tatizo}: difficulty, problem
+
+matatu <n> [sg=pl]
+
+local minibus in Kenya
+   See also: {daladala}
+
+mataya <n>
+
+ Plural of {taya}: jaw
+
+mate <n>
+
+saliva
+matendo <n>
+
+ Plural of {tendo}: accomplishment, achievement, act, action
+
+matengenezo <n>
+
+repair, maintenance
+matibabu <n>
+
+medical treatment
+matingo <n>
+
+ Plural of {utingo}: conductor
+
+matita <n>
+
+ Plural of {tita}: bundle
+
+matiti <n>
+
+ Plural of {titi}: breast, teat
+
+matokeo <n>
+
+result, outcome
+matone <n>
+
+ Plural of {tone}: drop
+
+matope <n>
+
+ Plural of {tope}: mud
+
+matukano <n>
+
+abuse
+matumbo <n>
+
+ Plural of {tumbo}: stomach
+
+matumizi <n>
+
+expenses
+matunda <n>
+
+ Plural of {tunda}: fruit
+
+matundu <n>
+
+ Plural of {tundu}: hole
+
+matungule <n>
+
+ Plural of {tungule}: tomato
+
+matusi <n>
+
+ Plural of {tusi}: insult; abuse
+
+maua <n>
+
+ Plural of {ua}: flower, bloom
+
+maumivu <n>
+
+ Plural of {umivu}: pain
+
+mavumbi <n>
+
+ Plural of {vumbi}: dust
+
+mavuno <n>
+
+harvest
+mawazo <n>
+
+ Plural of {wazo}: thought
+
+mawe <n>
+
+ Plural of {jiwe}: stone
+
+mawimbi <n>
+
+ Plural of {wimbi}: wave
+
+mayai <n>
+
+ Plural of {yai}: egg
+
+mazao <n>
+
+ Plural of {zao}: product, harvest, produce
+
+mazingira <n>
+
+environment
+maziwa <n>
+
+milk
+maziwa <n>
+
+ Plural of {ziwa}: 1. lake 2. breast
+
+mazoezi <n>
+
+ Plural of {zoezi}: exercise
+
+mazulia <n>
+
+ Plural of {zulia}: rug, carpet
+
+mazungumzo <n>
+
+ Plural of {zungumzo}: discussion, discourse
+
+mbali <adv>
+
+far
+mbali <adj>
+
+different
+   See also: {mbalimbali}
+
+mbalimbali <adj>
+
+various, different
+   See also: {mbali}
+
+mbao <n>
+
+ Plural of {ubao}: plank, board
+
+mbavu <n>
+
+ Plural of {ubavu}: rib
+
+mbawa <n>
+
+ Plural of {ubawa}: wing
+
+mbegu <n> [sg=pl]
+
+seed
+mbele <adv>
+
+in front
+mbili <num>
+
+two
+ (with cl. 10 and in isolation)
+
+   See also: {wili}
+
+mbingu <n> [sg=pl]
+
+sky
+mbio <n> [sg=pl]
+
+speed
+mboga <n> [sg=pl]
+
+vegetable
+mbolea <n> [sg=pl]
+
+manure
+mbona <pron, inter>
+
+why
+mbongo <n>
+
+ Plural of {ubongo}: brain
+
+mbu <n> [sg=pl]
+
+mosquito
+mbuzi <n> [sg=pl]
+
+goat
+mbwa <n> [sg=pl]
+
+dog
+mchana <n>
+
+daytime
+ period between 11 a.m. and 4 p.m.
+
+mchanganyiko <n> (pl: {michanganyiko})
+
+mixture
+mchawi <n> (pl: {wachawi})
+
+sorceror, magician
+; witch
+mchele <n> (pl: {michele})
+
+rice, husked rice
+mcheza <n> (pl: {wacheza})
+
+actor
+mchezo <n> (pl: {michezo})
+
+game
+mchicha <n> [sg=pl]
+
+spinach
+mchukuzi <n> (pl: {wachukuzi})
+
+porter
+mchumba <n> (pl: {wachumba})
+
+fiancée, fiancé
+mchungaji <n> (pl: {wachungaji})
+
+herdsman, shepherd
+mchungwa <n> (pl: {michungwa})
+
+orange tree
+mchwa <n> (pl: {michwa})
+
+termite
+mdomo <n> (pl: {midomo})
+
+lip
+mdudu <n> (pl: {wadudu})
+
+insect, bug
+Mei <n> [sg=pl]
+
+May
+meli <n> [sg=pl]
+
+steamship
+mengi <adj, agr: 6>
+
+many, much
+meno <n>
+
+ Plural of {jino}: tooth
+
+meza <n> [sg=pl]
+
+table
+meza <v>
+
+swallow
+mfalme <n> (pl: {wafalme})
+
+king
+mfano <n> (pl: {mifano})
+
+example
+mfanyakazi <n> (pl: {wafanyakazi})
+
+worker
+Mfaransa <n> (pl: {Wafaransa})
+
+Frenchman
+mfereji <n> (pl: {mifereji})
+
+water-channel
+mfugo <n> (pl: {mifugo})
+
+(domesticated) animal
+mfuko <n> (pl: {mifuko})
+
+bag
+mfupa <n> (pl: {mifupa})
+
+bone
+mganga <n> (pl: {waganga})
+1.
+traditional healer
+2.
+doctor
+mgeni <n> (pl: {wageni})
+1.
+stranger, foreigner
+2.
+guest
+Mgiriki <n> (pl: {Wagiriki})
+
+Greek
+mgomba <n> (pl: {migomba})
+
+banana plant
+mgongo <n> (pl: {migongo})
+
+back
+mgonjwa <n> (pl: {wagonjwa})
+1.
+sick person
+2.
+patient
+mguu <n> (pl: {miguu})
+
+leg
+Mhabeshi <n> (pl: {Wahabeshi})
+
+Ethiopian
+mhandisi <n> (pl: {wahandisi})
+
+engineer
+mhariri <n> (pl: {wahariri})
+
+editor
+Mhindi <n> (pl: {Wahindi})
+
+Indian
+mhudumu <n> (pl: {wahudumu})
+
+waiter, attendant
+mia <num>
+
+hundred
+miadi <n> [sg=pl]
+
+appointment
+miaka <n>
+
+ Plural of {mwaka}: year
+
+miangaza <n>
+
+ Plural of {mwangaza}: brightness
+
+mianzo <n>
+
+ Plural of {mwanzo}: beginning, start
+
+miavuli <n>
+
+ Plural of {mwavuli}: umbrella
+
+miba <n>
+
+ Plural of {mwiba}: thorn
+
+michanganyiko <n>
+
+ Plural of {mchanganyiko}: mixture
+
+michele <n>
+
+ Plural of {mchele}: rice, husked rice
+
+michezo <n>
+
+ Plural of {mchezo}: game
+
+michungwa <n>
+
+ Plural of {mchungwa}: orange tree
+
+michwa <n>
+
+ Plural of {mchwa}: termite
+
+midomo <n>
+
+ Plural of {mdomo}: lip
+
+miembe <n>
+
+ Plural of {mwembe}: mango tree
+
+miendo <n>
+
+ Plural of {mwendo}: 1. distance, offset 2. journey, trip, voyage
+
+mienendo <n>
+
+ Plural of {mwenendo}: behavior
+
+miezi <n>
+
+ Plural of {mwezi}: 1. moon 2. month
+
+mifano <n>
+
+ Plural of {mfano}: example
+
+mifereji <n>
+
+ Plural of {mfereji}: water-channel
+
+mifugo <n>
+1.
+herd, livestock
+2.
+ Plural of {mfugo}: (domesticated) animal
+
+mifuko <n>
+
+ Plural of {mfuko}: bag
+
+mifupa <n>
+
+ Plural of {mfupa}: bone
+
+migomba <n>
+
+ Plural of {mgomba}: banana plant
+
+migongo <n>
+
+ Plural of {mgongo}: back
+
+miguu <n>
+
+ Plural of {mguu}: leg
+
+mihindi <n>
+
+ Plural of {muhindi}: maize plant
+
+mihogo <n>
+
+ Plural of {muhogo}: cassava
+
+miili <n>
+
+ Plural of {mwili}: body
+
+miisho <n>
+
+ Plural of {mwisho}: end
+
+miji <n>
+
+ Plural of {mji}: town, city
+
+mikahawa <n>
+
+ Plural of {mkahawa}: cafe
+
+mikasi <n>
+
+ Plural of {mkasi}: scissors
+
+mikate <n>
+
+ Plural of {mkate}: bread
+
+mikato <n>
+
+ Plural of {mkato}: 1. shortcut 2. amputation
+
+mikebe <n>
+
+ Plural of {mkebe}: can
+
+mikeka <n>
+
+ Plural of {mkeka}: plaited mat
+
+mikia <n>
+
+ Plural of {mkia}: tail
+
+mikoa <n>
+
+ Plural of {mkoa}: state, province
+
+mikoba <n>
+
+ Plural of {mkoba}: bag
+
+mikono <n>
+
+ Plural of {mkono}: arm
+
+mikopo <n>
+
+ Plural of {mkopo}: loan
+
+mikutano <n>
+
+ Plural of {mkutano}: meeting
+
+milango <n>
+
+ Plural of {mlango}: 1. door 2. gate, portal
+
+milele <adv>
+
+forever, eternally
+milia <adj>
+
+striped
+milima <n>
+
+ Plural of {mlima}: mountain
+
+milio <n>
+
+ Plural of {mlio}: shout, cry
+
+milioni <num>
+
+million
+mimba <n> [sg=pl]
+
+pregnancy
+mimea <n>
+
+ Plural of {mmea}: plant
+
+mimi <pron, pers>
+
+I
+minara <n>
+
+ Plural of {mnara}: tower
+
+minazi <n>
+
+ Plural of {mnazi}: coconut palm
+
+mingi <adj, agr: 4>
+
+many, much
+minyororo <n>
+
+ Plural of {mnyororo}: chain
+
+mioyo <n>
+
+ Plural of {moyo}: heart
+
+mipaka <n>
+
+ Plural of {mpaka}: border
+
+mipango <n>
+
+ Plural of {mpango}: plan, arrangement, schedule
+
+mipunga <n>
+
+ Plural of {mpunga}: rice plant
+
+miradi <n>
+
+ Plural of {mradi}: intention
+
+misaada <n>
+
+ Plural of {msaada}: help, aid
+
+misahafu <n>
+
+ Plural of {msahafu}: book. See also: , {Msahafu}
+
+misalaba <n>
+
+ Plural of {msalaba}: cross
+
+misamaha <n>
+
+ Plural of {msamaha}: forgiveness
+
+mishahara <n>
+
+ Plural of {mshahara}: wage, salary
+
+mishale <n>
+
+ Plural of {mshale}: arrow
+
+mishangao <n>
+
+ Plural of {mshangao}: amazement
+
+mishipa <n>
+
+ Plural of {mshipa}: nerve; vessel
+
+misikiti <n>
+
+ Plural of {msikiti}: mosque
+
+misitu <n>
+
+ Plural of {msitu}: forest, wood
+
+Misri <n>
+
+Egypt
+mistari <n>
+
+ Plural of {mstari}: line
+
+misuli <n>
+
+ Plural of {musuli}: muscle
+
+misumari <n>
+
+ Plural of {msumari}: nail
+
+miswaki <n>
+
+ Plural of {mswaki}: toothbrush
+
+mitaa <n>
+
+ Plural of {mtaa}: street
+
+mitalimbo <n>
+
+ Plural of {mtalimbo}: crowbar
+
+mitama <n>
+
+ Plural of {mtama}: millet
+
+mitambo <n>
+
+ Plural of {mtambo}: spring-mechanism, machine
+
+mitazamo <n>
+
+ Plural of {mtazamo}: 1. viewpoint 2. attitude
+
+mitelemko <n>
+
+ Plural of {mtelemko}: descent
+
+mitende <n>
+
+ Plural of {mtende}: date-palm. See also: , {tende}
+
+miti <n>
+
+ Plural of {mti}: 1. tree 2. pole, post, stanchion, stake 3. timber, wood
+
+mitihani <n>
+
+ Plural of {mtihani}: exam, test
+
+mitini <n>
+
+ Plural of {mtini}: fig tree
+
+mito <n>
+
+ Plural of {mto}: 1. river 2. pillow
+
+mitulinga <n>
+
+ Plural of {mtulinga}: collarbone
+
+miundu <n>
+
+ Plural of {mundu}: sickle
+
+miuziki <n>
+
+ Plural of {muziki}: music
+
+mivinyo <n>
+
+ Plural of {mvinyo}: wine
+
+miwa <n>
+
+ Plural of {muwa}: sugar cane
+
+miwani <n> [sg=pl]
+
+eyeglasses
+mizabibu <n>
+
+ Plural of {mzabibu}: grape vine
+
+mizigo <n>
+
+ Plural of {mzigo}: load
+
+mizizi <n>
+
+ Plural of {mzizi}: root
+
+mizungu <n>
+
+ Plural of {mzungu}: 1. rarity (something unusual, rare, amazing) 2.
+ cleverness
+
+mizunguko <n>
+
+ Plural of {mzunguko}: cycle, circuit
+
+mjane <n> (pl: {wajane})
+
+widow, widower
+Mjapani <n> (pl: {Wajapani})
+
+Japanese
+Mjerumani <n> (pl: {Wajerumani})
+
+German
+mji <n> (pl: {miji})
+
+town, city
+mji mkuu <n>
+
+capital city
+mjinga <n> (pl: {wajinga})
+
+fool
+mjomba <n> (pl: {wajomba})
+
+(maternal) uncle
+mjukuu <n> (pl: {wajukuu})
+
+grandchild
+mjumbe <n> (pl: {wajumbe})
+
+messenger
+mkabala <adv>
+
+in front
+mkahawa <n> (pl: {mikahawa})
+
+cafe
+mkasi <n> (pl: {mikasi})
+
+scissors
+mkate <n> (pl: {mikate})
+
+bread
+mkato <n> (pl: {mikato})
+1.
+shortcut
+2.
+amputation
+mke <n> (pl: {wake})
+
+wife
+mkebe <n> (pl: {mikebe})
+
+can
+mkeka <n> (pl: {mikeka})
+
+plaited mat
+Mkenya <n> (pl: {Wakenya})
+
+Kenyan
+mkia <n> (pl: {mikia})
+
+tail
+mkimbiaji <n> (pl: {wakimbiaji})
+
+runner
+mkimbizi <n> (pl: {wakimbizi})
+1.
+refugee
+2.
+fugitive
+mko <cop, loc unspec>
+
+you (pl.) are (in an unspecified place)
+mkoa <n> (pl: {mikoa})
+
+state, province
+mkoba <n> (pl: {mikoba})
+
+bag
+mkono <n> (pl: {mikono})
+
+arm
+mkopo <n> (pl: {mikopo})
+
+loan
+Mkristo <n> (pl: {Wakristo})
+
+Christian
+mkulima <n> (pl: {wakulima})
+
+farmer
+mkurugenzi <n> (pl: {wakurugenzi})
+
+leader, manager
+mkusanya <n> (pl: {wakusanya})
+
+collector
+mkutano <n> (pl: {mikutano})
+
+meeting
+mkwe <n> (pl: {wakwe})
+
+in-law
+mlango <n> (pl: {milango})
+1.
+door
+2.
+gate, portal
+mlawatu <n> (pl: {walawatu})
+
+cannibal
+mle <adv>
+
+in there
+mle <pron, dem nprox, agr: 18>
+
+that, yonder, the one over there (distant from both the speaker and the hearer)
+mlima <n> (pl: {milima})
+
+mountain
+mlimaji <n> (pl: {walimaji})
+
+farmer
+mlinzi <n> (pl: {walinzi})
+
+guard
+mlio <n> (pl: {milio})
+
+shout, cry
+Mmarekani <n> (pl: {Wamarekani})
+
+American
+mmea <n> (pl: {mimea})
+
+plant
+mmo <cop, loc in>
+
+you (pl.) are (within, in there)
+mna <v, infl>
+
+you (pl.) have
+mna <v, infl, agr: 18>
+
+is inside
+; are inside
+mnara <n> (pl: {minara})
+
+tower
+mnazi <n> (pl: {minazi})
+
+coconut palm
+mno <adv>
+
+very
+mnyama <n> (pl: {wanyama})
+1.
+animal
+2.
+beast
+mnyororo <n> (pl: {minyororo})
+
+chain
+moja <num>
+
+one
+moshi <n>
+
+smoke
+mosi <adj>
+
+first
+moto <n> (pl: {myoto})
+1.
+fire
+2.
+heat
+motokaa <n> [sg=pl]
+
+car
+moyo <n> (pl: {mioyo}, {nyoyo})
+
+heart
+mpaka <prep>
+1.
+up to
+2.
+until
+mpaka <n> (pl: {mipaka})
+
+border
+mpango <n> (pl: {mipango})
+
+plan, arrangement, schedule
+mpendwa <n> (pl: {wapendwa})
+
+dear, beloved
+mpishi <n> (pl: {wapishi})
+
+cook
+mpo <cop, loc spec>
+
+you (pl.) are (in a specified place)
+mpunga <n> (pl: {mipunga})
+
+rice plant
+mpwa <n> (pl: {wapwa})
+
+nephew, niece
+mradi <n> (pl: {miradi})
+
+intention
+Mreno <n> (pl: {Wareno})
+
+Portuguese
+mrithi <n> (pl: {warithi})
+
+inheritor
+Mrumi <n> (pl: {Warumi})
+
+Roman
+Mrusi <n> (pl: {Warusi})
+
+Russian
+msaada <n> (pl: {misaada})
+
+help, aid
+msafiri <n> (pl: {wasafiri})
+
+traveller
+Msahafu <n>
+
+Koran
+   See also: {Kurani}
+
+msahafu <n> (pl: {misahafu})
+
+book
+   See also: {Msahafu}
+
+msaidizi <n> (pl: {wasaidizi})
+
+assistant
+msalaba <n> (pl: {misalaba})
+
+cross
+msamaha <n> (pl: {misamaha})
+
+forgiveness
+msanii <n> (pl: {wasanii})
+
+artist
+msemaji <n> (pl: {wasemaji})
+
+speaker
+; orator
+mshahara <n> (pl: {mishahara})
+
+wage, salary
+mshairi <n> (pl: {washairi})
+
+poet
+mshale <n> (pl: {mishale})
+
+arrow
+mshangao <n> (pl: {mishangao})
+
+amazement
+mshauri <n> (pl: {washauri})
+
+consultant, advisor
+mshika <n> (pl: {washika})
+
+holder
+mshindani <n> (pl: {washindani})
+
+competitor
+mshinde <n> (pl: {washinde})
+
+loser
+mshindi <n> (pl: {washindi})
+
+winner
+mshipa <n> (pl: {mishipa})
+
+nerve
+; vessel
+mshirika <n> (pl: {washirika})
+
+partner, associate
+mshiriki <n> (pl: {washiriki})
+
+participant
+mshonaji <n> (pl: {washonaji})
+
+tailor
+   Synonym: {mshoni}
+
+mshoni <n> (pl: {washoni})
+
+tailor
+   Synonym: {mshonaji}
+
+msichana <n> (pl: {wasichana})
+
+girl
+msikiti <n> (pl: {misikiti})
+
+mosque
+msimamizi <n> (pl: {wasimamizi})
+
+overseer, supervisor
+msitu <n> (pl: {misitu})
+
+forest, wood
+msomaji <n> (pl: {wasomaji})
+
+reader
+mstari <n> (pl: {mistari})
+
+line
+msumari <n> (pl: {misumari})
+
+nail
+Msumbiji <n>
+
+Mozambique
+Msumbiji <n> (pl: {Wasumbiji})
+
+Mozambican
+Mswahili <n> (pl: {Waswahili})
+
+Swahili person
+mswaki <n> (pl: {miswaki})
+
+toothbrush
+Msweden <n> (pl: {Wasweden})
+
+Swede
+   Synonym: {Mswidi}
+
+Mswidi <n> (pl: {Waswidi})
+
+Swede
+   Synonym: {Msweden}
+
+mtaa <n> (pl: {mitaa})
+
+street
+mtalaka <n> (pl: {watalaka})
+
+divorcee
+mtalii <n> (pl: {watalii})
+
+tourist
+mtalimbo <n> (pl: {mitalimbo})
+
+crowbar
+mtama <n> (pl: {mitama})
+
+millet
+mtambo <n> (pl: {mitambo})
+
+spring-mechanism, machine
+Mtanzania <n> (pl: {Watanzania})
+
+Tanzanian
+mtazamaji <n> (pl: {watazamaji})
+
+observer
+mtazamo <n> (pl: {mitazamo})
+1.
+viewpoint
+2.
+attitude
+mtelemko <n> (pl: {mitelemko})
+
+descent
+mtende <n> (pl: {mitende})
+
+date-palm
+   See also: {tende}
+
+mti <n> (pl: {miti})
+1.
+tree
+2.
+pole, post, stanchion, stake
+3.
+timber, wood
+mtihani <n> (pl: {mitihani})
+
+exam, test
+mtini <n> (pl: {mitini})
+
+fig tree
+mto <n> (pl: {mito})
+1.
+river
+2.
+pillow
+mtoto <n> (pl: {watoto})
+
+child
+mtu <n> (pl: {watu})
+
+person
+mtulinga <n> (pl: {mitulinga})
+
+collarbone
+mtume <n> (pl: {watume})
+
+prophet, apostle
+mtumishi <n> (pl: {watumishi})
+
+servant, boy
+mtumwa <n> (pl: {watumwa})
+
+slave
+mtunza <n> (pl: {watunza})
+
+caretaker
+muda <n>
+
+period of time
+muhimu <adj>
+
+important
+muhindi <n> (pl: {mihindi})
+
+maize plant
+muhogo <n> (pl: {mihogo})
+
+cassava
+mume <n> (pl: {waume})
+
+husband
+mundu <n> (pl: {miundu})
+
+sickle
+Mungu <n>
+
+God
+musuli, msuli <n> (pl: {misuli})
+
+muscle
+muwa <n> (pl: {miwa})
+
+sugar cane
+muziki <n> (pl: {miuziki}) [sg=pl]
+
+music
+mvi <n> [sg=pl]
+
+white hair
+mvinyo <n> (pl: {mivinyo})
+
+wine
+mvua <n> [sg=pl]
+
+rain
+mvulana <n> (pl: {wavulana})
+
+boy
+mvuvi <n> (pl: {wavuvi})
+
+fisherman
+mwa <prt, poss, agr: 18>
+
+of
+Mwafrika <n> (pl: {Waafrika})
+
+African
+mwaka <n> (pl: {miaka})
+
+year
+mwake <pron, poss, agr: 18>
+
+his, her, hers, its
+mwako <pron, poss, agr: 18>
+
+your (sg.), yours (sg.)
+mwali <n> (pl: {wali})
+
+maiden
+mwalimu <n> (pl: {walimu})
+
+teacher, instructor
+mwana <n> (pl: {wana})
+
+child, offspring, son, daughter
+mwanafunzi <n> (pl: {wanafunzi})
+
+pupil
+; student
+mwanamke <n> (pl: {wanawake})
+
+woman
+mwanamume <n> (pl: {wanaume})
+
+man
+mwandishi <n> (pl: {waandishi})
+
+waiter
+mwangalifu <n> (pl: {waangalifu})
+
+careful person
+mwangaza <n> (pl: {miangaza})
+
+brightness
+mwangu <pron, poss, agr: 18>
+
+my, mine
+mwanzo <n> (pl: {mianzo})
+
+beginning, start
+mwao <pron, poss, agr: 18>
+
+their
+Mwarabu <n> (pl: {Waarabu})
+
+Arab
+mwavuli <n> (pl: {miavuli})
+
+umbrella
+mwembe <n> (pl: {miembe})
+
+mango tree
+mwendo <n> (pl: {miendo})
+1.
+distance, offset
+2.
+journey, trip, voyage
+mwenendo <n> (pl: {mienendo})
+
+behavior
+mwenu <pron, poss, agr: 18>
+
+your (pl.), yours (pl.)
+mwenye <cop, poss, agr: 1,18>
+
+having
+; with
+mwenyeji <n> (pl: {wenyeji})
+
+inhabitant
+mwenzi <n> (pl: {wenzi})
+
+companion
+mwerevu <n> (pl: {waerevu})
+
+clever person
+mwetu <pron, poss, agr: 18>
+
+our, ours
+mwezi <n> (pl: {miezi})
+1.
+moon
+2.
+month
+mwiba <n> (pl: {miba})
+
+thorn
+mwili <n> (pl: {miili})
+
+body
+mwimbaji <n> (pl: {waimbaji})
+
+singer
+Mwingereza <n> (pl: {Waingereza})
+
+Englishman
+mwisho <n> (pl: {miisho})
+
+end
+mwizi <n> (pl: {wezi})
+
+thief
+mwombaji <n> (pl: {waombaji})
+
+beggar
+mwote <pron, agr: 18>
+
+all, whole
+mwuguzi <n> (pl: {wauguzi})
+
+nurse
+Myahudi <n> (pl: {Wayahudi})
+
+Jew
+myoto <n>
+
+ Plural of {moto}: 1. fire 2. heat
+
+Myunani <n> (pl: {Wayunani})
+
+Hellene, ancient Greek
+mzabibu <n> (pl: {mizabibu})
+
+grape vine
+mzazi <n> (pl: {wazazi})
+
+parent
+mzee <n> (pl: {wazee})
+
+elder
+mzigo <n> (pl: {mizigo})
+
+load
+mzizi <n> (pl: {mizizi})
+
+root
+Mzungu <n> (pl: {Wazungu})
+
+European
+mzungu <n> (pl: {mizungu})
+1.
+rarity
+ something unusual, rare, amazing
+
+2.
+cleverness
+mzunguko <n> (pl: {mizunguko})
+
+cycle, circuit
+na <conj>
+1.
+and
+2.
+with
+3.
+by
+naam <adv>
+
+yes
+nabii <n> (pl: {manabii})
+
+prophet
+nafasi <n> [sg=pl]
+
+opportunity
+nafuu <n> [sg=pl]
+
+gain, profit
+nahodha <n> (pl: {manahodha})
+
+captain
+nakshi <n> [sg=pl]
+
+ornament, ornamentation
+   See also: {pambo}
+
+nambari, namba <n> [sg=pl]
+
+number
+nami <expr>
+1.
+and I
+2.
+with me
+namna <n> [sg=pl]
+
+kind
+nanasi <n> (pl: {mananasi})
+
+pineapple
+nane <num>
+
+eight
+nani <pron, inter>
+
+who
+nanyi <expr>
+1.
+and you (pl.)
+2.
+with you (pl.)
+nao <expr>
+1.
+and they
+; and them
+2.
+with them
+nasi <expr>
+1.
+and we
+2.
+with us
+nauli <n> [sg=pl]
+
+fare
+nawa <v>
+
+wash hands
+nawe <expr>
+1.
+and you (sg.)
+2.
+with you (sg.)
+naye <expr>
+1.
+and he, and she, and it
+2.
+with him, with her, with it
+nazi <n> [sg=pl]
+
+coconut
+nchi <n> [sg=pl]
+
+country, state
+ndama <n> [sg=pl]
+
+calf
+ndani <adv>
+
+inside
+ndani ya <adv>
+
+in, inside, into, on, per, within
+ndege <n> [sg=pl]
+1.
+bird
+2.
+airplane, plane
+   Synonym: {eropleni}
+
+ndevu <n>
+
+ Plural of {udevu}: beard
+
+ndimi <expr, emph>
+
+it is I
+ndimi <n>
+
+ Plural of {ulimi}: tongue
+
+ndimu <n> [sg=pl]
+
+lime (fruit)
+ndinyi <expr, emph>
+
+it is you (pl.)
+ndio <expr, emph>
+
+it is they
+ndipo <adv>
+
+then
+ndisi <expr, emph>
+
+it is us
+ndiwe <expr, emph>
+
+it is you
+ndiye <expr, emph>
+
+it is he, it is she
+ndiyo <adv>
+
+yes
+ndizi <n> [sg=pl]
+
+banana
+ndoa <n> [sg=pl]
+
+marriage
+ndoo <n> [sg=pl]
+
+bucket, pail
+ndoto <n> [sg=pl]
+
+dream
+ndovu <n> [sg=pl]
+
+elephant
+   Synonym: {tembo}
+
+ndugu <n> [sg=pl]
+
+relative, cousin
+ndui <n> [sg=pl]
+
+smallpox
+nena <v>
+
+speak
+nenda <v, imp>
+
+go
+ Inflection of: {enda}
+
+nene <adj>
+
+fat
+neno <n> (pl: {maneno})
+
+word
+ng'ambo <n> [sg=pl]
+1.
+the other side
+2.
+abroad
+ng'ombe <n> [sg=pl]
+1.
+cow
+2.
+cattle
+ngamia <n> [sg=pl]
+
+camel
+ngano <n> [sg=pl]
+
+wheat
+ngapi <pron, inter>
+
+how many
+ngazi <n> [sg=pl]
+1.
+stairs
+2.
+ladder
+nge <n> [sg=pl]
+
+scorpion
+ngoja <v>
+
+wait
+ngojea <v>
+
+wait for
+ngoma <n> [sg=pl]
+1.
+drum
+2.
+dance
+ngozi <n> [sg=pl]
+
+skin, leather
+ngumi <n> [sg=pl]
+
+fist
+nguo <n> [sg=pl]
+
+clothes
+nguru <n> [sg=pl]
+
+kingfish
+nguruwe <n> [sg=pl]
+
+pig, swine
+nguvu <n> [sg=pl]
+
+strength
+nguzo <n> [sg=pl]
+
+pillar
+ni <cop>
+
+am
+; are
+; is
+   See also: {wa}
+
+nia <n> [sg=pl]
+
+aim, purpose
+niko <cop, loc unspec>
+
+am (in an unspecified place)
+nimeshapoa <v, infl>
+
+no problem
+; I'm ok
+ (literally) I have already recovered
+(This is a formulaic answer to pole)
+
+nimo <cop, loc in>
+
+am (within, in there)
+nina <v, infl>
+
+I have
+   See also: {wa na}
+
+nini <pron, inter>
+
+what
+nipo <cop, loc spec>
+
+am (in a specified place)
+njaa <n> [sg=pl]
+
+hunger
+nje <adv>
+
+abroad, out, outside
+njia <n> [sg=pl]
+1.
+road, street, way
+2.
+means, way, method
+njia panda <n>
+
+crossroad
+njiwa <n> [sg=pl]
+
+pigeon
+njoo <v, imp>
+
+come
+ Inflection of: {ja}
+
+nne <num>
+
+four
+nono <adj>
+
+corpulent, fat, thick
+Novemba <n> [sg=pl]
+
+November
+nta <n> [sg=pl]
+
+wax
+nuka <v>
+
+smell bad
+nukia <v>
+
+smell good
+nunua <v>
+
+buy
+nusa <v>
+
+smell
+nusu <n> [sg=pl]
+
+half
+nyakati <n>
+
+ Plural of {wakati}: time, period of time; season
+
+nyama <n> [sg=pl]
+
+meat
+nyamaza <v, caus>
+
+be quiet
+nyang'anya <v>
+
+rob
+nyani <n> [sg=pl]
+
+baboon
+nyanya <n> [sg=pl]
+1.
+tomato
+2.
+grandmother
+nyati <n> [sg=pl]
+
+buffalo
+nyavu <n>
+
+ Plural of {wavu}: net, network
+
+nyayo <n>
+
+ Plural of {unyayo}: sole, footprint
+
+nyembe <n>
+
+ Plural of {wembe}: razor
+
+nyesha <v, caus>
+
+rain
+nyimbo <n>
+
+ Plural of {wimbo}: song
+
+nyingi <adj, agr: 10>
+
+many, much
+nyinyi, ninyi <pron, pers>
+
+you (pl.)
+nyoa <v>
+
+shave
+nyoga <n>
+
+ Plural of {uyoga}: mushroom
+
+nyoka <n> [sg=pl]
+
+snake
+nyonga <n> [sg=pl]
+
+hip
+nyota <n> [sg=pl]
+1.
+star (in the sky)
+2.
+fortune, luck
+nyote <pron>
+
+all of you
+nyoyo <n>
+
+ Plural of {moyo}: heart
+
+nyua <n>
+
+ Plural of {ua}: court, yard, courtyard
+
+nyufa <n>
+
+ Plural of {ufa}: crack
+
+nyuki <n> [sg=pl]
+
+bee
+nyuma <adv>
+
+behind
+nyuma <n>
+
+ Plural of {uma}: fork
+
+nyuma ya <adv>
+
+behind, after
+nyumba <n> [sg=pl]
+
+house
+nyundo <n> [sg=pl]
+
+hammer
+nyuso <n>
+
+ Plural of {uso}: face
+
+nyuti <n>
+
+ Plural of {uti}: trunk (of a tree)
+
+nyuzi <n>
+
+ Plural of {uzi}: cord, rope, string
+
+nywa <v>
+
+drink
+nywele <n>
+
+ Plural of {unywele}: hair, single thread of hair
+
+nzige <n> [sg=pl]
+
+locust
+oa <v>
+
+marry
+oga <v>
+
+bathe
+ogea <v>
+
+bathe in
+ogelea <v>
+
+swim
+ogopa <v>
+
+fear, be afraid
+ogopesha <v, caus>
+
+frighten, scare
+okoa <v>
+
+save
+Oktoba <n> [sg=pl]
+
+October
+olewa <v>
+
+be married
+omba <v>
+
+beg
+ona <v>
+1.
+see
+2.
+feel
+onana <v>
+
+meet
+ondoa <v>
+
+take away
+ondoka <v>
+
+go away
+ondokea <v>
+
+rise up
+onekana <v>
+1.
+be apparent
+2.
+seem
+ongea <v>
+
+converse
+ongeza <v, caus>
+
+increase
+ongoza <v, caus>
+
+drive
+onja <v>
+
+taste
+onya <v>
+
+warn
+onyesha <v, caus>
+
+show
+orodha <n> [sg=pl]
+
+list
+osha <v>
+
+wash
+oshea <v>
+
+wash
+ota <v>
+
+grow
+ote <pron>
+
+all, whole
+ovyo <adv>
+
+carelessly
+oza <v, caus>
+
+rot
+pa <v>
+
+give
+pa <prt, poss, agr: 16>
+
+of
+paa <n> [sg=pl]
+
+antelope, gazelle
+pacha <n> (pl: {mapacha})
+
+twin
+pafu <n> (pl: {mapafu})
+
+lung
+paja <n> (pl: {mapaja})
+
+thigh
+paji <n> (pl: {mapaji})
+
+forehead
+paka <n> [sg=pl]
+
+cat
+paka <v>
+
+apply
+pake <pron, poss, agr: 16>
+
+his, her, hers, its
+pakia <v>
+
+take on
+pako <pron, poss, agr: 16>
+
+your (sg.), yours (sg.)
+pale <adv>
+
+there
+pale <pron, dem nprox, agr: 16>
+
+that, yonder, the one over there (distant from both the speaker and the hearer)
+pamba <n> [sg=pl]
+
+cotton
+pambazuka <v>
+
+dawn
+pambo <n> (pl: {mapambo})
+
+ornament, decoration
+   See also: {nakshi}
+
+pamoja <adv>
+
+together
+pana <adj>
+
+wide
+pana <v, infl, agr: 16>
+
+there is
+; there are
+   See also: {wa na}
+
+panda <n> [sg=pl]
+
+division
+panda <v>
+1.
+plant
+2.
+climb
+pande <n>
+
+ Plural of {upande}: side, direction
+
+panga <v>
+
+arrange, order, put in order
+panga <n> (pl: {mapanga})
+
+machete
+panga <n>
+
+ Plural of {upanga}: sword
+
+pangu <pron, poss, agr: 16>
+
+my, mine
+panya <n> [sg=pl]
+
+rat
+panya mdogo <n>
+
+mouse
+pao <pron, poss, agr: 16>
+
+their
+papa <n> [sg=pl]
+
+shark
+papai <n> (pl: {mapapai})
+
+papaya
+parafujo <n> [sg=pl]
+
+screw
+Pasaka <n> [sg=pl]
+
+Easter
+pasi <n> [sg=pl]
+1.
+clothes iron
+2.
+passport
+pasipo <prep>
+
+without
+pasua <v>
+
+split
+pata <v>
+
+get
+patana <v>
+
+agree
+patia <v>
+
+get for
+patikana <v>
+
+be obtainable
+pauni <n> [sg=pl]
+
+pound (currency)
+peke <adj>
+
+alone
+peleka <v>
+
+send
+pelekea <v>
+
+send for
+pelekewa <v>
+
+be sent to
+pelekwa <v>
+
+be sent
+pembeni <adv>
+
+in a corner
+penda <v>
+
+love
+pendelea <v>
+
+favor
+pendeza <v, caus>
+
+please
+pengi <adj, agr: 16>
+
+many, much
+penu <pron, poss, agr: 16>
+
+your (pl.), yours (pl.)
+penya <v>
+
+penetrate
+penye <cop, poss, agr: 16>
+
+having
+; with
+pepo <n> [sg=pl]
+1.
+spirit, demon
+2.
+paradise
+pepo <n>
+
+ Plural of {upepo}: wind
+
+pera <n> (pl: {mapera})
+
+guava
+peremende <n> [sg=pl]
+
+peppermint
+pesa <n> [sg=pl]
+
+money
+   Synonyms: {hela}, {fedha}
+
+pete <n> [sg=pl]
+
+ring (jewellery)
+petroli <n> [sg=pl]
+
+gasoline
+petu <pron, poss, agr: 16>
+
+our, ours
+pewa <v>
+
+be given
+pi <pron, inter>
+
+which
+pia <v>
+
+give for
+pia <adv>
+1.
+also, too
+2.
+equally, likewise
+picha <n> [sg=pl]
+1.
+painting, picture
+2.
+photo, picture
+piga <v>
+
+hit, beat
+piga chafya <v>
+
+sneeze
+piga hodi <v>
+
+ask permission to enter
+; knock at the door
+   See also: {bisha hodi}
+
+piga kura <v>
+
+vote
+piga magoti <v>
+
+kneel
+piga makofi <v>
+
+clap hands, applaud
+piga mbio <v>
+
+run
+piga miayo <v>
+
+yawn
+piga mswaki <v>
+
+brush teeth
+piga pasi <v>
+
+iron
+piga picha <v>
+
+take a photo
+pigana <v>
+
+fight
+pigia <v>
+
+hit for
+pika <v>
+
+cook
+pikia <v>
+
+cook in
+pili <adj>
+
+second
+pilipili <n> [sg=pl]
+
+pepper
+pima <v>
+
+measure
+pinda <v>
+
+turn
+pindi <n> (pl: {mapindi})
+
+bend, turn
+pindwa <v>
+
+be twisted
+pinga <v>
+
+oppose
+pishi <n> [sg=pl]
+
+half gallon
+pita <v>
+
+pass
+pitia <v>
+
+pass by
+poa <v>
+
+cool down
+pokea <v>
+
+accept, receive, take, take in
+pole <adj>
+
+gentle, careful
+pole <adv>
+
+slowly
+   See also: {polepole}
+
+pole <interj>
+
+sorry!
+; my condolences!
+; poor you!(used to express sympathy and compassion)
+
+polepole <adv>
+
+slowly
+   See also: {pole}
+
+polisi <n> [sg=pl]
+
+policeman, police
+pombe <n> [sg=pl]
+
+beer, ale
+pona <v>
+
+get well
+ponda <v>
+
+crush
+pongezi <n> [sg=pl]
+
+congratulation
+   See also: {hongera}
+
+ponya <v>
+
+cure
+posho <n> [sg=pl]
+1.
+allowance
+2.
+ration
+posta <n> [sg=pl]
+1.
+post
+2.
+mail
+pote <pron, agr: 16>
+
+all, whole
+potea <v>
+
+get lost
+poteza <v, caus>
+
+lose
+poza <v, caus>
+
+cool
+pua <n> [sg=pl]
+
+nose
+pumzika <v>
+
+rest
+pumziko <n> (pl: {mapumziko})
+
+pause
+; breake
+punda <n> [sg=pl]
+
+donkey, ass
+pundamilia <n> [sg=pl]
+
+zebra
+pungua <v>
+
+diminish
+punguza <v, caus>
+
+reduce
+pwani <n> [sg=pl]
+
+coast, seaside, shore
+pwaya <v>
+
+be loose
+pya <adj>
+
+new, novel
+radhi <adj>
+
+content
+rafiki <n> (pl: {marafiki}) [sg=pl]
+
+friend
+rahisi <adj>
+1.
+cheap, inexpensive
+2.
+easy, facile
+raia <n> [sg=pl]
+
+citizen
+Ramadhani <n>
+
+Ramadan
+ramani <n> [sg=pl]
+
+map
+rangi <n> [sg=pl]
+
+color
+rasmi <adj>
+
+official
+ratiba <n> [sg=pl]
+
+list
+ratili <n> [sg=pl]
+
+pound (weight)
+refu <adj>
+1.
+long
+2.
+deep, profound
+reli <n> [sg=pl]
+1.
+rail
+2.
+train
+robo <n> [sg=pl]
+
+quarter
+roho <n> [sg=pl]
+
+soul
+roshani <n> [sg=pl]
+
+balcony
+rudi <v>
+
+return
+rudisha <v, caus>
+
+send back
+ruhusa <n> [sg=pl]
+
+permission
+ruhusiwa <v>
+
+be permitted
+ruhusu <v>
+
+permit
+ruka <v>
+
+jump
+saa <n> [sg=pl]
+1.
+hour, o'clock, time
+2.
+clock, watch
+saba <num>
+
+seven
+sababu <n> [sg=pl]
+
+reason
+sabini <num>
+
+seventy
+sabuni <n> [sg=pl]
+
+soap
+sadiki <v>
+
+believe
+safari <n> [sg=pl]
+
+journey, trip, voyage
+safi <adj>
+
+clean
+safiri <v>
+
+travel
+safiria <v>
+
+travel by
+safirisha <v, caus>
+
+send off
+safisha <v, caus>
+
+cleanse
+saga <v>
+
+grind
+sahani <n> [sg=pl]
+
+plate
+; dish
+sahau <v>
+
+forget
+sahaulifu <adj>
+
+forgetful
+sahihi <adj>
+
+correct, right
+sahihisha <v, caus>
+
+correct
+saidia <v>
+
+help
+saidiwa <v>
+
+be helped
+sala <n> [sg=pl]
+
+prayer
+salama <n> [sg=pl]
+
+safety, peace
+salamu <n> [sg=pl]
+
+greetings
+sali <v>
+
+pray
+salimu <v>
+
+greet
+samadi <n> [sg=pl]
+
+manure
+samahani <interj>
+
+excuse me, I'm sorry
+samaki <n> [sg=pl]
+
+fish
+sambusa <n> [sg=pl]
+
+meat pie
+samehe <v>
+
+forgive
+sana <adv>
+
+very
+sanaa <n> [sg=pl]
+1.
+art
+2.
+artwork
+sanduku <n> (pl: {masanduku})
+
+box
+santuri <n> [sg=pl]
+
+phonograph
+sapatu <n> [sg=pl]
+
+slippers
+sarabi <n> [sg=pl]
+
+mirage
+sarafu <n> [sg=pl]
+
+coin
+sasa <adv>
+
+now, at present
+sauti <n> [sg=pl]
+
+sound
+; voice
+sawa <adj>
+
+equal
+sayari <n> [sg=pl]
+
+planet
+sehemu <n> [sg=pl]
+
+part, section
+sekunde <n> [sg=pl]
+
+second
+sema <v>
+
+speak
+senti <n> [sg=pl]
+
+cent
+Septemba <n> [sg=pl]
+
+September
+seremala <n> (pl: {maseremala})
+
+carpenter
+serikali <n> [sg=pl]
+
+government
+shaba <n> [sg=pl]
+
+brass
+shada <n> (pl: {mashada})
+
+bunch
+shairi <n> (pl: {mashairi})
+
+poem
+shaka <n> (pl: {mashaka}) [sg=pl]
+
+doubt
+Sham <n>
+
+Syria
+shamba <n> (pl: {mashamba})
+
+field
+shangaa <v>
+
+be amazed, be surprised
+shangazi <n> (pl: {mashangazi})
+
+(paternal) aunt
+shashi <n> [sg=pl]
+
+gauze
+shati <n> (pl: {mashati})
+
+shirt
+shauri <n> (pl: {mashauri})
+1.
+advice, counsel
+2.
+design, diagram, plan, plane
+3.
+plan, project, scheme
+shavu <n> (pl: {mashavu})
+
+cheek
+shenzi <adj>
+
+barbarous
+sherehe <n> [sg=pl]
+
+celebration
+sheria <n> [sg=pl]
+
+law
+shiba <v>
+
+be full
+shida <n> [sg=pl]
+
+trouble
+shika <v>
+
+hold on to
+shikamoo <interj>
+
+my respects!
+   See also: {marahaba}
+
+shilingi <n> [sg=pl]
+
+shilling
+shimo <n> (pl: {mashimo})
+
+pit, well
+shinda <v>
+
+overcome
+shindano <n> (pl: {mashindano})
+
+competition
+shindwa <v>
+
+be overcome
+shingo <n> [sg=pl]
+
+neck
+shiriki <v>
+
+cooperate, participate
+shoka <n> (pl: {mashoka})
+
+axe
+shona <v>
+
+sew
+shoto <n> [sg=pl]
+
+left hand
+shughuli <n> [sg=pl]
+
+business
+shuka <v>
+
+descend, get off
+shukrani <n> [sg=pl]
+
+thanks, gratitude
+shukuru <v>
+
+thank
+shule <n> [sg=pl]
+
+school
+shurua <n>
+
+measles
+si <cop, neg>
+
+am not
+; is not
+; are not
+   See also: {wa}
+
+siafu <n> [sg=pl]
+
+biting ant
+siagi <n> [sg=pl]
+
+butter
+siasa <n> [sg=pl]
+
+politics
+sidiria <n> [sg=pl]
+
+brassiere, bra
+sifia <v>
+
+recommend
+sifuri <num>
+
+zero
+sigara <n> [sg=pl]
+
+cigarette
+siki <n> [sg=pl]
+
+vinegar
+sikia <v>
+1.
+hear
+2.
+feel
+sikiliza <v, caus>
+
+listen
+sikio <n> (pl: {masikio})
+
+ear
+sikitika <v>
+
+be sorry
+siku <n> [sg=pl]
+
+day, 24 hours
+siku zote <adv>
+
+always
+ (literally) all days
+
+sikukuu <n> [sg=pl]
+
+holiday, festival
+silaha <n> [sg=pl]
+
+weapon, arms
+simama <v>
+
+stand
+simba <n> [sg=pl]
+
+lion
+simu <n> [sg=pl]
+
+telephone
+simulia <v>
+
+tell a story, narrate
+simulizi <n> (pl: {masimulizi})
+
+story, tale, narrative
+sina <v, infl>
+
+I do not have
+   See also: {wa na}
+
+sindano <n> [sg=pl]
+1.
+needle
+2.
+injection
+sinema <n> [sg=pl]
+1.
+cinema, movie theater
+2.
+film, movie
+sinia <n> [sg=pl]
+
+tray
+siri <n> [sg=pl]
+
+secret
+sisi <pron, pers>
+1.
+we
+2.
+us
+sita <v>
+
+hesitate
+sita <num>
+
+six
+sitaha <n> [sg=pl]
+
+deck
+sitini <num>
+
+sixty
+siyo <adv>
+
+no
+skrubu <n> [sg=pl]
+
+screw
+skuli <n> [sg=pl]
+
+school
+soko <n> (pl: {masoko})
+
+market, bazaar, fair
+soksi <n> [sg=pl]
+
+socks
+sokwe <n> (pl: {masokwe})
+
+ape
+soma <v>
+
+read
+somesha <v, caus>
+
+teach
+somo <n> (pl: {masomo})
+1.
+lesson
+2.
+study
+3.
+reading
+sonara <n> (pl: {masonara})
+
+jeweller
+sote <pron>
+
+all of us
+starehe <v>
+
+be comfortable
+stesheni <n> [sg=pl]
+
+station
+sukani <n>
+
+ Plural of {usukani}: steering-gear
+
+sukari <n> [sg=pl]
+
+sugar
+sukuma <v>
+
+push
+sukutua <v>
+
+rinse mouth
+sumbua <v>
+
+trouble
+sungura <n> [sg=pl]
+
+rabbit
+; hare
+supu <n> [sg=pl]
+
+soup
+suruali <n> [sg=pl]
+
+pants
+swala <n> [sg=pl]
+
+antelope, impala
+swali <n> (pl: {maswali})
+
+question
+taa <n> [sg=pl]
+
+lamp
+taabu <n> [sg=pl]
+
+problem, trouble
+taarifa <n> [sg=pl]
+1.
+statement
+2.
+announcement
+tabia <n> [sg=pl]
+1.
+character
+2.
+habit
+tafadhali <interj>
+
+please
+tafrija <n> [sg=pl]
+
+party
+tafuna <v>
+
+chew
+tafuta <v>
+
+look for
+tahadhari <v>
+
+be careful
+tai <n> [sg=pl]
+
+eagle
+taifa <n> (pl: {mataifa})
+
+nation
+taja <v>
+
+mention
+tajiri <adj>
+
+wealthy
+taka <v>
+
+want
+takatifu <adj>
+1.
+clean
+2.
+holy
+takiwa <v>
+
+be requested
+takwimu <n> [sg=pl]
+
+statistics
+talaka <n> [sg=pl]
+
+divorce
+tamasha <n> (pl: {matamasha})
+
+show
+tambua <v>
+1.
+realize
+2.
+recognize
+tamu <adj>
+1.
+sweet
+2.
+gentle, soft
+tandika <v>
+
+lay out
+tandikwa <v>
+
+be laid out
+tandu <n> [sg=pl]
+
+centipede
+tangawizi <n> [sg=pl]
+
+ginger, ginger beer
+tangaza <v, caus>
+
+proclaim
+tangazo <n> (pl: {matangazo})
+
+ad, advertisement, announcement
+tangi, tanki <n> (pl: {matangi}, {matanki})
+
+tank
+tango <n> (pl: {matango})
+
+cucumber
+tangu <prep>
+
+since
+tangulia <v>
+
+precede
+tano <num>
+
+five
+Tanzania <n>
+
+Tanzania
+taraja <v>
+
+hope, intend
+taratibu <n>
+
+ Plural of {utaratibu}: program, procedure, method
+
+tarehe <n> [sg=pl]
+
+date (time)
+tatizo <n> (pl: {matatizo})
+
+difficulty, problem
+tatu <num>
+
+three
+tauni <n> [sg=pl]
+
+plague
+taya <n> (pl: {mataya}) [sg=pl]
+
+jaw
+tayari <adj>
+
+ready, finished
+tayarishia <v, caus>
+
+prepare for
+tazama <v>
+
+look, look at
+tegemea <v>
+
+expect, rely on
+teknolojia <n> [sg=pl]
+
+technology
+teksi <n> [sg=pl]
+
+taxi
+tele <adj>
+
+abundant
+tembea <v>
+
+walk
+tembelea <v>
+
+visit
+tembo <n> [sg=pl]
+
+elephant
+   Synonym: {ndovu}
+
+tena <adv>
+
+again
+tende <n> [sg=pl]
+
+date (fruit)
+   See also: {mtende}
+
+tendo <n> (pl: {matendo})
+
+accomplishment, achievement, act, action
+tengana <v>
+
+be separated
+tengeneza <v, caus>
+
+repair
+tengenezea <v, caus>
+
+repair for
+tengenezwa <v, caus>
+
+be repaired
+tepe <n>
+
+ Plural of {utepe}: tape
+
+teremka <v>
+
+descend, get off
+tetekuwanga <n> [sg=pl]
+
+chicken pox
+tetemeka <v>
+
+shiver
+thamani <n> [sg=pl]
+
+value
+thelathini <num>
+
+thirty
+themanini <num>
+
+eighty
+thenashara <num>
+
+twelve
+tia <v>
+
+put
+tilia <v>
+
+put in
+timia <v>
+
+be complete
+timu <n> [sg=pl]
+
+team
+tini <n> [sg=pl]
+
+fig
+tisa <num>
+
+nine
+tisini <num>
+
+ninety
+tita <n> (pl: {matita})
+
+bundle
+titi <n> (pl: {matiti})
+
+breast, teat
+tiwa <v>
+
+be put
+toa <v>
+
+take out
+tofauti <n> [sg=pl]
+
+difference
+toka <v>
+
+go out
+tokea <v>
+
+appear
+tolea <v>
+
+put out for
+tone <n> (pl: {matone})
+
+drop
+tope <n> (pl: {matope})
+
+mud
+toroka <v>
+
+run away
+tosha <v>
+
+be enough
+toweka <v>
+
+disappear
+toza <v, caus>
+
+collect
+tozwa <v, caus>
+
+be collected
+treni <n> [sg=pl]
+
+train
+tu <adv>
+
+only
+tua <v>
+
+set down
+tubu <v>
+
+repent
+tuko <cop, loc unspec>
+
+we are (in an unspecified place)
+tuliza <v, caus>
+
+pacify
+tumai <v>
+1.
+desire
+2.
+expect, hope
+tumaini <v>
+
+trust
+tumbako <n> [sg=pl]
+
+tobacco
+tumbili <n> [sg=pl]
+
+monkey, vervet monkey
+tumbo <n> (pl: {matumbo})
+
+stomach
+tumia <v>
+
+use
+tumika <v>
+
+be in service
+tumilia <v>
+
+use for
+tumiwa <v>
+
+be used
+tumo <cop, loc in>
+
+we are (within, in there)
+tuna <v, infl>
+
+we have
+   See also: {wa na}
+
+tunda <n> (pl: {matunda})
+
+fruit
+tundikia <v>
+
+hang up on
+tundu <n> (pl: {matundu})
+
+hole
+tungule <n> (pl: {matungule})
+
+tomato
+tunza <v>
+
+care for
+tupa <n> [sg=pl]
+
+file, rasp
+tupa <v>
+
+throw
+tupo <cop, loc spec>
+
+we are (in a specified place)
+tupu <adj>
+1.
+naked
+2.
+empty
+tusi <n> (pl: {matusi})
+
+insult
+; abuse
+twiga <n> [sg=pl]
+
+giraffe
+ua <n> (pl: {maua})
+
+flower, bloom
+ua <n> (pl: {nyua})
+
+court, yard, courtyard
+ua <v>
+1.
+kill
+; murder
+2.
+destroy
+Uajemi <n>
+
+Persia
+uandikishaji <n>
+
+registration
+uangalifu <n>
+
+attention
+Uarabu <n>
+
+Arabia
+ubaguzi <n>
+
+discrimination
+ubalozi <n>
+
+embassy
+ubao <n> (pl: {mbao})
+
+plank, board
+ubavu <n> (pl: {mbavu})
+
+rib
+ubawa <n> (pl: {mbawa})
+
+wing
+ubaya <n>
+
+wickedness
+Ubelgiji <n>
+
+Belgium
+ubongo <n> (pl: {mbongo})
+
+brain
+uchawi <n>
+
+enchantment, magic, sorcery, witchcraft, wizardry
+uchumi <n>
+
+economics
+Udachi <n>
+
+Germany
+udevu <n> (pl: {ndevu})
+
+beard
+udongo <n>
+
+soil, ground
+ufa <n> (pl: {nyufa})
+
+crack
+ufagio <n> (pl: {fagio})
+
+broom
+ufalme <n> (pl: {falme})
+
+kingdom
+Ufaransa <n>
+
+France
+ufizi <n> (pl: {fizi})
+
+gum, gingiva
+ufunguo <n> (pl: {funguo})
+
+key, wrench
+ugali <n>
+
+stiff porridge
+Uganda <n>
+
+Uganda
+ugeni <n>
+1.
+strangeness
+2.
+foreign parts
+; abroad
+Ugiriki <n>
+
+Greece
+ugomvi <n> (pl: {magomvi})
+
+quarrel, dispute
+ugonjwa <n> (pl: {magonjwa})
+
+sickness
+Uhabeshi <n>
+
+Ethiopia
+uhai <n>
+
+life
+Uhindi <n>
+
+India
+Uholanzi <n>
+
+Holland
+uhuru <n>
+
+freedom
+Uingereza <n>
+
+England
+Ujerumani, Ujeremani <n>
+
+Germany
+uji <n>
+
+thin porridge
+ujima <n>
+
+collective work
+ujinga <n>
+
+stupidity, ignorance
+ujira <n>
+
+wages
+ukali <n>
+
+sharpness
+ukanda <n> (pl: {kanda})
+
+leather strap
+uko <cop, loc unspec>
+
+you (sg.) are (in an unspecified place)
+uko <cop, loc unspec, agr: 3,11>
+
+is (in an unspecified place)
+ukope <n> (pl: {kope})
+1.
+eyelid
+2.
+eyelash
+ukubwa <n>
+
+size
+ukucha <n> (pl: {kucha})
+
+fingernail
+ukunde <n> (pl: {kunde})
+
+bean
+ukurasa <n> (pl: {kurasa})
+1.
+page, leaf
+2.
+leaflet
+ukuta <n> (pl: {kuta})
+
+wall
+ukwaju <n>
+
+tamarind
+ukweli <n>
+
+truth
+Ulaya <n>
+
+Europe
+ule <pron, dem nprox, agr: 3,11>
+
+that, yonder, the one over there (distant from both the speaker and the hearer)
+ulimi <n> (pl: {ndimi})
+
+tongue
+ulimwengu <n>
+
+world
+   Synonym: {dunia}
+
+uliza <v>
+
+ask
+uma <n> (pl: {nyuma})
+
+fork
+uma <v>
+
+bite
+umaskini <n>
+
+poverty
+umba <v>
+
+create
+umbali <n>
+
+distance
+umeme <n>
+1.
+lightning
+2.
+electricity
+umia <v>
+
+be injured
+umivu <n> (pl: {maumivu})
+
+pain
+umo <cop, loc in>
+
+you (sg.) are (within, in there)
+umo <cop, loc in, agr: 3,11>
+
+is (within, in there)
+umoja <n>
+
+unity
+Umoja wa Mataifa <n>
+
+The United Nations
+umri <n>
+
+age
+umuhimu <n>
+
+importance
+umwa <v>
+1.
+be sick
+2.
+be in pain
+una <v, infl>
+
+you (sg.) have
+una <v, infl, agr: 3,11>
+
+it has
+unga <n>
+
+flour
+unga <v>
+
+join
+unganisha <v, caus>
+
+merge
+Unguja <n>
+
+Zanzibar
+unyago <n>
+
+ceremonial dance, initiation dance
+unyayo <n> (pl: {nyayo})
+
+sole, footprint
+unywele <n> (pl: {nywele})
+
+hair, single thread of hair
+uongo <n>
+
+lie
+upana <n>
+
+width
+upande <n> (pl: {pande})
+
+side, direction
+upanga <n> (pl: {panga})
+
+sword
+upepo <n> (pl: {pepo})
+
+wind
+upesi <adv>
+
+quickly
+upo <cop, loc spec>
+
+you (sg.) are (in a specified place)
+upo <cop, loc spec, agr: 3,11>
+
+is (in a specified place)
+upole <n>
+
+gentleness
+urefu <n>
+
+length
+Ureno <n>
+
+Portugal
+urithi <n>
+
+inheritance, heritage
+Urusi <n>
+
+Russia
+ushairi <n>
+
+poetry
+ushuru <n>
+
+tax
+usiku <n>
+
+night
+usingizi <n>
+
+sleep
+uso <n> (pl: {nyuso})
+
+face
+usukani <n> (pl: {sukani})
+
+steering-gear
+Uswahili <n>
+1.
+Swahili coast
+ stretch of East Africa coast where Swahili is spoken
+
+2.
+ Swahili culture and way of life
+
+utafiti <n>
+1.
+inquisitiveness
+2.
+research
+utaifa <n>
+
+nationhood
+utamu <n>
+
+sweetness
+utaratibu <n> (pl: {taratibu})
+
+program, procedure, method
+utelezi <n>
+
+slippery place
+utepe <n> (pl: {tepe})
+
+tape
+uti <n> (pl: {nyuti})
+
+trunk (of a tree)
+utingo <n> (pl: {matingo})
+
+conductor
+utoto <n>
+
+childhood
+utumbo <n>
+
+intestines
+uvivu <n>
+
+laziness
+uyoga <n> (pl: {nyoga})
+
+mushroom
+uza <v>
+
+sell
+uzazi <n>
+
+birth, childbearing
+uzi <n> (pl: {nyuzi})
+
+cord, rope, string
+uzito <n>
+
+weight
+uzuri <n>
+
+beauty
+vaa <v>
+
+dress
+vema <adv>
+
+okay, well
+viangazi <n>
+
+ Plural of {kiangazi}: hot season
+
+viasi <n>
+
+ Plural of {kiasi}: amount
+
+viatu <n>
+
+ Plural of {kiatu}: shoe
+
+viazi <n>
+
+ Plural of {kiazi}: potato
+
+vibaba <n>
+
+ Plural of {kibaba}: pint
+
+vibanda <n>
+
+ Plural of {kibanda}: hut
+
+vibiriti <n>
+
+ Plural of {kibiriti}: match
+
+viboko <n>
+
+ Plural of {kiboko}: hippo
+
+vichefuchefu <n>
+
+ Plural of {kichefuchefu}: nausea
+
+vicheko <n>
+
+ Plural of {kicheko}: laugh
+
+vichwa <n>
+
+ Plural of {kichwa}: head
+
+vidani <n>
+
+ Plural of {kidani}: necklace
+
+videvu <n>
+
+ Plural of {kidevu}: chin
+
+vidole <n>
+
+ Plural of {kidole}: 1. finger 2. toe
+
+vidonda <n>
+
+ Plural of {kidonda}: sore, ulcer
+
+vidonge <n>
+
+ Plural of {kidonge}: pill
+
+vidude <n>
+
+ Plural of {kidude}: 1. thingamajig, whatchamacallit 2. trifle; valueless
+ thing 3. gadget, gizmo
+
+vielezi <n>
+
+ Plural of {kielezi}: beginning; introduction
+
+vifaa <n>
+
+ Plural of {kifaa}: implement
+
+vifaru <n>
+
+ Plural of {kifaru}: rhino
+
+vifo <n>
+
+ Plural of {kifo}: death
+
+vifua <n>
+
+ Plural of {kifua}: chest, breast
+
+vifungo <n>
+
+ Plural of {kifungo}: fastening
+
+vifuniko <n>
+
+ Plural of {kifuniko}: lid, hood, cover
+
+vifurushi <n>
+
+ Plural of {kifurushi}: package
+
+viingilio <n>
+
+ Plural of {kiingilio}: entry fee; admission fee
+
+vijana <n>
+
+ Plural of {kijana}: youth, youngster
+
+vijembe <n>
+
+ Plural of {kijembe}: penknife
+
+vijiji <n>
+
+ Plural of {kijiji}: village
+
+vijiko <n>
+
+ Plural of {kijiko}: spoon
+
+vijito <n>
+
+ Plural of {kijito}: stream
+
+vikapu <n>
+
+ Plural of {kikapu}: basket
+
+viko <n>
+
+ Plural of {kiko}: pipe
+
+viko <cop, loc unspec, agr: 8>
+
+are (in an unspecified place)
+vikohozi <n>
+
+ Plural of {kikohozi}: cough
+
+vikombe <n>
+
+ Plural of {kikombe}: cup
+
+vikuku <n>
+
+ Plural of {kikuku}: bracelet
+
+vikuto <n>
+
+ Plural of {kikuto}: roll (something rolled up)
+
+vile <pron, dem nprox, agr: 8>
+
+those, yonder, those over there (distant from both the speaker and the hearer)
+vilima <n>
+
+ Plural of {kilima}: hill
+
+vilimo <n>
+
+ Plural of {kilimo}: agriculture
+
+vilio <n>
+
+ Plural of {kilio}: cry; shout
+
+vima <n>
+
+ Plural of {kima}: amount, price, value
+
+vimba <v>
+
+swell
+vimeta <n>
+
+ Plural of {kimeta}: anthrax
+
+vimetameta <n>
+
+ Plural of {kimetameta}: brightness; shine; glitter
+
+vimo <cop, loc in, agr: 8>
+
+are (within, in there)
+vina <v, infl, agr: 8>
+
+it has
+   See also: {wa na}
+
+vingi <adj, agr: 8>
+
+many, much
+vinyozi <n>
+
+ Plural of {kinyozi}: barber
+
+vinywa <n>
+
+ Plural of {kinywa}: mouth
+
+vinywaji <n>
+
+ Plural of {kinywaji}: beverage
+
+viogeo <n>
+
+ Plural of {kiogeo}: bathing suit
+
+viongozi <n>
+
+ Plural of {kiongozi}: guide, leader
+
+vioo <n>
+
+ Plural of {kioo}: 1. mirror 2. glass
+
+viota <n>
+
+ Plural of {kiota}: nest
+
+vipande <n>
+
+ Plural of {kipande}: 1. fragment, piece 2. part, share 3. bit, lump,
+ piece
+
+vipeo <n>
+
+ Plural of {kipeo}: top; climax
+
+vipimo <n>
+
+ Plural of {kipimo}: measurement; measure
+
+vipindi <n>
+
+ Plural of {kipindi}: period; extent of time
+
+vipo <cop, loc spec, agr: 8>
+
+are (in a specified place)
+vipofu <n>
+
+ Plural of {kipofu}: blind person
+
+vipunguzo <n>
+
+ Plural of {kipunguzo}: discount
+
+vipupwe <n>
+
+ Plural of {kipupwe}: cool season
+
+viriba <n>
+
+ Plural of {kiriba}: water bottle; water skin
+
+visigino <n>
+
+ Plural of {kisigino}: heel
+
+visima <n>
+
+ Plural of {kisima}: well
+
+visiwa <n>
+
+ Plural of {kisiwa}: island
+
+visongo <n>
+
+ Plural of {kisongo}: tourniquet
+
+visu <n>
+
+ Plural of {kisu}: knife
+
+vita <n> [sg=pl]
+
+war
+vitabu <n>
+
+ Plural of {kitabu}: book
+
+vitako <n>
+
+ Plural of {kitako}: buttock, buttocks, butt
+
+vitambaa <n>
+
+ Plural of {kitambaa}: cloth, fabric
+
+vitambo <n>
+
+ Plural of {kitambo}: while; moment
+
+vitana <n>
+
+ Plural of {kitana}: comb
+
+vitanda <n>
+
+ Plural of {kitanda}: bed
+
+vitano <n>
+
+ Plural of {kitano}: 5c coin
+
+vitasa <n>
+
+ Plural of {kitasa}: lock
+
+vithibitisho <n>
+
+ Plural of {kithibitisho}: guarantee, proof, document
+
+viti <n>
+
+ Plural of {kiti}: chair
+
+vito <n>
+
+ Plural of {kito}: gem
+
+vitu <n>
+
+ Plural of {kitu}: 1. thing 2. article, object
+
+vitunguu <n>
+
+ Plural of {kitunguu}: onion
+
+vituo <n>
+
+ Plural of {kituo}: 1. stop, stopping place 2. station (usually in
+ compounds)
+
+viungo <n>
+
+ Plural of {kiungo}: 1. connection, link 2. spice, seasoning
+
+viuno <n>
+
+ Plural of {kiuno}: waist
+
+vivu <adj>
+
+idle
+vivuko <n>
+
+ Plural of {kivuko}: 1. bridge; crossing 2. ferry
+
+vivuli <n>
+
+ Plural of {kivuli}: shadow
+
+viwanda <n>
+
+ Plural of {kiwanda}: factory. See also: , {karakana}
+
+viwanja <n>
+
+ Plural of {kiwanja}: open field; earth, land, soil,
+
+viwiko <n>
+
+ Plural of {kiwiko}: wrist
+
+viza <n> [sg=pl]
+
+visa
+vizibo <n>
+
+ Plural of {kizibo}: cork
+
+viziwi <n>
+
+ Plural of {kiziwi}: deaf person
+
+vizuri <adv>
+
+okay, well
+volkano, volkeno <n> [sg=pl]
+
+volcano
+vua <v>
+1.
+undress
+2.
+fish, catch fish
+vuguvugu <adj>
+
+warm
+vuja <v>
+
+leak
+vuka <v>
+
+cross over
+vuli <n> [sg=pl]
+
+lesser rains
+vumbi <n> (pl: {mavumbi})
+
+dust
+vuna <v>
+
+reap
+vunja <v>
+
+break
+vunjika <v>
+
+be broken
+vuruga <v>
+
+stir up
+vuta <v>
+
+pull
+vutia <v>
+
+fascinate, attract
+vya <prt, poss, agr: 8>
+
+of
+vyake <pron, poss, agr: 8>
+
+his, her, hers, its
+vyako <pron, poss, agr: 8>
+
+your (sg.), yours (sg.)
+vyakula <n>
+
+ Plural of {chakula}: 1. food 2. meal
+
+vyama <n>
+
+ Plural of {chama}: association; party
+
+vyandarua <n>
+
+ Plural of {chandarua}: mosquito net
+
+vyangu <pron, poss, agr: 8>
+
+my, mine
+vyao <pron, poss, agr: 8>
+
+their
+vyenu <pron, poss, agr: 8>
+
+your (pl.), yours (pl.)
+vyenye <cop, poss, agr: 8>
+
+having
+; with
+vyeo <n>
+
+ Plural of {cheo}: 1. measure 2. grade, rank, rate
+
+vyeti <n>
+
+ Plural of {cheti}: 1. certificate 2. testimony
+
+vyetu <pron, poss>
+
+our, ours
+vyombo <n>
+
+ Plural of {chombo}: 1. jug, box, container 2. vase, vessel
+
+vyoo <n>
+
+ Plural of {choo}: 1. dung, excrement 2. latrine
+
+vyote <pron, agr: 8>
+
+all, whole
+vyuma <n>
+
+ Plural of {chuma}: iron, metal
+
+vyumba <n>
+
+ Plural of {chumba}: room, chamber
+
+vyungu <n>
+
+ Plural of {chungu}: 1. cooking pot 2. jug
+
+vyuo <n>
+
+ Plural of {chuo}: school
+
+vyura <n>
+
+ Plural of {chura}: frog
+
+wa <v>
+
+be
+ (inflected irregularly in the present tense)
+
+wa <prt, poss, agr: 1,2,3,11>
+
+of
+wa na <v>
+
+have
+ (inflected irregularly in the present tense)
+
+Waafrika <n>
+
+ Plural of {Mwafrika}: African
+
+waandishi <n>
+
+ Plural of {mwandishi}: waiter
+
+waangalifu <n>
+
+ Plural of {mwangalifu}: careful person
+
+Waarabu <n>
+
+ Plural of {Mwarabu}: Arab
+
+wachawi <n>
+
+ Plural of {mchawi}: sorceror, magician; witch
+
+wacheza <n>
+
+ Plural of {mcheza}: actor
+
+wachukuzi <n>
+
+ Plural of {mchukuzi}: porter
+
+wachumba <n>
+
+ Plural of {mchumba}: fiancée, fiancé
+
+wachungaji <n>
+
+ Plural of {mchungaji}: herdsman, shepherd
+
+wadudu <n>
+
+ Plural of {mdudu}: insect, bug
+
+waerevu <n>
+
+ Plural of {mwerevu}: clever person
+
+wafalme <n>
+
+ Plural of {mfalme}: king
+
+wafanyakazi <n>
+
+ Plural of {mfanyakazi}: worker
+
+Wafaransa <n>
+
+ Plural of {Mfaransa}: Frenchman
+
+waganga <n>
+
+ Plural of {mganga}: 1. traditional healer 2. doctor
+
+wageni <n>
+
+ Plural of {mgeni}: 1. stranger, foreigner 2. guest
+
+Wagiriki <n>
+
+ Plural of {Mgiriki}: Greek
+
+wagonjwa <n>
+
+ Plural of {mgonjwa}: 1. sick person 2. patient
+
+Wahabeshi <n>
+
+ Plural of {Mhabeshi}: Ethiopian
+
+wahandisi <n>
+
+ Plural of {mhandisi}: engineer
+
+wahariri <n>
+
+ Plural of {mhariri}: editor
+
+wahi <v>
+
+be in time
+Wahindi <n>
+
+ Plural of {Mhindi}: Indian
+
+wahudumu <n>
+
+ Plural of {mhudumu}: waiter, attendant
+
+waimbaji <n>
+
+ Plural of {mwimbaji}: singer
+
+Waingereza <n>
+
+ Plural of {Mwingereza}: Englishman
+
+wajane <n>
+
+ Plural of {mjane}: widow, widower
+
+Wajapani <n>
+
+ Plural of {Mjapani}: Japanese
+
+Wajerumani <n>
+
+ Plural of {Mjerumani}: German
+
+wajinga <n>
+
+ Plural of {mjinga}: fool
+
+wajomba <n>
+
+ Plural of {mjomba}: (maternal) uncle
+
+wajukuu <n>
+
+ Plural of {mjukuu}: grandchild
+
+wajumbe <n>
+
+ Plural of {mjumbe}: messenger
+
+waka <v>
+
+burn
+wakati <n> (pl: {nyakati})
+
+time, period of time
+; season
+wake <pron, poss, agr: 1,2,3,11>
+
+his, her, hers, its
+wake <n>
+
+ Plural of {mke}: wife
+
+Wakenya <n>
+
+ Plural of {Mkenya}: Kenyan
+
+wakimbiaji <n>
+
+ Plural of {mkimbiaji}: runner
+
+wakimbizi <n>
+
+ Plural of {mkimbizi}: 1. refugee 2. fugitive
+
+wako <pron, poss, agr: 1,2,3,11>
+
+your (sg.), yours (sg.)
+wako <cop, loc unspec, agr: 2>
+
+they are (in an unspecified place)
+Wakristo <n>
+
+ Plural of {Mkristo}: Christian
+
+wakulima <n>
+
+ Plural of {mkulima}: farmer
+
+wakurugenzi <n>
+
+ Plural of {mkurugenzi}: leader, manager
+
+wakusanya <n>
+
+ Plural of {mkusanya}: collector
+
+wakwe <n>
+
+ Plural of {mkwe}: in-law
+
+walakini <conj>
+
+but, however
+walawatu <n>
+
+ Plural of {mlawatu}: cannibal
+
+wale <pron, dem nprox, agr: 2>
+
+those, yonder, those over there (distant from both the speaker and the hearer)
+wali <n>
+
+cooked rice
+wali <n>
+
+ Plural of {mwali}: maiden
+
+walimaji <n>
+
+ Plural of {mlimaji}: farmer
+
+walimu <n>
+
+ Plural of {mwalimu}: teacher, instructor
+
+walinzi <n>
+
+ Plural of {mlinzi}: guard
+
+Wamarekani <n>
+
+ Plural of {Mmarekani}: American
+
+wamo <cop, loc in, agr: 2>
+
+they are (within, in there)
+wana <n>
+
+ Plural of {mwana}: child, offspring, son, daughter
+
+wana <v, infl>
+
+they have
+   See also: {wa na}
+
+wanafunzi <n>
+
+ Plural of {mwanafunzi}: pupil; student
+
+wanaume <n>
+
+men
+ Plural of {mwanamume}: man
+
+wanawake <n>
+
+women
+ Plural of {mwanamke}: woman
+
+wangu <pron, poss, agr: 1,2,3,11>
+
+my, mine
+wanyama <n>
+
+ Plural of {mnyama}: 1. animal 2. beast
+
+wao <pron, pers>
+
+they
+wao <pron, poss, agr: 1,2,3,11>
+
+their
+waombaji <n>
+
+ Plural of {mwombaji}: beggar
+
+wapendwa <n>
+
+ Plural of {mpendwa}: dear, beloved
+
+wapi <pron, inter>
+
+where
+wapishi <n>
+
+ Plural of {mpishi}: cook
+
+wapo <cop, loc spec, agr: 2>
+
+they are (in a specified place)
+wapwa <n>
+
+ Plural of {mpwa}: nephew, niece
+
+Wareno <n>
+
+ Plural of {Mreno}: Portuguese
+
+warithi <n>
+
+ Plural of {mrithi}: inheritor
+
+Warumi <n>
+
+ Plural of {Mrumi}: Roman
+
+Warusi <n>
+
+ Plural of {Mrusi}: Russian
+
+wasafiri <n>
+
+ Plural of {msafiri}: traveller
+
+wasaidizi <n>
+
+ Plural of {msaidizi}: assistant
+
+wasanii <n>
+
+ Plural of {msanii}: artist
+
+wasemaji <n>
+
+ Plural of {msemaji}: speaker; orator
+
+washairi <n>
+
+ Plural of {mshairi}: poet
+
+washauri <n>
+
+ Plural of {mshauri}: consultant, advisor
+
+washika <n>
+
+ Plural of {mshika}: holder
+
+washindani <n>
+
+ Plural of {mshindani}: competitor
+
+washinde <n>
+
+ Plural of {mshinde}: loser
+
+washindi <n>
+
+ Plural of {mshindi}: winner
+
+washirika <n>
+
+ Plural of {mshirika}: partner, associate
+
+washiriki <n>
+
+ Plural of {mshiriki}: participant
+
+washonaji <n>
+
+ Plural of {mshonaji}: tailor. (synonym: , {mshoni})
+
+washoni <n>
+
+ Plural of {mshoni}: tailor. (synonym: , {mshonaji})
+
+wasichana <n>
+
+ Plural of {msichana}: girl
+
+wasimamizi <n>
+
+ Plural of {msimamizi}: overseer, supervisor
+
+wasomaji <n>
+
+ Plural of {msomaji}: reader
+
+Wasumbiji <n>
+
+ Plural of {Msumbiji}: Mozambican
+
+Waswahili <n>
+
+ Plural of {Mswahili}: Swahili person
+
+Wasweden <n>
+
+ Plural of {Msweden}: Swede. (synonym: , {Mswidi})
+
+Waswidi <n>
+
+ Plural of {Mswidi}: Swede. (synonym: , {Msweden})
+
+watalaka <n>
+
+ Plural of {mtalaka}: divorcee
+
+watalii <n>
+
+ Plural of {mtalii}: tourist
+
+Watanzania <n>
+
+ Plural of {Mtanzania}: Tanzanian
+
+watazamaji <n>
+
+ Plural of {mtazamaji}: observer
+
+watoto <n>
+
+ Plural of {mtoto}: child
+
+watu <n>
+
+people
+ Plural of {mtu}: person
+
+watume <n>
+
+ Plural of {mtume}: prophet, apostle
+
+watumishi <n>
+
+ Plural of {mtumishi}: servant, boy
+
+watumwa <n>
+
+ Plural of {mtumwa}: slave
+
+watunza <n>
+
+ Plural of {mtunza}: caretaker
+
+wauguzi <n>
+
+ Plural of {mwuguzi}: nurse
+
+waume <n>
+
+ Plural of {mume}: husband
+
+wavu <n> (pl: {nyavu})
+
+net, network
+wavulana <n>
+
+ Plural of {mvulana}: boy
+
+wavuvi <n>
+
+ Plural of {mvuvi}: fisherman
+
+Wayahudi <n>
+
+ Plural of {Myahudi}: Jew
+
+Wayunani <n>
+
+ Plural of {Myunani}: Hellene, ancient Greek
+
+waza <v>
+
+think
+wazazi <n>
+
+ Plural of {mzazi}: parent
+
+wazee <n>
+
+ Plural of {mzee}: elder
+
+wazi <adj>
+
+open
+wazo <n> (pl: {mawazo})
+
+thought
+Wazungu <n>
+
+ Plural of {Mzungu}: European
+
+weka <v>
+
+put
+wekea <v>
+
+put aside for
+wekwa <v>
+
+be put
+wembe <n> (pl: {nyembe})
+
+razor
+wengi <adj, agr: 2>
+
+many, much
+wenu <pron, poss, agr: 1,2,3,11>
+
+your (pl.), yours (pl.)
+wenye <cop, poss, agr: 2,3,11>
+
+having
+; with
+wenyeji <n>
+
+ Plural of {mwenyeji}: inhabitant
+
+wenzi <n>
+
+ Plural of {mwenzi}: companion
+
+wetu <pron, poss, agr: 1,2,3,11>
+
+our, ours
+weusi <n>
+
+blackness
+wewe <pron, pers>
+
+you (sg.)
+weza <v>
+
+be able
+wezekana <v>
+
+be possible
+wezesha <v, caus>
+
+enable
+wezi <n>
+
+ Plural of {mwizi}: thief
+
+wiki <n> [sg=pl]
+
+week
+wili <num>
+
+two
+ (in concords other than with cl. 10)
+
+   See also: {mbili}
+
+wimbi <n> (pl: {mawimbi})
+
+wave
+wimbo <n> (pl: {nyimbo})
+
+song
+winda <v>
+
+hunt
+wingi <n>
+
+abundance
+wino <n> [sg=pl]
+
+ink
+wivu <adj>
+
+jealous
+wizi <n>
+
+theft, robbery
+wote <pron, agr: 3,11>
+
+all, whole
+wote <pron>
+
+all of them
+ya <prt, poss, agr: 4,6,9>
+
+of
+yadi <n> [sg=pl]
+
+yard (measure)
+yai <n> (pl: {mayai})
+
+egg
+yake <pron, poss, agr: 4,6,9>
+
+his, her, hers, its
+yako <pron, poss, agr: 4,6,9>
+
+your (sg.), yours (sg.)
+yako <cop, loc unspec, agr: 6>
+
+are (in an unspecified place)
+yale <pron, dem nprox, agr: 6>
+
+those, yonder, those over there (distant from both the speaker and the hearer)
+yamo <cop, loc in, agr: 6>
+
+are (within, in there)
+yana <v, infl, agr: 6>
+
+it has
+   See also: {wa na}
+
+yangu <pron, poss, agr: 4,6,9>
+
+my, mine
+yao <pron, poss, agr: 4,6,9>
+
+their
+yapo <cop, loc spec, agr: 6>
+
+are (in a specified place)
+yenu <pron, poss, agr: 4,6,9>
+
+your (pl.), yours (pl.)
+yenye <cop, poss, agr: 4,6,9>
+
+having
+; with
+yetu <pron, poss, agr: 4,6,9>
+
+our, ours
+yeye <pron, pers>
+1.
+he
+2.
+she
+3.
+it
+yote <pron, agr: 4,6,9>
+
+all, whole
+yuko <cop, loc unspec>
+
+he is, she is, it is (in an unspecified place)
+yule <pron, dem nprox, agr: 1>
+
+that, yonder, the one over there (distant from both the speaker and the hearer)
+yumo <cop, loc in>
+
+he is, she is, it is (within, in there)
+yupo <cop, loc spec>
+
+he is, she is, it is (in a specified place)
+za <prt, poss, agr: 10>
+
+of
+zaa <v>
+
+bear, give birth
+zabibu <n> [sg=pl]
+
+grape, raisin
+zahanati <n> [sg=pl]
+
+dispensary
+zaidi <adv>
+
+more
+zake <pron, poss, agr: 10>
+
+his, her, hers, its
+zako <pron, poss, agr: 10>
+
+your (sg.), yours (sg.)
+zaliwa <v>
+
+be born
+zamani <adv>
+
+in the past
+zambarau <adj>
+
+purple
+zangu <pron, poss, agr: 10>
+
+my, mine
+zao <n> (pl: {mazao})
+
+product, harvest, produce
+zao <pron, poss, agr: 10>
+
+their
+zawadi <n> [sg=pl]
+
+present
+zee <adj>
+
+old
+zenu <pron, poss, agr: 10>
+
+your (pl.), yours (pl.)
+zenye <cop, poss, agr: 10>
+
+having
+; with
+zetu <pron, poss, agr: 10>
+
+our, ours
+ziba <v>
+
+stop up
+zibua <v>
+
+unstop
+zidi <v>
+
+increase
+zidisha <v, caus>
+
+multiply
+ziko <cop, loc unspec, agr: 10>
+
+are (in an unspecified place)
+zile <pron, dem nprox, agr: 10>
+
+those, yonder, those over there (distant from both the speaker and the hearer)
+zima <v>
+
+put out
+zima <adj>
+
+entire, overall, whole
+zimia <v>
+
+faint
+zimo <cop, loc in, agr: 10>
+
+are (within, in there)
+zina <v, infl, agr: 10>
+
+it has
+   See also: {wa na}
+
+zipo <cop, loc spec, agr: 10>
+
+are (in a specified place)
+zito <adj>
+
+heavy
+ziwa <n> (pl: {maziwa})
+1.
+lake
+2.
+breast
+zoeza <v, caus>
+
+accustom
+zoezi <n> (pl: {mazoezi})
+
+exercise
+zote <pron, agr: 10>
+
+all, whole
+zuia <v>
+
+hinder
+zuilia <v>
+
+withhold from
+zulia <n> (pl: {mazulia})
+
+rug, carpet
+zunguka <v>
+
+go round
+zungumza <v>
+
+discuss
+zungumzia <v>
+
+converse in
+zungumzo <n> (pl: {mazungumzo})
+
+discussion, discourse
+zuri <adj>
+1.
+beautiful, fine, handsome, lovely
+2.
+good, nice, okay
+unknown
+ abcdefghijklmnoprstuvwyz

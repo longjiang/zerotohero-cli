@@ -1,0 +1,6037 @@
+Khasi-English FreeDict Dictionary ver. 0.2.2
+A, a <n, m>
+
+the first letter (Capital A, and small letter a)
+	    of the Khasi Alphabet. It is a sign of a Vowel
+	    (Sawa-hi). Its sound is very open, more than the a
+	    of the English exclamation Ah!
+a! <int>
+A!, Ah!, Oh!
+indicating joy, sorrow, surprise, warning
+         Note: In English the interjections A, Ah are written
+	    with a capital letter, but it does not seem justified
+	    to follow this rule also in Khasi.
+'a <n, f>
+kapok tree, silk tree, simul tree, vegetable silk tree, Bombax malabarica
+   See also: {kya}
+
+         Note: The Apostrophe (') is often used in Khasi to indicate
+	  that some letter or letters have been omitted, specially in compound words:
+	  ar'ti-ar'jat, 'tiewkulab, for arkti-arkjat, syntiew-kulab.
+ab! /long a/ <int>
+
+imitative for the cry of the crow
+abi, abike, abiki <n, m>
+Alphabet
+abir <n, f>
+
+abra, abri <adv>
+confusedly, in confusion
+ak!, akku, aku <int>
+Ah!
+What a bad smell!
+akher-ka-sngi <n, f>
+doomsday, Judgement Day, the last day
+a-khia <n, m>
+earnest man
+Akjakor, better: Ekjakor, or: Ïakjakor <n, m>
+the ogre, the devil, a big snake, an awful dragon
+kum u Akjakor thrang snam <v>
+as the Akjakor thristing for blood
+lah jan dep <adj>
+almost finished (Michael Bunk <michael.bunk@gmail.com>  26 Mar 2005)
+
+long <v>
+1. is
+   Synonym: {don}
+
+   Synonym: {dei}
+
+2. grow
+3. be ready
+      "U khiew u la long ban pyndonkam."  - The pot is ready for use.
+don <v>
+1. is, there is, there are
+   See also: {long}
+
+   See also: {dei}
+
+2. have
+3. be present
+4. consist
+5. lay
+dei <v>
+1. is
+      "U dei u ksew."
+   Synonym: {don}
+
+   Synonym: {long}
+
+2. have, ought, should
+hangne <adv>
+here
+shane <adv>
+here
+halor <prep>
+on, over
+   See also: {hajrong ha}
+
+hajrong ha <prep>
+on
+   Synonym: {halor}
+
+khynnah <n, m>
+boy, lad
+nga <pron>
+I
+   Synonym: {ma nga}
+
+ma nga <pron>
+I
+   See also: {nga}
+
+u <pron, m>
+he
+   See also: {ma u}
+
+   See also: {ma i}
+
+ka <pron, f>
+1. she
+   Synonym: {ma ka}
+
+   Synonym: {ma i}
+
+2. it
+shylliah <n, m>
+mat
+khulom <n, m>
+pen
+tang <adv>
+only
+hangto <adv>
+there
+   See also: {hangtai}
+
+hangtai <adv>
+there
+   See also: {shato}
+
+shato <adv>
+there
+   See also: {shatai}
+
+shatai <adv>
+there
+   See also: {hangto}
+
+masi <n, f>
+cow
+masi <n, m>
+bull
+ha <prep>
+1. in, at
+   See also: {hapoh}
+
+2. to
+   See also: {sha}
+
+3. on
+      "U briew u iaid ha surok."
+hapoh <prep>
+in, inside, under, into
+      "Kane ka waitlam; buhrieh ia ka hapoh ka soptilor jong phi."
+   See also: {ha}
+
+khynnah <n, f>
+girl, lass
+ngi <pron>
+we
+   See also: {ma ngi}
+
+ma ngi <pron>
+we
+   See also: {ngi}
+
+ki <pron>
+they
+   See also: {ma ki}
+
+ma ki <pron, pl>
+they
+   See also: {ki}
+
+phi <pron>
+you
+   See also: {ma phi}
+
+ma phi <pron>
+you
+   Synonym: {phi}
+
+sem <n, f>
+shed
+      "U don hapoh sem."
+tupia <n, f>
+cap
+jynthiah <n, f>
+bed
+ksew <n, m>
+ [bio] dog
+latom <n, f>
+top
+         Note: a toy that turns standing at its top and falls when powered out
+syiar <n, f>
+hen
+sha <prep>
+to
+   See also: {ha}
+
+jong <prep>
+of
+   See also: {ia}
+
+ïa <prep>
+1. of, for
+   See also: {jong}
+
+2.
+precedes the object following a transitive verb
+shapoh <prep>
+inside, into
+   See also: {hapoh}
+
+jong nga <pron>
+my, mine
+synduk <n, f>
+box, chest
+kot <n, f>
+1. book
+   See also: {kitab}
+
+2. paper
+kitab <n, f>
+book
+   See also: {kot}
+
+jong ngi <pron>
+our
+hangno <pron>
+1. where
+   Synonym: {shano}
+
+   Synonym: {haei}
+
+2. somewhere
+shano <pron>
+where
+   Synonym: {hangno}
+
+   Synonym: {haei}
+
+haei <pron>
+where
+   See also: {hangno}
+
+   See also: {shano}
+
+sha jrong <prep>
+above
+na <prep>
+from, of
+jong phi <pron>
+your
+la ïing <n, f>
+home
+ der: {ïing}
+
+miej <n, f>
+table
+ïingrit <n, f>
+hut
+ der: {ïing}
+
+ der: {rit}
+
+ïing <n, f>
+house, cottage
+      "Ym lah ban ïohi ei ei ïa ka ïing jong u nongrep."  - Nothing could be seen of the farmer's cottage.
+kumta <adv>
+so
+   Synonym: {katta-katta}
+
+katta katta <adv>
+so
+   See also: {kumta}
+
+baroh <adj>
+all, whole
+des <n, f>
+desk
+skul <n, f>
+school
+pla <n, f>
+bag, pocket
+em <adv>
+no
+kylla <v>
+translate
+Phareng <n>
+1. English
+2. foreign, foreigner
+         Note: Seems to come from eng. "foreign"
+briew <n, m>
+man, person
+bnai <n, m>
+1. moon
+2. month
+         Note: bakhein
+pyrthei <n, f>
+world, earth
+tdong <n, m>
+1. tail
+2. bottom
+      "Ha tdong u khiew um ka lah ban iohi ia ka um khyndiat."
+uwei <pron>
+one
+   See also: {kawei}
+
+kawei <pron, f>
+one
+   See also: {uwei}
+
+jainjot <n, f>
+rag
+kti <n, f>
+hand
+shabi <n, m>
+key
+sim <n, f>
+bird
+ar <adj>
+two
+   Synonym: {artylli}
+
+artylli <adj>
+
+   Synonym: {ar}
+
+ne <conj>
+or
+khiew <n, m>
+1. pot
+2. pan
+kot kudi <n, f>
+kite
+thapniang <n, f>
+wing
+shkor <n, f>
+ear
+bol <n, f>
+ball
+lai <adj>
+three
+mareh <v>
+run
+      "Ki la mareh stet katba lah."  - They ran as fast as they could.
+pule <v>
+read, go over, go through
+      "Phi la pule ïa kine ki shithi?"  - Have you gone through these letters?
+her <v>
+fly
+thoh <v>
+write
+ieit <v>
+love
+ïaid <v>
+walk, go
+leh <v>
+do
+shong <v>
+1. sit, sit down, settle
+2. live, stay, put up
+ong <v>
+1. say
+2. ask
+   See also: {kylli}
+
+   See also: {pan}
+
+isih <v>
+hate
+   See also: {ijli}
+
+ïakren <v>
+talk
+rwai <v>
+sing
+kren <v>
+speak, talk
+   See also: {iakren}
+
+leit <vi>
+go
+thiah <v>
+1. sleep
+   See also: {jynthiah}
+
+2. lay
+wan <v>
+come
+suin bneng <n, f>
+sky
+surok <n, f>
+road
+shapang <prep>
+about, of
+jaka <n, f>
+1. place, locality
+2. seat, place
+jingkylli <n, f>
+question
+Noun <n, f>
+noun
+kyrteng <n, f>
+name
+      "Ka kyrteng babha ka kham lah ban ïa ka spah."  - A good name is better than riches.
+umphniang <n, f>
+oil
+   See also: {umphniangbam}
+
+blang <n, f>
+goat
+kmie <n, f>
+mother
+um <n, f>
+water
+mluh <n, f>
+salt
+skei <n, f>
+hare
+kpa <n, m>
+father
+   See also: {papa}
+
+papa <n>
+father
+      "Nga leit sha i papa."
+   See also: {kpa}
+
+khlur <n, m>
+star
+      "U bnai bad ki khlur kin wan ha ka jaka jong nga."
+myrsiang <n, m>
+fox
+jingkmen <n, f>
+joy
+dohkha <n, f>
+fish
+ruh <n, f>
+cage
+sngi <n, f>
+1. sun
+2. day
+dieng <n, m>
+1. tree
+2. stick
+dngiem <n, f>
+bear
+dud <n, f>
+milk
+khun <n, m>
+son
+khla <n, m>
+tiger
+suri <n, m>
+wolf
+khunlangbrot <n, m>
+lamb
+lyer <n, f>
+1. air
+2. wind
+shñiuh <n, m>
+hair, fur
+skain <n, m>
+fly
+nib <n, m>
+nib
+Verb <n, f>
+verb
+ktien <n, f>
+1.  [gram] word
+2. voice
+      "Ka ktien jong u ka jam kat u pyrthat."  - His voice is as loud as thunder.
+   See also: {jingsawa}
+
+   See also: {sur ktien}
+
+3. mouth
+4. language
+      "Ka India ka long ka ri badon shibun ki jait ktien."  - India is a land of many languages.
+ei ei <n>
+1. something
+      "U don ei ei ban leh."  - He has got something to do.
+2. anymore
+3. at all
+kaba <pron, f>
+which
+ïohi <v>
+see
+ringmynsiem <v>
+breathe
+ri <v>
+keep, preserve
+      "Ri bha ia la ka burom!"  - Preserve carefully your reputation!
+   See also: {sumar}
+
+   See also: {da}
+
+sumar <v>
+1. keep
+   Synonym: {ri}
+
+   Synonym: {da}
+
+2. nurse, take care of, treat
+      "U rah ïa ki bapang na ki surok bah bad u sumar ïa ki."  - He picks up the ill from the streets and nurses them.
+3. wait upon
+da <v>
+keep, cover
+   See also: {ri}
+
+   See also: {sumar}
+
+ai <v>
+1. give
+2. let
+3. afford
+      "Ngam lah ban ai shibun."  - I cannot afford much.
+dait <v>
+bite
+ai kylliang <v>
+lend
+ïam <v>
+cry, weep
+   See also: {lynniar}
+
+   See also: {pyrta}
+
+lynniar <v>
+1. cry
+   See also: {iam}
+
+   See also: {pyrta}
+
+2. utter
+pyrta <v>
+cry, shout
+   See also: {iam}
+
+   See also: {lynniar}
+
+sngewbha <v>
+1. like, be fond of, be glad
+   See also: {mon}
+
+   See also: {sngewieit}
+
+2. please
+      "Sngewbha ap khyndiat!"  - Wait a bit, please!
+mon <v>
+like
+   See also: {sngewbha}
+
+sdieh <v>
+fry
+bam <v>
+eat
+pyni <v>
+show
+   See also: {kdew}
+
+kdew <v>
+show, point at
+      "U kdew ia ka masi sawbthuh ka baitynnad."  - He points at a nice brown cow.
+   See also: {pyni}
+
+khot <v>
+call
+wallam <v>
+bring, get
+shukor <v>
+cheat
+khynniat <v>
+push
+shim <v>
+1. take
+2. charge
+ïathuh <v>
+tell
+phah <v>
+send
+      "Phah ia kine ki kot kloi katba lah."  - Send these books as soon as possible.
+buh <v>
+1. put, set, keep
+2. station
+      "La lah buh ïa ki nongap ha ka khyrdop."  - The guards could have been stationed at the gate.
+3. place
+      "Nga la buh ïa lade hapoh ka jingsumar u doktor u bastad."  - I placed myself under treatment of a wise doctor.
+lah <v>
+1. can
+   See also: {nang}
+
+2. may
+3. behave
+nang <v>
+1. can, have knowledge of
+   Synonym: {lah}
+
+2. learn
+ot <v>
+1. cut, hack
+   See also: {kum ot}
+
+2. reap
+kum ot <v>
+cut
+   See also: {ot}
+
+wieh <v>
+dip
+Pronoun <n, f>
+pronoun
+ïeng <vi>
+stand
+ïa nga <pron>
+me
+i <pron>
+he, she
+ma i <pron>
+he, she
+ma u <pron>
+he
+   Synonym: {u}
+
+jong u <pron>
+his
+jong i <pron>
+his, her
+ïa ka <pron>
+it
+sia <n, f>
+ink
+mynta <adv>
+now, today, at present
+ban <prep>
+to
+denotes infinitive of the following verb
+      "U nang ban thoh."
+pyrshang <v>
+try, make an attempt
+kotsada <n, f>
+sheet, paper
+      "Kane ka kotsada ka lieh kum ka dud."
+pungkjat <n, f>
+ [bio] leg
+sniang <n, f>
+pig, sow
+bah <n>
+brother
+older brother
+      "Ki masi i bah ki ïeng hangtai."
+kynthei <n, f>
+girl
+shynrang <n, m>
+boy
+mei <n>
+
+person
+      "Ka kot i mei hangtai."
+kjat <n, f>
+1. leg
+2. foot
+hep <n>
+brother, boy
+younger brother
+   See also: {bah}
+
+kong <n, f>
+sister
+ale <v>
+come
+      "Ale hangne!"  - Come here!
+khie <v>
+1. go, get up
+      "Khie sha la ka jaka."  - Go to your place!
+2. wake
+kane <pron, f>
+this
+khuri <n, f>
+cup
+kato <pron>
+that
+   See also: {kane}
+
+la <prep>
+1. his, her, his own, her own
+denotes possession
+      "la ka kti"
+2. by
+denotes dimension of measures
+      "20 la 14 miter"
+3.
+denotes past tense of the following verb
+      "la iap"  - died
+4.
+denotes passive voice of following verb
+      "La shna ia ka kotsada na ja jainjot."  - Paper is made from rags.
+ben <n, f>
+bench
+lum <n, m>
+hill
+lynnong <n, f>
+1. lesson
+2. clump
+      "shilynnong ki siej"  - a clump of bamboos
+phang ïoh ne don <n, f>
+possessive case
+let <n, m>
+pencil
+dem <v>
+1. fall into
+      "U skain u dem ha ka dud."
+2. bend, turn
+tala <n, f>
+lock
+ngap <n, m>
+bee
+ktieh <n, f>
+mud
+isbad <n, m>
+steel
+   See also: {syrti}
+
+syrti <n, m>
+steel
+   See also: {isbad}
+
+dkhiew <n, m>
+ant
+kada <n, f>
+ass
+soh <n, m>
+fruit
+jingïalehkai <n, f>
+1. toy
+2. game, sport
+khiew sia <n, m>
+ink pot
+shyiap <n, m>
+sand
+sisa <n, f>
+lead
+tin <n, f>
+tin
+khunmynriew <n, m>
+doll
+simad <n, f>
+bug
+byrni <n, f>
+sack
+khashor <n, f>
+mule
+synduk isbad <n, f>
+steel box
+uba <pron>
+who, whom
+      "U syiem shisien u la donkam shakri uba u lah ban shaniah."
+   See also: {kiba}
+
+   See also: {uei}
+
+   See also: {mano}
+
+ïa uba <pron>
+whom
+   See also: {ia kiba}
+
+kata <pron>
+that
+   Synonym: {uta}
+
+   Synonym: {utai}
+
+   Synonym: {katai}
+
+kito <pron>
+those
+   See also: {kitai}
+
+   See also: {kitei}
+
+kine <pron>
+these
+kano <pron>
+which
+   See also: {uno}
+
+   See also: {kaba}
+
+jongno <pron>
+whose
+   Synonym: {jong uba}
+
+nga hi <pron>
+myself
+pat <adv>
+1. again
+2. yet
+3. too
+sngi saitjain <n, f>
+Saturday
+sngi u Blei <n, f>
+Sunday
+rok <n, f>
+
+      "Ka simad ka don ha ka rok."
+sahit bneng <n, f>
+sky, firmament
+   See also: {suin bneng}
+
+jingkhein <n, f>
+1.  [gram] number
+2.  [mat] sum, number
+3.  [mat] mathematics
+      "U Mar, u khynnah u banyngkong eh na ka klass jong ngi, u long u banang jingkhein."  - Mar, the first boy of our class, is strong in Mathematics.
+Noun <n, f>
+ [gram] noun
+nonghikai <n, m>
+teacher
+jaid <n, f>
+kind, sort
+shynriahjat <n, f>
+toe
+bynta <n, f>
+1. part, share
+2. news
+   Synonym: {khubor}
+
+3. point
+   Synonym: {mat}
+
+shyieng krung <n, f>
+rib
+khohsiew <n, f>
+knee
+baje deng <n, f>
+watch
+jingpang <n, f>
+1. pain
+2. disease
+shaku <n, f>
+knife
+   See also: {tari}
+
+tari <n, f>
+knife
+   See also: {shaku}
+
+sla <n, f>
+1. leaf
+2. page
+3. surface
+   See also: {sla khyndew}
+
+nongbah <n, f>
+city, capital
+shuwa <prep>
+1. before
+2. older
+      "Nga shuwa ïa i hep lai snem."  - I am older than my sister by three years.
+senten <n, f>
+sentence
+         Note: sometimes "sentens"
+khadar <adj>
+twelve
+saw <adj>
+four
+ngut
+
+put after a number to indicate countability, usually of persons
+      "Ngi don saw ngut ki nonghikai."
+   Synonym: {tylli}
+
+khie leit <vi>
+go
+batai <v>
+1. explain, qualify
+2. modify
+bashit <adj>
+hot
+         Note: less hot than bakhluit
+   See also: {bakhluit}
+
+bakhluit <adj>
+hot
+   See also: {bashit}
+
+balieh <adj>
+1. white
+2. fair
+         Note: skin
+babha <adj>
+good
+barit <adj>
+little, small
+basaw <adj>
+red
+basniew <adj>
+bad, evil
+babun <adj>
+many
+   See also: {shibun}
+
+shibun <adj>
+many, much, bug
+   See also: {babun}
+
+bakhlem akor <adj>
+rude
+bapoh <adj>
+low
+bakhain <adj>
+rough, harsh
+   See also: {bymjhlih}
+
+bakhuid <adj>
+1. pure, clean
+   See also: {basngur}
+
+2. holy
+badap <adj>
+1. full
+2. sufficient
+bakhraw <adj>
+great
+baitynnad <adj>
+fine, pretty, beautiful
+   See also: {bani}
+
+balah <adj>
+1. able
+2. possible
+bahok <adj>
+just, honest
+bapawnam <adj>
+famous
+basngewsih <adj>
+sad, sorry
+baheh <adj>
+big, large
+khyndiat <adj>
+some, few
+bajhieh <adj>
+wet
+baiong <adj>
+wet
+balehrain <adj>
+shy
+hapdeng <prep>
+within, among, between
+      "Ki ong ba kin wan hapdeng shisngi ne arsngi, hynrei kim poi haduh mynta."
+pipa <n, f>
+tub
+katto katne <adv>
+this much, some
+pyndonkam <v>
+use, put to practice
+      "Phi dei ban pyndonkam ïa kaba phi la khreh ha ïing."  - You must put to practice what you learn at home.
+   Synonym: {pynmlien}
+
+utai <pron>
+that
+bun <adj>
+many
+hynrei <conj>
+but
+shadien <prep>
+after
+bapang <adj>
+ill, sickly
+basliang <adj>
+thirsty
+bakhriat <adj>
+cold
+babitar <adj>
+angry
+shait <adj>
+well
+   See also: {bha}
+
+bha <adj>
+1. well, good
+   See also: {shait}
+
+2. quite, very
+bathngan <adj>
+hungry
+basuda <adj>
+empty
+   See also: {bathylli}
+
+bathylli <adj>
+empty
+   See also: {basuda}
+
+bastad <adj>
+wise
+      "U Solomon u long u briew u bastad tam ha ka por jong u."  - Solomon was the wisest man of his time.
+basngewieit <adj>
+fond
+baraikhoh <adj>
+lean
+basngewbha <adj>
+glad, pleasant
+bastem <adj>
+yellow, golden
+basuk <adj>
+happy
+bajyrngam <adj>
+green
+bajemnud <adj>
+gentle, easy
+bamatlah <adj>
+blind
+bajngum <adj>
+blue
+basawbthuh <adj>
+brown
+basbun <adj>
+kind
+badkoh <adj>
+lame
+rnong <n, f>
+brass
+nar <n, m>
+iron
+rupa <n, f>
+silver
+miet <n, f>
+night
+ksiar <n, f>
+gold
+      "Ka ksiar ka kham khia ban ïa ka rupa."  - Gold is heavier than silver.
+juti <n, f, pl>
+boots (pl), shoe
+phlang <n, m>
+grass
+      "Ka jyrngam kum u phlang."
+jain <n, f>
+cloth
+jubab <n, f>
+answer, reply
+kumno <pron>
+how
+      "Kumno phi long?"
+rnga <n, m>
+ [geol] coal
+ngab <n, f>
+cheek
+lieng <n, f>
+ship, boat
+doh <n, f>
+1. flesh
+2. kiss
+      "Ai doh!"  - Give me a kiss!
+khyndew <n, f>
+land, earth
+      "U hati u long u ba heh tam na ki mrad baroh ha ka khyndew."  - The elephant is the largest of all the animals on land.
+   Synonym: {ri}
+
+ri <n, f>
+land, country
+      "Ngan leit noh sha kiwei pat ki ri."
+   See also: {khyndew}
+
+jingmad <n, f>
+taste
+ksing <n, f>
+drum
+jingjam <n, f>
+pace, step
+         Note: a unit of distance?
+bniat <n, f>
+tooth
+snieh doh <n, f>
+skin
+thliew syep <n, f>
+pore
+jingiew <n, f>
+smell
+jingrwai <n, f>
+song
+symbai <n, m>
+seed
+      "Bet ia u symbai ha lyngkha!"
+jingheh <n, f>
+size
+'tiewkulap <n, m>
+ [bot] rose
+   See also: {syntiew}
+
+jingkylli <n, f>
+question
+jingsawa <n, f>
+1. voice
+   See also: {sur ktien}
+
+   See also: {ktien}
+
+2. noise
+khubor <n, f>
+news
+   See also: {bynta}
+
+jingïalang <n, f>
+1. meeting, conference
+      "U kren ha ka jingïalang ki khynnah skul."  - He speaks at the students' conference.
+2. company
+por <n, f>
+1. time
+   See also: {aiom}
+
+2.  [slang] age
+   See also: {rta}
+
+   See also: {pateng}
+
+3. season
+aiom <n, f>
+1. time
+   See also: {por}
+
+2. season
+      "Don saw aiom shisnem."  - There are four seasons in a year.
+balamler <n, m>
+liar
+   See also: {lamler}
+
+lamler <n, m>
+1. liar
+   See also: {balamler}
+
+2. lie
+kali <n, f>
+cart, car, carriage
+jingshong <n, f>
+seat
+   See also: {jaka}
+
+shylluit <n, m>
+bud
+kamra <n, f>
+room, hall
+nongñiah <n, m>
+driver
+hynmen <n, m>
+brother
+   See also: {para}
+
+para <n, m>
+brother
+   See also: {hynmen}
+
+kulai <n, m>
+horse, pony
+jingniad <n, f>
+duster
+lok <n, m>
+friend
+   See also: {paralok}
+
+paralok <n>
+friend
+   Synonym: {lok}
+
+jakhlia <n, f>
+dirt
+lashai <adv>
+tomorrow
+bathait <adj>
+tired, weary
+   See also: {la btai}
+
+la btai <adj>
+tired
+   See also: {bathait}
+
+slem <adj>
+1. late
+   See also: {dier}
+
+2. long
+         Note: temporally
+dier <adj>
+late
+   See also: {slem}
+
+bakhlain <adj>
+1. strong
+   See also: {bashait baeh}
+
+2. rough
+bashait baeh <adj>
+strong
+   See also: {bakhlain}
+
+bathiang <adj>
+sweet
+   See also: {babang}
+
+babang <adj>
+sweet
+   See also: {bathiang}
+
+basngewtynnad <adj>
+nice, pleasant
+baïap <adj>
+dead
+bajlih <adj>
+smooth, sleek
+phyrnai <v>
+smooth, sleek
+bajem <adj>
+easy
+balamwir <adj>
+mad
+basngaid <adj>
+fat
+   See also: {babha met}
+
+babha met <adj>
+fat
+         Note: literally: good body
+   See also: {basngaid}
+
+bathymmai <adj>
+new
+kawei kawei <pron>
+each
+mynhynnin <adv>
+yesterday
+   See also: {hynnin}
+
+hynnin <adv>
+yesterday
+   See also: {mynhynnin}
+
+la dap <adv>
+up
+in the sense of over as in "time is up"
+      "Ka por ka la biang."
+   See also: {la biang}
+
+la biang <adv>
+over
+   Synonym: {la dap}
+
+eh <adv>
+very, so
+      "U da tlot eh."  - He is so weak.
+   See also: {shibun}
+
+shibun <adv>
+very, greatly
+sngewbang <v>
+sweet
+katno <pron>
+1. how much
+2. how long
+      "Phi la don katno ha kane ka school?"  - How long have you been in this school?
+miter <n>
+meter
+shabar <adv>
+outside, out
+wai <v>
+be over, close
+      "Ka skul ka la wai."
+ïing shet ja <n, f>
+kitchen
+sliang <v>
+be thirsty, thirst
+ïalong <v>
+be
+      "U bor bad u Shap ki ïalong shilok."
+shnong <n, f>
+village
+san <adj>
+five
+tylli <n, pl>
+pieces
+ der: {ngut}
+
+shynriahti <n, f>
+finger
+shuki <n, f>
+chair
+saw <v>
+be red
+kumba <prep>
+1. about, nearly
+   See also: {shapang}
+
+2. as
+      "Leh kumba nga leh!"  - Do as I do!
+3. as if
+jam <n, f>
+pace
+   Synonym: {jingjam}
+
+sien <adv>
+times
+   Synonym: {arsien}
+
+   Synonym: {shisien}
+
+shisien <adv>
+once
+arsien <adv>
+twice
+   See also: {sien}
+
+phew <adj>
+
+in numbers: denotes a decimal position of 10
+      "shiphew"
+shiphew <adj>
+ten
+me <pron, sg>
+you
+         Note: rarely used
+ngan <pron>
+I will
+   See also: {nga}
+
+un <pron>
+he will
+   See also: {u}
+
+kan <pron, f>
+she will
+   See also: {ka}
+
+ngin <pron>
+we will
+   See also: {ngi}
+
+kin <pron>
+they will
+   See also: {ki}
+
+sa
+1.
+filling word used in connection with future tense
+      "Ngin sa suk."  - We will be happy.
+2. then
+      "Bam biskit khyndiat bad sa thiah khop."  - Take some biscuits and then have a quiet sleep.
+bakongsan <adj>
+principal, main
+la lah <n, f>
+past tense, past
+bawan <n, f>
+future tense
+mynta <n, f>
+1.  [gram] present tense
+2. present
+slem <v>
+be late
+ha ka por kaba biang <adv>
+in time
+almari <n, f>
+cupboard
+babu <n, m>
+1. master
+   See also: {kynrad}
+
+2. Sir
+bitar <v>
+be angry
+      "Wat bitar ia u."  - Don't be angry with him.
+dang <prep>
+
+denotes present continuous tense of following verb
+      "dang leit"  - going
+ba la <prep>
+
+denotes perfect tense of the following verb
+      "ba la leit"  - gone
+ba- <prep>
+
+makes an adjective out of the following verb
+         Note: rather prefix than preposition
+      "baleit"  - going
+article <n, f>
+article
+klas <n, f>
+class, school class
+ïano ïano <adj>
+any
+ithuh <v>
+know
+iei <pron>
+what
+snem <n, f>
+year
+phra <adj>
+eight
+te <conj>
+and, then
+katai <pron>
+the
+uei <pron>
+what
+doktor <n, m>
+doctor
+ynda <conj>
+when, after, till
+      "Ap ynda nga wan!"  - Wait till I come!
+rangbah <v>
+grow up
+tip <v>
+know
+kham kwah <v>
+prefer
+kham <prep>
+rather
+denotes superlative of following verb
+kwah <v>
+wish, want, be eager
+hikai <v>
+teach, train
+      "Ki la hikai ia u ban kren hok."  - They have taught him to speak the truth.
+   Synonym: {pynmlien}
+
+trei <v>
+work
+minot <v>
+be diligent, work hard
+kohnguh <v>
+obey
+ijli <v>
+hate
+   See also: {isih}
+
+sait <v>
+wash
+   See also: {bta}
+
+bta <v>
+wash
+   See also: {sait}
+
+iew <v>
+smell
+sep <v>
+set
+kynjat <v>
+kick
+sngew <v>
+1. feel
+   See also: {tba}
+
+2. hear
+tba <v>
+feel
+   See also: {sngew}
+
+ïohsngew <v>
+hear
+ïalehkai <v>
+play
+ktha <v>
+chew
+tyrwa <v>
+offer
+blei <n, m>
+god
+pop <n, f>
+sin
+      "U la iap ha ka pop."
+kliar <n, f>
+top
+ki kmie ki kpa <n, pl>
+parents
+jingbam <n, f>
+food
+khaw <n, m>
+rice
+         Note: uncooked
+ryndang kti <n, f>
+wrist
+shyntur <n, f>
+mouth
+shathie <n>
+south
+   See also: {sharum}
+
+shatei <n>
+north
+jingma <n, f>
+harm, danger
+      "La shah ïa ki Phareng ban leit noh khlem jingma ei ei."  - The Europeans (foreigners?) were allowed to go away without any harm.
+   Synonym: {basniew}
+
+basniew <n, f>
+harm
+   See also: {jingma}
+
+ryndang <n, f>
+neck
+mihngi <n, f>
+east
+sepngi <n, f>
+1. west
+2. sunset
+         Note: sep-sngi
+jinjar <n, f>
+trouble
+lymbit <n, f>
+bat
+paro <n, f>
+dove
+   See also: {lyngdkhur}
+
+lyngdkhur <n, f>
+dove
+   See also: {paro}
+
+mrad <n, m>
+animal, beast
+lyngkha <n, f>
+farm
+duriaw <n, f>
+sea
+thylliej <n, f>
+tongue
+kpoh <n, f>
+belly
+dkhot met <n, f>
+limb
+met <n, f>
+body
+tyngam <n, f>
+jaw
+shyieng <n, f>
+1. bone
+2. kernel
+khmat <n, f>
+face
+tmoh <n, f>
+chin
+pneh <n, f>
+lap
+snam <n, f>
+blood
+jingmynsaw <n, f>
+danger
+jingteh <n, f>
+1. tie
+2.  [med] bandage
+jinjar <v>
+be in trouble
+da <prep>
+with, by, through
+      "da ka jingiarap jong u"  - through his help
+baroh shisngi <adv>
+all day
+kynruh <v>
+1. rinse
+2. shake
+ba <conj>
+that
+      "Nga tip ba u blei u ieit ia ngi."  - I know that god loves us.
+nangshit <v>
+getting hot
+      "Ka sngi ka nangshit."
+shikatdei <adv>
+very, greatly, much
+sngewieit <v>
+be fond of
+mih <v>
+1. rise
+2. grow, sprout
+3. set out, leave, go out, come out
+      "Ngi la ïamih tang shu rang u slap."
+sharum <n>
+south
+   Antonym: {shatie}
+
+bainong <n, f>
+wage, reward
+khmut <n, f>
+nose
+khmat <n, f>
+ [bio] eye
+miaw <n, f>
+cat
+ruh <adv>
+too, also
+eiba <pron>
+who
+      "Eiba ong ia phi ba i kpa jong u i pang?"
+kynrad <n, m>
+master
+   See also: {babu}
+
+dang myntan <adv>
+just now
+mih ialeit kai <vi>
+rise for a walk
+map <v>
+pardon, excuse, forgive
+      "La map ia ki pop jong phi."  - Your sins are forgiven.
+kynthah <v>
+sting
+dwai <v>
+pray
+pynlip <v>
+put out
+phong <v>
+1. put on, wear
+2. dress
+      "U khynnah skout u phong da ka sopti poh bad ka patlun lyngkhot."
+kynrup <v>
+1. run at, attack
+2. fall upon
+die <v>
+sell
+iar <v>
+spread
+   See also: {thad}
+
+   See also: {pyiar}
+
+thad <v>
+spread
+   See also: {iar}
+
+   See also: {pyiar}
+
+pyiar <v>
+spread
+   See also: {iar}
+
+   See also: {thad}
+
+ïoh <v>
+1. get, gain, receive, attain, achieve
+2. manage
+      "U la ioh ban pam shibun ka snepdieng."  - He managed to cut off much bark.
+3. score
+shembha <v>
+get on
+   See also: {manbha}
+
+manbha <v>
+get on
+   See also: {shembha}
+
+loit <v>
+take off
+undress oneself
+   See also: {law}
+
+law <v>
+take off
+      "U la law noh bak ia ka shakuriaw na ka masi."  - He took off the bell from the cow.
+   See also: {loit}
+
+thied <v>
+buy
+ring <v>
+pull, drag
+   See also: {kynjut}
+
+   See also: {patan}
+
+   See also: {paring}
+
+kynjut <v>
+pull
+   See also: {ring}
+
+   See also: {patan}
+
+   See also: {paring}
+
+patan <v>
+pull
+   See also: {ring}
+
+   See also: {kynjut}
+
+   See also: {paring}
+
+paring <v>
+pull
+   See also: {ring}
+
+   See also: {kynjut}
+
+   See also: {patan}
+
+dkhoh <n, f>
+owl
+shibun <n>
+1. lot, a great deal
+2. crowd
+nusip <n, f>
+lot
+      "La u duk hynrei u suk bad u sngewhun ia la ka nusip."
+kiei kiei <n, pl>
+things
+baje kti <n, f>
+wrist watch
+shadem <n, f>
+breast, chest
+tama <n, f>
+copper
+maw <n, m>
+stone
+pum pum <n, f>
+dust
+jingkwah <n, f>
+wish
+ksangkti <n, f>
+ [bio] arms
+sopti poh <n, f>
+shirt
+muja lynkhot <n, f>
+sock
+dukan <n, f>
+shop
+nongdie <n, m>
+seller
+iew <n, f>
+market, bazaar
+dor <n, f>
+cost, price, rate
+   See also: {jinglut}
+
+jinglut <n, f>
+cost
+   Synonym: {dor}
+
+tyrsim <n, f>
+nail
+   See also: {prek}
+
+prek <n, m>
+nail
+   See also: {tyrsim}
+
+pohjat <n, f>
+sole
+par <n, f>
+mine, quarry
+sarang <n, f>
+rust
+mawit <n, m>
+brick
+mot <n, m>
+pillar
+   See also: {rishot}
+
+rishot <n, m>
+pillar
+   See also: {mot}
+
+ingjain <n, f>
+tent
+tulop <n, f>
+pay
+ram <n, f>
+debt
+   See also: {jingdapram}
+
+jingdapram <n, f>
+debt
+      "Ka jingdapram ka lah ban kham sniew ban ïa ka jingkyrduh."  - Debt may be worse than want.
+   See also: {ram}
+
+jingmut <n, f>
+mind
+spah <n, f>
+wealth, riches, property
+      "Phim lah ban shakri ïa u blei bad ïa ka spah."  - You cannot serve god and riches.
+   Synonym: {jingdon}
+
+jingdon <n, f>
+wealth, property
+   Synonym: {spah}
+
+jingkhoit jingkhiah <n, f>
+health
+      "Sumar bha ïa la ka jingkoit jingkhiah!"  - Take good care of your health!
+shi
+
+denotes the number one of the following substantive
+         Note: prefix
+jur <n>
+pair
+dih <v>
+drink, take
+sha <n, f>
+tea
+wat ju <adv>
+never
+buh teng <v>
+put off
+kam <n, f>
+1. work, business, matter, act
+2. post
+3.  [law] case
+haduh <prep>
+till
+      "Ngi ap haduh ba un da wan."
+sopti lor <n, f>
+coat, cloak
+duwai <v>
+pray
+   See also: {dwai}
+
+barabor <adv>
+always, ever
+      "U long barabor uba kloi ban ïarap."  - Ever since he was fast to help.
+khie ryngkat
+get up
+jingpule <n, f>
+studies
+mut <v>
+want, have a mind, mean
+      "Phi mut ban pynlehrain ïa nga?"  - Do you mean to put me to shame?
+phai <v>
+turn, spin
+      "U nongthawkhiew u phai ïa ka shaka da la ka kjat."  - The potter spins the wheel with his foot.
+wan phai <v>
+return, come back
+thep <v>
+1. put into, post
+      "Nga wan ban thep shithi."
+2. score
+      "U kapten jong ngi u thep ar kol."  - Our captains scored two goals.
+shijur <n>
+one pair
+siew noh <v>
+ [fin] pay off
+      "U kwah ban siew noh ïa ka ram."
+kyrhai <adv>
+much, plenty
+      "Ki don kyrhai ka bam ka dih."  - They have plenty to eat and drink.
+jingtrei <n, f>
+work, labour
+      "Ka jingtrei ka wallam jingsngewbha."  - Labour brings pleasure.
+   See also: {kam}
+
+jingkhang <n, f>
+door
+sharak <n, f>
+1. lamp, light
+   See also: {jingshai}
+
+2. candle
+khyrdop <n, f>
+gate
+thma <n, f>
+war
+rta <n, f>
+age
+   See also: {por}
+
+   See also: {pateng}
+
+pateng <n, f>
+age
+   See also: {rta}
+
+   See also: {por}
+
+nongshun <n, m>
+enemy, foe
+jingiap <n, f>
+death
+jingkha <n, f>
+birth
+ding <n, f>
+fire
+rud surok <n, f>
+roadside
+kwar <n, m>
+milkman
+kni <n, m>
+uncle
+   See also: {kpa-nah}
+
+kpa-nah <n, m>
+uncle
+   See also: {kni}
+
+khynnah rit <n>
+child
+   Synonym: {khun rit}
+
+khun rit
+child
+jingieit <n, f>
+love
+      "Na ka jingieit, ka jingngeit bad ka jingkyrmen ka jingieit ka long kaba khraw tam."  - Of love, faith and hope, love is the greatest.
+jingisih <n, f>
+hatred
+shymprong <n, m>
+crab
+   See also: {tham}
+
+tham <n, f>
+crab
+   See also: {shymprong}
+
+mattah <n, f>
+snail
+kyndad <n, m>
+mole
+   See also: {thapbasim}
+
+thapbasim <n, m>
+mole
+puit <n, m>
+locust
+slap <n, m>
+rain
+'saisharak <n, m>
+wick
+         Note: from: ksai sharak
+jingbat <n, f>
+handle
+kbeit <n, m>
+ [bio] hawk
+jingshai <n, f>
+light
+      "Ka jingshai bad jingshit ki la wan na ka sngi."
+   See also: {sharak}
+
+wieh <n, m>
+worm
+thliem <n, m>
+leech
+pukni <n, m>
+eagle
+khlieng <n, f>
+hawk
+mynsiem <n, f>
+spirit
+thang <vt>
+light, burn, set fire
+      "Ka thang ïa ka sharak."  - She lights the lamp.
+   Synonym: {sliew}
+
+sliew <v>
+light
+   See also: {thang}
+
+shem <v>
+find, discover
+      "Ia ka America la shem da u Kolombos."
+   See also: {lap}
+
+   See also: {wad}
+
+lap <v>
+1. find
+   See also: {shem}
+
+2. overtake
+      "U ksew u mareh nadien jong u bad u la lap ia u."
+3. catch
+      "ban lap ïa ka rel"  - to catch the train
+pan <v>
+ask
+   See also: {ong}
+
+   See also: {kylli}
+
+kylli <v>
+ask
+   See also: {ong}
+
+   See also: {pan}
+
+iashem <v>
+meet
+   See also: {iakynduh}
+
+ïakynduh <v>
+meet, come into contact
+   Synonym: {ïashem}
+
+i <v>
+look
+   See also: {khmih}
+
+   See also: {peit}
+
+khmih <v>
+look
+   See also: {i}
+
+   See also: {peit}
+
+peit <v>
+look
+      "Peit shane!"  - Look here!
+   See also: {i}
+
+   See also: {khmih}
+
+sdang <v>
+begin
+pynthaba <v>
+light up
+pynshai <v>
+1. light up
+2. explain
+tied <v>
+knock, ring, strike
+      "U tied ïa ka jingkhang."  - He knocks at the door.
+tok tok <v>
+knock
+kjit <v>
+suck, suck up
+buin <v>
+suck
+tuh <v>
+steal
+kit <v>
+carry, bear
+   See also: {rong}
+
+   See also: {rah}
+
+rong <v>
+carry off
+   See also: {kit}
+
+   See also: {rah}
+
+rah <v>
+carry, take, lift, pick up
+      "Rah ki kti!"  - Hands up!
+   See also: {kit}
+
+   See also: {rong}
+
+khang <v>
+1. shut, close
+2. prevent, prohibit
+khylliap <v>
+shut
+plie <v>
+open
+      "Plie ka jingkhang ïit!"  - Open the window!
+   Synonym: {plied}
+
+plied <v>
+open
+      "Ki syntiew ki la plied."  - The flowers opened.
+   Synonym: {plie}
+
+sdien <v>
+hang
+   See also: {wah}
+
+wah <vt>
+hang, hang up
+   Synonym: {sdien}
+
+kular <v>
+promise
+bunsien <adv>
+often, frequently
+suki <v>
+be slow
+bsein <n, m>
+snake
+beh <v>
+1. blow
+      "Ka lyer ka sdang ban beh."
+2. hunt, chase
+3. expel
+sngi kha <n, f>
+birthday
+mama <n>
+uncle
+tong <v>
+draw
+      "Nga tong um na ka pung."  - I draw water from the well.
+pung <n, f>
+1. well
+2. pond, lake, tank, pool
+sliew ding <v>
+make fire
+shoh <v>
+beat, strike
+ngat <v>
+catch
+      "La ngat ia ka sati ha u shang."  - The ring has been caught up in the basket.
+kem <v>
+catch, seize
+bymman <n, m>
+Satan
+kum <prep>
+like, as
+haba <prep>
+when, while
+      "Ka lymbit ka i kum ka sim haba ka her."  - The bat looks like a bird when it flies.
+kynih <v>
+crow
+shai <v>
+shine
+pah <v>
+mew, bleat, trumpet, hoot, croak, bray, utter
+kyrhuh <v>
+roar
+sing <n, m>
+lion
+      "U sing u la bam shibun ki mrad khlaw."  - The lion has devoured many wild animals.
+jngi <v>
+swim
+langbrot <n, f>
+sheep
+hati <n, m>
+ [bio] elephant
+tuta <n, f>
+parrot
+shrieh <n, m>
+monkey
+jingthung <n, m>
+plant
+jakoid <n, f>
+frog
+kynkaw <v>
+chatter
+pyrsad <v>
+hiss
+ud <v>
+coo
+par <v>
+creep
+puh <v>
+1. bite
+      "U bsein u puh ia u syiar."
+2. pick
+tyngshain <v>
+shine, flash
+hap <v>
+1. fall
+      "U slap u hap."
+2. drop
+phutoi <n, f>
+half-sweater, vest
+jingiaseng <n, f>
+meeting
+khem dud <v>
+milk
+jingbuhkot <n, f>
+shelf
+baje heh <n, f>
+clock
+step <n, f>
+morning
+liang <n, f>
+side
+rud <n, f>
+side
+lit <v>
+sharpen
+pynnep <v>
+sharpen
+phuh <v>
+1. open
+      "U shylluid syntiew u la phuh."  - The flower buds have opened.
+2.  [bot] bloom
+      "U 'tiewkulab u phuh hynne ka step."  - A rose bloomed this morning.
+ang <v>
+open
+      "Ang shyntur!"
+pynwai <v>
+close
+kylleng-la-kylleng <adv>
+on all sides, widespread
+nongbehmrad <n, m>
+hunter
+briew <n, f>
+woman
+khnai <n, f>
+mouse
+han <n, f>
+goose, duck
+khyllung <n>
+baby
+mem <n, f>
+lady, madam
+khana <n, f>
+story
+jingim <n, f>
+life
+      "La thoh ia ka kyrteng jong phi ha kitab ka jingim."  - Your name is written in the book of life.
+khun masi <n, f>
+calf
+ruti <n, m>
+loaf, bread
+masi dap <n, m>
+ox
+         Note: masi dab?
+song <n, f>
+bunch, bundle
+ïit <n, f>
+1. glass
+2. mirror
+khun syiem <n, f>
+princess
+siat <v>
+shoot
+ïalam <v>
+lead, take
+      "Ngan ïalam ia phi bad nga."  - I will take you with me.
+patan <v>
+drag
+shong kulai <v>
+ride
+pynphai <v>
+1. turn
+2. give back
+ïarap <v>
+1. help, assist
+   Synonym: {bynrap}
+
+2. take side
+   Synonym: {ïashah}
+
+pynjah <v>
+lose
+pynduh <v>
+lose
+tam <v>
+pick
+shaniah <v>
+trust
+rynsied <v>
+jump, leap, hop
+sied <v>
+jump, spring
+kiew <v>
+climb, rise
+      "Haba ki maw ki hap shapoh, ka um la sdang ban kiew ha u khiew um."
+jliah <v>
+lick
+iadat <v>
+fight
+iashoh <v>
+fight
+ïaleh <v>
+fight
+ïohnong <v>
+gain, profit
+myntoi <v>
+gain, make profit
+man <adj>
+every
+nongleh <n, f>
+ [gram] subject
+ba iathuh
+predicate
+kynup <v>
+hum
+      "U ngap u kynup."
+sier <n, f>
+deer
+kha <v>
+1. give birth, lay
+         Note: lay in the sense of "lay eggs"
+      "La kha ia u Sayed ha Delhi ha ka 17th October 1817."  - Sayed was born at Delhi on the 17th October 1817.
+2. bear
+pylleng <n, f>
+egg
+madan <n, f>
+1. ground, field
+2. surface
+nalor <prep>
+1. over
+      "U runsied nalor kynroh."
+2. besides
+      "Te ka sngi ka la dei ban pynmih ïa ka jingshit nalor ka jingshai."  - Then the sun must be giving out heat besides light.
+kynroh <n, f>
+wall
+shalor <prep>
+into
+      "Ka dngiem ka kiew shalor u dieng."
+jingmlien <n, f>
+habit
+jingput <n, f>
+1. whistle
+2. flute
+bam phlang <v>
+graze
+ha shuwa <prep>
+before
+   See also: {shuwa}
+
+kumjuh <adv>
+the same, all the same
+kper <n, f>
+garden
+wiar <v>
+bark
+khunblang <n>
+lamb
+beh mrad <v>
+hunt
+khlaw <n, f>
+jungle, forest
+shipai <n, m>
+ [mil] soldier
+kynta <n, f>
+hour
+baje <n, f>
+1. clock
+2. bell
+kti kynta <n, m>
+hour-hand
+pointer of a clock
+taiew <n, f>
+week
+rukom rim <n, f>
+custom
+riti <n, f>
+custom
+dustur <n, f>
+custom
+minit <n, f>
+minute
+jinglong <n, f>
+nature
+jingpyrshang <n, f>
+attempt
+shiteng <adj>
+half
+lynti <n, f>
+way, lane, path
+lad <n, f>
+1. way, means
+2. chance
+liew nur <n, f>
+drain
+kharai <n, f>
+ditch
+lawbniap <n, f>
+ [bot] bush
+jingker <n, f>
+fence
+rud wah <n, f>
+bank
+khajna <n, f>
+tax
+baiwai <n, f>
+rent, hire
+kuna <n, f>
+fine
+badum <adj>
+dark
+babeit <adj>
+1. dull
+2. straight
+baluin <adj>
+dull
+banep <adj>
+sharp
+basted <adj>
+fast
+basuki <adj>
+slow
+banyngkong <adj>
+1. first
+2. eldest
+      "U banyngkong na ki khun jong u lai ngut u ïoh baibam."  - The eldest of his three sons gets a scholarship.
+baar <adj>
+second
+balai <adj>
+third
+ba la lah <adj>
+past
+shipawa
+quarter
+peisa <n, f>
+ [fin] paise
+100 paise = 1 rupee
+hynniew
+seven
+dum <v>
+be dark
+janmiet <n, f>
+evening, P.M.
+siew <v>
+1. pay
+2. afford
+rieh <v>
+hide
+tih <v>
+dig
+hajan <prep>
+near, by
+thung <v>
+1. post
+2. plant
+3. grow
+siah <v>
+pare
+kawei pat <pron>
+another
+pyrkhat <v>
+mind, think, consider, ponder
+      "Ngi la pyrkhat ia ka la slem jlang."  - We had pondered over it for a long time.
+pynleit jingmut <v>
+1. mind
+2. take interest in, pay attention
+jingïaidkai <n, f>
+stroll, walk
+dawai <n, f>
+medicine
+pyntip <v>
+inform
+jingkloi <n, f>
+haste
+jingkyrkieh <n, f>
+haste
+khoh <v>
+peel
+ïapli <v>
+cash, change
+      "Ïapli ïa kane ka lut!"  - Cash this note!
+ïapein <v>
+cash, change
+   Synonym: {ïapli}
+
+shahshkor <v>
+listen, give heed to
+shah <v>
+1. allow, let, give permission
+   Synonym: {aibor}
+
+2. last
+mai <v>
+chide, scold
+sneng <v>
+chide
+dumok <v>
+chide, scold
+pynkynriah <v>
+move, shift
+pynhap <v>
+drop, drop down
+shithi <n, f>
+letter
+kheit <v>
+pluck
+sohniamtra <n, m>
+orange
+         Note: mandarin orange
+ap <v>
+1. wait
+2. look after, guard
+      "U khynnah u dang ap ïa ki masi."  - The boy is looking after the cattle.
+lut <n, f>
+note, banknote
+Ïeng beit thik!
+Stand quite still!
+khop <adv>
+still
+      "Shong khop!"  - Sit still!
+beit <adv>
+1. straight
+2. correctly
+noh <adv>
+1. away
+      "leit noh"  - go away
+2. down
+      "ot noh"  - cut down
+sniang <n, m>
+boar
+syiem <n, m>
+king, chief
+syiem <n, f>
+queen
+khun <n, f>
+daughter
+para <n, f>
+sister
+hynmen <n, f>
+sister
+pyrsa <n, m>
+nephew
+pyrsa <n, f>
+niece
+pasan <n, m>
+uncle
+kmienah <n, f>
+aunt
+   See also: {nia}
+
+   See also: {niakha}
+
+nia <n, f>
+aunt
+niakha <n, f>
+aunt
+kparad <n, m>
+grandfather
+kmierad <n, f>
+grandmother
+kthaw-kurim <n, m>
+father-in-law
+kiaw-kurim <n, f>
+mother-in-law
+kynum <n, m>
+brother-in-law
+mynkew <n, f>
+sister-in-law
+ksiew <n, m>
+grandson
+ksiew <n, f>
+granddaughter
+ksew <n, f>
+bitch
+kynrad <n, f>
+mistress
+   See also: {nonghikai}
+
+nonghikai <n, f>
+mistress, madam
+   See also: {kynrad}
+
+tnga <n, m>
+husband
+tnga <n, f>
+wife
+rangsotti <n, m>
+bachelor
+theisotti <n, f>
+maid
+kulai <n, f>
+mare
+han <n, m>
+drake
+'riewdonburom <n, m>
+gentleman
+riedonburom <n, f>
+lady
+sahep <n, m>
+Sir
+   See also: {babu}
+
+bakhraw batri <n, m>
+lord
+bakhraw bakri <n, f>
+lady
+bthong <n, m>
+ [bio] stag
+bthong <n, f>
+ [bio] hind
+myllung <n, m>
+poet
+myllung <n, f>
+poetess
+nongïohpateng <n, m>
+heir
+nongïohpateng <n, f>
+heiress
+bakhot sngewbha <n, m>
+host
+bakhot sngewbha <n, f>
+hostess
+sing <n, f>
+lioness
+bat <v>
+keep, hold
+         Note: juban == jubab ?
+      "U la bat la ka juban."  - He kept his word.
+tyngkai <v>
+keep
+na ka bynta ialade
+for yourself
+yn
+would
+khun syiar <n>
+chicken
+riespah shibun eh
+quite rich
+jain itynnad <n>
+fine cloth
+briew <n, pl>
+people, persons
+paidbah <n, pl>
+people
+peit lyngngoh <v>
+stare
+ïaid lait <v>
+go by
+basarong <adj>
+proud
+pynkih <v>
+toss
+kyrngah <v>
+toss
+duh <v>
+1. lose
+2. miss
+khala khala <adv>
+1. soon
+2. presently
+3. suddenly, very quickly
+biang <adv>
+again
+aiu <pron>
+what
+jngai <adv>
+a long way, far
+nangne <adv>
+from here
+katno ngut <pron>
+how many
+khun <n, pl>
+children
+      "Ki khun ki dei ban kohnguh bad burom ia la ki kmie ki kpa."  - Children should obey and respect their parents.
+hynmen shynrang <n>
+brother
+Sohra <n>
+Cherrapunjee, Cherra
+city 60 km south of Shillong
+hooid
+yes
+bad sngi bad miet <adv>
+day and night
+shym
+
+grammatical particle to express negative past tense
+      "Em, um shym wan hangne."  - No, he did not come here.
+uno <pron>
+which
+      "Uno u khun jong phi?"  - Which is your child?
+Jowai <n>
+
+city 40 km east of Shillong, capital of Jaintia hills
+smat <v>
+be busy, be active, be smart
+      "U trei smat."
+diengïap <n, f>
+firewood, fuel
+wah <n, f>
+river
+lbong <n, f>
+thigh
+jingkit <n, f>
+load
+kynhun <n, f>
+band, pack, flock, gang
+sohpieng <n, m>
+1. mango
+2. kernel
+rong <n, f>
+hue, colour, paint
+bajrong <adj>
+1. tall, high
+2. long
+      "U kulai u don u tdong shniuh uba jrong."  - The horse has a long hairy tail.
+bajylliew <adj>
+deep
+bajew <adj>
+sour
+bakhia <adj>
+heavy
+bajur <adj>
+heavy
+baih <adj>
+ripe
+baduna <adj>
+1. less
+2. weak
+biang <adj>
+enough
+dei <adj>
+enough
+bashisha <adj>
+1. true
+2. sure
+khawpud <n, m>
+coward
+nongwei <n, m>
+stranger
+mynder <n, m>
+foreigner
+sum <n, m>
+spear
+waitlam <n, f>
+sword
+eitmasi <n, f>
+cow dung
+nongthoh <n, m>
+writer, author
+nongrwai <n, m>
+singer
+suk <v>
+be happy
+bymdei <adj>
+wrong
+badonakor <adj>
+polite
+      "U long uba donakor ïa baroh bad um ju kren lamler."  - He is polite to everyone and never lies.
+basngewnguh <adj>
+thankful
+badon <adj>
+present
+bapep <adj>
+absent
+ymdon <adj>
+absent
+badei <adj>
+right, due
+      "Ka jubab jong phi ka dei."
+bymman <adj>
+evil, wicked
+basting <adj>
+light
+sohshnong <n, m>
+outsider
+alhia <v>
+be idle
+pyrkhing <v>
+be strict
+kloi <v>
+1. be fast
+2. be ready, be prepared
+bakla <adj>
+wrong, mistaken
+      "Ka jingkhein jong u ka bakla."  - His sum is wrong.
+Ka beit.
+It is correct., It is alright.
+Ka la dei.
+It is correct., It is alright.
+duna <v>
+1. be less
+      "Ka jingpang ka la nang duna."  - The pain is already less.
+2. lack, fall short of
+      "Ngim shym ïaduna ei ei ruh ha ka jingsngewthuh."  - We did not lack anything in understanding.
+   Synonym: {duh lehnoh ei}
+
+lait <v>
+1. be wrong
+      "Kane ka jingkhein ka lait."
+2. get away
+      "Ngan iarap ia phi ban lait."  -  I will help you to get away.
+at <v>
+swell
+nonghikai rangbah <n, f>
+headmistress
+'riewshlur <n, m>
+hero
+from "briew shlur"
+nongrep <n, m>
+farmer, cultivator
+nongri jingri <n, m>
+farmer
+kem pang <v>
+fall ill
+phah khot <v>
+send for
+      "Un jin da la wan lada phi la phah khot ïa u."  - He would have come, if you had sent for him.
+bajan ïap <adj>
+dying
+btep <v>
+bury
+tep <v>
+bury
+'persoh <n, f>
+orchard
+ha trai
+at the foot, at the bottom
+lyeit <n>
+ [bio] bottom
+         Note: body part
+tih ban wad <v>
+dig for
+hadien <prep>
+after, behind
+tih lut <v>
+dig up
+baroh sawdong <adj>
+round
+manla <adj>
+every
+jingkheit soh appil <n, pl>
+crop of apple
+babha briew <adj>
+beautiful, handsome
+baphikir <adj>
+careful
+babniah <adj>
+careful
+baiaw <adj>
+bold
+bashynrang <adj>
+bold
+barem <adj>
+dear, expensive
+baieit <adj>
+dear
+batad <adj>
+cheap
+bajem dor <adj>
+cheap
+barkhiang <adj>
+dry
+bashrah <adj>
+dry
+batyrkhong <adj>
+dry
+bathliew <adj>
+hollow
+bapyllun <adj>
+round
+barunar <adj>
+naughty
+bakhim <adj>
+narrow
+bajyndong <adj>
+shallow
+bashait <adj>
+1. stoat
+2. all right
+bapalwan <adj>
+stoat
+bathikna <adj>
+1. sure, certain
+2. particular
+basngewskhem <adj>
+sure
+batieng bieit <adj>
+timid
+batieng pud <adj>
+timid
+bymkhoit bymkhiah <adj>
+unhealthy
+balamler <adj>
+false
+bymshisha <adj>
+false, untrue
+babieit <adj>
+foolish, silly
+baanna <adj>
+foolish
+bamutlop <adj>
+stupid
+bakuman <adj>
+stupid
+baphyrnai <adj>
+bright
+bakthang <adj>
+bitter
+bakhapngiah <adj>
+tight
+baminot <adj>
+diligent, industrious
+bakylluid <adj>
+loose
+      "Kato ka sopti poh ka kylluid eh ia phi."  - This shirt is too loose for you.
+basumor <adj>
+loose
+baiar <adj>
+wide
+balui-lui <adj>
+gentle
+baskhem bha <adj>
+secure
+mat <n, f>
+1. joint
+         Note: ?
+2. point
+         Note: ?
+   Synonym: {bynta}
+
+jinglehrain <n, f>
+shame
+jabieng <n, f>
+brain
+tymbuit <n, f>
+elbow
+khynnah skul <n>
+pupil, student
+shalangmat <n, f>
+forehead
+jingkiew klas <n, f>
+promotion
+nongïalam <n, m>
+guide, leader
+nonglam lynti <n, m>
+guide
+tyrpeng <n, f>
+shoulder
+jingkiew <n, f>
+rise
+jingmih <n, f>
+rise, growth
+sheptieng <v>
+fear
+katba <conj>
+while
+ym
+not
+         Note: Used in the absence of any article or if the article cannot be repeated, as in "un ym = he will not".
+      "Em, ym don eiei."  - No, there is nothing.
+balei <pron>
+why
+im <v>
+1. live
+2. be raw, be uncooked
+3. be unripe, be green
+      "Balei phi bam ia ki sohpieng im?"
+rem <v>
+be high
+      "Ka baiwai ka rem ha kane ka jaka."  - The rent is high in this locality.
+lashai la shisngi <adv>
+in the future
+pyndep <v>
+perform, finish, get through, achieve
+      "Suki ban kular hynrei kloi ban pyndep."  - Be slow to promise but quick to perform.
+   Synonym: {ïoh}
+
+   Synonym: {kot}
+
+badonkam <adj>
+1. useful, of use
+2. important, essential
+pynïoh <v>
+get
+         Note: for someone else
+      "Nga la pynïoh jingtrei ia phi bad u nongrep."  - I have got you a job with the farmer.
+samla <n, m>
+young man
+bamutlop runar <adj>
+stupid
+pang <v>
+1. be ill
+2. be painful
+baishyrkhei <adj>
+sharp
+iakren ia khana <n, f>
+conversation
+babiang <adj>
+sufficient
+baeh <adj>
+1. difficult, hardy
+      "Kata kam long ka baeh."  - That is not difficult.
+2. stiff, harsh
+bashitom <adj>
+difficult
+bakordor <adj>
+precious
+basmat <adj>
+smart
+bashalak <adj>
+smart
+bakhoit bakhiah <adj>
+healthy
+riewkhain <n, m>
+dwarf
+'riewraid <n, m>
+dwarf
+bajuh <adj>
+tame
+lyoh <n, m>
+cloud
+khublei <v>
+thank
+ba ïoh baibam <n, m>
+scholar
+nongpule wad jingtip <n, m>
+scholar
+mail <n, f>
+mile
+      "Khyndiat mail na Amsterdam la don kawei ka shnong ka barit ba la khot Saardam."  - Some miles from Amsterdam a small village called Saardam is located.
+jingwan jngoh <n, f>
+visit
+babunsien <adj>
+frequent
+tdem <n, f>
+smoke
+sah <v>
+1. put up, stay
+2. leave
+      "U sah sa ka kor thew jingthew."  - He left the weighing machine.
+bai skul <n, f>
+school fee
+jingiajam <n, f>
+noise
+ior <n, f>
+snow
+      "Phin sa lieh kat ka ior."  - You will be white as snow.
+dpei /dpɛːy/ <n, m>
+ash
+babit <adj>
+all right
+bajngai <adj>
+far
+thah <n, m>
+ice
+bajam <adj>
+loud, noisy
+khublei <interj>
+1. good morning
+2. welcome
+3. thank you!
+4. good bye
+nongaidawai <n, m>
+physician
+hostel <n, f>
+hostel
+kilometre <n>
+kilometre
+jingsawa ha ki lyoh <n, f>
+thunder
+baïaineh <adj>
+faithful
+bakdor <adj>
+crooked
+bamadan <adj>
+flat
+bamaw <adj>
+stony
+baryntih <adj>
+regular
+batipduk tipsuk <adj>
+modest
+basngewrit <adj>
+humble
+bakyntang <adj>
+sacred
+bajanai <adj>
+perfect
+ba la biang nadong shadong <adj>
+perfect, complete
+bakhwan shimet <adj>
+selfish
+bakyrkieh <adj>
+hasty
+bameng <adj>
+haughty
+bajudon <adj>
+common
+ba long 'riewmadan <adj>
+common
+babha nusip <adj>
+fortunate
+kham bha <adj>
+better
+      "Ka kham bha ïa u ban leit noh."  - It is better for him to go away.
+kham shait <v>
+get better
+      "Nga la kham shait."  - I am better.
+babha tam <adj>
+best
+batlop <adj>
+weak
+basian <adj>
+clever
+      "Ngam da long eh uba sian."  - I am not so clever.
+banang <adj>
+clever
+      "Uno u khynnah u banang tam ha klass?"  - Which is the best boy in the class?
+basngewshyrkhei <adj>
+terrible
+baphuhmut <adj>
+cheerful
+bashlur <adj>
+brave
+basuba <adj>
+clean
+bailub <adj>
+handsome
+basamla <adj>
+young
+badangrit <adj>
+young
+badanglud <adj>
+young
+baisih <adj>
+ugly
+baisait met <adj>
+ugly
+bakwah <adj>
+eager, desirous
+ba angnud <adj>
+eager
+balyngkot <adj>
+short
+basngewkhuslai <adj>
+anxious
+baïaishah <adj>
+patient
+bymïaishah <adj>
+impatient
+   Antonym: {baïaishah}
+
+basngewtriem <adj>
+horrible
+bymstad <adj>
+unwise
+bymjudon <adj>
+uncommon
+bakmen <adj>
+joyous
+khylliap <v>
+fold
+baibit <adj>
+tidy, decent
+bakyntiak <adj>
+tidy, neat
+baïarap <adj>
+helpful
+ der: {ïarap}
+
+bajakhlia <adj>
+dirty
+sarong <v>
+be proud
+      "Phim lah ban leh ei ei khlem ma nga, kumta phim dei ban sarong."
+wat
+do not
+      "Wat wan hangne!"  - Don't come here!
+lain <n, m>
+line
+beit <v>
+be straight
+      "Une u lain um beit."  - This line is not straight.
+shuh <adv>
+any longer, more
+      "Ngan sa long basngewsih haba phim don shuh."  - I'll be sad when you are no more.
+shang <n, f>
+basket
+         Note: masc gender?
+suda <v>
+be empty
+janai <v>
+be perfect
+kdor <v>
+be crooked
+satia
+of no use
+      "Ka kam kam long ka basngewbha satia."
+komiti <n, f>
+committee
+'riewmadan <n, m>
+common man
+kynrum kynram <adj>
+untidy
+baïapher <adj>
+different
+ der: {ïapher}
+
+leit phai <v>
+return
+jingpynphai <n, f>
+return
+kylliang <n, f>
+return
+pynmynsaw <v>
+hurt
+kheinlang <v>
+add
+myrngia <n, f>
+game, sport
+shanniah <v>
+lean
+         Note: possibly shaniah (only one n)
+      "shaniah ha ki ksangkti jong u"  - lean onto his arms
+bishni <v>
+envy
+      "Wat bishni ia kiwei pat."  - Don't envy others.
+rung <v>
+enter
+pynrung <v>
+enter
+leit rah ia ka
+take it to
+pynbor <v>
+compel
+      "La pynbor ia nga ban kren iada lade."  - I am compelled to speak in my defence.
+ïohpdiang <v>
+receive
+ong biang <v>
+repeat
+ïai ong <v>
+repeat
+pynroi <v>
+increase
+   See also: {pynbun}
+
+pynbun <v>
+increase
+kiwei pat <pron>
+others
+ïalang <v>
+gather
+lum <v>
+gather
+shakri <v>
+serve
+      "Ym don uba lah ban shakri ar kynrad."  - No man can serve two masters.
+marwei <adv>
+alone
+jait <n, f>
+tribe
+kynja <n, f>
+tribe
+jingjot <n, f>
+ruin, destruction
+ia <v>
+let
+         Note: used with future verb
+      "Ia ngin ialehkai!"  - Let us play!
+ïapher <v>
+differ
+kynriah <v>
+shift
+bymtip <adj>
+unknown
+bakyrkieh eh <adj>
+urgent
+shisyndon <adv>
+at once, immediately, without delay
+Wat sngewsih!
+Don't be sorry!, Don't get offended!
+ïehnoh <v>
+leave, give up
+      "Ïehnoh ïa u marwei!"  - Leave him alone!
+phutbol <n>
+football
+ñiew <v>
+1. treat
+      "Sngewbha ñiew kine ki kam kum kiba kyrkieh eh."  - Please treat these matters as urgent.
+2. count
+ngeit <v>
+believe
+      "Ngeit ha u Trai."
+iadei <v>
+serve
+      "Kan iadei ia ka jingthmu jongngi."
+jingthmu <n, f>
+purpose, motive
+      "Ka kam ka don ka jingthmu hadien jong ka."  - Work has a motive behind it.
+Sngap jar!
+Keep quiet!, Be silent!, Shut up!
+Wat khuslai!
+Don't be anxious!, Don't worry!
+Wat iajam!
+Don't make noise!
+Wat sheptieng!
+Don't be afraid!, Have no fear!
+Phim tharai kumta?
+Don't you think so?
+thapbalieh <n>
+butterfly
+ha lade <adv>
+by me
+      "Ngam don tyngka ha lade."  - I have no money with me.
+hiar <v>
+get down, get off
+      "Um hiar na u kulai."  - He did not get down from the horse.
+tyngeh
+1. utmost
+      "Um shym ialeh tyngeh?"  - Did he not try his utmost?
+2. loudly
+3. severely
+jot <v>
+1. be in ruins, be broken
+      "Kam shym jot shuh."  - It was no longer in ruins.
+2. break, ruin
+klat <n, f>
+glass
+      "Ym don um ha ka klat."  - There is no water in the glass.
+sngewnguh <v>
+thank
+      "Ngam lah ban sngewnguh ia phi katba dei."  - I cannot thank you enough.
+suidniew <v>
+care
+jam <adv>
+loudly
+nan <n, f>
+tank
+khah <n>
+reed
+   See also: {japung}
+
+japung <n, m>
+reed
+   See also: {khah}
+
+harud <prep>
+beside, near
+ha syndah <prep>
+beside, close to
+ryngwiang
+rod
+   See also: {dieng tylli}
+
+dieng tylli <n>
+rod
+   See also: {ryngwiang}
+
+khwai <v>
+catch
+pynngat <v>
+catch
+tduh <n, f>
+end
+bakut <n, f>
+end
+khun <v>
+turn, bend
+dieng sympat <n, m>
+whip
+jingsympat <n, m>
+lash
+bam ei ei <v>
+feed
+ai jingbam <v>
+feed
+badem <adj>
+low
+banoh <adj>
+low
+'saikhwai <n, m>
+line
+kuk <n, m>
+cork
+jingdait <n, f>
+bite
+bapyrkhing <adj>
+stiff
+than <adv>
+too
+      "U kren jam than."  - He talks too loudly.
+suki <adv>
+slowly
+biang biang <adv>
+again
+da shisha <adv>
+indeed, really
+sngewsih <adv>
+sadly
+diaw <adv>
+sadly
+arshah <adv>
+twice
+de <adv>
+also
+sted <adv>
+quickly, swiftly
+kloi-kloi <adv>
+quickly
+shai <adv>
+clearly
+shynnah <adv>
+clearly
+skhem <adv>
+firmly
+triang <adv>
+firmly
+ym ju <adv>
+never
+ju <adv>
+ever
+julong <adv>
+ever
+kyndit kyndit <adv>
+suddenly
+shen shen <adv>
+soon
+khnang <adv>
+purposely
+jur <adv>
+severely, heavily
+shiwat <adv>
+once
+man ka por <adv>
+always
+laisien <adv>
+thrice
+laiwat <adv>
+thrice
+kumne kumne <adv>
+presently
+ïaroh <v>
+admire, congratulate
+na ka bynta <prep>
+for
+hok <n, f>
+1.  [law] right
+      "Ïeng skhem na ka bynta ka hok."  - Stand firmly for the right.
+2. honesty
+      "Ka hok ka long ka buit babha tam."  - Honesty is the best policy.
+bashisha <n, f>
+truth
+      "Man ka por kren ia ka bashisha."  - Always speak the truth.
+ma <n>
+uncle
+   See also: {mama}
+
+tyngab <n, f>
+crow
+shisha <adv>
+1. really, practically, surely
+2. of course
+pynshitom <vt>
+punish
+      "U nonghikai yn pynshitom ne un beh ïa phi."  - The teacher will punish or expel you.
+rkhie <v>
+laugh
+pita <n, m>
+tape
+      "Bat skhem ia ka tduh une u pita."
+'riewalhia <n, m>
+idler
+      "U riewalhia niar eh ba u long u briew u basuk."
+niar eh <adv>
+rarely
+mih na <v>
+leave
+ryngkoh <v>
+spring, hop
+shitaiew <adv>
+for a week
+kamram <n, f>
+duty
+bieit <n, m>
+dunce
+ïap <v>
+die
+jah noh <v>
+vanish
+poi <v>
+1. arrive, reach
+   See also: {kot}
+
+2. be to
+      "Phi la ju poi Sohra?"  - Have you been to Cherra?
+kylla kaba mut <v>
+repent
+jingdonkam <n, f>
+1. use
+2. necessity
+bamyntoi <adj>
+of use
+lehse <adv>
+perhaps
+tharai <adv>
+perhaps
+buskit <n, f>
+reward, present, prize
+      "U Si u khynnah uba na ka klas V, u la ïoh ïa ka buskit."  - Si, a boy from class 5, got the prize.
+ha khmat <prep>
+before
+lehnoh ei <adv>
+in vain
+phet noh bak <v>
+run off, run away
+bakha <n>
+cousin
+sati <n, f>
+ring
+la shisngi <adv>
+day after tomorrow
+      "Phin leit la shisngi?"  - Will you go day after tomorrow?
+batamsneng <n, m>
+dunce
+lada <conj>
+if
+      "Ngan leit Sohra lada kam slap jur."
+lano <pron>
+when
+      "Lano un poi?"  - When will he arrive?
+da sngewburom <adv>
+obliged
+wad dien <v>
+trace
+pynjan <v>
+lose
+khyllipmat <n, f>
+moment
+jingia-aireng <n>
+match
+jingiakhun <n>
+match
+mynjur <v>
+agree, consent
+iahap jingmut <v>
+agree
+khot sngewbha <v>
+invite
+ym lah <v>
+fail
+      "Lada phim minot, phin ym lah ha ka eksamin."
+pynïap <v>
+kill
+pynpait <v>
+break
+      "Ngi pynpait ia ka khyndew da ka dieng moi."
+bah <v>
+bear
+thaw <v>
+make, create, build
+shibnai <adv>
+for a month
+bun sngi lynter <adv>
+for days together
+shisngi lynti
+a day's journey
+shipor <adv>
+for a time, a while
+bijai-ei <n>
+vain
+jingkynwin <n, f>
+uproar
+jingkeh <n, f>
+noise
+jingangnud <n, f>
+ambition
+diengduh <n, m>
+stick, staff
+      "U rah la u diengduh ha ka kti."  - He carries his staff in the hand.
+pad-ingiew <n, m>
+monster
+rakot <n, m>
+giant
+ramhah <n, m>
+giant
+      "U long u bakhlain kat u ramhah."
+khamtam eh <adv>
+mostly, chiefly
+      "La leh ïa kane ka kam khamtam eh ha ka jaka ba la khot Aligarh."  - This work was chiefly done in the place called Aligarh.
+ïit khmih <n, f>
+looking-glass
+   See also: {ïit khmat}
+
+shibun ka por <adv>
+a good deal of time
+da ka kjat <adv>
+on foot
+buit <n, f>
+1. talent
+2. trick
+3. plan, policy
+sap <n>
+talent
+artaiew <n>
+fortnight
+shiteng sngi <n, f>
+noon, midday
+      "Ka lyer ka ïaibeh naduh shiteng sngi."  - The wind had been blowing since noon.
+pdeng sngi <n>
+noon
+jingthala <n, f>
+vanity
+jinglehnoh-ei <n, f>
+vanity
+jingkyreit <n, f>
+vanity
+jop <v>
+win, conquer, defeat
+      "Ka klas VI ka jop ia ka jingiakhun."
+pynhun <v>
+satisfy
+hynriew
+six
+mynstep <n>
+today morning, A.M.
+hynne mynstep <n>
+this morning
+eksamin <n>
+exam
+      "La beh ïa u khynnah na ka kamra eksamin."
+mynnymwei <adv>
+last year
+ju phah <v>
+use to
+      "Ka la ju phah ia u ba un spel biang ia ki lynnong mynmiet."  - She used to make him repeat the lessons at night.
+mynmiet <adv>
+at night
+spel biang <v>
+repeat
+por balait <n, f>
+spare time
+      "U la pynleit lut la ka por balait sha kane ka kam."  - He gave all his spare time to this work.
+lum lang <v>
+get together
+      "U la lum lang katto katne ki riewdonburom."
+pynlut <v>
+spend, devote
+      "U la pynlut shibun ka por bad la ka kmie."  - He spent much time with his mother.
+   Synonym: {pynleit aiti}
+
+sor <n>
+city
+ai rong <v>
+paint
+teng teng <adv>
+sometimes, at times
+ha ka por babiang <adv>
+in time
+kyndit <v>
+wake
+kynruh ktien <v>
+rinse the mouth
+mynno <pron>
+when
+      "Mynno phi wan na Calcutta?"
+khreh <v>
+1. prepare
+      "Ka rel ka khreh ban mih; u nongap u la put ia ka jingput."
+2. provide
+mih ban leit <v>
+start for
+ïohthiah <v>
+sleep
+kot <v>
+1. reach
+      "Ka tngab kam lah ban kot ia ka um."
+   Synonym: {poi}
+
+2. achieve
+   Synonym: {ïoh}
+
+   Synonym: {pyndep}
+
+shong khop <v>
+sit down
+bathiah <n, f>
+bed
+burom <v>
+respect
+neh <v>
+last
+pohsniew <v>
+dream
+niad <v>
+brush
+kyrshut <v>
+brush
+tur <v>
+rush
+shna <v>
+build, invent
+tei <v>
+build
+      "La tei ïa kane ka kynroh da u mawit bad ka sorki."  - This wall is built with brick and mortar.
+pynshad <v>
+turn
+shet <v>
+boil
+phon <v>
+boil
+kyntiew <v>
+lift
+thain <v>
+1. knit
+2. weave
+sympat <v>
+flog
+suh <v>
+sew
+shtah <v>
+hew
+suh rmiang <v>
+hem
+meh <v>
+burn, shine
+ksam <v>
+pinch
+aibam <v>
+feed
+bsa <v>
+feed
+phet <v>
+flee
+beh noh <v>
+flee
+mihsngi <n, f>
+sunrise
+harmuni <n, f>
+harmonium
+ba-i suba <adj>
+neat
+nongotkurat <n, m>
+sawyer
+kurat <n, f>
+saw
+misteridieng <n, m>
+carpenter
+nongthaw khiew <n, m>
+potter
+phan <n, m>
+potato
+muja jrong <n, pl>
+stockings
+rumar <n, f>
+handkerchief
+babyrngut <adj>
+dim
+umphniang sharak <n, f>
+kerosene
+suloi <n, f>
+gun
+         Note: saloi?
+ba haïing <n, pl>
+relations
+hasem <n>
+relations
+thana <n, pl>
+relations
+niangbading <n, m>
+firefly
+wad <v>
+search, seek
+   See also: {shem}
+
+twad <v>
+search
+tar <v>
+tear, rend
+      "U jen u la tar ia la ka sopti poh."  - Jen has torn his shirt.
+khrai <v>
+chop
+      "Nga khrai diengiap."  - I chop firewood.
+pom <v>
+chop, hack, cut down
+   Synonym: {khet}
+
+kynshew <v>
+save
+pynkyllon <v>
+1. fell
+2. shake down
+         Note: pynkyllong?
+khet <v>
+fell, cut down
+      "I kpa i khet dieng."
+   Synonym: {pom}
+
+thaba <v>
+flash
+ngam <v>
+sink
+ngop <v>
+sink
+thap kti <v>
+clap
+kyang <v>
+shout, cry
+      "U Sneng u kyang katba lah la i bor."  - Sneng cried at the top of his voice.
+khihkmen <v>
+leap
+syang <v>
+bake
+shet syang <v>
+bake
+jainniad <n, f>
+1. towel
+2. napkin
+tnat <n, f>
+bough
+khnam <n, m>
+arrow
+ryntieh <n, f>
+bow
+jingsuk <n, f>
+happiness
+sdie <n, m>
+axe
+pynjlih <v>
+smooth
+leilieh <n, f>
+lightning
+kynda <n, f>
+boat
+kew <n, m>
+corn
+rashi <n, f>
+scythe, sickle
+bawai <n, f>
+end
+jingsngewmuja <n, f>
+glee
+jingsngewbha <n, f>
+1. pleasure
+2. favour
+babuh <n, f>
+suffix, ending
+shaleh <n, f>
+ [gram] object
+         Note: shahleh?
+   Synonym: {shahleh}
+
+shain kuna <v>
+fine
+khlieh <n, f>
+head, top
+trud <v>
+scratch
+pynsyrwa <v>
+waste
+      "U pynsyrwa ia la ka por."
+klet <v>
+forget
+lyntang <n, f>
+plank
+jynhaw <n, f>
+vapour
+rynjup <n>
+bunch
+      "shi rynjup ki shabi"
+phong <n>
+suit
+      "shiphong ki sopti"  - a suit of clothes
+shikyntien <n>
+mouthful
+      "shikyntien ka ja"  - a mouthful of rice
+lyngkhot <n, f>
+1. piece
+2. coupon
+pyrton <n>
+regiment
+shisbuk <n>
+quantity
+      "shisbuk ka mar"  - a quantity of goods
+nongthuh <n, m>
+thief
+siej <n>
+bamboo
+la lah <v>
+might, could
+la leh <v>
+might
+donbor <v>
+could
+wengnoh <v>
+remove, leave out
+sngewkwah <v>
+would like
+khein <v>
+calculate
+pynsngewbha <v>
+please
+kam ki duk <n, pl>
+duties
+      "Ngi lah ban leh la ki kam ki duk da ka jingdonakor bad jingryntih."  - We may be able to perform our duties with decency and order.
+jingdonakor <n, f>
+decency
+jingryntih <n>
+order
+pulit <n, pl>
+police
+kano kano <pron>
+any
+tohkit <v>
+examine
+      "U don ka bor ban tohkit ia kano kano ka kam na ki liang baroh."  - He could examine any question from all sides.
+sah shuh <v>
+continue, stay longer
+sorkar <n, f>
+government
+      "Ka sorkar kan ïaleh katba ka lah ban ïarap ïa ki briew."  - The government will do its best to help the people.
+bela <n>
+violin
+tem <v>
+1.  [mus] play
+      "Phi nang ban tem bela?"  - Do you know how to play violin?
+2.  [mus] beat
+      "U khynnah u la tem ïa ka ksing man la ka teng."
+jingiathong <n, f>
+bet
+hukum <n, f>
+order
+jai-pdeh
+lazy
+         Note: ?
+nym <v>
+could not
+n + ym after a negative article (that always ends in -n)
+      "Kin nym lah ban pyndep ia ka khala khala."  - They could not finish it soon.
+   See also: {ym}
+
+jingïarap <n, f>
+help
+ der: {ïarap}
+
+ha ka por donkam <adv>
+in time of need
+iakhih <v>
+move
+iakawang <v>
+throw
+      "Ki khynnah ki dang ia kawang maw ia ki jakoid."
+jingshet <n>
+cooked thing
+theh <v>
+pour out
+      "Ki dang theh ia ka um ha u khiew."
+hamar <conj>
+while
+      "Hamar ba ngi dang iakren lwet..."  - While we were chatting...
+iakren lwet <v>
+chat
+jingbitar <n, f>
+rage
+umpohliew <n, f>
+fountain
+pansngiat syntiew <n>
+garland
+bakhar-khar <adj>
+harsh
+leit siew <v>
+go shopping
+wan lang <v>
+come along
+      "Ngan wan lang bad phi?"  - Shall I come with you?
+lang <adv>
+together
+khulom mihsia <n, m>
+fountainpen
+shong dor <v>
+cost
+ai baitrai <v>
+give at cost price
+      "Haba nga die ia u san tynka nga shu ai baitrai ia phi."  - When I sell it for five rupees, I am practically giving it to you at cost price.
+ha ka jingshisha <adv>
+as a matter of fact, in fact
+to
+allright
+donbok <v>
+be lucky
+jingthied <n>
+shopping
+kaei kaei
+matter
+jingsngewbrai <n, f>
+fun
+jingbiria <n, f>
+fun
+jingshisha <n, f>
+1. fact
+2. truth
+      "Um kham ieit ïa ei ei ruh palat ban ïa ka jingshisha."  - He loves nothing dearer than truth.
+ryngkat <adv>
+together, with
+ka da long <adv>
+practically
+dor trai <n, f>
+cost
+bailut <n, f>
+cost
+badonbok <adj>
+lucky
+babhabok <adj>
+lucky
+jingbha <n, f>
+goodness
+pliang <n, f>
+dish
+shun <n, f>
+lime, limestone
+proh <n, m>
+fork
+siang <n, f>
+spoon
+tyndong <n, f>
+pipe
+bilor <n, m>
+phial
+tyngsok <n, f>
+mattress
+syngkhlieh <n, f>
+pillow
+rijied <n, m>
+post
+      "Ki rijied jong ka iingshetja jong ngi ki lyngkot than."
+narkhang <n, m>
+bolt
+kopja <n>
+hinge
+sem kulai <n, f>
+stable
+tbian <n, f>
+floor
+jingsop <n, f>
+roof
+rajai <n, f>
+quilt
+kynjri <n, m>
+chain
+khir <n, m>
+screw
+ksai <n, m>
+string, thread
+rong iong <n, f>
+coal tar
+snad <n, f>
+comb
+snad <v>
+comb
+brut <n, f>
+brush
+phatok <n, f>
+jail
+ïingbyndi <n, f>
+jail
+sawar <n, m>
+plummet
+mawkordor <n, m>
+gem
+misteri maw <n, m>
+mason
+sorki <n, f>
+mortar
+tyrnem <n, m>
+hammer
+rynda <n, f>
+plane
+paintali <n, m>
+chisel
+jingleh <n, f>
+act
+kamra thiah <n, f>
+bedroom
+narwoh <n, m>
+hook
+      "La thaw ia u narwoh na ka rnong."
+map <n, f>
+map
+      "Eiba wah ia ka map ha kynroh?"
+donkam <v>
+need, be in need of
+      "Nga donkam shiphew ngut ki misteri maw."
+shniah <n>
+mason's chisel
+ata <n, m>
+flour
+moida <n, m>
+flour
+jastep <n, f>
+breakfast
+jamiet <n, f>
+supper
+shini <n, f>
+sugar
+ngap <n, f>
+honey
+jingbam sngi <n, f>
+tiffin
+doh masi <n, f>
+beef
+malai <n, f>
+cream
+doi <n, f>
+curd
+doh blang <n, f>
+mutton
+kpu kiek <n, m>
+cake
+jyntah <n, f>
+curry
+         Note: jingtah?
+syrwa <n, f>
+soup
+wain <n>
+wine
+         Note: u, ka
+kait <n, f>
+plantain
+musla <n, m>
+spice
+jingbam thiang <n, f>
+sweetmeat
+jingbam met <n, f>
+dinner
+nongsumar <n, f>
+nurse
+doh sniang <n, f>
+pork
+makhon <n, f>
+butter
+nongshet <n>
+cook
+         Note: u, ka
+shet syrwa <n, f>
+broth
+biskit <n, m>
+biscuit
+soh mynken <n>
+chili
+mynta ki sngi <adv>
+nowadays
+shinat <n>
+bundle
+      "Sngewbha ai ia nga shinat ka kait!"  - Please give me a bundle of plantains!
+jingbam mynstep <n>
+breakfast
+por bam sngi <n, f>
+tiffin hour
+thiang <v>
+taste sweet
+sat <v>
+be spicy
+pynsniew <v>
+spoil
+      "Bun than ki nonghset ki pynsniew ia ka syrwa."  - Too many cooks spoil the broth.
+kwintal <n>
+quintal
+1 quintal = 100 kg
+kiad <n>
+liquor, alcohol
+      "Wat ju dih kiad!"
+bang <v>
+like
+      "Ngam bang ia kane ka jyntah."
+buhrieh <v>
+hide
+   Synonym: {buhrih}
+
+buhrih <v>
+hide
+   Synonym: {buhrieh}
+
+lur <v>
+plough
+      "Ki masi ki lur ia ka lyngkha."
+pynthor <n>
+field
+dondor <v>
+count
+shikatdei <n>
+plenty
+bakyrpang <adj>
+particular, chief
+jingai <n>
+gift
+khieshoh <n>
+fever
+jah <v>
+miss
+jingmyntoi <n>
+1. advantage, profit
+2.  [fin] interest
+smai <n>
+swear
+      "U smai da ka kyrteng U Blei ban um lamler."
+bor <n, f>
+power
+jingkyrshan <n, f>
+support
+nongkyrshan <n, m>
+supporter
+jinghikai <n, f>
+education, instruction
+shu kumjuh
+all the same
+kajuh
+all the same
+jingadkar <n, f>
+temperance
+jingktah kti <n, f>
+attack
+jingkynrup <n, f>
+attack
+ynda kem iongrein <adv>
+at nightfall
+premmiet <n, f>
+nightfall
+bapaka <adj>
+good
+      "U la ioh jinghikai ka bapaka."  - He had a good education.
+pangbniat <n>
+toothache
+      "Nga la ioh pangbniat."  - I had toothache.
+shatri <n, f>
+umbrella
+mano <pron>
+who
+mano mano <pron>
+anybody
+kyrshan <v>
+support
+mar kumjuh
+all the same
+baiongkhlieh <n>
+headache
+dang step ngir <adv>
+at dawn
+Hindi <n>
+Hindi
+      "Kim nang Hindi ruh."  - They also don't know Hindi.
+na lade hi
+of its own
+      "U bnai um don jingshai na lade hi."  - The moon doesn't have light of its own.
+ai noh <v>
+give back
+shapang kata baroh <adv>
+all about it
+wat
+even
+jingïoh nong <n, f>
+profit
+dang shu <adv>
+still
+pynlang <v>
+1. contribute
+2. amass
+      "Phin jin da la pynlang shispah tyngka la nymwei katne por."  - You will have amassed one hundred rupees by this time next year.
+ia ai <v>
+contribute
+ïanoh <v>
+contribute
+da kaba kren lamler <adv>
+by telling a lie
+phoida <v>
+gain
+      "Ha bakut un phoida lada u iathuh hok."  - In the end he will gain if he tells the truth.
+jingïoh <n, f>
+gain
+hadien habud <adv>
+subsequently
+kynmaw <v>
+remember
+ha bakut <adv>
+in the end
+katba
+as far as
+      "Ki wan hangne shisien ne arsien katba nga kynmaw."  - They come here once or twice as far as i remember.
+bymsuidniew <adj>
+careless
+jingphikir <n, f>
+carefulness, care
+yn don <v>
+there will be
+kham khyndiat <adj>
+fewer
+phuhsamrkhie <v>
+smile
+ba la kloi <adj>
+ready
+dorji <n, m>
+tailor
+nongsuhjain <n, m>
+tailor
+basngewphylla <adj>
+wonderful
+bymlah <adj>
+1. unable
+2. impossible
+rel <n, f>
+train
+nongtrei <n, m>
+labourer, worker
+ba don pat <v>
+be back
+kyrkieh <v>
+be in hurry
+pynkoit <v>
+ [med] cure
+      "Ngan jin da lah pynkoit ïa u lada u la wan sha nga."  - I would have cured him, if he had come to me.
+nongseng <n, m>
+founder
+basngewhun <adj>
+content
+bakhyllah <adj>
+strange
+nud <v>
+1. be anxious
+      "Kim nud ban mih shabar ki sheptieng bsien."  - They are not anxious to go out for fear of snakes.
+2. dare
+bthong <n, pl>
+ [bio] deer
+shakri <n, m>
+servant
+haduh katno <pron>
+how long
+      "Haduh katno phin sah hangne?"
+kyrpad <v>
+request, call upon
+      "Ngi kyrpad ïa phi ba phin ïanoh sha ka jingkynshew."  - We request you to contribute to the fund.
+   Synonym: {kyntu}
+
+jingkynshew <n, f>
+fund
+sohmyndong <n>
+lemon
+riewhadem <n, m>
+maize
+shynrai <n, m>
+turmeric
+piat <n, m>
+ [bot] onion
+basianti <adj>
+wily
+dumasla <n, m>
+tobacco
+muli <n, m>
+radish
+pai <n, m>
+sugarcane
+jainkup <n, f>
+garment
+rynsun <n, m>
+garlic
+kat <prep>
+as
+pyrthat <n, m>
+thunder
+jingshlur <n, f>
+bravery
+kwai <n, m>
+betelnut
+krai <n, m>
+millet
+sying <n, m>
+ginger
+shana <n, m>
+gram
+jhur <n, pl>
+vegetables
+namar <conj>
+because, owing to, for, since
+khriat <v>
+be cold, feel cold
+      "Nga khriat."  - I feel cold.
+   Antonym: {shit}
+
+dohnud <n, f>
+heart
+      "Ka dohnud u Lar ka long kaba eh kum u maw."
+jlih <v>
+be smooth
+      "Kato ka lyntang ka jlih kum ka iit."
+shlur <v>
+be brave
+      "Ngam shlur kat ma u."  - I am not as brave as he.
+khmih lynti <v>
+expect
+      "Ka ri jong ngi ka khmih lynti manla u briew ban leh la ka kamram."  - Our country expects every man to do his duty.
+phria <n, m>
+hail
+jem <v>
+be soft
+      "I jem mom-mom kum ka makhon."  - It is very soft like butter.
+mom-mom
+very
+jyrngam <v>
+be green
+thik <adv>
+exactly
+negro <n, m>
+negro
+baiadei <adj>
+suitable
+      "Wat bam than eh bad bam ia ka jingbam ka baiadei."
+kynphad <n, m>
+cotton
+panpoh <n, m>
+belt
+      "Ka shaku ka snoh na u panpoh jong u."  - The knife hangs from his belt.
+budam <n, m>
+button
+jingsop kti <n, pl>
+gloves
+ïit khmat <n, pl>
+spectacles
+sorti <n, f>
+razor
+khanshi <n, f>
+scissors
+rusom <n, f>
+silk
+patlun jrong <n, f>
+trousers
+jingsum <n, f>
+bath
+umpynjhieh <n, f>
+urine
+'saiwul <n, m>
+wool
+         Note: ksai + wool
+juti slipar <n, pl>
+slippers
+nongdiedukan <n, m>
+shopkeeper
+jingsiang-thiah <n, f>
+bedsheet
+jaintap khmat <n, f>
+veil
+jhingsleh <n, f>
+ointment
+lir <n, m>
+indigo
+jainspong <n, f>
+turban
+jain tawah <n, f>
+shawl
+jainjri <adj>
+waterproof
+nongkhaii <n, m>
+merchant
+khniang jingpang <n, m>
+microbe
+khniang <n, m>
+germ
+man ka sngi <adv>
+daily
+jingpynshisha <n, f>
+proof
+jingpynsabut <n, f>
+proof
+thaw pynlong <v>
+create
+sting <adv>
+lightly
+jingkhih <n, f>
+motion
+jingshad sawdong <n, f>
+motion
+      "Ka jingshad sawdong jong ka pyrthei man ka sngi ka pyllong ia ka sngi bad miet."  - The daily motion of the earth causes day and night.
+lyiur <n, f>
+summer
+sla kyndew <n, f>
+surface
+pynlong <v>
+cause, make, stage
+      "Ki ïarap ban pynlong ïa ngi ki basuk."  - They help to make us happy.
+daw <n, f>
+cause
+jingkylla <n, f>
+change
+tawiar <v>
+revolve
+      "Ka pyrthei ka tawiar sawdong ia ka sngi."
+kynthup <v>
+consist
+      "Ka sla jong ka pyrthei ka kynthup ia ka khyndew bad ka um."  - The surface of the earth consists of land and water.
+jingsyaid <n, f>
+warmth
+jumai <n, m>
+earthquake
+      "U jumai u pynkyllon ia ka nongbah baroh khoit."  - The earthquake shakes down the whole town.
+jingshit <n, f>
+heat
+tlang <n, f>
+winter
+pyrem <n, f>
+spring
+      "Ka pyrem jong ka jingim ka long ka jinglong samla."  - The spring of life is youth.
+baroh khoit <adj>
+whole
+pynkhih <v>
+shake
+synrai <n, f>
+autumn
+shuti lyiur <n, f>
+summer vacation
+      "Shano phin leit ha kane ka shuti lyiur?"
+myntlang <adv>
+in winter
+      "Ka khriat shibun hangne myntlang."
+sangeh <v>
+come to a stop
+bneng <n, f>
+heaven
+nongheh <n, f>
+town
+nongap <n, m>
+guard
+ap pahara <v>
+guard
+jingjngai <n, f>
+distance
+      "Phi tip ia ka jingjngai jong ka pyrthei na ka sngi?"
+mynba <conj>
+when
+      "U mih skul mynba u dang khadhynniew snem ka rta."  - He left school at the age of seventeen.
+put <v>
+whistle
+sabut <n>
+proof
+      "Don bun ki sabut ba ka pyrthei kam long ka bamadan."
+   See also: {jingpynsabut}
+
+sakhlieh <n, f>
+cold
+         Note: saklieh?
+      "Nga ioh sakhlieh, kumta ngan shong noh ha iing."  - I have a cold, so I will stay indoors.
+sawdong <adv>
+round, around
+tlor noh <v>
+fall off
+      "Ki sla ki tlor noh ha ka por synrai."
+pynïasoh <v>
+join
+bad <conj>
+and
+haduh ba <conj>
+till
+   See also: {haduh}
+
+lymne <conj>
+neither, nor
+lane <conj>
+either, or
+      "Ngam don ksiar lane rupa."  - I have neither gold nor silver.
+lym kumta <conj>
+otherwise
+      "Ai um ia u shisyndon lym kumta un iap!"  - Give him water at once, otherwise he will die!
+la <conj>
+1. whether
+      "Iathuh ia nga la phin leit ne em!"
+2. though
+      "La nga mai ia u, hynrei um sngap satia."
+lymda kumta <conj>
+unless
+pynban /pnban/ <conj>
+still
+      "U bakhlain, pynban um treh ban trei minot."  - He is strong, still he refuses to work hard.
+naba <conj>
+for
+   See also: {namar}
+
+tadynda <conj>
+until
+tad <conj>
+until
+   See also: {tadynda}
+
+ban ia <conj>
+than
+      "U rynsied kham jrong ban ia nga."  - He jumps higher than me.
+naduh <conj>
+since, from
+      "Ngam lah ban wan namar ba nga ioh biongkhlieh naduh hynne ka miet."
+maham <v>
+warn
+kyntait <v>
+refuse
+pule minot <v>
+study
+pynmih <v>
+1. yield
+2. reduce
+      "Pynmih ïa kine ki tyngka sawphew sha ki peisa."
+3. give out
+   Synonym: {pynbna}
+
+4. afford
+rang <v>
+cease
+      "U slap u rang."  - The rain ceases.
+   See also: {keinnoh}
+
+keinnoh <v>
+cease
+   See also: {rang}
+
+riam <v>
+dress
+      "Riam shuwa ba phin mih na ka kamra."  - Dress yourself before you leave the room.
+pynïaid <v>
+manage
+slap <v>
+rain
+bynrap <v>
+assist
+ym kohnguh <v>
+disobey
+   See also: {pyllah}
+
+pyllah <v>
+disobey
+   See also: {ym kohnguh}
+
+suhjer <n, f>
+cold
+hapoh ïing <adv>
+indoors
+tang shu <conj>
+as soon as
+shitom kat
+as hard as
+eh kat
+as hard as
+khah khah <adv>
+frequently
+   See also: {bunsien}
+
+treh /trɛ?/ <v>
+refuse, not want
+      "Ym treh?"  - You don't want?
+Ka long ka bymlah.
+It is impossible.
+bakyllut <adj>
+deaf
+      "U khynnah u kyllut ne um nangkren."  - The child is either deaf or dumb.
+bym nangkren <adj>
+dumb
+shongthait <v>
+rest, take rest
+jingshongthait <n, f>
+rest
+khublei burom <v>
+salute
+jakhlia jakhlaid <n>
+stain
+      "Ka pum pum bad ki jakhlia jakhlaid kin khuid lut."
+rwai ka siaw <n, f>
+singing
+      "Ki sim kin sangeh ka rwai ka siaw."
+pam <v>
+cut off
+snepdieng <n, f>
+bark
+lyngba <prep>
+through, across
+sha shiliang <prep>
+through
+bad <prep>
+with
+khlem <prep>
+without
+khlem da <prep>
+without
+   See also: {khlem}
+
+shilynter <prep>
+along
+namar <prep>
+for
+ha khrum <prep>
+under
+   See also: {hapoh}
+
+nadien <prep>
+behind
+   See also: {hadien}
+
+pyrshah <adv>
+against
+      "La pynbor ia u ban leh ia kane pyrshah ia ka mon jong u."  - He was compelled to do this against his wish.
+ain <n, f>
+law
+      "ka ain ka ri"  - the law of the country
+hapdeng khlaw
+in the midst of the forest
+slem jlang <adv>
+for a long time
+katba jia
+at all events
+hapoh kitei kiei kiei ba la ong haneng
+under the above circumstances
+ha khrum ka suin bneng
+under the sky
+jingtlot <n, f>
+weakness
+jingleit noh <n, f>
+departure
+pynkylla sha <v>
+reduce to
+pynmih kynsan <n>
+burst
+ïam hut <v>
+burst into tears
+         Note: iam huk?
+baroh shirynieng <adv>
+from head to foot
+shuti <n, f>
+leave
+jingshah <n, f>
+1. leave
+   Synonym: {shuti}
+
+2. permission
+jingsbun <n, f>
+kindness, favour
+kynrei <v>
+abound
+         Note: "to team" not found in gcide
+baher <adj>
+flying
+khlem da shah <adv>
+without leave
+thliew <n, f>
+hole
+ummat <n>
+tear
+na lynti <adv>
+along the path
+jingkah syrngiew <n, f>
+shade
+      "Nga shongthait hapoh ka jingkah syrngiew u dieng."
+napdeng
+
+   See also: {hapdeng}
+
+sngewrem <v>
+be ashamed of
+      "U long uwei napdeng ki babun, kumta phim dei ban sngewrem ia kata."
+noh-phai-sngi <n>
+afternoon
+      "Un wan hapdeng ar ne lai baje noh-phai-sngi."
+sha lyndet <prep>
+beyond
+      "Ngam lah ban leh ia kata namar ka long sha lyndet ka bor jong nga."
+mon <n, f>
+wish, will
+      "U leh ia kane pyrshah ia ka mon jong nga."
+joit <adv>
+suddenly, at once
+      "U la khie joit na bathiah."
+jingput tyndong <n, f>
+pipe
+kdiah <v>
+pluck
+sur <n, f>
+music
+bakynjah <adj>
+lonely
+imat <v>
+seem
+bakynjai <adj>
+happy
+jaitbynriew <n, f>
+ [pol] nation
+pynmlien <v>
+1. practice, train, put in practice
+2. teach good habits
+      "La pynmlien ïa nga naduh dang khynnah."  - I was taught good habits since childhood.
+sur ki jingkynud <n, pl>
+tunes
+bawin <adj>
+noisy
+nongput <n, m>
+1. piper
+2.  [sport] referee
+jar-jar <adj>
+quiet
+basngap <adj>
+quiet
+bajai-jai <adj>
+cool
+rep <v>
+grow
+      "U rep soh bad jhur ruh."  - He grows fruit and vegetables as well.
+dieng moi <n, f>
+harrow
+hooid kein
+of course
+hapoh <adv>
+beneath
+stem <v>
+grow golden
+stem mur <v>
+turn yellow
+dap <v>
+fill
+pyndap <v>
+fill
+kba <n, m>
+paddy
+rice plants
+san <v>
+grow tall, grow up
+jrong <v>
+grow tall
+sei rangbah <v>
+grow up
+         Note: ?
+lappraw <n, m>
+shower
+pynphret <v>
+break up
+spehlung <n>
+shoot
+nongot <n, m>
+reaper
+bet <v>
+sow
+      "Ha ka por aiu ki bet kba?"
+rkhiang <v>
+get dry
+jingsan <n, f>
+growth
+jhieh <v>
+get wet
+nangta <conj>
+then
+      "U nongot nangta u wan bad la ka rashi bad u ot noh ia ki jingthung."
+dung <v>
+thrash
+      "Te ki briew ki dung ia u kba bad ki sa peh ia ki symboh."
+sa peh <v>
+clean
+      "Te ki briew ki dung ia u kba bad ki sa peh ia ki symboh."
+bam da <v>
+live on
+      "Ki Khasi ki bam da u khaw."
+ih <v>
+be ripe
+      "Ki nongrep ki ot ia u kba da ka rashi haba u la ih."
+speh <n>
+shoot
+      "Phi iohi ia ki speh ki bajyrngam?"
+   See also: {spehlung}
+
+pashat <v>
+fling
+jingthawlad <n, f>
+invention
+jingwadbuit <n, f>
+invention
+jingtan khait <n, f>
+necessity
+pynkylla khongpong <v>
+upset
+      "Te ka la pyrshang ban pynkylla khongpong ia u khiew um khnang ba ka um ka lah ban mih shabar."
+jingskhem <n, f>
+security
+jingshong shngain <n, f>
+security
+tlor <v>
+fall
+bein <v>
+defy
+hangno hangno ruh <adv>
+anywhere
+nuksa <n, f>
+plan
+ha kaba khadduh <adv>
+at last
+ma-hangno <adv>
+somewhere
+kumta ba <conj>
+so that
+mih shabar <v>
+run out
+khyndiat por
+a little while
+kiew soit <v>
+rise right up
+thliewkhmut <n>
+nostril
+'niuhmat <n, m>
+eyelash
+snepkhmat <n, f>
+eyelid
+'niuhtmoh <n, m>
+beard
+'niuhthmain <n, m>
+moustache
+shynrongkhlieh <n, f>
+skull
+pylliawkhmat <n, f>
+pupil
+hole in iris of the eye
+pohtit <n, f>
+armpit
+shyieng ïingdong <n, f>
+backbone
+sohpet <n, m>
+navel
+jylleng <n, f>
+abdomen
+matsohlah <n, f>
+ankle
+khongdongjat <n, f>
+heel
+dohbniat <n, f>
+gum
+'tikmie <n, f>
+thumb
+budlum <n, m>
+spine
+lyngkdong <n, f>
+occiput
+rengmat <n, f>
+eyebrow
+jingïohi <n, f>
+eyesight
+bor ïohi <n, f>
+eyesight
+kynton <n, f>
+heap
+      "Ia ki jainjot linen la buh ha kawei ka kynton."  - The linen rags are put in one heap.
+jied <v>
+choose
+      "La jied ïa u Suba ban pynmareh thong."  - Suba is chosen to start the race.
+thong <n>
+race
+      "La jied ia u Suba ban pynmareh thong."  - Suba is chosen to start the race.
+kyrsiew <v>
+wake
+      "Ia ka Sita la kyrsiew na ki jingphohsniew lyngngai."  - Sita was waken from her pleasant dreams.
+lyngngai <adj>
+pleasant
+burom <n>
+honour, reputation, glory
+      "La ai ruh ha u ïa kiwei pat ki burom."  - Other honours were also bestowed upon him.
+la pynkyndit kynsan kynsan
+be taken by surprise
+      "La pynkyndit kynsan kynsan ia u nongkhaii."  - The merchant was taken by surprise.
+pdiang sngewbha <v>
+welcome
+      "Hangta la pdiang sngewbha ia u Ram da u para jong u Bharat."
+jingpep skul tuh <n, f>
+truancy
+      "La pynshitom jur ïa u khynnah da ki nonghikai namar ka kingpep skul tuh."
+penshon <n>
+pension
+      "La ai penshon ia u bad ia u khun jong u da ka sorkar."
+sorkar kmie <n, f>
+central government, centre
+sngewthuh <v>
+understand
+      "Ki la lah sngewthuh bha ia ka kam."  - They could understand the matter fully well.
+mukotduma <n, f>
+case
+      "La lah rai ia ka mukotduma la slem jlang."  - The case had been decided long ago.
+phla <v>
+confess
+      "U la phla ia kaba u la leh."  - He confessed what he had done.
+shimti <v>
+take up
+      "Ki la lah shimti ïa kane ka kam mynnymwei."  - They could have taken up this matter last year.
+   Synonym: {shim niat}
+
+pynmane <v>
+subdue
+      "La lah pynmane ia ki la slem bah."  - They cold have been subdued since a long time.
+jingbakla <n, f>
+mistake, blunder
+      "Ki la lah iohi ia la ka jingbakla bad ki la kylla jingmut."  - They could have seen their mistake and have changed their mind.
+pynkmen <n>
+gladden
+      "La pynkmen ia ka dohnud jong ki."  -  Their heart was gladdened.
+dang-khynnah <n>
+childhood
+         Note: example ok?
+      "Ki lah pynmlien ia nga naduh dang-khynnah."  - They could practice me since childhood.
+pynim <v>
+bring alive, give life
+      "La pynim ia u bad ka iing jong u."  - Life was given to him and his house.
+kor thew jingthew <n, f>
+weighing machine
+dur <n, f>
+photo, picture
+      "Nga leit shim dur."  -  I go and fetch photos (from the development studio).
+kumne harum <adv>
+as follows
+      "U la ong kumne harum: ..."  - He said as follows: ...
+iathoh <v>
+cut, fell
+      "Ia ngin ialeit sha khlaw bad ngin iathoh dieng katto-katne."  - Let's go to the jungle and cut some wood.
+thiah kram <v>
+fall down
+      "U lok jong u la thiah kram ha khyndew bad um khih um ksaid."  - His friend fell down to the ground and lay quite still.
+um khih um ksaid
+lay quite still
+      "U lok jong u la thiah kram ha khyndew bad um khih um ksaid."  - His friend fell down to the ground and lay quite still.
+shakuriaw <n, f>
+bell
+      "Manla ka masi ka don ka shakuriaw ha ka ryndang jong ka."  - Every cow has a bell round her neck.
+jingthaw <n>
+creature
+         Note: masc. and fem.
+lait tang
+except
+dkar <n, f>
+tortoise
+iingsyiem <n, f>
+palace
+tim <v>
+curse
+naduh kata
+ever since
+babyrsaw <adj>
+pink
+'tiewlili <n, f>
+ [bot] lily
+phyllaw <n>
+compound
+sakiar ing <n, f>
+compound
+jingkhawai <n, f>
+feast
+shaka <n, f>
+wheel
+      "U nongthawkhiew u shong ha khmat ka shaka jong u."
+pynwandur <vt>
+shape
+      "U nongthawkhiew u pynwandur ïa u khiew."  - The potter shapes the pot.
+   Synonym: {pynjanai}
+
+pynjanai <v>
+shape
+   See also: {pynwandur}
+
+dewbyrtha <n, f>
+clay
+pdeng <n, f>
+middle
+hapdeng <adj>
+middle
+baleh <n, m>
+nominative
+         Note: gram.
+shahleh <n, m>
+accusative, objective case
+   See also: {shaleh}
+
+baïoh <n, m>
+ [gram] possessive case, genitive
+jingsarong <n, f>
+pride
+      "Ka jingsarong ka leit ha shuwa ka jingjot."  - Pride goes before destruction.
+bahalor <n, pl>
+superiors
+         Note: sg.?
+      "Burom ia ki bahalor jong phi!"  - Respect your superiors!
+ri khlaw <n, f>
+wilderness
+      "Khlem u lok ka pyrthei ka long tang ka ri khlaw."  - Without a friend the world is but a wilderness.
+kyrteng bathikna <n, f>
+proper noun
+kyrteng badei kajuh <n, f>
+common noun
+         Note: gram.
+kyrteng bakyllum <n, f>
+collective noun
+   Synonym: {kyrteng babun}
+
+kyrteng babun <n, f>
+collective noun
+   Synonym: {kyrteng bakyllum}
+
+kyrteng ki mar khyndew <n, f>
+material noun
+kyrteng ka jinglong <n, f>
+abstract noun
+kren ha <v>
+address
+      "U Uberto u la kren ha la u lok samla."  - Uberto addressed his young friend.
+lum durbar <v>
+call an assembly
+jingjaipdeh <n, f>
+sloth, laziness
+      "Ka jingjaipdeh ka long ka kmie jong ka jingkyrduh."  - Sloth is the mother of poverty.
+jingkyrduh <n, f>
+poverty, want
+mistri <n, m>
+carpenter
+   Synonym: {misteridieng}
+
+patsha <n, m>
+emperor
+   Synonym: {syiem}
+
+lyngngoh <v>
+surprise
+khin ki hajar <n, pl>
+people
+      "Ngan hikai ia la ki khun ki hajar."  - I will teach my people.
+pynduh noh <v>
+give up
+jinglaitluid <n, f>
+independence, freedom
+myntri <n, m>
+minister
+myntri rangbah <n, m>
+ [pol] chief minister
+jingïanujor <n, f>
+ [gram] comparison
+kham duna <adj>
+inferior
+kham palat <adj>
+superior
+basan <adj>
+old, older
+jinglong kordor <n, f>
+virtue
+      "Ym don ka jinglong kordor kaba kham palat ban ïa ka jingmap."  - There is no virtue greater than forgiveness.
+jingmap <n, f>
+forgiveness
+ der: {map}
+
+jingminot <n, f>
+industry
+bor sngewthuh <n, f>
+intellect
+jingsngewthuh <n, f>
+understanding
+jingproh <n, f>
+intelligence
+jingnep jingmut <n, f>
+intelligence
+         Note: lit. "sharp mind"
+jingsniew <n, f>
+evil
+      "Jied ïa ka bakhamrit na ki artylli ki jingsniew."  - Choose the less of two evils.
+syep <n>
+brow
+      "Ym don kaei kaei ka ban kham thiang ban ïa kaba ngi ïoh da la ka um syep."  - Nothing is sweeter than what we earn by the sweat of our brow.
+heh <v>
+be thick
+      "Phi lah ban ai ïa nga u diengduh uba kham heh ban ïa une?"  - Can you give me a stick thicker than this one?
+man la ka sngi <adv>
+daily
+      "Ngi ïoh na u nongrep ïa ki jingbam jong ngi kiba man la ka sngi."  - From the farmer we get out daily food.
+kyrdan <n, f>
+degree, merit
+kyrdan beit <n, f>
+ [gram] positive degree
+the normal degree, opposed to comparative and superlative degree
+kyrdan bahaneng <n, f>
+ [gram] superlative degree
+   See also: {kyrdan beit}
+
+kyrdan bahalor tam <n, f>
+ [gram] superlative degree
+   See also: {kyrdan beit}
+
+patlun lyngkhot <n, f>
+shorts
+jainteh <n, f>
+scarf
+khynnah ap masi <n, m>
+cowboy
+snoh <v>
+hang
+khapnap <adv>
+1. close-fisted, niggardly
+2. hard to part with one's money
+      "Um long uba khapnap, hynrei u long barabor u bakloi ban shakri ïa kiwei pat."  - He is not stingy, but always fast to serve others.
+leh sniew <v>
+harm
+khein ïa ka shitom <v>
+mind trouble
+      "Um ju khein ïa ka shitom."  - He never minds trouble.
+barangbah <adj>
+old
+ der: {rangbah}
+
+jingngeit <n, f>
+faith
+ der: {ngeit}
+
+jingkyrmen <n, f>
+hope
+arsngi <n>
+a couple of days
+'riewspah <adv>
+rich
+      "U long uwei na ki bariewspah tam ha kane ka nongbah."  - He is one of the richest men in this town.
+kynja baum <n>
+metal
+      "U nar u long uba eh tam na ki kynja baum baroh."  - Iron is the hardest of all metals.
+hynmen kynthei <n>
+sister
+      "I long i barangbah tam na ki hynmen kynthei jong nga baroh."  - She is the eldest of all my sisters.
+lum Makashang <n, pl>
+Himalayas
+      "Ki lum Makashang ki long ki bajrong tam ha ka pyrthei."  - The Himalaya Mountains are the highest of the world.
+don katto katne ka jingshemphang <v>
+have some brain
+      "Ka long kaei kaei ka babha ban don katto katne ka jingshempang."
+pynshlur <v>
+encourage
+ïakmen lem <v>
+congratulate
+shah jop <v>
+defeat
+nongïaleh <n, m>
+1.  [sport] champion
+2.  [sport] opponent
+      "Ngin jop ruh ïa ki nongïaleh babud, ka Kurkha team."  - We shall also defeat the next opponents, the Gurkha team.
+nongïalehbol <n, m>
+footballer
+ïasynniang <v>
+subscribe
+jingphuhmat <n, f>
+pride
+      "U Lambor u nongthaw jingrwai u long ka jingphuhmat ka ri jong ngi."  - Lambor the poet (composer?) is the pride of our country.
+tyngka trai <n, f>
+ [fin] capital
+baïaleh pyrshah <n, m>
+opponent
+nongïalehkai <n, m>
+player
+jingstad <n, f>
+wisdom
+jingbit <n, f>
+merit
+para klass <n>
+class fellow, class mate
+jingshemphang <n, f>
+learning
+jingnang
+learning
+   Synonym: {jingshemphang}
+
+rangbah <n, m>
+leader
+snier <n, f>
+1. stomach
+      "Nga suh ka snier."  - My stomach is aching.
+2. intestine
+snier bah <n, f>
+ [bio] large intestine
+'nier bah <n, f>
+large intestine
+ der: {snier bah}
+
+la bun snem <adv>
+for many years
+      "U nonghikai jong ngi u la don ha kane ka skul la bun snem."  - Our teacher has been in this school for many years.
+nongjngohkai <n, m>
+spectator
+      "Ki nongjngohkai, ki para klass jong ngi, ki pynshlur ïa ngi."  - The spectators, our classmates, were encouraging us.
+bashah jop <n, m>
+loser
+      "Ki bashah jop ki long ki banyngkong eh ban ïaroh ïa ngi."  - The losers are the first to congratulate us.
+bania <n, m>
+goldsmith
+kamar <n, m>
+blacksmith
+jinghikai kaba kham bha <n, f>
+higher education
+      "Ki la ïoh ka jinghikai kaba kham bha."  - They got higher education.
+jinglah <n, f>
+merit
+      "Thoh beit ïa ki kyrteng jong ki katkum ka jinglah."  - Write their names in order of merit.
+katkum <adv>
+in order of
+dawai khieshoh <n, f>
+ [med] quinine
+shlan <v>
+dare
+   Synonym: {nud}
+
+jingmlien treikam <n, f>
+experience
+shu thiah khop <v>
+have a quite sleep
+pynbeit <v>
+tidy up, arrange
+pynbeit ïing <v>
+
+   Synonym: {pynbeit}
+
+kam ïing <n, f>
+household
+synniang <n>
+subscription
+'nai khadsaw synnia <n, m>
+full moon
+kren sniew <v>
+speak ill
+jingsympat <n>
+stripe
+shong miet <v>
+keep up late
+   Synonym: {peit miet}
+
+peit miet <v>
+keep up late, stay up late
+kad <v>
+rend
+   Synonym: {tar}
+
+pynshongdor <v>
+rate
+sngewnud <v>
+dare
+   Synonym: {nud}
+
+tyrkhong khait
+totally dry
+   Synonym: {thyrkhong}
+
+barim <adj>
+old
+pyndap shoin <v>
+fill completely
+      "Ka la pyndap shoin ïa u khra da ki maw."  - She completely filled the pot with stones.
+khra <n, m>
+pot
+ma ka <pron, f, sg>
+she
+   Synonym: {ka}
+
+lut <adv>
+all
+      "Ka trei lut ïa ki kam ïing kam sem baroh."  - She did all kinds of household work.
+seh
+please
+      "Ïa ai sha seh shikhuri!"  - Please give me one cup of tea!
+u bnai u la pyllun bha <v>
+ [astr] be full moon
+      "Mynta u bnai u la pyllun bha."  - Today is full moon.
+ïathuh pynshoi <v>
+speak ill
+      "U Sneng u ïathuh pynshoi ïa nga ha i babu."  - Sneng spoke ill of me to our teacher.
+bha dak <v>
+have a good handwriting, write a good hand
+      "I hep i bha dak shibun."  - My sister writes a good hand.
+balalot <adj>
+greedy
+      "U Phup u dei u ksew u balalot bad u long u batuh shibun."
+batuh <n, m>
+thief
+ der: {tuh}
+
+pyndait budam <v>
+button
+sahkut <v>
+stick
+dambit <v>
+stick
+bok <n, f>
+chance
+teh 'sai-juti <v>
+lace up
+rukom leh <n, f>
+process
+loit budam <v>
+unbutton
+ïalang lok <v>
+keep company with
+bidong <v>
+prohibit
+mana <v>
+prohibit
+biang <v>
+fit
+   Synonym: {ïadei}
+
+ïadei <v>
+fit
+      "U shabi um ïadei ïa ka tala."
+   Synonym: {biang}
+
+kyan kat lah kat ïai <v>
+cry at the top of one's voice
+ïakajia <v>
+pick a quarrel
+      "U ïakajia bad ka."
+ïania <v>
+pick a quarrel
+   Synonym: {ïakajia}
+
+'riewnang 'riewtip <n>
+expert
+'riewtbit <n>
+expert
+   Synonym: {'riewnang 'riewtip}
+
+jingstad jylliew <n, f>
+science
+'riewstad <n, m>
+scientist
+   Synonym: {'riewtip}
+
+'riewtip <n, m>
+scientist
+   Synonym: {'riewstad}
+
+jingïadei jingïashem <n, f>
+contact
+shiah dohkha <n, m>
+fishbone
+      "U shiah dohkha u sahkut ha u pdot jong nga."  - The fishbone sticks in my throat.
+pdot <n, m>
+throat
+La palat shiteng synnia.
+It is past midnight.
+dngong <adv>
+clearly
+      "Kynmaw bha dngong ïa kane!"  - Bear this clearly in mind!
+ka sngi ka dang shu sdang mih
+the day is breaking, the day is dawning
+         Note: lit. the sun is just beginning to rise
+kbum <v>
+shut up
+      "Kbum khop!"  - Shut up your mouth!
+Sngap jar!
+Hold your tongue!, Be quiet!
+kuku <n, f>
+ [bio] cuckoo
+pyrthuh <v>
+mimic
+      "Ki khynnah ki pyrthuh ïa ka kuku."  - The boys mimic the cuckoo.
+step ngir <v>
+by daybreak
+them <n>
+valley
+      "U khynnah ap masi u dang pynbam phlang ïa ki masi ha them."
+batai stad <v>
+
+      "Ong ïa u ban nym batai stad!"  - Tell him to hold his tongue!
+paramarjan <n, m>
+neighbour
+      "Wat ïakajia bad la u paramarjan!"
+ha la shnong <adv>
+at home
+      "Ngin pynlut ïa ka shuti puja ha la shnong."
+rong noh <v>
+run off with
+      "Lada ki khnai ki lah ban bam ïa u nar, u kbeit u lah ban rong noh ïa u khynnah."
+nongbishar <n, m>
+judge
+      "Kumta ki leit ha khmat u nongbishar."
+jingmudui <n, f>
+complaint
+jingkren bieit <n, f>
+nonsense
+sngewphuhmat <v>
+be proud of
+kawei-pa-kawei ka sngi <adv>
+day by day
+tengkhat <adv>
+now and then
+ha kata hi ka sngi <adv>
+that very day
+ha ka bakut <adv>
+at length
+ha ka bakhatduh <adv>
+at last
+haduh kane ka sngi <adv>
+upto this day
+da kaba ryngkhat <adv>
+by chance
+baroh shisngi ngon <adv>
+all day long, the whole day
+khyndiat-pa-khyndiat <adv>
+little by little
+la katto katne por <adv>
+some time ago
+hamar ka por hi thik <adv>
+in the nick of time
+mynhakato <adv>
+the other day
+ha ka jinglyngngoh <adv>
+at a loss
+man ka teng <adv>
+every now and then
+ha ka bawai <adv>
+after all
+la kumno kumno <adv>
+1. after all
+   Synonym: {ha ka bawai}
+
+2. more or less
+baroh shimiet <adv>
+all night
+la slem <adv>
+long ago, for a long time
+      "Nga la pang khieshoh la slem."  - I have been suffering from fever for a long time.
+uwei-pa-uwei <adv>
+one by one
+   Synonym: {kawei-pa-kawei}
+
+kawei-pa-kawei <adv>
+one-by-one
+shibun ne khyndiat <adv>
+more or less
+   Synonym: {la kumno kumno}
+
+junom <adv>
+for good
+   Synonym: {jynduh}
+
+jynduh <adv>
+for good
+   Synonym: {junom}
+
+mynsngi <adv>
+in the daytime
+haba shu ong lyngkhot <adv>
+in short
+dang ngir <adv>
+at dawn
+shane shatai <adv>
+to and fro
+leh thok <v>
+play a trick, play truant
+   Synonym: {leh pep}
+
+leh danda <v>
+play a trick
+   Synonym: {leh thok}
+
+ïaid ryngkat ryngkat <v>
+go hand in hand
+shu shong <v>
+sit up
+      "Ngi shu shong baroh shimiet."  - We sat up all night.
+dangstep phyrngap <adv>
+before daylight
+      "Nga khie barabor dangstep phyrngap."  - I always get up before daylight.
+wahduit <n, f>
+rivulet, streamlet, small stream
+jingïapli <n, f>
+change
+   Synonym: {jingïapein}
+
+jingïapein <n, f>
+change
+pynkylla <v>
+change
+tah stam <v>
+put a stamp on
+babynta <v>
+share
+   Synonym: {baïoh lem}
+
+baïoh lem <v>
+share
+   Synonym: {babynta}
+
+lusha <v>
+pry into
+ïing dak <n, f>
+post office
+ryntih <adv>
+in order
+      "buh ryntih"  - put in order
+shongdor kit <v>
+cost
+jinglut jingsep <n, f>
+cost
+   Synonym: {jinglut}
+
+thliew jingriam <n, f>
+pitfall
+jinglong 'riewshai <n, f>
+civilisation
+bashitrhem <adj>
+fervent
+bapawkhmat <adj>
+eminent
+pion <n, m>
+1. postman
+      "Phim dei ban siew shuh ïa ka bainong u pion."  - You will not have to pay the postman's wages.
+2. peon
+phriang <v>
+spread out
+      "Ki pion ki phriang ïa ki shithi."  - The peons spread out the letters.
+na kjat <adv>
+at the bottom
+lyngkhot kotsada <n, f>
+strip of paper
+      "Tar noh ïa ka lyngkhot kotsada na kjat."  - Tear off the strip of paper at the bottom.
+hajan <adv>
+near
+      "I mama i shong kham hajan shibun ban ïa i kong."  - Our uncle lives much nearer than our sister.
+sain <v>
+sign
+kot phah tyngka <n, f>
+money order
+      "Nga la lah sain ïa ka kot phah tyngka."  - I had signed the money order.
+sharai <v>
+1. watch
+2. tend
+peitngor <v>
+stay up at night
+kyndiang <adv>
+clearly, distinctly
+phira <v>
+watch, guard
+   Synonym: {ap}
+
+   Synonym: {da}
+
+phira <n, m>
+guard, sentry
+   Synonym: {nongap}
+
+   Synonym: {nongïada}
+
+mynthi <adj>
+quiet, sullen
+mynthi <adv>
+ironically
+lyngngeit <adv>
+
+with the whole weight of the body
+baroh ar
+both
+      "Sngewbha ban tah stam ha kine ki shithi baroh ar."
+bashai <adj>
+civilised
+bishar <v>
+ [law] settle, try
+      "Ngan pyrshang ban bishar hok ïa ka jingïakajia jongphi."
+ïasam <v>
+divide
+      "Ngan ïasam ïa u kek bad ban ai ïa phi uwei uwei mar shiteng."
+jingshai na sepngi <n, f>
+ [pol] western civilisation
+      "Ka ri jong ngi ka la ïakynduh bad ka jingshai na sepngi."  - Our country came into contact with western civilisation.
+jaka sangeh <n, f>
+station
+      "Ka rel kan sa mareh suki ynda poi hajan ka jaka sangeh."  - The train will be running slowly when it comes near the station.
+ïai
+
+Together with 'yn' indication of future continuous tense.
+      "Kan ïai slap baroh shisngi."  - It will be raining the whole day.
+   Synonym: {nang}
+
+nang
+
+Together with 'yn' indication fo future continuous tense.
+      "Ki sim kin nangrwai."  - The birds will be singing.
+   Synonym: {ïai}
+
+akor <n>
+manner
+      "Ka long ka bajem ban nang ïa ki akor babha."  - It is easy to learn good manners.
+yn lah <v>
+might
+      "La ai khnang artylli ki khmat ha ngi ba ngin lah ban ïohi shibun kiei kiei bad kham stad manla ka sngi."
+shu sngap jar <v>
+keep silent
+      "Teng teng, la kumno kumno, ka long ka babha eh ban shu sngap jar, lada ka jingshisha kan nym pynbha ïano íano ruh."  - Sometimes, in the end, it is better to keep silent, when the truth will not do any good either.
+pynbha <v>
+do good
+teh lakam <v>
+restrain
+      "Pyrshang barabor ban teh lakam ïa la u thylliej."  - Always try to restrain your tongue.
+pynjakhlia <v>
+spoil
+      "Wat ju pynjakhlia ïa la u thylliej da ki ktien basngewsaitmet!"  - Never spoil your tongue with ugly words!
+basngewsaitmet <adj>
+ugly
+jingkhlemakor <n, f>
+bad manner
+jin
+ [gram]
+Together with 'yn' indication of Future Perfect tense.
+      "Un jin da la poi ïing katne por."  - He will have reached home by this time.
+paitbah <adj>
+ [pol] public
+      "La pynlong ka jingïalang paitbah manla ka por ha kane ka snem."  - A public meeting was made all the time this year.
+badonkam <adj>
+important
+dang-shai byrngut
+morning
+      "U syiar u ïai kynih naduh dang-shai byrngut."  - The cock had been crowing since morning.
+kren jingkren <v>
+deliver a speech
+bun teng <adv>
+often
+      "U la dem pang khieshoh la bun teng."  - He had often been suffering from fever.
+balushia <adj>
+naughty
+'riewkynthei <n, f>
+widow
+surok bah <n, f>
+street
+   Synonym: {surok}
+
+mynshuwa <adv>
+before
+      "Um ju ïohi ïa uta u briew mynshuwa."  - He had never seen this man before.
+piam khop <v>
+throw one's arms
+      "Hamar kane uta u briew u la piam khop ïa ka ryndang jong u."
+jingong <n, f>
+statement
+jingleit lynti <n, f>
+journey, travel
+jingleit duriaw <n, f>
+voyage
+nongpynïaid <n, m>
+agent
+ri la ka jong <n, f>
+ [pol] native land
+pynleit aiti <v>
+devote
+   Synonym: {pynlut}
+
+sngewtuh ïohi <v>
+realise
+Bilat <n>
+England
+      "Nga ïohsngew i hynmen jong phi i leit Bilat mo?"  - I hear your brother has gone to England, is it so?
+to niuma
+very well
+      "To nuima, nga sngewbha ban ïathuh ïa phi ïa kaba nga lah."  - Very well, I am glad to tell you anything that I can.
+steshon rel <n, f>
+railway station
+tiket <n, f>
+ticket
+Kolkata <n>
+Calcutta
+hiar arsut <v>
+start off
+      "Ka lieng ka hiar arsut na Hugly."  - The ship started off down the Hugly.
+diaw
+
+      "I bah i sngew diaw shibun haba i sngewthuh ba in jah noh na la shnong bun snem."  - My brother felt very sad as he realised that he was leaving his native land for many years.
+nongleh jadu <n, m>
+magician
+bakynjah <adj>
+quiet
+rngai <adj>
+magic
+      "Uta u briew u la kren katto katne ki ktien rngai."  - That man said some magic words.
+na ka bynta jong kaba
+for which
+      "Um shym lah ban ïoh ïa ka sharak rngai na ka bynta jong kaba u la wan khnang."  - He could not get the magic light for which he had come.
+radbah <n, m>
+giant
+sut <n, f>
+interest
+jingpynleit jingmut <n, f>
+1. interest
+2. attention
+jingaibor <n, f>
+permission
+   Synonym: {jingshah}
+
+jinglehsniew <n, f>
+mischief
+jingtuh <n, f>
+theft
+ der: {tuh}
+
+bashukor <adj>
+truant
+   Synonym: {bathok}
+
+bathok <adj>
+truant
+   Synonym: {bashukor}
+
+jingroi jingkiew <n, f>
+progress
+jingpynïap briew <n, f>
+murder
+bai lynti <n, f>
+fare
+'riewbyrtia <n, m>
+miser
+jinglehpalat <n, f>
+offence
+jingpeit <n, f>
+notice
+   Synonym: {jingpynbna}
+
+jingpynbna <n, f>
+notice
+   Synonym: {jingpeit}
+
+jingmanbha <n, f>
+welfare
+jingshukor <n, f>
+fraud
+riam ka beit <n, f>
+robe
+bakla <v>
+commit a mistake
+      "Sngewbha map ïa nga ba nga bakla."  - Please forgive me that I committed a mistake.
+masi kyrtong <n, m>
+ [bio] bull
+aibor <v>
+give permission
+   Synonym: {shah}
+
+roi <v>
+progress
+dumok mai <v>
+take to task
+pynïap briew <v>
+murder
+noh jingmut <v>
+be interested in
+   Synonym: {ïadon bynta}
+
+ïadon bynta <v>
+be interested in
+   Synonym: {noh jingmut}
+
+leh pep <v>
+play truant
+   Synonym: {leh thok}
+
+pynriam pynbeit <v>
+dress up
+pynlehrain <v>
+put to shame
+ïehnoh shadien <v>
+leave behind
+leh palat <v>
+offend
+da khmih <v>
+take notice
+spel lyndet <v>
+get by hard
+lamwir <v>
+go mad
+niewsting <v>
+trifle with
+ïashah <v>
+take side, favour
+   Synonym: {ïarap}
+
+para briew <n, pl>
+people
+kitkhia <v>
+pay attention
+      "Ki kitkhia bha  ïa ka kam."  - They pay due attention to the work.
+piskot <n, m>
+screwdriver
+         Note: from Hindi
+ïashah ïa <v>
+take side with
+jingai synei <n, f>
+alms
+jingshahshkor <n, f>
+heed
+markynti <n, f>
+property
+   Synonym: {spah}
+
+   Synonym: {jingdon}
+
+pynbna <v>
+give out
+ot plang <v>
+mow grass
+leh sbun <v>
+do a favour
+sngap <v>
+give heed to
+   Synonym: {shahshkor}
+
+ai isynei <vt>
+give alms
+      "Ka ai isynei ïa ki baduk."  - She gives alms to the poor.
+thiah khop <v>
+lay down
+aiti <v>
+make over
+      "U kpa u la aiti ïa la ka spah ha la u khun."  - The father made over his property to his son.
+ujor <v>
+protest
+      "Ngi ujor pyrshah ïa ka jinghikai jong u."
+tylliat <v>
+run over
+      "Ka kali ka la tylliat ïa u ksew."  - The car ran over the dog.
+   Synonym: {shlei}
+
+bam lut <v>
+eat up
+trei kam <v>
+do business
+ïoh tyngka <v>
+make money
+lait na <v>
+get rid of
+kiar <v>
+get rid of
+   Synonym: {lait na}
+
+ot tyrsim <v>
+pare nails
+mih noh <v>
+set off
+aiwai <vt>
+let
+      "Ka la aiwai ïa ka ïing."  - She let the house.
+ai um <v>
+water
+      "ai um ïa u jingthung"  - water the plant
+syntiew <n>
+flower
+'riewsaid <n, m>
+lawyer
+      "U 'riewsaid jong u ruh um imat ïadei jingmut bad nga."  - His lawyer too did not seem to agree with me.
+leh bha <v>
+get on well
+      "U leh bha shibun ha la ki jingpule."  - He is getting on very well with his studies.
+shlei <v>
+run over
+   Synonym: {tylliat}
+
+kut jingmut <v>
+make up one's own mind
+      "Ngi ïakut jingmut ban pyndep kloi ïa ka jingtrei katba lah."  - We have made up our own mind to finish the work as fast as we can.
+tharai <v>
+suppose
+shim niat <v>
+take up
+      "U Ram u la shim niat ïa ka jingput bad u ïaleit noh bad u khynnah syiem."
+   Synonym: {shimti}
+
+ryndang sopti kti <n, f>
+sleeve
+sohkliang <n, f>
+scar
+leit matlah <v>
+go blind
+dawa <v>
+charge
+   Synonym: {shim}
+
+jingshimti <n, f>
+charge
+jingmudui <n, f>
+charge
+jingsumar <n, f>
+ [med] treatment
+ïashan <v>
+favour
+   Synonym: {ïashah}
+
+   Synonym: {ïamon}
+
+ïamon <v>
+favour
+   Synonym: {ïashah}
+
+   Synonym: {ïashan}
+
+khamtam <adv>
+especially
+pynheh <v>
+enlarge
+badei ïa ki kam hima sima <v>
+be political
+jingphylla <n, f>
+wonder
+sngewphylla <v>
+wonder
+kyrmen <v>
+hope
+tang katta
+no more
+      "Ngin ïa ong lang laiphew tynka bad tang katta."  - We shall say thirty rupees and no more.
+shisha shisha <adv>
+quite
+      "Ka long kaba sngewphylla shisha shisha."  - It is quite wonderful.
+phah shaw <v>
+send for
+      "Phi la lah phah shaw doktor?"  - You had sent for a doctor?
+   Synonym: {phah khot}
+
+thlip <adv>
+totally
+      "U la matlah thlip."  - He was totally blind.
+kyndong <v>
+roll, roll up
+      "Katba u dang kren, u la kyndong ïa la ka ryndang sopti bad u la pyni ïa ka sohkliang ka baheh ha ka ksangkti."
+ophis <n, f>
+office
+jingkynmaw <n, f>
+reminder
+jingsneng <n, f>
+advice
+      "Um pynsngew ïa ka jingsneng jong nga."  - He turned a deaf ear to my advice.
+   Synonym: {jingai jingmut}
+
+jingai jingmut <n, f>
+advice
+   Synonym: {jingsneng}
+
+jingtyrwa <n, f>
+resolution
+   Synonym: {jingïakut}
+
+jingïakut <n, f>
+resolution
+   Synonym: {jingtyrwa}
+
+jingpynmlien <n, f>
+practice
+jingleh kmen <n, f>
+rejoicing
+      "U ïashim bynta ha ka jingïalehkmen."  - He takes part in the rejoicing.
+kyntu <v>
+call upon
+   Synonym: {kyrpad}
+
+ring jingmut <v>
+draw attention
+      "Nga kwah ban ring ïa ka jingmut jong phi sha kane ka kam."  - I want to draw your attention to this matter.
+pule khmih <v>
+go through
+kynmaw dngong <v>
+make it a point
+jingbuhrieh <n, f>
+secret
+jingkhein jingdiah <n, f>
+account
+peit bniah <v>
+go over
+   Synonym: {pule}
+
+duh lehnoh ei <v>
+fall short of
+      "Ngi la duh lehnoh ei ïa ka burom ka jong u Blei."
+   Synonym: {duna}
+
+shait pat <v>
+come round
+ai ding <v>
+set fire
+   Synonym: {wiang}
+
+wiang <v>
+set fire
+   Synonym: {ai ding}
+
+shim bynta <v>
+take part
+beb kylla long <v>
+turn out
+ïakhlad <v>
+take leave of
+      "U ïakhlad noh bad la ki kmie ki kpa."  - He takes leave of his parents.
+long pyrshah <vt>
+be hard for
+      "Kan long pyrshah ïa phi."  - It will be hard for you.
+sngi palei <n, f>
+Thursday
+paw <v>
+come to light
+      "Ka jingbuhrieh ka paw shabar."  - The secret came to light.
+kam sniew <n, f>
+misconduct
+      "Ki la beh ïa u namar ka kam sniew."
+dang rit <v>
+be young
+      "I kmie jong ki i la ïap mynba ki dang rit eh."  - Their mother died when they were very young.
+sohïong <n, m>
+ [bot] prunus nepalensis
+         Note: a black fruit similar in look and size to grapes
+unknown
+ abcdeghijklmnoprstuvwyïñ

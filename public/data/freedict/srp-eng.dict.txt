@@ -1,0 +1,804 @@
+Serbian - English FreeDict Dictionary ver. 0.2
+Југославен /jˈuɡoslˌɐvɛn/
+Yugoslav, Yugoslavian
+Југославија /jˈuɡoslˌɐvɪjɐ/
+Yugoslavia
+Југословен /jˈuɡoslˌovɛn/
+Yugoslav, Yugoslavian
+јабука /jˈabʊkɐ/
+apple
+јагње /jˈaɡɲe/
+lamb
+јануар /jˈanʊɑr/
+January
+јастук /jˈastʊk/
+cushion
+један /jˈedɐn/
+one
+једна /jˈednɐ/
+one
+једно /jˈedno/
+one
+језеро /jˈezɛro/
+lake, loch
+језик /jˈezɪk/
+1. tongue
+2. language
+јул /jˈul/
+July
+јун /jˈun/
+June
+јунак /jˈunɐk/
+hero
+јуче /jˈutʃɛ/
+yesterday
+Њемачка /ɲˈemɐtʃkɐ/
+Germany
+љекар /ʎˈekɑr/
+doctor, physician
+љето /ʎˈeto/
+summer
+љубав /ʎˈubɐv/
+affection, love
+људи /ʎˈudɪ/
+people
+Бог /bˈoɡ/
+God
+Енглез /ˈɛŋɡlɛz/
+Englishman, Sassenach
+Енглеска /ˈɛŋɡlɛskɐ/
+England
+Енглескиња /ˈɛŋɡlɛskˌɪɲɐ/
+English, Englishwoman
+Немачка /nˈɛmɐtʃkɐ/
+Germany
+Србин /srbˈin/
+Serb
+Француз /frˈantsʊz/
+Frenchman
+Францускиња /frˈantsʊskˌɪɲɐ/
+Frenchwoman
+Хрват /xrvˈaːt/
+Croat
+Хрватска /xrvˈaːtskɐ/
+Croatia
+Циганин /tsˈiɡɐnɪn/
+gypsy, Gypsy
+Чех /tʃˈɛh/
+Czech
+август /ˈavɡʊst/
+August
+авион /ˈavɪon/
+1. aeroplane, airplane, plane
+2. aircraft
+адреса /ˈadrɛsɐ/
+address
+аеродром /ˈaɛrˌodrom/
+airport
+аероплан /ˈaɛrˌoplɐn/
+aeroplane, airplane, plane
+ако /ˈako/
+if, provided that
+али /ˈalɪ/
+but
+април /ˈaprɪl/
+April
+аутомобил /ˈaʊtˌomobɪl/
+car
+баба /bˈabɐ/
+grandmother
+балкон /bˈalkon/
+balcony
+бацати /bˈatsɐtɪ/
+throw
+бацити /bˈatsɪtɪ/
+throw
+баш /bˈaʃ/
+exactly, sharp
+башта /bˈaʃtɐ/
+garden
+без /bˈɛz/
+without
+берберин /bˈɛrbɛrɪn/
+barber, hairdresser
+библиотека /bˈiblɪˌotɛkɐ/
+library
+биоскоп /bˈioskop/
+cinema, movie theatre
+бифтек /bˈiftɛk/
+steak, beefsteak
+боја /bˈojɐ/
+colour, dye
+бол /bˈol/
+ache, pain
+бомба /bˈombɐ/
+bomb
+брат /brˈat/
+brother
+брег /brˈɛɡ/
+hill
+бресква /brˈɛskvɐ/
+peach
+брзо /brzˈo/
+fast, quickly, swiftly
+бријег /brˈijeɡ/
+hill
+брод /brˈod/
+ship, vessel
+бубрег /bˈubrɛɡ/
+kidney
+ваздух /vˈazdʊh/
+air
+варош /vˈɑroʃ/
+city, town
+већ /vˈɛtɕ/
+but, however, nevertheless, yet
+веђ /vˈɛdʑ/
+already, by now, yet
+вељача /vˈɛʎɐtʃɐ/
+February
+вече /vˈɛtʃɛ/
+evening
+вино /vˈino/
+wine
+висина /vˈisɪnɐ/
+altitude, height
+воће /vˈotɕɛ/
+fruit
+војник /vˈojnɪk/
+pawn, soldier
+војска /vˈojskɐ/
+army
+вода /vˈodɐ/
+water
+враг /vrˈaɡ/
+devil
+врата /vrˈatɐ/
+door
+време /vrˈɛmɛ/
+1. time, while
+2. weather
+вријеме /vrˈijemɛ/
+1. time, while
+2. weather
+врло /vrlˈo/
+quite, very, very much
+врт /vrt/
+garden
+врућина /vrˈutɕɪnɐ/
+heat
+галама /ɡˈalɐmɐ/
+ado, din, noise
+глумац /ɡlˈumɐts/
+actor
+глумица /ɡlˈumɪtsɐ/
+actress
+година /ɡˈodɪnɐ/
+year
+гост /ɡˈost/
+guest
+гостионица /ɡˈostɪˌonɪtsɐ/
+hostel, inn
+град /ɡrˈad/
+city, town
+грана /ɡrˈanɐ/
+bough, branch
+да /dˈa/
+yes
+дан /dˈan/
+day
+данас /dˈanɐs/
+today
+датум /dˈatʊm/
+date
+два /dvˈa/
+two
+две /dvˈɛ/
+two
+двоје /dvˈoje/
+pair
+девет /dˈɛvɛt/
+nine
+девојка /dˈɛvojkɐ/
+girl, lass, wench
+десет /dˈɛsɛt/
+ten
+децембар /dˈɛtsɛmbɑr/
+December
+джеп /dʒˈɛp/
+pocket
+диван /dˈivɐn/
+couch, divan
+до виђења /dˈo vˈidʑɛɲɐ/
+bye, goodbye, so long
+доба /dˈobɐ/
+age
+доручак /dˈorʊtʃɐk/
+breakfast
+дућан /dˈutɕɐn/
+boutique, shop, store
+дужност /dˈuʒnost/
+duty, obligation
+жена /ʒˈɛnɐ/
+woman
+живот /ʒˈivot/
+life
+заједно /zˈɑjedno/
+together
+збогом /zbˈoɡom/
+adieu, farewell, bye, goodbye
+зграда /zɡrˈadɐ/
+building
+земља /zˈɛmʎɐ/
+earth, land, soil
+зид /zˈid/
+wall
+зима /zˈimɐ/
+winter
+зуб /zˈub/
+tooth
+и /ˈi/
+and
+иако /ˈiɐko/
+though, although
+играчка /ˈiɡrɐtʃkɐ/
+toy
+из /ˈiz/
+from, out of
+између /ˈizmɛdʑʊ/
+among, between
+или /ˈɪlɪ/
+or
+име /ˈimɛ/
+appellation, name
+иностранство /ˈinostrˌɐnstvo/
+abroad
+истина /ˈistɪnɐ/
+reality, truth
+кћерка /ktɕˈɛrkɐ/
+daughter
+кћи /ktɕˈi/
+daughter
+к /kˈə/
+at, to, toward, towards
+кључ /kʎˈutʃ/
+lock
+књига /kɲˈiɡɐ/
+book
+ка /kˈa/
+at, to, toward, towards
+камен /kˈamɛn/
+stone
+канцеларија /kˈantsɛlˌɑrɪjɐ/
+bureau, office
+карта /kˈɑrtɐ/
+card, map, menu
+кафа /kˈafɐ/
+coffee
+кафана /kˈafɐnɐ/
+café, coffee‐house
+кашика /kˈaʃɪkɐ/
+spoon
+келнер /kˈɛlnɛr/
+waiter
+килограм /kˈiloɡrɐm/
+kilo
+клас /klˈas/
+class
+клима /klˈimɐ/
+climate
+кнез /knˈɛz/
+prince
+кољено /kˈoʎeno/
+knee
+коњ /kˈoɲ/
+horse
+ковчег /kˈoftʃɛɡ/
+box, chest
+когод /kˈoɡod/
+a, any, anybody, some, somebody, one, some one
+кола /kˈolɐ/
+vehicle
+колено /kˈolɛno/
+knee
+коловоз /kˈolovoz/
+August
+комад /kˈomɐd/
+bit, lump, piece
+конзул /kˈonzʊl/
+consul
+концерат /kˈontsɛrɐt/
+concert
+концерт /kˈontsɛrt/
+concert
+кост /kˈost/
+bone
+краљ /krˈaʎ/
+king
+кревет /krˈɛvɛt/
+bed
+кров /krˈov/
+roof
+кроз /krˈoz/
+through
+купатило /kˈupɐtˌɪlo/
+bathroom
+купе /kˈupɛ/
+compartment, coupé
+кухиња /kˈuhɪɲɐ/
+kitchen
+леђа /lˈɛdʑɐ/
+back
+лед /lˈɛd/
+ice
+лекар /lˈɛkɑr/
+doctor, physician
+лето /lˈɛto/
+summer
+лиспањ /lˈispɐɲ/
+June
+листопад /lˈistopɐd/
+October
+литар /lˈitɑr/
+liter, litre
+лице /lˈitsɛ/
+face
+мјесец /mjˈesɛts/
+1. moon
+2. month
+мјесто /mjˈesto/
+1. place
+2. location, spot
+мај /mˈɑj/
+May
+мајка /mˈɑjkɐ/
+mother
+магла /mˈaɡlɐ/
+fog, mist
+марка /mˈɑrkɐ/
+stamp, postage stamp
+март /mˈɑrt/
+March
+мати /mˈatɪ/
+mother
+мачка /mˈatʃkɐ/
+cat
+машина /mˈaʃɪnɐ/
+1. engine, machine
+2. typewriter
+мед /mˈɛd/
+honey
+месец /mˈɛsɛts/
+1. moon
+2. month
+месо /mˈɛso/
+meat
+место /mˈɛsto/
+1. place
+2. location, spot
+метар /mˈɛtɑr/
+metre
+ми /mˈi/
+us, we
+миља /mˈiʎɐ/
+mile
+милицајац /mˈilɪtsˌɑjɐts/
+policeman
+министар /mˈinɪstɑr/
+minister
+мир /mˈir/
+peace
+можда /mˈoʒdɐ/
+maybe, mayhap, perchance, perhaps, possibly
+море /mˈorɛ/
+sea
+мост /mˈost/
+bridge
+мрак /mrˈak/
+darkness, murk
+муж /mˈuʒ/
+husband
+музеј /mˈuzej/
+museum
+музика /mˈuzɪkɐ/
+music
+неђеља /nˈɛdʑɛʎɐ/
+Sunday
+небо /nˈɛbo/
+heaven, sky
+негђе /nˈɛɡdʑɛ/
+anywhere, somewhere
+негде /nˈɛɡdɛ/
+anywhere, somewhere
+него /nˈɛɡo/
+than
+недеља /nˈɛdɛʎɐ/
+Sunday
+незгода /nˈɛzɡodɐ/
+accident
+неко /nˈɛko/
+a, any, anybody, some, somebody, one, some one
+непријатељ /nˈɛprɪjˌɐtɛʎ/
+adversary, enemy
+нешто /nˈɛʃto/
+anything, something
+нигђе /nˈiɡdʑɛ/
+nowhere
+нигде /nˈiɡdɛ/
+nowhere
+никад /nˈikɐd/
+never
+никада /nˈikɐdɐ/
+never
+нико /nˈiko/
+neither, nobody, none, no‐one
+ништа /nˈiʃtɐ/
+nothing
+ноћ /nˈotɕ/
+night
+новембар /nˈovɛmbɑr/
+November
+нога /nˈoɡɐ/
+leg
+нож /nˈoʒ/
+knife
+нос /nˈos/
+nose
+ођедном /ˈodʑɛdnom/
+all of a sudden, suddenly
+обала /ˈobɐlɐ/
+coast, seaside, shore
+обичај /ˈobɪtʃɑj/
+custom, habit, way
+обично /ˈobɪtʃno/
+ordinarily, usually
+обоје /ˈoboje/
+both
+обрва /ˈobrvɐ/
+brow, eyebrow
+оглас /ˈoɡlɐs/
+ad, advertisement
+ожујак /ˈoʒʊjɐk/
+March
+око /ˈoko/
+eye
+октобар /ˈoktobɑr/
+October
+оловка /ˈolofkɐ/
+pencil
+он /ˈon/
+he, him
+она /ˈonɐ/
+her, she
+оно /ˈono/
+it
+опасност /ˈopɐsnost/
+danger, peril
+опет /ˈopɛt/
+1. afresh, again, all over again, anew
+2. once more
+орах /ˈorɐh/
+walnut
+ормар /ˈormɑr/
+cabinet, closet, cupboard, sideboard
+осам /ˈosɐm/
+eight
+отсутан /ˈotsʊtɐn/
+absent
+пјесма /pjˈesmɐ/
+afoot, on foot
+пјешице /pjˈeʃɪtsɛ/
+afoot, on foot
+пар /pˈɑr/
+pair
+парк /pˈɑrk/
+park
+пас /pˈas/
+dog
+пасош /pˈasoʃ/
+passport
+перон /pˈɛron/
+platform, quay, wharf
+песма /pˈɛsmɐ/
+afoot, on foot
+пет /pˈɛt/
+five
+петак /pˈɛtɐk/
+Friday
+пешице /pˈɛʃɪtsɛ/
+afoot, on foot
+пиво /pˈivo/
+ale, beer
+писмо /pˈismo/
+letter
+питање /pˈitɐɲe/
+question
+планина /plˈanɪnɐ/
+mountain
+плата /plˈatɐ/
+salary, wage, wages
+плеће /plˈɛtɕɛ/
+shoulder
+погрешка /pˈoɡrɛʃkɐ/
+aberration, error, mistake
+под /pˈod/
+1. floor
+2. below, beneath, under, underneath
+позориште /pˈozorˌɪʃtɛ/
+theatre
+полиција /pˈolɪtsˌɪjɐ/
+police
+понедељак /pˈonɛdˌɛʎɐk/
+Monday
+понекад /pˈonɛkɐd/
+several times, sometimes
+поподне /pˈopodnɛ/
+afternoon
+породица /pˈorodˌɪtsɐ/
+family
+после /pˈoslɛ/
+after, behind
+постеља /pˈostɛʎɐ/
+bed
+пратити /prˈatɪtɪ/
+accompany
+предграђе /prˈɛdɡrɐdʑɛ/
+suburb
+прекјуче /prˈɛkjʊtʃɛ/
+the day before yesterday
+преко /prˈɛko/
+across, beyond, on the other side of
+прекосутра /prˈɛkosˌʊtrɐ/
+the day after tomorrow
+прексутра /prˈɛksʊtrɐ/
+the day after tomorrow
+пријатељ /prˈijɐtɛʎ/
+friend
+пријатељица /prˈijɐtˌɛʎɪtsɐ/
+friend
+прихватити /prˈihvɐtˌɪtɪ/
+accept, receive, take, take in
+прозор /prˈozor/
+window
+просинац /prˈosɪnɐts/
+December
+против /prˈotɪv/
+across from, against, in exchange for, opposed to, opposite, upon
+професор /prˈofɛsor/
+professor
+прст /prst/
+finger
+прстен /prstˈɛn/
+ring
+пут /pˈut/
+time, while
+рад /rˈad/
+job, work
+радња /rˈadɲɐ/
+boutique, shop, store
+радник /rˈadnɪk/
+hand, laborer, labourer, operative, worker, working man, workman
+радост /rˈadost/
+gladness, joy
+рана /rˈanɐ/
+injury, wound
+рат /rˈat/
+war
+рачун /rˈatʃʊn/
+account
+река /rˈɛkɐ/
+river
+ресторан /rˈɛstorɐn/
+restaurant
+реч /rˈɛtʃ/
+word
+речник /rˈɛtʃnɪk/
+dictionary, vocabulary
+ријека /rˈijekɐ/
+river
+ријеч /rˈijetʃ/
+word
+ријечник /rˈijetʃnɪk/
+dictionary, vocabulary
+риба /rˈibɐ/
+fish
+рујан /rˈujɐn/
+September
+рука /rˈukɐ/
+hand
+рукавица /rˈukɐvˌɪtsɐ/
+glove, mitten
+сјеме /sjˈemɛ/
+seed
+савјет /sˈavjet/
+advice, counsel
+савет /sˈavɛt/
+advice, counsel
+сагласити се /sˈaɡlɐsˌɪtɪ sˈɛ/
+accede, agree, consent
+сад /sˈad/
+at present, now
+сада /sˈadɐ/
+at present, now
+сам /sˈɐm/
+alone, only, sole, solitary
+саобраћај /sˈaobrˌɐtɕɑj/
+traffic
+сат /sˈat/
+hour, o'clock, time
+све /svˈɛ/
+all, altogether, everything
+свет /svˈɛt/
+world
+свијет /svˈijet/
+world
+свибањ /svˈibɐɲ/
+May
+свуда /svˈudɐ/
+all about, everywhere
+седам /sˈɛdɐm/
+seven
+село /sˈɛlo/
+village
+семе /sˈɛmɛ/
+seed
+септембар /sˈɛptɛmbɑr/
+September
+сестра /sˈɛstrɐ/
+sister
+сијечањ /sˈijetʃɐɲ/
+January
+син /sˈin/
+son
+сир /sˈir/
+cheese
+скупа /skˈupɐ/
+together
+слика /slˈikɐ/
+painting, picture
+сликар /slˈikɑr/
+painter
+слуга /slˈuɡɐ/
+boy, servant
+смоква /smˈokvɐ/
+fig
+снаха /snˈahɐ/
+daughter‐in‐law
+снег /snˈɛɡ/
+snow
+снијег /snˈijeɡ/
+snow
+соба /sˈobɐ/
+chamber, room
+списак /spˈisɐk/
+list
+способан /spˈosobɐn/
+able, capable
+среда /srˈɛdɐ/
+Wednesday
+сриједа /srˈijedɐ/
+Wednesday
+српањ /srpˈaɲ/
+July
+срце /srtsˈɛ/
+heart
+стаза /stˈazɐ/
+path
+станица /stˈanɪtsɐ/
+station
+ствар /stvˈɑr/
+affair, business, business deal, case, matter
+столица /stˈolɪtsɐ/
+chair
+странац /strˈanɐts/
+foreigner
+страница /strˈanɪtsɐ/
+page
+стриц /strˈits/
+uncle
+студент /stˈudɛnt/
+academic, student
+студенткиња /stˈudɛntkˌɪɲɐ/
+student, female student
+судац /sˈudɐts/
+judge
+сунце /sˈuntsɛ/
+sun
+супа /sˈupɐ/
+soup
+сутра /sˈutrɐ/
+tomorrow
+тајна /tˈɑjnɐ/
+secret
+тањир /tˈaɲɪr/
+plate
+такоде /tˈakodɛ/
+also, likewise, too
+такси /tˈaksɪ/
+taxi
+тетка /tˈɛtkɐ/
+aunt
+травањ /trˈavɐɲ/
+April
+три /trˈi/
+three
+турист /tˈurɪst/
+tourist
+у /ˈu/
+a, in, inside, into, on, per, within
+увек /ˈuvɛk/
+always, ever
+увијек /ˈuvɪjek/
+always, ever
+уво /ˈuvo/
+ear
+универзитет /ˈunɪvˌɛrzɪtɛt/
+university
+усна /ˈusnɐ/
+lip
+успјех /ˈuspjeh/
+achievement, success
+успех /ˈuspɛh/
+achievement, success
+уторак /ˈutorɐk/
+Tuesday
+ухо /ˈuho/
+ear
+учитељ /ˈutʃɪtɛʎ/
+instructor, teacher
+фебруар /fˈɛbrʊɑr/
+February
+фунта /fˈuntɐ/
+pound
+хљеб /xʎˈeb/
+bread, loaf
+хармоника /xˈɑrmonˌɪkɐ/
+accordion
+хартија /xˈɑrtɪjɐ/
+paper
+хлеб /xlˈɛb/
+bread, loaf
+хотел /xˈotɛl/
+hotel
+храброст /xrˈabrost/
+courage
+цвет /tsvˈɛt/
+bloom, flower
+цвијет /tsvˈijet/
+bloom, flower
+циљ /tsˈiʎ/
+aim, goal, purpose, target
+цигарета /tsˈiɡɑrˌɛtɐ/
+cigarette
+ципела /tsˈipɛlɐ/
+shoe
+црква /tsrkvˈa/
+church, church‐building, house of worship, place of worship
+чај /tʃˈɑj/
+tea
+чек /tʃˈɛk/
+check, cheque
+чекић /tʃˈɛkɪtɕ/
+hammer
+често /tʃˈɛsto/
+frequently, often, regularly
+четвртак /tʃˈɛtvrtɐk/
+Thursday
+четири /tʃˈɛtɪrɪ/
+four
+шећер /ʃˈɛtɕɛr/
+sugar
+шест /ʃˈɛst/
+six
+шешир /ʃˈɛʃɪr/
+hat
+школа /ʃkˈolɐ/
+school
+шоља /ʃˈoʎɐ/
+cup
+шофер /ʃˈofɛr/
+chauffeur, driver
+шума /ʃˈumɐ/
+forest, woods
+unknown
+ абвгдежзиклмнопрстуфхцчшђјљњћ

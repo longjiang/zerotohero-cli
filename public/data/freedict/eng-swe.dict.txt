@@ -1,0 +1,12037 @@
+
+00-database-dictfmt-1.12.1
+English-Swedish FreeDict Dictionary
+
+Maintainer: [up for grabs]
+
+Edition: 0.2
+Size: 5479 headwords
+
+Publisher: FreeDict.
+
+
+Availability:
+
+    Copyright (C) 1999-2017 by various authors listed below.
+    Available under the terms of the GNU General Public License ver. 2.0 and
+  any later version.
+
+Published at: http://freedict.org/
+ID# (svn): $Id$
+
+Notes:
+
+ * Database Status: small
+
+
+Source(s):
+
+  Home: http://freedict.org/ [http://freedict.org/] This Database was
+  generated from ergane, http://www.travlang.com
+  [http://www.travlang.com].
+
+The Project:
+
+  This dictionary comes to you through nice people making it available for
+  free and for good. It is part of the FreeDict project,
+  http://freedict.org/. This project aims to make translating dictionaries
+  available for free. Your contributions are welcome!
+
+Changelog:
+
+ * 2017-12-03 Sebastian Humenda ver. 0.2:
+   * update licencing stanza (thanks to Karl Bartel)
+   * remove duplicated entries
+   * fix enumeration in one translation
+ * 2010-10-24 Piotr Bański:
+   Conversion of TEI P4 source into P5 via tools/freedict_P4toP5.xsl;
+   manual clean-up. We are back to version from before Michael Bunk's
+   re-import from Ergane of 2006-12-20 that was rolled back due to
+   Ergane's cryptic change of database licensing. Multi-word equivalents
+   should be split by spaces. And it looks like their headwords only keep
+   the 1st word (check out "All").
+ * 2005-Nov-23 Michael Bunk:
+   Fixed SourceForge Bug #1290578
+ * 2005-02-11 Michael Bunk:
+   Converted file to TEI P4
+ * 2000-04-27 Horst Eyermann:
+   Database was converted to TEI format and checked into CVS
+ * 2000-01-10 Horst Eyermann:
+   This Database was generated from ergane, http://www.travlang.com -
+   Thanks!
+English-Swedish FreeDict Dictionary ver. 0.2
+http://freedict.org/
+ABC /eibiːsiː/
+alfabet
+Africa /æfrikə/
+Afrika
+African /æfrikən/
+1. afrikansk
+2. afrikan
+All /lhælouz/
+allhelgonadag
+All /lseintsdei/
+allhelgonadag
+American /əmerikən/
+1. amerikansk
+2. amerikan
+American /əmerikənindiən/
+indian
+Annunciation /ənʌnsieiʃən/
+bebådelsedag
+Antarctic /æntɑːktik/
+Sydpolen
+April /eiprəl/
+april
+Arab /ærəb/
+arab
+Arabian /əreibiən/
+arabisk
+Arabic /ærəbik/
+arabisk
+Arctic /ɑːktik/
+Nordpolen
+Arctic /ɑːktikouʃən/
+Ishavet
+Armenia /ɑːməniə/
+Armenien
+Ascension /əsenʃəndei/
+Kristihimmelsfärdsdag
+Asia /əʃiə/
+Asien
+Asian /əʃiən/
+1. asiatisk
+2. asiat
+Asiatic /eiʃiætik/
+asiatisk
+Atlantic /ætlæntik/
+Atlanten
+Atlantic /ætlæntikouʃən/
+Atlanten
+August /ɔːgəst/
+augusti
+Australia /ɔstreiliə/
+Australien
+Australian /ɔstreiliən/
+1. australisk
+2. australier
+Austria /ɔstriə/
+Österrike
+Austrian /ɔstriən/
+ostron
+Baltic /bɔːltik/
+baltisk
+Baltic /bɔːltiksiə/
+Östersjön
+Bavaria /beivɛəriə/
+Bajern
+Bavarian /beivɛəriən/
+1. bajersk
+2. bajrare
+Belgian /beldʒən/
+1. belgisk
+2. belgier
+Belgium /beldʒəm/
+Belgien
+Berlin /bəːlin/
+berlinsk
+Bible /baibl/
+Bibel
+Brazil /brəzil/
+Brasilien
+Brazilian /brəziliən/
+brasiliansk
+Britain /britn/
+Brittannien, Storbrittannien
+British /britiʃ/
+brittisk
+Briton /britn/
+britt
+Brussels /bɹˈʌsəlz/
+brysselkål
+Bulgaria /bʌlgɛəriə/
+Bulgarien
+Canadian /kəneidiən/
+kanadensare
+Caspian /kæspiənsiə/
+Kaspiskahavet
+Catholic /kæθlik/
+katolik
+Chinaman /tʃainəmən/
+kines
+Chinese /tʃainiːz/
+1. kinesisk
+2. kines
+Christ /kraist/
+Kristus
+Christian /kristʃən/
+1. kristen, kristlig
+Christianity /kristiænitiː/
+kristendom
+Christmas /krisməs/
+jul
+Copenhagen /koupənheigən/
+Köpenhamn
+Dalecarlia /dəliːkɑːliə/
+Dalarna
+Dane /dein/
+dansk
+Danish /deiniʃ/
+dansk
+December /disembər/
+december
+Denmark /denmɑːk/
+Danmark
+Dutch /dʌtʃ/
+1. holländsk
+2. nederländsk
+Dutchman /dʌtʃmən/
+1. holländare
+2. nederländare
+East /iːst/
+orient, ost, östan, öster
+Easter /iːstər/
+påsk
+Egypt /edʒipt/
+Egypten
+England /iŋglənd/
+England
+English /iŋgliʃ/
+engelsk
+Englishman /iŋgliʃmən/
+engelsman
+Epiphany /ipifəniː/
+trettondag
+Eskimo /eskimou/
+eskimå
+Estonia /istouniə/
+Estland
+Europa /jeəroupə/
+Europa
+Europe /jeərəp/
+Europa
+European /jeərəpiən/
+1. europeisk
+2. europé
+Far /fəriːst/
+Ytterstaöstern
+February /febjeəriː/
+februar
+Finland /finlənd/
+Finland
+Finn /fin/
+finne
+Finnish /finiʃ/
+finsk
+Flanders /flændəz/
+Flandern
+Flemming /flemiŋ/
+flamländare
+France /frɑːns/
+Frankrike
+French /frentʃ/
+1. fransk
+2. franska
+Frenchman /frentʃmən/
+fransman
+Frenchwoman /frentʃwumən/
+fransyska
+French /frentʃlæŋgwidʒ/
+franska
+Friday /fraidiː/
+fredag
+Frisian /fziən/
+fris
+German /dʒəːmən/
+1. tysk
+2. tyska
+Germanic /dʒəmænik/
+germansk
+Germany /dʒəːməniː/
+Tyskland
+German /dʒəːmənlæŋgwidʒ/
+tyska
+God /gɔd/
+Gud
+God /gɔdzeikər/
+kyrkogård
+Good /gudfraidiː/
+långfredag
+Great /greitbritn/
+Brittannien, Storbrittannien
+Greece /gris/
+Grekland
+Greek /griːk/
+1. grekisk
+2. grek
+Greek /griːkwumən/
+grekinna
+Gulf /gʌlfɔfbɔðniə/
+Bottenviken, Bottniskaviken
+Gypsy /dʒipsiː/
+tattare, zigenare
+H /ˈeɪtʃ/
+vätebomb
+Hebrew /hiːbruː/
+1. judisk
+2. jude
+Holland /hɔlənd/
+1. Holland
+2. Nederländerna
+Hollander /hɔləndər/
+holländare
+Hungarian /hʌŋgɛəriən/
+ungrare
+Hungary /hʌŋgəriː/
+Ungern
+Iceland /aislənd/
+Island
+Icelander /aisləndər/
+islänning
+Icelandic /aisləndik/
+isländsk
+India /indiə/
+Indien
+Indian /indiən/
+1. indisk
+2. indian
+Indian /indiənkɔːn/
+majs
+Ireland /aiələnd/
+Irland
+Irish /airiʃ/
+irländsk
+Irishman /airiʃmən/
+irländare
+Italian /itæliən/
+1. italiensk
+2. italienare
+Italy /itəliː/
+Italien
+January /dʒænjuriː/
+januari
+Japanese /dʒæpəniːz/
+1. japanesisk, japansk
+2. japanes
+Javan /dʒəvæn/
+javanesisk, javansk
+Javanese /dʒɑːvəniːz/
+1. javanesisk, javansk
+2. javan, javanes
+Jew /dʒjuː/
+1. jude
+Jewish /dʒuːiʃ/
+judisk
+July /dʒuːlai/
+juli
+June /dʒuːn/
+juni
+Lady /leidiːdei/
+bebådelsedag
+Lapland /læpleind/
+Lappland
+Laplander /læpleindər/
+lapp
+Lapp /leip/
+1. lappländsk, lapsk
+2. lapp
+Lappish /læpiʃ/
+lappländsk, lapsk
+Latvia /lætviə/
+Lettland
+Little /litlridraidiŋud/
+Rödluva
+Little /litlsnouwait/
+Snövit
+Malay /mælei/
+malajisk
+March /mɑːtʃ/
+mars
+Mason /meisn/
+frimurare
+Mauretanian /mərəteiniən/
+mor
+May /mei/
+maj
+Mediterranean /meditəreiniən/
+Medelhavet
+Mexican /meksikən/
+mexikan
+Middle /midleidʒiz/
+medeltida
+Miss /mis/
+fröken
+Mister /mistər/
+herr
+Mohammedan /mouhæmidɑːn/
+mohammedan
+Monday /mʌndiː/
+måndag
+Mongolia /mɔŋgouliə/
+Mongoliet
+Moor /meər/
+mor
+Mormon /mɔːmən/
+mormon
+Moscow /mɔskou/
+Moskva
+Moslem /mɔzləm/
+mohammedan
+Mr /mr/
+herr
+Mr /mrændmz/
+herrskap
+Mrs /mz/
+fru
+Muslim /muzlim/
+mohammedan
+Mussulman /mʌsʌlmən/
+mohammedan
+Nazi /nɑːtsiː/
+nazist
+Negro /niːgrou/
+neger
+New /njuːjəːr/
+nyår
+North /nɔːθ/
+nord
+North /nɔːθəmerikə/
+Nordamerika
+North /nɔːθsiə/
+Nordsjön
+Norway /nɔːwei/
+Norge
+Norwegian /nɔːwiːdʒən/
+1. norsk
+2. norrman
+November /nouvembər/
+november
+October /ɔktoubər/
+oktober
+Oriental /ɔːrientl/
+orientalisk, ostlig, österländsk, östlig, östra
+Pacific /pəsifik/
+Söderhavet
+Pacific /pəsifikouʃən/
+Söderhavet
+Parisian /pəriziən/
+parisare
+Parthian /pɑːθiən/
+1. andel, del, part
+Pentecost /pentikɔst/
+pingst
+Persian /pəːʃən/
+perser
+Poland /poulənd/
+Polen
+Pole /poul/
+polack
+Polish /pɔliʃ/
+polsk
+Portuguese /pɔːtʃugiːz/
+portugis
+Protestant /prɔtistənt/
+protestant
+Prussian /prʌʃən/
+preussare
+Rhine /ɹˈaɪn/
+rensktvin
+Rhine /rain/
+Rhen
+Roman /roumən/
+1. romersk
+2. romare
+Romania /rəmeiniə/
+Rumänien
+Romanian /rəmeiniən/
+rumänsk
+Rome /roum/
+Rom
+Rumanian /ruːmeiniən/
+rumänsk
+Russia /rʌʃə/
+Ryssland
+Russian /rʌʃən/
+1. rysk
+2. ryss
+Sabbath /sæbəθ/
+sabbat
+Salvation /sælveiʃənɑːmiː/
+frälsningsamé
+Sassenach /sæsənæk/
+engelsman
+Saturday /sætədiː/
+lördag
+Scandinavia /skændineiviə/
+Norden, Skandinavien
+Scandinavian /skændineiviən/
+nordisk
+Scot /skɔt/
+skotte
+Scotland /skɔtlənd/
+Skottland
+Scotsman /skɔtsmən/
+skotte
+Scottish /skɔtiʃ/
+skotsk
+Semitic /simitik/
+semitisk
+September /septembər/
+september
+Serb /səb/
+serbisk
+Siberia /saibiəriə/
+Siberien
+Siberian /saibiəriən/
+siberisk
+Sicily /sisəliː/
+Sicilien
+Slavic /sleivik/
+slavisk
+South /sauθəmerikə/
+Sydamerika
+Spain /spein/
+Spanien
+Spaniard /spæniəd/
+spanjor
+Spitsbergen /spizbəːgen/
+Spetsbergen
+Sunday /sʌndiː/
+söndag
+Swede /swiːd/
+svensk
+Sweden /swiːdn/
+Sverige
+Swedish /swiːdiʃ/
+1. svensk
+2. svenska
+Swedish /swiːdiʃlæŋgwidʒ/
+svenska
+Swiss /swis/
+1. schweizisk
+2. schweizare
+Switzerland /switsəlænd/
+Schweiz
+TV /tv/
+television, TV
+Teutonic /tjuːtɔnik/
+germansk
+Thursday /θəːzdei/
+torsdag
+Tuesday /tjuːzdei/
+tisdag
+Turk /təːk/
+turk
+Turkey /təːkiː/
+Turkiet
+Twelfth /twˈɛlfθ/
+1. trettondag
+2. %h‐able
+3. ‐bar
+4. %h‐ible
+5. %h‐less
+6. ‐lös
+USA /juːzə/
+Förentastaterna, USA
+US /juːssitizən/
+amerikan
+Ukraine /juːkn/
+Ukraina
+United /juːnaitidsteitsɔfəmerikə/
+Förentastaterna, USA
+Volt /voult/
+volt
+Walloon /wəluːn/
+vallon
+Wednesday /wenzdei/
+onsdag
+Wee /wiːwiliːwiŋkiː/
+JonBlund
+West /west/
+väst, väster
+West /westindiz/
+Västindien
+Whitsunday /witsʌndiː/
+pingst
+Xanthippe /gzænthip/
+ragata
+Yule /juːl/
+jul
+ZIP /zipkoud/
+1. postnummer
+2. %h...ago
+3. sedan
+a /ə/
+1. i
+2. någon
+abandon /əbændən/
+lämna
+abandoned /əbændənd/
+skamlös
+abase /əbeis/
+förnedra, förödmjuka
+abasement /əbeismənt/
+förödmjukelse
+abashed /əbæʃt/
+blyg, brydd, förlägen
+abattoir /æbətwɑːr/
+slakthus
+abbess /æbes/
+abbedissa
+abbey /əbei/
+abbotskloster
+abbot /æbət/
+abbot
+abdomen /æbdəmən/
+buk
+aberration /æbəreiʃən/
+fel, förvillelse, misstag
+abhor /əbhɔːr/
+avsky
+abide /əbaid/
+1. forvänta, vänta, väntasig
+2. lida
+ability /əbilitiː/
+makt
+abject /æbdʒekt/
+nedrig
+abjure /æbdʒeər/
+arbeställa
+able /eibl/
+kompetent
+abnormal /æbnɔːml/
+1. abnorm
+2. oregelbunden
+abode /əboud/
+boning, bostad
+abolish /əbɔliʃ/
+arbeställa
+abominate /əbɔmineit/
+avsky
+aboriginal /æbəridʒənl/
+1. inhemsk
+2. infödd
+3. original
+abort /əbɔːt/
+klicka
+abortion /əbɔːʃən/
+abort, missfall
+about /ɐbˈaʊt/
+förändring
+about /əbaut/
+1. angående
+2. om, över, på
+3. cirka, ungefär, ungefärlig
+4. kring
+above /əbˈʌv/
+redlig, ärlig
+above /əbouv/
+1. norrom, norraom
+2. uppe, upptill
+3. upp, uppåt
+abrade /əbreid/
+hyvla
+abridge /əbridʒ/
+avgränsa, begränsa
+abroad /əbrɔːd/
+1. ute
+2. utomlands, utrikes
+abrogate /æbrəgeit/
+arbeställa
+abrupt /əbrʌpt/
+1. oförhoppandes, oförmedlad, oförmodad, oväntad
+2. plötslig
+absence /æbsəns/
+1. frånvaro
+2. brist, lyte, saknad
+absent /æbsənt/
+1. frånvarande
+2. fråvarande
+absent /æbsəntwʌnself/
+gesigiväg
+absolute /æbsəluːt/
+1. absolut
+2. komplett
+3. gränslös, hejdlös, obegränsad, oändlig
+absolutely /æbsəluːtəliː/
+sannerligen
+absolution /æbsəluːʃən/
+benådning, förlåtelse, nåd
+abstraction /əbstrækʃən/
+stöld, tjuvnad
+abstruse /əbstruːs/
+mysteriös
+abundance /əbʌndəns/
+rikedom
+abuse /əbjuːz/
+1. skällaut
+2. missbruk, missförhållande
+3. förnärma, förölämpa
+4. förolämpning, förnärmelse
+abysmal /əbizml/
+1. hopplös
+2. förfärlig, förskräcklig, gräslig, hemsk
+abyss /əbis/
+avgrund, gap
+academic /ækədemik/
+student
+academy /əkædəmiː/
+1. akademi
+accelerator /əkseləreitər/
+gastrampa
+accelerator /əkseləreitərpedəl/
+gastrampa
+accent /æksənt/
+accent
+accept /æksept/
+tackajatill
+acceptance /əkseptəns/
+accept
+access /ækses/
+1. anfall, angrepp, attack
+2. entré, inträde
+accession /əkseʃən/
+1. förvärv
+2. ackvisition
+accidence /æksidəns/
+slump, tillfällighet
+accident /æksidənt/
+ofall, olycksfall
+acclaim /əkleim/
+1. applådera
+2. applåd, bifall
+3. godkännande
+acclamation /ækləmeiʃən/
+applåd, bifall
+accommodating /əkɔmədeitiŋ/
+behjälplig
+accommodation /əkɔmədeiʃən/
+1. inredning
+2. boning, bostad
+accomodate /əkɔmədeit/
+1. fullborda, ända
+2. biträda, hjälpa
+accompaniment /əkʌmpənimənt/
+ackompanjemang
+accomplish /əkʌmpliʃ/
+ernå
+accomplished /əkʌmpliʃt/
+kompetent
+accomplishment /əkʌmpliʃmənt/
+dåd, gärning, handling
+accord /əkɔːd/
+1. överenskommelse, överenstämmelse
+2. harmoniera
+accordance /əkɔːdəns/
+överenskommelse, överenstämmelse
+according /əkɔːdiŋəz/
+alltefter, efter, jämlikt
+according /əkɔːdiŋtou/
+alltefter, efter, jämlikt
+account /əkaunt/
+1. explikation
+2. faktura
+3. nota
+4. betrakta
+5. konto
+6. tro
+7. motiv
+8. anse, tycka
+9. beskrivning
+accountable /əkauntəbl/
+1. förklarlig
+2. ansvarig
+accountant /əkauntənt/
+revisor
+account /əkauntbuk/
+register
+account /əkauntfər/
+förklara, utlägga
+accredit /əkredit/
+tro
+accrue /əkruː/
+1. härstamma
+2. gro, växa
+accumulation /əkjuːmjuleiʃən/
+hop, mängd
+accumulator /əkjuːmjuleitər/
+1. batteri
+2. samlare
+accurate /ækjərət/
+1. ackurat, prompt
+2. noga, precis
+accusal /ækjuːzl/
+anklagelse, beskyllning, klagomål, åtal
+accusation /ækjuːzeiʃən/
+anklagelse, beskyllning, klagomål, åtal
+accusative /əkjuːzətiv/
+ackusativ
+accuse /əkjuːz/
+anklaga, beskylla, skylla
+accuser /əkjuːzər/
+klagande
+accustomed /əkʌstəmd/
+bruklig, gemen, gångbar, ordinär, vanlig, övlig
+acerbic /əsəːbik/
+1. amper, egg, gräll, gäll, skarp
+2. besk, bitter, kärv
+acerbity /əsəːbitiː/
+skärpa
+ache /eik/
+1. smäkta
+2. pina, smärta, värk
+3. längtaefter
+achievable /ətʃiːvəbl/
+görlig
+achieve /ətʃiːv/
+1. förvärva
+2. ernå
+3. göra
+achievement /ətʃiːvmənt/
+1. gärning, handling
+2. dåd
+3. framgång
+achromatic /əkroumætik/
+färglös
+acid /æsid/
+1. syra
+2. sarkastisk
+acidify /əsidifai/
+surna
+acknowledge /əknɔlidʒ/
+1. erkänna
+2. tackaför
+3. bekänna
+acknowledgement /əknɔlidʒmənt/
+1. bekännelse, konfession
+2. kontramärke, kvitto
+acorn /eikɔːn/
+ekollon, ollon
+acquaint /əkweint/
+tillkännagiva
+acquaintance /əkweintəns/
+1. bekant
+2. kunskap, kännedom
+acquire /əkwaiər/
+1. förvärva
+2. anskaffa, köpa
+acquirement /əkwaiəmənt/
+ackvisition
+acquisition /ækwiziʃən/
+1. ackvisition
+2. förvärv
+3. anskaffning, inköp, köp
+acquisitive /əkwizətiv/
+begärlig, sniken, snål
+acquittal /əkwitl/
+avbetalning
+acrimony /ækriməniː/
+skärpa
+across /əkrɔsfrɔm/
+emot, inemot, mot
+act /ækt/
+1. gärning, handling
+2. aktstycke
+3. göra
+4. dåd
+5. påverka
+6. processa
+action /ækʃən/
+1. gärning, handling
+2. batalj, kamp, slag, slagsmål, strid
+3. dåd
+4. rättegång
+activate /æktiveit/
+föranleda, förorsaka, orsaka
+active /æktiv/
+aktiv
+actor /æktər/
+aktör
+actress /æktris/
+aktris, skådespelerska
+actual /æktʃeəl/
+1. faktisk
+2. real, reell
+acuity /əkjuːitiː/
+1. skärpa
+2. väntan
+ad /əd/
+1. anmälan, annons, avi, meddelande
+2. reklam
+adage /ædidʒ/
+ordspråk
+add /ədd/
+1. addera, summera
+2. bifoga
+adder /ædər/
+huggorm
+addition /ədiʃən/
+addition
+additional /ədiʃənl/
+extra
+addled /ædld/
+1. rutten, skämd
+2. dum
+address /ədres/
+1. adressera
+2. adress
+address /ədreslist/
+adresskalender
+add /əddʌp/
+addera, summera
+adherents /ədhiərənts/
+anhang
+adieu /ədjuː/
+adjö, hejdå
+adjective /ædʒiktiv/
+adjektiv
+adjournment /ədʒəːnmənt/
+anstånd, uppskov
+adjudication /ədʒuːdikeiʃən/
+dom
+adjustment /ədʒʌstmənt/
+inredning
+adjutant /ædʒutənt/
+adjutant
+administer /ədministər/
+förvalta
+administration /ədministreiʃən/
+regering
+administrator /ədministreitər/
+administratör
+admiral /ædmərəl/
+amiral
+admiration /ædməreiʃən/
+beundran
+admire /ədmaiər/
+beundra
+admirer /ədmairər/
+beundrare
+admission /ədmiʃən/
+1. accept
+2. entré, inträde
+3. bekännelse, konfession
+admission /ədmiʃəntikit/
+inträdesbiljett
+admit /ədmit/
+1. medge
+2. bekänna
+admittance /ədmitns/
+entré, inträde
+admixture /ədmikstʃər/
+röra
+admonition /ædməniʃən/
+maning
+ado /ədou/
+bråk, buller, dån, krasch, larm, oljud, olåt, oväsen, stoj, väsen
+adopt /ədɔpt/
+adoptere
+adore /ədɔːr/
+förära, tillbedja
+adorer /ədɔːrər/
+tillbedjare
+adorn /ədɔːn/
+smycka
+adroit /ədrɔit/
+livaktig, livlig
+adult /ædʌlt/
+1. myndig
+2. fullvuxen, vuxen
+advance /ədvɑːns/
+nalkas
+advancement /ədvɑːnsmənt/
+befordran
+advantage /ədvɑːntidʒ/
+1. fördel, gagn
+advantageous /ædvənteidʒəs/
+1. fördelaktig
+2. blid, gunstig, gynnsam
+3. nyttig
+adventure /ədventʃər/
+äventyr
+adventurous /ədventʃərəs/
+äventyrlig
+adverb /ædvəːb/
+adverb
+adversary /ædvəsəriː/
+1. vedersakare
+2. fiende, ovän
+adverse /ædvəːs/
+1. motsatt
+2. fientlig, illasinnad
+3. ofördelaktig
+4. menlig
+advert /ædvəːt/
+1. beakta
+2. reklam
+advertence /ədvəːtəns/
+väntan
+advertency /ədvəːtənsiː/
+väntan
+advertise /ædvətaiz/
+anmäla, annonsera, bebåda, meddela
+advertisement /ədvəːtismənt/
+1. anmälan, annons, avi, meddelande
+2. reklam
+advice /ədvais/
+1. råd
+2. bekantgörande, tillkännagivande
+advise /ədvaiz/
+rå, råda
+advocate /ædvəkeit/
+advokat, sakförare
+aerodrome /ɛərədroum/
+flygfält
+aeroplane /ɛərəplein/
+flygmaskin
+affable /æfəbl/
+snäll, vänlig
+affair /əfɛər/
+1. affär, sak
+2. fall
+affect /æfekt/
+påverka
+affectation /æfekteiʃən/
+affektation
+affection /əfekʃən/
+kärlek
+affiliation /əfilieiʃən/
+släkt, släktskap
+affined /əfaind/
+anhörig, besläktad
+affinity /əfinitiː/
+släkt, släktskap
+affirm /əfəːm/
+1. betrygga
+2. bejaka, jaka
+affirmation /æfəmeiʃən/
+löfte
+affix /əfiks/
+befästa, fästa
+afflict /əflikt/
+bedröva
+affluence /æfleəns/
+rikedom
+affluent /æfleənt/
+rik
+afford /æfəd/
+alstra, producera
+afraid /əfreid/
+rädd
+afresh /əfreʃ/
+1. ånyo
+2. åter
+after /ɑːftər/
+efter
+afternoon /ɑːftənuːn/
+eftermiddag
+again /əgein/
+1. ånyo
+2. åter
+against /əgenst/
+emot, inemot, mot
+age /eidʒ/
+1. ålder, ålderdom
+2. epok
+agency /eidʒənsiː/
+agentur
+agent /eidʒənt/
+1. agent
+2. instrument, tyg, verktyg
+aggrandize /əgrændaiz/
+förstora
+aggravate /ægrəveit/
+förarga
+aggravating /ægrəveitiŋ/
+anstötlig
+aggression /əgreʃən/
+anfall, angrepp, attack
+aggressive /əgresiv/
+offensiv
+aggressor /əgresər/
+angripare
+agile /ædʒail/
+livaktig, livlig
+agitated /ædʒiteitid/
+nervös
+agitation /ædʒiteiʃən/
+1. agitation
+2. tumult
+agog /əgɔg/
+1. frågvis, nyfiken
+agonize /ægənaiz/
+martera, pina, plåga, tortera
+agonizing /ægənaiziŋ/
+gruvlig, hemsk, hisklig
+agony /ægəniː/
+fruktan, rädsla
+agrarian /əgrɛəriən/
+jordbrukare, lantbrukare
+agreeable /əgriːəbl/
+1. angenäm, anslående, behaglig, trevlig
+agreement /əgriːmənt/
+överenskommelse, överenstämmelse
+agree /əgriːwið/
+varaenigmed, varaensemed
+agriculture /ægrikʌltʃər/
+jordbruk, lantbruk, åkerbruk
+ague /eigjuː/
+feber
+ah /ɑː/
+ack, åh
+aid /eid/
+1. hjälpare
+2. biträda, hjälpa
+3. bistånd, biträde, hjälp
+aide /ˈeɪd/
+adjutant
+ailment /eilmənt/
+sjuka, sjukdom
+air /ɛər/
+luft
+aircraft /ɛəkrɑːft/
+flygplan
+airdrome /ɛədroum/
+flygfält
+airfield /ɛəfiːld/
+flygfält
+airplane /ɛəplein/
+flygmaskin
+airport /ɛəpɔːt/
+flyghamn
+airy /ɛəriː/
+gles
+akin /əkin/
+anhörig, besläktad
+alacrity /əlækritiː/
+entusiasm, hänförelse
+alarm /əlɑːm/
+1. alarmere
+2. alarm, larm
+3. väckarur
+alarmclock /əlɑːmklɔk/
+väckarur
+alarmed /əlɑːmd/
+förfärlig, hemsk
+alas /əlæz/
+detvarsynd, tyvärr
+alcohol /ælkəhɔl/
+alkohol, sprit
+alcoholic /ælkəhɔlik/
+drinkare, rumlare, supare
+alder /ɔːldər/
+al
+alderman /ɔːldəmən/
+rådman
+ale /l/
+öl
+alert /ələːt/
+livaktig, livlig
+alga /ælgə/
+alg
+alien /eiliən/
+1. främmande, utländsk
+2. motsatt
+alike /əlaik/
+liknande
+alimony /æliməniː/
+underhålla
+alive /əlaiv/
+levande
+all /ˈɔːl/
+allvetande
+all /ˈɔːl/
+allrådande, allsmäktig
+all /l/
+1. allehanda
+2. allting
+3. mangrant
+allegoric /æligɔrik/
+allegorisk
+alley /æliː/
+gränd
+alliance /eiliəns/
+allians
+alloy /ælɔi/
+legering
+allude /əluːd/
+alludera, anspela
+allusion /əluːʒn/
+anspelning, hänsyftning, häntydning
+all /ləbaut/
+allestädes, överallt
+all /louvərəgein/
+ånyo
+all /lsɔːts/
+varjehanda
+all /lsɔːtsɔf/
+varjehanda
+all /lð/
+all, envar, varenda, varje
+all /lðtaim/
+oavlåtlig
+almanac /ɔːlmənæk/
+almanacka
+almighty /ɔːlmaitiː/
+allrådande, allsmäktig
+almond /ɑːmənd/
+mandel
+almost /æmoust/
+nästan
+alms /ɑːmz/
+allmosa
+alone /əloun/
+ensam
+alongside /əlɔŋsaid/
+bredvid
+alphabet /ælfəbet/
+alfabet
+already /ɔːlrediː/
+allaredan, redan, ren
+also /ælsou/
+också
+altar /ɔːltər/
+altare
+alter /ɔːltər/
+förvandla, förändras, ändra
+alteration /ɔːltəreiʃən/
+1. ändring
+2. förändring
+alternative /ɔːltəːnətiv/
+alternativ
+although /ɔːlthau/
+ehuru, ehuruväl, fastän, omän
+altitude /æltitjuːd/
+höjd
+altogether /ɔːltədʒeðər/
+allting
+alum /æləm/
+alun
+always /ɔːlweiz/
+alltid, ständigt
+amateur /æmətər/
+amatör
+amaze /əmeiz/
+förvåna
+ambassador /æmbæsədər/
+sändebud
+ambiguous /æmbigjeəs/
+tvetydig
+ambition /æmbiʃən/
+ambition
+ambitious /æmbiʃəs/
+ambitiös
+ambulance /æmbjuləns/
+ambulansbil, sjukbil
+ammunition /æmjuniʃən/
+ammunition
+among /əmʌŋ/
+emellan, ibland, mellan
+amount /əmaunt/
+1. antal
+2. belopp, summa
+amphitheatre /æmfiθiətər/
+amfiteatro
+ample /æmpl/
+omfångsrik
+anaemia /əniːmiə/
+anemi, blodbrist
+analogy /ənælədʒiː/
+analogi
+analysis /ənæləsis/
+analys
+anarchist /ænəkist/
+anarkist
+anatomical /ænətɔmikl/
+anatomisk
+anchor /æŋkər/
+ankare
+anchorage /æŋkəridʒ/
+redd
+anchovy /æntʃəviː/
+ansjovis
+and /ænd/
+och
+anecdote /ænikdout/
+anekdot, historiett
+anemone /əneməniː/
+sippa
+anew /ənjuː/
+ånyo
+angel /eindʒl/
+ängel
+angle /æŋgl/
+hörn, smyg, vrå
+angry /æŋgriː/
+arg, ilsken, vred, vredgad
+anguish /æŋgwiʃ/
+fruktan, rädsla
+animal /æniməl/
+1. djurisk
+2. djur
+3. best
+anise /ænis/
+anis
+ankle /æŋkl/
+ankel
+annotation /ænəteiʃən/
+anteckning, not
+announce /ənauns/
+anmäla, annonsera, bebåda, meddela
+announcement /ənaunsmənt/
+bekantgörande, tillkännagivande
+annoy /ænɔi/
+förarga
+annul /ənʌl/
+arbeställa
+anonymous /ənɔniməs/
+1. anonym
+another /ənʌðər/
+annan
+answer /ænsər/
+1. svara
+2. besked, genmäle, replik, svar
+ant /ænt/
+myra
+anthem /ænθəm/
+hymn, lovsång
+antidote /æntidout/
+1. motgift
+2. morgift
+antique /æntiːkdiːlər/
+antikvitetshandlare
+antithesis /æntiθəsis/
+motsats
+anvil /ænvil/
+städ
+any /æniː/
+1. någon
+2. somliga
+anybody /enibɔdiː/
+någon
+anything /eniθiŋ/
+någonting, något
+anywhere /æniwɛər/
+någonstans, någonstädes
+apart /əpɑːt/
+särskild
+apartment /əpɑːtmənt/
+lägenhet
+apartment /əpɑːtməntbildiŋ/
+höghus
+apart /əpɑːtfrɔm/
+1. utom
+2. utöver
+ape /eip/
+apa
+apiarist /eipiərist/
+biodlare
+apologize /əpɔlədʒaiz/
+1. ursäktesig
+2. undskyllasig
+apostle /əpɔsl/
+apostel
+apparatus /æpəreitəs/
+apparat
+appeal /əpiːl/
+appell
+appeal /əpiːltou/
+anropa, åkalla
+appear /əpiər/
+synas, tyckas
+appearance /əpiərəns/
+1. anblick, anseende, vy
+appear /əpiərtoub/
+synas, tyckas
+appellation /æpəleiʃən/
+namn
+appetite /æpitait/
+aptit, matlust
+applaud /əplɔːd/
+applådera
+apple /ˈapəl/
+äppelmos
+apple /ˈapəl/
+äppelkaka
+apple /ˈapəl/
+apel, äppelträd
+apple /æpl/
+äpple
+appraise /əpreiz/
+beräkna, taxera, uppskatta, värdera
+appraiser /əpreizər/
+värderingsman
+appreciate /əpriːʃieit/
+1. värdesätta
+2. tyckaom, uppskatta
+apprehension /æprihenʃən/
+häkte
+approach /əproutʃ/
+annalkande
+approval /əpruːvəl/
+1. applåd, bifall
+2. godkännande
+approve /əpruːv/
+godkänna
+approximately /əprɔksimətiːliː/
+cirka, ungefär, ungefärlig
+apricot /eiprikɔt/
+aprikos
+aptitude /æptitjuːd/
+begåvning, gåva, talang
+aqueduct /ækwidʌkt/
+akvedukt
+arc /ɑːk/
+båge
+archangel /ɑːtʃeindʒl/
+ärkeängel
+archbishop /ɑːtʃbiʃəp/
+ärkebiskop
+archipelago /ɑːkipeləgou/
+arkipelag
+architect /ɑːkitekt/
+arkitekt, byggmästare
+archive /ɑːkaiv/
+arkiv
+archives /ɑːkaivz/
+arkiv
+archivist /ɑːkivist/
+arkivarie
+are /ɛər/
+flock, grupp, hjord, koppel, svärm, tropp, trupp
+area /ɛəriə/
+areal
+arithmetic /əriθmətik/
+aritmetik
+arm /ɑːm/
+1. beväpna, väpna
+2. arm
+armchair /ɑːmtʃɛər/
+emma
+armpit /ɑːmpit/
+armhåla
+army /ɑːmiː/
+armé, här
+around /əraund/
+kring
+arouse /ərauz/
+väcka
+arrange /əreindʒ/
+1. arrangera, inreda
+arrangement /əreindʒmənt/
+inredning
+arrest /ərest/
+1. anhålla, arrestera, häkta
+2. häkte
+arrival /əraivəl/
+ankomst, tillkomst
+arrive /əraiv/
+ankomma
+arrow /ærou/
+pil
+art /ɑːt/
+konst
+artery /ɑːtəriː/
+artär
+arthritis /ɑːθraitis/
+gikt
+artichoke /ɑːtitʃouk/
+kronärtskocka'ärtskocka
+article /ɑːtikl/
+1. artikel
+2. objekt
+artificial /ɑːtifiʃl/
+1. artificiell, konstgjord
+2. onaturlig
+artillery /ɑːtiləriː/
+artilleri
+artist /ɑːtist/
+artist, konstnär
+as /əz/
+1. hur, huru, liksom, såsom
+2. alltefter, efter, jämlikt
+3. sålunda
+ascend /əsend/
+dala
+ascetic /əsetik/
+asketisk
+ash /əʃou/
+1. aska
+2. ask
+ashtray /æʃtrei/
+askkopp
+ask /əsk/
+1. fråga, spörja
+2. anmoda, ansöka, bedja
+ask /əskfər/
+anmoda, ansöka, bedja
+ask /əskfəgivnəs/
+beomursäkt
+asparagus /əspærəgəs/
+sparris
+aspect /æspekt/
+anblick, anseende, vy
+aspen /æspən/
+asp
+asphalt /æsfælt/
+jordbeck
+ass /əs/
+åsna
+assailant /əseilənt/
+angripare
+assault /əsɔːlt/
+1. anfalla
+2. storma
+assemblage /əsemblidʒ/
+församling, möte, sammankomst, sammanträde
+assemble /əsembl/
+montera
+assent /əsent/
+bejaka, jaka
+assert /əsəːt/
+hävda, påstå
+assertion /əsəːʃən/
+påstående
+asset /æset/
+ackvisition, förvärv
+assist /əsist/
+biträda, hjälpa
+assistent /əsistənt/
+hjälpare
+associate /əsouʃieit/
+para
+associate /əsouʃieitwið/
+haettförhållandemed, umgåsmed
+assortment /əsɔːtmənt/
+sortiment
+assure /æʃər/
+betrygga
+aster /æstər/
+aster
+astonishment /əstɔniʃmənt/
+förvåning, förundran, undran
+astrologer /æstrɔlədʒər/
+stjärntydare
+astronaut /æstrənɔːt/
+rymdpilot
+astronomy /æstrɔnəmiː/
+astronomi
+as /əzəz/
+lika...som
+at /eit/
+1. på, till
+2. bi, hos, vid
+atelier /æteliər/
+ateljé
+atheism /eiθiizəm/
+ateism
+atheist /eiθiist/
+ateist, gudsförnekare
+atlas /ætləs/
+atlas
+atmosphere /ætməsfiər/
+atmosfär, dunstkrets, luftkrets
+atom /ætəm/
+atom
+atomic /ətɔmikenədʒiː/
+atomkraft
+atom /ætəmbɔm/
+atombomb
+attach /ətætʃ/
+befästa, fästa
+attack /ətæk/
+1. anfalla
+2. anfall, angrepp, attack
+attacker /ətækər/
+angripare
+attain /ətein/
+1. förvärva
+2. ernå
+attempt /ətempt/
+1. bemödande
+2. bepröva, försöka, probera, prova
+3. försök
+attend /ətend/
+1. ansa, sköta, vårda
+2. bevista, åse
+attention /ətenʃən/
+väntan
+attest /eitist/
+attestera, betyga
+attic /ætik/
+loft
+attitude /ætitjuːd/
+hållning
+attraction /ətrækʃən/
+attraktion
+attractive /ətræktiv/
+lockande
+at /eitl/
+alldeles
+at /eithoum/
+hemma, inne
+at /eitnait/
+omnatten
+at /eitprizent/
+nu
+at /eitsʌmtaim/
+någonsin
+at /eitðætpleis/
+där
+at /eitðseimtaim/
+isänder
+at /eitvɛəriəns/
+oenig, oense
+auction /ɔːkʃən/
+auktion
+audience /ɔːdiəns/
+auditorium
+audit /ɔːdit/
+besiktiga, kontrollera
+auditory /ɔːditriː/
+auditorium
+augment /ɔːgmənt/
+förstora
+aunt /ɑːnt/
+1. faster, moster, tant
+authentic /ɔːθentik/
+autentisk
+author /ɔːθər/
+1. auktor, författare
+automatic /ɔːtəmætik/
+automatisk, självverkande, slentrianmässig
+automoton /ɔːtəmoutɔn/
+automat
+autumn /ɔːtəm/
+höst
+avail /əveil/
+gagna
+avalanche /ævəlɑːnʃ/
+bergskred, lavin, skred
+avaricious /ævəriʃəs/
+girig, njugg
+avenge /əvendʒ/
+hämna
+avenge /əvendʒwʌnself/
+hämna
+avenue /ævənjuː/
+allé
+average /ævəridʒ/
+medeltal
+avidity /əviditiː/
+begär, begäran
+avoid /əvɔid/
+kringgå, undfly
+await /əweit/
+forvänta, vänta, väntasig
+awaken /əweikən/
+väcka
+awareness /əwɛənəs/
+medvetande
+axe /æks/
+bila, yxa
+axis /æksis/
+axel, hjulaxel, spindel
+axle /æksl/
+axel, hjulaxel, spindel
+a /əfjuː/
+somliga
+a /əlitl/
+1. någorlunda
+2. lite, litet
+a /əlɔŋtaim/
+länge
+baboon /bəbuːn/
+babian
+baby /beibiː/
+baby
+baby /bəbaizbɔtl/
+nappflaska
+bachelor /bætʃələr/
+ungkarl
+back /bæk/
+bak, rygg
+backbiting /bækbaitiŋ/
+förtal
+backpack /bækpæk/
+ryggsäck
+backside /bæksaid/
+stjärt
+backward /bækwəd/
+bakåt
+backwards /bækwədz/
+bakåt
+back /bækɔfðnek/
+nacke
+bacon /beikən/
+fläsk, späck
+bacterium /bæktiəriəm/
+bakterie
+bad /bæd/
+1. arg, dålig, ful, illa, ond, slätt, stygg
+2. rutten, skämd
+badger /bædʒər/
+grävling, grävsvin
+bad /bædlʌk/
+otur
+bag /bæg/
+säck, väska
+baggage /bægidʒ/
+bagage, resgods
+bairn /bɛən/
+barn, unge
+bait /beit/
+agn
+bake /beik/
+baka
+baker /beikər/
+bagare
+bakery /beikəriː/
+bageri
+baker /beikəzʃɔp/
+bagarbod
+balance /bæləns/
+saldo
+balance /bælənsʃiːt/
+bokslut
+balcony /bælkəniː/
+altan, balkong
+bale /beil/
+packe
+ball /bˈɔːl/
+glob, klot
+ball /bɔːl/
+1. bal
+2. glob, klot
+3. boll
+4. sfär
+ballast /bæləst/
+ballast, barlast
+ballet /bælit/
+balett
+balloon /bəluːn/
+ballong
+balm /bɑːm/
+balsam
+balsam /bɔːlsəm/
+balsam
+balustrade /bæləstreid/
+balustrad
+bamboo /bæmbuː/
+bambu
+banana /bənɑːnə/
+banan
+band /bænd/
+band
+bandage /bændidʒ/
+1. bandage, förband
+bandit /bændit/
+bandit
+banisters /bænistəz/
+balustrad
+bank /bˈaŋk/
+sedel
+bank /bæŋk/
+1. bank
+2. sandbank
+bankruptcy /bæŋkrʌpsiː/
+bankrutt, cession, fallissemang, konkurs
+bank /bæŋkklɑːk/
+bankir
+bank /bæŋkəfiʃl/
+bankir
+banner /bænər/
+flagg, flagga
+banquet /bæŋkwi/
+bankett
+baptism /bæptizəm/
+dop, döpelse, kristning
+baptize /bæptaiz/
+döpa, kristna
+bar /bɑːr/
+förhindra, hindra
+barbarian /bɑːbɛəriən/
+barbar
+barbaric /bɑːbærik/
+barbarisk
+barber /bɑːbər/
+frisör, hårfrisör
+bare /bɛər/
+bar, naken
+barely /bɛərəliː/
+knappast, knappt, näppeligen
+bark /bɑːk/
+1. bark
+2. skälla
+barley /bɑːliː/
+korn
+barn /bɑːn/
+1. barack
+2. kram
+barometer /bərɔmitər/
+barometer
+baron /bærən/
+baron, friherre
+baroness /bærənes/
+baronessa
+barrack /bærək/
+barack
+barracks /bærəks/
+kasern
+barrel /bærəl/
+1. fat, så, tunna
+2. rör
+barren /bærən/
+ofruktbar
+barrier /bæriər/
+bom, slagbom
+barrister /bˈaɹɪstə/
+advokat, sakförare
+barrister /bæristər/
+advokat, sakförare
+base /beis/
+1. basera
+2. nedrig
+basement /beismənt/
+källare
+bashfulness /bæʃfəlnəs/
+blyghet, bryderi, förlägenhet
+basin /beisn/
+1. bassäng
+2. skål
+basket /bɑːskit/
+korg
+bass /bæs/
+abborre
+bast /bæst/
+bast
+bat /bɑːt/
+flädermus, läderlapp
+bath /bɑːθ/
+1. badkar
+2. bad
+bathing /bˈeɪðɪŋ/
+baddräkt
+bathing /bɑːθiŋbɔks/
+badhytt
+bathing /bɑːθiŋsuːt/
+baddräkt
+bathroom /bɑːθrum/
+badhus
+baton /bætən/
+stav, stång
+battalion /bətæliən/
+bataljon
+battery /bætəriː/
+batteri
+battle /bætl/
+batalj, kamp, slag, slagsmål, strid
+bay /bei/
+vik
+bayonet /beiənet/
+bajonett
+bazaar /bəzɑːr/
+krambod
+be /b/
+vara
+beach /biːtʃ/
+strand
+beak /biːk/
+näbb
+beam /biːm/
+1. stråle
+2. balk, bjälke
+bean /biːn/
+böna
+bear /bɛər/
+1. alstra, producera
+2. lida
+3. björn
+beard /biəd/
+skägg
+bear /bɛərðkɔstɔf/
+bekosta
+bear /bɛərwitnəsɔf/
+attestera, betyga
+beast /biːst/
+best, djur
+beast /biːstɔfpriː/
+rovdjur
+beat /biːt/
+banka, drabba, slå
+beautiful /bjuːtifəl/
+skön, vacker
+beauty /bjuːtiː/
+skönhet
+beaver /biːvər/
+bäver
+because /bikɔːzɔf/
+på
+become /bikʌm/
+1. bli
+2. bliva
+become /bikʌmingeidʒd/
+förlovasig
+become /bikʌmingeidʒdwið/
+förlovasigmed
+become /bɪkˈʌm/
+förlovasigmed
+become /bɪkˈʌm/
+förlovasigmed
+become /bikʌmðhʌzbəndɔf/
+giftasigmed
+become /bikʌmðwaifɔf/
+giftasigmed
+bed /bd/
+bädd, säng
+bedroom /bedruːm/
+sovrum, sängkammare
+bee /bˈiː/
+biodlare
+bee /bˈiː/
+biodlare
+bee /biː/
+bi
+beech /biːtʃ/
+bok
+beef /biːf/
+nötkött
+beefsteak /biːfsteik/
+biff, biffstek
+beehive /biːhaiv/
+bikupa
+beer /biər/
+öl
+beetle /biːtl/
+skalbagge
+before /bfɔːr/
+förrän
+beg /beg/
+1. tigga
+2. anmoda, ansöka, bedja
+beggar /bˈɛɡə/
+tiggerska
+beggar /begər/
+tiggare
+begging /begiŋ/
+tiggeri
+begin /bigin/
+1. begynna, börja
+beginner /biginər/
+nybörjare
+beginning /biginiŋ/
+begynnelse, början
+behave /biheiv/
+betesig, uppförasig
+behavior /biheiviər/
+beteende, uppförande
+behaviour /biheiviər/
+beteende, uppförande
+behind /biːhaind/
+1. efter
+2. bakefter, baktill
+belief /biliːf/
+1. övertygelse
+2. tro
+believe /biliːv/
+tro
+believe /biliːvin/
+tropå
+belly /beliː/
+buk
+below /bilou/
+1. nedan, nere
+2. under
+belt /belt/
+bälte, gördel, rem
+bench /bentʃ/
+bänk
+bend /bend/
+krok, krumbukt, kurva, sväng
+beneath /benəːθ/
+under
+benefit /benifit/
+1. fördel, gagn
+bent /bent/
+krokig
+berry /beriː/
+bär
+beside /bisaid/
+1. bi, hos, vid
+2. bredvid
+besides /bizaidz/
+utöver
+besiege /bisiːdʒ/
+belägra
+best /bist/
+bäst
+bet /bet/
+tippa
+betray /bitrei/
+förråda
+betrothal /bitrouðəl/
+förlovning
+better /betər/
+bättre
+between /bitwiːn/
+emellan, ibland, mellan
+beverage /bevəridʒ/
+dryck
+bevy /beviː/
+1. flock, grupp, hjord, koppel, svärm, tropp, trupp
+2. band
+bewitch /biwitʃ/
+trolla
+be /beibltou/
+gitta, må, mäkta, orka
+be /bæbsənt/
+varaborta
+be /bəkweintidwið/
+känna
+be /bəfreidɔf/
+vararädd, vararäddför
+be /bəlaiv/
+leva
+be /bəʃeimd/
+blygas
+be /bbæŋkrʌpt/
+görakonkurs
+be /bbould/
+töras, våga
+be /bkɔːld/
+heta, kallas
+be /bfɔndɔf/
+varatokigi
+be /bfaund/
+befinnasig, må
+be /bful/
+mätta
+be /bglæd/
+fröjda, njuta
+be /bhʌŋgriː/
+hungra
+be /bindignənt/
+harmas
+be /bindignəntwið/
+retasigpå
+be /binkəmɑːnd/
+befalla, kommendera
+be /blækiŋ/
+saknas
+be /bloukeitid/
+befinnasig, må
+be /blʌkiː/
+hatur
+be /bmærid/
+giftasig
+be /bmisiŋ/
+1. varaborta
+2. saknas
+be /bprizent/
+bevista, åse
+be /bkwaiət/
+tiga
+be /brileitidtou/
+varasläktmed
+be /bsimilər/
+likna
+be /bsɔriːəbaut/
+ångra
+be /bteikənil/
+insjukna
+be /bwiliŋtou/
+vilja
+be /bwəːθ/
+gälla
+biased /baiəst/
+partisk
+bible /baibl/
+bibel
+bicycle /baisikl/
+1. cykel
+2. följd, serie
+bid /baid/
+anmoda, ansöka, bedja
+big /big/
+stor
+bike /baik/
+1. cykel
+2. följd, serie
+bile /bail/
+galla
+bill /bˈɪl/
+anslagstavia
+bill /bil/
+1. näbb
+2. biljett
+3. faktura
+4. nota
+billiards /biliədz/
+biljard
+bind /baind/
+1. binda
+2. snöra
+birch /bəːtʃ/
+björk
+bird /bəːd/
+fågel
+birth /bəːθ/
+börd, födelse
+birthday /bəːθdei/
+födelsedag
+bishop /biʃəp/
+biskop
+bit /bit/
+bit
+bite /bait/
+1. bita, nappa
+2. bett
+bitter /bitər/
+besk, bitter, kärv
+black /blæk/
+svart
+blackberry /blækbəriː/
+björnbär
+blackberry /blækbəriːbuʃ/
+björnbär
+blackbird /blækbəːd/
+koltrast
+bladder /blædər/
+blåsa, bläddra
+blade /bleid/
+1. klinga
+2. strå
+3. stjälk
+blame /bleim/
+1. skuld
+2. förebrå, förevita
+blank /blæŋk/
+1. blank, vit
+2. formulär
+blanket /blæŋkit/
+dekan
+blaspheme /blæsfiːm/
+svära
+blasphemer /blæsfiːmər/
+hädare
+blasphemy /blæsfəmiː/
+gudsförmädelse, hädelse
+bleak /bleik/
+1. förtretlig, oangenäm, obehaglig, otrevlig
+2. kall
+bleed /bliːd/
+blöda
+blend /blend/
+blanda, sammanblanda
+bless /bles/
+signa, välsigna
+blessing /blesiŋ/
+välsignelse
+blind /blaind/
+blind
+blister /blistər/
+blåsa
+block /blɔk/
+1. blockera
+2. block
+blockade /blɔkeid/
+1. blockad
+2. blockera
+block /blɔkɔfflæts/
+höghus
+blond /blɔnd/
+blond, ljus
+blood /blˈʌd/
+släkt, släktskap
+blood /blʌd/
+blod
+bloom /bluːm/
+blomma, blomster
+blot /blɔt/
+fläck
+blotter /blɔtər/
+läskpapper
+blotting /blɔtiŋpeipər/
+läskpapper
+blouse /bləs/
+blus
+blow /blou/
+1. hugg
+2. blåsa
+3. fläkta
+blow /blouʌp/
+försämra, förvärra
+blue /bluː/
+1. blå
+blueberry /bluːbəriː/
+blåbär
+blunt /blʌnt/
+ovass
+blushing /blʌʃiŋ/
+röd
+board /bɔːd/
+bräde, plank, tilja
+boarding /bɔːdiŋhaus/
+pension
+boarding /bɔːdiŋsʃuːl/
+pension
+boast /boust/
+skryta
+boat /bout/
+1. båt
+2. slup
+bodily /bɔdəliː/
+kroppslig, lekamlig
+body /bˈɒdi/
+kroppslig, lekamlig
+body /boudiː/
+1. kroppslig, lekamlig
+2. kropp, lekamen
+boil /bɔil/
+1. koka
+bold /bould/
+diger, fet, tjock
+bolt /boult/
+1. regla
+2. regel, rigel, slå
+bomb /bɔm/
+bomb
+bone /boun/
+ben
+book /bˈʊk/
+bokförare, bokhållare
+bookcase /bukkeis/
+bokskåp
+bookseller /bukselər/
+bokhandlare
+boon /buːn/
+välsignelse
+boot /buːt/
+stövel
+boozer /buːzər/
+drinkare, rumlare, supare
+border /bɔːdər/
+brädd, kant, marginal, remsa, ren
+bore /bɔːr/
+1. borra
+2. borr
+borrow /bɔrou/
+låna
+bosom /buzəm/
+bröst
+boss /bɔs/
+1. anförare, chef
+2. mästare
+botany /bɔtəniː/
+botanik
+both /bɔθ/
+båda, bägge, vardera, ömse
+bottle /bɔtl/
+butelj, flaska
+bottom /bɔtəm/
+botten, grund
+bough /bau/
+gren, kvist
+bouillon /buːjɔn/
+buljong
+boulevard /buːləvɑːd/
+bulevard
+boundary /baundriː/
+gräns
+boutique /buːtiːk/
+affär, butik, handelsbod
+bovine /bouvain/
+nöt
+bovine /bouvainæniməl/
+nöt
+bow /bou/
+båge
+bowl /boul/
+skål
+box /bˈɒks/
+förvaringsställe
+box /bɔks/
+1. boxa
+2. kista, lår
+3. ask, dosa
+4. skål, stop, så, urna
+boy /bɔi/
+1. gosse, pilt, pojke
+2. betjänt, dräng, tjänare
+bra /brə/
+behå
+brace /breis/
+spasm
+bracelet /breislit/
+armband
+bracket /brækit/
+spasm
+brag /bræg/
+skryta
+brain /brein/
+hjärna
+brake /breik/
+1. bromsa
+2. broms
+bramble /bræmbl/
+björnbär
+branch /brɑːntʃ/
+1. gren, kvist
+2. fack, yrke
+brandish /brændiʃ/
+svinga
+brandy /brændiː/
+1. akvavit, brännvin
+2. konjak
+brass /brɑːs/
+mässing
+brave /breiv/
+behjärtad, tapper
+bread /bred/
+bröd
+bread /bredændbʌtər/
+smörgås
+break /breik/
+1. paus
+2. avbryta, bryta, knäcka
+breakable /breikəbl/
+brytbar, bräcklig
+break /breikdaun/
+slopa
+bream /briːm/
+braxen
+breast /brest/
+bröst
+breath /breθ/
+anda
+breathe /briːð/
+andas
+breathless /breθləs/
+andlös
+breed /briːd/
+1. uppfostra
+2. ras
+breeze /briːz/
+bris
+brick /brik/
+tegelsten
+bride /braid/
+1. fästmö
+2. brud
+bridegroom /braidgrum/
+brudgum
+bridge /bridʒ/
+bro
+brief /briːf/
+gen
+brief /briːfkeis/
+portfölj
+brigade /brigeid/
+brigad
+bright /brait/
+ljus
+brim /brim/
+brädd, kant, marginal, remsa, ren
+brimstone /brimstoun/
+svavel
+bring /briŋælɔŋ/
+medbringa
+bring /briŋʌp/
+uppfostra
+brink /briŋk/
+brädd, kant, marginal, remsa, ren
+brisk /brisk/
+livaktig, livlig
+brittle /britl/
+brytbar, bräcklig
+broad /brɔːd/
+vid
+broadcast /brɔːdkɑːst/
+utskicka
+broken /broukən/
+kaputt
+broker /broukər/
+mäklare
+bronze /brɔnz/
+brons
+brooch /broutʃ/
+brosch
+broom /bruːm/
+kvast, sopkvast
+brothel /brɔθl/
+bordell
+brother /bɹˈʌðə/
+svåger
+brother /brʌðər/
+broder, bror
+brothers /brʌðəzændsistəz/
+syskon
+brow /brau/
+ögonbryn
+brown /braun/
+brun
+brush /brʌʃ/
+1. borsta
+2. borste
+brutal /bruːtl/
+ovänlig, snäsig
+bubble /bʌbl/
+blåsa, bläddra
+bucket /bʌkit/
+bytta, hink
+bud /bʌd/
+knopp
+buddy /bʌdiː/
+kamrat, kompis
+buffalo /bʌfəlou/
+buffel
+bug /bʌg/
+insekt, kryp
+build /bild/
+1. bygga
+2. mura
+3. snickra
+builder /bildər/
+byggmästare
+building /bˈɪldɪŋ/
+byggnadstomt
+building /bˈɪldɪŋ/
+byggnadstomt
+building /bildiŋ/
+byggnad
+building /bildiŋkɔntræktər/
+byggmästare
+build /bildfrɔmwud/
+snickra
+bulk /bʌlk/
+omfång, storhet, storlek
+bulky /bʌlkiː/
+omfångsrik
+bull /bul/
+tjur
+bullet /bulit/
+kula
+bulletin /bulətin/
+bulletin
+bumblebee /bʌmblbiː/
+humla
+bump /bʌmp/
+puckel
+bunch /bʌntʃ/
+knippa, knyte, packe
+bundle /bʌndl/
+knippa, knyte, packe
+bungalow /bʌŋgəlou/
+enplansvilla
+bunker /bʌŋkər/
+kasematt
+burden /bəːdn/
+1. ladda, lasta
+2. frakt
+burdensome /bəːdnsəm/
+tung, viktig
+bureau /bjeərou/
+byrå, kontor
+burglar /bəːglər/
+inbrottstjuv
+burial /beriəl/
+begravning
+burn /bəːn/
+brinna
+burn /bəːndaun/
+förbränna
+burst /bəːst/
+rämna
+bury /beriː/
+1. begrava, jordfästa
+bush /buʃ/
+buske
+business /biznəs/
+1. affär, sak
+2. handel
+businessman /biznəsmæn/
+1. affärsman
+2. handelsman
+business /biznəsdiːl/
+affär, sak
+business /biznəsfrend/
+affärsvän
+business /biznəsrileiʃən/
+affärsförbindelse
+but /bʌt/
+1. utom
+2. men
+3. likafullt, oaktat
+butcher /butʃər/
+slaktare
+butcher /butʃəzʃɔp/
+slakteri
+butter /bʌtər/
+smör
+butterfly /bʌtəflai/
+fjäril
+button /bʌtn/
+knapp
+buy /bəiː/
+1. anskaffa, köpa
+2. anskaffning, inköp, köp
+buyer /baiər/
+köpare
+buzz /bʌz/
+surra
+by /bˈaɪ/
+statut
+by /bˈaɪ/
+avtagsväg, avväg
+by /biː/
+1. bi, hos, vid
+2. alltifrån, av, efter
+3. på
+4. alltefter, jämlikt
+5. per
+bye /biː/
+1. adjö, hejdå
+2. adjösålänge, hejsålänge, vises
+byname /biəneim/
+binamn, vedernamn
+by /biːæksidənt/
+händelsevis, tillfälligtvis
+by /biːtʃɑːns/
+händelsevis, tillfälligtvis
+by /biːmiːnzɔf/
+per
+by /biːmisteik/
+avmisstag
+by /biːnait/
+omnatten
+by /biːnau/
+allaredan, redan, ren
+by /biːnoumiːnz/
+ingalunda
+by /biːʃip/
+båtledes
+by /biːðwei/
+apropå
+cabbage /kæbidʒ/
+kål
+cabin /kæbin/
+1. hydda, hytt
+2. kajuta, koja
+cabinet /kæbinət/
+1. kabinett
+2. skåp
+cable /keibl/
+kabel
+cactus /kæktəs/
+kaktus
+cadaver /kədɑːvər/
+as, kadaver
+cadger /kædʒər/
+snyltgäst, tallricksslickare
+caf /kˈaf/
+kafé
+cage /keidʒ/
+bur
+cake /keik/
+kaka
+calculate /kælkjuleit/
+beräkna, uträkna
+calculation /kælkjuleiʃən/
+1. beräkning
+2. nota
+calendar /kælindər/
+kalender
+calf /kɑːf/
+1. kalv
+2. tjockben, vad
+call /kɔːl/
+1. benämna, heta, kalla
+2. ropa
+caller /kɔːlər/
+besökande
+call /kɔːlbɔks/
+telefonhytt
+camel /kæməl/
+kamel
+camera /kæmərə/
+fotografiapparat
+camphor /kæmfər/
+kamfer
+camping /kæmpiŋgraund/
+kampingplats, läger
+camping /kæmpiŋsait/
+kampingplats, läger
+canal /kənæl/
+grav, kanal
+canary /kənɛəriː/
+kanariefågel
+cancel /kænsəl/
+arbeställa
+cancer /kænsər/
+kräfta
+candidate /kændideit/
+sökande, tjänstsökande
+candle /kændl/
+ljus
+cane /kein/
+stav, stång
+canker /kæŋkər/
+kräfta
+cannibal /kænibəl/
+kannibal
+cannon /kænən/
+kanon
+canoe /kənuː/
+kanot
+canteen /kæntiːn/
+fältflaska
+cap /keip/
+huv, mössa
+cape /keip/
+kap
+capital /kæpitəl/
+1. kapital
+2. huvudstad
+capital /kæpitəlsitiː/
+huvudstad
+caprice /kəpriːs/
+hugskott, kapris, nyck
+capsule /kæpsjuːl/
+kapsyl
+captain /kæptin/
+1. kapten
+2. skeppare
+capture /kæptʃər/
+fånga
+car /kɑːr/
+bil
+carafe /kəræf/
+karaff, karaffin
+caravan /kærəvæn/
+karavan
+carburettor /kɑːbəretər/
+förgasare, karburator
+card /kɑːd/
+karta, kort
+cardboard /kɑːdbɔːd/
+kartong
+cardiac /kɑːdiæk/
+hjärtlig
+care /kɛər/
+omtanke, sorg
+career /kəriər/
+karriär
+careful /kɛəfəl/
+försiktig, varlig, varligen, varsam
+careless /kɛələs/
+oaktsam, ouppmärksam
+caress /kəres/
+1. smeka
+2. smek
+carnation /kɑːneiʃən/
+nejlika
+carnival /kɑːnivəl/
+karneval
+carp /kɑːp/
+karp
+carpenter /kɑːpintər/
+snickare
+carrot /kærət/
+morot
+carry /kæriː/
+bära
+case /keis/
+1. affär, sak
+2. fall
+cashier /kæʃiər/
+kassör
+cashier /kæʃiəzstænd/
+kassa
+casino /kəsiːnou/
+kasino
+castigate /kæstigeit/
+aga
+castigation /kæstigeiʃən/
+aga
+castle /kɑːsl/
+1. borg, slott
+2. torn
+cat /kæt/
+katt
+catalogue /kætəlɔg/
+katalog
+catarrh /kətɑːr/
+katarr
+catastrophe /kətæstrəfiː/
+katastrof
+catch /kætʃ/
+fånga
+category /kætigəriː/
+kategori
+caterpillar /kætəpilər/
+larv, mask
+cathedral /kəθiːdrəl/
+dom, katedral
+cauliflower /kɔliflauər/
+blomkål
+cause /kɔːz/
+1. föranleda, förorsaka, orsaka
+2. orsak
+cause /kɔːzpein/
+bedröva
+cause /kɔːzpeintou/
+bedröva
+caution /kɔːʃən/
+varna, varsko, åtvarna
+cautious /kɔːʃəs/
+försiktig, varlig, varligen, varsam
+cavalier /kəvæliər/
+riddare
+cavalry /kævəlriː/
+kavalleri
+cave /keiv/
+grotta
+caviar /kæviɑːr/
+kaviar
+ceaselessly /siːsləsliː/
+oavlåtlig
+cedar /siːdər/
+ceder
+cede /siːd/
+cedere
+ceiling /siːliŋ/
+tak
+celebrate /selibreit/
+festa, hafest, kalasa
+celebrating /selibreitiŋwʌnzbəːθdei/
+firafödelsedagen, fyllaår, hafödelsedag
+celebration /selibreiʃən/
+fest, kalas
+celery /seləriː/
+selleri
+celestial /silestiəl/
+himmelsk
+cell /sel/
+cell
+cellar /selər/
+källare
+cello /tʃelou/
+violoncell
+cement /semənt/
+cement, kitt
+cemetery /semətriː/
+kyrkogård
+censor /sensər/
+1. censurera
+2. censur
+centennial /senteniəl/
+århundrade, sekel
+centimetre /sentimiːtər/
+centimeter
+centipede /sentipt/
+tusenfoting
+central /sentrəl/
+central
+centre /sentər/
+center
+century /sentʃəriː/
+århundrade, sekel
+ceremony /seriməniː/
+ceremoni
+certain /sətein/
+given, säker, trygg
+certainly /səteinliː/
+ju
+certainty /səːtntiː/
+visshet
+certificate /sətifikeit/
+1. aktstycke
+2. attest
+chain /tʃein/
+kedja
+chair /tʃɛər/
+stol
+chairman /tʃɛəmən/
+president
+chalk /tʃɔːk/
+krita
+chamber /tʃeimbər/
+gemak, kammare
+champagne /tʃæmpein/
+champagne
+champion /tʃæmpiən/
+mästare
+chance /tʃɑːns/
+1. slump, tillfällighet
+2. händelse, tillfälle
+change /tʃeindʒ/
+1. förvandla, förändras, ändra
+2. förväxla, förändra, växla
+3. ändring
+4. förändring
+channel /tʃænl/
+1. grav, kanal
+2. rör
+chaos /keiɔs/
+kaos, oordning, trassel
+chapter /tʃæptər/
+kapitel
+character /kærəktər/
+1. art, karaktär
+2. natur
+3. tecken
+characteristic /kærəktəristik/
+karakterisk
+characterize /kærəktəraiz/
+karakterisera
+charge /tʃɑːdʒ/
+frakt
+charity /tʃæritiː/
+allmosa
+charm /tʃɑːm/
+behag
+charming /tʃɑːmiŋ/
+behagfull
+chase /tʃeis/
+1. driva, fösa
+2. förfölja
+3. jaga
+chase /tʃeisɔːwei/
+förjaga
+chasm /kæzəm/
+avgrund, gap
+chaste /tʃeist/
+kysk, sedesam, tuktig
+chastise /tʃæstaiz/
+aga
+chastisement /tʃæstaizmənt/
+aga
+chat /tʃæt/
+prata, snacka
+chatter /tʃætər/
+prata, snacka
+chauffeur /ʃoufər/
+chaufför
+cheap /tʃiːp/
+billig
+cheat /tʃiːt/
+1. niding, rackare, skurk
+2. bedragare
+3. bedra, bedraga, lura, narra
+check /tʃek/
+1. besiktiga, kontrollera
+2. check
+checker /tʃekər/
+besiktningsman, kontrollant, kontrollör
+check /tʃekʌpwʌn/
+besiktiga, kontrollera
+cheek /tʃiːk/
+kind
+cheerful /tʃiəfəl/
+1. glad, kry
+2. gladlynt
+cheers /tʃiəz/
+gutår, skål
+cheese /tʃiːz/
+ost
+chemist /kemist/
+apotekare
+chemistry /kemistriː/
+kemi
+chemist /kemistzʃɔp/
+apotek
+cheque /tʃˈɛk/
+checkbok
+cheque /tʃek/
+check
+cherry /tʃeriː/
+körsbär
+chess /tʃˈɛs/
+schackbräde
+chessboard /tʃesbɔːd/
+schackbräde
+chest /tʃest/
+1. bröst
+2. kista, lår
+chestnut /tʃesnʌt/
+kastanje
+chewing /tʃˈuːɪŋ/
+tuggummi
+chew /tʃuːðkʌd/
+idissla
+chick /tʃik/
+kyckling
+chicken /tʃikən/
+1. kyckling
+2. höna
+3. höns
+chief /tʃif/
+1. anförare, chef
+2. överman
+chief /tʃifɔfpəliːs/
+kommissarie, poliskommissarie
+child /tʃaild/
+1. telning, unge
+2. barn
+childless /tʃaildləs/
+barnlös
+chilly /tʃiliː/
+kall
+chimney /tʃimniː/
+skorsten
+chin /tʃin/
+haka
+chisel /tʃəzel/
+mejsel
+chive /tʃaiv/
+gräslök
+chlorine /klɔːriːn/
+klor
+chocolate /tʃoukəleit/
+choklad
+choice /tʃɔis/
+val, valakt
+choke /tʃouk/
+strypa
+choose /tʃuːz/
+kora
+chop /tʃɔp/
+hugga, yxa
+chord /tʃɔːd/
+ackord
+chorus /kɔːrəs/
+kor
+chrestomathy /krəstɔməθiː/
+urval
+christen /krisn/
+döpa, kristna
+christening /krisniŋ/
+dop, döpelse, kristning
+chromium /kroumiəm/
+krom
+chronicle /krɔnikl/
+krönika
+chuck /tʃʌk/
+1. smeka
+2. smek
+church /tʃˈɜːtʃ/
+kyrka
+church /tʃəːtʃ/
+kyrka
+cigar /sigɑːr/
+cigarr
+cigarette /sigəret/
+cigarrett
+cinder /sindər/
+aska
+cinema /sinəmə/
+1. biograf
+2. kina
+circle /səːkl/
+1. cirkel
+2. krets, rund
+circumstances /səːkəmstənsiz/
+situation
+circus /səːkəs/
+cirkus
+citation /saiteiʃən/
+1. anförande
+2. citat
+cite /sait/
+anföra, citera
+citizen /sitizən/
+medborgare
+city /sitiː/
+1. världsstad
+2. stad
+city /sitiːhɔːl/
+rådhus, stadshus
+civil /sivəlsteitəs/
+civilstånd
+clamp /klæmp/
+spasm
+clap /klæp/
+applådera
+clarify /klærifai/
+förklara, utlägga
+clasp /klɑːsp/
+häkta
+class /klɑːs/
+1. klass
+2. kurs
+classic /klæsik/
+klassisk
+classical /klæsikl/
+klassisk
+claw /klɔː/
+klo, tass
+clay /klei/
+ler, lera
+clean /kliːn/
+1. lutter, ren
+2. luttra, rena, rengöra, rensa, sovra
+cleanse /kliːnz/
+luttra, rena, rengöra, rensa, sovra
+clear /kliər/
+1. ljus
+2. klar, tydlig
+clef /klef/
+klav
+clergyman /kləːdʒimən/
+präst
+clerk /klɑːk/
+skrivare
+clever /klevər/
+fiffig, illmarig, klipsk, klyftig, knepig, knipslug, slug
+client /kliːənt/
+1. köpare
+2. kund
+client /klˈaɪənt/
+klientel
+climate /klaimət/
+klimat
+climb /klaim/
+1. kliva, klättra
+2. dala
+clinic /klinik/
+klinik
+cloak /klouk/
+kappa
+cloakroom /kloukruːm/
+garderob, kapprum
+clock /klɔk/
+klocka, ur
+close /klouz/
+1. intim, såt
+2. smal, trång
+3. när
+closet /klɔzit/
+skåp
+clothes /klˈəʊðz/
+garderob, klädskåp
+clothes /klouðz/
+beklädnad, klädedräkt, kläder, klädsel
+clothing /klouðiŋ/
+beklädnad, klädedräkt, kläder, klädsel
+cloud /klaud/
+moln, sky
+clover /klouvər/
+klöver, väppling
+club /klʌb/
+klubb
+cluster /kluːstər/
+knippa, knyte, packe
+co /kˈəʊ/
+sambo
+co /kˈəʊ/
+medverka, samarbeta
+coal /koul/
+kol
+coast /koust/
+kust
+coat /kout/
+paletå
+cock /kɔk/
+tupp
+cockroach /kɔkroutʃ/
+bobba
+cocktail /kɔkteil/
+drink
+cocoa /koukou/
+kakao
+coconut /koukənʌt/
+kokosnöt
+cod /koud/
+kabeljo, torsk
+coddle /kɔdl/
+kela
+code /koud/
+kod
+codfish /kɔdfiʃ/
+kabeljo, torsk
+coffee /kˈɒfi/
+kafé
+coffee /kɔfiː/
+kaffe
+coffin /kɔfin/
+likkista
+cognac /kɔnjæk/
+konjak
+cohabit /kouhæbit/
+boihop
+coin /kɔin/
+mynt
+coir /kɔiər/
+kor
+cold /kould/
+1. kall
+2. köld
+3. förkylning
+4. snuva
+collar /kɔlər/
+krage
+colleague /kɔliːg/
+kollega
+collect /kəlekt/
+församla, samla
+collection /kəlekʃən/
+1. flock, grupp, hjord, koppel, svärm, tropp, trupp
+2. samling
+college /kɔlidʒ/
+kollegium
+colonel /kəːnl/
+överste
+colony /kɔləniː/
+koloni
+colossal /kəlɔsl/
+kolossal
+colour /kʌlər/
+färg
+column /kɔləm/
+1. pelare, spalt
+2. rubrik
+comb /koum/
+kamma
+combine /kɔmbain/
+ansluta
+come /kʌm/
+1. härstamma
+2. komma
+comedy /kɔmədiː/
+komedi
+comet /kɔmit/
+komet
+come /kʌməbaut/
+1. bli
+2. hända, inträffa, passera
+come /kʌməkrɔs/
+möta
+come /kʌmklouz/
+nalkas
+come /kʌmklouzər/
+nalkas
+come /kʌmwʌn/
+nalkas
+come /kʌmtəgeðər/
+para
+come /kʌmtouænənd/
+sluta
+comfort /kʌmfət/
+trösta
+comfortable /kʌmftəbl/
+bekväm
+comic /kɔmik/
+komisk
+comical /kɔmikl/
+komisk
+coming /kʌmiŋ/
+ursprunglig
+comma /kɔmə/
+komma
+command /kəmɑːnd/
+1. befalla, kommendera
+2. befallning, befäl, kommando, order
+3. påbjuda
+4. påbud
+commander /koumændər/
+befälhavare, kommendant
+commence /kəmens/
+begynna, börja
+commencement /kəmensmənt/
+begynnelse, början
+commend /kəmend/
+1. berömma, lova, prisa
+2. anbefalla, förorda, rekommendera
+commendable /kəmendəbl/
+berömlig
+commerce /kɔməːs/
+affär, handel
+commission /kəmiʃən/
+kommission
+committee /kəmitiː/
+kommitté
+commodity /kəmɔditiː/
+1. artikel
+2. vara
+common /kɔmən/
+gemensam
+commonplace /kɔmənpleis/
+1. banal
+2. trivial
+commotion /kəmouʃən/
+1. agitation
+2. skandal
+communication /kəmjuːnikeiʃən/
+bekantgörande, tillkännagivande
+communism /kɔmjunizəm/
+kommunism
+community /kəmjuːnitiː/
+gemenskap, kommun
+companion /kəmpæniən/
+kamrat, kompis
+company /kʌmpəniː/
+affärshus
+compare /kəmpɛər/
+jämföra, likna
+comparison /kəmpærisn/
+jämförelse, liknelse, sammanlikning
+compartment /kəmpɑːtmənt/
+1. fack, yrke
+2. kupé
+compass /kʌmpəs/
+kompass
+compassion /kəmpæʃən/
+medlidande, misskund
+compel /kəmpel/
+förplikta, tvinga
+compensate /kɔmpənseit/
+belöna
+compensation /kəmpenseiʃən/
+belöning
+competent /kɔmpitənt/
+kompetent
+competition /kɔmpətiʃən/
+1. konkurrens, tävlan
+2. tävling
+complain /kəmplein/
+klaga
+complete /kəmpliːt/
+1. komplett
+2. full
+compliment /kəmplimənt/
+komplimang
+compose /kəmpouz/
+komponera
+composer /kəmpouzər/
+kompositör, tonsättare
+computation /kɔmpjuteiʃən/
+beräkning
+computer /kəmpjuːtər/
+datamaskin, dator
+comrade /kɔmreid/
+kamrat, kompis
+conceal /kənsiːl/
+fördölja, gömma, hysa
+concede /kənsiːd/
+medge
+concept /kɔnsept/
+koncept
+concern /kənsəːn/
+1. beträffa
+2. omtanke, sorg
+concerning /kənsəːniŋ/
+1. angående
+2. om, över, på
+concert /kənsəːt/
+konsert
+conclusion /kənkluːʒn/
+1. konklusion
+2. resultat
+concord /kɔŋkɔːd/
+ackord, överenskommelse, överenstämmelse
+concrete /kɔŋkriːt/
+1. betong
+2. konkret
+concurrence /kənkʌrəns/
+överenskommelse, överenstämmelse
+condemn /kəndem/
+1. döma
+2. missbilliga
+condition /kəndiʃən/
+1. kondition
+2. situation
+condom /kɔndəm/
+kondom
+conduct /kɔndʌkt/
+1. föra
+2. beteende, uppförande
+conduct /kɔndʌktwʌnself/
+betesig, uppförasig
+confectioner /kənfekʃənər/
+konditor
+confectionery /kənfekʃənəriː/
+konditori
+confess /kənfes/
+1. bekänna
+2. bikta, skriftasig
+confession /kənfeʃən/
+1. bekännelse, konfession
+2. bikt, skriftermål, syndabekännelse
+confide /kənfaid/
+haförtroendeför
+confidence /kɔnfidəns/
+1. förtroende, tillit
+confine /kənfain/
+avgränsa, begränsa
+confiscate /kɔnfiskeit/
+konfiskera
+conflict /kənflikt/
+konflikt
+congratulate /kəngrætʃuleit/
+gratulera
+congress /kɔŋgres/
+kongress
+conifer /kɔnifər/
+barrträd
+connect /kənekt/
+1. ansluta
+2. binda, snöra
+connect /kənektʌp/
+ansluta
+conquer /kɔŋkər/
+erövra
+consciousness /kɔnʃəsnəs/
+medvetande
+conservative /kənsəːvətiv/
+konservativ
+conserve /kənsəːv/
+behålla, förvara, konservera
+consider /kənsidər/
+1. betrakta
+2. beskåda, kika, skåda, titta
+consolation /kɔnsəleiʃən/
+tröst
+console /kɔnsoul/
+trösta
+consonant /kɔnsənənt/
+konsonant, medljud
+conspiracy /kənspirəsiː/
+komplott
+constant /kənstənt/
+1. konstant
+2. oupphörlig
+construct /kənstrʌkt/
+bygga
+consul /kənsl/
+konsul
+consulate /kɔnsjulət/
+konsulat
+consult /kənsʌlt/
+konsultera, rådfråga
+consume /kənsjuːm/
+förbruka
+contact /kɔntækt/
+kontakt
+container /kənteinər/
+skål, stop, så, urna
+contempt /kəntempt/
+förakt
+contented /kəntentid/
+belåten, nöjd
+contention /kəntenʃən/
+påstående
+contents /kɔntents/
+innehåll
+contest /kɔntist/
+tävling
+continent /kɔntinənt/
+fastland, världsdel
+continual /kəntinjeəl/
+konstant
+contract /kɔntrækt/
+kontrakt
+contractor /kɔntræktər/
+byggmästare
+contradistinction /kɔntrədistiŋkʃən/
+motsats
+contralto /kɔntræltou/
+altröst, altstämma
+contralto /kɔntræltouvɔis/
+altröst, altstämma
+contrary /kɔntrɛəriː/
+motsatt
+contrast /kɔntrɑːst/
+1. motsats
+2. kontrast
+control /kɔntroul/
+härska, regera
+controller /kɔntroulər/
+besiktningsman, kontrollant, kontrollör
+control /kɔntroulwʌnself/
+behärskasig
+convention /kənvenʃən/
+kongress
+conversation /kɔnvəseiʃən/
+konversation
+conversion /kənvəːʃən/
+1. ändring
+2. förändring
+conviction /kənvikʃən/
+övertygelse
+convince /kənvins/
+överbevisa, övertyga
+cook /kuk/
+1. koka
+2. kokerska, köksa
+3. kock
+cool /kuːl/
+sval
+cooperate /kouɔpəreit/
+medverka, samarbeta
+copper /kɔpər/
+koppar
+copy /kɔpiː/
+1. exemplar
+2. efterbilda, kopiera
+3. avskrift, kopia
+cord /kɔːd/
+lina, rep, sladd, snodd, snöre, streck
+cordial /kɔːdiəl/
+hjärtlig
+core /kɔːr/
+kärna
+cork /kɔːk/
+kork
+corkscrew /kɔːkskruː/
+korkskruv
+corn /kɔːn/
+1. liktorn
+2. majs
+corner /kɔːnər/
+hörn, smyg, vrå
+cornflower /kɔːnflauər/
+blåklint, klint
+coronation /kɔrəneiʃən/
+kröning
+corporal /kɔːpərəl/
+kroppslig, lekamlig
+corporeal /kɔːpɔːriəl/
+kroppslig, lekamlig
+corpse /kɔːps/
+as, kadaver
+corpulent /kɔːpjulənt/
+diger, fet, tjock
+correct /kərekt/
+1. korrekt
+2. korrigera
+correspond /kɔrispɔnd/
+korespondera
+cost /kɔst/
+kosta
+costly /kɔstliː/
+dyr, dyrbar
+costume /kɔstjuːm/
+klädedräkt, kostym
+cotton /kˈɒtən/
+vadd
+cotton /kɔtn/
+bomull
+couch /kautʃ/
+kanapé
+cough /kɔf/
+hosta
+counsel /kaunsl/
+1. advokat, sakförare
+2. rå, råda
+3. råd
+count /kaunt/
+1. greve
+2. beräkna, uträkna
+counter /kauntər/
+boddisk
+countless /kauntləs/
+otalig, tallös
+country /kʌntriː/
+1. landsbygd, landsort
+2. land
+countryman /kʌntrimən/
+landsbo
+countryside /kʌntrisaid/
+landsbygd, landsort
+count /kauntin/
+addera, summera
+couple /kʌpl/
+äktapar, giftpar
+coupon /kuːpɔn/
+kupong
+coup /kˈuːp/
+kupé
+courage /kʌridʒ/
+mandom, mod
+courageous /kəreidʒəs/
+behjärtad, tapper
+course /kɔːs/
+1. kurs
+2. fat
+3. trivial
+court /kɔːt/
+gård, gårdstomt
+courteous /kəːtiəs/
+artig, hövlig
+courtyard /kɔːtjɑːd/
+gård, gårdstomt
+cousin /kʌzn/
+kusin
+cover /kʌvər/
+betäcka, hölja, skyla, täcka, övertäcka
+covet /kʌvit/
+begära
+covetousness /kʌvitəsnəs/
+begär, begäran
+cow /kau/
+ko
+crab /kræb/
+krabba
+crack /kræk/
+1. knaka
+2. rämna
+cradle /kreidl/
+födelseort
+cramped /kræmpt/
+smal, trång
+crane /krein/
+kran
+crawl /krɔːl/
+krypa, kräla
+crayfish /kreifiʃ/
+kräfta
+craziness /kreizinəs/
+1. galenskap
+2. vansinne, vanvett
+crazy /kreiziː/
+dåraktig, förryckt, galen, stollig, tok, tokig, vansinnig, vriden
+cream /kriːm/
+kräm
+create /kriːeit/
+1. skapa
+2. komponera
+creature /kriːtʃər/
+skapelse, varelse
+credit /kredit/
+kredit
+creep /kriːp/
+krypa, kräla
+crew /kruː/
+besättning
+cricket /krikit/
+syrsa
+crime /kraim/
+förbrytelse, illgärning, missdåd, ogärning
+criminal /kriminl/
+1. brottslig, kriminal
+2. brottsling, förbrytare, ogärningsman
+crisis /kraisis/
+kris
+criticism /kritisizəm/
+kritik
+crocodile /krɔkədail/
+krokodil
+crook /kruk/
+niding, rackare, skurk
+cross /krɔs/
+1. arg, ilsken, vred, vredgad
+2. kors
+crossword /krɔswəːdpʌzl/
+korsord
+cross /krɔsroudz/
+vägkorsning, vägmöte
+crow /krau/
+1. kråka
+crowd /kraud/
+1. hop, mängd
+crucify /kruːsifai/
+korstfästa
+crude /kruːdɔil/
+nafta
+cruel /kreəl/
+grym
+crush /krʌʃ/
+1. anlopp
+2. krossa
+cry /krai/
+1. skri, skrik
+2. grina, gråta
+crystal /kristl/
+kristall
+cry /kraiaut/
+hojta, skria, skrika, skråla
+cube /kjuːb/
+kub
+cuckoo /kukuː/
+gök
+cucumber /kjuːkʌmbər/
+gurka
+cultivate /kʌltiveit/
+avla
+culture /kʌltʃər/
+kultur
+cunning /kʌniŋ/
+fiffig, illmarig, klipsk, klyftig, knepig, knipslug, slug
+cup /kʌp/
+kopp
+cupboard /kʌbəd/
+skåp
+curate /kjeərət/
+adjunkt
+cure /kjeər/
+hela
+currant /kʌrənt/
+vinbär
+current /kʌrənt/
+1. ström
+2. ströming
+currently /kʌrentliː/
+nutida, nuvarande
+curry /kʌriː/
+kurry
+curse /kəːs/
+1. svära
+2. förbanna, fördöma
+curtain /kəːtn/
+förhänge
+curve /kəːv/
+krok, krumbukt, kurva, sväng
+curved /kəːvd/
+krokig
+cushion /kuʃən/
+dyna, hyende, kudde
+cuss /kʌs/
+svära
+custom /kˈʌstəm/
+tull
+custom /kʌstəm/
+vana
+customary /kʌstəməriː/
+bruklig, gemen, gångbar, ordinär, vanlig, övlig
+customer /kʌstəmər/
+kund
+cut /kʌt/
+1. meja
+2. hugga, yxa
+cutlet /kʌtlit/
+kotlett
+cycle /saikl/
+1. cykel
+2. följd, serie
+cyclone /saikloun/
+cyklon, virvelvind
+cylinder /silindər/
+cylinder
+cynical /sinikl/
+cynisk
+cypres /saiprəz/
+cypress
+czar /zɑːr/
+tsar
+daffodil /dæfədil/
+narciss
+dagger /dægər/
+dolk
+daily /deiliː/
+alldaglig
+daily /deiliːpeipər/
+dagblad, journal
+damage /dæmidʒ/
+haveri
+dame /deim/
+dam
+dance /dɑːns/
+1. bal
+2. dansa
+3. dans
+dancer /dɑːnsər/
+dansös
+dandruff /dændrʌf/
+mjäll
+danger /deindʒər/
+fara, våda
+dangerous /deindʒərəs/
+farlig, vådlig
+dare /dɛər/
+töras, våga
+darkness /dɑːknəs/
+dunkelhet, mörker
+darling /dɑːliŋ/
+älskling
+data /deitə/
+material
+date /dˈeɪt/
+dadelpalm
+date /deit/
+1. dadel
+2. datera
+3. datum
+date /deitpɑːm/
+dadelpalm
+daughter /dˈɔːtə/
+sonhustru, svärdotter
+daughter /dɔːtər/
+dotter
+dawn /dɔːn/
+dagning
+day /dei/
+dag
+daybreak /deibreik/
+dagning
+dazed /deizd/
+oredig
+dazzle /dæzl/
+blända, förblinda, förblända
+dead /ded/
+avliden, död
+deadly /dedliː/
+dödlig
+deaf /def/
+döv
+deaf /defænddʌm/
+dövstum
+deal /diːlwið/
+behandla, traktera
+dear /diər/
+1. ansedd
+2. kär, rar, söt
+3. dyr, dyrbar
+4. kostbar
+death /deθ/
+död
+debt /det/
+skuld
+decanter /dikæntər/
+karaff, karaffin
+deceitful /disiːtfəl/
+bedräglig
+deceive /disiːv/
+bedra, bedraga, lura, narra
+deceiver /disiːvər/
+bedragare
+decide /disaid/
+besluta
+declaim /dikleim/
+deklamera
+declaration /dekləreiʃən/
+förklaring
+declaration /dekləreiʃənɔfpɔləsiː/
+program
+declare /diklɛər/
+betyga, förklara
+decorate /dekəreit/
+smycka
+decree /dikriː/
+dekret
+dedicate /dedikeit/
+ägna
+deem /diːm/
+1. tro
+2. anse, tycka
+3. beskåda, kika, skåda, titta
+deep /diːp/
+djup
+deer /diər/
+hjort, hjärna
+defeat /difiːt/
+1. nederlag
+2. besegra
+defence /difens/
+försvar, värn
+defend /difend/
+försvara, värja, värna
+defense /difens/
+försvar, värn
+defiantly /difaiəntliː/
+trots
+deformed /difɔːmd/
+abnorm
+defray /difreiðkɔstɔf/
+bekosta
+degree /digriː/
+1. grad
+2. titel
+delay /diːlei/
+anstånd, uppskov
+deliver /dilivər/
+avleverera, leverera
+delivery /dilivəriː/
+leverans
+delta /deltə/
+delta
+democracy /dimɔkrəsiː/
+folkvälde
+demolish /dimɔliʃ/
+slopa
+demonstrate /demənstreit/
+exponera
+den /den/
+1. kyffe, ruckel
+2. näste
+dentist /dentist/
+dentist, tandläkare
+deny /dinai/
+förneka, neka
+depart /dipɑːt/
+gesigiväg
+department /dipɑːtmənt/
+fack, yrke
+dependant /dipendəntwʌn/
+beroende
+dependence /dipendəns/
+beroende
+dependent /dipendənt/
+avhängig, beroende
+deportment /dipɔːtmənt/
+beteende, uppförande
+deposit /dipɔzit/
+deponera
+depository /dipɔzitriː/
+lada
+depressed /diprest/
+deprimerad, nedstämd
+depression /dipreʃən/
+kris
+depth /depθ/
+1. djup
+2. djuphet, djuplek
+derive /diraiv/
+härstamma
+derrick /derik/
+kran
+describe /diskraib/
+beskriva
+description /diskripʃən/
+beskrivning
+desert /dezət/
+1. ödemark, öken
+2. lämna
+deserving /dizəːviŋ/
+värdig
+design /dizain/
+1. rita, teckna
+2. ritning, teckning
+desire /dizaiər/
+1. önska
+2. längtan, önskan
+desk /desk/
+skrivbord
+desolate /desələt/
+tröstlös
+despair /dispɛər/
+1. misströsta
+2. förtvivlan, misströstan
+desperate /despəreit/
+1. desperat, förtvivlad
+2. hopplös
+despise /dispiz/
+förakta, missakta
+despite /dispait/
+trots
+despotic /dispɔtik/
+despotisk
+dessert /dizəːt/
+efterrätt
+destroy /distrɔi/
+förinta, förstöra
+detached /ditætʃt/
+fristående
+detached /ditætʃthaus/
+friståendehus
+detail /diːteil/
+detalj
+detective /ditektiv/
+detektiv
+detention /ditenʃən/
+häkte
+determine /ditəːmin/
+befästa, fästa
+detrimental /detrimentl/
+ofördelaktig
+device /divais/
+apparat
+devil /devəl/
+djävul, fan
+devote /divout/
+ägna
+dew /djuː/
+dagg
+diabetes /daiæbits/
+sockersjuka
+diagram /daiəgræm/
+figur, gestalt
+dial /daiəl/
+platta, skiva
+dialect /daiəlekt/
+allmogespråk, bygdemål, dialekt, folkmål, landsmål
+diamond /daiəmənd/
+diamant
+diarrhoea /daiəriə/
+diarré
+diary /daiəriː/
+diarium
+dictate /dikteit/
+diktera
+dictionary /dikʃənriː/
+ordbok
+die /diː/
+1. avlida, dö
+2. tärning
+diet /daiət/
+diet
+difference /difrəns/
+olikhet, skillnad
+different /difrənt/
+1. olik
+2. olika
+differently /difərentliː/
+annorlunda
+difficult /difikəlt/
+mödosam, svår
+difficulty /difikəltiː/
+svårighet
+dig /dig/
+gräva
+dike /daik/
+damm, fördämning, vall
+diligent /dilidʒənt/
+arbetsam
+dimension /dimenʃən/
+omfång, storhet, storlek
+diminutive /diminjutiv/
+liten
+din /din/
+bråk, buller, dån, krasch, larm, oljud, olåt, oväsen, stoj, väsen
+diploma /diploumə/
+1. aktstycke
+2. diplom
+direct /direkt/
+rak, rät
+direction /direkʃən/
+direktion, kosa, riktning
+directions /direkʃənz/
+instruktion
+director /direktər/
+direktör
+directory /direktəriː/
+katalog
+dirty /dəːtiː/
+smutsig
+dis /dˈɪs/
+o‐
+disabled /diseibld/
+invalid
+disadvantage /disədvɑːntidʒ/
+nackdel
+disagreeing /disəgriːiŋ/
+oenig, oense
+disagreement /disəgriːmənt/
+oenighet
+disappear /disəpiər/
+försvinna
+disappoint /disəpɔint/
+görabesviken
+disappointment /disəpɔintmənt/
+1. besvikelse
+2. missräkning
+disapprove /disəpruːv/
+missbilliga
+disapprove /disəpruːvɔf/
+missbilliga
+disc /disk/
+platta, skiva
+disciples /disaiplz/
+anhang
+discipline /disiplin/
+disciplin
+discontent /diskəntent/
+agg
+discontented /diskəntentid/
+missbelåten, missnöjd
+discontentedness /diskəntentidnəs/
+agg
+discord /diskɔːd/
+oenighet
+discount /diskaunt/
+diskont
+discover /diskʌvər/
+upptäcka
+discovery /diskʌvəriː/
+upptäckt
+discrete /diskriːt/
+diskret
+discuss /diskʌs/
+1. diskutera, ordaom
+disease /diziːz/
+sjuka, sjukdom
+disgust /disgʌst/
+vämjelse, äckel
+dish /diʃ/
+fat
+disinfect /disinfekt/
+desinficera, smittrena
+dislike /dislaik/
+tyckaillaom
+dismal /dizməl/
+1. banal
+2. förtretlig, oangenäm, obehaglig, otrevlig
+3. ledsen, sorgsen
+4. sur
+dismayed /dismeid/
+förfärlig, hemsk
+dismiss /dizmis/
+avskicka
+disobedient /disəbiːdiənt/
+olydig
+dispatch /dispætʃnout/
+adresskort, adresslapp
+display /displei/
+parad
+displeased /displiːst/
+missbelåten, missnöjd
+displeasure /displeʒər/
+agg
+dispose /dispouzɔf/
+avyttra, försälja, sälja
+disposition /dispəziʃən/
+begåvning, gåva, talang
+dissatisfaction /disætisfækʃən/
+agg
+dissatisfied /disætisfaid/
+missbelåten, missnöjd
+dissemble /disembl/
+skrymta
+dissension /disenʃən/
+oenighet
+dissolve /dizɔlv/
+lösa
+distance /distəns/
+avstånd, distans
+distil /distil/
+destillera
+distinct /distiŋkt/
+klar, tydlig
+distress /distris/
+bedröva
+distribute /distribjuːt/
+utdela
+distribution /distribjuːʃən/
+utdelning
+district /distrikt/
+1. amt, distrikt, krets, rote
+2. kvarter
+distrust /distrʌst/
+misstro
+dive /daiv/
+dyka
+divide /divaid/
+dela
+divine /divain/
+gudomlig
+divorce /divɔːs/
+skilsmässa
+divorced /divɔːst/
+1. skild, frånskild
+do /dou/
+göra
+dock /dɔk/
+syra
+doctor /dɔktər/
+doktor, läkare
+document /dɔkjumənt/
+1. aktstycke
+2. dokument
+doe /duː/
+hind
+dog /dɔg/
+hund
+dogma /dɔgmə/
+dogm
+doll /dɔl/
+docka
+domestic /dəmestik/
+inhemsk
+domestic /dəmestikæniməl/
+husdjur
+donate /dɔneit/
+skänka
+donkey /dɔŋkiː/
+åsna
+don /dɔntmenʃənit/
+detgöringenting, föralldel, ingenorsak
+door /dɔːr/
+dörr
+double /dʌbl/
+1. dubbel
+2. dubblera, fördubbla
+doubt /daut/
+tvivla
+doubtful /dautful/
+tvivelaktig
+dough /dou/
+deg
+dove /dʌv/
+duva
+down /daun/
+ned, nedvänd, ner
+downstairs /daunstɛəz/
+nedan, nere
+dowry /dauəriː/
+hemgift
+dozen /douzn/
+dussin
+do /doubiznəs/
+handla
+drag /dræg/
+dra, draga, hala
+dragon /drægən/
+drake
+drama /drɑːmə/
+dram, drama
+draw /drɔː/
+1. rita, teckna
+2. dra, draga, hala
+drawer /drɔːr/
+låda
+drawers /drɔːz/
+underbyxor
+drawing /drɔːiŋ/
+ritning, teckning
+dreadful /dredfəl/
+förfärlig, förskräcklig, gräslig, hemsk
+dream /driːm/
+1. drömma
+2. dröm
+dreary /driəriː/
+förtretlig, oangenäm, obehaglig, otrevlig
+dress /dres/
+klänning
+drill /dril/
+borra
+drink /driŋk/
+1. rumla, supa
+2. dryck
+drink /driŋktouekses/
+rumla, supa
+drip /drip/
+1. droppa
+2. droppe
+drive /draiv/
+driva, fösa
+driver /drivər/
+chaufför
+drive /draivɔːwei/
+förjaga
+drive /draivwʌn/
+driva, fösa
+driving /dɹˈaɪvɪŋ/
+körkort
+dromedary /drɔmədəriː/
+dromedar
+droop /druːp/
+hänga
+drop /drɔp/
+1. falla, ramla
+2. droppe
+drown /draun/
+1. drukna
+2. dränka
+drug /drʌg/
+läkemedel, medicin
+drugstore /drʌgstɔːr/
+apotek
+drunk /drʌŋk/
+berudsad, drucken, full, rusig
+drunkenness /drʌŋkenəs/
+dryckenskap
+dry /driː/
+torr
+dryness /drainəs/
+torka
+dual /djuːəl/
+dubbel
+duchess /dʌtʃis/
+hertiginna
+duchy /dʌtʃiː/
+hertigdöme
+duck /dʌk/
+and, anka
+duke /djuːk/
+hertig
+dumb /dʌm/
+stum
+dumbfounded /dʌmfaundid/
+förfärlig, hemsk
+duplicate /djuːplikeit/
+multiplicera
+during /djeəriŋðnait/
+omnatten
+dusk /dʌsk/
+halvdager, skumrask, skymning
+dust /dʌst/
+damm
+dwarf /dwɔːf/
+dvärg
+dwell /dwel/
+bo, bygga
+dwelling /dweliŋ/
+boning, bostad
+dye /diː/
+färg
+dynamite /dainəmait/
+dynamit
+each /iːtʃ/
+all, envar, varenda, varje
+each /iːtʃʌðər/
+varandra, varann, varannan
+eager /iːgər/
+begärlig, sniken, snål
+eagerness /iːgənəs/
+begär, begäran
+eagle /iːgl/
+örn
+eagle /iːglaul/
+uv
+ear /iər/
+öra
+earl /əːl/
+greve
+early /əːliː/
+bittida, tidig
+earn /əːn/
+förtjäna
+earnest /əːnist/
+allvarlig
+earth /əːθ/
+jord
+earthquake /əːθkweik/
+jordbävning
+east /iːst/
+orient, ost, östan, öster
+eastern /iːstən/
+orientalisk, ostlig, österländsk, östlig, östra
+easy /iːziː/
+lätt
+echo /ekou/
+1. genljuda
+2. eko, genklang, genljud
+economy /ikɔnəmiː/
+ekonomi
+ecstasy /ekstəsiː/
+extas
+edge /edʒ/
+brädd, kant, marginal, remsa, ren
+edging /edʒiŋ/
+brädd, kant, marginal, remsa, ren
+edible /edibl/
+ätbar, ätlig
+edition /idiʃən/
+utgift
+editor /editər/
+redaktör
+educate /edʒukət/
+uppfostra
+education /edʒukeiʃən/
+uppfostran
+eel /iːl/
+ål
+effect /efikt/
+1. effekt
+2. resultat
+effort /efət/
+1. bemödande
+2. möda, omak
+egg /eg/
+ägg
+egg /egnɔg/
+äggtoddy
+eight /eit/
+åtta
+eighteen /eitiːn/
+aderton, arton
+eighteenth /eitiːnθ/
+adertonde, artonde
+eighth /eitθ/
+åttonde
+eighty /eitiː/
+åtti, åttio
+elastic /ilæstik/
+elastisk
+elbow /elbou/
+armbåge
+elder /eldər/
+fläder
+elect /ilekt/
+kora
+election /ilekʃən/
+val, valakt
+electric /ilektrik/
+elektrisk
+electricity /ilektrisitiː/
+elektricitet
+element /elimənt/
+element
+elemental /elimentl/
+elementär
+elementary /elimentriː/
+elementär
+elements /elimənts/
+alfabet
+elephant /elifɑːnt/
+elefant
+elevator /eliveitər/
+hiss
+eleven /ilevn/
+elva
+eleventh /ilevnθ/
+elfte
+elf /elf/
+älva
+elk /elk/
+älg
+elm /elm/
+alm
+else /els/
+1. annan
+2. annorlunda
+elsewhere /elswɛər/
+annanstans, annorstädes
+embankment /imbæŋkmənt/
+damm, fördämning, vall
+emblem /embləm/
+emblem
+embrace /imbreis/
+1. famna, omfamna
+2. krama
+emerald /emərəld/
+smaragd
+emergency /iməːdʒənsiː/
+kris
+emigrate /emigreit/
+utvandra
+emissary /emisəriː/
+sändebud
+emmet /emit/
+myra
+emotion /imouʃən/
+känsla, sinnesrörelse
+emperor /empərər/
+kejsare
+empire /empaiər/
+kejsardöme
+employ /implɔi/
+1. engagera
+2. använda, begagna, bruka
+employee /implɔiiː/
+arbetstagare, löntagare
+employer /implɔiər/
+1. arbetsgivare, löngivare
+empress /empres/
+kejsarinna
+emptiness /emptinəs/
+tomhet
+empty /emptiː/
+tom
+enchantment /intʃɑːntmənt/
+trolleri
+encounter /inkauntər/
+möta
+encyclopaedia /insaikləpiːdiə/
+encyklopedi
+end /ənd/
+1. fullborda, ända
+2. sluta
+3. slut, ände
+ending /endiŋ/
+slut, ända, ände
+endure /indjeər/
+1. lida
+2. tåla
+end /əndʌp/
+1. ankomma
+2. sluta
+enemy /enəmiː/
+fiende, ovän
+energy /enədʒiː/
+energi, ork
+engagement /ingeidʒmənt/
+förlovning
+engine /endʒin/
+1. lok, lokomotiv
+2. maskin
+3. motor
+engineer /endʒiniər/
+ingenjör
+enigma /inigmə/
+gåta
+enjoy /indʒɔi/
+fröjda, njuta
+enjoyable /indʒɔiəbl/
+angenäm, anslående, behaglig, trevlig
+enlarge /inlɑːdʒ/
+förstora
+enmity /enmitiː/
+fiendskap
+enthusiasm /inθjuːziæzəm/
+entusiasm, hänförelse
+entice /entis/
+1. förföra, förleda
+entire /intaiər/
+hel
+entirely /intaiəliː/
+alldeles
+entomb /intuːm/
+begrava
+entrance /intrɑːns/
+inträde
+entrust /intrʌst/
+haförtroendeför
+envious /enviəs/
+avundsam, jalu
+envoy /envɔi/
+sändebud
+envy /enviː/
+1. avundas
+2. avund, jalusi
+episode /episoud/
+episod
+epoch /iːpɔk/
+epok
+equal /iːkwəl/
+lik, jämlik
+equally /ikwɔːliː/
+desslikes, samt
+equator /ikweitər/
+ekvator
+equilibrium /ekwilibriəm/
+balans, jämvikt
+era /iərə/
+1. epok
+2. era, ära
+erect /irekt/
+grunda, instifta
+err /əːr/
+fela, mistasig, mistagasig
+error /erər/
+fel, förvillelse, misstag
+escape /iskeip/
+1. rymma, undkomma
+2. undflykt
+escort /eskɔːt/
+eskort
+establish /istæbliʃ/
+grunda, instifta
+estate /isteit/
+bondgård, gård, säteri
+esteem /istiːm/
+betrakta
+estimate /estimət/
+beräkna, taxera, uppskatta, värdera
+ethical /eθikl/
+etisk
+eunuch /juːnək/
+eunuck, snöping
+evade /iveid/
+kringgå, undfly
+even /iːvn/
+1. flack, jämn
+2. lik, jämlik
+3. jämna
+4. regelmässig
+evening /iːvniŋ/
+afton, kväll
+evening /iːvniŋmiːl/
+aftonmåltid
+event /ivent/
+händelse, tillfälle
+ever /evər/
+1. någonsin
+2. alltid, ständigt
+everlasting /evəlɑːstiŋ/
+ändlös
+every /evriː/
+all, envar, varenda, varje
+everybody /evribɔdiː/
+all, envar, varenda, varje
+everything /evriθiŋ/
+allting
+everywhere /evriwɛər/
+allestädes, överallt
+every /evriːkaindɔf/
+allehanda
+every /evriːwʌn/
+all, envar, varenda, varje
+evident /evidənt/
+synbarligen, uppenbar
+exaggerate /igzædʒəreit/
+förstora
+examination /igzæmineiʃən/
+examen, undersökning
+examine /igzæmin/
+bepröva, undersöka
+example /igzɑːmpl/
+exempel, förebild, föredöme
+exceed /iksiːd/
+överstiga, överträffa
+except /eksept/
+1. utom
+2. utöver
+except /ekseptfər/
+utöver
+excise /ɛksˈaɪz/
+accis
+excise /eksaiz/
+accis
+exclusively /ikskluːsivliː/
+bara, blott, endast
+excuse /ikskjuːs/
+urskulda, ursäkta
+excuse /ikskjuːsm/
+förlåt, ursäkta
+excuse /ikskjuːswʌnself/
+beomursäkt
+executioner /eksikjuːʃənər/
+bödel, mästerman
+exercise /ˈɛksəsˌaɪz/
+skrivbok
+exercise /eksəsaiz/
+1. inöva, öva
+2. övning
+exhausted /igzɔːstid/
+genomtrött, uppgiven
+exhibit /igzibit/
+1. exponera
+2. utställa
+exhibition /eksibiʃən/
+exposition, utställning
+exhortation /eksɔːteiʃən/
+maning
+existence /igzistəns/
+existens, tillvaro
+exit /eksit/
+utgång
+expect /ikspekt/
+forvänta, vänta, väntasig
+expectation /ekspekteiʃən/
+förväntan
+expel /ikspel/
+förjaga
+expensive /ikspensiv/
+1. dyr, dyrbar
+2. kostbar
+experiment /iksperimənt/
+försök
+expire /ikspaiər/
+1. sluta
+2. avlida, dö
+explain /iksplein/
+1. förklara, utlägga
+explanation /ikspləneiʃən/
+explikation
+explode /iksploud/
+explodera
+exposition /ekspəziʃən/
+exposition, utställning
+express /ikspres/
+uttrycka
+expression /ikspreʃən/
+uttryck
+extend /ikstend/
+omfång, storhet, storlek
+extensive /ikstensiv/
+1. omfångsrik
+2. rymlig, vid
+exterminate /ikstəːmineit/
+utplåna
+extra /ikstrə/
+extra
+extraordinary /ikstrɔːdnriː/
+synnerlig, utomordentlig
+eye /iː/
+öga
+eyebrow /aibrau/
+ögonbryn
+eyelid /ailid/
+ögonlock
+fabric /fæbrik/
+väv
+face /feis/
+anlete, ansikte, min
+facile /fæsail/
+lätt
+facilitate /fəsiliteit/
+lätta
+fact /fækt/
+faktum
+faction /fækʃən/
+part, parti
+factory /fæktəriː/
+1. fabrik
+factual /fæktʃeəl/
+faktisk
+faculty /fækltiː/
+fakultet
+fail /feil/
+klicka
+failure /feiljər/
+bankrutt, cession, fallissemang, konkurs
+faint /feint/
+1. klen, svag
+2. svimma
+fair /fɛər/
+1. krambod
+2. blond, ljus
+3. riktig
+fairy /fɛəriːteil/
+saga
+faith /feiθ/
+förtroende, tillit
+faithful /feiθfəl/
+lojal
+falcon /fɔːlkən/
+falk
+fall /fɔːl/
+falla, ramla
+fall /fɔːlil/
+insjukna
+fall /fɔːlinlʌvwið/
+1. blikäri, bliförälskadi, förälskasigi
+false /fɔːls/
+1. dolsk, falsk
+2. osann
+family /fæməliː/
+familj
+famine /fæmin/
+hungersnöd
+famous /feiməs/
+1. beryktad, berömd, frejdad
+2. renommerad
+fanatical /fənætikl/
+fanatisk
+fancier /fænsiər/
+amatör
+fantasy /fæntəsiː/
+fantasi
+farewell /fɛəwel/
+1. adjö, hejdå
+2. avsked
+farm /fɑːm/
+1. bondgård, gård, säteri
+2. arrende
+farmer /fɑːmər/
+1. arrendator
+2. bonde
+3. jordbrukare, lantbrukare
+farming /fɑːmiŋ/
+jordbruk, lantbruk, åkerbruk
+farm /fɑːmaut/
+förpakta
+fashion /fæʃən/
+mod
+fasten /fɑːsn/
+1. befästa, fästa
+2. regla
+fast /fɑːsttrein/
+blixttåg, snälltåg
+fat /feit/
+1. diger, fet, tjock
+2. fett
+father /fˈɑːðə/
+svärfader, svärfar
+father /fɑːðər/
+1. fader, far
+2. pater
+fatherland /fɑːðəlænd/
+fädernesland, hemland
+fatherless /fɑːðələs/
+faderlös
+fault /fɔːlt/
+skuld
+favor /feivər/
+1. befrämja
+2. gunst, nåd, ynnest
+favour /feivər/
+1. befrämja
+2. gunst, nåd, ynnest
+favourable /feivərəbl/
+blid, gunstig, gynnsam
+fa /fˈɑː/
+fasad
+fear /fiər/
+1. fruktan, rädsla
+2. vararädd, vararäddför
+feather /feðər/
+fjäder, penna
+fee /fiː/
+honorar
+feeding /fˈiːdɪŋ/
+nappflaska
+feign /fein/
+låtsassomom
+fellow /felou/
+karl, man
+felt /felt/
+filt
+female /fiːmeil/
+kvinnlig
+female /fiːmeilkuk/
+kokerska, köksa
+female /fiːmeilhɛədresər/
+hårfrisörska
+female /fiːmeilləbɔːrər/
+arbeterska
+female /fiːmeilsiŋər/
+sångerska
+female /fiːmeiltiːtʃər/
+lärarinna
+femal /fiːmeilleibərər/
+arbeterska
+femal /fiːmeilwəːkər/
+arbeterska
+feminine /femənin/
+kvinnlig
+fence /fens/
+1. bom, slagbom
+2. tjuvgömmare
+fence /fensɔf/
+hägna
+ferry /feriː/
+färja
+fertile /fəːtail/
+fruktbar, givande
+fertilizer /fəːtəlaizər/
+dynga
+festival /festivəl/
+fest, kalas
+fetch /fetʃ/
+avhämta, hala
+fever /fiːvər/
+feber
+fianc /fɪˈɒŋk/
+fästman
+fianc /fɪˈɒŋk/
+fästmö
+fiber /faibər/
+fiber, tåga
+fibre /faibər/
+fiber, tåga
+fief /fiːf/
+län
+field /fiːld/
+1. åker
+2. fält
+field /fiːldhɔspitəl/
+ambulansbil, sjukbil
+fifteen /fiftiːn/
+femton
+fifteenth /fiftiːnθ/
+femtonde
+fifth /fifθ/
+femte
+fifty /fiftiː/
+femti, femtio
+fig /fig/
+fikon
+fight /fait/
+kämpa, slåss, strida
+figure /figər/
+1. figur, gestalt
+2. beräkna, uträkna
+file /fail/
+1. fila
+2. fil, rasp
+3. kö, rad, räcka
+files /failz/
+arkiv
+fill /fil/
+fylla, ifylla, uppfylla
+filling /filiŋsteiʃən/
+bensinstation
+fill /filin/
+fylla, ifylla, uppfylla
+fill /filʌp/
+fylla, ifylla, uppfylla
+filter /filtər/
+1. filtrera, sila
+2. sil
+filthy /filθiː/
+smutsig
+fin /fin/
+fena
+final /fainl/
+ändlig
+financial /fainænʃl/
+finansiell
+find /faind/
+finna, hitta, upphitta
+find /faindwʌnself/
+befinnasig, må
+fine /fain/
+1. skön, vacker
+2. böter, dagsböter, plikt, straffavgift, vite
+finger /fiŋgər/
+finger
+finish /finiʃ/
+fullborda, ända
+finished /finiʃt/
+färdig, redo, tillreds
+fir /faiər/
+gran
+fire /faiər/
+eld
+firewood /faiəwud/
+ved
+firing /fˈaɪəɹɪŋ/
+kapsyl
+firm /fəːm/
+affärshus
+first /fəːst/
+första
+first /fəːstneim/
+förnamn
+fish /fiʃ/
+1. fiska
+2. fisk
+fisherman /fiʃəmən/
+fiskare
+fishing /fiʃiŋroud/
+metspö
+fist /fist/
+näve
+fit /fittəgeðər/
+harmoniera
+five /faiv/
+fem
+fix /fiks/
+1. befästa, fästa
+2. reparera, rätta
+fixed /fikst/
+stadig
+fix /fiksʌp/
+arrangera, inreda
+fjord /fiɔːd/
+fjord
+flag /flæg/
+1. flagg, flagga
+2. standar
+flame /fleim/
+flamma, låga
+flannel /flænl/
+flanell
+flat /flˈat/
+strykjärn
+flat /flæt/
+1. lägenhet
+2. flack, jämn
+flatter /flætər/
+lisma, smickra
+flattery /flætəriː/
+smicker
+flax /flæks/
+lin
+flea /fliː/
+loppa
+flee /fliː/
+1. rymma, undkomma
+2. fly
+fleet /fliːt/
+flotta
+flesh /fleʃ/
+kött
+flexible /fleksəbl/
+smidig
+flight /flait/
+flykt
+fling /fliŋ/
+svinga
+flint /flint/
+kisel
+float /flout/
+1. flyta
+2. simma
+3. sväva
+flood /flʌd/
+1. flod, högvatten
+floor /flɔːr/
+1. våning
+2. golv, tilja
+flour /flauər/
+mjöl
+flow /flou/
+1. rinna, strömma
+2. ström
+flower /flauər/
+blomma, blomster
+fluent /fluːnt/
+flytande
+flute /fluːt/
+flöjt
+fly /flai/
+1. flyga
+2. fluga
+foam /foum/
+fradga, lödder, skum
+fog /fɔg/
+dimma, mist, tjocka, töcken
+fold /fould/
+1. vecka
+2. veck
+folder /fouldər/
+skrivbok
+foliage /fouliidʒ/
+löv
+folk /fouk/
+folk
+follow /fɔlou/
+följa
+following /fɔlouiŋ/
+anhang
+fondle /fɔndl/
+smeka
+food /fuːd/
+mat, maträtt
+fool /fuːl/
+1. narr
+2. dumbom, dumhuvud
+foolish /fuːliʃ/
+1. befängd, vettlös
+2. dum
+foot /fut/
+1. fot, tass
+for /fər/
+1. för
+2. på
+force /fɔːs/
+1. förplikta, tvinga
+2. kraft, styrka
+forecast /fɔːriːkɑːst/
+varsla
+forehead /fɔːhed/
+panna
+foreign /fɔrən/
+1. främmande, utländsk
+foreigner /fɔrənər/
+1. främmande, utlänning
+2. främling, utbörding
+foreign /fɔrənkʌntriː/
+utland
+forest /fɔrist/
+skog
+foretell /fɔːtel/
+varsla
+forge /fɔːdʒ/
+smida
+forget /fəɡˈɛt/
+förgätmigej
+forget /fəget/
+glömma, uteglömma
+forgetful /fəgetfəl/
+glömsk, minesslö
+forgive /fəgiv/
+benåda, förlåta
+fork /fɔːk/
+gaffel, grep
+form /fɔːm/
+1. bilda, dana, forma, formera
+2. formulär
+formal /fɔːml/
+1. ceremoniell
+2. formell
+formidable /fɔːmidəbl/
+synnerlig, utomordentlig
+formula /fɔːmjulə/
+formel
+forsake /fəseik/
+lämna
+fortunate /fɔːtʃuneit/
+lycklig
+forty /fɔːtiː/
+fyrti, fyrtio
+for /fərəlɔŋtaim/
+länge
+for /fərigzɑːmpl/
+tillexempel
+for /fərinstəns/
+tillexempel
+for /fərrent/
+tilluthyrning
+for /fərseikɔf/
+på
+for /fərseil/
+tillsalu
+foul /faulweðər/
+oväder
+found /faund/
+grunda, instifta
+foundation /faundeiʃən/
+botten, grund
+fountain /fauntn/
+1. fontän, springvatten
+2. brunn
+four /fɔːr/
+fyra
+fourteen /fɔːtiːn/
+fjorton
+fourteenth /fɔːtiːnθ/
+fjortonde
+fourth /fɔːθ/
+fjärde
+fowl /faul/
+1. höna
+2. höns
+fox /fɔks/
+mickel, räv
+fragile /frædʒail/
+brytbar, bräcklig
+free /fɹˈiː/
+fristående
+free /friː/
+avgiftsfri, gratis, kostnadsfri
+freedom /friːdəm/
+frihet
+freemason /friːmeisn/
+frimurare
+freeze /friːz/
+frysa
+freezing /friːziŋkould/
+frost
+frequently /frikwentliː/
+ofta
+fresh /freʃwɔːtər/
+1. sötvatten
+friend /frend/
+1. väninna
+2. buss, vän, kompis
+friendly /frendliː/
+1. snäll, vänlig
+2. vänskaplig
+friendship /frendʃip/
+vänskap
+frieze /friːz/
+fris
+fright /frait/
+fruktan, rädsla, ångest
+frindge /fraindʒ/
+frans
+fringe /frindʒ/
+brädd, kant, marginal, remsa, ren
+frog /frɔg/
+groda
+from /frɔm/
+1. av
+2. alltifrån, efter
+3. från, ifrån, ut, utav
+from /frɔmwɛər/
+varifrån
+frontier /frʌntiər/
+gräns
+frost /frɔst/
+frost
+froth /frɔθ/
+fradga, lödder, skum
+fruit /fɹˈuːt/
+fruktträd
+fruit /fruːt/
+frukt
+fuel /fjuːəl/
+brännmaterial, bränsle
+full /fˈʊl/
+1. myndig
+2. fullvuxen, vuxen
+full /ful/
+1. full
+2. mätt
+full /fulpeimənt/
+avbetalning
+fun /fən/
+fröjd
+function /fʌŋkʃən/
+ämbete
+fund /fʌnd/
+1. fond
+2. kassa
+funeral /fjuːnərəl/
+begravning
+fungus /fʌŋgəs/
+svamp
+funnel /fʌnl/
+tratt
+funny /fʌniː/
+komisk
+fur /fər/
+päls
+furious /fjeəriəs/
+rasande, ursinnig
+furnace /fəːnis/
+kamin, spis
+furnish /fəːniʃ/
+1. avleverera, leverera
+2. möblera
+furnished /fəːniʃt/
+möblerad
+furniture /fəːnitʃər/
+bohag, möblemang
+furniture /fəːnitʃərvein/
+flyttbil
+future /fjuːtʃər/
+1. tillkommande
+2. framtid
+fuzzy /fʌziː/
+dimmig, disig, töcknig
+gadfly /gædflai/
+broms
+gag /gæg/
+fars, narri, puts, skoj, skämt, upptåg, vits
+gain /gein/
+1. förvärv
+2. förtjäna
+3. vinst
+gall /geil/
+galla
+gallery /gæləriː/
+galleri
+gallop /gæləp/
+fyrsprång, galopp
+galosh /gəlɔʃ/
+galosch
+game /geim/
+lek, spel
+gang /gæŋ/
+band
+gaol /dʒeil/
+1. fängelse
+gape /geip/
+gapa, gäspa
+garden /gɑːdn/
+trädgård
+gardener /gɑːdnər/
+trädgårdsmästare
+garland /gɑːlənd/
+girland
+garlic /gɑːlik/
+vitlök
+garrison /gærisn/
+garnison
+gas /gəz/
+gas
+gasolene /gæsəliːn/
+bensin
+gasoline /gæsəliːn/
+bensin
+gate /gət/
+port
+gateway /geitwei/
+port
+gather /gæðər/
+församla, samla
+gathering /gæðəriŋ/
+församling, möte, sammankomst, sammanträde
+gaunt /gɔːnt/
+1. smal, tunn
+2. ledsen, sorgsen
+gawk /gɔːk/
+gapa, gäspa
+gay /gei/
+1. glad, kry
+2. gladlynt
+gaze /geiz/
+stirra
+gazelle /gəzel/
+gasell
+gem /dʒəm/
+juvel, ädelsten
+general /dʒenrəl/
+1. general
+2. universal, universell
+3. allmän
+generality /dʒenərælitiː/
+allmänhet
+generally /dʒinrɔːliː/
+iallmänhet
+generative /dʒenərətiv/
+sexuell
+generous /dʒenərəs/
+givmild
+gentle /dʒentl/
+1. söt
+2. blid, mild
+gentleman /dʒentlmən/
+herre
+genuinly /dʒenjuːinliː/
+sannerligen
+geography /dʒiɔgrəfiː/
+geografi
+geological /dʒiəlɔdʒikl/
+geologisk
+geometry /dʒiɔmətriː/
+geometri
+gesture /dʒestʃər/
+gest
+get /get/
+1. förvärva
+2. ankomma
+3. ernå
+4. avhämta, hala
+5. bli, bliva
+6. fatta, ta, taga
+7. anamma, bekomma, få, undfå
+get /getədivɔːs/
+skiljas
+get /getdivɔːst/
+skiljas
+get /getmærid/
+giftasig
+get /getmouldiː/
+mögla
+get /gettaiəd/
+tröttna
+ghastly /gɑːstliː/
+1. förtretlig, oangenäm, obehaglig, otrevlig
+2. gruvlig, hemsk, hisklig
+gherkin /gəːkin/
+gurka
+ghost /goust/
+gast, spöke
+giant /dʒaiənt/
+1. jätte
+gift /gift/
+gåva, present, skänk
+gigantic /dʒaigæntik/
+jättelik
+gill /dʒil/
+gäl
+gin /dʒin/
+genever
+ginger /dʒindʒər/
+ingefära
+giraffe /dʒirɑːf/
+giraff
+girder /gəːdər/
+balk, bjälke
+girdle /gəːdl/
+bälte, gördel, rem
+girl /gəːl/
+flicka, jänta, mö, tös
+give /giv/
+1. skänka
+2. ge, giva
+3. presentera
+give /givænəkaunt/
+rapportera
+give /givin/
+cedere
+give /givnoutis/
+anmäla, annonsera, bebåda, meddela
+give /givɔfænoudər/
+dofta
+give /givpeintou/
+bedröva
+give /givraiztou/
+föranleda, förorsaka, orsaka
+give /givʌp/
+cedere
+give /givwei/
+cedere
+glad /glæd/
+glad
+gladness /glædnəs/
+fröjd
+glass /glɑːs/
+glas
+glasses /glɑːsiz/
+glasögon
+glaze /gleiz/
+glasyr
+glide /glaid/
+glida, slira
+globe /gloub/
+1. glob, klot
+2. jordglob, jordklot
+glove /glʌv/
+handske
+glow /glou/
+1. glöda
+2. glöd
+glow /glouwiðhiːt/
+glöda
+glue /gluː/
+1. lim
+2. limma
+gnat /gneit/
+mygga
+gnaw /nɔː/
+gnaga
+go /gou/
+1. gå
+2. fara, åka
+goat /gout/
+get
+goblet /gɔblit/
+bägare, kalk, pokal
+god /gɔd/
+gud
+gold /ɡˈəʊld/
+guldgruva
+gold /gould/
+guld
+goldfish /gouldfiʃ/
+guldfisk
+goldsmith /gouldsmiθ/
+guldsmed
+good /ɡˈʊd/
+avsked
+good /ɡˈʊd/
+godhjärtad, godmodig
+good /ɡˈʊd/
+snäll, vänlig
+good /gud/
+bra, god
+goodbye /gudbai/
+1. adjö, hejdå
+2. avsked
+3. adjösålänge, hejsålänge, vises
+goodness /gudnəs/
+godhet
+good /gudɑːftənuːn/
+goddag
+good /guddei/
+goddag
+good /gudiːvniŋ/
+godafton, godkväll
+good /gudhelθ/
+gutår, skål
+good /gudmɔːniŋ/
+godmorgon
+goose /guːs/
+gås
+gooseberry /guzbəriː/
+krusbär
+gossip /gɔsip/
+prata, snacka
+gout /gaut/
+gikt
+govern /gʌvn/
+härska, regera
+government /gʌvnmənt/
+regering
+gown /gaun/
+klänning
+go /gouɔːwei/
+gesigiväg
+go /goubrouk/
+görakonkurs
+go /goufərəwɔːk/
+promenera, spatsera
+go /gouθruː/
+uppleva
+go /gouʌp/
+dala
+grade /græd/
+1. grad
+2. rang
+grain /grein/
+1. korn
+2. spannmål, säd
+gram /græm/
+gram
+grammar /græmər/
+grammatik, grammatika, språklära
+gramme /græm/
+gram
+grandchild /græntʃaild/
+barnbarn
+granddaughter /grændɔːtər/
+dotterdotter, sondotter
+grandfather /grænfɑːðər/
+farfar, farfader, mormoder, mormor
+grandmother /grænmʌðər/
+farmor, mormor
+grandparents /grænpɛərənts/
+farföräldrar, morföräldrar
+grandson /grænsʌn/
+dotterson, sonson
+granite /grænit/
+granit
+grant /grənt/
+medge
+granule /grænjuːl/
+korn
+grape /greip/
+druva, vindruva
+grapevine /greipvain/
+vinstock
+grapple /græpl/
+fånga
+grass /grɑːs/
+gräs
+grasshopper /grɑːshɔpər/
+gräshoppa
+gratitude /grætitjuːd/
+tack
+grave /greiv/
+graf
+gravel /grævəl/
+kisel
+graveyard /greivjɑːd/
+kyrkogård
+gravy /greiviː/
+spad, sås
+grease /griːs/
+fett
+great /greit/
+stor
+greediness /griːdinəs/
+begär, begäran
+greedy /griːdiː/
+begärlig, sniken, snål
+green /griːn/
+grön
+greenweed /griːənwiːd/
+ginst
+greet /griːt/
+hälsa
+greeting /griːtiŋ/
+hälsning
+grenade /grineid/
+granat
+grey /grei/
+grå
+grief /griːf/
+bedrövelse
+grisly /grizliː/
+förtretlig, oangenäm, obehaglig, otrevlig
+groan /groun/
+1. ajasig
+2. stöna
+grocer /grousər/
+specerihandlare
+grotto /grɔtou/
+grotta
+ground /ɡɹˈaʊnd/
+bottenvåning
+ground /graund/
+1. botten, grund
+2. jord
+3. terräng
+grounds /graundz/
+terräng
+group /gruːp/
+1. flock, grupp, hjord, koppel, svärm, tropp, trupp
+grow /grou/
+1. bli
+2. bliva
+3. gro, växa
+4. avla
+grown /ɡɹˈəʊn/
+1. myndig
+2. vuxen
+grow /grousauər/
+surna
+grub /grʌb/
+1. gräva
+2. larv
+grudge /grʌdʒ/
+agg
+gruesome /gruːsəm/
+förfärlig, förskräcklig, gräslig, hemsk
+gruff /grʌf/
+ovänlig, snäsig
+guarantee /gærəntiː/
+garantera
+guard /gɑːd/
+1. vakta
+2. vaktare, väktare
+3. garde
+4. konduktör
+guess /ges/
+1. gissa
+2. anta
+guest /gest/
+gäst
+guide /gaid/
+1. vägledare
+2. gid
+3. föra
+guidebook /gaidbuk/
+gid
+guilt /gilt/
+skuld
+guiltless /giltləs/
+oskyldig
+guilty /giltiː/
+skyldig
+guitar /gitɑːr/
+gitarr
+gulf /gʌlf/
+avgrund, gap
+gum /gʌm/
+tandkött
+gun /gʌn/
+gevär
+gunpowder /gʌnpaudər/
+krut
+gymnastics /dʒimnæstiks/
+gymnastik
+gypsy /dʒipsiː/
+tattare, zigenare
+habit /hæbit/
+vana
+hack /hæk/
+hugga, yxa
+hail /heil/
+hagel
+hair /hɛər/
+hår
+hairdresser /hɛədresər/
+1. hårfrisörska
+2. frisör, hårfrisör
+hairpiece /hɛəpiːs/
+peruk
+half /hɑːf/
+1. halv
+2. hälft
+hall /hɔːl/
+hall
+ham /hæm/
+skinka
+hammer /hæmər/
+1. hamra
+2. hammare
+hand /hˈand/
+handväska
+hand /hænd/
+1. arbetare
+2. hand
+handbook /hændbuk/
+gid
+handle /hændl/
+behandla, traktera
+handlebars /hændlbɑːz/
+styre
+handsome /hænsəm/
+skön, vacker
+hang /hæŋ/
+1. hänga
+2. hängaupp
+hangman /hæŋmən/
+bödel, mästerman
+hang /hæŋɔntə/
+behålla, hålla
+happen /hæpən/
+1. bli
+2. hända, inträffa, passera
+happiness /hæpinəs/
+lycka
+happy /hæpiː/
+1. lycklig
+2. glad
+harbor /hɑːbər/
+hamn
+harbour /hɑːbər/
+hamn
+hard /hɑːd/
+1. hård
+2. mödosam, svår
+hardly /hɑːdliː/
+knappast, knappt, näppeligen
+hardworking /hɑːdwəːkiŋ/
+arbetsam
+hare /hɛər/
+hare
+harem /hɑːriːm/
+harem
+harmful /hɑːmful/
+menlig
+harmonica /hɑːmɔnikə/
+harmonika
+harmonize /hɑːmənaiz/
+harmoniera
+harmony /hɑːməniː/
+harmoni, samklang
+harp /hɑːp/
+harpa
+harrier /hæriər/
+kyrka
+harrow /hærou/
+harva
+harsh /hɑːʃ/
+ovänlig, snäsig
+harvest /hɑːvist/
+1. hösta, skörda
+2. gröda, skörd
+haste /heist/
+hast
+hat /heit/
+hatt
+hate /heit/
+1. hata
+2. hat
+haul /hɔːl/
+dra, draga, hala
+have /hæv/
+1. ha, hava
+2. anamma, bekomma, få, undfå
+have /hævbædlʌk/
+haotur
+have /hævkəmpæʃənwʌn/
+hamedlidande, hamedlidandemed, tyckasyndom
+have /hævkɔnfidənsin/
+haförtroendeför
+have /hævinʌf/
+mätta
+have /hævfeiθ/
+haförtroendeför
+have /hævfeiθin/
+haförtroendeför
+have /hævgudlʌk/
+hatur
+have /hævgɔt/
+ha, hava
+have /hævtou/
+böra, må, måste
+hawk /hɔːk/
+hök
+hay /hei/
+hö
+hazard /hæzəd/
+1. slump, tillfällighet
+2. riskera, våga, äventyra
+3. risk
+hazel /hˈeɪzəl/
+hassel
+hazel /heizl/
+hassel
+hazelnut /heizelnʌt/
+hasselnöt
+he /hˈiː/
+bock
+he /h/
+han
+head /hed/
+huvud
+headache /hedeik/
+huvudvärk
+header /hedər/
+rubrik
+heading /hediŋ/
+titel
+heal /hiːl/
+hela
+health /helθ/
+hälsa, sundhet
+healthy /helθiː/
+sund
+heap /hiːp/
+1. hop, mängd
+2. flock, grupp, hjord, koppel, svärm, tropp, trupp
+3. stack
+hear /hiər/
+höra
+heart /hˈɑːt/
+hjärtlig
+heart /hɑːt/
+hjärta
+hearty /hɑːtiː/
+hjärtlig
+heat /hiːt/
+1. glöd
+2. hetta
+heath /hiːθ/
+hed
+heaven /hevn/
+himmel, sky
+heavenly /hevnliː/
+himmelsk
+heavenly /hevnliːboudiː/
+himlakropp, världskropp
+heavy /heviː/
+tung, viktig
+hectolitre /hektəliːtər/
+hektoliter
+hedge /hedʒ/
+häck
+heel /hiːl/
+1. häl
+height /hait/
+1. höjd
+heighten /haitn/
+försämra, förvärra
+heir /ɛər/
+arvinge
+hell /hel/
+helvete
+hello /helou/
+hej, hejsan
+helm /helm/
+styre
+helmet /helmit/
+hjälm
+help /help/
+1. biträda, hjälpa
+2. bistånd, biträde, hjälp
+helper /helpər/
+hjälpare
+helpful /helpfəl/
+behjälplig
+helpless /helpləs/
+hjälplös
+hemisphere /hemisfiər/
+halvklot
+hemp /hemp/
+hampa
+her /hər/
+1. sin, sitt
+2. hon
+3. hennes
+herb /həːb/
+gräs
+herd /həːd/
+flock, grupp, hjord, koppel, svärm, tropp, trupp
+here /her/
+hit
+hereditary /hireditriː/
+ärftlig
+heresy /herəsiː/
+kätteri
+heretic /herətik/
+kättare
+hero /hiərou/
+hjälte
+heroic /hirouik/
+hjältemodig
+heroin /herɔin/
+hjältinna
+heroine /herouin/
+hjältinna
+heron /herən/
+häger
+herring /heriŋ/
+sill
+herself /həːself/
+själv
+hesitate /heziteit/
+tveka
+hesitation /heziteiʃən/
+tvekan
+hiccup /hikʌp/
+hicka
+hidden /hidn/
+dold
+hide /haid/
+1. päls
+2. fördölja, gömma, hysa
+hideous /hidiəs/
+gruvlig, hemsk, hisklig
+high /haisʃuːl/
+gymnasium, latinläroverk
+high /haitaid/
+flod, högvatten
+hill /hil/
+backe, kulle
+him /him/
+han
+himself /himself/
+själv
+hind /haind/
+hind
+hinge /hindʒ/
+gångjärn, hängsle
+hinny /hiniː/
+mulåsna
+hint /hint/
+1. alludera, anspela
+2. tipp
+hip /hip/
+höft
+hippo /hipou/
+flodhäst
+hippopotamus /hipəpɔtəməs/
+flodhäst
+hire /haiər/
+1. engagera
+2. hyra, leja
+3. lega
+his /haiz/
+1. hans
+2. sin, sitt
+history /histriː/
+historia
+hit /hit/
+1. banka, drabba, slå
+2. knacka
+hither /hiðər/
+hit
+hoarse /hɔːs/
+hes
+hock /hɔk/
+rensktvin
+hoe /hou/
+skyffel
+hog /hɔg/
+gris, svin
+hold /hould/
+behålla, hålla
+hole /houl/
+glugg, hål, kyffe
+holy /houliː/
+helig
+home /houm/
+1. hem, hemåt
+homy /houmiː/
+hemtrevlig, trevlig
+honest /ɔnist/
+redlig, ärlig
+honey /hʌniː/
+honung
+honor /ɔnər/
+1. hedra, ära
+2. heder, honnör
+honorary /ɔnərəriː/
+hederlig
+honour /ɔnər/
+1. hedra, ära
+2. heder, honnör
+hoof /huːf/
+hov, klöv
+hook /huk/
+1. häkta
+2. metkrok
+3. hake
+hooker /hukər/
+hora, sköka
+hooter /huːtər/
+horn
+hope /houp/
+1. hoppas
+2. hopp, förhoppning, förväntan
+horizon /həraizn/
+horisont
+horizontal /hɔrizɔntl/
+horisontal
+horn /hɔːn/
+horn
+horrible /hɔrəbl/
+1. förtretlig, oangenäm, obehaglig, otrevlig
+2. förfärlig, förskräcklig, gräslig, hemsk
+3. gruvlig, hisklig
+horse /hˈɔːs/
+kastanje
+horse /hˈɔːs/
+broms
+horse /hˈɔːs/
+pepparrot
+horse /hɔːs/
+häst
+horsepower /hɔːspauər/
+hästkraft
+horseradish /hɔːsrædiʃ/
+pepparrot
+horseshoe /hɔːsiʃou/
+hovjärn, hästsko
+hospitable /hɔspitəbl/
+gästfri, gästvänlig
+hospital /hɔspitəl/
+sjukhem, sjukhus
+hospitality /hɔspitælitiː/
+gästvänskap
+host /houst/
+värd
+hostage /hɔstidʒ/
+gisslan
+hostel /hɔstl/
+gästgivargård, värdshus
+hostess /houstis/
+värdinna
+hostile /hɔstail/
+fientlig, illasinnad
+hot /hɔt/
+het
+hotel /houtel/
+hotell
+hour /auər/
+timme
+house /hˈaʊs/
+husägare
+house /haus/
+hus
+housefly /hausflai/
+fluga
+house /hausɔfwəːʃip/
+kyrka
+hovel /hɔvəl/
+kyffe, ruckel
+hover /hɔvər/
+sväva
+how /hau/
+1. hur, huru, liksom, såsom
+however /hauwevər/
+likafullt, oaktat
+howl /haul/
+råma
+how /haumeniː/
+hurmycket
+how /haumʌtʃ/
+hurmycket
+hug /hʌg/
+krama, omfamna
+huge /hjuːdʒ/
+1. jättelik
+2. kolossal
+hull /hʌl/
+kasko
+hum /hʌm/
+surra
+human /hjuːmən/
+mänsklig
+human /hjuːmənbiːiŋ/
+människa
+human /hjuːmənreis/
+mänsklighet
+humor /hjuːmər/
+humor
+humour /hjuːmər/
+1. humör
+2. humor
+humourous /hjuːmərəs/
+humoristisk
+hump /hʌmp/
+puckel
+hundred /hʌndrəd/
+hundra, etthundra
+hunger /hʌŋgər/
+hunger, svält
+hungry /hʌŋgriː/
+hungrig
+hunt /hʌnt/
+jaga
+hunter /hʌntər/
+jägare
+hurray /hʌrei/
+hurra
+hurricane /hʌrikən/
+orkan
+hurried /hʌrid/
+hastig
+hurt /həːt/
+1. smärta
+2. såra
+husband /hʌzbənd/
+make, äktamake, man
+husk /hʌsk/
+bark
+hut /hʌt/
+hydda, hytt
+hyaena /haiiːnə/
+hyena
+hydrogen /haidrədʒənbɔm/
+vätebomb
+hygiene /haidʒiːn/
+hygien
+hygienic /haidʒiːnik/
+hygienisk
+hymn /him/
+hymn, lovsång
+hypnosis /hipnousis/
+hypnos
+hypnotic /hipnɔtiktrɑːns/
+hypnos
+hypnotist /hipnətist/
+hypnotisör
+hypnotize /hipnətaiz/
+hypnotisera
+hypothesis /haipɔθəsis/
+hypotes
+hypothetical /haipəθetikl/
+hypotetisk
+hysteria /histiəriə/
+hysteri
+hysterical /histerikl/
+hysterisk
+ice /ais/
+1. glass
+2. is
+iceberg /aisbəːg/
+isberg
+icecream /aisiːkriːm/
+glass
+idea /aidiə/
+1. idé
+2. koncept
+ideal /aidiəl/
+1. ideal
+identical /aidentikl/
+identisk
+idiot /idiət/
+fåne, idiot
+idol /aidl/
+avgud, idol
+if /aif/
+om, såvida, såvitt
+il /ˈɪl/
+o‐
+ill /il/
+dålig, sjuk
+illness /ilnəs/
+sjuka, sjukdom
+illuminate /iluːmineit/
+belysa
+illusion /iluːʒn/
+illusion
+illustrate /iləstreit/
+illustrera
+im /ˈɪm/
+o‐
+image /imidʒ/
+1. bild
+2. figur, gestalt
+imitate /imiteit/
+efterbilda, imitera
+immaterial /imətiəriəl/
+likgiltig, liknöjd
+immensely /imensəliːritʃ/
+stenrik
+immigrate /imigreit/
+invandra
+impartial /impɑːʃl/
+1. neutral
+2. opartisk, oväldig
+impatient /impeiʃənt/
+1. otålig
+impel /impel/
+driva, fösa
+impertinent /impəːtinənt/
+fräck, uppkäftig
+imply /implai/
+beteckna, betyda, teckna
+important /impɔːtnt/
+viktig
+impossible /impɔsəbl/
+omöjlig
+imposter /impɔstər/
+bedragare
+improve /impruːv/
+bättra
+in /ˈɪn/
+o‐
+in /in/
+i
+incense /insens/
+rökelse
+inch /intʃ/
+tum
+inconceivable /inkənsiːvəbl/
+obegriplig, ofattlig
+inconvenient /inkənviːniənt/
+mödosam, svår
+incorrect /inkərekt/
+oriktig, orätt
+increase /inkriːs/
+förstora
+incredible /inkredəbl/
+otrolig
+incubate /inkjubeit/
+häcka, ruva
+indeed /indiːd/
+1. ju
+2. sannerligen
+independant /indipendənt/
+1. oberoende, självständig
+2. oavhängig, själfständig
+index /indeks/
+tabell
+indicate /indikeit/
+1. utpeka
+2. uppvisa
+indication /indikeiʃən/
+varsel
+indifferent /indifrənt/
+likgiltig, liknöjd
+indignant /indignənt/
+harmlig
+indistinct /indistiŋkt/
+oklar
+individual /individʒeəl/
+1. individuell
+2. individ
+industrial /indʌstriəl/
+industriell
+industrious /indʌstriəs/
+arbetsam
+industry /indʌstriː/
+industri
+inebriety /inibraiətiː/
+dryckenskap
+inexpensive /inikspensiv/
+billig
+inexplicable /iniksplikəbl/
+oförklarlig
+infant /infənt/
+barn, unge
+infantry /infəntriː/
+fotfolk, infanteri
+infection /infekʃən/
+infektion
+inference /infərəns/
+konklusion
+infertile /infəːtail/
+ofruktbar
+influence /infleəns/
+påverka
+inform /infɔːm/
+tillkännagiva
+inhabitant /inhæbitənt/
+inbyggare, invånare
+inherit /inherit/
+ärva
+inheritance /inheritəns/
+arv
+inhibit /inhibit/
+förhindra, hindra
+initial /iniʃl/
+initialbokstav
+injury /indʒəriː/
+sår
+ink /ˈɪŋk/
+bläckhorn
+ink /iŋk/
+bläck
+inkpot /iŋkpɔt/
+bläckhorn
+inlet /inlet/
+fjord
+inn /in/
+gästgivargård, värdshus
+innkeeper /inkiːpər/
+värd
+innocence /inəsns/
+oskuld
+innocent /inəsnt/
+oskyldig
+inquiry /inkwaiəriː/
+rundfråga
+inquisitive /inkwizətiv/
+1. frågvis, nyfiken
+insane /insein/
+dåraktig, förryckt, galen, stollig, tok, tokig, vansinnig, vriden
+insane /inseinəsailəm/
+hospital
+insanity /insænitiː/
+1. galenskap
+2. vansinne, vanvett
+insatiable /inseiʃəbl/
+omättlig
+insect /insekt/
+insekt, kryp
+inside /insaid/
+i
+inspect /inspekt/
+besiktiga, inspektera
+inspection /inspekʃən/
+inspektion
+inspector /inspektər/
+1. besiktningsman, inspektor
+install /instɔːl/
+inreda, inställa
+instant /instənt/
+momang, moment, ögonblick
+instinct /instiŋkt/
+instinkt
+instruction /instrʌkʃən/
+1. instruktion
+2. undervisning
+instructor /instrʌktər/
+lektor, lärare
+instrument /instrumənt/
+instrument
+insubordinate /insəbɔːdineit/
+olydig
+insult /insʌlt/
+1. skällaut
+2. förnärma, förölämpa
+insurance /inʃeərəns/
+assurans, försäkring
+insure /inʃeər/
+försäkra
+inter /intər/
+begrava
+intercessor /intəsesər/
+advokat, sakförare
+interest /intrəst/
+intresse
+interesting /intrəstiŋ/
+intressant
+interment /intəːmənt/
+begravning
+intermission /intəmiʃən/
+paus
+international /intənæʃənl/
+internationell
+interpret /intəːprit/
+tolka
+interpreter /intəːpritər/
+tolk
+interrupt /intərʌpt/
+avbryta
+interval /intəvəl/
+intervall
+interview /intəvjuː/
+intervjua
+intestine /intestin/
+tarm
+intestines /intestinz/
+inälvor
+intimate /intimət/
+intim, såt
+into /intə/
+i
+intolerant /intɔlərənt/
+intolerant, ofördragsam
+intoxicated /intɔksikeitid/
+berudsad, drucken, full, rusig
+introduce /intrədjuːs/
+presentera
+invective /invektiv/
+skällsord
+invention /invenʃən/
+uppfinning
+inverted /invəːtidkɔmə/
+anföringstecken
+investigation /investigeiʃən/
+1. examen, undersökning
+2. rundfråga
+invincible /invinsəbl/
+oövervinnelig
+invitation /inviteiʃən/
+bjudning, inbjudan, inbjudning, invit
+invite /invait/
+bjuda, inbjuda, invitera, uppbjuda
+invoice /invɔis/
+faktura
+invoke /invouk/
+anropa, åkalla
+inwards /inwədz/
+in, inåt
+in /inækʃən/
+aktiv
+in /inikstʃeindʒfər/
+emot, inemot, mot
+in /infrʌntɔf/
+förrän
+in /innouwei/
+ingalunda
+in /inɔːdərtou/
+för
+in /inspaitɔf/
+trots
+in /inðiːvniŋ/
+omaftarna
+in /inðmɔːniŋ/
+ommorgonen
+in /invein/
+förgäves
+in /inwɔtwei/
+1. hur, huru, liksom, såsom
+iron /aiən/
+1. järn‐
+2. järn
+3. strykjärn
+island /ailənd/
+ö
+itch /itʃ/
+1. klia, klå
+2. klåda
+its /its/
+sin, sitt
+itself /itself/
+själv
+it /itdountmætər/
+detgöringenting, föralldel, ingenorsak
+ivory /aivəriː/
+elfenben
+ivy /aiviː/
+murgröna
+jack /dʒæk/
+billyftare
+jackal /dʒækɔːl/
+schakal
+jacket /dʒækit/
+jacka
+jail /dʒeil/
+fängelse
+jam /dʒæm/
+marmelad
+jaw /dʒɔː/
+käft
+jawbone /dʒɔːboun/
+käft
+jaws /dʒɔːz/
+gap, käft
+jay /dʒei/
+skrika
+jealous /dʒeləs/
+jalu
+jealousy /dʒeləsiː/
+jalusi
+jeer /dʒiəreit/
+håna
+jelly /dʒˈɛlɪ/
+manet
+jenny /dʒˈɛni/
+åsninna
+jerk /dʒəːk/
+rycka
+jest /dʒest/
+skoja, skämta
+jewel /dʒuːəl/
+1. juvel, ädelsten
+jeweller /dʒuːələr/
+1. juvelerare
+job /dʒɔb/
+1. arbete, verk
+2. ämbete
+join /dʒɔin/
+1. ansluta
+2. para
+3. binda, snöra
+4. ena
+joint /dʒɔint/
+gemensam
+joke /dʒouk/
+1. skoja, skämta
+2. fars, narri, puts, skoj, skämt, upptåg, vits
+journal /dʒəːnl/
+dagblad, journal
+journalist /dʒəːnəlist/
+journalist, publicist, tidningsman
+journey /dʒəːniː/
+färd, resa
+joy /dʒɔi/
+fröjd
+judge /dʒʌdʒ/
+1. döma
+2. domare
+3. bedöma
+judgment /dʒuːdgmənt/
+dom, omdöme
+jug /dʒʌg/
+1. kruka, stop
+2. kanna
+3. skål, så, urna
+juice /dʒuːs/
+saft
+jumbled /dʒʌmbldʌp/
+konfys
+jump /dʒʌmp/
+1. hoppa, skutta
+2. hopp, skutt
+june /dʒuːnbʌg/
+majbagge
+just /dʒʌst/
+1. riktig
+2. bara, blott, endast
+3. just, nyss
+justice /dʒʌstis/
+rätt
+just /dʒʌstnau/
+just, nyss
+kangaroo /kæŋgəruː/
+känguru
+keel /kiːl/
+köl
+keen /kiːn/
+livaktig, livlig
+keep /kiːp/
+1. vakta
+2. behålla, förvara, konservera
+3. observera
+4. rädda
+keeper /kiːpərɔfðrikɔːdz/
+arkivarie
+kernel /kəːnl/
+kärna
+kettle /ketl/
+kokare
+key /kiː/
+nyckel
+kick /kik/
+1. sparka
+2. spark
+kidney /kidniː/
+njure
+kill /kil/
+avliva, avrätta, dräpa
+kiln /kiln/
+kamin, spis
+kilo /kiːlou/
+kilogram
+kilometre /kilɔmitər/
+kilometer
+kind /kaind/
+1. snäll, vänlig
+2. godhjärtad, godmodig
+3. sort
+kindle /kaindl/
+antända
+king /kiŋ/
+1. dam
+2. furste, konung, kung
+kingdom /kiŋdəm/
+konungarike, kungarike
+kirk /kəːk/
+kyrka
+kiss /kis/
+1. kyssa, pussa
+2. kyss, puss
+kitchen /kitʃin/
+kök
+kite /kait/
+kyrka
+klaxon /klæksn/
+horn
+knapsack /næpsæk/
+ryggsäck
+knead /niːd/
+knåda
+knee /niː/
+knä
+knife /naif/
+kniv
+knight /nait/
+1. riddare
+2. springare
+knock /nɔk/
+knacka
+knot /nɔt/
+knut
+know /nou/
+1. känna
+2. veta
+knowledge /nɔlidʒ/
+1. kunskap, kännedom
+know /nouhau/
+veta
+laboratory /læbərətriː/
+laboratorium
+laborer /ləbɔːrər/
+arbetare
+labourer /leibərər/
+arbetare
+lace /leis/
+pund
+lack /læk/
+brist, lyte, saknad
+lad /leid/
+gosse, pilt, pojke
+ladder /lædər/
+stege
+laddie /lædiː/
+gosse, pilt, pojke
+ladies /leidizænddʒentlmen/
+herrskap
+lady /leidiː/
+1. dam
+2. fru
+lake /leik/
+insjö, sjö
+lamb /læm/
+lamm
+lame /leim/
+lam
+lamp /læmp/
+lampa
+lance /lɑːns/
+lans, spjut
+land /lænd/
+1. land
+2. jord
+landlady /lændleidiː/
+värdinna
+landlord /lændlɔːd/
+värd
+landscape /lændskeip/
+landskap
+landslide /lændslaid/
+skred
+lane /lein/
+gränd
+language /læŋgwidʒ/
+språk, tungomål
+larch /lɑːtʃ/
+lärkträd
+large /lɑːdʒ/
+stor
+lark /lɑːk/
+lärka
+larva /lɑːvə/
+larv
+lass /læs/
+flicka, jänta, mö, tös
+last /lɑːst/
+1. siska
+2. förgången
+lasting /lɑːstiŋ/
+oupphörlig
+last /lɑːstnait/
+iafse, igår
+laud /lɔːd/
+berömma, lova, prisa
+laugh /lɑːf/
+skratta
+laughter /lɑːftər/
+skratt, åtlöje
+laundress /lɔːndris/
+tvätterska
+lava /lɑːvə/
+lava
+law /lɔː/
+lag
+lawn /lɔːn/
+gräsmatta
+lawsuit /lɔːsuːt/
+rättegång
+lawyer /lɔːjər/
+advokat, sakförare
+laxative /læksətiv/
+laxativ
+lay /lei/
+lägga
+layman /leimən/
+lekman
+lay /leidaun/
+lägga, ställa, sätta
+lay /leihouldɔf/
+fatta, ta, taga
+lazy /leiziː/
+lat
+lead /led/
+1. föra
+2. bly
+leader /liːdər/
+anförare, chef
+leaf /liːf/
+blad
+leaflet /liːflit/
+broschyr
+lean /liːn/
+1. stödja
+2. smal, tunn
+leap /lˈiːp/
+skottår
+leap /liːp/
+1. hoppa, skutta
+2. hopp, skutt
+learn /ləːn/
+lära
+lease /liːs/
+hyreskontrakt
+leather /leðər/
+läder
+leave /liːv/
+1. gesigiväg
+2. lämna
+lector /lektər/
+lektor
+lecturer /lektʃərər/
+lektor
+leech /liːtʃ/
+blodigel
+leek /liːk/
+vitlök
+left /left/
+vänster
+leg /leg/
+ben
+legal /liːgl/
+rättslig
+legation /ligeiʃən/
+legation
+legend /ledʒənd/
+legend, saga, sägen, sägn
+legible /ledʒəbl/
+läslig
+legitimize /lidʒitimaiz/
+legitimera
+lemon /lemən/
+citron
+lemonade /lemənɑːd/
+limonad, saft
+lend /lend/
+1. låna
+2. lånaav
+length /leŋθ/
+1. längd
+lengthen /leŋθən/
+förlänga
+lens /lenz/
+lins
+lentil /lentl/
+lins
+lesson /lesn/
+lektion, läxa
+let /let/
+uthyra
+letter /letər/
+1. brev
+2. bokstav
+letterbox /letəbɔks/
+brevlåda
+lettuce /letis/
+salad, sallat
+let /letnou/
+tillkännagiva
+level /levəl/
+1. flack, jämn
+2. lik, jämlik
+3. jämna
+4. horisontal
+5. nivå
+lever /liːvər/
+hissa, upphisa, upphäva, upphöja
+lewd /ljuːd/
+okysk, osedlig, sedeslös
+liberal /librəl/
+liberal
+librarian /laibrɛəriən/
+bibliotekarie
+library /laibrəriː/
+bibliotek
+lie /liː/
+1. ligga
+2. ljuga
+3. lögn
+lieutenant /laiətenənt/
+löjtnant
+life /lˈaɪf/
+livbåt, livräddningsbåt, räddningsbåt, skeppsbåt
+life /laif/
+levnad, liv
+lift /lift/
+1. hissa, upphisa, upphäva, upphöja
+2. hiss
+light /lait/
+1. antända
+2. belysa
+3. ljus
+4. klen, svag
+5. lätt
+lighthouse /laithaus/
+fyr, fyrtorn
+lighting /laitiŋ/
+belysning
+lightning /laitniŋ/
+blixt
+like /laik/
+1. hur, huru, liksom, såsom
+2. liknande
+3. tyckaom, uppskatta
+likely /laikliː/
+antaglig, sannolik, trolig
+likewise /laikjuːiːz/
+1. också
+2. desslikes, samt
+like /laikðæt/
+sålunda
+lilac /lailək/
+syren
+lily /lˈɪli/
+konvalje, liljekonvalje
+lily /liliː/
+lilja
+limb /lim/
+lem
+lime /lˈaɪm/
+lind
+lime /laim/
+kalk
+limit /limit/
+1. avgränsa, begränsa
+2. gräns
+limp /limp/
+halta
+linden /lˈɪndən/
+lind
+line /lain/
+1. linje
+2. fil, kö, rad, räcka
+lineage /liniidʒ/
+tillkomst, upphov, uppkomst, ursprung
+link /liŋk/
+montera
+lion /laiən/
+lejon
+lip /lip/
+läpp
+liqueur /likjeər/
+likör
+liquid /likwid/
+vätska
+liquidate /likwideit/
+avliva, avrätta, dräpa
+lira /liərə/
+lyra
+listen /lisn/
+höra, lyssna, åhöra
+listener /lisnər/
+hörare, åhörare
+liter /litər/
+liter
+literature /litrətʃər/
+litteratur
+litre /liːtər/
+liter
+little /litl/
+liten
+live /laiv/
+1. bo, bygga
+2. leva
+lively /laivliː/
+spirituell
+liver /livər/
+lever
+liver /livərsɔsidʒ/
+leverkorv
+live /laivinlɔdʒiŋz/
+hyraettrum
+live /laivtəgeðər/
+boihop
+live /laivtousiː/
+uppleva
+living /liviŋəloun/
+ensamstående
+lizard /lizəd/
+ödla
+load /loud/
+1. ladda, lasta
+2. frakt
+loaf /louf/
+bröd
+loan /loun/
+låna
+loathe /louð/
+avsky
+lobster /lɔbstər/
+hummer
+local /loukl/
+lokal, ortlig
+location /loukeiʃən/
+ort
+loch /lɔk/
+1. fjord
+2. insjö, sjö
+lock /lɔk/
+1. lås
+2. låsa
+locust /loukəst/
+gräshoppa
+logic /lɔdʒik/
+logik
+long /lɔŋ/
+1. lång
+2. länge
+longing /lɔŋiŋ/
+begär
+longitude /lɔndʒitjuːd/
+longitud
+long /lɔŋfər/
+längtaefter, smäkta
+look /luk/
+1. anblick, anseende, vy
+2. beskåda, kika, skåda, titta
+looking /lˈʊkɪŋ/
+spegel
+look /lukɑːftər/
+vakta
+look /lukeit/
+beskåda, kika, skåda, titta
+look /lukfər/
+leta, söka
+lord /lɔːd/
+herre
+lorry /lɔriː/
+lastbil
+lose /luːz/
+förlora, mista
+loss /lɔs/
+1. förlust
+lottery /lɔtəriː/
+lotteri
+loud /laud/
+ljudelig, ljudlig
+lounge /laundʒ/
+salong
+louse /laus/
+lus
+love /lʌv/
+1. älska
+2. kärlek
+3. varatokigi
+lovely /lʌvliː/
+1. angenäm, anslående, behaglig, trevlig
+2. skön, vacker
+3. kär, rar, söt
+4. behagfull
+lover /lʌvər/
+1. älskarinna
+2. älskare
+low /lou/
+1. låg
+2. nedrig
+low /loutaid/
+ebb
+loyal /lɔiəl/
+lojal
+luck /lʌk/
+tur
+luggage /lˈʌɡɪdʒ/
+bagagevagn
+luggage /lʌgidʒ/
+bagage, resgods
+lukewarm /luːkwɔːm/
+ljum
+lump /lʌmp/
+bit
+lunacy /luːnəsiː/
+1. galenskap
+2. vansinne, vanvett
+lunatic /luːnətik/
+dåre, galning, stolle
+lung /lʌŋ/
+lunga
+lupine /luːpain/
+lupin, vargböna
+lust /lʌst/
+passion
+luxury /lʌkʃəriː/
+lyx
+lyceum /laisiːəm/
+lyceum
+lying /lˈaɪɪŋ/
+barnsängskvinna
+lynx /liŋks/
+lo, lodjur
+lyre /laiər/
+lyra
+lyric /lirik/
+text
+machine /məʃiːn/
+maskin
+mackerel /mækrəl/
+makrill
+mad /meid/
+dåraktig, förryckt, galen, stollig, tok, tokig, vansinnig, vriden
+madam /mædəm/
+fru
+madness /mædnəs/
+1. galenskap
+2. vansinne, vanvett
+magazine /mægəziːn/
+magasin
+magic /mædʒik/
+trolleri
+magical /mædʒikl/
+magisk
+magnet /mægnit/
+magnet
+magnetic /mægnetik/
+magnetisk
+magpie /mægpai/
+skata
+maid /meid/
+städerska, städhjälp, tjänarinna, tjänstflicka
+mail /meil/
+post
+mailbox /meilbɔks/
+brevlåda
+mailman /meilmæn/
+posttjänsteman
+mainland /meinlənd/
+fastland, världsdel
+maintain /meintein/
+behålla, förvara, konservera
+maize /meiz/
+majs
+major /meidʒər/
+major
+major /meidʒərroud/
+huvudled
+make /mˈeɪk/
+smink
+make /meik/
+göra
+make /meikəkweintəns/
+görabekantskapmed
+make /meikəmisteik/
+fela, mistasig, mistagasig
+make /meikənɔiz/
+bullra, larma, ramla
+make /meikənout/
+annotera, anteckna, notera
+make /meikkliːn/
+luttra, rena, rengöra, rensa, sovra
+make /meikfɑːst/
+befästa, fästa
+make /meikfənɔf/
+håna
+make /meikʌp/
+smink
+make /meikjuːzɔf/
+1. nyttja
+2. använda, begagna, bruka
+make /meikər/
+kriga
+male /meil/
+manlig
+male /meilkuk/
+kock
+malt /mɔːlt/
+malt
+mam /mɑːm/
+mamma
+mammy /mæmiː/
+mamma
+man /mein/
+1. människa
+2. karl, man
+manage /mænidʒ/
+förvalta
+manager /mænidʒər/
+1. administratör, förvaltare
+2. direktör
+maneuver /mænvər/
+manöver
+mankind /mænkaind/
+mänsklighet
+manner /mænər/
+maner, sätt
+manoeuvre /mənuːvər/
+manöver
+mantle /mæntl/
+kappa
+manure /mənjeər/
+dynga
+many /meniː/
+många
+man /mˈan/
+manöver
+map /meip/
+1. karta, kort
+2. landkarta
+maple /meipl/
+lönn
+marble /mɑːbl/
+marmor
+march /mɑːtʃ/
+gå, löpa
+margarine /mɑːdʒəriːn/
+margarin
+mark /mɑːk/
+1. märke
+2. signal
+3. tecken
+market /mɑːkit/
+1. krambod
+2. marknad
+3. torg
+marketplace /mɑːkitpleis/
+marknad, torg
+marmelade /mɑːməleid/
+marmelad
+marriage /mæridʒ/
+äktenskap
+married /mærid/
+gift
+married /mæridpiːpl/
+äktapar, giftpar
+marry /mæriː/
+1. giftasig
+2. giftasigmed
+marsh /mɑːʃ/
+kärr, moras, sump, träsk
+marten /mɑːtn/
+mård
+martial /mɑːʃl/
+krigisk
+martyr /mɑːtər/
+martyr
+marvel /mɑːvəl/
+förvånasig, undra
+marvel /mɑːvəleit/
+förvånasig, undra
+masculine /mæskjulin/
+manlig
+mask /mɑːsk/
+mask
+mason /meisn/
+murare
+mass /mæs/
+1. hop, mängd
+massive /mæsiv/
+massiv
+mast /mɑːst/
+mast
+master /mɑːstər/
+mästare
+master /mɑːstərbildər/
+byggmästare
+match /mætʃ/
+sticka, tändsticka
+material /mətiəriəl/
+1. materiell
+2. material
+maternal /mətəːnlɑːnt/
+moster
+maternal /mətəːnlgrænfɑːðər/
+morfar
+maternal /mətəːnlgrænmʌðər/
+mormor
+maternal /mətəːnlgrænpɛərənts/
+morföräldrar
+maternal /mətəːnlʌŋkl/
+morbroder, morbror
+mathematics /mæθəmætiks/
+matematik
+matter /mætər/
+1. affär, sak
+2. fall
+3. materia
+mattress /mætrəs/
+madrass
+mature /mətjeər/
+mogen
+maximum /mæksiməm/
+maxiumum
+maybe /meiib/
+kanhände, kanske, måhände, törhända
+mayhap /meiieip/
+kanhände, kanske, måhände, törhända
+mayor /mɛər/
+borgmästare
+meadow /medou/
+äng
+meal /miːl/
+1. mjöl
+2. måltid
+mealies /miːliz/
+majs
+mean /miːn/
+1. beteckna, betyda, teckna
+2. mena
+meaning /miːniŋ/
+bemärkelsedag, betydelse
+means /miːnz/
+instrument, tyg, verktyg
+measles /miːzlz/
+mässling
+measured /miːəʒeəd/
+ceremoniell
+medal /medl/
+medalj
+medicine /medsn/
+läkemedel, medicin
+meet /miːt/
+1. mötas, träffas
+2. möta
+meeting /miːtiŋ/
+1. möte
+2. församling, sammankomst, sammanträde
+mellowness /melounəs/
+vekhet
+melody /melədiː/
+låt, melodi, trall
+melon /melən/
+melon
+melt /melt/
+1. smälta
+melting /meltiŋ/
+töväder
+member /membər/
+1. lem
+2. partigängare
+memory /meməriː/
+minne
+menace /menəs/
+1. hota
+2. hot, hotelse
+mend /mend/
+flicka
+mental /mentl/
+andlig
+menu /menjuː/
+1. karta, kort
+2. matsedel
+merchandise /məːtʃəndaiz/
+vara
+merchant /məːtʃənt/
+1. affärsman, handelsman
+mercury /məːkjuriː/
+kvicksilver
+merry /meriː/
+1. glad, kry
+2. gladlynt
+message /mesidʒ/
+bekantgörande, tillkännagivande
+messenger /mesindʒər/
+sändebud
+metal /metl/
+metall
+metalled /metld/
+sten‐, stenig
+method /meθəd/
+metod
+metre /miːtər/
+meter
+metropolis /mətrɔpəlis/
+1. världsstad
+2. huvudstad
+microscope /maikrəskoup/
+mikroskop
+midget /midʒit/
+dvärg
+midwife /midwaif/
+1. ackuschörska, barnmorska
+mild /maild/
+blid, mild
+mile /mail/
+mil
+milk /milk/
+1. mjölk
+2. mjölka
+miller /milər/
+mjölnare
+million /miliən/
+miljon, million
+mind /maind/
+1. ande, själ
+2. observera
+mine /main/
+1. gruva
+2. mina
+miner /minər/
+gruvarbetare
+mineral /minərəl/
+mineral
+mingle /miŋgl/
+blanda, sammanblanda
+minister /ministər/
+departementschef, minister
+ministry /ministriː/
+ministär
+minority /mainɔritiː/
+mindretal
+mint /mint/
+mynta
+minute /minit/
+minut
+miracle /mirəkl/
+under, vidunder
+miraculous /mirækjuləs/
+underbar, vidunderlig
+mirror /mirər/
+spegel
+miscarriage /miskæridʒ/
+abort, missfall
+miscarry /miskæriː/
+klicka
+miscellaneous /misəleiniəs/
+varjehanda
+miser /mizər/
+gnidare, knusslare
+miserable /mizrəbl/
+1. arg, dålig, ful, illa, ond, slätt, stygg
+2. arm, behövande, fattig
+3. ledsen, sorgsen
+miserly /maizəliː/
+girig, njugg
+miss /mis/
+1. missa
+2. sakna
+mist /mist/
+dimma, mist, tjocka, töcken
+mistake /misteik/
+fel, förvillelse, misstag
+mistress /mistris/
+mästarinna
+misty /mistiː/
+dimmig, disig, töcknig
+misunderstanding /misʌndəstændiŋ/
+missförstånd
+mitten /mitn/
+handske
+mix /miks/
+blanda, sammanblanda
+mixture /mikstʃər/
+röra
+moan /moun/
+stöna
+mock /mɔk/
+håna
+mockery /mɔkəriː/
+hån, spe
+mode /moud/
+1. maner, sätt
+2. mod
+model /mɔdl/
+1. modell
+2. schema
+modern /mɔdn/
+modern
+modest /mɔdist/
+blygsam
+moist /mɔist/
+fuktig
+mold /mould/
+mögel
+mole /moul/
+mullvad
+molecule /mɔlikjuːl/
+molekyl
+mom /məm/
+mamma
+moment /moumənt/
+momang, moment, ögonblick
+mommy /moumiː/
+mamma
+monastery /mənæstəriː/
+kloster
+money /mˈʌni/
+kassa
+money /mʌniː/
+mynt, pengar
+money /mʌniːbɔks/
+kassa
+monk /mʌŋk/
+munk, pater
+monkey /mʌŋkiː/
+apa
+monopoly /mənɔpəliː/
+monopol
+monotonous /mənɔtənəs/
+entonig
+monster /mɔnstər/
+monster, odjur, vidunder
+month /mʌnθ/
+månad
+monument /mɔnjumənt/
+minnesmärke, minnesvård, monument, vård
+mood /muːd/
+1. mod
+2. humör
+moon /muːn/
+måne
+moor /meər/
+stepp
+moorage /meəəridʒ/
+redd
+mooring /meəriŋ/
+redd
+moose /muːs/
+älg
+moped /moupt/
+moped
+more /mɔːr/
+mer, mera
+morning /mɔːniŋ/
+morgon
+morphia /mɔːfiə/
+morfin
+morphine /mɔːfiːn/
+morfin
+mortgage /mɔːgidʒ/
+gravitation, hypotek, inteckning
+mosque /mɔsk/
+moské
+moss /mɔs/
+lav, mossa
+most /moust/
+mest
+moth /mɔθ/
+nattfjäril
+mother /mˈʌðə/
+svärmor
+mother /mʌðər/
+moder, mor
+motive /moutiv/
+motiv
+motor /moutər/
+motor
+motorcycle /moutəsaikl/
+motorcykel
+motorist /moutərist/
+1. bilist
+motto /mɔtou/
+devis
+mould /mould/
+mögel
+mount /maunt/
+montera
+mountain /mˈaʊntɪn/
+rönnbär
+mountain /mauntn/
+berg
+mountain /mauntntʃein/
+berg
+mourning /mɔːniŋ/
+likfärd
+mouse /maus/
+mus, råtta
+mousetrap /maustræp/
+råttfälla
+moustache /məstɑːʃ/
+mustasch
+mouth /mauθ/
+1. gap, käft
+2. mun
+move /muːv/
+1. flytta
+2. flyttning
+movie /muːviːθiətər/
+biograf
+mow /mou/
+meja
+mucus /mjuːkəs/
+slem
+mud /mʌd/
+dy, mudder, gyttja, slam, sörja
+mule /mjuːl/
+mula
+multiply /mʌltiplai/
+multiplicera
+multitude /mʌltitjuːd/
+1. hop, mängd
+mummy /mʌmiː/
+mumie
+munition /mjuːniʃən/
+ammunition
+murder /məːdər/
+1. mörda
+2. dråp, mandråp, mord
+murderer /məːdərər/
+1. dråpare, mördare
+2. baneman
+murk /məːk/
+dunkelhet, mörker
+muscle /mʌsl/
+muskel, sena
+muse /mjuːz/
+musa, sångmö
+museum /mjuːziəm/
+museum
+mushroom /mʌʃrum/
+1. svamp
+2. champignon
+music /mjuːzik/
+musik
+musical /mjuːzikl/
+musikalisk
+musician /mjuːziʃən/
+musikant, musiker
+mussel /mʌsl/
+mussla
+must /mʌst/
+böra, må, måste
+mustard /mʌstəd/
+senap
+mute /mjuːt/
+stum
+mutton /mʌtn/
+fårkött
+muzzle /mʌzl/
+gap, käft
+my /miː/
+min, mitt
+mysterious /mistiəriəs/
+mysteriös
+mystery /mistəriː/
+mysterium
+mystic /mistik/
+mystisk
+mystical /mistikl/
+mystisk
+myth /miθ/
+myt
+nail /nˈeɪl/
+nagelborste
+nail /neil/
+1. spika
+2. nagel, spik
+naked /neikt/
+bar, naken
+name /neim/
+namn
+nameless /neimləs/
+anonym
+namely /neimliː/
+nämligen
+nape /neip/
+nacke
+napkin /næpkin/
+servett
+narcissus /nɑːsisəs/
+narciss
+narrate /nəreit/
+berätta
+narrative /nærətiv/
+berättelse, historia
+narrow /nærou/
+smal, trång
+nasturtium /nəstəːʃim/
+krasse, tusch
+nasty /nɑːstiː/
+1. förtretlig, oangenäm, obehaglig, otrevlig
+2. ful
+3. arg, dålig, illa, ond, slätt, stygg
+4. ohederlig, oärlig
+5. nedrig
+nation /næʃən/
+1. nation
+2. folk
+national /næʃənl/
+nationell
+nationality /næʃənælitiː/
+nationalitet
+native /neitiv/
+infödd
+natural /nætʃrəl/
+naturlig
+natural /nætʃrəlgəz/
+naturgas
+nature /neitʃər/
+1. art, karaktär
+2. natur
+naught /nɔːt/
+nolla
+nausea /nɔːsiə/
+vämjelse, äckel
+navy /neiviː/
+marin, sjömakt
+na /nˈɑː/
+naiv
+na /nˈɑː/
+naiv
+near /nˈiə/
+kortsynt, närsynt
+near /niər/
+1. bi, hos, vid
+2. när
+nearby /niəbiː/
+1. bi, hos, vid
+2. när
+nearly /niːliː/
+nästan
+nearness /niənəs/
+närhet
+near /niərtou/
+bi, hos, vid
+necessary /nesəsəriː/
+behövlig
+neck /nek/
+hals
+necklace /nekləs/
+halsband
+need /niːd/
+1. behöva
+2. behov, förnödenhet
+needle /niːdl/
+1. nål
+2. knappnål
+negative /negətiv/
+negativ
+negligent /neglidʒənt/
+oaktsam, ouppmärksam
+negotiate /nigouʃieit/
+handla
+neigh /nei/
+gnägga
+neighbour /neibər/
+granne
+neighbourhood /neibəhud/
+kvarter
+neither /naiðər/
+ingen
+neither /naiðərnər/
+varken...eller
+nephew /nevjuː/
+brorson, brorsson, systerson
+nerve /nəːv/
+nerv
+nervous /nəːvəs/
+nervös
+nest /nest/
+kyffe, näste
+net /net/
+nät
+nettle /netl/
+brännässla, nässla
+network /netwəːk/
+nät
+neutral /njuːtrəl/
+neutral
+never /nevər/
+aldrig
+nevertheless /nivəːθləs/
+likafullt, oaktat
+never /nevərmaind/
+detgöringenting, föralldel, ingenorsak
+new /njuː/
+ny
+newspaper /njuːspeipər/
+dagblad, journal
+next /nekst/
+kommande
+next /nekstɔfkain/
+närmaste
+next /neksttou/
+1. bi, hos, vid
+2. bredvid
+nice /nais/
+1. angenäm, anslående, behaglig, trevlig
+2. bra, god
+3. läcker, smakfull, smaklig
+niche /nitʃ/
+nisch
+nickel /nikl/
+nickel
+nickname /nikneim/
+binamn, vedernamn
+niece /niːs/
+brorsdotter, systerdotter
+niggard /nigəd/
+gnidare, knusslare
+night /nait/
+natt
+nightingale /naitiŋgeil/
+näktergal
+nightmare /naitmɛər/
+mara
+night /naitpreiəz/
+aftonbön
+nine /nain/
+nie, nio
+nineteen /naintiːn/
+nitton
+nineteenth /naintiːnθ/
+nittonde
+ninety /naintiː/
+nitti, nittio
+ninth /nainθ/
+nionde
+nipple /nipl/
+1. spene, vårta
+nitrogen /naitrədʒən/
+kväve
+no /nˈəʊ/
+ingen
+no /nou/
+nej
+nobility /noubilitiː/
+adel
+noble /noubl/
+ädel
+nobleman /noublmən/
+jarl, ädling
+nobody /noubədiː/
+ingen
+node /noud/
+knut
+noise /nɔiz/
+bråk, buller, dån, krasch, larm, oljud, olåt, oväsen, stoj, väsen
+non /nˈɒn/
+frånvaro
+non /nˈɒn/
+underofficer
+noncom /nɔnkʌm/
+underofficer
+none /nɔn/
+ingen
+normal /nɔːml/
+normal
+north /nɔːθ/
+1. norrut
+2. nord
+northern /nɔːðən/
+nordlig, norr, norra
+northward /nɔːðd/
+norrut
+northwards /nɔːðdz/
+norrut
+nose /nouz/
+näsa
+nostril /nɔstrəl/
+näsborr
+not /nout/
+ej, icke, ingen, intet
+note /nout/
+1. biljett
+2. annotera, anteckna, notera
+3. anteckning, not
+notebook /noutbuk/
+1. skrivbok
+2. annotationsbok, notisbok
+noteworthy /noutwəːðiː/
+anmärkningsvärd, märklig, märkvärdig
+nothing /nʌθiŋ/
+ingenting, intet
+notice /nˈəʊtɪs/
+anslagstavia
+notice /noutis/
+1. affisch, anslag
+2. märka
+3. bekantgörande, tillkännagivande
+notion /nouʃən/
+begrepp
+notwithstanding /nɔtwiðstændiŋ/
+trots
+not /nouteitl/
+1. ingalunda
+2. alldelesicke, allsicke, intealls
+not /noutwʌnæniːəkaunt/
+ingalunda
+nought /nɔːt/
+1. noll
+2. nolla
+noun /naun/
+substantiv
+novel /nɔvəl/
+1. ny
+2. roman
+now /nau/
+1. nå, nåväl
+2. nu
+nowadays /nauwɔdeiz/
+nutida, nuvarande
+nowhere /nauwɛər/
+ingenstans, ingenstädes
+nucleus /njuːkliəs/
+kärna
+nude /njuːd/
+bar, naken
+null /nʌl/
+nolla
+number /nʌmbər/
+1. husnummer
+2. antal
+3. nummer
+numberplate /nʌmbəpleit/
+nummerplåt
+number /nʌmbərɔfðhaus/
+husnummer
+numeral /njuːmərəl/
+nummer
+nun /nʌn/
+nunna
+nurse /nəːs/
+1. ansa, sköta, vårda
+2. sjuksköterska
+3. sjukvårdare, vårdare
+nursery /nəːsəriːsʃuːl/
+lekskola
+nut /nʌt/
+nöt
+nuts /nʌts/
+dåraktig, förryckt, galen, stollig, tok, tokig, vansinnig, vriden
+nymph /nimf/
+nymf
+oak /ouk/
+ek
+oar /ɔːr/
+åra
+oasis /oueisis/
+oas
+oath /ouθ/
+ed
+oats /outs/
+havre
+obedient /əbiːdiənt/
+hörsam, lydig
+obey /əbei/
+hörsamma, lyda, åtlyda
+object /əbdʒekt/
+objekt
+obscure /əbskjeər/
+obskur
+observe /əbzəːv/
+observera
+obstacle /əbstəkl/
+hinder
+obstetrician /əbstitriʃən/
+1. ackuschörska, barnmorska
+2. ackuschör
+obtain /əbtein/
+förvärva
+obvious /ɔbviəs/
+synbarligen, uppenbar
+occasion /əkeiʒn/
+gång
+occur /əkəːr/
+hända, inträffa, passera
+occurence /əkjeərəns/
+händelse, tillfälle
+ocean /ouʃən/
+ocean
+oculist /ɔkjulist/
+ögonläkare
+odd /ɔdd/
+egendomlig, märkvärdig
+odor /oudɔːr/
+doft
+odour /oudər/
+doft
+of /ɔf/
+av
+offence /əfens/
+anstöt, förargelse, förtrytelse, harm
+offend /əfend/
+1. skällaut
+2. förnärma, förölämpa
+offensive /əfensiv/
+offensiv
+offer /ɔfər/
+1. offert
+2. presentera
+3. bjuda
+office /ɔfis/
+1. byrå, kontor
+2. ämbete
+officer /ɔfisər/
+1. officer
+2. ämbetsman
+official /əfiʃl/
+1. officiell
+2. ämbetsman
+offset /ɔfset/
+avstånd, distans
+offspring /ɔfspriŋ/
+telning, unge
+often /ɔfn/
+ofta
+of /ɔflsɔːts/
+varjehanda
+of /ɔfilripjuːt/
+ökländ
+of /ɔfnoublbəːθ/
+adlig, avadel
+of /ɔfsænd/
+sandig
+of /ɔfsilk/
+avsiden
+of /ɔfðboudiː/
+kroppslig, lekamlig
+of /ɔfðsn/
+solig
+of /ɔfðwintər/
+vinterlig
+of /ɔfwitʃ/
+vars
+oh /ɔ/
+ack, åh
+oil /ɔil/
+olja
+okay /oukei/
+1. bra, god
+2. väl
+old /ˈəʊld/
+gammaldags, gammalmodig, urmodig
+old /ould/
+1. gammal
+2. åldrig
+olive /ɔliv/
+oliv
+omelette /ɔmlit/
+omelett
+omen /oumen/
+varsel
+omnibus /ɔmnibəs/
+omnibus
+omnipotence /ɔmnipətəns/
+allmakt
+omnipotent /ɔmnipətənt/
+allrådande, allsmäktig
+omniscient /ɔmnisiənt/
+allvetande
+on /wʌn/
+1. i
+2. på
+3. per
+4. om, över
+once /wʌnsmɔːr/
+åter
+one /wʌn/
+1. någon
+2. en, ett
+onerous /ɔnərəs/
+tung, viktig
+one /wʌnənʌðər/
+varandra, varann, varannan
+one /wʌnhʌndrəd/
+hundra, etthundra
+one /wʌnθauznd/
+tusen, etttusen
+onion /ʌniən/
+lök
+only /ounliː/
+1. bara, blott, endast
+2. ensam
+only /ounliːdʒʌst/
+knappast, knappt, näppeligen
+on /wʌnəkauntɔf/
+på
+on /wʌnðəkeiʒnɔf/
+infall
+on /wʌntaim/
+ackurat, prompt
+on /wʌntoup/
+uppe, upptill
+opal /oupl/
+opal
+open /oupən/
+1. stänga
+2. stängd
+open /oupənʌp/
+stänga
+opera /ɔpərə/
+opera
+operate /ɔpəreit/
+operera
+operation /ɔpəreiʃən/
+operation
+operative /ɔpərətiv/
+arbetare
+ophtalmologist /ɔftælmɔlədʒist/
+ögonläkare
+opine /əpain/
+anse, tycka
+opinion /əpiniən/
+mening, uppfattning, omdöme, tycke, åsikt
+opponent /əpounənt/
+vedersakare
+opportunity /ɔpətjuːnitiː/
+händelse, tillfälle
+opposed /əpouzdtou/
+emot, inemot, mot
+opposite /ɔpəzit/
+1. emot, inemot, mot
+2. motsatt
+opposition /ɔpəziʃən/
+motsats
+oppress /əpres/
+trycka
+optician /ɔptiʃən/
+optiker
+optimism /ɔptimizəm/
+optimism
+option /ɔpʃən/
+alternativ
+oracle /ɔrəkl/
+orakel
+orange /ɔrindʒ/
+apelsin, orange
+orchestra /ɔːkistrə/
+orkester
+order /ɔːdər/
+1. befalla, kommendera
+2. orden
+3. påbjuda
+4. befallning, befäl, order, påbud
+ordinarily /ɔːdinəriliː/
+gemenligen, merendels
+ore /ɔːr/
+malm
+organ /ɔːgən/
+1. organ
+2. orgel
+organization /ɔːgənaizeiʃən/
+organisation
+original /əridʒənl/
+1. original
+originate /əridʒineit/
+härstamma
+ornament /ɔːnəmənt/
+smycka
+orthodox /ɔːθədɔks/
+renlärig
+ostrich /ɔstritʃ/
+struts
+other /ʌðər/
+annan
+other /ʌðərθein/
+utom
+ought /ɔːttou/
+böra, må, måste
+our /eər/
+vår
+out /aut/
+ute
+outfit /autfit/
+klädedräkt, kostym
+outline /autlain/
+silhuett
+outside /autsid/
+ute
+outskirts /autskəːts/
+periferi
+out /autɔf/
+från, ifrån, ut, utav
+out /autɔfdeit/
+gammaldags, gammalmodig, urmodig
+out /autɔfɔːdər/
+kaputt
+oval /ouvəl/
+oval
+oven /ʌvn/
+kamin, spis
+overall /ouvərɔːl/
+1. total
+2. hel
+overcoat /ouvəkout/
+paletå
+overhead /ouvəhed/
+uppe, upptill
+overpower /ouvəpauər/
+ockupera
+overshoe /ouvəʃuː/
+galosch
+over /ouvərðər/
+där
+ow /ou/
+ack, åh
+owing /ouiŋtou/
+på
+owl /aul/
+uggla
+own /oun/
+innehava, äga
+owner /ounər/
+ägare
+ox /ɔks/
+oxe
+oxygen /ɔksidʒən/
+syre
+oyster /ɔistər/
+ostron
+o /əklɔk/
+timme
+pace /peis/
+steg
+pack /pæk/
+1. packa
+2. packe
+packet /pækit/
+paket
+pad /pæt/
+block
+pagan /peigən/
+1. hednisk
+2. hedning
+pail /peil/
+bytta, hink
+pain /pein/
+pina, smärta, värk
+painful /peinfəl/
+pinsam, smärtsam
+paint /peint/
+1. färga, måla
+2. färg
+painter /peintər/
+1. målare
+painting /peintiŋ/
+målning, tavla
+pair /pɛər/
+1. duo, par
+pal /peil/
+kamrat, kompis
+palace /pælis/
+palats
+pale /peil/
+glåmig
+palm /pɑːm/
+palm
+palmtree /pɔːmtriː/
+palm
+pamper /pæmpər/
+kela
+pamphlet /pæmflit/
+1. broschyr
+2. pamflett
+panic /pænik/
+panik
+pantechnicon /pænteknikən/
+flyttbil
+pantechnicon /pænteknikənvein/
+flyttbil
+panties /pæntiz/
+underbyxor
+pantomime /pæntəmaim/
+pantomim
+pants /pænts/
+benkläder, byx, byxa, byxor
+paper /pˈeɪpə/
+tapetserare
+paper /peipər/
+1. dokument
+2. tapetsera
+paperback /peipəbæk/
+broschyr
+paperer /peipərər/
+tapetserare
+parachute /pærəʃuːt/
+fallskärm
+parade /pəreid/
+parad
+paradise /pærədais/
+paradis
+paraffin /pˈaɹəfˌɪn/
+fotogen, petroleum
+paraffin /pærəfin/
+paraffin
+paragraph /pærəgrɑːf/
+paragraf
+parallel /pærəlel/
+parallel
+paralyse /pærəlaiz/
+förlama
+parapet /pærəpit/
+balustrad
+parasite /pærəsait/
+1. parasit, snyltgäst
+2. snyltväxt
+3. tallricksslickare
+parcel /pɑːsl/
+paket
+pardon /pɑːdn/
+1. benåda, förlåta
+2. benådning, förlåtelse, nåd
+parenthesis /pərenθəsis/
+spasm
+parents /pˈeəɹənts/
+svärföräldrar
+parents /pɛərənts/
+föräldrar
+parish /pæriʃ/
+prästgård, socken
+park /pɑːk/
+park
+parliament /pɑːləmənt/
+parlament
+parlour /pɑːlər/
+salong
+parrot /pærət/
+papegoja
+parsley /pɑːsliː/
+persilja
+part /pɑːt/
+1. andel, del, part
+2. roll
+partial /pɑːʃl/
+partisk
+particular /pətikjulər/
+1. särskild
+2. speciell
+partridge /pɑːtridʒ/
+rapphöna
+party /pɑːtiː/
+1. anhang
+2. fest, kalas
+3. part, parti
+passable /pɑːsəbl/
+gångbar
+passenger /pæsindʒər/
+passagerare, trafikant
+passion /pæʃən/
+1. glöd
+2. passion
+passionate /pæʃəneit/
+passionerad
+passport /pɑːspɔːt/
+pass
+pass /pɑːsɔːwei/
+avlida, dö
+paste /peist/
+deg
+pastor /pɑːstər/
+1. präst, katolskpräst
+2. kyrkoherde, pastor, prost
+patch /pætʃ/
+flicka
+patch /pætʃʌp/
+flicka
+pate /peit/
+huvud
+patent /peitnt/
+oktroj, patent
+paternal /pətəːnlɑːnt/
+faster
+paternal /pətəːnlgrænfɑːðər/
+farfader, farfar
+paternal /pətəːnlgrænmʌðər/
+farmor
+paternal /pətəːnlgrænpɛərənts/
+farföräldrar
+paternal /pətəːnlʌŋkl/
+farbroder, farbror
+path /pɑːθ/
+1. bana
+2. gång, stig, stråt
+patience /peiʃəns/
+tålamod
+patient /peiʃənt/
+1. tålig, tålmodig
+2. patient
+patriarch /peitriɑːk/
+patriark
+patrol /pətroul/
+patrull
+patron /pætrən/
+beskyddare
+pattern /pætən/
+schema
+pause /pɔːz/
+paus
+pavement /peivmənt/
+gångbana, trottoar
+pavilion /pəviliən/
+paviljong
+paw /pɔː/
+ben
+pawn /pɔːn/
+1. pion
+2. knekt, soldat
+pay /pei/
+betala, erlägga
+payment /peimənt/
+1. avbetalning
+2. betalning, likvid
+pay /peiətenʃən/
+beakta
+pay /peiətenʃəntou/
+1. beakta
+2. tahänsyntill
+pay /peiɔf/
+avbetala
+pay /peiðikspensizɔf/
+bekosta
+pea /piə/
+ärt, ärta
+peace /piːs/
+fred
+peach /piːtʃ/
+persika
+peacock /piːkɔk/
+påfågel
+pear /piər/
+päron
+pearl /pəːl/
+pärla
+peasant /pesnt/
+landsbo
+peculiar /pikjuːliər/
+egendomlig, märkvärdig
+pedal /pedəl/
+pedal, trampa
+pedestrian /pidestriən/
+fotgängare
+peel /piːl/
+bark
+peer /piər/
+stirra
+pelican /pelikən/
+pelikan
+pelvis /pelvis/
+skål
+pen /pˈɛn/
+fickkniv, fällkniv
+pencil /pensl/
+blyertspenna
+peninsula /pəninsjulə/
+halvö
+pension /penʃən/
+pension
+people /piːpl/
+folk
+pepper /pepər/
+peppar
+per /pər/
+1. i
+2. för
+percent /pəsent/
+procent
+percentage /pəsentidʒ/
+procent
+perchance /pəːtʃəns/
+kanhände, kanske, måhände, törhända
+perform /pəfɔːm/
+1. göra
+2. presentera
+perfume /pəfjuːm/
+parfym
+perhaps /pəhæps/
+kanhände, kanske, måhände, törhända
+peril /perəl/
+fara, våda
+period /piəriəd/
+period
+periodical /piəriɔdikl/
+tidskrift
+periphery /pərifəriː/
+periferi
+perish /periʃ/
+förgås
+permanent /pəːmənənt/
+konstant
+perplexed /pəplekst/
+oredig
+persecute /pəːsikjuːt/
+förfölja
+persecution /pəːsikjuːʃən/
+förföljande, förföljelse
+person /pəːsn/
+person
+personal /pəːsənl/
+personlig
+personality /pəːsənælitiː/
+art, karaktär
+personal /pəːsənlnʌmbər/
+personnummer
+perspiration /pəːspəreiʃən/
+svett
+persuade /pəsʌɔd/
+överbevisa, övertyga
+pessimistic /pesimistik/
+pessimistisk
+pestilence /pestiləns/
+pest
+pet /pit/
+kela
+petrol /pitroul/
+bensin
+petroleum /pitrouliəm/
+fotogen, petroleum
+phantom /fæntuːm/
+gast, spöke
+pharmaceutical /fɑːməsjuːtikl/
+läkemedel, medicin
+pheasant /feznt/
+fasan
+phenomenon /finɔminən/
+fenomen
+philosopher /filɔsəfər/
+filosof
+phlegm /flem/
+slem
+phone /founbuːð/
+telefonhytt
+phosphorus /fɔsfərəs/
+fosfor
+photograph /foutəgrɑːf/
+fotografera
+photographer /fətɔgrəfər/
+fotograf
+photography /fətɔgrəfiː/
+fotografi
+physical /fizikl/
+kroppslig, lekamlig
+physician /fiziʃən/
+doktor, läkare
+physics /fiziks/
+fysik
+piano /piænou/
+piano
+pick /pik/
+1. sticka
+2. plocka
+pick /pikaut/
+kora
+pick /pikʌp/
+1. avhämta, hala
+2. församla, samla
+3. fatta, ta, taga
+picture /piktʃər/
+1. bild
+2. figur, gestalt
+3. målning, tavla
+picture /piktʃərpoustkɑːd/
+vykort
+pie /piː/
+tårta
+piece /pis/
+1. andel, del, part
+2. bit
+piece /pisɔffəːnitʃər/
+möbel
+pig /pig/
+gris, svin
+pigeon /pidʒən/
+duva
+pigeonhole /pidʒənhoul/
+fack, yrke
+pigmy /pigmiː/
+dvärg
+pike /paik/
+gädda
+pile /pail/
+1. hop, mängd
+2. stack
+pilgrimage /pilgrimidʒ/
+pilgrim
+pill /pil/
+piller
+pillar /pilər/
+pelare, spalt
+pillow /pilou/
+huvudgärd
+pilot /pailət/
+1. lotsa
+2. lots
+pin /pin/
+knappnål, nål
+pine /pˈaɪn/
+fur, fura, pinie, pinje, tall
+pine /pain/
+fur, fura, pinie, pinje, tall
+pineapple /painæpl/
+ananas
+pink /piŋk/
+nejlika
+pioneer /paiəniər/
+pionär, pionjär
+pious /paiəs/
+gudlig
+pip /pip/
+korn
+pipe /paip/
+1. pipa
+2. rör
+pirate /pireit/
+pirat, sjörövare
+pistol /pistl/
+pistol
+pit /pit/
+kärna
+pitcher /pitʃər/
+kruka, stop
+pitch /pitʃblæk/
+becksvart
+pity /pitiː/
+1. hamedlidande, hamedlidandemed, tyckasyndom
+2. medlidande, misskund
+pivot /pivət/
+spindel
+placard /plækɑːd/
+1. affischera
+2. affisch, anslag
+place /pleis/
+1. ort
+2. lägga, ställa, sätta
+place /pleisɔfbəːθ/
+födelseort
+place /pleisɔfwəːʃip/
+kyrka
+plague /pleig/
+pest
+plaice /pleis/
+rödspotta, rödspätta
+plain /plein/
+1. slätt
+2. klar, tydlig
+plan /plæn/
+projekt
+plane /plˈeɪn/
+platan
+plane /plein/
+1. flygmaskin
+2. platan
+3. hyvla
+4. hyvel
+planet /plænit/
+planet
+plank /plæŋk/
+bräde, plank, tilja
+plant /plɑːnt/
+1. plantera
+2. plant
+plate /pleit/
+1. fat
+2. tallrik
+platform /plætfɔːm/
+1. kaj, perrong
+2. program
+platinum /pleitinəm/
+platina
+platter /plætər/
+fat
+plausible /plɔːzibl/
+1. trolig, trovärdig
+play /plei/
+1. leka, spela
+2. skådespel, teaterpjäs
+plaza /plɑːzə/
+torg
+pleasant /pleznt/
+1. angenäm, anslående, behaglig, trevlig
+please /pliːs/
+1. varsågod
+2. behaga
+pleased /pliːst/
+belåten, nöjd
+pleasure /pleʒər/
+1. behag
+2. fröjd
+plot /plɔt/
+1. intrig
+2. komplott
+plough /plau/
+1. plöja
+2. plog
+pluck /plʌk/
+plocka
+plug /plʌg/
+gnista, tändstift
+plug /plʌgin/
+ansluta
+plum /plʌm/
+plommen
+plume /pluːm/
+plym
+plunder /plʌndər/
+roffa, råna, röva
+plunge /plʌndʒ/
+dyka
+pocket /pɔkit/
+ficka
+poem /pouim/
+dikt
+poet /pouit/
+diktare, skald
+poetry /pouitriː/
+poesi
+point /pɔintaut/
+uppvisa
+poison /pɔizn/
+1. förgifta
+2. gift
+poisonous /pɔizənəs/
+ettrig, giftig
+pole /poul/
+1. grav
+2. påle, stör
+3. pol
+police /pəlˈiːs/
+polisstation
+police /pəliːs/
+polis
+policeman /pəliːsmən/
+1. konstapel, poliskonstapel
+policy /pɔləsiː/
+politik
+polish /pɔliʃ/
+glansslipa, polera
+polite /pəlait/
+artig, hövlig
+politeness /pəlaitnəs/
+artighet
+political /pɔlitikl/
+politisk
+politician /pɔlitiʃən/
+politiker, statsman
+politics /pɔlitiks/
+politik
+polyp /pɔlip/
+polyp
+pond /pɔnd/
+damm
+pool /puːl/
+1. para
+2. bassäng
+poor /peər/
+1. arg, dålig, ful, illa, ond, slätt, stygg
+2. arm, behövande, fattig
+pope /poup/
+påve
+poplar /pɔplər/
+poppel
+poppy /pɔpiː/
+vallmo
+popular /pɔpjulər/
+populär
+population /pɔpjuleiʃən/
+befolkning
+porch /pɔːtʃ/
+1. partvalv
+2. veranda
+porcupine /pɔːkjupain/
+piggsvin
+pork /pɔːk/
+fläsk
+port /pɔːt/
+hamn
+portable /pɔːtəbl/
+portativ
+portal /pɔːtl/
+1. inträde
+2. port
+portent /pɔːtent/
+varsel
+porter /pɔːtər/
+1. dörvakt, dörvaktare, portvakt, portvaktare, vaktmästare
+2. bärare, stadsbud
+portfolio /pɔːtfouliəə/
+portfölj
+port /pɔːtsaid/
+babord
+position /pəziʃən/
+position
+possess /pəzes/
+innehava, äga
+possession /pəzeʃən/
+egendom
+possible /pɔsəbl/
+möjlig
+possibly /pɔsəbliː/
+kanhände, kanske, måhände, törhända
+post /pˈəʊst/
+portofri
+post /poust/
+1. affischera
+2. påle, stör
+3. ämbete
+4. post
+postage /poustidʒ/
+porto
+postage /poustidʒstæmp/
+frimärke
+postal /poustlkoud/
+postnummer
+postcard /poustkɑːd/
+brevkort
+poster /pɔstər/
+affisch, anslag
+postman /poustmən/
+brevbärare, postbud
+post /poustɔfis/
+postkontor
+post /poustʌp/
+affischera
+pot /pɔt/
+kanna
+potato /pɔteitou/
+potatis
+pound /paund/
+pund
+pour /pɔːr/
+gjuta, hälla, stöpa
+poverty /pɔvətiː/
+armod, fattigdom
+powder /paudər/
+pulver
+powerful /pauəfəl/
+mäktig
+practicable /præktikəbl/
+gångbar
+practical /præktikl/
+1. praktisk
+2. real, reell
+practice /præktis/
+1. övning
+2. praktik
+practise /præktis/
+inöva, öva
+praise /preiz/
+1. berömma, lova, prisa
+2. beröm
+prawn /prɔːn/
+räkna
+pray /prei/
+bedja
+prayer /preiər/
+bön
+preach /priːtʃ/
+predika
+preacher /priːtʃər/
+predikant
+precipice /presipis/
+avgrund, gap
+precise /preisiːz/
+ackurat, noga, precis
+precursor /priːkəːsər/
+varsel
+preferably /prefrəbliː/
+hellre
+pregnant /pregnənt/
+1. havande
+2. dräktig
+prejudice /predʒudis/
+fördom
+preparation /prepəreiʃən/
+beredelse, förberedelse
+prepare /pripɛər/
+bereda, förbereda, tillaga, tillreda
+presage /priseidʒ/
+varsel
+prescription /priskripʃən/
+recept
+presence /prizens/
+närvaro
+present /prizent/
+1. gåva, present, skänk
+2. presentera
+3. närvarande
+present /prizentwið/
+presentera
+preservative /prizəːvətiv/
+preventivmedel
+preserve /prizəːv/
+behålla, förvara, konservera
+president /prezidənt/
+president
+press /pres/
+1. trycka
+2. tryckpress
+pressure /preʃər/
+tryck
+presume /prizjuːm/
+anta
+pretend /pritend/
+låtsassomom
+pretext /priːtekst/
+förevändning, undanflykt, undflykt
+prevent /privent/
+förhindra, hindra
+prey /priː/
+fångst, kap
+price /prais/
+pris
+pricey /praisiː/
+dyr, dyrbar
+pride /praid/
+stolthet
+primeval /praimiːvəlfɔrist/
+urskog
+primitive /primitiv/
+primitiv
+primrose /primrouz/
+viva
+prince /prins/
+furste, prins
+princess /prinses/
+furstinna
+principality /prinsipælitiː/
+furstendöme
+principle /prinsəpl/
+princip
+print /print/
+trycka
+prison /prizn/
+fängelse
+privilege /privəlidʒ/
+privilegium
+probable /prɔbəbl/
+antaglig, sannolik, trolig
+probably /prɔbəbliː/
+troligtvis
+problem /prɔbləm/
+problem
+procedure /prəsiːdʒər/
+förfäringssätt
+proceed /prəsiːd/
+processa
+process /prəses/
+1. förfäringssätt
+2. process
+procession /prəseʃən/
+procession
+proclamation /prɔkləmeiʃən/
+1. förklaring
+2. proklamation
+produce /prədjuːs/
+1. alstra, producera
+2. realisera
+product /prɔdʌkt/
+alster, produkt
+production /prədʌkʃən/
+alstring
+profess /prəfes/
+bekänna
+profession /prəfeʃən/
+profession
+professor /prəfesər/
+professor
+profile /proufail/
+profil
+profit /prɔfit/
+1. profitera
+2. vinst
+profound /prəfaund/
+djup
+programme /prougræm/
+program
+project /prədʒekt/
+projekt
+proletarian /proulitɛəriən/
+proletär
+promise /prəmaiz/
+1. lova
+2. löfte
+prompt /prɔmpt/
+ackurat, prompt
+proof /pruːf/
+bevis, gärd, prov
+prop /prɔp/
+stöd
+propaganda /prɔpəgændə/
+propagando
+property /prɔpətiː/
+1. bondgård, gård, säteri
+2. egenskap
+3. kvalitet
+4. egendom
+5. besittning
+prophesy /prɔfisai/
+varsla
+prophet /proufeit/
+profet, siare
+prose /prouz/
+prosa
+prosecute /prɔsikjuːt/
+förfölja
+protect /prətekt/
+beskydda, freda, skydda, värja, värna
+protection /prətekʃən/
+beskydd, beskärm
+protest /prɔtist/
+protest
+prototype /proutətaip/
+urbild
+prot /pɹˈɒt/
+skyddsling
+prot /pɹˈɒt/
+skyddsling
+proud /praud/
+stolt
+prove /pruːv/
+bevisa
+proverb /prɔvəːb/
+ordspråk
+provided /prəvaididðæt/
+om, såvida, såvitt
+province /prɔvins/
+landskap, län, provins
+provincial /prəvinʃl/
+provinsiell
+proximity /prɔksimitiː/
+närhet
+psalm /sɑːm/
+psalm
+pseudonym /sjuːdənim/
+pseudonym
+psyche /saikiː/
+psyke, själ
+psychiatrist /sikaiətrist/
+psykiater, psykiatriker
+psychiatry /sikaiətriː/
+psykiatri, själsläkekonst
+psychic /saikik/
+psykisk
+public /pʌblik/
+1. allmän, offentlig, publik
+publicity /pʌblisitiː/
+propagando
+public /pʌblikskwɛər/
+torg
+publish /pʌbliʃ/
+offentliggöra, publicera
+publisher /pʌbliʃər/
+förläggare, utgivare
+pudding /pudiŋ/
+pudding
+pull /pəl/
+1. rycka
+2. dra, draga, hala
+pull /pəldaun/
+slopa
+pulpit /pʌlpit/
+kateder
+pulsate /pʌlseit/
+pulsera
+pulse /pʌls/
+puls
+pump /pʌmp/
+1. pumpa
+2. pump
+punctual /pʌŋktʃeəl/
+ackurat, prompt
+punish /pʌniʃ/
+1. aga
+2. bestraffa, näpsa, straffa
+punishment /pʌniʃmənt/
+straff
+puppet /pʌpit/
+docka
+purchase /pəːtʃəs/
+1. anskaffa, köpa
+2. anskaffning, inköp, köp
+purchaser /pəːtʃəsər/
+köpare
+purchase /pəːtʃəsmʌniː/
+köpesumma
+pure /pjeər/
+gedigen, idel, oblandad, pur
+purge /pəːdʒ/
+luttra, rena, rengöra, rensa, sovra
+purple /pəːpl/
+purpur
+purse /pəːs/
+börs, portmonnä
+pursue /pəsjuː/
+förfölja
+pursuit /pəsjuːt/
+förföljande, förföljelse
+push /puʃ/
+1. puffa, stöta
+2. knäck, puff, stöt, törn
+put /put/
+lägga, ställa, sätta
+putty /pʌtiː/
+kitt
+put /putdaun/
+lägga, ställa, sätta
+put /putinɔːdər/
+inreda
+put /putwʌnðsteidʒ/
+presentera
+put /putautɔfkauntinəns/
+förfärlig, hemsk
+put /putʌpwið/
+1. lida
+2. tåla
+puzzle /pʌzl/
+gåta
+puzzle /pʌzlouvər/
+grubbla
+pyjamas /pədʒɑːməz/
+pyjamas
+pyramid /pirəmid/
+pyramid
+quadrangle /kwɔdræŋgl/
+fyrhörning
+quality /kwɔlitiː/
+1. egenskap
+2. kvalitet
+quarrel /kwɔrəl/
+1. gräla, tvista
+2. gräl, kiv, tvist
+quarter /kwɔːtər/
+kvarter
+quarter /kwɔːtərɔfænauər/
+kvart
+quash /kwɔʃ/
+förinta, förstöra
+quay /kweiiː/
+kaj, perrong
+queen /kwiːn/
+1. dam
+2. drottning, furstinna
+question /kwestʃən/
+fråga, spörsmål
+quicksilver /kwiksilvər/
+kvicksilver
+quit /kwit/
+lämna
+quite /kwait/
+1. bra, hart, mycket, mäkta
+2. alldeles
+quiver /kwivər/
+bäva, dallra, darra, skälva
+quotation /kwouteiʃən/
+1. anförande
+2. citat
+quotation /kwouteiʃənmɑːk/
+anföringstecken
+quote /kwout/
+1. anföra, citera
+2. anföringstecken
+rabbi /ræbai/
+rabbin
+rabbit /ræbit/
+kanin
+rabies /reibiːz/
+rabies
+raccoon /rəkuːn/
+sjubb
+race /reis/
+1. springa
+2. ras
+rack /rækwʌnzbreinz/
+grubbla
+racoon /rəkuːn/
+sjubb
+radiate /reidieit/
+stråla
+radio /reidiəə/
+radio
+radish /rædiʃ/
+rädisa
+raffle /ræfl/
+lotteri
+raft /rɑːft/
+flotte
+rag /ræg/
+lapp
+ragout /rægaut/
+ragu
+railing /reiliŋ/
+balustrad
+railroad /reilroud/
+järnväg
+railway /reilwei/
+järnväg
+rain /rein/
+1. regna
+2. regn
+rainbow /reinbou/
+regnbåge
+raincoat /reinkout/
+regnrock
+raise /reiz/
+1. uppfostra
+2. hissa, upphisa, upphäva, upphöja
+raise /reizðəlɑːm/
+alarmere
+rake /reik/
+1. kratta, räfsa
+ram /ræm/
+bagge, gumse, vädur
+ranch /rɑːntʃ/
+bondgård, gård, säteri
+rancour /ræŋkər/
+agg
+rand /rænd/
+brädd, kant, marginal, remsa, ren
+rank /ræŋk/
+1. rang
+2. fil, kö, rad, räcka
+rapier /reipiər/
+värja
+rare /rɛər/
+rar, sällsam, sällspord, sällsynt
+raspberry /rɑːzbəriː/
+hallon
+rat /ræt/
+råtta
+rate /reit/
+1. rang
+2. beräkna, taxera, uppskatta, värdera
+rather /ræðər/
+1. någorlunda
+2. lite, litet
+3. ju
+4. hellre
+ravine /rəviːn/
+bergklyfta
+raw /rɔː/
+okokt
+ray /rei/
+1. stråle
+2. streck, strimla, strimma
+razor /ɹˈeɪzə/
+rakblad
+razor /reizər/
+rakkniv
+reach /riːtʃ/
+ernå
+reaction /riækʃən/
+reaktion
+reactionary /riækʃənriː/
+reaktionär
+read /red/
+läsa
+reading /riːdiŋmætər/
+lektyr
+ready /rediː/
+färdig, redo, tillreds
+real /reiɑːl/
+1. faktisk
+2. real, reell
+reality /riælitiː/
+sanning
+realization /riəlaizeiʃən/
+begrepp
+realize /riəlaiz/
+begripa
+really /riːæliː/
+sannerligen
+rear /ɹˈiə/
+baklykta
+rear /ɹˈiə/
+baklykta
+reason /riːzn/
+1. orsak
+2. motiv
+rebel /bel/
+rebell
+rebound /ribaund/
+studsa
+rebuke /ribjuːk/
+1. missbilliga
+2. förebrå, förevita
+recall /rikɔːl/
+ihågkomma, minnas
+receipt /risiːt/
+1. betalningsbevis
+2. kontramärke, kvitto
+receive /risiːv/
+1. tackajatill
+2. anamma, bekomma, få, undfå
+recess /rises/
+paus
+recipe /resəpiː/
+recept
+recite /risait/
+deklamera
+recline /riklain/
+ligga
+recognize /rekəgnaiz/
+erkänna
+recollect /rekəlekt/
+ihågkomma, minnas
+recollection /rekəlekʃən/
+1. minne
+2. hågkomst
+recommend /rekəmend/
+anbefalla, förorda, rekommendera
+recommendable /rekəmendəbl/
+rekommendabel
+recommendation /rekəmendeiʃən/
+anbefallning, förord, rekommendation
+record /rekɔːd/
+1. platta, skiva
+2. förslag, rapport, utlåtande
+3. inregistrera, registrera
+4. register
+5. rekord
+records /rikɔːdz/
+arkiv
+recover /rikʌvər/
+hela
+recovery /rikʌvəriː/
+räddning
+recruit /rikruːt/
+rekryt
+rector /rektər/
+rektor
+red /rid/
+1. röd
+reek /riːk/
+1. osa, stinka
+2. dofta
+reflect /riflektwʌn/
+begrunda, besinna, betänka, övertänka
+refusal /rifjuːzl/
+vägran
+refuse /rifjuːz/
+neka, vägra
+regal /riːgəl/
+furstlig, konungslig
+regard /rigɑːd/
+1. betrakta
+2. beskåda, kika, skåda, titta
+regiment /redʒimənt/
+regemente
+region /riːdʒən/
+gebit, område, trakt, ängd
+register /redʒistər/
+1. inregistrera, registrera
+2. register
+3. rekommendera
+regret /riːgret/
+ångra
+regrettable /rigretəbl/
+beklaglig
+regrettably /rigretəbliː/
+detvarsynd, tyvärr
+regular /regjulər/
+regelmässig
+regularly /regjuləliː/
+ofta
+regulations /regjuleiʃənz/
+1. reglemente
+2. statut
+reindeer /ɹˈeɪndiə/
+ackja
+reindeer /ɹˈeɪndiə/
+ackja
+reject /ridʒekt/
+1. tackanejtill
+2. neka, vägra
+rejoice /ridʒɔis/
+fröjda, njuta
+relate /rəleit/
+berätta
+related /rileitid/
+anhörig, besläktad
+relation /rileiʃən/
+förhållande, relation
+relations /rileiʃənz/
+släkt
+relationship /rileiʃənʃip/
+släkt, släktskap
+relative /relətiv/
+anförvant, blodsfrånde, blodsförvant, frände, släkting
+relatives /relətivz/
+släkt
+release /riliːs/
+befria, fria
+reliable /rilaiəbl/
+pålitlig, tillförlitlig
+relief /riliːf/
+lättnad
+relieved /riliːvd/
+lättad
+religion /rilidʒən/
+religion
+religious /rilidʒəs/
+religiös, troende
+relinquish /riliŋkwiʃ/
+cedere
+rely /rəliːwʌn/
+1. haförtroendeför, litapå
+remain /rimein/
+förbli, förbliva, stanna
+remainder /rimeindər/
+rest, slump
+remarkable /rimɑːkəbl/
+anmärkningsvärd, märklig, märkvärdig
+remedy /remədiː/
+hela
+remember /rimembər/
+ihågkomma, minnas
+remit /rimit/
+arbeställa
+removal /rimuːvəl/
+flyttning
+rent /rent/
+1. hyra, lega
+rental /rentl/
+hyra, lega
+renter /rentər/
+hyresgäst
+rent /rentmʌniː/
+hyra
+rent /rentaut/
+uthyra
+repair /ripɛər/
+reparera, rätta
+repay /ripei/
+återbetala, återgälda
+repeat /ripiːt/
+upprepa
+repentance /ripentəns/
+ruelse
+repertoire /repətwɑːr/
+repertoar
+replete /ripliːt/
+mätt
+reply /riplai/
+1. svara
+2. besked, genmäle, replik, svar
+report /repɔːt/
+1. rapportera
+2. förslag, rapport, utlåtande
+3. bekantgörande, tillkännagivande
+repose /ripouz/
+1. rasta
+2. rast, ro, vila
+representation /reprizenteiʃən/
+figur, gestalt
+representative /reprizentətiv/
+agent
+reproach /riproutʃ/
+1. förebrå, förevita
+2. förebråelse
+reproduction /riːprədʌkʃən/
+reproduktion
+reprove /ripruːv/
+förebrå, förevita
+reptile /reptail/
+kräldjur, reptil
+republic /ripʌblik/
+republik
+request /rikwest/
+1. anmoda, ansöka, bedja
+2. anmodan, bön
+require /rikwaiər/
+behöva
+rescue /reskjuː/
+rädda
+resemblance /rizembləns/
+likhet
+resemble /rizembl/
+likna
+resentment /rizentmənt/
+agg
+reservoir /rezəvwɑːr/
+bassäng
+residence /rezidəns/
+boning, bostad
+respect /rispekt/
+1. harespektför, respektera
+2. respekt, undseende
+respiration /respəreiʃən/
+andhämtning, andning
+respond /rispɔnd/
+svara
+responsibility /rispɔnsəbilitiː/
+ansvar
+responsible /rispɔnsəbl/
+ansvarig
+rest /rest/
+1. rest, slump
+2. rasta
+3. rast, ro, vila
+restaurant /restrɔnt/
+restaurang
+restrain /ristrein/
+härska, regera
+restraint /ristreint/
+självbehärskning
+restrict /ristrikt/
+avgränsa, begränsa
+result /rizʌlt/
+1. härstamma
+2. resultat
+retirement /ritaiəmənt/
+pension
+reveal /riviːl/
+offentliggöra, publicera
+revenge /rivendʒ/
+hämnd
+revolution /revəluːʃən/
+revolution
+revolutionary /revəluːʃənriː/
+revolutionär
+revolver /rivɔlvər/
+revolver
+reward /riwɔːd/
+1. belöna
+2. belöning
+rhino /rainou/
+noshörning
+rhinoceros /rainɔsərəz/
+noshörning
+rhyme /raim/
+1. rimma
+2. rim
+rhythm /riðəm/
+rytm
+rice /rais/
+ris, risgryn
+rich /ritʃ/
+rik
+riddle /ridl/
+gåta
+ride /raid/
+1. rida
+2. fara, åka
+ridiculous /ridikjuləs/
+löjlig
+rifle /raifəl/
+gevär
+right /rait/
+korrekt
+righteous /raitʃəs/
+riktig
+righteousness /raitʃəsnəs/
+rätt
+rigid /ridʒid/
+styv
+rim /rim/
+brädd, kant, marginal, remsa, ren
+ring /riŋ/
+ring
+riot /riət/
+tumult
+ripe /raip/
+mogen
+ripen /raipən/
+mogna
+risk /risk/
+1. riskera, våga, äventyra
+2. risk
+ritual /ritʃeəl/
+ritual
+rival /raivəl/
+rival
+river /rivər/
+flod, flöde, ström, älv
+road /roud/
+1. bana
+2. gång, stråt, väg
+roam /roum/
+irra
+roar /rɔːr/
+råma
+roar /rɔːrwiðlɑːftər/
+gapskratta
+roast /roust/
+halstra, rosta
+roastbeef /roustbiːf/
+rostbiff
+rob /rɔb/
+1. råna, utblotta
+2. bestjäla
+3. roffa, röva
+robber /rɔbər/
+rånare, rövare
+robe /roub/
+klänning
+rock /rɔk/
+klippa
+rocket /rɔkit/
+raket
+roe /rou/
+rådjur
+rogue /roug/
+niding, rackare, skurk
+role /roul/
+roll
+roll /roul/
+1. bulle, semla
+2. rulla
+roller /ɹˈəʊlə/
+rullgardin
+roller /roulər/
+cylinder
+rolling /rouliŋinmʌniː/
+stenrik
+roof /ruːf/
+tak
+room /ruːm/
+1. utrymme
+2. gemak, kammare
+rooster /ruːstər/
+tupp
+root /ruːt/
+rot
+rope /roup/
+lina, rep, sladd, snodd, snöre, streck
+rose /rouz/
+ros
+rostrum /rɔstrəm/
+tribun
+rotten /rɔtn/
+rutten, skämd
+rough /rau/
+ovänlig, snäsig
+round /raund/
+1. rund
+2. runda
+3. kring
+round /raundɔf/
+runda
+route /ruːt/
+gång, stråt, väg
+routine /ruːtiːn/
+rutin
+row /ɹˈəʊ/
+roddbåt
+row /rou/
+fil, kö, rad, räcka
+rowan /rouənberiː/
+rönnbär
+rowing /ɹˈəʊɪŋ/
+roddbåt
+royal /rɔiəl/
+furstlig, konungslig
+rub /rʌb/
+gnida, gno, gnugga, riva
+rubber /rʌbər/
+1. gummi, kautschuk
+2. kondom
+ruby /ruːbiː/
+rubin
+rudder /rʌdər/
+1. styre
+2. roder
+rude /ruːd/
+gensvarig, oartig, oblyg, oförsynt, ohövlig
+rudiments /ruːdimənts/
+alfabet
+ruin /ruːin/
+1. ruinera
+2. ruin
+rule /ruːl/
+härska, regera
+ruler /ruːlər/
+1. linjal
+2. härskare
+rules /ruːlz/
+reglemente
+rumor /ruːmər/
+rykte
+rumour /ruːmər/
+rykte
+rump /rʌmp/
+stjärt
+run /rʌn/
+1. springa
+2. kila, raka
+run /rʌnɔːwei/
+fly, rymma
+run /rʌnfərilekʃən/
+söka
+rust /rʌst/
+1. rosta
+2. rost
+rusty /rʌstiː/
+rostig
+rye /riː/
+råg
+r /ˈɑː/
+regim
+r /ˈɑː/
+roll
+sack /sæk/
+säck, väska
+sacrament /sækrəmənt/
+sakrament
+sacred /səkəd/
+helig
+sad /sæd/
+1. ledsen, sorgsen
+saddle /sædl/
+sadel
+sadness /sædnəs/
+1. bedrövelse
+2. förtrytelse, grämelse
+safe /seif/
+säker
+safety /sˈeɪfti/
+säkerhetsnål
+safety /seiftiː/
+behåll
+safety /seiftiːpin/
+säkerhetsnål
+sagacious /səgeiʃəs/
+klok, vettig
+sage /seidʒ/
+klok, vettig
+sail /seil/
+1. segla
+2. segel
+sailor /seilər/
+sjöman
+saint /seint/
+helgon
+salad /sæləd/
+salad, sallat
+salamander /sæləmændər/
+salamander
+salary /sæləriː/
+arvode, avlöning, lön, sold
+sale /seil/
+försäljning
+sales /seilzæktivitiː/
+marknad
+saliva /səlaivə/
+dregel, saliv, spott
+salivate /sæliveit/
+dregla
+sallow /sælou/
+glåmig
+salmon /sæmən/
+lax
+salon /sælɔn/
+salong
+salt /sɔːlt/
+salt
+salty /sɔːltiː/
+salt
+salt /sɔːltwɔːtər/
+saltvatten
+salute /səluːt/
+hälsa
+salvage /sælvidʒ/
+räddning
+salvation /sælveiʃən/
+räddning
+sample /sɑːmpl/
+mönster, provbit
+sanctuary /sæŋktʃeəriː/
+helgedom
+sanctum /sæŋktəm/
+helgedom
+sand /sˈand/
+sandig
+sand /sænd/
+1. sandig
+2. sand
+sandal /sændl/
+sandal
+sandbank /sændbæŋk/
+bank, sandbank
+sap /seip/
+saft
+sarcastic /sɑːkæstik/
+sarkastisk
+sardine /sɑːdiːn/
+sardin
+satisfied /sætisfaid/
+1. belåten, nöjd
+2. mätt
+sauce /sɔːs/
+spad, sås
+sauna /saunə/
+badstuga, bastu
+sausage /sɔsidʒ/
+korv
+savage /sævidʒ/
+ostyrig, vild, vildsint
+save /seiv/
+1. rädda
+2. spara
+saw /sɔː/
+1. såga
+2. såg
+say /sei/
+säga
+say /seigudbai/
+sägaadjö, sägaadjötill
+say /seigudbaitou/
+sägaadjö, sägaadjötill
+say /seijez/
+bejaka, jaka
+scaffold /skæfould/
+schavott
+scale /skeil/
+fjäll
+scandal /skændl/
+1. anstöt, förargelse, förtrytelse, harm
+2. förtal
+3. skandal
+scar /skɑːr/
+ärr
+scarcely /skɛəsəliː/
+knappast, knappt, näppeligen
+scatter /skætər/
+gjuta, hälla, stöpa
+scene /siːn/
+scen
+scenery /siːnəriː/
+landskap
+scent /sent/
+doft
+sceptre /skeptər/
+scepter, spira
+schedule /ʃedjuːl/
+kommunikationstabell, tidtabell
+scheme /skiːm/
+1. projekt
+2. schema
+school /sʃuːl/
+skola
+science /sins/
+vetenskap
+scientific /saiəntifik/
+vetenskaplig
+scientist /saiəntist/
+vetenskapsman
+scissors /sizəz/
+sax
+scold /skould/
+förebrå, förevita
+scrap /skræp/
+lapp
+scratch /skrætʃ/
+klå, klösa, krafsa, riva
+scream /skriːm/
+hojta, skria, skrika, skråla
+screw /skruː/
+1. skruva
+2. skruv
+screwdriver /skruːdrivər/
+skruvmejsel
+scuffle /skʌfl/
+batalj, kamp, slag, slagsmål, strid
+sculptor /skʌlptər/
+bildhuggare, skulptör
+scythe /saið/
+lie
+sea /sˈiː/
+säl
+sea /siə/
+hav, sjö
+seagull /siːgʌl/
+fiskmås, fiskmåse, mås, måse
+seal /siːl/
+säl
+seaside /siːsaid/
+kust
+season /siːzn/
+säsong, årstid
+seat /siːt/
+sittplats
+seaweed /siːwiːd/
+alg
+second /skound/
+1. andra, andre, annan
+2. sekund
+secret /siːkrit/
+dold, hemlig, lönnlig
+secretary /sekrətriː/
+sekretarere
+sect /sekt/
+sekt
+section /sekʃən/
+1. fack, yrke
+2. sektion
+secure /sikjeər/
+1. befästa, fästa
+2. säker
+security /sikjeəritiː/
+behåll
+seduce /sidjuːs/
+förföra, förleda
+see /siː/
+1. möta
+2. se, skåda, skönja, titta
+seed /siːd/
+frö
+seek /siːk/
+leta, söka
+seem /siːm/
+synas, tyckas
+self /sˈɛlf/
+självbehärskning
+self /sˈɛlf/
+självförtroende
+self /sˈɛlf/
+blyg, brydd, förlägen
+self /sˈɛlf/
+självbehärskning
+self /sˈɛlf/
+självbehärskning
+self /sˈɛlf/
+självförtroende
+self /self/
+själv
+sell /sel/
+avyttra, försälja, sälja
+send /send/
+sända
+sender /sendər/
+adressant
+sense /sens/
+begrepp
+sentence /sentəns/
+1. mening, sats
+2. döma
+separate /sepəreit/
+1. särskild
+2. dela
+serenade /serineid/
+serenad
+serf /səːf/
+träl
+sergeant /sɑːdʒənt/
+sergeant
+series /siəriz/
+serie
+serious /siəriəs/
+1. viktig
+2. allvarlig
+sermon /səːmən/
+predikan
+serpent /səːpənt/
+orm, snok
+servant /səːvənt/
+1. städerska, städhjälp, tjänarinna, tjänstflicka
+2. betjänt, dräng, tjänare
+service /səːvis/
+tjänst
+set /set/
+1. apparat
+2. flock, grupp, hjord, koppel, svärm, tropp, trupp
+3. serie
+settlement /setlmənt/
+koloni
+set /setstreit/
+görabesviken
+seven /sevn/
+sju
+seventeen /sevntiːn/
+sjutton
+seventeenth /sevntiːnθ/
+sjuttonde
+seventh /sevnθ/
+sjunde
+seventy /sevntiː/
+sjutti, sjuttio
+several /sevrəltaimz/
+alltemellanåt, emellanåt, ibland
+sew /sou/
+sy
+sewer /souər/
+avlopp, kloak
+sex /seks/
+1. kön
+2. sex
+sexual /sekʃeəl/
+sexuell
+shack /ʃæk/
+1. barack
+2. hydda, hytt
+shade /ʃeid/
+skugga
+shadow /ʃædou/
+skugga
+shallop /ʃæləp/
+slup
+shallow /ʃælou/
+grund
+shame /ʃeim/
+blygsel, nesa, skam
+shamrock /ʃæmrɔk/
+klöver, väppling
+shanty /ʃæntiː/
+barack
+shape /ʃeip/
+bilda, dana, forma, formera
+share /ʃɛər/
+1. aktie
+2. dela
+3. andel, del, part
+4. portion
+shark /ʃɑːk/
+haj
+sharp /ʃɑːp/
+1. amper, egg, gräll, gäll, skarp
+sharpen /ʃɑːpən/
+skärpa, slipa
+sharpness /ʃɑːpnəs/
+skärpa
+shatter /ʃætər/
+krossa
+shave /ʃeiv/
+raka
+shawl /ʃɔːl/
+schal
+she /ʃˈiː/
+åsninna
+she /ʃˈiː/
+björnhona, björninna
+she /ʃˈiː/
+get
+she /ʃˈiː/
+varghona, varginna
+she /ʃou/
+hon
+sheaf /ʃiːf/
+knippa, knyte, packe
+shed /ʃet/
+1. barack
+2. kram
+3. gjuta, hälla, stöpa
+sheep /ʃiːp/
+får
+sheet /ʃiːt/
+blad
+shell /ʃel/
+1. snäcka
+2. bark
+shelter /ʃeltər/
+kasematt
+shield /ʃiːld/
+skylt
+ship /ʃip/
+fartyg, skepp
+ship /ʃipzbout/
+slup
+shirt /ʃəːt/
+skjorta
+shiver /ʃivər/
+bäva, dallra, darra, skälva
+shoe /ʃˈuː/
+skoband
+shoe /ʃuː/
+sko
+shoo /ʃuː/
+driva, fösa
+shop /ʃɔp/
+1. affär, butik, handelsbod
+2. shoppa
+shopkeeper /ʃɔpkiːpər/
+butiksinnehavare
+shopping /ʃɔpiŋstriːt/
+affärsgata
+shore /ʃɔːr/
+kust
+short /ʃˈɔːt/
+kortsynt, närsynt
+short /ʃɔːt/
+gen
+shortage /ʃɔːtidʒ/
+brist, lyte, saknad
+shortcoming /ʃɔːtkʌmiŋ/
+brist, lyte, saknad
+shorthand /ʃɔːthænd/
+snabbskrift
+shorts /ʃɔːts/
+knäbyxor
+short /ʃɔːtpænts/
+knäbyxor
+short /ʃɔːtstɔːriː/
+novell
+should /shud/
+böra, må, måste
+shoulder /ʃouldər/
+axel, skuldra
+shout /ʃaut/
+1. hojta, skria, skrika, skråla
+2. skri, skrik
+show /ʃou/
+1. uppvisa
+2. skådespel, spektakel
+shower /ʃauər/
+1. duscha
+2. dusch
+shrew /ʃruː/
+ragata
+shrub /ʃrʌb/
+buske
+shuffle /ʃʌfl/
+blanda, sammanblanda
+shy /ʃiː/
+blyg, brydd, förlägen
+shyness /ʃainəs/
+blyghet, bryderi, förlägenhet
+siblings /sibliŋz/
+syskon
+sick /sik/
+dålig, sjuk
+side /sˈaɪd/
+avtagsväg, avväg
+side /said/
+1. flank, kant, sida
+2. part, parti
+sideboard /saidbɔːd/
+skåp
+sidewalk /saidwɔːk/
+gångbana, trottoar
+siege /siːdʒ/
+belägring
+sieve /siv/
+sikt, sil, såll
+sift /sift/
+harpa, sikta, sålla
+sigh /sai/
+sucka
+sight /sait/
+anblick, anseende, vy
+sign /sˈaɪn/
+skylt
+sign /sain/
+1. varsel
+2. bevis, gärd, prov
+3. signal
+4. tecken
+5. skriva, teckna, underskriva, underteckna
+signal /signəl/
+1. signal
+2. tecken
+signature /signətʃər/
+namnteckning, underskrift
+signify /signifai/
+beteckna, betyda, teckna
+silent /sailənt/
+tyst
+silhouette /siluːet/
+silhuett
+silk /sˈɪlk/
+avsiden
+silk /silk/
+1. avsiden
+2. siden, silke
+silken /silkən/
+avsiden
+silkworm /silkwəːm/
+silkesmask
+sill /sil/
+tröskel
+silver /silvər/
+silver
+similar /similər/
+liknande
+similarity /similæritiː/
+likhet
+simple /simpl/
+simpel
+simplify /simplifai/
+förenkla
+sin /sain/
+1. synda
+2. synd
+since /sins/
+1. alltifrån, av, efter
+sinew /sinjuː/
+sena
+sinful /sinfəl/
+syndig
+sing /siŋ/
+sjunga
+singer /siŋər/
+1. sångerska
+2. sångare
+singing /siŋiŋ/
+sång
+single /siŋgl/
+1. ogift
+2. ensamstående
+sink /siŋk/
+sjunka
+sir /saiər/
+herr
+sister /sˈɪstə/
+svägerska
+sister /sistər/
+syster
+sit /sit/
+1. häcka, ruva
+2. sitta
+sitting /sˈɪtɪŋ/
+salong
+situation /sitʃueiʃən/
+situation
+six /siks/
+sex
+sixteen /sikstiːn/
+sexton
+sixteenth /sikstiːnθ/
+sextonde
+sixth /siksθ/
+sjätte
+sixtieth /sikstiəθ/
+sextionde
+sixty /sikstiː/
+sexti, sextio
+size /saiz/
+1. omfång, storhet, storlek
+skeleton /skelitən/
+benrangel, skelett
+skeptical /skeptikl/
+klentrogen
+skin /skin/
+1. päls
+2. hud, skinn
+3. skinna
+skinflint /skinflint/
+gnidare, knusslare
+skirt /skəːt/
+kjol, kjortel
+skull /skʌl/
+hjässa, huvudskål, skalle
+sky /skiː/
+himmel, sky
+slander /slɑːndər/
+1. bakdanta, baktala, förtala, häda, nedsvärta
+2. förtal
+slaughterhouse /slɔːtəhaus/
+slakthus
+slave /sleiv/
+slav, träl
+slay /slei/
+avliva, avrätta, dräpa
+sleep /sliːp/
+sömn
+sleeping /slˈiːpɪŋ/
+sängplats
+sleeping /slˈiːpɪŋ/
+sovvagn
+sleeping /slˈiːpɪŋ/
+sängplats
+sleeve /sliːv/
+ärm
+slender /slendər/
+1. smal, tunn
+2. smäcker, smärt
+slim /slim/
+smäcker, smärt
+slip /slip/
+glida, slira
+slipper /slipər/
+toffel
+slippery /slipəriː/
+hal, halkig
+slogan /slougən/
+devis
+sloop /sluːp/
+slup
+sloth /slouθ/
+trögdjur
+slow /slou/
+1. långsam
+2. trög
+sly /sliː/
+fiffig, illmarig, klipsk, klyftig, knepig, knipslug, slug
+smack /smæk/
+smacka
+small /smɔːl/
+liten
+smallpox /smɔːlpɔks/
+koppor
+smart /smɑːt/
+fiffig, illmarig, klipsk, klyftig, knepig, knipslug, slug
+smash /smæʃ/
+krossa
+smell /smel/
+1. osa, stinka
+2. dofta
+3. doft
+smell /smelbæd/
+osa, stinka
+smile /smail/
+1. le, mysa, småle
+2. leende, småleende
+smith /smiθ/
+smed
+smoke /smouk/
+1. ryka, röka
+2. rök
+smokers /smoukəz/
+rökkupé
+smokestack /smoukstæk/
+skorsten
+smooth /smuːθ/
+1. flack, jämn
+2. glatt
+smuggle /smʌgl/
+smuggla
+snail /sneil/
+snigel, snäcka
+snake /sneik/
+orm, snok
+sneeze /sniːz/
+nysa
+snow /snou/
+snö
+snowdrop /snoudrɔp/
+snödroppe
+snow /snouwait/
+snövit
+so /sou/
+sålunda
+soap /soup/
+såpa, tvål
+sobriquet /soubrikei/
+binamn, vedernamn
+social /souʃl/
+social
+socialism /souʃəlizəm/
+socialism
+society /səsaiətiː/
+1. klubb
+2. samhälle, samliv, sammanlevnad
+sock /sɔk/
+socka, strumpa, strumpsocka
+sofa /soufə/
+1. kanapé
+2. sofa
+soft /sɔft/
+1. söt
+2. len, mjuk, mör, vek
+soften /sɔfnʌp/
+lena
+softness /sɔftnəs/
+vekhet
+soil /sɔil/
+1. jord
+2. förorena, nedsmutsa, orena, smutsa
+soiled /sɔild/
+smutsig
+solair /sɔlɛər/
+solig
+soldier /souldiər/
+knekt, soldat
+sole /soul/
+1. fotsula
+2. ensam
+3. sjötunga, tunga
+solicitor /səlisitər/
+advokat, sakförare
+solitary /sɔlitriː/
+ensam
+soloist /sɔlɔist/
+solist
+solve /sɔlv/
+lösa
+some /sʌm/
+1. någorlunda
+2. någon
+3. somliga
+somebody /sʌmbədiː/
+någon
+someone /sʌmwʌn/
+någon
+something /səmiːθiŋ/
+någonting, något
+sometime /səmetaim/
+någonsin
+sometimes /səmetaimz/
+alltemellanåt, emellanåt, ibland
+somewhat /soumwɔt/
+någorlunda
+somewhere /soumwɛər/
+någonstans, någonstädes
+some /sʌmwʌn/
+någon
+son /sˈʌn/
+måg, svärson
+son /sɔn/
+son
+sonata /sɔneitə/
+sonat
+song /sɔŋ/
+visa
+soon /suːn/
+snart
+soot /sut/
+sot
+sorcery /sɔːsəriː/
+1. trolleri
+2. häxeri
+sorrel /sɔrəl/
+syra
+sorrow /sɔrou/
+1. bedrövelse
+2. förtrytelse, grämelse
+sorrowful /sɔroufəl/
+ledsen
+sort /sɔːt/
+sort
+sound /saund/
+1. ljuda, låta, tona
+2. ljud
+sound /saundðəlɑːm/
+alarmere
+soup /suːp/
+soppa
+sour /sauər/
+1. surna
+2. ovänlig, snäsig
+source /sɔːs/
+brunn
+south /sauθ/
+1. sydlig, södra
+2. söder, syd
+southern /sʌðən/
+sydlig, södra
+sovereign /sɔvrin/
+suverän
+sow /sou/
+1. so
+2. så
+so /souəz/
+lika...som
+so /soulɔŋ/
+adjösålänge, hejsålänge, vises
+spa /spə/
+badort, brunn
+space /speis/
+utrymme
+spaceman /speismən/
+rymdpilot
+spacious /speiʃəs/
+rymlig, vid
+spade /speit/
+1. gräva
+2. skyffel, spade
+spare /spɛər/
+spara
+spare /spɛərtaim/
+ferier, semester
+spark /spɑːk/
+gnista
+spark /spɑːkplʌg/
+gnista, tändstift
+sparrow /spærou/
+sparv, gråsparv, tätting
+speak /spiːk/
+tala
+speaker /spiːkəzplætfɔːm/
+tribun
+spear /spiər/
+lans, spjut
+special /speʃl/
+1. särskild
+2. speciell
+speciality /speʃiælitiː/
+fack, yrke
+specimen /spesimin/
+mönster, provbit
+spectacle /spektəkl/
+skådespel, spektakel
+spectacles /spektəklz/
+glasögon
+speechless /spiːtʃləs/
+stum
+speed /spˈiːd/
+hastighetsgräns
+speed /spiːd/
+1. fart
+2. hastighet, tempo
+speed /spiːdlimit/
+hastighetsgräns
+spell /spel/
+stava
+sphere /sfiər/
+sfär
+spider /spaidər/
+spindel
+spiderweb /spaidəwiːb/
+spindelväv
+spinach /spainæk/
+spenat
+spine /spain/
+ryggrad
+spinster /spinstər/
+fröken
+spiral /spaiərəl/
+spiral
+spirit /spirit/
+anda
+spiritualism /spiritʃeəlizəm/
+spiritism
+spite /spait/
+agg
+splinter /splintər/
+splittra, sticka
+split /split/
+klyva
+sponge /spʌndʒ/
+svamp
+sponger /spʌndʒər/
+snyltgäst, tallricksslickare
+spoon /spuːn/
+sked
+sporadic /spərædik/
+sporadisk
+sport /spɔːt/
+idrott, sport
+sportsman /spɔːtsmən/
+sportsman
+spot /spɔt/
+1. ort
+2. fläck
+spray /spreigʌn/
+pistol
+spring /spriŋ/
+1. brunn
+2. vår
+3. hoppa, skutta
+springtime /spriŋtaim/
+vår
+spruce /spɹˈuːs/
+gran
+spruce /spruːs/
+gran
+spy /spai/
+1. snoka, speja, spionera
+2. kunskapare, snok, spejare, spion
+square /skwɛər/
+torg
+square /skwɛərdikæmitər/
+flock, grupp, hjord, koppel, svärm, tropp, trupp
+square /skwɛərmiːtər/
+kvadratmeter
+squatter /skwɔtər/
+husockupant
+squeeze /skwiːz/
+trycka
+squirrel /skwirəl/
+ekorre
+stab /stæb/
+sticka
+stack /stæk/
+stack
+stage /stˈeɪdʒ/
+regissör
+stage /steidʒ/
+station
+staid /steid/
+allvarlig
+staircase /stɛəkeis/
+trappa
+stairs /stɛəz/
+trappa
+stake /steik/
+påle, stör
+stalk /stɔːk/
+1. strå
+2. stjälk
+stallion /stæliən/
+hingst
+stamp /stæmp/
+frimärke
+stamped /stæmpt/
+portofri
+stanchion /stæntʃən/
+påle, stör
+stand /stænd/
+kram
+standard /stændəd/
+standar
+staple /steipl/
+spasm
+star /stɑːr/
+stjärna
+stare /stɛər/
+stirra
+starling /stɑːliŋ/
+stare
+start /stɑːt/
+1. begynna, börja
+2. begynnelse, början
+state /steit/
+1. hävda, påstå
+2. betyga, förklara
+3. stat
+statement /steitmənt/
+förklaring
+statement /steitməntɔfpɔləsiː/
+program
+station /steiʃən/
+station
+statistics /stətistiks/
+statistik
+statue /stætʃuː/
+bildstod, staty
+statute /stætʃuːt/
+statut
+stay /stei/
+förbli, förbliva, stanna
+stay /steiouvər/
+förbli, förbliva, stanna
+steak /steik/
+biff, biffstek
+steam /stiːm/
+dunst, imma
+steel /stiːl/
+stål
+stem /stəm/
+1. strå
+2. stam
+stench /stentʃ/
+stank
+stenography /stənɔgrəfiː/
+snabbskrift
+step /step/
+steg
+steppe /step/
+stepp
+sterile /sterail/
+steril
+stew /stjuː/
+ragu
+stick /stik/
+1. stav, stång
+2. limma
+3. klibba
+stiff /stif/
+1. ceremoniell
+2. styv
+still /stil/
+desslikes, ännu
+sting /stiŋ/
+1. sticka
+2. gadd
+stingy /stindʒiː/
+girig, njugg
+stink /stiŋk/
+osa, stinka
+stipulation /stipjuleiʃən/
+kondition
+stocking /stɔkiŋ/
+strumpa
+stock /stɔkikstʃeindʒ/
+börs
+stoic /stouik/
+stoisk
+stoical /stouikl/
+stoisk
+stomach /stʌmək/
+mage
+stomach /stʌməkeik/
+knip, magknip
+stone /stˈəʊn/
+stenhuggare
+stone /stoun/
+1. sten‐, stenig
+2. sten
+stonemason /stounmeisn/
+stenhuggare
+stop /stɔp/
+station
+storage /stɔːridʒbætəriː/
+batteri
+storage /stɔːridʒruːm/
+förvaringsställe
+store /stɔːr/
+affär, butik, handelsbod
+storey /stɔːriː/
+våning
+stork /stɔːk/
+stork
+storm /stɔːm/
+1. storma
+2. storm
+story /stɔːriː/
+1. våning
+2. historia
+3. berättelse
+stove /stouv/
+kamin, spis
+straight /streit/
+rak, rät
+straightedge /streitidʒ/
+linjal
+straightforward /streitfɔːwəd/
+simpel
+strait /streit/
+sund
+strange /streindʒ/
+1. främmande
+2. egendomlig, märkvärdig
+stranger /streindʒər/
+främling, utbörding
+strangle /stræŋgl/
+strypa
+straw /strɔː/
+halm
+strawberry /strɔːbriː/
+jordgubbe
+stream /striːm/
+1. ström
+2. bäck, å
+street /striːt/
+gata
+streetcar /striːtkɑːr/
+spårvagn
+strength /streŋθ/
+kraft, styrka
+stress /stris/
+accent
+stride /straid/
+steg
+strike /straik/
+1. banka, drabba, slå
+2. knacka
+3. strejka
+4. strejk
+striking /straikiŋ/
+påfallande
+string /striŋ/
+1. sena
+2. lina, rep, sladd, snodd, snöre, streck
+strip /strip/
+streck, strimla, strimma
+stripe /straip/
+streck, strimla, strimma
+stroke /strouk/
+1. smeka
+2. smek
+stroll /stroul/
+1. promenad, spatsertur
+2. promenera, spatsera
+strong /strɔŋ/
+kraftfull, kraftig, stark
+struggle /strʌgl/
+1. kämpa, slåss, strida
+2. batalj, kamp, slag, slagsmål, strid
+student /stjuːdnt/
+student
+studio /stjuːdiəə/
+ateljé
+study /stʌdiː/
+1. studera
+2. studie, studium
+stumble /stʌmbl/
+snava, snubbla
+stupid /stjuːpit/
+dum
+sturgeon /stəːdʒən/
+stör
+sty /stai/
+stia
+style /stail/
+stil
+subject /sʌbdʒikt/
+1. subjekt
+2. tema
+subscribe /səbskraib/
+abonnera
+subscriber /səbskraibər/
+abonnent
+subscribe /səbskraibtou/
+abonnera
+subscription /səbskripʃən/
+abonnemang
+subsidy /sʌbsədiː/
+subsidier
+substantive /sʌbstəntiv/
+substantiv
+subterfuge /sʌbtəfjuːʒ/
+knep, konstgrepp
+subtle /sʌtl/
+subtil
+suburb /sʌbəːb/
+förort, förstad
+subway /sʌbwei/
+tunnelbana
+success /səkses/
+framgång
+such /sʌtʃ/
+1. sådan
+2. sålunda
+such /sʌtʃə/
+1. hur, huru, liksom, såsom
+2. sådan
+such /sʌtʃəz/
+hur, huru, liksom, såsom
+suck /sʌk/
+suga
+sudden /sʌdn/
+plötslig
+suffer /sʌfər/
+lida
+sugar /ʃˈʊɡə/
+sockerskål
+sugar /ʃˈʊɡə/
+sockerrör
+sugar /ʃugər/
+socker
+sugarbowl /ʃugɑːboul/
+sockerskål
+suggest /sədʒist/
+utpeka
+suggestion /sədʒestʃən/
+suggestion
+suit /suːt/
+klädedräkt, kostym
+sulphur /sʌlfər/
+svavel
+sum /sjuːm/
+belopp, summa
+summer /sʌmər/
+sommar
+summon /sʌmən/
+kalla, ropa
+sun /sˈʌn/
+solig
+sun /sn/
+1. solig
+2. sol
+sunbeam /sʌnbiːm/
+solstråle
+sunflower /sʌnflauər/
+solros
+sunrise /sʌnraiz/
+soluppgång
+sunset /sʌnset/
+solnedgång
+superficial /suːpəfiʃl/
+grund
+superior /suːpiəriər/
+överman
+superstition /suːpəːstiʃən/
+skrock, vantro, vidskepelse, övertro
+superstitious /suːpəːstiʃəs/
+vantrogen, vidskeplig
+supervise /suːpəvaiz/
+besiktiga, kontrollera
+supper /sʌpər/
+aftonmåltid
+supply /səplai/
+avleverera, leverera
+support /suːpɔːt/
+1. stödja
+2. stöd
+supporter /səpɔːtər/
+partigängare
+supporters /səpɔːtəz/
+anhang
+suppose /səpouz/
+anta
+sure /ʃeər/
+given, säker, trygg
+surely /səliː/
+ju
+surgeon /səːdʒən/
+kirurg
+surgical /səːdʒikl/
+kirurgisk
+surgical /səːdʒiklɔpəreiʃən/
+operation
+surly /səːliː/
+ovänlig, snäsig
+surmise /səːmaiz/
+anta
+surname /səːneim/
+efternamn, släknamn, tillnamn
+surpass /səpɑːs/
+överstiga, överträffa
+surprise /səpraiz/
+1. förvåning, förundran, undran
+2. överraskning
+surround /səraund/
+kringgå, omgiva
+suspect /sʌspekt/
+1. misstro
+2. anta
+suspicion /səspiʃən/
+1. misstro, misstroende, otro
+2. aning, antagande, misstanke
+suspicious /səspiʃəs/
+1. misstrogen, otrogen
+2. antaglig
+sustain /səstein/
+stödja
+sustained /səsteind/
+1. konstant
+2. oupphörlig
+swallow /swɔlou/
+svala
+swamp /swɔmp/
+kärr, moras, sump, träsk
+swan /swɔn/
+svan
+swarm /swɔːm/
+svärm
+swear /swɛər/
+1. svära
+sweat /swet/
+1. svettas, transpirera
+2. svett
+sweep /swiːp/
+sopa
+sweet /swiːt/
+söt
+swim /swim/
+simma
+swimming /swˈɪmɪŋ/
+bassäng
+swimming /swˈɪmɪŋ/
+bassäng
+swimming /swimiŋtrʌŋks/
+simbyxor
+swindle /swindl/
+bedrägeri, svek
+swine /swain/
+gris, svin
+swing /swiŋ/
+svinga
+swoon /swuːn/
+svimma
+sword /sɔːd/
+svärd, värja
+sycamore /sikəmɔːr/
+1. lönn
+2. platan
+syllable /siləbl/
+stavelse
+symbol /simbl/
+symbol
+symmetric /simetrik/
+symmetrisk
+sympathetic /simpəθetik/
+anslående, sympatisk
+sympathy /simpəθiː/
+sympati
+symphony /simfəniː/
+symfoni
+synagogue /sinəgɔg/
+synagoga
+syrup /sirəp/
+sirap
+system /sistəm/
+system
+systematic /sistəmætik/
+systematisk
+table /tˈeɪbəl/
+bordduk, duk
+table /teibl/
+1. tabell
+2. bord
+tablet /tæblit/
+tabell
+tabulation /tæbjuleiʃən/
+tabell
+tail /tˈeɪl/
+baklykta
+tail /teil/
+stjärt, svans
+tailor /teilər/
+skräddare
+take /teik/
+1. tackajatill
+2. fatta, ta, taga
+take /teikəkauntɔf/
+tahänsyntill
+take /teikælɔŋ/
+medbringa
+take /teikdaun/
+slopa
+take /teikin/
+tackajatill
+take /teikintəəkaunt/
+1. tahänsyntill
+2. betrakta
+take /teikliːv/
+sägaadjö, sägaadjötill
+take /teikliːvfrɔm/
+sägaadjö, sägaadjötill
+take /teikəfenseit/
+retasigpå
+take /teikouvər/
+anskaffa, köpa
+taking /teikiŋ/
+anskaffning, inköp, köp
+taking /teikiŋouvər/
+anskaffning, inköp, köp
+tale /teil/
+berättelse, historia
+talent /tælənt/
+begåvning, gåva, talang
+talk /tɔːk/
+tala
+talkative /tɔːkətiv/
+språksam
+tame /təm/
+tam
+tangerine /tændʒəriːn/
+mandarin
+tangle /tæŋgl/
+kaos, oordning, trassel
+tank /tæŋk/
+behållare
+tapestry /tæpistriː/
+tapet
+tar /tɑːr/
+tjära
+tart /tɑːt/
+tårta
+taste /teist/
+1. smak
+2. smaka
+tasteless /teistləs/
+smaklös
+tasty /teistiː/
+läcker, smakfull, smaklig
+tax /tæks/
+1. taxera
+2. taxa, tribut
+taxi /tæksiː/
+droskbil, hyrbil
+tea /tˈiː/
+tekanna
+tea /tiə/
+te
+teach /tiːtʃ/
+undervisa
+teacher /tiːtʃər/
+1. lärarinna
+2. lektor, lärare
+tear /tiər/
+tår
+technical /teknikl/
+teknisk
+technics /tekniks/
+teknik
+technique /tekniːk/
+teknik
+teeth /tiːθ/
+bett
+teetotaller /tiːtoutlər/
+absolutist
+telegram /teligræm/
+telegram
+telegraph /teligrɑːf/
+1. telegrafera
+2. telegraf
+telephone /telifoun/
+1. anropa, telefonera
+2. telefon
+telephone /telifounbuːð/
+telefonhytt
+telephone /telifounkiːɔsk/
+telefonhytt
+television /teliviʒn/
+television, TV
+tell /tel/
+1. säga
+2. befalla, påbjuda
+3. berätta
+tell /teləliː/
+ljuga
+temper /tempər/
+humör
+temperature /temprətʃər/
+temperatur
+temple /templ/
+1. tinning
+2. tempel
+tempt /tempt/
+förföra, förleda
+temptation /tempteiʃən/
+förförelse
+ten /tn/
+tie, tio
+tenant /tenənt/
+hyresgäst
+tendency /tendənsiː/
+håg
+tender /tendər/
+1. söt
+2. presentera
+3. bjuda
+4. anbud, förslag
+tenderness /tendənəs/
+vekhet
+tendon /tendən/
+sena
+tend /tendtou/
+ansa, sköta, vårda
+tenor /tenər/
+tenor
+tenth /tenθ/
+tionde
+term /təːm/
+term
+terminate /təːmineit/
+fullborda, ända
+terms /təːmz/
+kondition
+term /təːmɔfəbjuːz/
+skällsord
+terrace /terəs/
+terrass
+terraced /terəsthaus/
+radhus
+terrace /terəshaus/
+radhus
+terrain /terin/
+terräng
+terrible /terəbl/
+förfärlig, förskräcklig, gräslig, hemsk
+territory /teritriː/
+mark
+terrorism /terərizəm/
+terrorism
+test /tist/
+1. examen, undersökning
+2. bepröva, försöka, probera, prova
+3. bemödande, försök
+testament /testəmənt/
+testamente
+testify /testifai/
+attestera, betyga
+testimony /testiməniː/
+attest
+text /tekst/
+text
+textile /tekstail/
+väv
+than /θein/
+än
+thank /θæŋk/
+tacka
+thankful /θæŋkfəl/
+tacksam
+thankless /θæŋkləs/
+otacksam
+thanks /θæŋks/
+1. tack
+2. tackskaduha, tacktack
+thank /θæŋkfər/
+tackaför
+thank /θæŋkjau/
+tackskaduha, tacktack
+thank /θæŋkjauveriːmʌtʃ/
+tacksåmycket
+that /ðæt/
+1. vad
+2. som, vem, vilken
+3. sålunda
+that /ðeitzlrait/
+detgöringenting, föralldel, ingenorsak
+that /ðeitzoukei/
+detgöringenting, föralldel, ingenorsak
+that /ðeitztuːbæd/
+detvarsynd, tyvärr
+that /ðætkaindɔf/
+sådan
+that /ðætwei/
+1. sålunda
+2. dit
+thaw /θɔː/
+töväder
+theatre /θiətər/
+teater
+theatre /θiətərplei/
+skådespel, teaterpjäs
+theft /θeft/
+stöld, tjuvnad
+their /ðɛər/
+sin, sitt
+theme /θiːm/
+tema
+theory /θiəriː/
+teori
+there /ðər/
+1. dit
+2. där
+thermometer /θəmɔmitər/
+termometer
+these /ðiːzdeiz/
+nutida, nuvarande
+the /ðæntɑːktik/
+Sydpolen
+the /ðɑːktik/
+Nordpolen
+the /ðdʌstmən/
+JonBlund
+the /ðneðəlændz/
+Nederländerna
+the /ðsændmən/
+JonBlund
+the /ðjuːkn/
+1. Ukraina
+the /ðpauərɔfsədʒestʃən/
+suggestion
+thick /θik/
+diger, fet, tjock
+thickness /θiknəs/
+tjockhet, tjocklek
+thief /θiːf/
+tjuv
+thigh /θai/
+höft
+thin /θin/
+smal, tunn
+thing /θiŋ/
+objekt
+think /θiŋk/
+1. anse, tycka
+2. tänka
+3. begrunda, besinna, betänka, övertänka
+think /θiŋkəbaut/
+begrunda, besinna, betänka, övertänka
+third /θəːd/
+tredje
+thirst /θəːst/
+törst
+thirsty /θəːstiː/
+törstig
+thirteen /θəːtiːn/
+tretton
+thirteenth /θəːtiːnθ/
+trettonde
+thirty /θəːtiː/
+tretti, trettio
+this /ðaiziːvniŋ/
+iafton
+this /ðaizwei/
+hit
+thither /θiðər/
+dit
+thorn /θɔːn/
+tagg, torn, törne
+thou /ðau/
+du, ni
+though /ðau/
+ehuru, ehuruväl, fastän, omän
+thought /θɔːt/
+tanke
+thousand /θauznd/
+tusen, etttusen
+thread /θred/
+garn, tråd
+threat /θret/
+hot, hotelse
+threaten /θretn/
+hota
+three /θriː/
+tre
+threshold /θreʃhould/
+tröskel
+thrifty /θriftiː/
+njugg, sparsam
+throat /θrout/
+strupe
+throb /θrɔb/
+pulsera
+throne /θroun/
+tron
+through /θruː/
+1. per
+2. färdig, redo, tillreds
+3. på
+4. genom, igenom
+throw /θrou/
+kasta, vräka
+throw /θrouʌp/
+kräkas, spy
+thrush /θrʌʃ/
+talltrast, trast
+thrust /θrʌst/
+puffa, stöta
+thumb /θʌm/
+tumme
+thunder /θʌndər/
+tordön, åska
+thus /θʌs/
+sålunda
+ticket /tikit/
+biljett
+tidy /taidiː/
+inreda
+tie /tiː/
+binda, snöra
+tie /tiːʌp/
+binda, snöra
+tiger /taigər/
+tiger
+tile /tail/
+häll, kakel
+till /til/
+1. kassa
+2. inpå, intill, tills
+tillage /tilidʒ/
+jordbruk, lantbruk, åkerbruk
+timber /timbər/
+trä
+time /tˈaɪm/
+kommunikationstabell, tidtabell
+time /taim/
+1. gång
+2. timme
+3. tid
+time /taimɔf/
+ferier, semester
+timidity /timiditiː/
+blyghet, bryderi, förlägenhet
+tin /tain/
+tenn
+tiny /tainiː/
+liten
+tip /tip/
+1. tipp
+2. betjäningsavgift, dricks, drickspengar
+tired /taiəd/
+trött
+tired /taiədaut/
+genomtrött, uppgiven
+title /taitl/
+titel
+titmouse /titmaus/
+mes
+to /tou/
+1. på, till
+2. för
+toad /toud/
+padda
+toast /toust/
+halstra, rosta
+tobacco /təbækou/
+tobak
+toe /tou/
+tå
+toga /tougə/
+toga
+together /təgeðər/
+ihop, tillsammans, samman, tillhopa
+toilet /tˈɔɪlət/
+toalettpapper
+toilet /tɔilit/
+avträde, klosett, toalett
+token /toukən/
+1. bevis, gärd, prov
+2. signal
+3. tecken
+tolerant /tɔlərənt/
+tolerant
+tolerate /tɔləreit/
+tåla
+tomato /təmɑːtou/
+tomat
+tomb /tuːm/
+graf
+tone /toun/
+ton
+tongue /tʌŋ/
+1. tunga
+2. språk, tungomål
+too /tuː/
+1. också
+2. alltför
+tool /tuːl/
+instrument, tyg, verktyg
+tooth /tˈuːθ/
+tandborste
+tooth /tˈuːθ/
+tandkräm
+tooth /tuːθ/
+tand
+toothache /tuːθeik/
+tandvärk
+toothpick /tuːθpik/
+tandpetare
+too /tuːmʌtʃ/
+alltför
+topgallant /tɔpgæləntmɑːst/
+braxen
+topic /tɔpik/
+tema
+torch /tɔːtʃ/
+bloss, fackla, marschall
+tortoise /tɔːtouis/
+sköldpadda
+torture /tɔːtʃər/
+1. martera, pina, plåga, tortera
+2. marter, tortyr
+torturer /tɔːtʃərər/
+bödel
+total /toutl/
+total
+total /toutləbsteinər/
+absolutist
+touch /tʌtʃ/
+1. beröra
+2. beröring
+tourist /teərist/
+turist
+tourist /teəristeidʒənsiː/
+resebyrå
+toward /təwɔːd/
+1. på, till
+2. angående
+towards /təwɔːdz/
+1. på, till
+2. angående
+3. kring
+tower /tauər/
+torn
+town /tˈaʊn/
+rådhus
+town /taun/
+1. köping
+2. stad
+town /taunhɔːl/
+rådhus, stadshus
+toy /tɔi/
+leksak
+to /tousʌmikstent/
+någorlunda
+trade /træd/
+1. handla
+2. affär, handel
+tradition /trədiʃən/
+praxis, tradition
+traditional /trədiʃənl/
+hävdvunnen
+traffic /træfik/
+trafik
+train /trein/
+järnvägståg
+tram /træm/
+spårvagn
+transformation /trænsfəmeiʃən/
+1. ändring
+2. förändring
+transgress /trænzgres/
+synda
+transgression /trænzgreʃən/
+synd
+translate /trænzleit/
+översätta
+translation /trænsleiʃən/
+översättning
+transmit /trænzmit/
+sända
+transport /trænspɔːt/
+1. befordra, forsla, frakta, transportera
+2. befordran, transport
+travel /trævəl/
+1. fara, åka
+2. färdas
+traveller /trævlər/
+resande, trafikant
+travel /trævəleidʒənsiː/
+resebyrå
+treacherous /tretʃərəs/
+förrädisk
+treasure /treʒər/
+skatt
+treat /triːt/
+behandla, traktera
+treatment /triːtmənt/
+behandling
+tree /triː/
+träd
+trefoil /trifɔil/
+klöver, väppling
+tremble /trembl/
+bäva, dallra, darra, skälva
+triangle /traiæŋgl/
+trehörning, triangel
+triangular /traiæŋgjulər/
+trehörnig, triangulär
+trick /trik/
+knep, konstgrepp
+trickery /trikəriː/
+knep, konstgrepp
+trip /trip/
+färd, resa
+triple /tripl/
+trefaldig
+trite /trait/
+banal
+triumph /traiʌmf/
+1. triumfera
+2. triumf
+tropical /trɔpikl/
+tropisk
+trouble /trʌbl/
+1. svårighet
+2. problem
+trousers /trauzəz/
+benkläder, byx, byxa, byxor
+trout /traut/
+forell
+truck /trʌk/
+lastbil
+true /truː/
+sann
+truly /truːliː/
+sannerligen
+trumpet /trʌmpit/
+trumpet
+trunk /trʌŋk/
+1. kappsäck, koffert
+2. stam
+trust /trʌst/
+1. förtroende, tillit
+2. haförtroendeför
+trustworthy /trʌstwəːðiː/
+pålitlig, tillförlitlig
+trust /trʌstin/
+haförtroendeför, litapå
+truth /truːθ/
+sanning
+try /triː/
+bepröva, försöka, probera, prova
+tub /tʌb/
+kar
+tube /tjuːb/
+1. rör
+2. ventil
+tuberculosis /tjuːbəːkjulousis/
+tuberkulos
+tug /tʌg/
+1. rycka
+2. dra, draga, hala
+tulip /tjuːlip/
+tulpan
+tummy /tʌmiː/
+buk
+tummy /tʌmiːeik/
+knip, magknip
+tumult /tjuːmʌlt/
+tumult
+tune /tjuːn/
+låt, melodi, trall
+tunnel /tʌnl/
+tunnel
+tup /tjuːp/
+bagge, gumse, vädur
+turkey /təːkiː/
+kalkon
+turn /təːn/
+1. vrida, vända
+2. fil, kö, rad, räcka
+turn /təːnəraund/
+vrida, vända
+turn /təːnɔːwei/
+avskicka
+turn /təːnraund/
+vrida, vända
+turn /təːntougudəkaunt/
+nyttja
+twelfth /twelfθ/
+tolfte
+twelve /twelv/
+tolv
+twentieth /twentiəθ/
+tjugonde
+twenty /twˈɛnti/
+tjugoen, tjugoett
+twenty /twentiː/
+tjugo, tjugu
+twig /twig/
+ris
+twins /twinz/
+1. tvilling
+2. tvillingar
+two /twou/
+tu, tvenne, två
+two /twouhʌndrəd/
+tvåhundra
+type /taip/
+typ
+typewriter /taipraitər/
+skrivmaskin
+typical /tipikl/
+typisk
+tyrannize /tirənaiz/
+tyrannisera
+tyrant /tirənt/
+tyrann
+udder /ʌdər/
+juver, spene
+ugly /ʌgliː/
+ful
+umbrella /ʌmbrelə/
+paraply
+un /ˈʌn/
+1. o‐
+2. ‐lös
+unarmed /ʌnɑːmd/
+vapenlös
+unbearable /ʌnbɛərəbl/
+odräglig
+uncertain /ʌnsətein/
+oviss
+uncle /ʌŋkl/
+1. farbror, farbroder, morbroder, morbror
+unclean /ʌnkliːn/
+smutsig
+unconscious /ʌnkɔnʃəs/
+medvetslös
+uncooked /ʌnkukt/
+okokt
+uncover /ʌnkʌvər/
+upptäcka
+under /ʌndər/
+under
+underground /ʌndəgraund/
+1. tunnelbana
+2. underjordisk
+underneath /ʌndənəːθ/
+1. under
+2. nedan, nere
+3. ned, nedvänd, ner
+underpants /ʌndəpænts/
+underbyxor
+understand /ʌndəstænd/
+begripa
+understandable /ʌndəstændəbl/
+begriplig, fattlig
+under /ʌndəreidʒ/
+minderårig, omyndig, underårig
+undulate /ʌndjuleit/
+bölja
+unemployed /ʌnimplɔid/
+arbetslös
+unfortunately /ʌnfɔːtʃuneitiːliː/
+detvarsynd, tyvärr
+ungrateful /ʌngreitfəl/
+otacksam
+unhappy /ʌnhæpiː/
+olycklig
+uniform /juːnifɔːm/
+uniform
+unimportant /ʌnimpɔːtnt/
+oviktig
+unintelligible /ʌnintelidʒəbl/
+obegriplig, ofattlig
+unintentional /ʌnintenʃənl/
+oavsiktlig
+union /juːniən/
+union
+unique /juːniːk/
+unik
+unite /juːnait/
+1. ansluta
+2. ena
+unity /juːnitiː/
+enhet
+universal /juːnivəːsl/
+universal, universell
+universality /juːnivəːsælitiː/
+allmänhet
+universe /juːnivəːs/
+allt, världsalltet, världrymd
+university /juːnivəːsitiː/
+universitet
+unkind /ʌnkaind/
+ovänlig, snäsig
+unknown /ʌnnoun/
+obekant, okänd
+unmarried /ʌnmærid/
+ogift
+unmarried /ʌnmæridwumən/
+fröken
+unpack /ʌnpæk/
+uppacka
+unpleasant /ʌnpleznt/
+ovänlig, snäsig
+unreliable /ʌnrilaiəbl/
+opålitlig
+unripe /ʌnraip/
+omogen
+unripe /ʌnraipfruːt/
+kart
+unthankful /ʌnthæŋkfəl/
+otacksam
+until /ʌntil/
+inpå, intill, tills
+untrue /ʌntruː/
+osann
+unusual /ʌnjuːʒeəl/
+ovan
+up /ʌp/
+upp, uppåt
+uphill /ʌphil/
+upp, uppåt
+upon /əpɔn/
+1. på
+2. emot, inemot, mot
+3. om, över
+upset /ʌpset/
+oredig
+upstairs /ʌpstɛəz/
+uppe, upptill
+upwards /ʌpwədz/
+upp, uppåt
+urban /əːbən/
+stadslik
+us /juːs/
+1. vi
+2. oss
+use /juːz/
+1. använda, begagna, bruka
+2. begagnande, bruk
+used /juːzdtou/
+bruklig, gemen, gångbar, ordinär, vanlig, övlig
+useful /juːsfəl/
+nyttig
+use /juːzʌp/
+1. utnöta
+2. förbruka
+usual /juːʒeəl/
+1. bruklig, gemen, gångbar, ordinär, vanlig, övlig
+2. allmän
+usually /juːʒəliː/
+gemenligen, merendels
+usurp /juːzəp/
+ockupera
+uterus /juːtərəs/
+livmoder
+utilize /juːtilaiz/
+nyttja
+vacation /vəkeiʃən/
+1. ferier, semester
+vaccinate /væksineit/
+vaccinera
+vaccine /væksain/
+vaccin
+vacuum /vˈakjuːm/
+dammsugare
+vacuum /vækjeəmkliːnər/
+dammsugare
+valiant /væliənt/
+behjärtad, tapper
+valley /væliː/
+dal, däld
+valuable /væljeəbl/
+dyr, dyrbar
+value /væljuː/
+valör, värde
+valve /vælv/
+ventil
+vampire /væmpaiər/
+vampyr
+vanilla /vənilə/
+vanilj
+vapor /veipər/
+dunst, imma
+vapour /veipər/
+dunst, imma
+varnish /vɑːniʃ/
+fernissa
+vary /vɛəriː/
+variera
+vase /vɑːz/
+vas
+vast /vɑːst/
+rymlig, vid
+vat /veit/
+kar
+vegetable /vedʒitəbl/
+grönsaker
+vehicle /viːikl/
+fordon, åkdon
+veil /veil/
+dok
+vein /vein/
+åder, ådra
+vend /vend/
+avyttra, försälja, sälja
+vengeance /vendʒəns/
+hämnd
+venture /ventʃər/
+riskera, våga, äventyra
+veranda /vərændə/
+veranda
+verb /vəːb/
+verb
+verdict /vəːdikt/
+dom
+verify /verifai/
+besiktiga, kontrollera
+vermin /vəːmin/
+ohyra
+vermouth /vəːməθ/
+vermut
+very /veriː/
+bra, hart, mycket, mäkta
+very /veriːmʌtʃ/
+bra, hart, mycket, mäkta
+vessel /vesəl/
+1. skål, stop, så, urna
+2. vas
+3. fartyg, skepp
+vest /vest/
+skjorta
+vibrate /vibreit/
+dallra
+vicar /vikər/
+präst, katolskpräst
+victim /viktaim/
+slaktoffer
+victor /viktər/
+besegrare
+view /vjuː/
+1. anblick, anseende, vy
+2. utsikt
+3. beskåda, kika, skåda, titta
+viewpoint /vjuːpɔint/
+synpunkt
+vigour /vigər/
+kraft, styrka
+viking /vaikiŋ/
+viking
+vile /vail/
+nedrig
+village /vilidʒ/
+by
+villain /vilən/
+träl
+vine /vain/
+vinstock
+vinegar /vinigər/
+ättika
+violet /vaiələt/
+viol
+violin /vaiəlin/
+violin
+viper /vaipər/
+huggorm
+virgin /vəːdʒin/
+1. jungfrulig
+2. jungfru
+virginal /vəːdʒinl/
+jungfrulig
+visa /viːzə/
+visum
+visible /vizəbl/
+skönjbar, synlig
+visit /vizit/
+besök, visit
+visitor /vizitər/
+besökande
+vis /vˈɪs/
+visum
+vixen /viksn/
+1. ragata
+2. rävhona
+viz /viz/
+nämligen
+vocabulary /vəkæbjuləriː/
+ordbok
+voice /vɔis/
+1. mål, röst, stämma
+void /vɔid/
+tom
+volcano /vɔlkeinou/
+vulkan
+volume /vɔljuːm/
+1. volym
+voluntary /vɔləntriː/
+1. godvillig, självmant
+2. gärna
+vomit /vɔmit/
+kräkas, spy
+vote /vout/
+1. rösta
+2. mål, röst, stämma
+vowel /vauəl/
+självljud
+voyage /vɔiidʒ/
+färd, resa
+vulgar /vʌlgər/
+trivial
+vulture /vʌltʃər/
+gam
+wadding /wɔdiŋ/
+vadd
+wade /weid/
+vada
+waffle /wɔfl/
+våffla
+wage /weidʒ/
+arvode, avlöning, lön, sold
+wager /weidʒər/
+tippa
+wages /weidʒiz/
+arvode, avlöning, lön, sold
+wage /weidʒər/
+kriga
+wait /weit/
+forvänta, vänta, väntasig
+waiter /weitər/
+kypare, vaktmästare
+waiting /wˈeɪtɪŋ/
+väntrum, väntsal
+waiting /weitiŋruːm/
+väntrum, väntsal
+wait /weitfər/
+forvänta, vänta, väntasig
+wake /weik/
+1. väcka
+2. vakna
+wake /weikʌp/
+1. väcka
+2. vakna
+walk /wɔːk/
+1. gå, löpa
+2. promenad, spatsertur
+wall /wɔːl/
+1. mur
+2. vägg
+wallet /wɔlit/
+börs, portmonnä
+wall /wɔːlkʌvəriŋ/
+tapet
+walnut /wɔːlnʌt/
+valnöt
+wander /wɔndər/
+irra
+want /wɔnt/
+1. behov, förnödenhet
+2. längtan, önskan
+3. vilja
+war /ər/
+krig
+wardrobe /wɔːdroub/
+garderob, klädskåp
+warehouse /wɛəhaus/
+magasin
+wares /wɛəz/
+vara
+warlike /wɔːlaik/
+krigisk
+warm /wɔːm/
+1. hjärtlig
+2. varm
+warmth /wɔːmθ/
+värme
+warn /wɔːn/
+varna, varsko, åtvarna
+warrant /wɔrənt/
+garantera
+warrior /wɔriər/
+krigare, militär
+wart /wɔːt/
+vårta
+wash /wɔʃ/
+1. tvätta
+washing /wˈɒʃɪŋ/
+sjubb
+wasp /wɔsp/
+geting
+waste /weist/
+1. slösa, öda, ödsla
+2. slöseri
+watch /wɔtʃ/
+1. armbandsur, klockarmband
+2. klocka, ur
+3. beskåda, kika, skåda, titta
+watchmaker /wɔtʃmeikər/
+urmakare
+watchword /wɔtʃwəːd/
+devis
+watch /wɔtʃautfər/
+beakta
+watch /wɔtʃouvər/
+vakta
+water /wˈɔːtə/
+fältflaska
+water /wˈɔːtə/
+akvarell
+water /wɔːtər/
+vatten
+waterfall /wɔːtəfɔːl/
+1. kaskad, vattenfall
+waterlily /wɔːtəliliː/
+näckros
+wave /weiv/
+1. bölja
+2. svinga
+wave /weivəbaut/
+svinga
+wax /wæks/
+vax
+way /wei/
+1. bana
+2. vana
+3. maner, sätt
+4. gång, stråt, väg
+way /weiaut/
+utgång
+we /wˈiː/
+vi
+weak /wiːk/
+klen, svag
+wealth /welθ/
+rikedom
+wealthy /welθiː/
+rik
+weapon /wepən/
+vapen
+wear /wɛər/
+bära
+wear /wɛəraut/
+utnöta
+weasel /wiːzl/
+vessla
+weather /weðər/
+väder
+weave /wiːv/
+väva
+wedding /wˈɛdɪŋ/
+bröllop
+wedding /wˈɛdɪŋ/
+bröllop
+wedding /wediŋ/
+bröllop
+week /wˈiːk/
+veckoslut
+week /wiːk/
+vecka
+weep /wiːp/
+grina, gråta
+weight /weit/
+vikt
+welcome /welkəm/
+välkommen
+well /wˈɛl/
+bekant, känd, veterlig
+well /wˈɛl/
+artig, hövlig
+well /wˈɛl/
+rik
+well /wel/
+1. bra, väl
+2. bläckhorn
+3. nå, nåväl
+4. sund
+well /welθən/
+nå, nåväl
+wench /wentʃ/
+flicka, jänta, mö, tös
+west /west/
+1. väst, väster
+western /westən/
+västlig, västra
+wet /wet/
+våt
+whale /əl/
+val, valfisk
+wharf /wɔːf/
+kaj, perrong
+what /wɔt/
+vad
+what /wɔtə/
+hur, huru, liksom, såsom
+what /wɔtəpitiː/
+detvarsynd, tyvärr
+wheat /wiːt/
+vete
+wheel /wiːl/
+hjul
+when /n/
+när
+whence /ns/
+varifrån
+where /wɛər/
+1. vart, varthän
+2. var
+3. där
+where /wɛərtou/
+vart, varthän
+which /witʃ/
+som, vem, vilken
+which /witʃwʌnz/
+vars
+while /wail/
+tid
+whim /wim/
+hugskott, kapris, nyck
+whisper /wispər/
+tissla, viska
+white /wait/
+1. hvit
+2. blank, vit
+whither /wiðər/
+vart, varthän
+who /hou/
+som, vem, vilken
+whole /houl/
+hel
+wholly /liː/
+alldeles
+whore /hɔːr/
+hora, sköka
+whose /huːz/
+vars
+wide /waid/
+rymlig, vid
+widow /widou/
+änka
+widower /widouər/
+änkeman, änkling
+width /witθ/
+1. bredd, vidd
+wife /waif/
+hustru, maka, äktamaka
+wig /wig/
+peruk
+wild /waild/
+ostyrig, vild, vildsint
+wild /waildbɔːr/
+vildsvin
+wild /wailddʌk/
+and
+will /wil/
+1. testamente
+2. vilja
+willing /wiliŋ/
+gärna
+willingness /wiliŋnis/
+vilja
+willow /wilou/
+pil, vide
+win /win/
+förtjäna
+wind /waind/
+vind
+window /windou/
+fönster
+wine /wain/
+vin
+wing /wiŋ/
+vinge
+winter /wˈɪntə/
+vinterlig
+winter /wintər/
+1. vinterlig
+2. vinter
+win /winouvər/
+besegra
+wipe /waipaut/
+utplåna
+wireless /waiələs/
+radio
+wisdom /wizdəm/
+klokhet, visdom, vishet
+wise /waiz/
+klok, vettig
+wish /wiʃ/
+1. önska
+2. längtan, önskan
+3. vilja
+witch /witʃ/
+häxa
+witchcraft /witʃkrɑːft/
+trolleri
+with /wið/
+1. med
+2. per
+3. vid
+within /wiθin/
+i
+without /wiθɔːt/
+förutan, utan
+without /wiθɔːtəneim/
+anonym
+with /wiðrefrənstou/
+angående
+with /wiðjʌŋ/
+dräktig
+witness /witnəs/
+bevista, åse
+witty /witiː/
+spirituell
+wizardry /wizədriː/
+trolleri
+woe /wou/
+ve
+wolf /wulf/
+ulv, varg
+wolverine /wulvərin/
+järv
+woman /wumən/
+kvinna
+womb /wuːm/
+livmoder
+wonder /wʌndər/
+1. förvånasig, undra
+2. förvåning, förundran, undran
+wonted /wountid/
+bruklig, gemen, gångbar, ordinär, vanlig, övlig
+wood /wud/
+trä
+wooden /wudn/
+avträ, trä‐
+woodpecker /wudpekər/
+hackspett
+woods /wudz/
+skog
+wool /wul/
+ull, ylle
+word /wəːd/
+ord
+work /wˈɜːk/
+ateljé
+work /wəːk/
+1. arbeta, verka
+2. arbete, verk
+worker /wəːkər/
+arbetare
+working /wəːkiŋmein/
+arbetare
+workman /wəːkmən/
+arbetare
+workshop /wəːkʃɔp/
+ateljé
+work /wəːkhɑːd/
+gno, träla
+work /wəːkɔfɑːt/
+konstalster, konstföremål
+work /wəːkaut/
+beräkna, uträkna
+world /wəːld/
+värld
+worldglobe /wəːldʒloub/
+jordglob, jordklot
+worldwide /wəːldwaid/
+universal, universell
+worm /wəːm/
+mask
+worn /wɔːnaut/
+genomtrött, uppgiven
+worse /wəːs/
+sämre
+worship /wəːʃip/
+förära, tillbedja
+worshipper /wəːʃipər/
+tillbedjare
+worst /wəːst/
+sämst
+worth /wəːθ/
+valör, värde
+worthless /wəːθləs/
+värdelös
+worthy /wəːðiː/
+värdig
+wound /waund/
+1. såra
+2. sår
+wrangle /ræŋgl/
+gräla, tvista
+wreath /riːθ/
+girland
+wrench /rentʃ/
+nyckel
+wrist /ɹˈɪst/
+armbandsur, klockarmband
+wrist /rist/
+1. handled, handlov, handlove
+write /rait/
+1. skriva
+2. komponera
+writer /raitər/
+författare
+write /raitdaun/
+annotera, anteckna, notera
+writing /ɹˈaɪtɪŋ/
+skrivbord
+writing /raitiŋdesk/
+skrivbord
+wrong /rɔŋ/
+oriktig, orätt
+xylophone /zailəfoun/
+xylofon
+yacht /jɔt/
+jakt
+yard /jɑːd/
+1. rå
+2. gård, gårdstomt
+ye /iː/
+1. du, ni
+year /jəːr/
+år
+yearn /jəːn/
+längtaefter, smäkta
+yeast /jiːst/
+jäst
+yellow /jelou/
+gul
+yes /jez/
+ja
+yesterday /jestədiː/
+igår
+yet /jet/
+1. desslikes, ännu
+2. allaredan, redan, ren
+3. likafullt, oaktat
+yield /jiːld/
+cedere
+yoghourt /jɔgət/
+yoghurt
+yoghurt /jɔgət/
+yoghurt
+yon /jɔn/
+där
+yonder /jɔndər/
+1. dit
+2. där
+you /jau/
+du, ni
+young /jʌŋ/
+1. telning, unge
+2. ung, ungdomlig
+youngster /jʌŋstər/
+ungdom
+youth /juːθ/
+1. ungdom, uppväxtår
+you /jɔːrwelkəm/
+detgöringenting, föralldel, ingenorsak
+zenith /zeniθ/
+zenit
+zephyr /zefər/
+sefyr
+zero /zərou/
+1. noll
+2. nolla
+zilch /ziltʃ/
+nolla
+zinc /ziŋk/
+zink
+zipper /zipər/
+blixtlås
+zone /zoun/
+zon
+abcdefghijklmnopqrstuvwxyz

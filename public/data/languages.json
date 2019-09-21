@@ -1,0 +1,1254 @@
+[
+  {
+    "code": "aa",
+    "code2": "aar",
+    "name": "Afar"
+  },
+  {
+    "code": "ab",
+    "code2": "abk",
+    "name": "Abkhazian"
+  },
+  {
+    "code": "af",
+    "code2": "afr",
+    "name": "Afrikaans",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/af",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/af",
+    "enPublished": true,
+    "translations": {
+      "english": "Engels",
+      "zerotohero": "Nul tot held"
+    }
+  },
+  {
+    "code": "ak",
+    "code2": "aka",
+    "name": "Akan"
+  },
+  {
+    "code": "sq",
+    "code2": "sqi (T)",
+    "name": "Albanian"
+  },
+  {
+    "code": "am",
+    "code2": "amh",
+    "name": "Amharic"
+  },
+  {
+    "code": "ar",
+    "direction": "rtl",
+    "code2": "ara",
+    "name": "Arabic",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/ar",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/ar",
+    "enPublished": true,
+    "translations": {
+      "english": "الإنجليزية",
+      "zerotohero": "من الصفر الى البطل"
+    }
+  },
+  {
+    "code": "an",
+    "code2": "arg",
+    "name": "Aragonese"
+  },
+  {
+    "code": "hy",
+    "code2": "hye (T)",
+    "name": "Armenian"
+  },
+  {
+    "code": "as",
+    "code2": "asm",
+    "name": "Assamese"
+  },
+  {
+    "code": "av",
+    "code2": "ava",
+    "name": "Avaric"
+  },
+  {
+    "code": "ae",
+    "code2": "ave",
+    "name": "Avestan"
+  },
+  {
+    "code": "ay",
+    "code2": "aym",
+    "name": "Aymara"
+  },
+  {
+    "code": "az",
+    "code2": "aze",
+    "name": "Azerbaijani"
+  },
+  {
+    "code": "ba",
+    "code2": "bak",
+    "name": "Bashkir"
+  },
+  {
+    "code": "bm",
+    "code2": "bam",
+    "name": "Bambara"
+  },
+  {
+    "code": "eu",
+    "code2": "eus (T)",
+    "name": "Basque"
+  },
+  {
+    "code": "be",
+    "code2": "bel",
+    "name": "Belarusian"
+  },
+  {
+    "code": "bn",
+    "code2": "ben",
+    "name": "Bengali"
+  },
+  {
+    "code": "bh",
+    "code2": "bih",
+    "name": "Bihari languages"
+  },
+  {
+    "code": "bi",
+    "code2": "bis",
+    "name": "Bislama"
+  },
+  {
+    "code": "bo",
+    "code2": "bod (T)",
+    "name": "Tibetan"
+  },
+  {
+    "code": "bs",
+    "code2": "bos",
+    "name": "Bosnian"
+  },
+  {
+    "code": "br",
+    "code2": "bre",
+    "name": "Breton"
+  },
+  {
+    "code": "bg",
+    "code2": "bul",
+    "name": "Bulgarian"
+  },
+  {
+    "code": "my",
+    "code2": "mya (T)",
+    "name": "Burmese"
+  },
+  {
+    "code": "ca",
+    "code2": "cat",
+    "name": "Catalan"
+  },
+  {
+    "code": "cs",
+    "code2": "ces (T)",
+    "name": "Czech",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/cs",
+    "published": true
+  },
+  {
+    "code": "ch",
+    "code2": "cha",
+    "name": "Chamorro"
+  },
+  {
+    "code": "ce",
+    "code2": "che",
+    "name": "Chechen"
+  },
+  {
+    "code": "cu",
+    "code2": "chu",
+    "name": "Church Slavic"
+  },
+  {
+    "code": "cv",
+    "code2": "chv",
+    "name": "Chuvash"
+  },
+  {
+    "code": "kw",
+    "code2": "cor",
+    "name": "Cornish"
+  },
+  {
+    "code": "co",
+    "code2": "cos",
+    "name": "Corsican"
+  },
+  {
+    "code": "cr",
+    "code2": "cre",
+    "name": "Cree"
+  },
+  {
+    "code": "cy",
+    "code2": "cym (T)",
+    "name": "Welsh",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/cy",
+    "published": true
+  },
+  {
+    "code": "cs",
+    "code2": "ces (T)",
+    "name": "Czech"
+  },
+  {
+    "code": "da",
+    "code2": "dan",
+    "name": "Danish",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/da",
+    "published": true
+  },
+  {
+    "code": "de",
+    "code2": "deu (T)",
+    "name": "German",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/de",
+    "logo": true,
+    "published": true
+  },
+  {
+    "code": "dv",
+    "code2": "div",
+    "name": "Divehi"
+  },
+  {
+    "code": "dz",
+    "code2": "dzo",
+    "name": "Dzongkha"
+  },
+  {
+    "code": "el",
+    "code2": "ell (T)",
+    "name": "Greek, Modern (1453-)",
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/el",
+    "enPublished": true,
+    "translations": {
+      "english": "Αγγλικά",
+      "zerotohero": "Μηδέν στον Ήρωα"
+    }
+  },
+  {
+    "code": "en",
+    "code2": "eng",
+    "name": "English",
+    "logo": true,
+    "courses": true
+  },
+  {
+    "code": "eo",
+    "code2": "epo",
+    "name": "Esperanto",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/eo",
+    "published": false
+  },
+  {
+    "code": "et",
+    "code2": "est",
+    "name": "Estonian"
+  },
+  {
+    "code": "eu",
+    "code2": "eus (T)",
+    "name": "Basque"
+  },
+  {
+    "code": "ee",
+    "code2": "ewe",
+    "name": "Ewe"
+  },
+  {
+    "code": "fo",
+    "code2": "fao",
+    "name": "Faroese"
+  },
+  {
+    "code": "fa",
+    "code2": "fas (T)",
+    "name": "Persian"
+  },
+  {
+    "code": "fj",
+    "code2": "fij",
+    "name": "Fijian"
+  },
+  {
+    "code": "fi",
+    "code2": "fin",
+    "name": "Finnish",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/fi",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/fi",
+    "enPublished": true,
+    "translations": {
+      "english": "Englanti",
+      "zerotohero": "nolla sankarille"
+    }
+  },
+  {
+    "code": "fr",
+    "code2": "fra (T)",
+    "name": "French",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/fr",
+    "logo": true,
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/fr",
+    "enPublished": true,
+    "translations": {
+      "english": "Anglais",
+      "zerotohero": "Zéro à héro"
+    }
+  },
+  {
+    "code": "fy",
+    "code2": "fry",
+    "name": "Western Frisian"
+  },
+  {
+    "code": "ff",
+    "code2": "ful",
+    "name": "Fulah"
+  },
+  {
+    "code": "ka",
+    "code2": "kat (T)",
+    "name": "Georgian"
+  },
+  {
+    "code": "gd",
+    "code2": "gla",
+    "name": "Gaelic"
+  },
+  {
+    "code": "ga",
+    "code2": "gle",
+    "name": "Irish",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/ga",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/ga",
+    "enPublished": true,
+    "translations": {
+      "english": "Béarla",
+      "zerotohero": "nialas go laoch"
+    }
+  },
+  {
+    "code": "gl",
+    "code2": "glg",
+    "name": "Galician"
+  },
+  {
+    "code": "gv",
+    "code2": "glv",
+    "name": "Manx"
+  },
+  {
+    "code": "gn",
+    "code2": "grn",
+    "name": "Guarani"
+  },
+  {
+    "code": "gu",
+    "code2": "guj",
+    "name": "Gujarati"
+  },
+  {
+    "code": "ht",
+    "code2": "hat",
+    "name": "Haitian"
+  },
+  {
+    "code": "ha",
+    "code2": "hau",
+    "name": "Hausa"
+  },
+  {
+    "code": "he",
+    "code2": "heb",
+    "name": "Hebrew"
+  },
+  {
+    "code": "hz",
+    "code2": "her",
+    "name": "Herero"
+  },
+  {
+    "code": "hi",
+    "code2": "hin",
+    "name": "Hindi",
+    "url": "https://hi.zerotohero.ca",
+    "logo": true,
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/hi",
+    "enPublished": true,
+    "translations": {
+      "english": "अंग्रेज़ी",
+      "zerotohero": "जीरो से हीरो"
+    }
+  },
+  {
+    "code": "ho",
+    "code2": "hmo",
+    "name": "Hiri Motu"
+  },
+  {
+    "code": "hr",
+    "code2": "hrv",
+    "name": "Croatian",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/hr",
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/hr",
+    "enPublished": true,
+    "translations": {
+      "english": "Engleski",
+      "zerotohero": "nula heroju"
+    }
+  },
+  {
+    "code": "hu",
+    "code2": "hun",
+    "name": "Hungarian",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/hu",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/hu",
+    "enPublished": true,
+    "translations": {
+      "english": "Angol",
+      "zerotohero": "nulla hősnek"
+    }
+  },
+  {
+    "code": "hy",
+    "code2": "hye (T)",
+    "name": "Armenian"
+  },
+  {
+    "code": "ig",
+    "code2": "ibo",
+    "name": "Igbo"
+  },
+  {
+    "code": "is",
+    "code2": "isl (T)",
+    "name": "Icelandic",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/is",
+    "published": true
+  },
+  {
+    "code": "io",
+    "code2": "ido",
+    "name": "Ido"
+  },
+  {
+    "code": "ii",
+    "code2": "iii",
+    "name": "Sichuan Yi"
+  },
+  {
+    "code": "iu",
+    "code2": "iku",
+    "name": "Inuktitut"
+  },
+  {
+    "code": "ie",
+    "code2": "ile",
+    "name": "Interlingue"
+  },
+  {
+    "code": "ia",
+    "code2": "ina",
+    "name": "Interlingua (International Auxiliary Language Association)"
+  },
+  {
+    "code": "id",
+    "code2": "ind",
+    "name": "Indonesian"
+  },
+  {
+    "code": "ik",
+    "code2": "ipk",
+    "name": "Inupiaq"
+  },
+  {
+    "code": "is",
+    "code2": "isl (T)",
+    "name": "Icelandic"
+  },
+  {
+    "code": "it",
+    "code2": "ita",
+    "name": "Italian",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/it",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/it",
+    "enPublished": true,
+    "translations": {
+      "english": "Inglese",
+      "zerotohero": "zero all'eroe"
+    }
+  },
+  {
+    "code": "jv",
+    "code2": "jav",
+    "name": "Javanese"
+  },
+  {
+    "code": "ja",
+    "code2": "jpn",
+    "name": "Japanese",
+    "url": "https://ja.zerotohero.ca",
+    "logo": true,
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/ja",
+    "enPublished": true,
+    "translations": {
+      "english": "英語",
+      "zerotohero": "ゼロからヒーロー"
+    }
+  },
+  {
+    "code": "kl",
+    "code2": "kal",
+    "name": "Kalaallisut"
+  },
+  {
+    "code": "kn",
+    "code2": "kan",
+    "name": "Kannada"
+  },
+  {
+    "code": "ks",
+    "code2": "kas",
+    "name": "Kashmiri"
+  },
+  {
+    "code": "ka",
+    "code2": "kat (T)",
+    "name": "Georgian"
+  },
+  {
+    "code": "kr",
+    "code2": "kau",
+    "name": "Kanuri"
+  },
+  {
+    "code": "kk",
+    "code2": "kaz",
+    "name": "Kazakh"
+  },
+  {
+    "code": "km",
+    "code2": "khm",
+    "name": "Central Khmer"
+  },
+  {
+    "code": "ki",
+    "code2": "kik",
+    "name": "Kikuyu"
+  },
+  {
+    "code": "rw",
+    "code2": "kin",
+    "name": "Kinyarwanda"
+  },
+  {
+    "code": "ky",
+    "code2": "kir",
+    "name": "Kirghiz"
+  },
+  {
+    "code": "kv",
+    "code2": "kom",
+    "name": "Komi"
+  },
+  {
+    "code": "kg",
+    "code2": "kon",
+    "name": "Kongo"
+  },
+  {
+    "code": "ko",
+    "code2": "kor",
+    "name": "Korean",
+    "url": "https://ko.zerotohero.ca",
+    "logo": true,
+    "published": true
+  },
+  {
+    "code": "kj",
+    "code2": "kua",
+    "name": "Kuanyama"
+  },
+  {
+    "code": "ku",
+    "code2": "kur",
+    "name": "Kurdish",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/ku",
+    "published": true
+  },
+  {
+    "code": "lo",
+    "code2": "lao",
+    "name": "Lao"
+  },
+  {
+    "code": "la",
+    "code2": "lat",
+    "name": "Latin",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/la",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/la",
+    "enPublished": true,
+    "translations": {
+      "english": "Anglicus",
+      "zerotohero": "nulla heros est"
+    }
+  },
+  {
+    "code": "lv",
+    "code2": "lav",
+    "name": "Latvian"
+  },
+  {
+    "code": "li",
+    "code2": "lim",
+    "name": "Limburgan"
+  },
+  {
+    "code": "ln",
+    "code2": "lin",
+    "name": "Lingala"
+  },
+  {
+    "code": "lt",
+    "code2": "lit",
+    "name": "Lithuanian",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/lt",
+    "published": true
+  },
+  {
+    "code": "lb",
+    "code2": "ltz",
+    "name": "Luxembourgish"
+  },
+  {
+    "code": "lu",
+    "code2": "lub",
+    "name": "Luba-Katanga"
+  },
+  {
+    "code": "lg",
+    "code2": "lug",
+    "name": "Ganda"
+  },
+  {
+    "code": "mk",
+    "code2": "mkd (T)",
+    "name": "Macedonian"
+  },
+  {
+    "code": "mh",
+    "code2": "mah",
+    "name": "Marshallese"
+  },
+  {
+    "code": "ml",
+    "code2": "mal",
+    "name": "Malayalam"
+  },
+  {
+    "code": "mi",
+    "code2": "mri (T)",
+    "name": "Maori"
+  },
+  {
+    "code": "mr",
+    "code2": "mar",
+    "name": "Marathi"
+  },
+  {
+    "code": "ms",
+    "code2": "msa (T)",
+    "name": "Malay"
+  },
+  {
+    "code": "mk",
+    "code2": "mkd (T)",
+    "name": "Macedonian"
+  },
+  {
+    "code": "mg",
+    "code2": "mlg",
+    "name": "Malagasy"
+  },
+  {
+    "code": "mt",
+    "code2": "mlt",
+    "name": "Maltese"
+  },
+  {
+    "code": "mn",
+    "code2": "mon",
+    "name": "Mongolian"
+  },
+  {
+    "code": "mi",
+    "code2": "mri (T)",
+    "name": "Maori"
+  },
+  {
+    "code": "ms",
+    "code2": "msa (T)",
+    "name": "Malay"
+  },
+  {
+    "code": "my",
+    "code2": "mya (T)",
+    "name": "Burmese"
+  },
+  {
+    "code": "na",
+    "code2": "nau",
+    "name": "Nauru"
+  },
+  {
+    "code": "nv",
+    "code2": "nav",
+    "name": "Navajo"
+  },
+  {
+    "code": "nr",
+    "code2": "nbl",
+    "name": "Ndebele, South"
+  },
+  {
+    "code": "nd",
+    "code2": "nde",
+    "name": "Ndebele, North"
+  },
+  {
+    "code": "ng",
+    "code2": "ndo",
+    "name": "Ndonga"
+  },
+  {
+    "code": "ne",
+    "code2": "nep",
+    "name": "Nepali"
+  },
+  {
+    "code": "nl",
+    "code2": "nld (T)",
+    "name": "Dutch",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/nl",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/nl",
+    "enPublished": true,
+    "translations": {
+      "english": "Engels",
+      "zerotohero": "Nul naar Held"
+    }
+  },
+  {
+    "code": "nn",
+    "code2": "nno",
+    "name": "Norwegian Nynorsk"
+  },
+  {
+    "code": "nb",
+    "code2": "nob",
+    "name": "Bokmål, Norwegian"
+  },
+  {
+    "code": "no",
+    "code2": "nor",
+    "name": "Norwegian"
+  },
+  {
+    "code": "ny",
+    "code2": "nya",
+    "name": "Chichewa"
+  },
+  {
+    "code": "oc",
+    "code2": "oci",
+    "name": "Occitan (post 1500)"
+  },
+  {
+    "code": "oj",
+    "code2": "oji",
+    "name": "Ojibwa"
+  },
+  {
+    "code": "or",
+    "code2": "ori",
+    "name": "Oriya"
+  },
+  {
+    "code": "om",
+    "code2": "orm",
+    "name": "Oromo"
+  },
+  {
+    "code": "os",
+    "code2": "oss",
+    "name": "Ossetian"
+  },
+  {
+    "code": "pa",
+    "code2": "pan",
+    "name": "Panjabi"
+  },
+  {
+    "code": "fa",
+    "code2": "fas (T)",
+    "name": "Persian"
+  },
+  {
+    "code": "pi",
+    "code2": "pli",
+    "name": "Pali"
+  },
+  {
+    "code": "pl",
+    "code2": "pol",
+    "name": "Polish",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/pl",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/pl",
+    "enPublished": true,
+    "translations": {
+      "english": "Angielski",
+      "zerotohero": "zero do bohatera"
+    }
+  },
+  {
+    "code": "pt",
+    "code2": "por",
+    "name": "Portuguese",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/pt",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/pt",
+    "enPublished": true,
+    "translations": {
+      "english": "Inglês",
+      "zerotohero": "zero para o herói"
+    }
+  },
+  {
+    "code": "ps",
+    "code2": "pus",
+    "name": "Pushto"
+  },
+  {
+    "code": "qu",
+    "code2": "que",
+    "name": "Quechua"
+  },
+  {
+    "code": "rm",
+    "code2": "roh",
+    "name": "Romansh"
+  },
+  {
+    "code": "ro",
+    "code2": "ron (T)",
+    "name": "Romanian",
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/ro",
+    "enPublished": true,
+    "translations": {
+      "english": "Engleză",
+      "zerotohero": "zero la erou"
+    }
+  },
+  {
+    "code": "rn",
+    "code2": "run",
+    "name": "Rundi"
+  },
+  {
+    "code": "ru",
+    "code2": "rus",
+    "name": "Russian",
+    "url": "https://ru.zerotohero.ca",
+    "logo": true,
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/ru",
+    "enPublished": true,
+    "translations": {
+      "english": "Aнглийский",
+      "zerotohero": "ноль герою"
+    }
+  },
+  {
+    "code": "sg",
+    "code2": "sag",
+    "name": "Sango"
+  },
+  {
+    "code": "sa",
+    "code2": "san",
+    "name": "Sanskrit"
+  },
+  {
+    "code": "si",
+    "code2": "sin",
+    "name": "Sinhala"
+  },
+  {
+    "code": "sk",
+    "code2": "slk (T)",
+    "name": "Slovak",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/sk",
+    "published": true
+  },
+  {
+    "code": "sl",
+    "code2": "slv",
+    "name": "Slovenian"
+  },
+  {
+    "code": "se",
+    "code2": "sme",
+    "name": "Northern Sami"
+  },
+  {
+    "code": "sm",
+    "code2": "smo",
+    "name": "Samoan"
+  },
+  {
+    "code": "sn",
+    "code2": "sna",
+    "name": "Shona"
+  },
+  {
+    "code": "sd",
+    "code2": "snd",
+    "name": "Sindhi"
+  },
+  {
+    "code": "so",
+    "code2": "som",
+    "name": "Somali"
+  },
+  {
+    "code": "st",
+    "code2": "sot",
+    "name": "Sotho, Southern"
+  },
+  {
+    "code": "es",
+    "code2": "spa",
+    "name": "Spanish",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/es",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/es",
+    "enPublished": true,
+    "translations": {
+      "english": "Inglés",
+      "zerotohero": "Cero al héroe"
+    }
+  },
+  {
+    "code": "sq",
+    "code2": "sqi (T)",
+    "name": "Albanian"
+  },
+  {
+    "code": "sc",
+    "code2": "srd",
+    "name": "Sardinian"
+  },
+  {
+    "code": "sr",
+    "code2": "srp",
+    "name": "Serbian",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/sr",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/sr",
+    "enPublished": true,
+    "translations": {
+      "english": "Енглеска",
+      "zerotohero": "нула хероју"
+    }
+  },
+  {
+    "code": "ss",
+    "code2": "ssw",
+    "name": "Swati"
+  },
+  {
+    "code": "su",
+    "code2": "sun",
+    "name": "Sundanese"
+  },
+  {
+    "code": "sw",
+    "code2": "swa",
+    "name": "Swahili",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/sw",
+    "published": false,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/sw",
+    "enPublished": true,
+    "translations": {
+      "english": "Kiingereza",
+      "zerotohero": "sifuri kwa shujaa"
+    }
+  },
+  {
+    "code": "sv",
+    "code2": "swe",
+    "name": "Swedish",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/sv",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/sv",
+    "enPublished": true,
+    "translations": {
+      "english": "Engelska",
+      "zerotohero": "noll till hjälten"
+    }
+  },
+  {
+    "code": "ty",
+    "code2": "tah",
+    "name": "Tahitian"
+  },
+  {
+    "code": "ta",
+    "code2": "tam",
+    "name": "Tamil"
+  },
+  {
+    "code": "tt",
+    "code2": "tat",
+    "name": "Tatar"
+  },
+  {
+    "code": "te",
+    "code2": "tel",
+    "name": "Telugu"
+  },
+  {
+    "code": "tg",
+    "code2": "tgk",
+    "name": "Tajik"
+  },
+  {
+    "code": "tl",
+    "code2": "tgl",
+    "name": "Tagalog"
+  },
+  {
+    "code": "th",
+    "code2": "tha",
+    "name": "Thai"
+  },
+  {
+    "code": "bo",
+    "code2": "bod (T)",
+    "name": "Tibetan"
+  },
+  {
+    "code": "ti",
+    "code2": "tir",
+    "name": "Tigrinya"
+  },
+  {
+    "url": "https://tlh.zerotohero.ca",
+    "code": "tlh",
+    "code2": "tlh",
+    "name": "Klingon",
+    "logo": true,
+    "published": true
+  },
+  {
+    "code": "to",
+    "code2": "ton",
+    "name": "Tonga (Tonga Islands)"
+  },
+  {
+    "code": "tn",
+    "code2": "tsn",
+    "name": "Tswana"
+  },
+  {
+    "code": "ts",
+    "code2": "tso",
+    "name": "Tsonga"
+  },
+  {
+    "code": "tk",
+    "code2": "tuk",
+    "name": "Turkmen"
+  },
+  {
+    "code": "tr",
+    "code2": "tur",
+    "name": "Turkish",
+    "dictionary": "freedict",
+    "url": "https://polyglot.zerotohero.ca/#/tr",
+    "published": true,
+    "enDictionary": "freedict",
+    "enURL": "https://en.zerotohero.ca/#/tr",
+    "enPublished": true,
+    "translations": {
+      "english": "ingilizce",
+      "zerotohero": "sıfırdan zirveye"
+    }
+  },
+  {
+    "code": "tw",
+    "code2": "twi",
+    "name": "Twi"
+  },
+  {
+    "code": "ug",
+    "code2": "uig",
+    "name": "Uighur"
+  },
+  {
+    "code": "uk",
+    "code2": "ukr",
+    "name": "Ukrainian"
+  },
+  {
+    "code": "ur",
+    "code2": "urd",
+    "name": "Urdu"
+  },
+  {
+    "code": "uz",
+    "code2": "uzb",
+    "name": "Uzbek"
+  },
+  {
+    "code": "ve",
+    "code2": "ven",
+    "name": "Venda"
+  },
+  {
+    "code": "vi",
+    "code2": "vie",
+    "name": "Vietnamese"
+  },
+  {
+    "code": "vo",
+    "code2": "vol",
+    "name": "Volapük"
+  },
+  {
+    "code": "cy",
+    "code2": "cym (T)",
+    "name": "Welsh"
+  },
+  {
+    "code": "wa",
+    "code2": "wln",
+    "name": "Walloon"
+  },
+  {
+    "code": "wo",
+    "code2": "wol",
+    "name": "Wolof"
+  },
+  {
+    "code": "xh",
+    "code2": "xho",
+    "name": "Xhosa"
+  },
+  {
+    "code": "yi",
+    "code2": "yid",
+    "name": "Yiddish"
+  },
+  {
+    "code": "yo",
+    "code2": "yor",
+    "name": "Yoruba"
+  },
+  {
+    "code": "za",
+    "code2": "zha",
+    "name": "Zhuang"
+  },
+  {
+    "code": "zh",
+    "code2": "zho (T)",
+    "name": "Chinese",
+    "url": "https://zh.zerotohero.ca",
+    "courses": true,
+    "logo": true,
+    "published": true,
+    "enDictionary": "ecdict",
+    "enURL": "https://en.zerotohero.ca/#/zh",
+    "enPublished": true,
+    "translations": {
+      "english": "英语",
+      "zerotohero": "英雄"
+    }
+  },
+  {
+    "code": "zu",
+    "code2": "zul",
+    "name": "Zulu"
+  }
+]

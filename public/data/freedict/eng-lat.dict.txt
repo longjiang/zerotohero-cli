@@ -1,0 +1,6438 @@
+
+00-database-dictfmt-1.12.1
+English-Latin FreeDict Dictionary
+
+Maintainer: [up for grabs]
+
+Edition: 0.1.2
+Size: 3026 headwords
+
+Publisher: FreeDict.
+
+
+Availability:
+
+    Copyright (C) 1999-2017 by various authors listed below.
+    Available under the terms of the GNU General Public License ver. 2.0 and
+  any later version.
+
+Published at: http://freedict.org/
+
+Notes:
+
+ * Database Status: too small
+
+
+Source(s):
+
+  Home: http://freedict.org/ [http://freedict.org/] This Database was
+  generated from ergane, http://www.travlang.com
+  [http://www.travlang.com].
+
+The Project:
+
+  This dictionary comes to you through nice people making it available for
+  free and for good. It is part of the FreeDict project,
+  http://www.freedict.org / http://freedict.de. This project aims to make
+  available many translating dictionaries for free. Your contributions are
+  welcome!
+
+Changelog:
+
+ * 2017-12-02 Sebastian Humenda ver. 0.1.2:
+   * update licence stanza (thanks to Karl Bartel)
+   * remove duplicated (Latin) translations
+ * 2010-10-24 Piotr Bański:
+   Conversion of TEI P4 source into P5 via tools/freedict_P4toP5.xsl;
+   manual clean-up. We are back to version from before Michael Bunk's
+   re-import from Ergane of 2006-12-18 that was rolled back due to
+   Ergane's cryptic change of database licensing.
+ * 2005-02-11 Michael Bunk:
+   Converted file to TEI P4
+ * 2000-04-03 Horst Eyermann:
+   Database was converted to TEI format and checked into CVS
+ * 2000-01-09 Horst Eyermann:
+   Phonetics added - machine generated from MBRODICT,
+   http://tcts.fpms.ac.be/synthesis/mbrdico
+ * 2000-01-10 Horst Eyermann:
+   This Database was generated from ergane, http://www.travlang.com -
+   Thanks!
+English-Latin FreeDict Dictionary ver. 0.1.2
+http://freedict.org/
+ABC /eibiːsiː/
+abecedarium
+Abyssinian /əbisiniən/
+Æthiops
+Academy /əkædəmiː/
+Academia
+Achaea /ətʃiə/
+Achaia
+Achaia /ətʃiə/
+Achaia
+Acheron /ətʃerən/
+Acheron
+Actium /ækʃaim/
+Actium
+Adam /ædəm/
+Adam
+Adriatic /ədriætik/
+Hadria
+Adriatic Sea /ədriætiksiə/
+Hadria
+Aeneas /əniːz/
+Æneas
+Aeolus /iːələs/
+Æolus
+Africa /æfrikə/
+Africa
+African /æfrikən/
+Afer
+Alps /ælps/
+Alpes
+Antichrist /æntikraist/
+antichristus
+April /eiprəl/
+Aprilis
+Arab /ærəb/
+Arabs
+Arabian /əreibiən/
+Arabicus, Arabius
+Arabic /ærəbik/
+Arabicus, Arabius
+Ares /ɑːz/
+Ares
+Argus /ɑːgəs/
+Argo
+Aries /ɛəriːz/
+Aries
+Asia /əʃiə/
+Asia
+Astraea /æstriə/
+Astræa
+Athena /əðnə/
+Athenæ
+Athene /əðn/
+Athenæ
+Athenian /əθiːniən/
+Atheniensis
+Athens /æθinz/
+Athenæ
+Attica /ætikə/
+Attica
+Aventine /ævəntain/
+Aventinus
+Avernus /əvəːnəs/
+Avernus
+Babel /beibl/
+Babylon
+Babylon /beibilən/
+Babylon
+Bacchus /bəkəs/
+Bacchus, Iacchus, Liber, Lyæus
+Bellona /bilounə/
+Bellona
+Black Forest /blækfɔrist/
+Abnoba
+Black Sea /blæksiə/
+Pontus, Pontus Axenus
+Caesar /siːzər/
+Cæsar
+Capitol /kæpitl/
+Capitolium
+Capricorn /kæprikɔːn/
+Capricornus
+Carthage /kɑːðidʒ/
+Carthago
+Carthaginian /kɑːθægiːniən/
+Carthaginiensis, Poenicus, Poenus, Punicus
+Catholic /kæθlik/
+catholicus
+Cerberus /səbərəs/
+Cerberus
+Ceres /səriz/
+Ceres
+Chaldean /tʃeildiən/
+Chaldæi
+Charon /kærən/
+Charon
+Charybdis /kəribdis/
+Charybdis
+Chimera /kaimiərə/
+Chimæra
+Christ /kraist/
+Christus
+Christian /kristʃən/
+Christianus
+Christianity /kristiænitiː/
+Christianismus
+Cicero /tʃisɛərou/
+Cicero
+Circe /sis/
+Circe
+Colossus /kəlɔsəs/
+Colossus
+Copenhagen /koupənheigən/
+Hafnia
+Crete /kret/
+Creta
+Cupid /kjuːpit/
+Amor
+Cybele /saibeliː/
+Cybele
+Danube /dənʌb/
+Hister
+Diana /daiænə/
+Diana
+Ebro /ibrou/
+Hiberus
+Ethiopian /iːθioupiən/
+Æthiops
+Etruria /etreəriə/
+Etruria
+Europa /jeəroupə/
+Europa
+Europe /jeərəp/
+Europa
+Euxine Sea /juːksinsiə/
+Pontus, Pontus Axenus
+Evening Star /iːvniŋstɑːr/
+Cytherea, Venus
+February /febjeəriː/
+Februarius
+Gaul /gɔːl/
+1. Gallia
+2. Gallus
+God /gɔd/
+Deus
+God's acre /gɔdzeikər/
+capulus, cimeterium
+Greece /gris/
+Achaia, Græcia
+Greek /griːk/
+1. Achivus
+2. Græcus
+Greek woman /griːkwumən/
+Achaias
+Hesperus /hespəːrəs/
+Hesperus
+Italy /itəliː/
+Italia
+January /dʒænjuriː/
+Ianuarius
+Janus /dʒeinəs/
+Ianus
+Jove /dʒouv/
+Diespiter, Iuppiter
+July /dʒuːlai/
+Iulius
+June /dʒuːn/
+Iunius
+Jupiter /dʒuːpitər/
+1. Diespiter, Iuppiter
+Lucifer /luːsifər/
+Satanas, Zabulus
+Malta /mɔːltə/
+Melita
+March /mɑːtʃ/
+Martius
+Mars /mɑːz/
+Mars
+Messiah /misaiə/
+Messias
+Minerva /minəːvə/
+Minerva
+Mister /mistər/
+dominus
+Mr. /mr/
+dominus
+Oceanus /ouʃiænəs/
+Oceanus
+Parthian /pɑːθiən/
+pars
+Pegasus /pigæʒəs/
+Pegasus
+Pentecost /pentikɔst/
+pentecoste
+Persian /pəːʃən/
+1. Achæmenius
+2. barbarus
+Po /pou/
+Padus
+Prussia /prʌʃə/
+Prusia
+Rhone /roun/
+Rhodanus
+Roman /roumən/
+1. Romanus
+Rome /roum/
+Roma
+Russia /rʌʃə/
+Ruthenia
+Sabbath /sæbəθ/
+sabbata, sabbatum
+Satan /seitn/
+Satanas, Zabulus
+Saturday /sætədiː/
+sabbata, sabbatum
+Scandinavia /skændineiviə/
+Scandia
+Sicily /sisəliː/
+Sicilia, Trinacria
+Spain /spein/
+Hispania
+Spanish fly /spæniʃflai/
+cantharis
+Stockholm /stɔkhoum/
+Holmia
+Styx /stiks/
+Styx
+Syracuse /sairəkjuːz/
+Syracusæ
+Syria /siriə/
+Syria
+Tiber /tiːbər/
+Tiber
+Trojan /troudʒən/
+Tros
+Troy /trɔi/
+Ilion, Ilium
+Venus /venjuːz/
+1. Cytherea, Venus
+Vesta /vestə/
+Vesta
+Vulcan /vʌlkæn/
+Mulciber, Vulcanus
+West /west/
+occasus, occidens, vesper
+Westener /westnər/
+Ausonius
+Whitsunday /witsʌndiː/
+pentecoste
+Zama /zɑːmə/
+Zama
+... ago /ɐɡˈəʊ/
+... abhinc, abhinc ...
+a /ə/
+aliquis
+abacus /æbəkəs/
+abacus
+abbess /æbes/
+abbatissa
+abbey /əbei/
+abbatia
+abbot /æbət/
+abbas
+abbreviate /əbriːvieit/
+1. abbreviare, curtare
+2. breviare
+abdicate /æbdikeit/
+abdicare, abire
+abdication /æbdikeiʃən/
+abdicatio
+abdomen /æbdəmən/
+1. abdomen
+2. alvus, aqualiculus, costa, venter
+abductor /æbdʌktər/
+abactor
+aberration /æbəreiʃən/
+1. error
+2. casus
+abet /əbet/
+1. concitare
+2. adiuvare, adiutare, iuvare
+abhor /əbhɔːr/
+abominare, abominari
+abhorrence /əbhɔrəns/
+abominatio
+abhorrent /əbhɔrənt/
+abominabilis, atrox, aversabilis
+abide /əbaid/
+patiri
+ability /əbilitiː/
+1. ops
+2. capacitas
+abjuration /æbdʒeəreiʃən/
+abrenuntiatio
+abjure /æbdʒeər/
+abiurare, abrenuntiare
+ablative /æblətiv/
+ablativus
+abnegate /æbnigeit/
+1. abnegare
+2. abiurare, abrenuntiare
+abnegation /æbnigeiʃən/
+abnegatio
+abode /əboud/
+atrium
+abolish /əbɔliʃ/
+abolere
+abolition /æbəliʃən/
+1. abolicio, abrogatio
+2. abolitio
+abominable /əbɔminəbl/
+abominabilis, atrox, aversabilis
+abominate /əbɔmineit/
+abominare, abominari
+abomination /əbɔmineiʃən/
+1. abomiamentum
+2. abominatio
+aboriginal /æbəridʒənl/
+1. indigena
+2. archetypus
+abortion /əbɔːʃən/
+abortus
+abortive /əbɔːtiv/
+vanus
+abounding in water /əbaundiŋinwɔːtər/
+aquosus
+about /əbaut/
+circa
+above /əbouv/
+1. super, supera
+above all /əbouvl/
+potissimum
+abridge /əbridʒ/
+1. abbreviare, curtare
+2. breviare
+abridgement /əbridʒmənt/
+breviarium
+abrogate /æbrəgeit/
+abolere
+abrogation /æbrəgeiʃən/
+1. abolicio, abrogatio
+2. abolitio
+abrupt /əbrʌpt/
+1. arduus
+2. repentinus
+abruptly /əbrʌptliː/
+abrupte
+absent /æbsənt/
+absens
+absent onself /æbsəntwʌnself/
+abætere, abire, abitere, abscedere
+absinth /æbsinθ/
+absinthium
+absolute /æbsəluːt/
+absolutus
+absolution /æbsəluːʃən/
+absolutio
+absolve /əbzɔlv/
+absolvere
+abstract /əbstrækt/
+1. abdere, adimere
+2. breviarium
+abstruse /əbstruːs/
+arcanus
+absurd /əbsəːd/
+absurdus
+absurdity /əbsəːditiː/
+alogia
+abuse /əbjuːz/
+catachresis
+abyss /əbis/
+abruptum, abyssus, crater, fauces
+acacia /əkeiʃə/
+acacia, acanthus
+acanthus /eikænθəs/
+acanthus
+accelerate /əkseləreit/
+accelerare
+accent /æksənt/
+accentus
+accept /æksept/
+accipere
+acceptable /əkseptəbl/
+acceptabilis
+acceptance /əkseptəns/
+acceptatio
+acceptor /əkseptər/
+acceptator
+accidence /æksidəns/
+casus
+accident /æksidənt/
+accidens, casus
+acclaim /əkleim/
+1. acclamare
+2. acclamatio
+3. applaudere
+acclamation /ækləmeiʃən/
+acclamatio
+acclivity /əklivitiː/
+clinamen
+accommodation /əkɔmədeiʃən/
+atrium
+accomodate /əkɔmədeit/
+adiuvare, adiutare, iuvare
+accomplish /əkʌmpliʃ/
+pervenire
+accomplishment /əkʌmpliʃmənt/
+actum, factum
+accord /əkɔːd/
+permittere
+accost /əkɔst/
+appellare
+account /əkaunt/
+1. causa
+2. credere
+3. opinari
+account book /əkauntbuk/
+matrix
+accredit /əkredit/
+credere
+accretion /əkriːʃən/
+accretio
+accrue /əkruː/
+1. adolescere, crescere, accrescere
+accumulation /əkjuːmjuleiʃən/
+massa, multitudo, turba
+accusal /ækjuːzl/
+accusatio, categoria, crimen
+accusation /ækjuːzeiʃən/
+accusatio, categoria, crimen
+accusative /əkjuːzətiv/
+accusativus
+accuse /əkjuːz/
+accusare
+accuser /əkjuːzər/
+accusator
+acerbic /əsəːbik/
+1. acerbus
+2. austerus
+3. acer, acutus
+4. amarus, amarulentus
+acerbity /əsəːbitiː/
+1. acies, acritas, acror, acumen
+2. acerbitas, aloe, amarities, amaritudo
+achieve /ətʃiːv/
+1. conciliare
+2. pervenire
+3. facere
+achievement /ətʃiːvmənt/
+1. actio, actum
+2. factum
+3. successus
+acid /æsid/
+1. acerbus
+2. acidus
+3. austerus
+acidify /əsidifai/
+acescere
+acknowledge /əknɔlidʒ/
+agnoscere
+aconite /ækənait/
+aconitum
+acorn /eikɔːn/
+glans
+acquire /əkwaiər/
+conciliare
+acquit /əkwit/
+absolvere
+acrid /ækrid/
+1. acerbus
+2. austerus
+acrimony /ækriməniː/
+acies, acritas, acror, acumen
+act /ækt/
+1. agere
+2. actio, actum
+3. facere
+4. factum
+action /ækʃən/
+1. actio, actum
+2. proelium, pugna
+3. factum
+4. causa
+actor /æktər/
+actor, mimus
+actress /æktris/
+mima
+actuate /æktʃueit/
+movere
+act crazy /æktkreiziː/
+morari
+act of grace /æktɔfgreis/
+abolitio
+acuity /əkjuːitiː/
+acies, acritas, acror, acumen
+adage /ædidʒ/
+adagium
+add /ədd/
+accensere, accommodare
+adder /ædər/
+aspis
+additional /ədiʃənl/
+ceterus
+addled /ædld/
+1. cariosus
+2. bardus, blennus, stultus
+address /ədres/
+appellare
+adieu /ədjuː/
+ave
+adjective /ædʒiktiv/
+adjectivum
+administration /ədministreiʃən/
+regimen, regimentum
+administration of the last sacraments /ədministreiʃənɔfðlɑːstsækrəmənts/
+chrisma
+admirable /ædmərəbl/
+admirabilis
+admiration /ædməreiʃən/
+admirabilitas, admiratio
+admire /ədmaiər/
+admirari
+admirer /ədmairər/
+admirator
+admission /ədmiʃən/
+acceptatio
+admit /ədmit/
+permittere
+admonish /ədmɔniʃ/
+admonere
+admonition /ædməniʃən/
+admonitus
+adolescent /ædəlesnt/
+1. adolescens
+adorable /ədɔːrəbl/
+adorabilis
+adoration /ædəreiʃən/
+adoratio
+adore /ədɔːr/
+adorare
+adorer /ədɔːrər/
+adorator
+adulterer /ədʌltərər/
+adulter, moechus
+adulteress /ədʌltəris/
+adultera, moecha
+adulterous /ədʌltərəs/
+adulter
+advance /ədvɑːns/
+1. adire
+2. proximare
+advantageous /ædvənteidʒəs/
+faustus
+adverb /ædvəːb/
+adverbium
+adversary /ædvəsəriː/
+colluctator, hostis
+adverse /ædvəːs/
+hostifer, hosticus, hostilis
+advertise /ædvətaiz/
+annuntiare
+advise /ədvaiz/
+monere
+advocate /ædvəkeit/
+advocatus, causidicus
+aeon /iːən/
+æon
+affable /æfəbl/
+comis, lepidus
+affair /əfɛər/
+1. causa, res
+2. casus
+affection /əfekʃən/
+agape, amor, caritas
+affix /əfiks/
+affigere
+afford /æfəd/
+permittere
+after /ɑːftər/
+post
+agape /əgeip/
+agape
+age /eidʒ/
+ætas, ævum
+agitate /ædʒiteit/
+concitare
+agrarian /əgrɛəriən/
+colonus
+agreeable /əgriːəbl/
+acceptabilis
+agriculture /ægrikʌltʃər/
+1. agricultura, agricultio
+ague /eigjuː/
+febris
+ah /ɑː/
+a, ah, ai, hei, hem, heu
+ahead /ɑːed/
+ante, antehac
+aid /eid/
+1. adiuvare, adiutare, iuvare
+2. auxilium, ops
+3. assessor, auxiliator, minister
+ailment /eilmənt/
+ægritudo, ægror, morbus
+air /ɛər/
+ær, æther
+alcoholic /ælkəhɔlik/
+bibitor
+alder‐ /ˈɔːldə/
+alneus
+alder /ɔːldər/
+1. alneus
+2. alnus
+ale /l/
+cerevisia, cervisia
+alga /ælgə/
+alga
+alien /eiliən/
+1. abominabilis, atrox, aversabilis
+2. advena, adventicius, alienigenus, allophylus, barbarus, bracatus
+3. hospitus
+all‐powerful /ˈɔːl pˈaʊəfəl/
+omnipotens
+allow /ælou/
+permittere
+all about /ləbaut/
+perubique
+all of a sudden /lɔfəsʌdn/
+repente, subito
+all the /lð/
+omnis
+almighty /ɔːlmaitiː/
+omnipotens
+almost /æmoust/
+fere, pæne, prope
+aloe /ælou/
+aloe
+alone /əloun/
+solus
+alphabet /ælfəbet/
+abecedarium
+alphabetical /ælfəbetikl/
+abecedarius
+already /ɔːlrediː/
+iam
+altar /ɔːltər/
+altaria, ara
+alter /ɔːltər/
+mutare
+alum /æləm/
+alumen
+always /ɔːlweiz/
+semper
+ambiguous /æmbigjeəs/
+1. ambiguus, amphibolus
+ambition /æmbiʃən/
+ambitio
+ambrosia /æmbrouziə/
+ambrosia
+amethyst /æmiθist/
+amethystus
+amnesty /æmnəstiː/
+abolitio
+among /əmʌŋ/
+inter
+amphitheatre /æmfiθiətər/
+amphitheatrum
+amphora /æmfərə/
+amphora
+ample /æmpl/
+amplus, capax
+amputate /æmpjuteit/
+amputare
+amulet /æmjulit/
+phylacterium, præbia
+amuse /əmjuːz/
+oblectare
+anapaest /ænəpiːst/
+anapæstus
+anathema /ənæθəmə/
+anathema
+anatomist /ənætəmist/
+anatomicus
+anatomy /ənætəmiː/
+anatomia
+anchor /æŋkər/
+ancora
+anchovy /æntʃəviː/
+mæna
+and /ænd/
+ac, atque
+angel /eindʒl/
+1. angela
+2. angelus
+angelic /ændʒelik/
+angelicus
+angle /æŋgl/
+angulus
+animal /æniməl/
+1. animal
+2. bestia, fera
+announce /ənauns/
+annuntiare
+annual /ænjeəl/
+anniversarius, annuus
+another /ənʌðər/
+alius
+another man /ənʌðərmein/
+alius
+another man's /ənʌðərmeinz/
+alienus
+another time /ənʌðərtaim/
+alias
+answer /ænsər/
+1. respondere
+2. responsum
+ant /ænt/
+formica
+anthem /ænθəm/
+hymnus
+antidote /æntidout/
+antidotum
+anus /einəs/
+anus, culus, podex
+any /æniː/
+1. aliquis
+2. quisquis
+anybody /enibɔdiː/
+aliquis
+anyway /æniwei/
+aliqua
+apart from /əpɑːtfrɔm/
+absque
+ape /eip/
+cercops, clura, simia
+apoplectic fit /æpəplektikfit/
+apoplexia
+apostle /əpɔsl/
+apostolus
+apostolic /æpəstɔlik/
+apostolicus
+appeal to /əpiːltou/
+advocare
+appear /əpiər/
+apparere, comparere
+appearance /əpiərəns/
+aspectamen, facies
+appellation /æpəleiʃən/
+nomen, vocabulum
+applaud /əplɔːd/
+1. acclamare
+2. applaudere
+apple /æpl/
+pomum
+appraise /əpreiz/
+æstimare, appretiare, censere, taxare
+approach /əproutʃ/
+adire
+approval /əpruːvəl/
+acclamatio
+approve /əpruːv/
+approbare
+approximately /əprɔksimətiːliː/
+circa
+aquatic /əkwætik/
+aqualis, aquarius
+aqueduct /ækwidʌkt/
+aquæductus
+aquittal /ækwitl/
+absolutio
+arable /ærəbl/
+arabilis
+arbiter /ɑːbitər/
+1. arbiter
+2. arbitratus
+arbitrary /ɑːbitrəriː/
+arbitrarius
+arbitrator /ɑːbitreitər/
+1. arbiter
+2. arbitratus
+arboreal /ɑːbɔːriəl/
+arboreus
+arbutus /ɑːbutjuːz/
+arbutus
+arbutus fruit /ɑːbutjuːzfruːt/
+arbutum
+arc /ɑːk/
+arcus
+arch /ɑːtʃ/
+arcus
+archangel /ɑːtʃeindʒl/
+archangelus
+archbishop /ɑːtʃbiʃəp/
+archiepiscopus
+archimandrite /ɑːkimændrait/
+archimandrita
+are /ɛər/
+caterva, grex
+area /ɛəriə/
+area
+arena /əriːnə/
+arena
+arise /æraiz/
+nasci
+arm‐ /ˈɑːm/
+bracchialis
+arm /ɑːm/
+1. armare
+2. bracchialis
+3. armus, bracchium, lacertus
+armchair /ɑːmtʃɛər/
+cathedra
+armpit /ɑːmpit/
+ala, axilla
+army /ɑːmiː/
+exercitus, legio
+arm of the sea /ɑːmɔfðsiə/
+bracchium
+around /əraund/
+circa
+arrival /əraivəl/
+adventus
+arrive /əraiv/
+advenire, pervenire
+arrow /ærou/
+arundo, calamus, sagitta
+arse /ɑːs/
+anus, culus, podex
+arsehole /ɑːshoul/
+cimex, mæna
+art /ɑːt/
+ars
+artery /ɑːtəriː/
+arteria
+arthritis /ɑːθraitis/
+arthritis
+artichoke /ɑːtitʃouk/
+cactus
+article /ɑːtikl/
+articulus
+artist /ɑːtist/
+artifex
+as /əz/
+1. sic
+2. quia, quod
+ash /əʃou/
+1. cinis, spodium
+2. fraxinus
+ask /əsk/
+1. quærere
+2. petere, rogare
+ask for /əskfər/
+petere, rogare
+asparagus /əspærəgəs/
+asparagus
+aspect /æspekt/
+aspectamen, facies
+asphalt /æsfælt/
+bitumen
+ass /əs/
+asinus
+assault /əsɔːlt/
+appugnare, oppugnare
+assemble /əsembl/
+coire
+assert /əsəːt/
+autumare
+assign /əsain/
+assignare
+assist /əsist/
+1. adiuvare, adiutare, iuvare
+assistant /əsistənt/
+assessor, auxiliator, minister
+assistent /əsistənt/
+assessor, auxiliator, minister
+associate /əsouʃieit/
+coire
+ass's /əssz/
+asinarius, asininus
+astringent /æstrindʒənt/
+acerbus, austerus
+astrologer /æstrɔlədʒər/
+astrologus, mathematicus
+astrology /æstrɔlədʒiː/
+astrologia, mathematica
+astronomer /æstrɔnəmər/
+astrologus
+astronomic /æstrənɔmik/
+astrologicus
+astronomical /æstrənɔmikl/
+astrologicus
+astronomy /æstrɔnəmiː/
+astrologia, astronomia
+asylum /əsailəm/
+asylum
+as a result of /əzərizʌltɔf/
+a, ab, abs
+as for the rest /əzfərðrest/
+ceterum
+as if /əzaif/
+quasi
+as though /əzðau/
+quasi
+at /eit/
+1. ad
+2. apud
+3. a, ab, abs
+atheist /eiθiist/
+atheos
+athlete /æθliːt/
+athleta
+athletic /æθletik/
+athletice
+atmospheric phenomenon /ætməsferikfinɔminən/
+chasma, fax
+atom /ætəm/
+atomus
+attach /ətætʃ/
+affigere
+attack /ətæk/
+appugnare, oppugnare
+attain /ətein/
+1. conciliare
+2. pervenire
+attempt /ətempt/
+1. attemptare
+2. argumentum
+attend /ətend/
+1. alere
+2. adesse
+at night /eitnait/
+noctu
+at present /eitprizent/
+nunc
+at that place /eitðætpleis/
+ibi, illic
+audacity /ɔːdæsitiː/
+ferocia
+aunt /ɑːnt/
+amita
+aurochs /ɔːrɔks/
+bison, urus
+automoton /ɔːtəmoutɔn/
+automatum
+autumn /ɔːtəm/
+autumnus, autumnum
+avarice /ævəris/
+avaritia, avarities
+avaricious /ævəriʃəs/
+avarus
+average /ævəridʒ/
+medius
+aviary /eiviəriː/
+aviarium, ornithon
+avoid /əvɔid/
+vitare
+awful /ɔːfəl/
+abominabilis, atrox, aversabilis
+awkward /ɔːkwəd/
+brutus
+axiom /æksiəm/
+axioma
+axis /æksis/
+axis
+axle /æksl/
+axis
+backbiting /bækbaitiŋ/
+calumnia
+back of the neck /bækɔfðnek/
+cervix, collum
+bacon /beikən/
+arvina
+bad /bæd/
+1. malus, phaulius
+2. cariosus
+badly /bædliː/
+male
+bag /bæg/
+coleus
+bald /bɔːld/
+calvus
+baldness /bɔːldnəs/
+calvities
+ball‐frame /bˈɔːl fɹˈeɪm/
+abacus
+ball /bɔːl/
+pila
+ban /bein/
+anathema
+bandage /bændidʒ/
+1. fascia
+baptism /bæptizəm/
+baptisma, baptismus
+baptistery /bæptistəriː/
+baptisterium
+baptize /bæptaiz/
+baptizare
+bar /bɑːr/
+aquarium
+barbarian /bɑːbɛəriən/
+barbarus
+barbaric /bɑːbærik/
+barbarus
+barbarism /bɑːbərizəm/
+barbarismus
+barbel /bɑːbl/
+mullus
+bard /bɑːd/
+bardus
+bark /bɑːk/
+cortex
+barley /bɑːliː/
+hordeum
+barrel /bærəl/
+1. cupa, vas
+2. canalis, fistula
+barren /bærən/
+sterilis
+barrister‐at‐law /bˈaɹɪstəɹ at lˈɔː/
+advocatus, causidicus
+barrister /bæristər/
+advocatus, causidicus
+barrow /bærou/
+cinis
+bashfulness /bæʃfəlnəs/
+aporia, aporiatio
+basin /beisn/
+1. alveus, crater
+2. pelvis
+basket /bɑːskit/
+calathus, cophinus, corbis
+bass /bæs/
+perca
+bastard /bæstəd/
+1. hibrida
+2. cimex, mæna
+bat /bɑːt/
+vespertilio
+bath /bɑːθ/
+1. alveus, labrum, puelus
+2. balneum
+baton /bætən/
+arundo, baculum, baculus
+battle /bætl/
+proelium, pugna
+bawdy /bɔːdiː/
+latrina, lustrum, meritorium
+be /b/
+esse
+beach /biːtʃ/
+acta, arena
+beak /biːk/
+beccus
+bean /biːn/
+faba
+bear /bɛər/
+1. patiri
+2. ursus
+beard /biəd/
+barba
+beast /biːst/
+bestia, fera
+beat /biːt/
+battuere, fligere, pellere, pulsare
+beautiful /bjuːtifəl/
+formosus, pulcher
+beaver /biːvər/
+castor
+because /bikɔːz/
+quia, quod
+become /bikʌm/
+accidere
+become a Christian /bikʌməkristʃən/
+Christianizare
+become bitter /bikʌmbitər/
+amarescere
+become holy /bikʌmhouliː/
+sanctescere
+bedbug /bedbʌg/
+cimex
+beech /biːtʃ/
+fagus
+beehive /biːhaiv/
+alvarium, alveus, alvus, cavea
+beer /biər/
+cerevisia, cervisia
+beet‐ /bˈiːt/
+betaceus
+beet /biːt/
+1. betaceus
+2. beta
+beetle /biːtl/
+scarabæus
+before /bfɔːr/
+ante, præ, pro
+beg /beg/
+1. æruscare
+2. petere, rogare
+beggar /begər/
+æruscator
+behead /bihed/
+carnificare
+behind /biːhaind/
+post
+believe /biliːv/
+credere
+belly /beliː/
+1. abdomen
+2. alvus, aqualiculus, costa, venter
+belt /belt/
+ala, copula, zona
+bend /bend/
+flectere
+bent /bent/
+curvus
+berry /beriː/
+acinus, baca
+beryl /berəl/
+beryllus
+beside /bisaid/
+apud
+besides /bizaidz/
+ceterum
+best /bist/
+optimus
+better /betər/
+melior
+between /bitwiːn/
+inter
+bevy /beviː/
+caterva, grex
+beyond /beiənd/
+præter
+be able to /beibltou/
+posse, potui
+be absent /bæbsənt/
+abesse
+be acid /bæsid/
+acere
+be afraid of /bəfreidɔf/
+timere
+be ailing /beiliŋ/
+ægrere, ægrotare
+be alive /bəlaiv/
+vivere
+be balding /bbɔːldiŋ/
+calvescere
+be bold /bbould/
+audere
+be born /bbɔːn/
+nasci
+be missing /bmisiŋ/
+abesse
+be possible /bpɔsəbl/
+posse
+be present /bprizent/
+adesse
+be sour /bsauər/
+acere
+be taken ill /bteikənil/
+ægrescere
+bicolour /bikʌlər/
+bicolor
+bicoloured /bikʌləd/
+bicolor
+bid /baid/
+petere, rogare
+biennial /baieniəl/
+bimus
+big /big/
+grandis, magnus
+bile /bail/
+bilis
+bill /bil/
+beccus
+bind /baind/
+ligare
+bird‐ /bˈɜːd/
+avitus
+bird /bəːd/
+1. avitus
+2. ales, aves, volucris
+bird's /bəːdz/
+avitus
+birth /bəːθ/
+natio
+bishop /biʃəp/
+antistes, episcopus
+bite /bait/
+mordere
+bitter /bitər/
+acerbus, amarus, amarulentus, austerus
+bitterness /bitənəs/
+acerbitas, aloe, amarities, amaritudo
+black /blæk/
+ater, niger
+blackberry /blækbəriː/
+rubus
+blackberry bush /blækbəriːbuʃ/
+rubus
+blackness /blæknəs/
+atritas
+bladder /blædər/
+vesica
+blade /bleid/
+calamus
+blame /bleim/
+crimen, culpa
+blanch /blɑːntʃ/
+albare
+blank /blæŋk/
+albus, candidus, canus
+blaspheme /blæsfiːm/
+blasphemare
+blasphemer /blæsfiːmər/
+blasphemus
+blasphemy /blæsfəmiː/
+blasphemia, blasphematio
+bleak /bleik/
+acidus, amarus
+bleat /bliːt/
+balare
+blend /blend/
+miscere
+blessing /blesiŋ/
+benedictio
+blind /blaind/
+cæcus
+blindness /blaindnəs/
+cæcitudo
+block /blɔk/
+caudex, codex
+blood /blʌd/
+sanguis
+bloom /bluːm/
+flos
+blot /blɔt/
+macula
+blow /blou/
+aspirare
+blushing /blʌʃiŋ/
+ruber, russus
+boar /bɔːr/
+verres
+board /bɔːd/
+tabula
+boat /bout/
+1. alveus, cumba, cymba, navia, scapha
+2. actuariola
+bodily /bɔdəliː/
+corporalis, corporeus
+body‐ /bˈɒdi/
+corporalis, corporeus
+body /boudiː/
+1. corporalis, corporeus
+2. corpus
+bold /bould/
+carnatus, crassus, obesus
+boldness /bouldnəs/
+ferocia
+bolt /boult/
+pessulus
+bondwoman /bɔndwumən/
+ancilla, serva
+bone /boun/
+os
+book‐keeper /bˈʊk kˈiːpə/
+calculo
+book /buk/
+caudex, codex, liber
+bookcase /bukkeis/
+bibliotheca
+bookseller /bukselər/
+bibliopola
+boon /buːn/
+benedictio
+boot /buːt/
+calceus
+boozer /buːzər/
+bibitor
+border /bɔːdər/
+labrum, limbus, ora
+boss /bɔs/
+1. dominus
+2. dux
+bough /bau/
+ramus, virga
+boundary /baundriː/
+finis, limes, ora
+bovine /bouvain/
+1. bovillus, bovinus, bublus, bubulus
+2. bos
+bovine animal /bouvainæniməl/
+bos
+bow /bou/
+arcus
+bowdlerize /baudləraiz/
+castificare
+bowl /boul/
+pelvis
+box‐tree /bˈɒks tɹˈiː/
+buxus
+box /bɔks/
+1. arca
+2. capsa
+3. alveus, olla
+boxer /bɔksər/
+pugil
+boy /bɔi/
+1. puer
+2. ambactus, anculus, calo, cliens, minister
+bra /brə/
+fascia
+bracelet /breislit/
+1. armilla
+braid /breid/
+plectere
+brain /brein/
+cerebellum, cerebrum
+bramble /bræmbl/
+rubus
+branch /brɑːntʃ/
+ramus, virga
+brand /brænd/
+1. stigmare
+2. character, stigma
+branding iron /brændiŋaiən/
+character
+brass /brɑːs/
+1. aurichalcum, orichalcum
+bray /brei/
+oncare
+bread /bred/
+panis
+break /breik/
+1. abrumpere
+2. rumpere
+break off /breikɔf/
+abrumpere
+breast /brest/
+mamma, uber
+breath /breθ/
+anima
+breathe /briːð/
+aspirare, halare
+breed /briːd/
+gens, genus, natio
+breeze /briːz/
+aura
+bribe /braib/
+pervetere
+brick /brik/
+later
+bridge /bridʒ/
+pons
+brief /briːf/
+brevis
+brim /brim/
+labrum, limbus, ora
+brimstone /brimstoun/
+sulphur, sulpur
+bring /briŋ/
+adducere, ferre
+bring away /briŋɔːwei/
+asportare
+brink /briŋk/
+labrum, limbus, ora
+broad /brɔːd/
+latus
+bronze /brɔnz/
+1. æneus, aheneus
+2. æs
+broom /bruːm/
+virga
+brothel /brɔθl/
+1. latrina, lustrum, meritorium
+brother‐in‐law /bɹˈʌðəɹ ɪn lˈɔː/
+levir
+brother /brʌðər/
+frater
+bubble /bʌbl/
+1. borrire
+2. vesica
+bucket /bʌkit/
+aqualis
+buffalo /bʌfəlou/
+bubalus
+buffet /bʌfi/
+abacus
+buffoon /bəfuːn/
+maccus
+bug /bʌg/
+cimex
+building /bildiŋ/
+ædificatio, ædificium
+bulb /bʌlb/
+1. ampulla
+2. bulbus
+bulky /bʌlkiː/
+amplus, capax
+bull /bul/
+taurus
+bullet /bulit/
+globus
+bump /bʌmp/
+gibba
+bunch /bʌntʃ/
+fascis
+bundle /bʌndl/
+fascis
+burden /bəːdn/
+onus
+burdensome /bəːdnsəm/
+brutus, gravis
+burial mound /beriəlmaund/
+cinis
+burn /bəːn/
+flagrare
+burn down /bəːndaun/
+cremare
+burr /bəːr/
+lappa
+business /biznəs/
+causa, res
+business deal /biznəsdiːl/
+causa, res
+but /bʌt/
+1. absque
+2. at, tamen
+butcher /butʃər/
+cædere, mactare
+butterfly /bʌtəflai/
+papilio
+by /biː/
+1. apud
+2. a, ab, abs
+3. præter
+bye /biː/
+ave
+byname /biəneim/
+agnomen, cognomen, cognomentum
+byre /bair/
+bovile, bubile
+by accident /biːæksidənt/
+casualis
+by chance /biːtʃɑːns/
+casualis
+by night /biːnait/
+noctu
+by now /biːnau/
+iam
+cabbage /kæbidʒ/
+brassica, crambe, raphanus
+cabin /kæbin/
+canaba, casa
+cabinet /kæbinət/
+armarium
+cadaver /kədɑːvər/
+cadaver
+calculate /kælkjuleit/
+calculare
+calf /kɑːf/
+vitellus
+call /kɔːl/
+vocare
+camel /kæməl/
+camelus
+canal /kənæl/
+canalis, via
+canary /kənɛəriː/
+passer
+candidate /kændideit/
+candidatus
+candle /kændl/
+candela
+cane‐ /kˈeɪn/
+arundineus, canneus
+cane‐field /kˈeɪn fˈiːld/
+cannetum
+cane /kein/
+1. arundo, baculum, baculus
+2. arundineus, canneus
+3. calamus, canna
+cantharides /kænθæridz/
+cantharis
+capability /keipəbilitiː/
+capacitas
+capture /kæptʃər/
+capere
+card /kɑːd/
+carere
+care /kɛər/
+cura
+careful /kɛəfəl/
+cautus
+carefully /kɛəfuliː/
+cautim
+caress /kəres/
+admulcere, adulare
+carnivorous /kɑːnivərəs/
+carnivorus
+carry /kæriː/
+portare, tulere, vehere
+carry away /kæriːɔːwei/
+asportare
+case /keis/
+1. causa, res
+2. casus
+cashier's stand /kæʃiəzstænd/
+fiscus
+castle /kɑːsl/
+1. arx, turris
+castrate /kæstreit/
+castrare
+cat /kæt/
+feles
+catastrophe /kətæstrəfiː/
+catastropha
+catch /kætʃ/
+1. capere
+2. captus
+catechism /kætəkizəm/
+catechismus
+cattle‐lifter /kˈatəl lˈɪftə/
+abactor
+cattle‐stealer /kˈatəl stˈiːlə/
+abactor
+cause /kɔːz/
+causa
+caution /kɔːʃən/
+1. monere, admonere
+2. cautela, cautio
+cautious /kɔːʃəs/
+cautus
+cave /keiv/
+1. antrum, caverna
+2. caulæ, cavea, cavum, cavus
+cavern /kævən/
+antrum, caverna
+cavity /kævitiː/
+1. antrum, caulæ, cavea, cavum, cavus
+cedar /siːdər/
+1. cedrinus
+2. cedrus
+celebrate /selibreit/
+celebrare
+celebration /selibreiʃən/
+festum
+celery /seləriː/
+apium
+celestial /silestiəl/
+ætherius, cæles, cælestis, cælicus
+cell /sel/
+carcer
+cemetery /semətriː/
+capulus, cimeterium
+censer /sensər/
+turibulum
+centaur /sentɔːr/
+Centaurus
+centipede /sentipt/
+scolopendra
+cerastes /səræsts/
+cerastes
+ceremony /seriməniː/
+1. cæremonia, cærimonia
+certain /sətein/
+cautus, certus
+certainly /səteinliː/
+certe, certim, certo
+certainty /səːtntiː/
+certitudo
+chain /tʃein/
+catena
+chalk /tʃɔːk/
+creta
+chamber /tʃeimbər/
+cella
+chamois /ʃæmwɑː/
+capra, capreolus
+chance /tʃɑːns/
+1. casus
+2. occasio
+change /tʃeindʒ/
+mutare
+channel /tʃænl/
+1. canalis, via
+2. fistula
+chaos /keiɔs/
+chaos
+chapter /tʃæptər/
+caput
+character /kærəktər/
+natura
+charcoal /tʃɑːkoul/
+carbo
+charge /tʃɑːdʒ/
+onus
+charm /tʃɑːm/
+phylacterium, præbia
+charming /tʃɑːmiŋ/
+bellus
+chase away /tʃeisɔːwei/
+abigere
+chasm /kæzəm/
+abruptum, abyssus, crater, fauces
+chaste /tʃeist/
+castus
+chasten /tʃeisn/
+castificare
+chastity /tʃæstitiː/
+castimonia, castitas
+cheese /tʃiːz/
+caseus
+chef /ʃef/
+archimagirus
+cherry‐tree /tʃˈɛɹi tɹˈiː/
+cerasus
+cherry /tʃeriː/
+cerasus
+chest /tʃest/
+1. arca
+2. thorax
+chestnut‐tree /tʃˈɛstnʌt tɹˈiː/
+1. castanea
+chicken /tʃikən/
+gallina
+chicory /tʃikəriː/
+cichorium, pancratium
+chief /tʃif/
+dux
+chiefly /tʃaiflai/
+potissimum
+child /tʃaild/
+proles
+choke /tʃouk/
+astrangulare
+choose /tʃuːz/
+optare
+christen /krisn/
+baptizare
+christening /krisniŋ/
+baptisma, baptismus
+chuck /tʃʌk/
+admulcere, adulare
+cinder /sindər/
+cinis, spodium
+cinnamon /sinəmən/
+casia, cinnamum, cinnamomum
+circle /səːkl/
+1. circus, orbis
+2. circulus
+circumvent /səːkəmvent/
+ambire
+city /sitiː/
+oppidum, urbs
+clandestinely /klændestinliː/
+absconse, arcano, celatim
+clap /klæp/
+applaudere
+clarion /klæriən/
+tuba
+class /klɑːs/
+classis
+clay /klei/
+argilla
+clean /kliːn/
+1. castus, purus, putus
+2. purgare
+cleanse /kliːnz/
+purgare
+clergyman /kləːdʒimən/
+clericus
+clerk /klɑːk/
+amanuensis
+clever /klevər/
+captiosus, trebax, vafer
+climate /klaimət/
+clima
+cloak /klouk/
+mantellum
+close /klouz/
+1. claudere
+2. angustus, artus
+closet /klɔzit/
+armarium
+clothe /klouð/
+vestire
+cloud /klaud/
+ær, nebula, nubes
+clover /klouvər/
+trifolium
+clown /klaun/
+maccus
+cluster /kluːstər/
+fascis
+co‐operate /kˈəʊ ˈɒpəɹˌeɪt/
+collaborare
+coast‐ /kˈəʊst/
+orarius
+coast /koust/
+1. orarius
+2. acta, litus, ora
+coastal /koustl/
+orarius
+cock‐pigeon /kˈɒk pˈɪdʒən/
+columbus
+cock /kɔk/
+gallus
+cockroach /kɔkroutʃ/
+tinea
+coffin /kɔfin/
+arca, capulus
+coherent /kouhiərənt/
+continuus
+coition /kouiʃən/
+clinopale, coetus, coitus
+cold /kould/
+frigus
+collar /kɔlər/
+boiæ
+collateral branch /kəlætərəlbrɑːntʃ/
+bracchium
+colleague /kɔliːg/
+collega
+collection /kəlekʃən/
+caterva, grex
+colony /kɔləniː/
+colonia
+colossal /kəlɔsl/
+Colosseus, Colossicus
+colour /kʌlər/
+1. colorare
+2. color
+coltsfoot /koultsfut/
+1. farferis
+2. farferus
+combination /kɔmbineiʃən/
+adunatio
+come /kʌm/
+venire
+comet /kɔmit/
+cometes, fax
+come about /kʌməbaut/
+accidere
+come close /kʌmklouz/
+proximare
+come closer /kʌmklouzər/
+proximare
+come flocking in /kʌmflɔkiŋin/
+affluere
+come on /kʌmwʌn/
+1. adire
+2. proximare
+commend /kəmend/
+laudare
+common /kɔmən/
+communis
+commonplace /kɔmənpleis/
+abiectus
+commotion /kəmouʃən/
+scandalum
+compact /kəmpækt/
+compactus
+compare /kəmpɛər/
+comparare
+compel /kəmpel/
+coercere
+compensation /kəmpenseiʃən/
+præmium
+competition /kɔmpətiʃən/
+agon, pugna
+complete /kəmpliːt/
+plenus
+concave /kənkeiv/
+cassus, cavus
+conceal /kənsiːl/
+abdere, abscondere, celare
+concern /kənsəːn/
+1. causa
+2. cura
+concert /kənsəːt/
+acroama
+conduct /kɔndʌkt/
+ducere
+confidence /kɔnfidəns/
+fides
+congregate /kɔŋgrigeit/
+coire
+connect /kənekt/
+1. copulare
+2. ligare
+connected /kənektid/
+continuus
+conquer /kɔŋkər/
+profligare, vincere
+consider /kənsidər/
+spectare
+consistent /kənsistənt/
+continuus
+constringent /kənstrindʒənt/
+acerbus, austerus
+consul /kənsl/
+consul
+consumption /kənsʌmpʃən/
+cachexia, phthisis
+consumptive /kənsʌmptiv/
+cachetcta
+container /kənteinər/
+alveus, olla
+contest /kɔntist/
+agon, pugna
+continuous /kəntinjeəs/
+perpetuum
+control /kɔntroul/
+gubernare, regere, regnare
+convert /kənvəːt/
+converti
+cook /kuk/
+coquus, magirus
+cool /kuːl/
+alsus
+cooperate /kouɔpəreit/
+collaborare
+copper /kɔpər/
+1. æneus, aheneus, ærarius, chalceus
+2. æs
+copy /kɔpiː/
+apographon
+cord /kɔːd/
+1. chorda
+2. ceruchus, funis
+coriander /kɔːraiəndər/
+coriandrum
+cork /kɔːk/
+cortex
+corn /kɔːn/
+callum
+cornel /kɔːnel/
+cornum, cornus
+corner /kɔːnər/
+angulus
+corn cockle /kɔːnkɔkl/
+lolium
+corona /kərounə/
+corona
+corporal /kɔːpərəl/
+corporalis, corporeus
+corporeal /kɔːpɔːriəl/
+corporalis, corporeus
+corpse /kɔːps/
+cadaver
+corpulent /kɔːpjulənt/
+carnatus, crassus, obesus
+cottage /kɔtidʒ/
+casa
+cough /kɔf/
+tussis
+counsel /kaunsl/
+1. advocatus, causidicus
+2. monere
+count /kaunt/
+calculare
+counting‐frame /kˈaʊntɪŋ fɹˈeɪm/
+abacus
+country /kʌntriː/
+rus
+countryside /kʌntrisaid/
+rus
+couple /kʌpl/
+combinare
+courage /kʌridʒ/
+cervix
+courier /kuriər/
+cursor
+course /kɔːs/
+catinus, tryblium
+cover /kʌvər/
+operire, tegere
+cow‐ /kˈaʊ/
+bovillus, bovinus, bublus, bubulus
+cow /kau/
+1. bovillus, bovinus, bublus, bubulus
+2. vacca
+cowhouse /kauhaus/
+bovile, bubile
+cowshed /kauʃet/
+bovile, bubile
+crack‐brained /kɹˈak bɹˈeɪnd/
+cerritulus
+cramped /kræmpt/
+angustus, artus
+crawl /krɔːl/
+repere, serpere
+crayfish /kreifiʃ/
+cancer
+craziness /kreizinəs/
+1. amentia, dementia
+crazy /kreiziː/
+amens, astrosus, cerebrosus, Ceritus, Cerritus, demens
+create /kriːeit/
+creare
+creep /kriːp/
+repere, serpere
+crime /kraim/
+crimen, scelus
+croak /krouk/
+coaxare
+crocodile /krɔkədail/
+crocodilus
+cross /krɔs/
+bifurcum, crux
+crow /krau/
+cornix
+crowd /kraud/
+1. massa, multitudo, turba
+crude /kruːd/
+crudus
+cruel /kreəl/
+acerbus, atrox, barbarus, crudelis
+crystal /kristl/
+crystallus
+cry out /kraiaut/
+boare
+cuckoo /kukuː/
+cuculus
+cucumber /kjuːkʌmbər/
+cucumis
+cultivate /kʌltiveit/
+colere
+cunning /kʌniŋ/
+1. captiosus, trebax, vafer
+2. versutia
+cupboard /kʌbəd/
+armarium
+current /kʌrənt/
+1. amnis
+curse /kəːs/
+blasphemare
+curtail /kəːteil/
+breviare
+curved /kəːvd/
+curvus
+cuss /kʌs/
+blasphemare
+custom /kʌstəm/
+mos
+cut /kʌt/
+scalpere, secare
+cylinder /silindər/
+cylindrus
+cymbal /simbl/
+cymbalum
+cypres /saiprəz/
+cupressus, cyparissus
+dad /dæd/
+tata
+daddy /dædiː/
+tata
+daffodil /dæfədil/
+narcissus
+daft /dɑːft/
+cerritulus
+dagger /dægər/
+parazonium, pugio
+daily /deiliː/
+1. cotidianus
+2. cotidie
+danger /deindʒər/
+periculum
+dangerous /deindʒərəs/
+acutus
+dare /dɛər/
+audere
+daring /dəriŋ/
+ferocia
+dark /dɑːk/
+ater, cæruleus, caligineus, caliginosus, obscurus, tenebricosus
+darkness /dɑːknəs/
+caligo, caligatio
+dark blue /dɑːkbluː/
+cæruleus
+darling /dɑːliŋ/
+cicaro
+darn /dɑːn/
+bombax
+date /deit/
+caryota, caryotis
+daughter /dɔːtər/
+filia
+day /dei/
+dies
+dazzle /dæzl/
+cæcare
+dead‐nettle /dˈɛd nˈɛtəl/
+lamium
+dead /ded/
+mortuus
+dear /diər/
+carus
+death /deθ/
+funus, letum, mors, obitus, Orcus
+decapitate /dikæpiteit/
+carnificare
+decide /disaid/
+censere
+deem /diːm/
+1. credere
+2. opinari
+3. spectare
+deep /diːp/
+profundus
+deer‐ /dˈiə/
+cervinus
+deer /diər/
+1. cervinus
+2. cervus
+defecate /defəkeit/
+assidere, cacare
+defend /difend/
+defendere
+deference /defərəns/
+cæremonia, cærimonia
+degree /digriː/
+titulus
+deluge /deljuːdʒ/
+cataclysmus
+demand /dimɑːnd/
+exigere, postulare
+demigod /demigɔd/
+heros, semideus
+demigodess /demigɔds/
+heroine, herois
+den /den/
+antrum, caverna
+deny /dinai/
+abnuere, negare
+deny oneself /dinaiwʌnself/
+abnegare
+depart /dipɑːt/
+abætere, abire, abitere, abscedere
+depth /depθ/
+altum
+desert /dezət/
+arena
+desire /dizaiər/
+optare
+despair /dispɛər/
+1. desperare
+2. desperatio
+despise /dispiz/
+apolactizare
+despot /despɔt/
+dominus
+despotic /dispɔtik/
+tyrannicus
+destroy /distrɔi/
+annihilare, annullare
+devil /devəl/
+antitheus
+devotion /divouʃən/
+cæremonia, cærimonia
+diagram /daiəgræm/
+figura
+diary /daiəriː/
+commentarius
+dictator /dikteitər/
+dictator
+die /diː/
+1. mori
+2. alea, cubus
+different /difrənt/
+absimilis
+dig /dig/
+fodere
+dill /dil/
+anethum
+dim /daim/
+ater, cæruleus, caligineus, caliginosus, obscurus, tenebricosus
+diminutive /diminjutiv/
+parvus
+direct /direkt/
+rectus
+disappear /disəpiər/
+abolescere, aboriri, aborisci, abscedere
+discover /diskʌvər/
+reperire
+disease /diziːz/
+ægritudo, ægror, morbus
+dish /diʃ/
+catinus, tryblium
+dismal /dizməl/
+1. abiectus
+2. acidus, amarus
+dismiss /dizmis/
+ablegare, amandare, relegare
+disobedient /disəbiːdiənt/
+1. inobsequens
+dispose of /dispouzɔf/
+vendere
+district /distrikt/
+1. regio
+2. vicus
+ditch /ditʃ/
+fossa
+divide /divaid/
+abiungere, abrumpere, segregare, seiungere
+divine /divain/
+cælestis, dius, divus, sacer, sanctus
+do /dou/
+facere
+dock /dɔk/
+lapathum, rumex
+doctor /dɔktər/
+clinicus, medicus
+doe /duː/
+cerva
+dog /dɔg/
+canis
+dogberry /dɔgbəriː/
+cornum, cornus
+doll /dɔl/
+pupa
+dolphin /dɔlfin/
+delphin
+donkey‐ /dˈɒŋki/
+asinarius, asininus
+donkey‐driver /dˈɒŋki dɹˈaɪvə/
+agaso, asinarius, onagus
+donkey /dɔŋkiː/
+1. asinarius, asininus
+2. asinus
+door /dɔːr/
+ianua
+doorwoman /dɔːwumən/
+ianitrix
+doubt /daut/
+1. dubitare, addubitare
+2. dubium
+dove /dʌv/
+1. columbula
+2. columba
+do away with /douɔːweiwið/
+relegare
+dragon /drægən/
+draco, serpens
+draw /drɔː/
+æquabilitas
+dreary /driəriː/
+acidus, amarus
+dress /dres/
+vestire
+drink /driŋk/
+bibere
+drinkable /driŋkəbl/
+bibilis
+drive away /draivɔːwei/
+abigere
+dromedary /drɔmədəriː/
+camelus
+droop /druːp/
+pendere
+drop /drɔp/
+1. cadere
+2. cædere
+drunk /drʌŋk/
+appotus
+dry /driː/
+assiccare
+duck‐ /dˈʌk/
+anatinus
+duck /dʌk/
+1. anatinus
+2. anatina
+3. anas
+duck's /dʌkz/
+anatinus
+duck meat /dʌkmiːt/
+anatina
+dull /dʌl/
+brutus
+dung /dʌŋ/
+merda
+during /djeəriŋ/
+dum
+during the night /djeəriŋðnait/
+noctu
+dusk /dʌsk/
+crepusculum
+dust /dʌst/
+pulvis
+dwell /dwel/
+colere, habitare
+dwelling /dweliŋ/
+atrium
+dye /diː/
+color
+each /iːtʃ/
+omnis
+eagle /iːgl/
+aquila
+ear‐drop /ˈiə dɹˈɒp/
+tribacca
+ear /iər/
+1. auris, auricilla, auricula
+2. arista
+earlobe /əːloub/
+auricilla, auricula
+earn back /əːnbæk/
+reparare
+earring /iəriŋ/
+tribacca
+earth /əːθ/
+humus, tellus, terra
+earthquake /əːθkweik/
+ostes, tremor
+earthworm /əːθwəːm/
+lumbricus
+easily /iːziliː/
+facile
+easy /iːziː/
+facilis
+edge /edʒ/
+labrum, limbus, ora
+edging /edʒiŋ/
+labrum, limbus, ora
+education /edʒukeiʃən/
+catechesis
+eel /iːl/
+anguilla
+effort /efət/
+opera
+egg /eg/
+ovum
+eight /eit/
+octo
+eighteen /eitiːn/
+duodeviginti
+eighth /eitθ/
+octavus
+eighty /eitiː/
+octoginta
+elbow /elbou/
+ancon
+elder /eldər/
+sambucus
+elect /ilekt/
+optare
+elegy /elədʒiː/
+ælinos
+element /elimənt/
+1. elementa
+2. basis
+elements /elimənts/
+abecedarium
+elephant‐ /ˈɛlɪfənt/
+barrinus
+elephant /elifɑːnt/
+1. barrinus
+2. barrus, elephantus
+elephantine /elifɑːntain/
+barrinus
+elephant's /elifɑːntz/
+barrinus
+eleven /ilevn/
+undecim
+elk /elk/
+alces
+else /els/
+alius
+elsewhere /elswɛər/
+alibi
+emerge /iməːdʒ/
+apparere, comparere
+emmet /emit/
+formica
+emperor /empərər/
+dominus, imperator
+employ /implɔi/
+uti
+empty /emptiː/
+inanis, vacuus
+enchanter /intʃɑːntər/
+magus
+enchantment /intʃɑːntmənt/
+magia
+end /ənd/
+finis
+ending /endiŋ/
+finis
+endive /endiv/
+cichorium
+endure /indjeər/
+1. patiri
+2. tolerare
+end up /əndʌp/
+advenire, pervenire
+enemy /enəmiː/
+colluctator, hostis
+engine /endʒin/
+machina
+enigma /inigmə/
+ænigma, griphus
+enigmatic character /enigmætikkærəktər/
+ænigma
+enjoyable /indʒɔiəbl/
+acceptabilis
+enlargement /inlɑːdʒmənt/
+accretio
+ennumeration /injuːməreiʃən/
+catalogus
+enough /inʌf/
+satis
+entire /intaiər/
+universus
+entrée /ɛntɹˈeɪ/
+antecenium
+equal /iːkwəl/
+æquus, par
+equality /ikwɔlitiː/
+æquabilitas
+equestrian /ikwestriən/
+caballinus, canterinus
+equilibrium /ekwilibriəm/
+æquilibrium
+err /əːr/
+errare
+errand /erənd/
+nuntius
+error /erər/
+error
+especially /ispəʃiɔːliː/
+potissimum
+essay /esei/
+thesis
+estate /isteit/
+vicus, villa
+estimate /estimət/
+æstimare, appretiare, censere, taxare
+estuary /estʃeəriː/
+bracchium
+eternal /itəːnl/
+æternalis, æternus
+eternity /itəːnitiː/
+æternitas, ævum, ævitas
+ether /iːθər/
+æther
+eunuch /juːnək/
+castratus
+evade /iveid/
+vitare
+even /iːvn/
+1. æquus, planus
+2. par
+evening /iːvniŋ/
+vesper
+event /ivent/
+occasio
+ever /evər/
+semper
+every /evriː/
+omnis
+everybody /evribɔdiː/
+omnis
+everywhere /evriwɛər/
+perubique
+every one /evriːwʌn/
+omnis
+ever since /evərsins/
+a, ab, abs
+exceed /iksiːd/
+antepollere, antestare, antevenire, superare
+except /eksept/
+absque
+exclusively /ikskluːsivliː/
+modo, solum, tantum
+excommunication /ekskəmjuːnikeiʃən/
+anathema
+excrement /ikskrəmənt/
+merda
+executioner /eksikjuːʃənər/
+carnifex
+exhale /eksheil/
+exhalare
+exhortation /eksɔːteiʃən/
+admonitus
+expel /ikspel/
+abigere
+expensive /ikspensiv/
+carus
+expert /ekspəːt/
+artifex
+expire /ikspaiər/
+mori
+expurgate /ekspəgeit/
+castificare
+extensive /ikstensiv/
+1. amplus, capax
+2. latus
+eye /iː/
+oculus
+fabric /fæbrik/
+tela, textile, textura, textus
+face /feis/
+facies, vultus
+facile /fæsail/
+facilis
+faint /feint/
+æger
+fair /fɛər/
+forum
+faith /feiθ/
+fides
+fall /fɔːl/
+1. cadere
+2. casus
+fall ill /fɔːlil/
+ægrescere
+false /fɔːls/
+falsus
+false step /fɔːlsstep/
+casus
+fame /feim/
+1. fama
+2. gloria
+family /fæməliː/
+familia, gens
+famine /fæmin/
+fames
+famous /feiməs/
+famosus
+farewell /fɛəwel/
+ave
+farm /fɑːm/
+vicus, villa
+farmer /fɑːmər/
+1. agoris
+2. colonus
+farming /fɑːmiŋ/
+agricultura, agricultio
+farmland /fɑːmlænd/
+arvum
+fast /fɑːst/
+firmus
+fat /feit/
+1. carnatus, crassus, obesus
+2. pinguis
+3. arvina
+father‐in‐law /fˈɑːðəɹ ɪn lˈɔː/
+socer
+father /fɑːðər/
+pater
+fatherland /fɑːðəlænd/
+patria
+fatherless /fɑːðələs/
+apator
+fatty /fætiː/
+crassus, pinguis
+fault /fɔːlt/
+crimen, culpa
+favor /feivər/
+1. favere
+2. faventia, favor
+favour /feivər/
+1. favere
+2. faventia, favor
+favourable /feivərəbl/
+faustus
+favourite /feivərit/
+favea
+fear /fiər/
+timere
+feed /fiːd/
+alere, nutrire
+feel /fiːl/
+sentire
+fellow /felou/
+vir
+female /fiːmeil/
+1. femineus, femininus
+female angel /fiːmeileindʒl/
+angela
+female martyr /fiːmeilmɑːtər/
+martyria
+female panther /fiːmeilpænθər/
+pardalis
+female pigeon /fiːmeilpidʒən/
+columbula
+female singer /fiːmeilsiŋər/
+cantrix
+female slave /fiːmeilsleiv/
+ancilla, serva
+female stranger /fiːmeilstreindʒər/
+hospita
+female thief /fiːmeilθiːf/
+fur
+feminine /femənin/
+femineus, femininus
+fennel /fenl/
+feniculum
+fertile /fəːtail/
+fecundus
+festival /festivəl/
+festum
+fetch /fetʃ/
+adducere, ferre
+fever /fiːvər/
+febris
+fewer /fjuːər/
+minus
+fiber /faibər/
+fibra
+fibre /faibər/
+fibra
+field /fiːld/
+1. ager
+2. arvum
+fifteen /fiftiːn/
+quindecim
+fifth /fifθ/
+quintus
+fifty /fiftiː/
+quinquaginta
+fig‐tree /fˈɪɡ tɹˈiː/
+1. ficus
+fig /fig/
+ficus
+fight /fait/
+battuere, dimicare, fendere, pugnare
+fighting cock /faitiŋkɔk/
+cicirrus
+figure /figər/
+1. figura
+2. calculare
+file /fail/
+1. limare
+2. lima
+fill /fil/
+opplere
+fillet /filit/
+fascia
+fill in /filin/
+opplere
+fill up /filʌp/
+opplere
+find /faind/
+reperire
+fine /fain/
+1. formosus, pulcher
+2. cardinalis
+finger /fiŋgər/
+digitus
+fir /faiər/
+abies
+fire /faiər/
+ignis, incendium
+firebox /faiəbɔks/
+caminus
+fire on the hearth /faiərwʌnðhɑːθ/
+caminus
+firm /fəːm/
+1. firmus
+2. solidus
+first /fəːst/
+primus
+first name /fəːstneim/
+prænomen
+firth /fəːθ/
+bracchium
+fish /fiʃ/
+piscis
+fishing rod /fiʃiŋroud/
+arundo, calamus
+fist /fist/
+pugnus
+fit /fit/
+apoplexia
+fitness /fitnəs/
+capacitas
+five /faiv/
+quinque
+fix /fiks/
+reparare
+flame /fleim/
+flamma
+flamingo /fləmiŋgou/
+phoenicopterus
+flat /flæt/
+æquus, planus
+flax /flæks/
+linum
+flee /fliː/
+profugere
+flee back /fliːbæk/
+refugere
+flesh /fleʃ/
+caro, corpus
+flight /flait/
+fuga
+flint /flint/
+silex
+float /flout/
+nare, natare
+flock /flɔk/
+grex
+flood /flʌd/
+cataclysmus
+flow /flou/
+1. fluere
+2. amnis
+flower /flauər/
+flos
+flow towards /floutəwɔːdz/
+affluere
+fly /flai/
+1. volare
+2. musca
+fly away /flaiɔːwei/
+avolare
+fog /fɔg/
+caligo
+fold /fould/
+1. plicare
+2. ovile
+folk /fouk/
+plebs, populus
+follow /fɔlou/
+sequi
+fondle /fɔndl/
+admulcere, adulare
+fool /fuːl/
+baceolus
+foolish /fuːliʃ/
+1. demens, stultus
+2. bardus, blennus
+foot /fut/
+pes
+for /fər/
+1. dum
+2. quia, quod
+forbid /fɔːbid/
+prohibire, vetare
+force /fɔːs/
+1. coercere
+2. cervix, ops, vis
+forefather /fɔːfɑːðər/
+abavus, avus
+forehead /fɔːhed/
+frons
+foreign /fɔrən/
+1. advena, adventicius, alienigenus, allophylus, barbarus, bracatus
+2. hospitus
+foreigner /fɔrənər/
+1. advena
+2. barbarus
+3. hospes
+foreign country /fɔrənkʌntriː/
+barbaria, barbaries
+foreign lady /fɔrənleidiː/
+advena
+foreign woman /fɔrənwumən/
+advena
+foreleg /fɔːrileig/
+antepes
+forest /fɔrist/
+lustrum, silva
+forest path /fɔristpɑːθ/
+callis
+fork /fɔːk/
+furca
+form /fɔːm/
+facies, forma
+formerly /fɔːməliː/
+ante, antehac
+fortification /fɔːtifikeiʃən/
+castellum, castrum
+fortune /fɔːtʃuːn/
+fortuna
+forty /fɔːtiː/
+quadraginta
+for the rest /fərðrest/
+ceterum
+foundation /faundeiʃən/
+basis
+four /fɔːr/
+quattuor
+fourteen /fɔːtiːn/
+quattuordecim
+fourth /fɔːθ/
+quartus
+fowl /faul/
+gallina
+fox /fɔks/
+vulpes
+fragment /frægmənt/
+fragmentum
+freezing cold /friːziŋkould/
+gelu
+frequently /frikwentliː/
+sæpe
+friend /frend/
+1. amica
+2. amicus, cultor
+friendly /frendliː/
+1. comis, lepidus
+2. amicus
+friendship /frendʃip/
+amicitia, hospitium
+fringe /frindʒ/
+labrum, limbus, ora
+frog /frɔg/
+rana
+from /frɔm/
+1. a, ab, abs
+2. e, ex
+from where /frɔmwɛər/
+unde
+frontier /frʌntiər/
+finis, limes, ora
+front paw /frʌntpɔː/
+antepes
+frost /frɔst/
+gelu
+fruit‐tree /fɹˈuːt tɹˈiː/
+pomum, pomus
+fruit /fruːt/
+fructus, pomum
+fruitful /fruːtfəl/
+fecundus
+full /ful/
+plenus
+function /fʌŋkʃən/
+officium
+fund /fʌnd/
+fiscus
+fungus /fʌŋgəs/
+fungus
+furnace /fəːnis/
+caminus
+futile /fjuːtail/
+vanus
+fuzzy /fʌziː/
+caliginosus
+gadfly /gædflai/
+asilus
+gag /gæg/
+iocatio, ioculatio, iocus
+gain /gein/
+lucrum
+gall /geil/
+bilis
+gamecock /geimkɔk/
+cicirrus
+gammer /gæmər/
+anus, cinis
+gaol /dʒeil/
+phylaca
+garden /gɑːdn/
+hortus
+garlic /gɑːlik/
+alium, allium
+gate /gət/
+porta
+gateway /geitwei/
+porta
+gather /gæðər/
+coire
+gaunt /gɔːnt/
+1. angularis, angulatus, angulosus
+2. petilus
+gazelle /gəzel/
+bubalus
+gelding /geldiŋ/
+canterius
+general /dʒenrəl/
+catholicus
+generation /dʒenəreiʃən/
+ætas
+gentle /dʒentl/
+suavis
+gentleman /dʒentlmən/
+dominus
+gently /dʒentliː/
+cautim
+geography /dʒiɔgrəfiː/
+geographia
+germinate /dʒəːmineit/
+germinare
+get /get/
+1. conciliare
+2. advenire, pervenire
+3. capere
+get hungry /gethʌŋgriː/
+adesurire
+get rid of /getraidɔf/
+relegare
+ghastly /gɑːstliː/
+acidus, amarus
+ghost /goust/
+lamina, larva, phasma
+gift /gift/
+donum
+giraffe /dʒirɑːf/
+panthera
+girdle /gəːdl/
+ala, copula, zona
+girl /gəːl/
+puella, puera
+give /giv/
+dare, donare
+give notice /givnoutis/
+annuntiare
+glad /glæd/
+lætus
+glass /glɑːs/
+vitrum
+glory /glɔːriː/
+gloria
+glow /glou/
+ardere, calere, flagrare
+glow with heat /glouwiðhiːt/
+ardere, calere, flagrare
+gnaw /nɔː/
+rodere
+go /gou/
+1. ire, vadere
+2. vehere
+goblet /gɔblit/
+calix, cyathus
+god /gɔd/
+deus, divus
+gold‐coloured /ɡˈəʊld kˈʌləd/
+aureus, aurulentus, chrysizon
+gold‐mine /ɡˈəʊld mˈaɪn/
+auraria
+gold /gould/
+1. aurarius, aureus, chryseus
+2. aurum, chrysos
+golden /gouldən/
+1. aurarius, aureus, chryseus
+2. auricomus
+3. aurulentus, chrysizon
+goldfinch /gouldfintʃ/
+acalanthis, carduelis
+goldsmith /gouldsmiθ/
+aurifex
+good‐for‐nothing /ɡˈʊd fɔː nˈʌθɪŋ/
+ballio
+good‐natured /ɡˈʊd nˈeɪtʃəd/
+comis, lepidus
+good /gud/
+1. bonus
+2. bonum
+goodbye /gudbai/
+ave
+goose /guːs/
+anser
+gourd /geəd/
+cucurbita
+gout /gaut/
+podagra
+govern /gʌvn/
+gubernare, regere, regnare
+government /gʌvnmənt/
+regimen, regimentum
+go around /gouəraund/
+ambire
+go away /gouɔːwei/
+abætere, abire, abitere, abscedere
+go for a walk /goufərəwɔːk/
+ambulare
+grammar /græmər/
+grammatica
+grandfather /grænfɑːðər/
+avus
+grandmother /grænmʌðər/
+avia
+grape /greip/
+acinus, botrus, botrys
+grapevine /greipvain/
+vitis
+grapple /græpl/
+capere
+grass /grɑːs/
+herba, gramen
+grasshopper /grɑːshɔpər/
+locusta
+grave‐mound /ɡɹˈeɪv mˈaʊnd/
+cinis
+grave /greiv/
+tumba
+gravel /grævəl/
+silex
+graveyard /greivjɑːd/
+capulus, cimeterium
+grease /griːs/
+arvina
+greasy /griːsiː/
+crassus, pinguis
+great‐grandfather /ɡɹˈeɪt ɡɹˈandfɑːðə/
+abavus, avus
+great /greit/
+1. cardinalis
+2. grandis, magnus
+greatgrandchild /griːtgræntʃaild/
+abnepos
+green /griːn/
+cæruleus
+greenweed /griːənwiːd/
+genista
+greet /griːt/
+salutare
+grey /grei/
+canens, canus, ravus
+grief /griːf/
+ægrimonia, mæstitia
+grisly /grizliː/
+acidus, amarus
+groan /groun/
+gemere
+groom /gruːm/
+agaso
+grotto /grɔtou/
+antrum, caverna
+ground /graund/
+humus
+group /gruːp/
+caterva, grex
+grow /grou/
+1. accidere
+2. adolescere, crescere, accrescere
+3. colere
+growth /grouθ/
+accretio
+grow sour /grousauər/
+acescere
+grub /grʌb/
+1. fodere
+2. uterus
+gruesome /gruːsəm/
+abominabilis, atrox, aversabilis
+guard /gɑːd/
+gustos
+guelder rose /gəldərrouz/
+viburnum
+guess /ges/
+putare
+guest /gest/
+hospes, hospitator
+guide /gaid/
+ducere
+guilt /gilt/
+crimen, culpa
+gulf /gʌlf/
+abruptum, abyssus, crater, fauces
+habit /hæbit/
+mos
+haddock /hædək/
+asellus
+hair /hɛər/
+capillus
+hairpiece /hɛəpiːs/
+caliandrum, caliendrum, capillamentum
+hair ribbon /hɛərribən/
+fascia
+halcyon /hælsiən/
+1. alcedo, alcyon
+halo /heilou/
+halos
+hammer /hæmər/
+malleus, marcus
+hand /hænd/
+manus
+handsome /hænsəm/
+formosus, pulcher
+hang /hæŋ/
+pendere
+hangman /hæŋmən/
+carnifex
+hang onto /hæŋɔntə/
+habere, tenere
+happen /hæpən/
+1. accidere
+happy /hæpiː/
+lætus
+harbor /hɑːbər/
+portus
+harbour /hɑːbər/
+portus
+hard /hɑːd/
+1. durus
+hardly /hɑːdliː/
+ægre
+haricot /hærikɔt/
+phaselus
+harmony /hɑːməniː/
+harmonia
+harp /hɑːp/
+harpa
+harpy /hɑːpiː/
+Harpyia
+harsh /hɑːʃ/
+1. acerbus
+2. austerus
+hate /heit/
+1. odisse
+2. odium
+have /hæv/
+habere
+have compassion on /hævkəmpæʃənwʌn/
+compati
+have got /hævgɔt/
+habere
+hawk /hɔːk/
+accipiter
+hay /hei/
+fenum
+hazard /hæzəd/
+casus
+hazel‐tree /hˈeɪzəl tɹˈiː/
+corylus
+hazel /heizl/
+corylus
+he‐goat /hiː ɡˈəʊt/
+caper, hircus
+head /hed/
+caput
+heading /hediŋ/
+titulus
+health /helθ/
+sanitas
+healthy /helθiː/
+sanus
+heap /hiːp/
+1. massa, multitudo, turba
+2. caterva, grex
+hear /hiər/
+audire
+hearsay /hiəsei/
+fama
+heart /hɑːt/
+cor
+hearth /hɑːθ/
+caminus, focus
+heat /hiːt/
+caldor, calor
+heaven /hevn/
+æther, æthra, axis, cælum
+heavenly /hevnliː/
+ætherius, cæles, cælestis, cælicus
+heavenly body /hevnliːboudiː/
+aster, astrum
+heavy /heviː/
+brutus, gravis
+heel /hiːl/
+calx, calcanium
+height /hait/
+altitudo, altum
+heir /ɛər/
+heres
+hello /helou/
+ave
+helmet /helmit/
+cassis
+help /help/
+1. adiuvare, adiutare, iuvare
+2. auxilium, ops
+helper /helpər/
+assessor, auxiliator, minister
+hemlock /hemlɔk/
+cicuta
+hemp /hemp/
+cannabis
+herald /herəld/
+ceryx
+herb /həːb/
+herba, gramen
+herd /həːd/
+1. caterva, grex
+here /her/
+hinc, huc
+hermit /həːmit/
+cellulanus
+hero /hiərou/
+heros
+heroin /herɔin/
+heroine, herois
+heroine /herouin/
+heroine, herois
+hey /hei/
+heu
+hide /haid/
+abdere, abscondere, celare
+hideous /hidiəs/
+abominabilis, atrox, aversabilis
+high /hai/
+altus, arduus, celsus
+hill /hil/
+collis
+hillside /hilsit/
+clinamen
+hind /haind/
+cerva
+hinny /hiniː/
+burdo
+hip /hip/
+coxa, coxendix, femur
+hippo /hipou/
+hippopotamus
+hippopotamus /hipəpɔtəməs/
+hippopotamus
+hired house /haiədhaus/
+meritorium
+hit /hit/
+battuere, fligere, pellere, pulsare
+hither /hiðər/
+hinc, huc
+hoarse /hɔːs/
+raucus
+hog /hɔg/
+maialis, porcus
+hold /hould/
+habere, tenere
+hole /houl/
+1. fossa
+2. cavum, cavus
+holiness /houlinəs/
+cæremonia, cærimonia
+hollow /hɔlou/
+cassus, cavus
+holly /hɔliː/
+ilex
+holy /houliː/
+sacer, sacratus, sanctus
+holy deed /houliːdiːd/
+cæremonia, cærimonia
+holy object /houliːəbdʒekt/
+sacrum
+honey /hʌniː/
+mel
+honeycomb /hʌnikoum/
+cerium, favus
+honor /ɔnər/
+honor
+honour /ɔnər/
+honor
+hoof /huːf/
+calx
+hoop /huːp/
+circulus, trochus
+hoopoo /houɔpuː/
+upupa
+hooter /huːtər/
+cornu
+hope /houp/
+1. sperare
+2. spes
+horn /hɔːn/
+cornu
+horned viper /hɔːndvaipər/
+cerastes
+hornet /hɔːnit/
+crabro
+horrible /hɔrəbl/
+1. abominabilis, atrox, aversabilis
+2. acidus, amarus
+horror /hɔrər/
+1. abominatio
+2. horror
+horse‐ /hˈɔːs/
+caballinus, canterinus
+horse‐fly /hˈɔːs flˈaɪ/
+asilus
+horse /hɔːs/
+1. caballinus, canterinus
+2. caballus, equus
+hospitable /hɔspitəbl/
+hospitalis, hospitus
+hospitality /hɔspitælitiː/
+hospitalitas
+host /houst/
+copa
+hostage /hɔstidʒ/
+obses
+hostess /houstis/
+1. copa
+2. hospita
+hostile /hɔstail/
+hostifer, hosticus, hostilis
+hour /auər/
+hora
+house /haus/
+ædes, domus
+housefly /hausflai/
+musca
+housewife /hauswaif/
+domina
+house of ill fame /hausɔfilfeim/
+latrina, lustrum, meritorium
+house to let /haustoulet/
+meritorium
+however /hauwevər/
+at, tamen
+howl /haul/
+bovinari
+huddle /hʌdl/
+cohabitare
+huge /hjuːdʒ/
+Colosseus, Colossicus
+human /hjuːmən/
+humanus
+human being /hjuːmənbiːiŋ/
+homo
+hump /hʌmp/
+gibba
+hundred /hʌndrəd/
+centum
+hundred thousand /hʌndrədθauznd/
+centum milia
+hunger /hʌŋgər/
+fames
+hurricane /hʌrikən/
+catægis
+hut /hʌt/
+canaba, casa
+hyaena /haiiːnə/
+hyæna
+hymn /him/
+hymnus
+hysterical /histerikl/
+hystericus
+ibex /aibeks/
+1. ægoceros, petro
+ibis /aibiz/
+ibis
+if /aif/
+si
+ill /il/
+æger, ægrotus
+illness /ilnəs/
+ægritudo, ægror, morbus
+image /imidʒ/
+1. imago
+2. figura
+immensely rich /imensəliːritʃ/
+zaplutus
+important /impɔːtnt/
+gravis
+incense /insens/
+tus
+incensory /insensəriː/
+turibulum
+incest /insest/
+incestum
+incite /insait/
+concitare
+increase /inkriːs/
+1. accrescere
+2. accretio
+incubate /inkjubeit/
+incubare
+indicate /indikeit/
+monstrare
+indication /indikeiʃən/
+1. ales, avis, omen
+indivisible /indivizəbl/
+indivisibilis
+inexplicable /iniksplikəbl/
+inexplanabilis
+infertile /infəːtail/
+1. sterilis
+ink /iŋk/
+atramentum
+innkeeper /inkiːpər/
+copa
+insane /insein/
+amens, astrosus, cerebrosus, Ceritus, Cerritus, demens
+insanity /insænitiː/
+1. amentia, dementia
+instead of /instidɔf/
+pro
+insubordinate /insəbɔːdineit/
+inobsequens
+intercessor /intəsesər/
+advocatus, causidicus
+intoxicated /intɔksikeitid/
+appotus
+invite tenders for /invaittendəzfər/
+ablocare
+invoke /invouk/
+advocare
+in a way /inəwei/
+quasi
+in consequence of /inkɔnsikwənsɔf/
+a, ab, abs
+in front of /infrʌntɔf/
+ante, præ, pro
+in the morning /inðmɔːniŋ/
+mane
+in the presence of /inðprizensɔf/
+apud
+iron /aiən/
+ferrum
+island /ailənd/
+insula
+ivy /aiviː/
+hedera
+jail /dʒeil/
+phylaca
+javelin /dʒævlin/
+curis, cuspis, matara, taxus, tragula, veru, verutum
+jaw /dʒɔː/
+bucca, mala
+jawbone /dʒɔːboun/
+bucca, mala
+jeer at /dʒiəreit/
+illudere
+jenny‐ass /dʒˈɛni ˈas/
+asella
+jest /dʒest/
+iocare
+jester /dʒestər/
+maccus
+job /dʒɔb/
+1. labor
+2. officium
+join /dʒɔin/
+1. copulare
+2. ligare
+3. adunare
+4. coire
+joining /dʒɔiniŋ/
+adunatio
+joint /dʒɔint/
+1. artus
+2. communis
+joke /dʒouk/
+1. iocare
+2. iocatio, ioculatio, iocus
+journey /dʒəːniː/
+via
+judge /dʒʌdʒ/
+censere, iudicare
+jug /dʒʌg/
+1. aqualis
+2. olla
+3. alveus
+jump /dʒʌmp/
+salire
+junction /dʒʌŋkʃən/
+adunatio
+just /dʒʌst/
+modo, solum, tantum
+keel /kiːl/
+carina
+kerchief /kəːtʃif/
+calautica
+key /kiː/
+clavis
+kidney /kidniː/
+ren
+kill /kil/
+mortificare, necare, occidere
+kiln /kiln/
+caminus
+kind /kaind/
+comis, lepidus
+king /kiŋ/
+rex
+kingdom /kiŋdəm/
+regnum
+kingfisher /kiŋfiʃər/
+1. alcedo, alcyon
+kingship /kiŋʃip/
+regnum
+kiss /kis/
+1. basiare
+2. basiatio, basium, philema
+kitchen /kitʃin/
+culina
+kite /kait/
+miluus
+klaxon /klæksn/
+cornu
+knee /niː/
+genu, poples
+knot /nɔt/
+nodare
+know /nou/
+scire
+know how /nouhau/
+scire
+lad /leid/
+puer
+laddie /lædiː/
+puer
+lake /leik/
+lacus
+lamb /læm/
+1. agninus
+2. agnellina, agnina
+3. agna
+lame /leim/
+catax, claudus
+lament /læmənt/
+lamentari
+lance /lɑːns/
+abies, framea, phalarica
+land /lænd/
+humus, tellus, terra
+landlady /lændleidiː/
+copa
+landlord /lændlɔːd/
+copa
+land tortoise /lændtɔːtouis/
+chersus
+language /læŋgwidʒ/
+lingua
+lantern /læntən/
+lanterna
+larch /lɑːtʃ/
+larix
+large /lɑːdʒ/
+grandis, magnus
+lark /lɑːk/
+alauda
+larkspur /lɑːkspəːr/
+vaccinium
+larva /lɑːvə/
+uterus
+lass /læs/
+puella, puera
+late /leit/
+serus
+laud /lɔːd/
+laudare
+laughter /lɑːftər/
+risus
+laurel /lɔrəl/
+laurus
+lavender /lævəndər/
+casia
+law /lɔː/
+lex
+lawsuit /lɔːsuːt/
+causa
+lawyer /lɔːjər/
+advocatus, causidicus
+laxative /læksətiv/
+catharticum
+lay down /leidaun/
+ponere
+lay hold of /leihouldɔf/
+capere
+lazy /leiziː/
+piger
+lead /led/
+1. ducere
+2. molybdus, plumbum
+leader /liːdər/
+dux
+leaf /liːf/
+folium
+lean /liːn/
+petilus
+leap /liːp/
+salire
+leasurely /leʒəliː/
+lente
+leather /leðər/
+corium
+leave /liːv/
+abætere, abire, abitere, abscedere
+leech /liːtʃ/
+hirudo
+leek /liːk/
+alium, allium
+leg /leg/
+crus
+legion /lidʒən/
+legio
+lemon‐tree /lˈɛmən tɹˈiː/
+citrus
+less /les/
+minus
+let /let/
+ablocare
+letter /letər/
+1. charta, epistola, littera
+lettuce /letis/
+thridax
+level /levəl/
+1. æquus, planus
+2. par
+lever /liːvər/
+levare
+lewd /ljuːd/
+incestus
+lewdly /ljuːdliː/
+incaste
+librarian /laibrɛəriən/
+bibliothecarius
+lie /liː/
+mentiri
+life /laif/
+vita
+lift /lift/
+levare
+light /lait/
+1. lumen, lux
+2. æger
+lighten /laitn/
+fulgere
+lightly /laitliː/
+cautim
+lightning /laitniŋ/
+fulmen
+like that /laikðæt/
+sic
+lily /liliː/
+lilium
+lime‐ /lˈaɪm/
+tiliaceus, tiliagineus, tiliaris
+lime‐tree /lˈaɪm tɹˈiː/
+tilia
+lime /laim/
+1. calx
+2. tiliaceus, tiliagineus, tiliaris
+limit /limit/
+finis, limes, ora
+linden‐tree /lˈɪndən tɹˈiː/
+tilia
+line /lain/
+linea
+lineage /liniidʒ/
+origo
+linguistic /liŋgwistik/
+grammaticus
+lion /laiən/
+leo
+lip /lip/
+labea, labia, labium, labrum
+liquidate /likwideit/
+mortificare, necare, occidere
+lira /liərə/
+chelys, lyra
+list /list/
+caudex, codex
+listen /lisn/
+auscultare
+listener /lisnər/
+audiens
+little /litl/
+parvus
+little bird /litlbəːd/
+aucella, avicula
+little boat /litlbout/
+acatium
+little owl /litlaul/
+bubo
+little stick /litlstik/
+bacillum
+live /laiv/
+1. colere, habitare
+2. vivere
+liver /livər/
+hepar
+living‐room /lˈɪvɪŋ ɹˈuːm/
+atrium
+load /loud/
+onus
+loaf /louf/
+panis
+loathe /louð/
+abominare, abominari
+lobe of the ear /loubɔfðiər/
+auricilla, auricula
+lobster /lɔbstər/
+locusta
+location /loukeiʃən/
+locus
+loch /lɔk/
+lacus
+lock /lɔk/
+1. cataracta
+2. claudere
+lofty /lɔftiː/
+altus, arduus, celsus
+long /lɔŋ/
+longus
+look /luk/
+1. aspectamen, facies
+2. spectare
+look at /lukeit/
+spectare
+loopy /luːpiː/
+cerritulus
+lord /lɔːd/
+dominus
+loss /lɔs/
+zamia
+louse /laus/
+pedis
+love /lʌv/
+1. amare
+2. agape, amor, caritas
+3. ætaluta
+lovely /lʌvliː/
+1. acceptabilis
+2. formosus, pulcher
+3. aureus, basilicus
+4. carus
+5. bellus
+lover /lʌvər/
+amator
+low /lou/
+brevis
+lower‐arm /lˈəʊəɹ ˈɑːm/
+bracchium
+lower part of the body /louərpɑːtɔfðboudiː/
+abdomen
+lump /lʌmp/
+fragmentum
+lunacy /luːnəsiː/
+1. amentia, dementia
+lunar /luːnər/
+lunaris
+lunatic /luːnətik/
+cerebrosus
+lung /lʌŋ/
+pulmo
+lupine /luːpain/
+lupa
+lust /lʌst/
+libido
+lute /luːt/
+barbitos
+luxury /lʌkʃəriː/
+luxus
+lynx /liŋks/
+lynx
+lyre /laiər/
+chelys, lira
+lyric /lirik/
+textus
+machine /məʃiːn/
+machina
+mad /meid/
+amens, astrosus, cerebrosus, Ceritus, Cerritus, demens
+madness /mædnəs/
+1. amentia, dementia
+magic /mædʒik/
+1. magicus, magus
+2. magia
+magician /mədʒiʃən/
+magus
+magpie /mægpai/
+pica
+maid /meid/
+ancilla, ancula
+mainly /meinliː/
+potissimum
+majoram /meidʒərəm/
+amaracus
+make /meik/
+facere
+make a mistake /meikəmisteik/
+errare
+make a note /meikənout/
+annotare
+make bitter /meikbitər/
+amarare
+make clean /meikkliːn/
+purgare
+make fun of /meikfənɔf/
+illudere
+make love /meiklʌv/
+battuere
+make use of /meikjuːzɔf/
+uti
+make war /meikər/
+bellare, bellari, belligerare
+male /meil/
+mas
+male cook /meilkuk/
+coquus, magirus
+man /mein/
+1. homo
+2. vir
+manner /mænər/
+via
+mantle /mæntl/
+mantellum
+maple‐ /mˈeɪpəl/
+acernus
+maple /meipl/
+1. acernus
+2. acer
+marble /mɑːbl/
+lapis, marmor
+marigold /mærigould/
+caltha, chrysanthes
+maritime /mæritaim/
+æquoreus, maritimus, thalassicus
+mark /mɑːk/
+signum
+market /mɑːkit/
+forum
+market trader /mɑːkittreidər/
+æruscator
+marsh /mɑːʃ/
+lama, lustrum, palus
+marten /mɑːtn/
+martes
+martial /mɑːʃl/
+bellator, bellatrix, bellax, bellicosus
+martyr /mɑːtər/
+1. martyria
+2. martyr
+marvel /mɑːvəl/
+mirari
+marvel at /mɑːvəleit/
+mirari
+mass /mæs/
+1. massa, multitudo, turba
+master /mɑːstər/
+dominus
+masturbate /mæstəbeit/
+masturbari
+match /mætʃ/
+combinare
+mathematician /mæθəmətiʃən/
+mathematicus
+mathematics /mæθəmætiks/
+mathematica
+matter /mætər/
+1. causa, res
+2. casus
+3. materia
+mattress /mætrəs/
+sisurna
+mature /mətjeər/
+maturus
+maybe /meiib/
+fortasse
+mayhap /meiieip/
+fortasse
+meager /miigər/
+petilus
+mean /miːn/
+medius
+measure /meʒər/
+metiri
+meat /miːt/
+caro, pulpa
+meet /miːt/
+coire
+melody /melədiː/
+canor
+memory /meməriː/
+memoria
+message /mesidʒ/
+nuntius
+metal /metl/
+metallum
+method /meθəd/
+via
+metropolis /mətrɔpəlis/
+metropolis
+middle /midl/
+medius
+migrate /miːgreit/
+migrare
+military /militriː/
+bellatorius, bellicus
+milk /milk/
+lac
+millet /milit/
+milium
+million /miliən/
+decies centena milia
+mind /maind/
+mens
+mine /main/
+metallum
+mingle /miŋgl/
+miscere
+mint /mint/
+menta
+miscarriage /miskæridʒ/
+abortus
+miser /mizər/
+avarus
+miserable /mizrəbl/
+malus, phaulius
+miserliness /maizəlinəs/
+avaritia, avarities
+miserly /maizəliː/
+avarus
+mist /mist/
+caligo
+mistake /misteik/
+error
+mistress /mistris/
+domina
+misty /mistiː/
+caliginosus
+mix /miks/
+miscere
+moan /moun/
+gemere
+mock /mɔk/
+illudere
+mode /moud/
+via
+mole /moul/
+talpa
+monastery /mənæstəriː/
+cenobium, monasterium
+money‐box /mˈʌni bˈɒks/
+fiscus
+money‐grubber /mˈʌni ɡɹˈʌbə/
+accipiter
+money /mʌniː/
+æs, pecunia
+money box /mʌniːbɔks/
+fiscus
+monk /mʌŋk/
+cenobita, monachus, nonnus
+monkey /mʌŋkiː/
+cercops, clura, simia
+monkshood /mʌŋkʃud/
+aconitum
+monogamy /mənɔgəmiː/
+monogamia
+monopoly /mənɔpəliː/
+monopolium
+monster /mɔnstər/
+belua
+month /mʌnθ/
+mensis
+monument /mɔnjumənt/
+memoranculum, monumentum, mnemosynon, tropæum
+moon /muːn/
+luna
+moose /muːs/
+alces
+more /mɔːr/
+plus
+moreover /mɔːriːouvər/
+ceterum
+mores /mɔːz/
+mos
+mortgage /mɔːgidʒ/
+hypotheca
+moss /mɔs/
+muscus
+moth /mɔθ/
+blatta, tinea
+mother‐in‐law /mˈʌðəɹ ɪn lˈɔː/
+socrus
+mother /mʌðər/
+mater
+mountain‐ash /mˈaʊntɪn ˈaʃ/
+sorbus
+mountain‐ash berry /mˈaʊntɪn ˈaʃ bˈɛɹi/
+sorbum
+mountain /mauntn/
+mons
+mountain path /mauntnpɑːθ/
+callis
+mouse /maus/
+mus
+mouth /mauθ/
+1. bucca, os
+move /muːv/
+movere
+mucus /mjuːkəs/
+mucus, virus
+mud /mʌd/
+cænum, limus, lutum
+mule /mjuːl/
+hinnus
+multitude /mʌltitjuːd/
+1. massa, multitudo, turba
+murk /məːk/
+caligo, caligatio
+muscle /mʌsl/
+musculus, nervus
+mushroom /mʌʃrum/
+1. fungus
+2. boletus
+music /mjuːzik/
+cantus
+must /mʌst/
+mustum
+mustard /mʌstəd/
+saurion
+myrrh /məːr/
+murra, myrrha
+mysterious /mistiəriəs/
+arcanus
+mysteriousness /mistiəriəsnəs/
+ænigma
+nail /neil/
+clavus
+name /neim/
+nomen, vocabulum
+nape /neip/
+cervix, collum
+narcissus /nɑːsisəs/
+narcissus
+narrate /nəreit/
+narrare
+narrow /nærou/
+angustus, artus
+nasty /nɑːstiː/
+1. acidus, amarus
+2. turpis
+3. malus, phaulius
+nation /næʃən/
+1. gens, natio
+2. plebs, populus
+native /neitiv/
+1. autochton
+2. indigena
+nature /neitʃər/
+natura
+near /niər/
+apud
+nearby /niəbiː/
+apud
+nearly /niːliː/
+fere, pæne, prope
+near to /niərtou/
+apud
+neck /nek/
+cervix, collum
+need /niːd/
+requirere
+needle /niːdl/
+1. acus
+neigh /nei/
+hinnire
+neighbourhood /neibəhud/
+vicus
+neither /naiðər/
+nemo, nullus
+nerve /nəːv/
+nervus
+nettle /netl/
+urtica
+never /nevər/
+nunquam
+nevertheless /nivəːθləs/
+at, tamen
+new /njuː/
+novus
+next to /neksttou/
+apud
+nice /nais/
+1. acceptabilis
+2. bonus
+nickname /nikneim/
+agnomen, cognomen, cognomentum
+niggard /nigəd/
+avarus
+night /nait/
+nox
+nightingale /naitiŋgeil/
+ædon, lucinia, lucinius
+nine /nain/
+novem
+nineteen /naintiːn/
+undeviginti
+ninety /naintiː/
+nonaginta
+ninth /nainθ/
+nonus
+no‐one /nˈəʊ wˌɒn/
+nemo, nullus
+no /nou/
+non
+nobody /noubədiː/
+nemo, nullus
+none /nɔn/
+nemo, nullus
+nonsense /nɔnsens/
+alogia
+northern /nɔːðən/
+borealis, celsus
+nose /nouz/
+naris, nasus
+nostril /nɔstrəl/
+naris
+not /nout/
+non
+note /nout/
+annotare
+nothing /nʌθiŋ/
+nihil
+notify /noutifai/
+monere
+not easily /noutiːziliː/
+ægre
+nourish /nʌriʃ/
+alere, nutrire
+novel /nɔvəl/
+novus
+now /nau/
+1. hui
+2. nunc
+no doubt /noudaut/
+certe, haud dubie
+number /nʌmbər/
+numerus
+numeral /njuːmərəl/
+numerus
+nun /nʌn/
+nonnus, sanctimonialis
+nurse /nəːs/
+alere
+nut /nʌt/
+calva
+nuts /nʌts/
+1. amens, astrosus, cerebrosus, Ceritus, Cerritus, demens
+2. cerritulus
+oak‐wood /ˈəʊk wˈʊd/
+1. æsculetum
+2. robur
+oak /ouk/
+1. quercus
+2. robur
+oar /ɔːr/
+remus
+oath /ouθ/
+ius
+oats /outs/
+avena
+obey /əbei/
+obedire, parere
+obtain /əbtein/
+conciliare
+obtuse /əbtjuːs/
+brutus
+occur /əkəːr/
+accidere
+occurence /əkjeərəns/
+occasio
+odor /oudɔːr/
+odor
+odour /oudər/
+odor
+of /ɔf/
+a, ab, abs
+office /ɔfis/
+officium
+offspring /ɔfspriŋ/
+proles
+often /ɔfn/
+sæpe
+of Actium /ɔfækʃaim/
+Actiacus
+of an alder /ɔfænɔːldər/
+alneus
+of an ass /ɔfænəs/
+asinarius, asininus
+of an elephant /ɔfænelifɑːnt/
+barrinus
+of a beet /ɔfəbiːt/
+betaceus
+of a bird /ɔfəbəːd/
+avitus
+of a cedar /ɔfəsiːdər/
+cedrinus
+of a deer /ɔfədiər/
+cervinus
+of a demigod /ɔfədemigɔd/
+heroicus, semideus
+of a duck /ɔfədʌk/
+anatinus
+of a horse /ɔfəhɔːs/
+caballinus, canterinus
+of a lime‐tree /əvə lˈaɪm tɹˈiː/
+tiliaceus, tiliagineus, tiliaris
+of a maple /ɔfəmeipl/
+acernus
+of a pig /ɔfəpig/
+porcarius
+of a spider /ɔfəspaidər/
+araneus
+of a star /ɔfəstɑːr/
+astralis
+of a tree /ɔfətriː/
+arboreus
+of a wild boar /ɔfəwaildbɔːr/
+aprugnus
+of lamb /ɔflæm/
+agninus
+of sand /ɔfsænd/
+arenaceus, arenarius, arenosus
+of silk /ɔfsilk/
+bombycinus
+of steal /ɔfstiːl/
+chalybæus
+of the body /ɔfðboudiː/
+corporalis, corporeus
+of the coast /ɔfðkoust/
+orarius
+of the sea /ɔfðsiə/
+æquoreus, maritimus, thalassicus
+of the sun /ɔfðsn/
+solaris
+of the winter /ɔfðwintər/
+brumalis, hiemalis
+of two colours /ɔftwoukʌləz/
+bicolor
+of water /ɔfwɔːtər/
+aqualis, aquarius
+oh /ɔ/
+a, ah, ai, hei, hem, heu
+oil /ɔil/
+oleum
+okay /oukei/
+1. bonus
+2. bene
+old /ould/
+1. anus, vetus, vetustus
+old woman /ouldwumən/
+anus, cinis
+olive‐tree /ˈɒlɪv tɹˈiː/
+1. olea, oliva
+olive /ɔliv/
+olea, oliva
+omen /oumen/
+1. ales, avis, omen
+omnipotent /ɔmnipətənt/
+omnipotens
+on /wʌn/
+a, ab, abs
+onager /ɔnidʒər/
+onagrus
+one /wʌn/
+1. aliquis
+2. una, unum, unus
+onerous /ɔnərəs/
+brutus, gravis
+one hundred /wʌnhʌndrəd/
+centum
+one thousand /wʌnθauznd/
+mille
+onion /ʌniən/
+bulbus, cæpa, cæpe
+only /ounliː/
+1. modo, solum, tantum
+2. solus
+onyx /ɔniks/
+onyx
+on top /wʌntoup/
+super
+opine /əpain/
+opinari
+opportunity /ɔpətjuːnitiː/
+occasio
+oppress /əpres/
+premere
+or /ər/
+aut
+orache /əræ/
+blitum
+orbit /ɔːbit/
+cavea
+ore /ɔːr/
+metallum
+origin /əridʒin/
+origo
+original /əridʒənl/
+archetypus
+orphan /ɔːfein/
+orphanus
+orthography /ɔːθɔgrəfiː/
+orthografia
+ostrich /ɔstritʃ/
+passer, struthocamelus
+other /ʌðər/
+alius
+other people's /ʌðərpiːplz/
+alienus
+other than /ʌðərθein/
+absque
+out of /autɔf/
+a, ab, abs, e, ex
+oven /ʌvn/
+caminus
+over /ouvər/
+super, supera
+overall /ouvərɔːl/
+universus
+overflow /ouvəflou/
+supereffluere
+overhead /ouvəhed/
+super
+overthrow /ouvəθrou/
+cædere
+overture /ouvətʃər/
+anteludium
+over there /ouvərðər/
+ibi, illic
+ow /ou/
+a, ah, ai, hei, hem, heu
+owe /ou/
+debere
+owing to /ouiŋtou/
+a, ab, abs
+own /oun/
+possidere
+oyster /ɔistər/
+ostrea
+o'clock /əklɔk/
+hora
+pace /peis/
+1. gradi
+2. gradus, passus
+pad /pæt/
+caudex, codex
+pail /peil/
+aqualis
+paint /peint/
+1. colorare
+2. pingere
+pair /pɛər/
+combinare
+palace /pælis/
+atrium, palatium, turris
+panther /pænθər/
+panthera, pardus, varia
+pantry /pæntriː/
+cella, cellarium
+pants /pænts/
+bracæ
+paper /peipər/
+biblus, charta, papyrus
+paradise /pærədais/
+paradisus
+paradoxical /pærədɔksikl/
+admirabilis
+paralysis /pəræləsis/
+paralysis
+parent /pɛərənt/
+parens
+parents /pɛərənts/
+parentes
+park /pɑːk/
+hortus
+parrot /pærət/
+psittaca
+parsley /pɑːsliː/
+petroselinum
+part /pɑːt/
+pars
+party /pɑːtiː/
+festum
+pass away /pɑːsɔːwei/
+mori
+past /pɑːst/
+præter
+pate /peit/
+caput
+paw /pɔː/
+crus
+pawn /pɔːn/
+miles
+peace /piːs/
+pax
+peaceful /piːsfəl/
+placidus
+peacock /piːkɔk/
+pavo
+pear‐tree /pˈeə tɹˈiː/
+pirus
+pearl /pəːl/
+baca, margarita
+pedestal /pedistl/
+basis
+pedestrian /pidestriən/
+pedes
+pelican /pelikən/
+pelicanus
+pelvis /pelvis/
+pelvis
+pen /pen/
+1. arundo, calamus
+2. ovile
+pencil /pensl/
+plumbum
+penetrate /penitreit/
+penetrare
+peninsula /pəninsjulə/
+pæninsula
+penis /piːnis/
+cauda, caulis, curculio, fascinum, mentula, palus, penis, verpa
+people /piːpl/
+plebs, populus
+pepper /pepər/
+piper
+perchance /pəːtʃəns/
+fortasse
+perform /pəfɔːm/
+1. apparere, comparere
+2. facere
+perfume /pəfjuːm/
+hedychrum
+perhaps /pəhæps/
+fortasse
+peril /perəl/
+periculum
+perish /periʃ/
+perire
+permission /pəmiʃən/
+licentia
+permit /pəːmit/
+permittere
+person /pəːsn/
+persona
+persuade /pəsʌɔd/
+persuadere
+phallus /fæləs/
+phallus
+phantom /fæntuːm/
+lamina, larva, phasma
+pheasant /feznt/
+phasianus
+phlegm /flem/
+mucus, virus
+physical /fizikl/
+1. physicus
+2. corporalis, corporeus
+physician /fiziʃən/
+clinicus, medicus
+physicist /fizisist/
+physicus
+physics /fiziks/
+physica
+pick‐axe /pˈɪk ˈaks/
+ligo
+pick /pik/
+carpere
+pick out /pikaut/
+optare
+pick up /pikʌp/
+capere
+picture /piktʃər/
+1. imago
+2. figura
+piece /pis/
+1. fragmentum
+2. pars
+pig‐ /pˈɪɡ/
+porcarius
+pig /pig/
+1. porcarius
+2. maialis, porcus
+pigeon /pidʒən/
+columba
+piglet /piglit/
+porcella, porcula
+pile /pail/
+massa, multitudo, turba
+pillow /pilou/
+cervical
+pine‐tree /pˈaɪn tɹˈiː/
+picea, pinus, tæda
+pine /pain/
+picea, pinus, tæda
+pious /paiəs/
+castus, pius, sanctus, sanctimonialis
+pipe /paip/
+canalis, fistula
+pirate‐chief /pˈaɪɹət tʃˈiːf/
+archipirata
+pit /pit/
+fossa
+pitch /pitʃ/
+pix
+pitcher /pitʃər/
+aqualis
+pity /pitiː/
+compati
+place /pleis/
+1. locus
+2. ponere
+plain /plein/
+campus
+plait /plæt/
+plectere
+plane‐tree /plˈeɪn tɹˈiː/
+platanus
+plane /plein/
+platanus
+plank /plæŋk/
+tabula
+plant /plɑːnt/
+planta
+plate /pleit/
+catinus, tryblium
+platter /plætər/
+catinus, tryblium
+play /plei/
+1. ludere
+pleasant /pleznt/
+acceptabilis
+plough /plau/
+arare
+pluck /plʌk/
+carpere
+plunder /plʌndər/
+harpagare
+poem /pouim/
+carmen, poema
+poet /pouit/
+poeta
+point out /pɔintaut/
+monstrare
+poison /pɔizn/
+1. venenare
+2. aconitum, cantharis, venenum
+pole /poul/
+1. palus, vacerra
+2. polus
+3. asser, contus, hasta, trudis
+polyp /pɔlip/
+polypus
+pomegranate /pəmegrəneit/
+apyrenus, malogranatum
+pool /puːl/
+1. baptisterium
+2. coire
+poop /pouɔp/
+puppis
+poopdeck /pouɔpdk/
+puppis
+poor /peər/
+malus, phaulius
+poppy /pɔpiː/
+papaver
+porcupine /pɔːkjupain/
+hystrix
+pork /pɔːk/
+porcina
+port /pɔːt/
+portus
+portal /pɔːtl/
+porta
+portent /pɔːtent/
+1. ales, avis, omen
+porter /pɔːtər/
+ianitor
+possess /pəzes/
+possidere
+possibility /pɔsəbilitiː/
+possibilitas
+possible /pɔsəbl/
+possibilis
+possibly /pɔsəbliː/
+fortasse
+post /poust/
+1. palus, vacerra
+2. officium
+postulate /pɔstʃuleit/
+exigere, postulare
+pot /pɔt/
+olla
+power /pauər/
+potentia, potestas
+powerful /pauəfəl/
+potens
+praise /preiz/
+laudare
+pray /prei/
+orare, precare
+precede /prisiːd/
+antecedere, anteire, anteviare
+precipice /presipis/
+1. abruptum, abyssus, crater, fauces
+2. arduum
+precursor /priːkəːsər/
+ales, avis, omen
+prefer /prifəːr/
+malle
+pregnant /pregnənt/
+gravis, prægnans
+prelude /preljuːd/
+anteludium
+presage /priseidʒ/
+1. ales, avis, omen
+present /prizent/
+donum
+presentiment /prizentimənt/
+antepassio
+preservative /prizəːvətiv/
+cautela
+press /pres/
+premere
+presume /prizjuːm/
+putare
+pretty /pritiː/
+bellus
+prevent /privent/
+antevenire, antevertere, prohibere
+previously /priːviəzliː/
+ante, antehac
+prey /priː/
+1. accipitrina, captura
+2. captus
+pride /praid/
+typhus
+priest /priːst/
+sacerdos, sacricola
+priestly /priːstliː/
+sacerdotalis
+principally /prinsipɑːliː/
+potissimum
+prison /prizn/
+phylaca
+privet /privit/
+ligustrum
+profit /prɔfit/
+lucrum
+profound /prəfaund/
+profundus
+prohibit /prəhibit/
+prohibire, vetare
+prologue /proulɔg/
+antelogium
+promise /prəmaiz/
+polliceri, promittere
+property /prɔpətiː/
+vicus, villa
+prostitute /prɔstitjuːt/
+1. prostituere
+2. meretrix
+prostitution /prɔstitjuːʃən/
+meretricium
+protégé /pɹˈɒtəʒˌeɪ/
+cliens
+protégée /pɹˌɒteɪɡˈeɪ/
+clienta
+proud /praud/
+altus
+prove /pruːv/
+experiri, probare
+proverb /prɔvəːb/
+adagium
+provided that /prəvaididðæt/
+si
+province /prɔvins/
+provincia
+pub /pəb/
+aquarium
+public /pʌblik/
+publicus
+pulpit /pʌlpit/
+cathedra
+pulsate /pʌlseit/
+palpitare
+pumpkin /pʌmpkin/
+cucurbita
+punish /pʌniʃ/
+plectere, punire
+punishment /pʌniʃmənt/
+poena
+puppet /pʌpit/
+pupa
+pure /pjeər/
+purus, putus
+purge /pəːdʒ/
+purgare
+purify /pjeərifai/
+castificare
+purity /pjeəritiː/
+castimonia, castitas
+purple /pəːpl/
+purpura
+pus /pəs/
+pus
+put /put/
+ponere
+put down /putdaun/
+ponere
+put out to tender /putauttoutendər/
+ablocare
+put up with /putʌpwið/
+1. patiri
+2. tolerare
+puzzle /pʌzl/
+ænigma, griphus
+quadrangle /kwɔdræŋgl/
+tetragonum
+quail /kweil/
+coturnix, ortigometra
+quarter /kwɔːtər/
+vicus
+quash /kwɔʃ/
+annihilare, annullare
+queen /kwiːn/
+regina
+quite /kwait/
+1. satis
+2. admodum, antigerio, apprime
+quiver /kwivər/
+1. tremere
+2. tremor
+quivering /kwivəriŋ/
+tremor
+rabbit /ræbit/
+cuniculus
+race /reis/
+1. currere, volare
+2. gens, genus, natio
+radish /rædiʃ/
+radix, raphanum, rapulum
+rain /rein/
+imber, pluvia
+raincoat /reinkout/
+pænula
+raise /reiz/
+levare
+ram /ræm/
+aries
+ranch /rɑːntʃ/
+vicus, villa
+rand /rænd/
+labrum, limbus, ora
+rare /rɛər/
+rarus
+rate /reit/
+æstimare, appretiare, censere, taxare
+rather /ræðər/
+satis
+rave /reiv/
+morari
+raven /reivn/
+corax, corvus
+ravine /rəviːn/
+barathrum, crater
+raw /rɔː/
+crudus
+re‐ /ɹˈiː/
+re‐, red‐
+reach /riːtʃ/
+pervenire
+read /red/
+legere
+reality /riælitiː/
+veritas
+realize /riəlaiz/
+intellegere
+reason /riːzn/
+causa
+receive /risiːv/
+accipere
+reception room /risepʃənruːm/
+atrium
+reciter /risaitər/
+acroama
+recognize /rekəgnaiz/
+1. agnoscere
+2. accognoscere
+recollection /rekəlekʃən/
+memoria
+record /rekɔːd/
+matrix
+red /rid/
+1. ruber, russus
+reed /riːd/
+arundo, calamus, canna
+referee /refəriː/
+arbiter
+regain /rigein/
+reparare
+regal /riːgəl/
+basilicus, regalis, regificus, regillus, regius
+regard /rigɑːd/
+spectare
+region /riːdʒən/
+regio
+register /redʒistər/
+matrix
+regularly /regjuləliː/
+sæpe
+relate /rəleit/
+narrare
+release /riliːs/
+liberare
+religion /rilidʒən/
+religio
+remain /rimein/
+manere
+remaining /rimeiniŋ/
+ceterus
+remove /rimuːv/
+relegare
+renew /rinjuː/
+renovare, reparare
+renown /rinaun/
+1. fama
+2. gloria
+rented house /rentidhaus/
+meritorium
+rent out /rentaut/
+ablocare
+repair /ripɛər/
+reparare
+reply /riplai/
+1. respondere
+2. responsum
+repose /ripouz/
+requiescere
+representation /reprizenteiʃən/
+figura
+reproach /riproutʃ/
+crimen
+repute /ripjuːt/
+fama
+request /rikwest/
+petere, rogare
+require /rikwaiər/
+1. requirere
+2. exigere, postulare
+reservoir /rezəvwɑːr/
+alveus, crater
+residence /rezidəns/
+atrium
+resign /rizain/
+abdicare, abire
+resist /rizist/
+resistere
+respect /rispekt/
+1. cæremonia, cærimonia
+respectability /rispektəbilitiː/
+cæremonia, cærimonia
+respond /rispɔnd/
+respondere
+rest /rest/
+requiescere
+restrain /ristrein/
+gubernare, regere, regnare
+rest of /restɔf/
+ceterus
+resumé /ɹɪzjuːmˈeɪ/
+breviarium
+reward /riwɔːd/
+præmium
+rhino /rainou/
+rhinoceros
+rhinoceros /rainɔsərəz/
+rhinoceros
+rice /rais/
+oryza
+riddle /ridl/
+ænigma, griphus
+ride /raid/
+vehere
+rigour /rigər/
+acerbitas
+rim /rim/
+labrum, limbus, ora
+ring /riŋ/
+anulus, circulus
+ripe /raip/
+maturus
+rite /rait/
+ritus
+river /rivər/
+flumen, fluvius
+road /roud/
+via
+roam /roum/
+1. migrare
+2. vagari
+roar /rɔːr/
+bovinari
+roar with laughter /rɔːrwiðlɑːftər/
+cachinnare
+rob /rɔb/
+harpagare
+rock /rɔk/
+petra, saxum
+rod /roud/
+asser, contus, hasta, trudis
+roe /rou/
+caprea
+roller /roulər/
+cylindrus
+rolling in money /rouliŋinmʌniː/
+zaplutus
+room /ruːm/
+1. capacitas
+2. cella
+rooster /ruːstər/
+gallus
+root /ruːt/
+radix
+rope /roup/
+ceruchus, funis
+rose /rouz/
+rosa
+rostrum /rɔstrəm/
+tribunal
+rotten /rɔtn/
+cariosus
+rottenness /rətenəs/
+caries
+rough /rau/
+crudus
+round /raund/
+circa
+round dance /raunddɑːns/
+chorea, chorus
+rouse /rauz/
+stimulare
+route /ruːt/
+via
+row /rou/
+remigare
+rowan /rouən/
+sorbus
+rowan berry /rouənberiː/
+sorbum
+rower /rouər/
+remex
+royal /rɔiəl/
+basilicus, regalis, regificus, regillus, regius
+royalty /rɔiəltiː/
+regnum
+rub /rʌb/
+fricare
+rubbish /rʌbiʃ/
+alogia
+rudiments /ruːdimənts/
+abecedarium
+ruff /rʌf/
+cicirrus
+ruin /ruːin/
+pervertere
+rule /ruːl/
+gubernare, regere, regnare
+ruler /ruːlər/
+dominus
+rumor /ruːmər/
+fama
+rumour /ruːmər/
+fama
+run /rʌn/
+1. fuga
+2. currere, volare
+runner /rʌnər/
+cursor
+run away /rʌnɔːwei/
+profugere
+rural /reərəl/
+rusticus
+ruse /ruːz/
+1. vaframentum
+2. ars, machina
+rush towards /rʌʃtəwɔːdz/
+affluere
+sack /sæk/
+coleus
+sacred /səkəd/
+sacer, sacratus, sanctus
+sacred object /səkədəbdʒekt/
+sacrum
+sadness /sædnəs/
+1. ægrimonia, mæstitia
+safety /seiftiː/
+salus
+sagacious /səgeiʃəs/
+sapiens, sophus
+sage /seidʒ/
+sapiens, sophus
+sail /seil/
+velum
+sailor /seilər/
+nauta
+salamander /sæləmændər/
+salamandra
+salary /sæləriː/
+æs, merces
+saliva /səlaivə/
+saliva
+salmon /sæmən/
+salmo
+salt /sɔːlt/
+sal
+salty /sɔːltiː/
+salsus
+salute /səluːt/
+salutare
+sanctify /sæŋktifai/
+sacrare, sancire, sanctificare
+sanctuary /sæŋktʃeəriː/
+delubrum, fanum
+sanctum /sæŋktəm/
+delubrum, fanum
+sand‐ /sˈand/
+arenaceus, arenarius, arenosus
+sand /sænd/
+1. arenaceus, arenarius, arenosus
+2. arena, harena
+sandal /sændl/
+sandalium
+savage /sævidʒ/
+sævus
+say /sei/
+1. dicere
+2. heu
+scaffold /skæfould/
+catasta
+scale /skeil/
+squama
+scandal /skændl/
+1. calumnia
+2. scandalum
+scar /skɑːr/
+cicatrix
+scene /siːn/
+scæna
+scent /sent/
+odor
+sceptre /skeptər/
+sceptrum
+school /sʃuːl/
+schola
+scissors /sizəz/
+axicia, bracchium
+scold /skould/
+admonere
+scorpion /skɔːpiən/
+scorpio
+scratch /skrætʃ/
+scabere
+scream /skriːm/
+boare
+scuffle /skʌfl/
+proelium, pugna
+scythe /saið/
+falx
+sea‐ /sˈiː/
+æquoreus, maritimus, thalassicus
+sea‐dog /sˈiː dˈɒɡ/
+phoca
+sea‐monster /sˈiː mˈɒnstə/
+cetus
+sea /siə/
+1. æquoreus, maritimus, thalassicus
+2. æquor, mare, pontus
+seagull /siːgʌl/
+gavia, larus
+seal /siːl/
+phoca
+seaside /siːsaid/
+acta, litus, ora
+seaweed /siːwiːd/
+alga
+second /skound/
+secundus
+secret /siːkrit/
+arcanus
+secretly /sekrətliː/
+absconse, arcano, celatim
+see /siː/
+videre
+seed /siːd/
+semen
+seizure /siːizər/
+apoplexia
+seldom /sldəm/
+raro
+sell /sel/
+vendere
+send /send/
+mittere
+sense /sens/
+sentire
+separate /sepəreit/
+abiungere, abrumpere, segregare, seiungere
+sepia /siːpiə/
+sepia
+serf /səːf/
+ambactus, cliens
+serious /siəriəs/
+gravis
+serpent /səːpənt/
+anguis, serpens
+servant /səːvənt/
+1. ancilla, ancula
+2. ambactus, anculus, calo, cliens, minister
+serve /səːv/
+anculare, ministrare, servire
+set /set/
+caterva, grex
+settlement /setlmənt/
+colonia
+seven /sevn/
+septem
+seventeen /sevntiːn/
+septendecim
+seventh /sevnθ/
+septimus
+seventy /sevntiː/
+septuaginta
+severe /siviər/
+acerbus, austerus, severus
+severity /siveritiː/
+acerbitas
+sewer /souər/
+cloaca
+sex /seks/
+sexus
+sexual love /sekʃeəllʌv/
+ætaluta, amor
+sexual pleasure /sekʃeəlpleʒər/
+libido
+shack /ʃæk/
+canaba, casa
+shade /ʃeid/
+umbra
+shadow /ʃædou/
+umbra
+shake one's head /ʃeikwʌnzhed/
+1. abnutare
+2. abnuere
+shallop /ʃæləp/
+actuariola
+shallow /ʃælou/
+brevis
+shame /ʃeim/
+phui
+shamrock /ʃæmrɔk/
+trifolium
+shape /ʃeip/
+facies, forma
+share /ʃɛər/
+1. pars
+2. portio
+sharp /ʃɑːp/
+1. acer, acutus
+sharpen /ʃɑːpən/
+acurere
+sharpness /ʃɑːpnəs/
+acies, acritas, acror, acumen
+she‐ass /ʃiː ˈas/
+asella
+she‐bear /ʃiː bˈeə/
+ursa
+she‐goat /ʃiː ɡˈəʊt/
+capra
+she‐wolf /ʃiː wˈʊlf/
+lupa
+sheaf /ʃiːf/
+fascis
+sheep /ʃiːp/
+ovis
+sheet /ʃiːt/
+folium
+shepherd /ʃepəd/
+pastor, opilio, upilio
+shin‐bone /ʃˈɪn bˈəʊn/
+tibia
+ship /ʃip/
+abies, carina, navis
+ship's boat /ʃipzbout/
+actuariola
+shiver /ʃivər/
+tremere
+shoe /ʃuː/
+calceus
+shoemaker /ʃuːmeikər/
+1. calceolarius
+shore /ʃɔːr/
+acta, litus, ora
+short /ʃɔːt/
+brevis
+shorten /ʃɔːtn/
+1. abbreviare, curtare
+2. breviare
+shoulderblade /ʃouldəbleid/
+armus
+shout /ʃaut/
+boare
+show /ʃou/
+monstrare
+shuffle /ʃʌfl/
+miscere
+shut /ʃʌt/
+claudere
+shyness /ʃainəs/
+aporia, aporiatio
+sick /sik/
+æger, ægrotus
+sickle /sikl/
+falx
+side‐branch /sˈaɪd bɹˈantʃ/
+bracchium
+side /said/
+costa, latus
+sideboard /saidbɔːd/
+armarium
+sideral /sidərəl/
+astralis
+sieve /siv/
+cribrum
+sift /sift/
+cernere, cribrare, cribellare
+sight /sait/
+aspectamen, facies
+sign /sain/
+1. ales, avis, omen
+2. signum
+signal /signəl/
+signum
+signature /signətʃər/
+subnotatio
+silent /sailənt/
+silens
+silk‐ /sˈɪlk/
+bombycinus
+silk /silk/
+bombycinus
+silken /silkən/
+bombycinus
+silkworm /silkwəːm/
+bombyx
+sill /sil/
+limen
+silver /silvər/
+1. argenteus
+2. argentum
+since /sins/
+1. a, ab, abs
+2. quia, quod
+sinew /sinjuː/
+nervus
+sinful /sinfəl/
+nefas
+sing /siŋ/
+canere, cantare, canturire
+singer /siŋər/
+1. cantrix
+2. cantor
+singing /siŋiŋ/
+cantus, carmen
+single /siŋgl/
+agamus, cælebs
+sir /saiər/
+dominus
+sirocco /sirɔkou/
+atabulus
+sit /sit/
+incubare
+sitting‐room /sˈɪtɪŋ ɹˈuːm/
+atrium
+sit down /sitdaun/
+assidere
+six /siks/
+sex
+sixteen /sikstiːn/
+sedecim
+sixth /siksθ/
+sextus
+sixty /sikstiː/
+sexaginta
+skimpy /skimpiː/
+petilus
+skin /skin/
+cutis, pellis
+skinflint /skinflint/
+avarus
+skinny /skiniː/
+petilus
+sky /skiː/
+æther, æthra, axis, cælum
+slander /slɑːndər/
+calumnia
+slaughter /slɔːtər/
+cædere, mactare
+slave /sleiv/
+1. ancilla, serva
+2. chrestus, servus
+slay /slei/
+mortificare, necare, occidere
+sleep /sliːp/
+somnus, sopor
+slender /slendər/
+petilus
+slice /slais/
+scalpere, secare
+sloop /sluːp/
+actuariola
+slope /sloup/
+clinamen
+slowly /slauliː/
+lente
+slug /slʌg/
+limax
+sluice /sluːs/
+cataracta
+slut /slʌt/
+cunnus
+sly /sliː/
+captiosus, trebax, vafer
+slyness /slainəs/
+versutia
+small /smɔːl/
+parvus
+small basket /smɔːlbɑːskit/
+canistrum
+smart /smɑːt/
+captiosus, trebax, vafer
+smell /smel/
+odor
+smoke /smouk/
+fumus
+smooth /smuːθ/
+æquus, planus
+snail‐shell /snˈeɪl ʃˈɛl/
+helica
+snail /sneil/
+cochlea
+snake /sneik/
+anguis, serpens
+snare /snɛər/
+casses
+snow /snou/
+nix
+snowball /snouuːbɔːl/
+viburnum
+so /sou/
+sic
+soap /soup/
+sapo
+sobriquet /soubrikei/
+agnomen, cognomen, cognomentum
+sod /sɔd/
+cæspes
+sod of grass /sɔdɔfgrɑːs/
+cæspes
+soft /sɔft/
+1. suavis
+2. lenis, malacus, mitis, mollis
+soil /sɔil/
+1. humus
+2. tellus, terra
+solair /sɔlɛər/
+solaris
+soldier /souldiər/
+miles
+sole /soul/
+solus
+solemnity /səlemnitiː/
+1. cæremonia, cærimonia
+solicitor /səlisitər/
+advocatus, causidicus
+solid /sɔlid/
+solidus
+solitary /sɔlitriː/
+solus
+soloist /sɔlɔist/
+acroama
+some /sʌm/
+aliquis
+somebody /sʌmbədiː/
+aliquis
+somehow /sɔmhau/
+aliqua
+someone /sʌmwʌn/
+aliquis
+somewhere /soumwɛər/
+quo
+some one /sʌmwʌn/
+aliquis
+son‐of‐a‐bitch /sˈʌn ɒv ɐ bˈɪtʃ/
+cimex, mæna
+son /sɔn/
+filius, natus
+song /sɔŋ/
+cantus, carmen
+soon /suːn/
+mox
+sorcerer /sɔːsərər/
+magus
+sorcery /sɔːsəriː/
+magia
+sore /sɔːr/
+ulcus
+sorrel /sɔrəl/
+lapathum, rumex
+sorrow /sɔrou/
+1. ægrimonia, mæstitia
+soul /soul/
+anima, animus, cor
+sound /saund/
+accentus, canor
+sour /sauər/
+1. acerbus
+2. acescere
+3. austerus
+south /sauθ/
+antarcticus, australis
+southern /sʌðən/
+antarcticus, australis
+south wind /sauθwaind/
+auster
+sow /sou/
+porca, scrofa
+spa /spə/
+aquæ
+space /speis/
+capacitas
+spacious /speiʃəs/
+amplus, latus
+spade /speit/
+fodere
+sparrow /spærou/
+passer
+speak /spiːk/
+loquere, loqui, orare
+speaker's platform /spiːkəzplætfɔːm/
+tribunal
+spear /spiər/
+abies, framea, phalarica
+specialist /speʃəlist/
+artifex
+speed up /spiːdʌp/
+accelerare
+spelt /spelt/
+ador
+spider /spaidər/
+aranea
+spiderweb /spaidəwiːb/
+aranea, araneum, casses, tela
+spiral /spaiərəl/
+helica
+spirit /spirit/
+spiritus
+splinter /splintər/
+assula
+spot /spɔt/
+1. locus
+2. macula
+spread /spred/
+propagare
+spring /spriŋ/
+salire
+spy /spai/
+otacustes
+square decametre /skwɛərdikæmitər/
+caterva, grex
+squash /skwɔʃ/
+cucurbita
+squeeze /skwiːz/
+premere
+squirrel /skwirəl/
+sciurus
+stable /steibl/
+firmus
+stableman /steiblmən/
+agaso
+stake /steik/
+palus, vacerra
+stalk /stɔːk/
+1. calamus
+2. gradi
+3. caulis
+stalk of cabbage /stɔːkɔfkæbidʒ/
+caulis
+stammer /stæmər/
+balbutire
+stanchion /stæntʃən/
+palus, vacerra
+stand /stænd/
+stare
+star‐ /stˈɑː/
+astralis
+star /stɑːr/
+1. astralis
+2. aster, astrum, sidus, stella
+state /steit/
+1. autumare
+2. respublica
+statue /stætʃuː/
+statua
+stay /stei/
+manere
+stay over /steiouvər/
+manere
+steal /stiːl/
+1. chalybæus
+2. abigere, clepere, clepsere
+steam /stiːm/
+vapor, vapos
+steel /stiːl/
+adamas, chalybs
+steep /stiːp/
+arduus
+steepness /stiːpnəs/
+arduitas
+stem /stəm/
+1. caudex, codex, matrix
+2. calamus, caulis
+step /step/
+1. gradi
+2. gradus, passus
+sterile /sterail/
+1. sterilis
+stern /stəːn/
+puppis
+sterness /stənəs/
+acerbitas
+stick /stik/
+1. bacillum
+2. arundo, baculum, baculus
+stimulate /stimjuleit/
+stimulare
+sting /stiŋ/
+aculeus, cuspis
+stinginess /stiŋdʒinəs/
+avaritia, avarities
+stingy /stindʒiː/
+avarus
+stir up /stəːrʌp/
+1. concitare
+2. stimulare
+stomach /stʌmək/
+alvus, aqualiculus, venter
+stomach ache /stʌməkeik/
+cardimona
+stone‐cutter /stˈəʊn kˈʌtə/
+cæmentarius
+stone /stoun/
+lapis
+stonemason /stounmeisn/
+cæmentarius
+stork /stɔːk/
+ciconia
+storm /stɔːm/
+auster, tempestas
+stove /stouv/
+caminus
+straight /streit/
+rectus
+straight past /streitpɑːst/
+præter
+strait /streit/
+fauces
+strange /streindʒ/
+advena, allophylus, hospitus
+stranger /streindʒər/
+1. hospita
+2. hospes
+strangle /stræŋgl/
+astrangulare
+stratagem /strætidʒəm/
+vaframentum
+strawberry /strɔːbriː/
+fragum
+strawberry tree /strɔːbriːtriː/
+arbutus
+stream /striːm/
+amnis
+stream towards /striːmtəwɔːdz/
+affluere
+street /striːt/
+via, vicus
+strength /streŋθ/
+cervix, ops, vis
+stress /stris/
+accentus
+strict /strikt/
+acerbus, austerus, severus
+stride /straid/
+1. gradi
+2. gradus, passus
+strike /straik/
+battuere, fligere, pellere, pulsare
+string /striŋ/
+1. chorda
+2. nervus
+3. ceruchus, funis
+stroke /strouk/
+1. apoplexia
+2. admulcere, adulare
+stroke of apoplexy /stroukɔfæpəpleksiː/
+apoplexia
+stroll /stroul/
+ambulare
+strong /strɔŋ/
+fortis, robustus
+struggle /strʌgl/
+1. battuere, dimicare, fendere, pugnare
+2. proelium, pugna
+3. colluctari
+study /stʌdiː/
+studium
+stupid /stjuːpit/
+1. brutus
+2. bardus, blennus, stultus
+stupidly /stjuːpidliː/
+stulte
+sturgeon /stəːdʒən/
+acipenser
+stutter /stʌtər/
+balbutire
+sty /stai/
+hara
+subtlety /sʌtltiː/
+versutia
+success /səkses/
+successus
+successor /səksesər/
+proles
+such /sʌtʃ/
+sic
+sudden /sʌdn/
+repentinus
+suddenly /sʌdnliː/
+repente, subito
+suffer /sʌfər/
+patiri
+sufficiently /səfiʃientliː/
+satis
+suitability /suːtəbilitiː/
+capacitas
+sulphur /sʌlfər/
+sulphur, sulpur
+summer /sʌmər/
+æstas
+summery /sʌməriː/
+breviarium
+summit /sʌmit/
+culmen
+summon /sʌmən/
+vocare
+sun‐ /sˈʌn/
+solaris
+sun /sn/
+1. solaris
+2. sol
+superficial /suːpəfiʃl/
+brevis
+superstition /suːpəːstiʃən/
+religio, superstitio
+supporting base /səpɔːtiŋbeis/
+basis
+suppose /səpouz/
+putare
+sure /ʃeər/
+cautus, certus
+surface /səːfis/
+culmen
+surgery /səːdʒəriː/
+chirurgia
+surmise /səːmaiz/
+putare
+surname /səːneim/
+cognomen
+surpass /səpɑːs/
+antepollere, antestare, antevenire, superare
+swallow /swɔlou/
+hirundo
+swamp /swɔmp/
+lama, lustrum, palus
+swan /swɔn/
+cycnus, olor
+swathe /sweið/
+fascia
+swear /swɛər/
+1. blasphemare
+2. iurare
+sweet /swiːt/
+suavis
+sweet william /swiːtwiliəm/
+amaranthus
+swim /swim/
+nare, natare
+swimming‐bath /swˈɪmɪŋ bˈaθ/
+baptisterium
+swimming‐pool /swˈɪmɪŋ pˈuːl/
+baptisterium
+swim away /swimɔːwei/
+abnatare
+swindle /swindl/
+fraus
+swine /swain/
+maialis, porcus
+sword /sɔːd/
+gladius
+sycamore /sikəmɔːr/
+1. acer
+2. platanus
+synagogue /sinəgɔg/
+synagoge
+table /teibl/
+mensa
+tactic /tæktik/
+ars
+tactics /tæktiks/
+ars
+tail /teil/
+cauda, penis
+take /teik/
+1. accipere
+2. capere
+take action /teikækʃən/
+agere
+take away /teikɔːwei/
+abdere, adimere
+take in /teikin/
+accipere
+talisman /tælizmən/
+phylacterium, præbia
+talk /tɔːk/
+loquere, loqui, orare
+tall /tɔːl/
+altus, arduus, celsus
+tamarisk /tæmərisk/
+tamarix
+tambourine /tæmbəriːn/
+tympanum
+tame /təm/
+1. cicur
+2. cicurare
+tangle /tæŋgl/
+chaos
+taper /teipər/
+cereus
+tardy /tɑːdiː/
+serus
+tart /tɑːt/
+1. acerbus
+2. austerus
+taste /teist/
+gustus
+tasteless /teistləs/
+bliteus
+tax /tæks/
+vectigal
+teach /tiːtʃ/
+docere
+team of three horses /tiːmɔfθriːhɔːsiz/
+trigarium
+tear /tiər/
+lacrima
+teat /tiːt/
+mamma, uber
+tell /tel/
+1. dicere
+2. narrare
+tell a lie /teləliː/
+mentiri
+temple /templ/
+delubrum, fanum, templum
+ten /tn/
+decem
+tench /tentʃ/
+tinca
+tender /tendər/
+suavis
+tendon /tendən/
+nervus
+tend to /tendtou/
+alere
+tenth /tenθ/
+decimus
+test /tist/
+1. attemptare
+2. argumentum
+text /tekst/
+textus
+textile /tekstail/
+tela, textile, textura, textus
+that /ðæt/
+1. qui
+2. sic
+that way /ðætwei/
+1. sic
+2. eo, illuc
+theatre /θiətər/
+theatrum
+thee /ðiː/
+1. tibi
+theologian /θiəloudʒən/
+theologus
+theology /θiɔlədʒiː/
+theologia
+theory /θiəriː/
+ars
+there /ðər/
+1. eo, illuc
+2. ibi, illic
+thesis /θiːsis/
+thesis
+thick /θik/
+carnatus, crassus, obesus
+thief /θiːf/
+1. fur
+2. clepta
+thigh /θai/
+bracchium, femur
+thin /θin/
+petilus
+think /θiŋk/
+1. opinari
+2. censere, cogitare, reri
+third /θəːd/
+tertius
+thirteen /θəːtiːn/
+tredecim
+thirty /θəːtiː/
+triginta
+thisle‐field /θˈaɪəl fˈiːld/
+carduetum
+thisle /θisl/
+carduus, tribulus
+this way /ðaizwei/
+hinc, huc
+thither /θiðər/
+eo, illuc
+thoughtfulness /θɔːtfəlnəs/
+cura
+thousand /θauznd/
+mille
+thrash /θræʃ/
+cassare
+thread /θred/
+acia, filum, linum, padus
+three /θriː/
+tres, tria
+threshold /θreʃhould/
+limen
+throat /θrout/
+fauces, guttur
+throb /θrɔb/
+palpitare
+throw /θrou/
+iacere
+thrush /θrʌʃ/
+turda, turdus
+thurible /θjeərəbl/
+turibulum
+thus /θʌs/
+sic
+tibia /tibiə/
+tibia
+tie /tiː/
+ligare
+tie up /tiːʌp/
+ligare
+tiger /taigər/
+tigris
+till /til/
+1. fiscus
+2. ad, adusque, donec
+tillage /tilidʒ/
+agricultura, agricultio
+timber /timbər/
+lignum
+timbrel /timbrəl/
+tympanum
+time /taim/
+1. hora
+2. tempestas, tempus
+timidity /timiditiː/
+aporia, aporiatio
+tired /taiəd/
+fessus, lassus
+title /taitl/
+titulus
+titmouse /titmaus/
+parus
+to /tou/
+ad
+toad /toud/
+bufo, rana
+today /tədei/
+hodie
+toga /tougə/
+toga
+toilet /tɔilit/
+latrina
+token /toukən/
+signum
+tolerate /tɔləreit/
+tolerare
+tomb /tuːm/
+tumba
+tomorrow /təmɔrou/
+cras
+tone /toun/
+tonus
+tongue /tʌŋ/
+lingua
+tool /tuːl/
+machina, machinamentum, machinatio
+tooth /tuːθ/
+dens
+top /toup/
+culmen
+topaz /toupæz/
+chrysolithus
+torch /tɔːtʃ/
+fax
+tortoise /tɔːtouis/
+chelys
+torture /tɔːtʃər/
+carnificina
+torturer /tɔːtʃərər/
+carnifex
+touch /tʌtʃ/
+tangere
+toward /təwɔːd/
+ad
+towards /təwɔːdz/
+1. ad
+2. circa
+tower /tauər/
+turris
+town /taun/
+oppidum, urbs
+to some place /tousʌmpleis/
+quo
+to thee /touðiː/
+1. tibi
+to you /toujau/
+tibi
+transmit /trænzmit/
+mittere
+trap /træp/
+casses
+travel /trævəl/
+vehere
+tread /tred/
+gradi
+tree‐ /tɹˈiː/
+arboreus
+tree‐trunk /tɹˈiː tɹˈʌŋk/
+caudex, codex, matrix
+tree /triː/
+1. arboreus
+2. arbor
+trefoil /trifɔil/
+trifolium
+tremble /trembl/
+tremere
+triangle /traiæŋgl/
+triangulum, trigonium
+triangular /traiæŋgjulər/
+triangularis, triangulus, trigonicus, trigonus, triquetrus
+tribune /tribjuːn/
+tribunus
+trick /trik/
+1. vaframentum
+2. ars, machina
+trip /trip/
+via
+trite /trait/
+abiectus
+triumph /traiʌmf/
+1. triumphare
+2. adorea, adoria, triumphus
+trollop /trɔləp/
+cunnus
+troop /truːp/
+caterva
+troupe /truːp/
+caterva
+trousers /trauzəz/
+bracæ
+trousers wearing /trauzəzwɛəriŋ/
+bracatus
+trout /traut/
+tructa
+true /truː/
+verus
+trumpet /trʌmpit/
+tuba
+trunk /trʌŋk/
+caudex, codex, matrix
+trust /trʌst/
+fides
+truth /truːθ/
+veritas
+try /triː/
+attemptare
+tube /tjuːb/
+canalis, fistula
+tuberculosis /tjuːbəːkjulousis/
+cachexia, phthisis
+tufted lark /tʌftidlɑːk/
+cassita
+tummy /tʌmiː/
+alvus, aqualiculus, costa, venter
+tumulus /tjuːmjuləs/
+cinis
+tuna‐fish /tjˈuːnə fˈɪʃ/
+cybium, thynnus
+tuna /tjuːnə/
+cybium, thynnus
+tune /tjuːn/
+canor
+tunic /tjuːnik/
+tunica
+tunny /tʌniː/
+cybium, thynnus
+tup /tjuːp/
+aries
+turf /təːf/
+cæspes
+turn /təːn/
+tornare
+turnip /təːnip/
+rapum
+turn around /təːnəraund/
+tornare
+turn away /təːnɔːwei/
+1. ablegare, amandare, relegare
+2. amoliri
+turn round /təːnraund/
+tornare
+turret /tʌrit/
+turricula
+turtle‐dove /tˈɜːtəl dˈʌv/
+turtur
+twelve /twelv/
+duodecim
+twenty /twentiː/
+viginti
+twice /tviːtʃə/
+bis
+twig /twig/
+virga
+twine /twain/
+plectere
+two‐footed /tˈuː fˈʊtɪd/
+bipes
+two‐year‐old /tˈuː jˈiəɹ ˈəʊld/
+bimus
+two‐year /tˈuː jˈiə/
+bimus
+two /twou/
+duæ, duo
+tyranny /tirəniː/
+tyrannis
+tyrant /tirənt/
+tyrannus
+udder /ʌdər/
+mamma, uber
+ugly /ʌgliː/
+turpis
+ulcer /ʌlsər/
+ulcus
+umpire /ʌmpaiər/
+arbiter
+uncertain /ʌnsətein/
+incertus
+uncivilized /ʌnsivilaizd/
+barbarus
+uncle /ʌŋkl/
+patruus
+uncover /ʌnkʌvər/
+reperire
+understand /ʌndəstænd/
+intellegere
+undoubtedly /ʌndautidliː/
+certe, haud dubie
+unfruitful /ʌnfruːtfəl/
+sterilis
+union /juːniən/
+adunatio
+unite /juːnait/
+1. combinare
+2. adunare
+unmarried /ʌnmærid/
+agamus, cælebs
+unripe /ʌnraip/
+acerbus
+until /ʌntil/
+ad, adusque, donec
+upon /əpɔn/
+a, ab, abs
+upper‐arm /ˌʌpəɹ ˈɑːm/
+armus
+upper arm /ʌpərɑːm/
+armus
+upstairs /ʌpstɛəz/
+super
+urban /əːbən/
+asticus
+urine /jeərin/
+urina
+use /juːz/
+uti
+useless /juːsləs/
+vanus
+usual /juːʒeəl/
+catholicus
+uterus /juːtərəs/
+utriculus, volva
+vacation /vəkeiʃən/
+feriæ
+vagina /vədʒainə/
+vagina
+vain /vein/
+vanus
+valerian /vəliəriən/
+baccar
+valley /væliː/
+vallis
+valuable /væljeəbl/
+carus
+value /væljuː/
+1. caritas
+2. pretium
+vampire /væmpaiər/
+lamia
+vapor /veipər/
+vapor, vapos
+vapour /veipər/
+vapor, vapos
+vase /vɑːz/
+vas
+vast /vɑːst/
+amplus, latus
+veal /viːl/
+vitulina
+vegetable /vedʒitəbl/
+olus
+vehicle /viːikl/
+carrus
+veil /veil/
+calautica
+vend /vend/
+vendere
+venerability /venərəbilitiː/
+cæremonia, cærimonia
+verb /vəːb/
+verbum
+vermouth /vəːməθ/
+absinthiatum
+very /veriː/
+admodum, antigerio, apprime
+very much /veriːmʌtʃ/
+admodum, antigerio, apprime
+vessel /vesəl/
+1. alveus, olla
+2. vas
+3. abies, carina, navis
+vibration /vaibreiʃən/
+tremor
+victim /viktaim/
+victima
+victor /viktər/
+victor
+victory /viktəriː/
+adorea, adoria, victoria
+view /vjuː/
+1. aspectamen, facies
+2. spectare
+vigour /vigər/
+cervix, ops, vis
+village /vilidʒ/
+vicus
+villain /vilən/
+ambactus, cliens
+vinager‐bottle /vˈɪnɪdʒə bˈɒtəl/
+acetabulum
+vine /vain/
+vitis
+vinegar /vinigər/
+acetum
+violet /vaiələt/
+viola
+viper /vaipər/
+aspis
+virgin /vəːdʒin/
+virgo
+voice /vɔis/
+vox
+void /vɔid/
+inanis, vacuus
+vote /vout/
+vox
+voyage /vɔiidʒ/
+via
+vulture /vʌltʃər/
+vultur
+wade /weid/
+vadare
+wage /weidʒ/
+æs, merces
+wages /weidʒiz/
+æs, merces
+wage war /weidʒər/
+bellare, bellari, belligerare
+wail /weil/
+lamentari
+wall /wɔːl/
+murus
+wander /wɔndər/
+1. migrare
+2. vagari
+wander about /wɔndərəbaut/
+migrare
+want of civilization /wɔntɔfsivilaizeiʃən/
+barbaria, barbaries
+war /ər/
+bellum
+warlike /wɔːlaik/
+bellator, bellatrix, bellax, bellicosus
+warlock /wɔːlɔk/
+magus
+warm /wɔːm/
+caldus, calidus
+warn /wɔːn/
+monere, admonere
+warrior /wɔriər/
+bellator, belligerator
+wart /wɔːt/
+verruca
+wash /wɔʃ/
+luere
+wasp /wɔsp/
+vespa
+watch /wɔtʃ/
+spectare
+water‐ /wˈɔːtə/
+aqualis, aquarius
+water /wɔːtər/
+1. aqualis, aquarius
+2. aqua, urina
+watercress /wɔːtəkres/
+sisymbrium
+waterfall /wɔːtəfɔːl/
+1. catadupa, cataracta
+wave /weiv/
+fluctus, unda
+wax /wæks/
+cera
+wax candle /wækskændl/
+cereus
+way /wei/
+1. mos
+2. via
+weak /wiːk/
+æger
+weapon /wepən/
+arma
+wear /wɛər/
+portare, tulere, vehere
+weasel /wiːzl/
+ictis, mustela
+weather /weðər/
+tempestus
+weave /wiːv/
+texere
+weever /wiːevər/
+cantharus
+weight /weit/
+onus, pondus
+weird /wiəd/
+cerritulus
+well /wel/
+1. bene
+2. hui
+3. sanus
+well then /welθən/
+hui
+wench /wentʃ/
+puella, puera
+west /west/
+occasus, occidens, vesper
+western /westən/
+occidaneus, occidentalis, occidualis, vesperalis, vespertinus
+whale /əl/
+balæna
+what's more /wɑːtzmɔːr/
+ceterum
+what for /wɔtfər/
+cur, quare
+wheat /wiːt/
+triticum
+wheel /wiːl/
+rota
+when /n/
+quando
+whence /ns/
+unde
+whereas /wɛəriːz/
+dum
+wherever /wɛərevər/
+quaqua
+which /witʃ/
+qui
+whichever /witʃevər/
+quisquis
+while /wail/
+1. dum
+2. tempestas, tempus
+whilst /wilst/
+dum
+whirlwind /wəːlwaind/
+typhon
+white‐tailed eagle /wˈaɪt tˈeɪld ˈiːɡəl/
+haliaeetus
+white /wait/
+albus, candidus, canus
+whiten /waitn/
+albare
+white clay /waitklei/
+argilla
+who /hou/
+qui
+whoever /huːevər/
+quisquis
+whole /houl/
+universus
+whorehouse /hɔːhaus/
+latrina, lustrum, meritorium
+why /wiː/
+1. cur, quare
+wide /waid/
+amplus, latus
+wife /waif/
+uxor
+wig /wig/
+caliandrum, caliendrum, capillamentum
+wild /waild/
+sævus
+wild boar /waildbɔːr/
+aper
+wild goat /waildgout/
+capreolus
+will /wil/
+voluntas
+willingness /wiliŋnis/
+voluntas
+willow /wilou/
+salix
+wind /waind/
+anima, ventus
+window /windou/
+fenestra
+wine /wain/
+vinum
+wing /wiŋ/
+ala
+winter‐ /wˈɪntə/
+brumalis, hiemalis
+winter /wintər/
+1. brumalis, hiemalis
+2. hiems, hibernum
+win back /winbæk/
+reparare
+wisdom /wizdəm/
+sapientia, sophia
+wise /waiz/
+sapiens, sophus
+wish /wiʃ/
+1. optare
+2. voluntas
+witch /witʃ/
+maga
+witchcraft /witʃkrɑːft/
+magia
+without /wiθɔːt/
+absque
+withstand /wiðstænd/
+resistere
+with difficulty /wiðdifikəltiː/
+ægre
+with effort /wiðefət/
+vix
+with young /wiðjʌŋ/
+gravis, prægnans
+witness /witnəs/
+adesse
+witticism /witisizəm/
+acumen
+wizard /wizəd/
+magus
+wizardry /wizədriː/
+magia
+woe /wou/
+hei, heu
+wolf /wulf/
+lupus
+woman /wumən/
+femina, mulier
+womb /wuːm/
+utriculus, volva
+wonder /wʌndər/
+mirari
+wood /wud/
+lignum
+wooden /wudn/
+caudicalis, caudicarius, caudiceus
+woodpecker /wudpekər/
+picus
+woods /wudz/
+lustrum, silva
+word /wəːd/
+verbum, vocabulum
+work /wəːk/
+1. labor
+2. opus
+workplace /wəːkpleis/
+fabrica
+work of art /wəːkɔfɑːt/
+ars, machina
+work out /wəːkaut/
+calculare
+worm /wəːm/
+vermis
+worse /wəːs/
+peior
+worship /wəːʃip/
+1. adoratio
+2. adorare
+worshipper /wəːʃipər/
+adorator
+worth /wəːθ/
+1. caritas, pretium
+wreathe /riːð/
+plectere
+wrench /rentʃ/
+clavis
+wrestle /resl/
+colluctari
+write /rait/
+scribere
+write down /raitdaun/
+annotare
+yard /jɑːd/
+antenna
+yawn /jɔːn/
+oscitare, oscitari
+year /jəːr/
+annus
+yearly /jəːliː/
+anniversarius, annuus
+yesterday /jestədiː/
+here, heri
+yet /jet/
+1. iam
+2. at, tamen
+3. adhuc
+yew‐tree /jˈuː tɹˈiː/
+taxus
+yoke /jouk/
+iugum
+yon /jɔn/
+ibi, illic
+yonder /jɔndər/
+1. eo, illuc
+2. ibi, illic
+you /jau/
+tibi
+young /jʌŋ/
+proles
+young of a wild boar /jʌŋɔfəwaildbɔːr/
+porcellus, porculus
+zither /ziðər/
+cithara
+zone /zoun/
+zona
+ abcdefghijklmnopqrstuvwxyzé

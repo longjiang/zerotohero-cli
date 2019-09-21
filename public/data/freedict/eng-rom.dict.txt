@@ -1,0 +1,2469 @@
+
+00-database-dictfmt-1.12.1
+English-Romanian FreeDict Dictionary
+
+by: Pauliuc George <pauliuc@gmx.net>
+Maintainer: [up for grabs]
+
+Edition: 0.6.3
+Size: 990 headwords
+
+Publisher: FreeDict.
+
+
+Availability:
+
+    Copyright (C) 2002 Pauliuc George <pauliuc@gmx.net> (c) 2017-2018
+  FreeDict Project
+    Available under the terms of the GNU General Public License ver. 2.0 and
+  any later version.
+    This program is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by the
+  Free Software Foundation; either version 2 of the License, or (at your
+  option) any later version.
+    This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+  Public License for more details.
+    You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+
+Published at: http://freedict.org/
+ID# (svn): $Id$
+
+Notes:
+
+ * Database Status: too small
+
+
+Source(s):
+
+  Home: http://romdict.sourceforge.net/ This Database was imported from
+  the RomDict project.
+
+The Project:
+
+  This dictionary comes to you through nice people making it available for
+  free and for good. It is part of the FreeDict project,
+  http://freedict.org/. This project aims to make translating dictionaries
+  available for free. Your contributions are welcome!
+
+Changelog:
+
+ * 2018-08-04 Sebastian Humenda ver. 0.6.3:
+   Sebastian Humenda
+   remove duplicated entries
+ * 2017-12-03 Sebastian Humenda ver. 0.6.2:
+   Update licencing stanza
+ * 2010-11-04 Piotr Bański:
+   Conversion of TEI P4 source into P5 via
+   tools/xsl/freedict_P4toP5.xsl; manual clean-up.
+ * 2007-02-13 Michael Bunk:
+   Enabled phonetics import
+ * 2005-02-11 Michael Bunk:
+   Converted file to TEI P4 and imported to CVS
+ * 2002-10-27 Horst Eyermann:
+   Database was converted to TEI format
+English-Romanian FreeDict Dictionary ver. 0.6.3
+abort /ɐbˈɔːt/
+1. a abandona
+2. abandonează
+abstract /ˈabstɹakt/
+abstract
+accelerator /ɐksˈɛləɹˌeɪtə/
+accelerator
+accept /ɐksˈɛpt/
+1. a accepta
+2. acceptă
+access /ˈaksɛs/
+1. a avea acces la
+2. a aborda
+account /ɐkˈaʊnt/
+cont
+active /ˈaktɪv/
+activ
+activate /ˈaktɪvˌeɪt/
+1. a activa
+2. activare
+active matrix display /ˈaktɪv mˈeɪtɹɪks dɪsplˈeɪ/
+dispozitiv de afișare cu matrice activă
+actor /ˈaktə/
+actor
+adaptive routing /ɐdˈaptɪv ɹˈaʊtɪŋ/
+rutare flexibilă
+add /ˈad/
+1. a adăuga
+2. adăugare
+additional /ɐdˈɪʃənəl/
+suplimentar
+address /ɐdɹˈɛs/
+adresă
+address book /ɐdɹˈɛs bˈʊk/
+agendă
+aditive inverse /ˈadɪtˌɪv ɪnvˈɜːs/
+inversa aditivă
+adjust /ɐdʒˈʌst/
+1. a ajusta
+2. ajustare
+administration /ɐdmˌɪnɪstɹˈeɪʃən/
+administrare
+aggregate /ˈaɡɹɪɡˌeɪt/
+agregat
+aggregate bandwidth /ˈaɡɹɪɡˌeɪt bˈandwɪdθ/
+lățime de bandă cumulată
+alarm /ɐlˈɑːm/
+alarmă
+alias /ˈeɪliəs/
+alias
+align /ɐlˈaɪn/
+aliniere
+allow /ɐlˈaʊ/
+1. a permite
+2. permis
+alpha /ˈalfə/
+alfa
+alpha channel /ˈalfə tʃˈanəl/
+canal alfa
+amplitude modulation /ˈamplɪtjˌuːd mˌɒdjʊlˈeɪʃən/
+modulare în amplitudine
+analog /ˈanəlˌɒɡ/
+analog
+analysis /ɐnˈaləsˌɪs/
+analiză
+anchor /ˈankə/
+ancoră
+and /ˈand/
+și
+animation /ˌanɪmˈeɪʃən/
+animație
+anonymous /ɐnˈɒnəməs/
+anonim
+answer mode /ˈansə mˈəʊd/
+mod răspundere
+antialiasing /ˌantɪˈeɪliəsɪŋ/
+antitreaptă
+appearance /ɐpˈiəɹəns/
+aspect
+append /ɐpˈɛnd/
+1. a adăuga
+2. adăugare
+applet /ˈaplət/
+1. aplet
+2. apleturi
+application /ˌaplɪkˈeɪʃən/
+aplicație
+application launcher /ˌaplɪkˈeɪʃən lˈɔːntʃə/
+lansator de aplicație
+apply /ɐplˈaɪ/
+1. a aplica
+2. aplicare
+arc /ˈɑːk/
+arc
+archive /ˈɑːkaɪv/
+1. a arhiva
+2. arhivă
+archive file /ˈɑːkaɪv fˈaɪl/
+arhivă
+argument /ˈɑːɡjuːmənt/
+argument
+array /ɐɹˈeɪ/
+1. tablou
+2. matrice
+arrow key /ˈaɹəʊ kˈiː/
+tastă săgeată
+article /ˈɑːtɪkəl/
+articol
+ascending /ɐsˈɛndɪŋ/
+crescător
+aspect ratio /ˈaspɛkt ɹˈeɪʃɪˌəʊ/
+proporție
+asserted signal /ɐsˈɜːtɪd sˈɪɡnəl/
+semnal asigurat
+asynchronous /ɐsˈɪnkɹənəs/
+asincron
+attach /ɐtˈatʃ/
+a anexa
+attachment /ɐtˈatʃmənt/
+anexă
+attribute /ˈatɹɪbjˌuːt/
+atribut
+audio /ˈɔːdɪˌəʊ/
+audio
+authentication /ɔːθˌɛntɪkˈeɪʃən/
+autentificare
+author /ˈɔːθə/
+autor
+autofill /ˌɔːtəʊfˈɪl/
+umplere automată
+availability /ɐvˌeɪləbˈɪlɪti/
+disponibilitate
+average /ˈavɹɪdʒ/
+mediu
+axis /ˈaksɪs/
+axă
+baby feeding algorithm /bˈeɪbi fˈiːdɪŋ ˈalɡəɹˌɪθəm/
+algoritmul de alimentare la cerere
+background /bˈakɡɹaʊnd/
+fundal
+backup /bˈakʌp/
+copie de siguranță
+backward /bˈakwəd/
+înapoi
+backward compatibility /bˈakwəd kəmpˌatəbˈɪlɪti/
+compatibilitate cu versiunile anterioare
+balance /bˈaləns/
+1. balanță
+2. echilibru
+3. blianț
+bandwidth /bˈandwɪdθ/
+lățime de bandă
+base /bˈeɪs/
+bază
+basic /bˈeɪsɪk/
+1. fundamental
+2. de bază
+batch /bˈatʃ/
+lot
+batch system /bˈatʃ sˈɪstəm/
+sistem de prelucrare pe loturi
+benchmark /bˈɛntʃmɑːk/
+test de performanță
+best fit algorithm /bˈɛst fˈɪt ˈalɡəɹˌɪθəm/
+algoritmul "cea mai bună potrivire"
+beta /bˈiːtə/
+beta
+big endian /bˈɪɡ ˈɛndiən/
+cel-mai-semnificativ-primul
+binary /bˈaɪnəɹi/
+binar
+bind /bˈaɪnd/
+1. a lega
+2. legătură
+binding /bˈaɪndɪŋ/
+1. legătură
+2. asociere
+binomial distribution /baɪnˈəʊmɪəl dˌɪstɹɪbjˈuːʃən/
+distribuția binomială
+bit /bˈɪt/
+bit
+bitmap /bˈɪtmap/
+1. hartă de biți
+2. imagine
+blank /blˈaŋk/
+1. blanc
+2. gol
+blink /blˈɪŋk/
+clipește
+block-level parallelism /blˈɒklˈɛvəl pˈaɹəlˌɛlɪzəm/
+paralelism la nivel de bloc
+blocked /blˈɒkt/
+blocat
+blur /blˈɜː/
+1. difuz
+2. neclar
+3. încețoșat
+body /bˈɒdi/
+corp
+bold /bˈəʊld/
+1. aldin
+2. îngroșat
+3. îndrăzneț
+bookmark /bˈʊkmɑːk/
+semn de carte
+boolean /bˈuːliən/
+1. boolean
+2. logic (tip de date)
+bottleneck /bˈɒtəlnˌɛk/
+1. gâtuire
+2. loc strimt
+3. timp mort
+bottom /bˈɒtəm/
+bază
+bound /bˈaʊnd/
+1. a lega
+2. legătură
+box /bˈɒks/
+1. căsuță
+2. casetă
+3. cutie
+branch /bɹˈantʃ/
+1. ramificație
+2. filială
+branch history shift register /bɹˈantʃ hˈɪstəɹi ʃˈɪft ɹˈɛdʒɪstə/
+registru de deplasare pentru istoria ramificațiilor
+bricks /bɹˈɪks/
+cărămizi
+browse /bɹˈaʊz/
+1. a naviga
+2. navigare
+3. a răsfoi
+browser /bɹˈaʊzə/
+navigator
+buffer /bˈʌfə/
+memorie tampon
+bug /bˈʌɡ/
+1. scamă
+2. eroare
+3. pană
+4. problemă
+build /bˈɪld/
+versiune compilată
+built in /bˈɪlt ˈɪn/
+nativ
+bundle /bˈʌndəl/
+1. a include
+2. includere
+3. inclus
+4. legat
+bus /bˈʌs/
+1. magistrală
+2. autobuz
+busy /bˈɪzi/
+ocupat
+button /bˈʌtən/
+buton
+byte /bˈaɪt/
+octet
+c /sˈiː/
+1. limbajul de programare c
+2. litera c
+cache /kˈaʃ/
+1. ascunzătoare
+2. provizii
+3. memorie cache
+calculator /kˈalkjʊlˌeɪtə/
+calculator
+calendar /kˈaləndə/
+1. calendar
+2. agendă
+call /kˈɔːl/
+1. a chema
+2. a apela
+3. a suna
+callback /kˈɔːlbak/
+chemare (în raspuns)
+cancel /kˈansəl/
+renunță
+canvas /kˈanvəs/
+1. țesătură
+2. pînză
+3. plan
+4. proiect
+capability /kˌeɪpəbˈɪlɪti/
+1. capacitate
+2. posibilitate
+caption /kˈapʃən/
+1. legendă
+2. titlu (de articol)
+card /kˈɑːd/
+1. placă (hardware)
+2. cartelă (telefonică
+3. de metrou
+4. de acces)
+5. carte (de debit
+6. de credit
+7. de vizită
+caret /kˈaɹət/
+semnul "^"
+case insensitive /kˈeɪs ɪnsˈɛnsɪtˌɪv/
+cu majuscule nesemnificative
+case sensitive /kˈeɪs sˈɛnsɪtˌɪv/
+cu majuscule semnificative
+categorie /kˈatɪɡəɹi/
+categorie
+cd /sˌiːdˈiː/
+compact disc
+cell /sˈɛl/
+celulă
+cellular /sˈɛljʊlə/
+celular
+center /sˈɛntə/
+1. centru
+2. centrat
+channel /tʃˈanəl/
+canal
+character set /kˈaɹɪktə sˈɛt/
+set de caractere
+chat /tʃˈat/
+1. discuție
+2. conversație
+check /tʃˈɛk/
+1. verifică
+2. bifează
+child /tʃˈaɪld/
+copil
+chooser /tʃˈuːzə/
+selector
+class /klˈas/
+clasă
+classification /klˌasɪfɪkˈeɪʃən/
+clasificare
+clear /klˈiə/
+1. șterge
+2. curățare
+click /klˈɪk/
+1. a apăsa
+2. apăsare
+3. clic
+4. a face clic
+clipboard /klˈɪpbɔːd/
+planșetă
+close /klˈəʊs/
+1. închis
+2. a închide
+cluster /klˈʌstə/
+1. ciorchine
+2. mănuchi
+code /kˈəʊd/
+1. cod
+2. program
+coefficient /kˌəʊɪfˈɪʃənt/
+coeficient
+collaboration /kəlˌabəɹˈeɪʃən/
+colaborare
+collapse /kəlˈaps/
+1. prăbușire
+2. cădere
+3. a plia
+collate /kəlˈeɪt/
+a uni
+collision /kəlˈɪʒən/
+ciocnire
+colormap /kˈʌləmˌap/
+hartă de culori
+command /kəmˈand/
+1. comandă
+2. ordin
+command line /kəmˈand lˈaɪn/
+linie de comandă
+command line options /kəmˈand lˈaɪn ˈɒpʃənz/
+parametrii liniei de comandă
+common properties /kˈɒmən pɹˈɒpətiz/
+proprietăți comune
+compare /kəmpˈeə/
+a compara
+compliant /kəmplˈaɪənt/
+conform cu
+computer /kəmpjˈuːtə/
+1. computer
+2. calculator
+concatenate /kənkˈatənˌeɪt/
+a înlănțui
+condition /kəndˈɪʃən/
+condiție
+conduit /kˈɒndjuːˌɪt/
+conductă
+confidential /kˌɒnfɪdˈɛnʃəl/
+confidențial
+configuration /kənfˌɪɡjəɹˈeɪʃən/
+configurație
+confirm /kənfˈɜːm/
+a confirma
+confirmation /kɒnfəmˈeɪʃən/
+confirmare
+connect /kənˈɛkt/
+conectare
+connection /kənˈɛkʃən/
+conexiune
+constraint /kənstɹˈeɪnt/
+1. restricție
+2. constrîngere
+content /kˈɒntɛnt/
+conținut
+continue /kəntˈɪnjuː/
+1. continuă
+2. continuu
+control /kəntɹˈəʊl/
+control
+controller /kəntɹˈəʊlə/
+controlor
+conversion /kənvˈɜːʃən/
+conversie
+cookie /kˈʊki/
+fursec
+copy /kˈɒpɪ/
+copiază
+copyright /kˈɒpɪɹˌaɪt/
+drept de autor
+correlation /kˌɒɹɪlˈeɪʃən/
+corelație
+corrupt /kəɹˈʌpt/
+1. alterat
+2. corupt
+cost /kˈɒst/
+cost
+cought /kˈɔːt/
+1. detectat
+2. interceptat
+count /kˈaʊnt/
+socoteală
+covariance /kˈɒveəɹˌiəns/
+covariație
+cpu /sˌiːpˌiːjˈuː/
+procesor
+crash /kɹˈaʃ/
+cădere
+create /kɹiːˈeɪt/
+a crea
+credits /kɹˈɛdɪts/
+1. credit
+2. recunoașterea meritelor
+critical error /kɹˈɪtɪkəl ˈɛɹə/
+eroare critică
+crop /kɹˈɒp/
+1. recoltă
+2. tăiere
+cumulative /kjˈuːmjʊlətˌɪv/
+cumulativ
+current /kˈʌɹənt/
+curent
+cursor /kˈɜːsə/
+cursor
+curve /kˈɜːv/
+curbă
+customize /kˈʌstəmˌaɪz/
+personalizare
+custom /kˈʌstəm/
+personalizat
+cut /kˈʌt/
+decupează
+cyan /saɪˈan/
+azuriu
+daemon /dˈiːmən/
+demon
+data /dˈeɪtə/
+1. dată
+2. informație
+database /dˈeɪtəbˌeɪs/
+bază de date
+deadlock /dˈɛdlɒk/
+1. punct mort
+2. stagnare
+3. blocare
+debug /dˈiːbˌʌɡ/
+1. a depana
+2. depanare
+decimal /dˈɛsɪməl/
+zecimal
+decrease /dˈiːkɹiːs/
+1. a scădea
+2. scădere
+default /dɪfˈɒlt/
+implicit
+delete /dɪlˈiːt/
+1. a șterge
+2. șterge
+deny /dɪnˈaɪ/
+1. a refuza
+2. refuzare
+dependence /dɪpˈɛndəns/
+dependință
+deploy /dɪplˈɔɪ/
+1. a desfășura
+2. desfășurare
+deprecated /dˈɛpɹɪkˌeɪtɪd/
+învechit
+derived /dɪɹˈaɪvd/
+derivat
+descending sort /dɪsˈɛndɪŋ sˈɔːt/
+ordonare descrescătoare
+destination /dˌɛstɪnˈeɪʃən/
+destinație
+destroy /dɪstɹˈɔɪ/
+1. a distruge
+2. distrugere
+detection /dɪtˈɛkʃən/
+1. identificare
+2. descoperire
+develop /dɪvˈɛləp/
+1. a dezvolta
+2. dezvoltare
+3. [software] developer = dezvoltator [software]
+device /dɪvˈaɪs/
+dispozitiv
+diagonal /daɪˈaɡənəl/
+diagonală
+diagram /dˈaɪəɡɹˌam/
+diagramă
+dial /dˈaɪəl/
+1. a apela
+2. apelator
+digit /dˈɪdʒɪt/
+cifră
+dimension /daɪmˈɛnʃən/
+dimensiune
+direction /daɪɹˈɛkʃən/
+direcție
+directory /daɪɹˈɛktəɹi/
+director
+disable /dˌɪsˈeɪbəl/
+1. a dezactiva
+2. dezactivare
+discard /dɪskˈɑːd/
+1. a anula
+2. anulare
+disclaimer /dɪsklˈeɪmə/
+1. declarație de neasumare a responsabiltății
+2. certificat de negaranție
+disconnect /dɪskənˈɛkt/
+deconectare
+disconnecting /dɪskənˈɛktɪŋ/
+deconectez
+discrete /dɪskɹˈiːt/
+discret
+disk /dˈɪsk/
+disc
+dismiss /dɪsmˈɪs/
+1. a da afara
+2. a elibera
+3. a da drumul
+4. a dizolva
+5. a înceta
+display /dɪsplˈeɪ/
+1. a afișa
+2. afișaj
+dissipation /dˌɪsɪpˈeɪʃən/
+1. risipire
+2. cheltuială
+3. disipație
+distribute /dˈɪstɹɪbjˌuːt/
+a distribui
+dithering /dˈɪðəɹɪŋ/
+1. tremur
+2. vibrație
+division by zero /dɪvˈɪʒən baɪ zˈiəɹəʊ/
+împărțire la zero
+dock /dˈɒk/
+1. doc
+2. a atașa
+3. atașare
+document /dˈɒkjuːmənt/
+document
+domain /dəmˈeɪn/
+domeniu
+done /dˈʌn/
+gata
+dot /dˈɒt/
+punct
+download /dˈaʊnləʊd/
+1. a descărca
+2. descărcare
+downstream /dˈaʊnstɹiːm/
+1. aval
+2. în josul apei
+drag and drop /dɹˈaɡ and dɹˈɒp/
+trage și lasă să cadă
+draft /dɹˈaft/
+ciornă
+drawer /dɹˈɔː/
+sertar
+drawing area /dɹˈɔːɪŋ ˈeəɹiə/
+zona de desenat
+drive /dɹˈaɪv/
+1. unitate
+2. dispozitiv
+3. de disc
+driver /dɹˈaɪvə/
+pilot
+drop /dɹˈɒp/
+a lasă să cadă
+druid /dɹˈuːɪd/
+druid
+dumb terminal /dˈʌm tˈɜːmɪnəl/
+terminal prost/mut
+duplicate /djˈuːplɪkˌeɪt/
+a duplica
+dynamic /daɪnˈamɪk/
+dinamic
+e-mail /ˈiːmˈeɪl/
+1. poștă electronică
+2. mesaj electronic
+echo /ˈɛkəʊ/
+ecou
+edge /ˈɛdʒ/
+margine
+edit /ˈɛdɪt/
+a modifica
+effects /ɪfˈɛkts/
+efecte
+eject /ɪdʒˈɛkt/
+a scoate
+electronic mail /ɪlɛktɹˈɒnɪk mˈeɪl/
+1. poștă electronică
+2. mesaj electronic
+email /ˈiːmeɪl/
+1. poștă electronică
+2. mesaj electronic
+embedded /ɛmbˈɛdɪd/
+1. încapsulat
+2. incorporat
+embossed /ɛmbˈɒst/
+reliefat
+emulate /ˈɛmjʊlˌeɪt/
+1. a emula
+2. emulare
+enable /ɛnˈeɪbəl/
+1. a activa
+2. activare
+3. a permite
+encapsulated postscript /ɛnkˈapsjʊlˌeɪtɪd pˈəʊstskɹɪpt/
+postscript încapsulat
+encoding /ɛnkˈəʊdɪŋ/
+1. codare
+2. cifrare
+engineering /ˌɛndʒɪnˈiəɹɪŋ/
+inginerie
+enhance /ɛnhˈans/
+1. a imbunătăți
+2. îmbunătățire
+entity /ˈɛntɪti/
+1. entitate
+2. esență
+environment variable /ɛnvˈaɪɹənmənt vˈeəɹɪəbəl/
+variabilă a mediului
+equation /ɪkwˈeɪʒən/
+ecuație
+error /ˈɛɹə/
+eroare
+escape /ɛskˈeɪp/
+1. a scăpa
+2. a evada
+3. evadare
+4. fugă
+ethernet /ˈiːθənˌɛt/
+1. ethernet
+2. protocol pentru rețea
+event /ɪvˈɛnt/
+eveniment
+exception /ɛksˈɛpʃən/
+excepție
+exclusive or /ɛksklˈuːsɪv ɔː/
+sau exclusiv
+executable file /ˌɛksɪkjˈuːtəbəl fˈaɪl/
+fișier executabil
+execute /ˈɛksɪkjˌuːt/
+1. a executa
+2. a rula (pentru programe)
+exit /ˈɛɡzɪt/
+ieșire
+expand /ɛkspˈand/
+a desfășura
+expanded memory /ɛkspˈandɪd mˈɛməɹi/
+memorie expandată
+expected location /ɛkspˈɛktɪd ləʊkˈeɪʃən/
+locația presupusă
+explicit state /ɛksplˈɪsɪt stˈeɪt/
+statut explicit
+exponential notation /ˌɛkspənˈɛnʃəl nəʊtˈeɪʃən/
+notație exponențială
+export /ˈɛkspɔːt/
+1. a exporta
+2. export
+expression /ɛkspɹˈɛʃən/
+expresie
+expunge /ɛkspˈʌndʒ/
+a elimina
+extension /ɛkstˈɛnʃən/
+extensie
+extract /ˈɛkstɹakt/
+a extrage
+fail /fˈeɪl/
+1. a eșua
+2. eșec
+fallback /fˈɔːlbak/
+reîntoarcere/rezervă
+faq /fˈak/
+întrebări frecvente
+favorite /fˈeɪvɹɪt/
+favorit
+fax /fˈaks/
+fax
+feature /fˈiːtʃə/
+facilitate
+feedback /fˈiːdbak/
+1. reacție
+2. comentarii
+field /fˈiːld/
+cîmp
+file /fˈaɪl/
+fișier
+filename /fˈaɪlneɪm/
+nume de fișier
+filesystem /fˈaɪlsɪstəm/
+sistem de fișiere
+fill /fˈɪl/
+1. a umple
+2. umplutură
+filter /fˈɪltə/
+filtru
+find /fˈaɪnd/
+1. a găsi
+2. găsește
+firewall /fˈaɪəwɔːl/
+firewall
+flag /flˈaɡ/
+1. steag
+2. indicator
+float /flˈəʊt/
+1. a pluti
+2. tip de date in virgulă mobilă
+floppy /flˈɒpi/
+dischetă
+flow analysis /flˈəʊ ɐnˈaləsˌɪs/
+analiza circuitelor
+flowchart /flˈəʊtʃɑːt/
+1. flowchart (hartă a fluxurilor)
+2. flux tehnologic
+framerate /fɹˈeɪmɹeɪt/
+frecventa
+focus /fˈəʊkəs/
+1. a focaliza
+2. focalizare
+folder /fˈəʊldə/
+1. dosar
+2. director
+font /fˈɒnt/
+literă (cum arată corpul de literă)
+footer /fˈʊtə/
+subsol
+forecast /fˈɔːkast/
+previziune
+foreground /fˈɔːɡɹaʊnd/
+prim plan
+fork /fˈɔːk/
+1. a bifurca
+2. furculiță
+form /fˈɔːm/
+1. a forma
+2. formă
+3. formular
+format /fˈɔːmat/
+format
+formula /fˈɔːmjʊlə/
+formulă
+forward /fˈɔːwəd/
+înainte
+fourier analysis /fˈɔːɹiəɹ ɐnˈaləsˌɪs/
+analiză fourier
+fraction /fɹˈakʃən/
+fracție
+frame /fɹˈeɪm/
+1. cadru
+2. ramă
+free software /fɹˈiː sˈɒftweə/
+1. soft liber
+2. din punct de vedere al licențelor software - un program care poate fi distribuit gratuit și care trebuie să aibă sursele disponibile. Se specifică libertatea de a modifica programul atîta timp cît se păstrează intacte informațiile despre autorii inițiali și se marchează clar modificările făcute
+Free Software Foundation /fɹˈiː sˈɒftweə faʊndˈeɪʃən/
+Fundația pentru Software Liber
+FSF /ˌɛfˌɛsˈɛf/
+Fundația pentru Software Liber
+freeware /fɹˈiːweə/
+1. gratuit
+2. din punct de vedere al licențelor software - un program care poate fi distribuit gratuit dar nu poate fi modificat fără acordul autorului
+frequency /fɹˈiːkwənsi/
+frecvență
+ftp /ˌɛftˌiːpˈiː/
+protocol de transfer de fișiere
+File Transfer Protocol /fˈaɪl tɹˈansfɜː pɹˈəʊtəkˌɒl/
+protocol de transder de fișiere
+full pathname /fˈʊl pˈaθneɪm/
+cale completă
+function /fˈʌŋkʃən/
+funcție
+gamma /ɡˈamə/
+gama (litera grecească)
+gap /ɡˈap/
+1. lipsă
+2. gaură
+band gap /bˈand ɡˈap/
+bandă de separare
+garbage collector /ɡˈɑːbɪdʒ kəlˈɛktə/
+1. colector de memorie reziduală
+2. gunoier
+gateway /ɡˈeɪtweɪ/
+1. poartă
+2. intrare
+geometry /dʒiˈɒmətɹi/
+geometrie
+get /ɡˈɛt/
+1. a primi
+2. a obține
+3. primește
+getting started /ɡˌɛtɪŋ stˈɑːtɪd/
+1. primii pași
+2. primele noțiuni
+glitch /ɡlˈɪtʃ/
+scăpare
+global /ɡlˈəʊbəl/
+global
+glob /ɡlˈɒb/
+1. a expanda
+2. expandare
+3. se referă la expandarea meta-caracterelor (wildcards)
+go /ɡˈəʊ/
+mergi
+grab /ɡɹˈab/
+a apuca
+gradient /ɡɹˈeɪdiənt/
+pantă
+graph /ɡɹˈaf/
+grafic
+graphical user interface /ɡɹˈafɪkəl jˈuːzəɹ ˈɪntəfˌeɪs/
+interfață grafică pentru utilizator
+GUI /ɡˈuːi/
+interfață grafică pentru utilizator
+grayscale /ɡɹˈeɪskeɪl/
+scală de gri
+grid /ɡɹˈɪd/
+1. grilă
+2. grilaj
+group /ɡɹˈuːp/
+grup
+guide /ɡˈaɪd/
+1. a ghida
+2. ghid
+gutter /ɡˈʌtə/
+1. rigolă
+2. jgheab
+halt /hˈɒlt/
+oprire
+handle /hˈandəl/
+a manevra
+handler /hˈandlə/
+descriptor
+handshake /hˈandʃeɪk/
+strîngere de mînă
+hard disk /hˈɑːd dˈɪsk/
+disc
+hard /hˈɑːd/
+greu
+hardware /hˈɑːdweə/
+1. fierărie
+2. hardware (componentele fizice ale unui calculator)
+header /hˈɛdə/
+antet
+hello world /həlˈəʊ wˈɜːld/
+1. salut lume
+2. sintagmă folosită pentru a descrie un cel mai rudimentar posibil program ce poate fi creat într-un limbaj (de regulă acest program doar afișază 'hello word')
+help /hˈɛlp/
+ajutor
+heap /hˈiːp/
+1. a încărca
+2. grămadă
+hex /hˈɛks/
+hexazecimal (în baza 16)
+hidden file /hˈɪdən fˈaɪl/
+fișier ascuns
+hide /hˈaɪd/
+a (se) ascunde
+hierachy /hˈaɪəɹɐkˌɪ/
+ierarhie
+highlight /hˈaɪlaɪt/
+a evidenția
+hint /hˈɪnt/
+sugestie
+hyperlink /hˈaɪpəlˌɪŋk/
+hiperlegătură
+histogram /hˈɪstəɡɹˌam/
+histogramă
+history /hˈɪstəɹi/
+1. istoric
+2. istorie
+home /hˈəʊm/
+acasă
+home directory /hˈəʊm daɪɹˈɛktəɹi/
+directorul personal al unui utilizator
+home page /hˈəʊm pˈeɪdʒ/
+pagină de pornire
+homogeneous environment /həmˈəʊdʒniəs ɛnvˈaɪɹənmənt/
+mediu omogen
+host /hˈəʊst/
+gazdă
+hostname /hˈəʊstneɪm/
+nume de gazdă
+hot key /hˈɒt kˈiː/
+tastă fierbinte
+hot link /hˈɒt lˈɪŋk/
+legătură fierbinte
+hot spot /hˈɒt spˈɒt/
+punct fierbinte
+housekeeping /hˈaʊskiːpɪŋ/
+întreținere
+html /ˌeɪtʃtˌiːˌɛmˈɛl/
+limbajul de marcare a hipertextului
+Hypertext Markup Language /hˈaɪpətˌɛkst mˈɑːkʌp lˈaŋɡwɪdʒ/
+limbajul de marcare a hipertextului
+http /ˌeɪtʃtˌiːtˌiːpˈiː/
+protocolul de tranfer a hipertextului
+Hypertext Transfer Protocol /hˈaɪpətˌɛkst tɹˈansfɜː pɹˈəʊtəkˌɒl/
+protocolul de tranfer a hipertextului
+hue /hjˈuː/
+1. nuanță
+2. vopsea
+i/o /ˈaɪ slˈaʃ ˈəʊ/
+intrări și ieșiri
+input/output /ˈɪnpʊt slˈaʃ ˈaʊtpʊt/
+intrări și ieșiri
+i/o subsystem /ˈaɪ slˈaʃ ˈəʊ sˈʌbsɪstəm/
+subsistemulde intrări și ieșiri
+icon /ˈaɪkɒn/
+1. icoană
+2. pictogramă
+id /aɪdˈiː/
+identificator
+identifier /aɪdˈɛntɪfˌaɪə/
+identificator
+idle /ˈaɪdəl/
+1. în așteptare
+2. liber
+3. nefolosit
+4. neutilizat
+5. disponibil
+6. inutil
+illegal /ɪlˈiːɡəl/
+ilegal
+image /ˈɪmɪdʒ/
+imagine
+implementation /ˌɪmplɪməntˈeɪʃən/
+1. îndeplinire
+2. punere în aplicare
+3. executare
+4. realizare
+import /ɪmpˈɔːt/
+1. a importa
+2. import
+inactive window /ɪnˈaktɪv wˈɪndəʊ/
+fereastra inactivă
+inch /ˈɪntʃ/
+țol
+increase /ˈɪnkɹiːs/
+1. creștere
+2. spor
+3. a crește
+increment /ˈɪnkɹɪmənt/
+1. creștere
+2. sporire
+3. mărire
+4. profit
+incremental update /ˌɪnkɹɪmˈɛntəl ˈʌpdeɪt/
+o metodă de punere la zi prin reținerea doar a modificărilor ulterioare unei anumite date
+indent /ˌɪndˈɛnt/
+1. a zimțui
+2. a paragrafa
+index /ˈɪndɛks/
+1. index
+2. indice
+indicator /ˈɪndɪkˌeɪtə/
+indicator
+information /ˌɪnfəmˈeɪʃən/
+informație
+initialization /ɪnˌɪʃəlaɪzˈeɪʃən/
+inițiere
+input /ˈɪnpʊt/
+1. aducere
+2. adimisie
+insertion /ɪnsˈɜːʃən/
+1. introducere
+2. inserare
+insertion point /ɪnsˈɜːʃən pˈɔɪnt/
+punct de inserare
+install /ɪnstˈɔːl/
+instalare
+interaction /ˌɪntəɹˈakʃən/
+interacțiune
+intercept /ˌɪntəsˈɛpt/
+1. a intercepta
+2. interceptare
+interface /ˈɪntəfˌeɪs/
+interfață
+internal bug /ɪntˈɜːnəl bˈʌɡ/
+problemă internă
+internal error /ɪntˈɜːnəl ˈɛɹə/
+eroare internă
+international /ˌɪntənˈaʃənəl/
+internațional
+internet /ˈɪntənˌɛt/
+internet
+interrupt /ˈɪntəɹˌʌpt/
+întrerupere
+intersect /ˌɪntəsˈɛkt/
+1. a intersecta
+2. intersecție
+interval /ˈɪntəvəl/
+interval
+intuitive /ɪntjˈuːɪtˌɪv/
+intuitiv
+invalid /ɪnvˈalɪd/
+invalid
+invert /ɪnvˈɜːt/
+a inversa
+invert selection /ɪnvˈɜːt sɪlˈɛkʃən/
+inversează selecția
+invisible /ɪnvˈɪzəbəl/
+invizibil
+ip address /ˌaɪpˈiː ɐdɹˈɛs/
+adresă IP
+italic /ɪtˈalɪk/
+1. italic
+2. cursiv
+item /ˈaɪtəm/
+element
+job /dʒˈɒb/
+1. sarcină
+2. slujbă
+justify /dʒˈʌstɪfˌaɪ/
+1. a alinia la margini
+2. aliniere la margini
+kernel /kˈɜːnəl/
+nucleu
+key /kˈiː/
+1. tastă
+2. cheie
+keyboard /kˈiːbɔːd/
+tastatură
+keyword /kˈiːwɜːd/
+cuvînt cheie
+kill /kˈɪl/
+a omorî
+kilobyte /kˈɪləbˌaɪt/
+1. kilobyte
+2. tradițional 1024 de byte (2^10)
+3. producătorii de hardware folosesc 1000 de byte (10^3)
+kit /kˈɪt/
+1. trusă
+2. set
+installation kit /ˌɪnstəlˈeɪʃən kˈɪt/
+pachet de instalare
+label /lˈeɪbəl/
+etichetă
+lambda /lˈambdə/
+lambda
+landscape /lˈandskeɪp/
+1. decor
+2. (pentru tipărire) orizontal
+language /lˈaŋɡwɪdʒ/
+1. limbă
+2. limbaj
+laptop /lˈaptɒp/
+1. laptop
+2. calculator portabil
+latency /lˈeɪtənsi/
+latență
+launch icon /lˈɔːntʃ ˈaɪkɒn/
+pictogramă de lansare
+launcher /lˈɔːntʃə/
+lansator
+layer /lˈeɪə/
+strat
+layout /lˈeɪaʊt/
+1. machetă
+2. aranjament
+legacy /lˈɛɡəsi/
+moștenit
+legacy system /lˈɛɡəsi sˈɪstəm/
+sistem moștenit
+legacy application /lˈɛɡəsi ˌaplɪkˈeɪʃən/
+aplicație moștenită
+legal /lˈiːɡəl/
+1. legal
+2. dimensiune de hirtie de scris - omoloagă cu A4 în sistemul anglo-saxon
+length /lˈɛŋθ/
+lungime
+letter /lˈɛtə/
+1. literă
+2. scrisoare
+3. dimensiune de hirtie de scris - omoloagă cu A5 în sistemul anglo-saxon
+library /lˈaɪbɹəɹi/
+bibliotecă
+license agreement /lˈaɪsəns ɐɡɹˈiːmənt/
+întelegere contractuală legată de tipul de licență sub care este distribuită o aplicație
+limit /lˈɪmɪt/
+limită
+line /lˈaɪn/
+linie
+line arguments /lˈaɪn ˈɑːɡjuːmənts/
+argumentele din linia de comandă
+linear transfer /lˈɪniə tɹˈansfɜː/
+transfer liniar
+link /lˈɪŋk/
+1. a lega
+2. legătură
+3. za
+load /lˈəʊd/
+1. a încărca
+2. încărcătură
+3. încărcare
+local /lˈəʊkəl/
+local
+location /ləʊkˈeɪʃən/
+locație
+lock /lˈɒk/
+1. a bloca
+2. blocare
+log /lˈɒɡ/
+jurnal
+logical /lˈɒdʒɪkəl/
+logic (adevărat sau fals)
+logo /lˈəʊɡəʊ/
+1. emblemă
+2. siglă
+look /lˈʊk/
+1. a se uita
+2. uite
+lookup /lˈʊkʌp/
+căutare
+loop /lˈuːp/
+1. ciclu
+2. buclă
+look and feel /lˈʊk and fˈiːl/
+aspect
+mail /mˈeɪl/
+poștă
+mail client /mˈeɪl klˈaɪənt/
+client de postă electronică
+mail server /mˈeɪl sˈɜːvə/
+server de poștă electronică
+mailbox /mˈeɪlbɒks/
+cutie poștală
+main body /mˈeɪn bˈɒdi/
+corpul mesajului - mesajul propriu-zis
+mainframe /mˈeɪnfɹeɪm/
+mainframe
+magenta /mədʒˈɛntə/
+fucsină
+man page /mˈan pˈeɪdʒ/
+pagină de manual
+manager /mˈanɪdʒə/
+1. manager
+2. administrator
+manual /mˈanjuːəl/
+manual
+manual page /mˈanjuːəl pˈeɪdʒ/
+pagină de manual
+margin /mˈɑːdʒɪn/
+margine
+mark /mˈɑːk/
+1. marcaj
+2. semn
+markup /mˈɑːkʌp/
+marcare
+markup language /mˈɑːkʌp lˈaŋɡwɪdʒ/
+limbaj de marcare
+matching /mˈatʃɪŋ/
+1. care se potrivește
+2. potrivit
+mdi /ˌɛmdˌiːˈaɪ/
+interfață cu multiple documente
+Multiple Document Interface /mˈʌltɪpəl dˈɒkjuːmənt ˈɪntəfˌeɪs/
+interfață cu multiple documente
+media /mˈiːdiːə/
+mediu
+media type /mˈiːdiːə tˈaɪp/
+tip de mediu
+median /mˈiːdiːən/
+medie
+meeting /mˈiːtɪŋ/
+întîlnire
+memory /mˈɛməɹi/
+memorie
+menu /mˈɛnjuː/
+meniu
+menubar /mˈɛnjuːbˌɑː/
+bara de meniu
+merge /mˈɜːdʒ/
+1. a combina
+2. combinare
+3. a reuni
+4. reunire
+message /mˈɛsɪdʒ/
+mesaj
+minimize /mˈɪnɪmˌaɪz/
+1. a minimiza
+2. a micșora
+minix /mˈɪnɪks/
+sistem de operare din familia Unix
+minor faults /mˈaɪnə fˈɒlts/
+greșeli minore
+mirror /mˈɪɹə/
+oglindă
+misc /mˈɪsk/
+diverse
+miscellaneous /mˌɪsəlˈeɪniəs/
+diverse
+mode /mˈəʊd/
+mod
+model /mˈɒdəl/
+model
+modem /mˈəʊdɛm/
+modem
+modifier /mˈɒdɪfˌaɪə/
+modificator
+modify /mˈɒdɪfˌaɪ/
+a modifica
+module /mˈɒdjuːl/
+modul
+monitor /mˈɒnɪtə/
+1. monitor
+2. program de monitorizare
+monochrome /mˈɒnəʊkɹˌəʊm/
+monocrom
+mount /mˈaʊnt/
+1. a monta
+2. montare
+mouse /mˈaʊs/
+șoarece
+move /mˈuːv/
+1. a (se) mișca
+2. a muta
+ms /ˌɛmˈɛs/
+MicroSoft
+mtu /ˌɛmtˌiːjˈuː/
+unitatea maximă de tranmisie
+Maximum Transmission Unit /mˈaksɪməm tɹansmˈɪʃən jˈuːnɪt/
+unitatea maximă de tranmisie
+multimedia /mˌʌltɪmˈiːdiːə/
+multimedia
+namespace /nˈeɪmspeɪs/
+spațiu de nume
+nested /nˈɛstɪd/
+îmbricat
+network /nˈɛtwɜːk/
+rețea
+nibble /nˈɪbəl/
+1. a ciuguli
+2. semioctet (4 biți)
+node /nˈəʊd/
+nod
+none /nˈʌn/
+nimic
+normal distribution /nˈɔːməl dˌɪstɹɪbjˈuːʃən/
+distribuția normală
+notebook /nˈəʊtbʊk/
+1. agendă
+2. notebook
+3. calculator portabil
+notepad /nˈəʊtpad/
+carnețel
+notice /nˈəʊtɪs/
+1. notiță
+2. a remarca
+notify /nˈəʊtɪfˌaɪ/
+1. a înștiința
+2. înștiințare
+number /nˈʌmbə/
+număr
+number of /nˈʌmbəɹ ɒv/
+număr de
+numbered list /nˈʌmbəd lˈɪst/
+listă (fiecare element primește un număr)
+numeric /njuːmˈɛɹɪk/
+numeric
+object code /ˈɒbdʒɛkt kˈəʊd/
+cod obiect
+oblique /əblˈiːk/
+oblic
+observation /ɒbzəvˈeɪʃən/
+observații
+obsolete /ˈɒbsəlˌiːt/
+învechit
+offline /ˈɒflaɪn/
+deconectat
+offset /ˈɒfsɛt/
+1. decalaj
+2. deplasare
+online /ˈɒnlaɪn/
+conectat
+opacity /ɒpˈasɪti/
+opacitate
+open /ˈəʊpən/
+deschis
+open source /ˈəʊpən sˈɔːs/
+sursă deschisă - aplicații ale căror surse sînt publice
+operating system /ˈɒpəɹˌeɪtɪŋ sˈɪstəm/
+sistem de operare
+operation /ˌɒpəɹˈeɪʃən/
+operație
+optional /ˈɒpʃənəl/
+opțional
+option /ˈɒpʃən/
+opțiune
+or /ˈɔː/
+sau
+order /ˈɔːdə/
+1. comandă
+2. ordin
+3. ordine
+orientation /ˌɔːɹiəntˈeɪʃən/
+orientare
+origin /ˈɒɹɪdʒˌɪn/
+origine
+outline /ˈaʊtlaɪn/
+1. a sublinia
+2. subliniat
+output /ˈaʊtpʊt/
+1. a produce
+2. produs
+3. ieșire
+override /ˌəʊvəɹˈaɪd/
+1. a strivi
+2. a înlocui
+3. înlocuiește
+overstrike /ˌəʊvəstɹˈaɪk/
+1. a tăia
+2. tăiere
+3. despre fonturi
+overwrite /ˌəʊvəɹˈaɪt/
+1. a suprascrie
+2. suprascriere
+owner /ˈəʊnə/
+proprietar
+pack /pˈak/
+a împacheta
+package /pˈakɪdʒ/
+pachet
+packet /pˈakɪt/
+pachet (mai mic decît package)
+padding /pˈadɪŋ/
+umplutură
+page /pˈeɪdʒ/
+pagină
+pager /pˈeɪdʒə/
+paginator
+palette /pˈalət/
+paletă
+panel /pˈanəl/
+panou
+parameter /pəɹˈamɪtə/
+parametru
+parcel /pˈɑːsəl/
+1. a împărți
+2. parte
+3. fragment
+parse /pˈɑːs/
+a analiza
+partition /pɑːtˈɪʃən/
+1. împărțire
+2. compartimentare
+password /pˈaswɜːd/
+parolă
+paste /pˈeɪst/
+1. a lipi
+2. aluat
+3. argilă
+patern /pətˈɜːn/
+1. a modela
+2. a copia
+3. șablon
+4. model
+path /pˈaθ/
+1. cale
+2. traseu
+peak /pˈiːk/
+vîrf
+peer /pˈiə/
+1. seamăn
+2. tovarăș
+pending /pˈɛndɪŋ/
+1. sespendat
+2. atîrnat
+pending signal /pˈɛndɪŋ sˈɪɡnəl/
+semnal suspendat
+period /pˈiəɹɪəd/
+1. perioadă
+2. termen
+3. ciclu
+periodic /pˌiəɹɪˈɒdɪk/
+periodic
+permission /pəmˈɪʃən/
+permisiune
+physical memory /fˈɪzɪkəl mˈɛməɹi/
+memorie fizică
+pipe /pˈaɪp/
+1. pipă
+2. tub
+3. țeavă
+4. coș
+5. burlan
+6. fluier
+pixel /pˈɪksəl/
+pixel
+place /plˈeɪs/
+loc
+plain text /plˈeɪn tˈɛkst/
+text simplu
+play /plˈeɪ/
+1. a reda
+2. a cînta
+3. a (se) juca
+4. redare
+please /plˈiːz/
+vă rog
+plug /plˈʌɡ/
+1. dop
+2. priză
+plug-in /plˈʌɡˈɪn/
+modul
+plugged /plˈʌɡd/
+1. conectat
+2. cuplat
+point /pˈɔɪnt/
+1. a indica
+2. indicator (UI)
+3. punct
+poisson distribution /pˈɔɪsən dˌɪstɹɪbjˈuːʃən/
+distribuție poisson
+policy /pˈɒlɪsi/
+politică
+polygon /pˈɒlɪɡən/
+poligon
+pool /pˈuːl/
+1. baltă
+2. bazin
+3. o variantă de biliard
+4. fond comun
+5. rezervă
+port /pˈɔːt/
+port
+portrait /pˈɔːtɹeɪt/
+1. portret
+2. (pentru tipărire) vertical
+post office /pˈəʊst ˈɒfɪs/
+oficiu poștal
+postal box /pˈəʊstəl bˈɒks/
+casuță poștală
+postscript /pˈəʊstskɹɪpt/
+postscript
+power management /pˈaʊə mˈanɪdʒmənt/
+administrarea curentului electric
+preemptive /pɹiːˈɛmptɪv/
+preemptiv
+preferences /pɹˈɛfɹənsɪz/
+preferințe
+prefix /pɹˈiːfɪks/
+prefix
+preview /pɹˈiːvjuː/
+1. previzualizare
+2. avanpremieră
+primary colors /pɹˈaɪməɹi kˈʌləz/
+culori de bază
+print /pɹˈɪnt/
+1. a tipări
+2. tipărire
+3. tipăritură
+print area /pɹˈɪnt ˈeəɹiə/
+zonă tipăribilă
+printer /pɹˈɪntə/
+imprimantă
+priority /pɹaɪˈɒɹɪti/
+prioritate
+privacy /pɹˈɪvəsi/
+intimitate
+private key /pɹˈaɪvət kˈiː/
+cheie privată/personală
+private message /pɹˈaɪvət mˈɛsɪdʒ/
+mesaj personal
+problem /pɹˈɒbləm/
+problemă
+process /pɹˈəʊsɛs/
+proces
+process id /pɹˈəʊsɛs aɪdˈiː/
+identificator de proces
+processor /pɹˈəʊsɛsə/
+procesor
+prodigy /pɹˈɒdɪdʒi/
+1. semn rău
+2. monstru
+3. figurativ - minunăție
+program /pɹˈəʊɡɹam/
+program
+progress /pɹˈəʊɡɹɛs/
+progres
+progress bar /pɹˈəʊɡɹɛs bˈɑː/
+1. bară de progres
+2. indicator de evoluție
+project /pɹˈɒdʒɛkt/
+proiect
+propagation /pɹˌɒpɐɡˈeɪʃən/
+propagare
+properties /pɹˈɒpətiz/
+proprietăți
+proportional font /pɹəpˈɔːʃənəl fˈɒnt/
+caractere proportionale
+protected /pɹətˈɛktɪd/
+protejat
+protection /pɹətˈɛkʃən/
+protecție
+protocol /pɹˈəʊtəkˌɒl/
+protocol
+provision /pɹəvˈɪʒən/
+1. măsură
+2. dipozitie
+3. rezervă
+4. articol (contractual)
+5. a aproviziona
+6. a înarma
+proxy /pɹˈɒksi/
+1. împuternicire
+2. mandat
+3. mandatar
+public /pˈʌblɪk/
+public
+public key /pˈʌblɪk kˈiː/
+cheie publică
+put /pˈʊt/
+1. pune
+2. plasează
+only /ˈəʊnli/
+doar
+query /kwˈiəɹɪ/
+1. întrebare
+2. chestiune
+3. a pune o întrebare
+queue /kjˈuː/
+coadă
+quit /kwˈɪt/
+ieșire
+quoting /kwˈəʊtɪŋ/
+citare
+radio button /ɹˈeɪdɪˌəʊ bˈʌtən/
+buton radio
+random /ɹˈandəm/
+1. aleator
+2. întîmplător
+range /ɹˈeɪndʒ/
+1. a înșira
+2. a clasifica
+3. șir
+4. rînd
+5. ordine
+rank /ɹˈaŋk/
+grad
+rating /ɹˈeɪtɪŋ/
+1. apreciere
+2. evaluare
+3. clasificare
+ratio /ɹˈeɪʃɪˌəʊ/
+proporție
+raw /ɹˈɔː/
+brut
+raw data /ɹˈɔː dˈeɪtə/
+date brute
+raw memory /ɹˈɔː mˈɛməɹi/
+memorie brută
+read out /ɹˈiːd ˈaʊt/
+a citi cu voce tare
+ready /ɹˈɛdi/
+gata
+real memory /ɹˈiəl mˈɛməɹi/
+memorie reală/fizică
+real path /ɹˈiəl pˈaθ/
+calea reală
+real time /ɹˈiəl tˈaɪm/
+timp real
+reboot /ɹɪbˈuːt/
+repornire
+receptivity /ɹɪsɪptˈɪvɪti/
+receptivitate
+receive /ɹɪsˈiːv/
+a primi
+record /ɹˈɛkɔːd/
+1. a înregistra
+2. înregistrare
+recoverable /ɹɪkˈʌvəɹəbəl/
+recuperabil
+rectangle /ɹˈɛktaŋɡəl/
+dreptunghi
+recurrence /ɹɪkˈʌɹəns/
+recurență
+recursion /ɹɪkˈɜːʃən/
+recursivitate
+redisplay /ɹˌiːdɪsplˈeɪ/
+a reafișa
+redo /ɹˈiːduː/
+refă
+refresh /ɹɪfɹˈɛʃ/
+1. actualizare
+2. reîmprospătare
+region /ɹˈiːdʒən/
+regiune
+regular /ɹˈɛɡjuːlə/
+obișnuit
+regular expression /ɹˈɛɡjuːləɹ ɛkspɹˈɛʃən/
+expresie obișnuită
+regulate /ɹˈɛɡjuːlˌeɪt/
+1. a regulariza
+2. a adapta
+3. a regla
+reject /ɹɪdʒˈɛkt/
+1. a respinge
+2. rebut
+relationship /ɹɪlˈeɪʃənʃˌɪp/
+relație
+release /ɹɪlˈiːs/
+1. eliberare
+2. lansare
+remote /ɹɪmˈəʊt/
+la distanță
+remove /ɹɪmˈuːv/
+1. a șterge
+2. a îndepărta
+rename /ɹɪnˈeɪm/
+a redenumi
+render /ɹˈɛndə/
+1. a da
+2. a preda
+3. a livra
+4. a înapoia
+5. a exprima
+repeat /ɹɪpˈiːt/
+a repeta
+replace /ɹɪplˈeɪs/
+a înlocui
+report /ɹɪpˈɔːt/
+raport
+reserved blocks /ɹɪzˈɜːvd blˈɒks/
+blocuri rezervate
+reset /ɹɪsˈɛt/
+1. a repune
+2. a stabili
+3. a pune (ceasul)
+resident /ɹˈɛzɪdənt/
+1. rezident
+2. inerent
+resident memory /ɹˈɛzɪdənt mˈɛməɹi/
+memorie rezidentă
+residual /ɹɪsˈɪdʒuːəl/
+1. rezidual
+2. rămas nelămurit
+resize /ɹɪsˈaɪz/
+a redimensiona
+resolution /ɹˌɛzəlˈuːʃən/
+rezoluție
+resource element /ɹɪzˈɔːs ˈɛlɪmənt/
+resursă
+restart /ɹɪstˈɑːt/
+1. a reporni
+2. repornire
+restore /ɹɪstˈɔː/
+1. a restaura
+2. a repara
+3. a restabili
+resume /ɹɪzjˈuːm/
+1. a relua
+2. reluare
+3. rezumat
+retrieve /ɹɪtɹˈiːv/
+a recupera
+retry /ɹˈiːtɹaɪ/
+1. a reîncerca
+2. reîncearcă
+return /ɹɪtˈɜːn/
+1. a întoarce
+2. întoarcere
+revert /ɹɪvˈɜːt/
+1. a reveni
+2. revenire
+require /ɹɪkwˈaɪə/
+1. a necesita
+2. necesită
+rollback /ɹˈəʊlbak/
+1. a anula
+2. anulare
+root /ɹˈuːt/
+rădăcină
+root directory /ɹˈuːt daɪɹˈɛktəɹi/
+director rădăcină
+root window /ɹˈuːt wˈɪndəʊ/
+fereastră rădăcină
+rotate /ɹəʊtˈeɪt/
+1. a roti
+2. a învîrti
+row /ɹˈəʊ/
+1. rînd
+2. linie
+ruler /ɹˈuːlə/
+riglă
+run /ɹˈʌn/
+1. a alerga
+2. a executa un program
+runtime /ɹˈʌntaɪm/
+1. la execuție
+2. în timpul execuției
+runtime error /ɹˈʌntaɪm ˈɛɹə/
+eroare la execuție
+sample /sˈampəl/
+eșantion
+sampling /sˈamplɪŋ/
+eșantionare
+saturation /sˌatʃəɹˈeɪʃən/
+saturație
+save /sˈeɪv/
+a salva
+scalable /skˈeɪləbəl/
+scalabil
+scalar /skˈeɪlə/
+scalar
+scale /skˈeɪl/
+1. balanța
+2. scală
+scan /skˈan/
+1. a examina
+2. a cerceta amănuntit
+schedule manager /ʃˈɛdjuːl mˈanɪdʒə/
+administrator orar
+scientific notation /saɪəntˈɪfɪk nəʊtˈeɪʃən/
+notare științifică
+scope /skˈəʊp/
+1. proporții
+2. anvergură
+3. spațiu
+4. scop
+5. țel
+screen /skɹˈiːn/
+ecran
+script /skɹˈɪpt/
+scenariu
+scroll /skɹˈəʊl/
+1. rulou
+2. spirală
+3. filet
+4. a (se) rula
+scrollbar /skɹˈəʊlbɑː/
+bară de rulare
+search /sˈɜːtʃ/
+1. a căuta
+2. căutare
+search domain /sˈɜːtʃ dəmˈeɪn/
+domeniu căutării
+search string /sˈɜːtʃ stɹˈɪŋ/
+șir de căutat
+seascape /sˈiːskeɪp/
+(pentru imprimare) orizontal răsturnat
+secondary color /sˈɛkəndəɹi kˈʌlə/
+culoare secundară
+secure channel /sɪkjˈʊə tʃˈanəl/
+canal sigur
+secure keyboard /sɪkjˈʊə kˈiːbɔːd/
+tastatură sigură
+security /sɪkjˈʊəɹɪti/
+securitate
+segment /sˈɛɡmənt/
+segment
+select /sɪlˈɛkt/
+1. a alege
+2. alegere
+selection /sɪlˈɛkʃən/
+alegere
+send /sˈɛnd/
+a trimite
+send to /sˈɛnd tuː/
+trimite către
+sense /sˈɛns/
+1. simț
+2. rațiune
+3. părere
+4. opinie
+sensitive /sˈɛnsɪtˌɪv/
+sensibil
+separator /sˈɛpəɹˌeɪtə/
+separator
+server /sˈɜːvə/
+server
+session /sˈɛʃən/
+sesiune
+set /sˈɛt/
+1. a pune
+2. a plasa
+3. a apune
+setting /sˈɛtɪŋ/
+1. aranjare
+2. acompaniament
+set-up /sˈɛtˈʌp/
+1. program de instalare a unei aplicații pe calculator
+2. program de fixare a condițiilor în care va rula o aplicație pe un calculator
+severity /səvˈɛɹɪti/
+1. serveritate
+2. gravitate
+share /ʃˈeə/
+1. a împărți
+2. a distribui
+3. a partaja
+4. partajare
+shared memory /ʃˈeəd mˈɛməɹi/
+memorie partajată
+sheet /ʃˈiːt/
+1. foaie
+2. cearșaf
+shell /ʃˈɛl/
+1. scoică
+2. carapace
+shift key /ʃˈɪft kˈiː/
+tasta 'shift'
+show /ʃˈəʊ/
+1. a arăta
+2. a expune
+3. spectacol
+shrink /ʃɹˈɪŋk/
+a micșora
+shut down /ʃˈʌt dˈaʊn/
+1. a opri
+2. oprire
+signal /sˈɪɡnəl/
+semnal
+signature block /sˈɪɡnɪtʃə blˈɒk/
+semnătură
+signature /sˈɪɡnɪtʃə/
+semnatură
+site /sˈaɪt/
+1. poziție
+2. situație
+3. amplasament
+skew /skjˈuː/
+1. oblicitate
+2. poziție piezișă
+skip /skˈɪp/
+1. a sări
+2. salt
+slant /slˈant/
+1. a se înclina
+2. înclinat
+slave /slˈeɪv/
+sclav
+shade /ʃˈeɪd/
+1. a umbri
+2. umbră
+shared /ʃˈeəd/
+1. comun
+2. folosit în ~
+sleeping /slˈiːpɪŋ/
+1. care doarme
+2. adormit
+slider /slˈaɪdə/
+1. cursor
+2. patină
+slot /slˈɒt/
+1. crăpătură
+2. tăietură
+slow terminal /slˈəʊ tˈɜːmɪnəl/
+terminal încet
+socket /sˈɒkɪt/
+1. mufă
+2. deschizătură
+3. soclu
+4. fasung
+5. orbită
+6. gaură
+smart /smˈɑːt/
+1. deștept
+2. inteligent
+smart terminal /smˈɑːt tˈɜːmɪnəl/
+terminal inteligent
+smooth /smˈuːð/
+1. fin
+2. neted
+snap /snˈap/
+1. mușcătură
+2. apucare rapidă
+snooze /snˈuːz/
+1. a ațipi
+2. moțăială
+solid model /sˈɒlɪd mˈɒdəl/
+model solid
+solid line /sˈɒlɪd lˈaɪn/
+linie solidă
+sort /sˈɔːt/
+1. fel
+2. soi
+3. a tria
+4. a sorta
+sound card /sˈaʊnd kˈɑːd/
+placă de sunet
+source /sˈɔːs/
+sursă
+source code /sˈɔːs kˈəʊd/
+cod sursă
+space character /spˈeɪs kˈaɹɪktə/
+caracterul spațiu
+spam /spˈam/
+mesaj nedorit (de regula cu caracter publicitar)
+spawn /spˈɔːn/
+1. a născoci
+2. a se înmulți
+special character /spˈɛʃəl kˈaɹɪktə/
+caracter special
+spell /spˈɛl/
+1. ortografie
+2. vrajă
+spell checker /spˈɛl tʃˈɛkə/
+corector ortografic
+splitter /splˈɪtə/
+separator
+spool /spˈuːl/
+a bobina
+spreadsheet /spɹˈɛdʃiːt/
+pagină de calcul tabelar
+synopsis /sɪnˈɒpsɪs/
+1. rezultat
+2. expunere sumară
+stabilize /stˈeɪbɪlˌaɪz/
+a stabiliza
+stack /stˈak/
+stivă
+standard /stˈandəd/
+standard
+standard deviation /stˈandəd dˌiːvɪˈeɪʃən/
+devierea standard
+start /stˈɑːt/
+start
+state /stˈeɪt/
+stare
+statistics /stɐtˈɪstɪks/
+statistică
+status /stˈeɪtəs/
+stare
+status line /stˈeɪtəs lˈaɪn/
+linie de stare
+statusbar /stˈeɪtəsbˌɑː/
+bara de stare
+stat /stˈat/
+verificare
+stereotype /stˈɛɹɪˌəʊtaɪp/
+stereotip
+sticky /stˈɪki/
+1. persistent
+2. lipicios
+sticky notes /stˈɪki nˈəʊts/
+note lipicioase
+storage /stˈɔːɹɪdʒ/
+1. depozit
+2. zonă de stocare
+strikethrough /stɹˈaɪkθɹuː/
+tăiat
+string /stɹˈɪŋ/
+șir
+stroke /stɹˈəʊk/
+1. lovitură
+2. trasătură de linie
+style /stˈaɪl/
+stil
+stub /stˈʌb/
+butuc
+subdirectory /sˌʌbdaɪɹˈɛktəɹi/
+subdirector
+subject /sˈʌbdʒɛkt/
+subiect
+submenu /sˈʌbmˌɛnjuː/
+submeniu
+submit /səbmˈɪt/
+1. a trimite
+2. trimitere
+subnet /sˈʌbnɛt/
+subrețea
+subscript /sˈʌbskɹɪpt/
+1. scris mărunt
+2. indice
+substring /sˈʌbstɹɪŋ/
+subșir
+subtitle /sˈʌbtaɪtəl/
+subtitrare
+suffix /sˈʌfɪks/
+sufix
+summary /sˈʌməɹi/
+rezumat
+supercomputer /sˌuːpəkəmpjˈuːtə/
+1. supercomputer
+2. supercalculator
+superscript /sˈuːpəskɹˌɪpt/
+1. scris sus (cum este puterea)
+2. antet
+support /səpˈɔːt/
+sprijin
+suspend /səspˈɛnd/
+a suspenda
+swap /swˈɒp/
+1. troc
+2. schimb în natură
+switch /swˈɪtʃ/
+întrerupător
+symbol /sˈɪmbəl/
+simbol
+symbolic link /sɪmbˈɒlɪk lˈɪŋk/
+legătură simbolică
+symmetric control /sɪmˈɛtɹɪk kəntɹˈəʊl/
+control simetric
+sync /sˈɪŋk/
+1. a sincroniza
+2. sincronizare
+synchronize /sˈɪnkɹənˌaɪz/
+1. a sincroniza
+2. sincronizare
+system call /sˈɪstəm kˈɔːl/
+apel sistem
+swallow /swˈɒləʊ/
+1. gît
+2. înghițitură
+syntax error /sˈɪntaks ˈɛɹə/
+eroare de sintaxă
+system /sˈɪstəm/
+sistem
+system administrator /sˈɪstəm ɐdmˈɪnɪstɹˌeɪtə/
+administrator de sistem
+system configuration /sˈɪstəm kənfˌɪɡjəɹˈeɪʃən/
+configurația sistemului
+system settings /sˈɪstəm sˈɛtɪŋz/
+fixarea sistemului
+table /tˈeɪbəl/
+tabel
+table of contents /tˈeɪbəl ɒv kˈɒntɛnts/
+cuprins
+tag /tˈaɡ/
+etichetă
+talk /tˈɔːk/
+1. a vorbi
+2. discuție
+tall /tˈɔːl/
+înalt
+tar archive /tˈɑːɹ ˈɑːkaɪv/
+arhivă tar
+target /tˈɑːɡɪt/
+1. destinație
+2. țintă
+task /tˈask/
+sarcină
+temp file /tˈɛmp fˈaɪl/
+fișier temporar
+temporary file /tˈɛmpɹəɹi fˈaɪl/
+fișier temporar
+template /tˈɛmpleɪt/
+șablon
+temporary buffer /tˈɛmpɹəɹi bˈʌfə/
+tampon temporar
+term variable /tˈɜːm vˈeəɹɪəbəl/
+variabilă a terminalului
+terminal variable /tˈɜːmɪnəl vˈeəɹɪəbəl/
+variabilă a terminalului
+terminal /tˈɜːmɪnəl/
+terminal
+terminate /tˈɜːmɪnˌeɪt/
+a termina
+test /tˈɛst/
+1. a testa
+2. test
+test module /tˈɛst mˈɒdjuːl/
+modul de test
+text /tˈɛkst/
+text
+text area /tˈɛkst ˈeəɹiə/
+zonă de text
+text only /tˈɛkst ˈəʊnli/
+doar text
+textual name /tˈɛkstʃuːəl nˈeɪm/
+nume textual
+theme /θˈiːm/
+temă
+thread /θɹˈɛd/
+1. fir
+2. fir de execuție
+threshold /θɹˈɛʃəʊld/
+prag
+thumbnail /θˈʌmbneɪl/
+miniatură
+tier /tˈiə/
+1. armătură
+2. întaritură
+3. rînd
+4. șir
+5. etaj
+6. strat
+7. a așeza în șir
+multitier /mˈʌltɪtiə/
+multistrat
+tile /tˈaɪl/
+mozaic
+timer /tˈaɪmə/
+cronometru
+timeslice /tˈaɪmslɪs/
+cuantă de timp
+timezone /tˈaɪmzəʊn/
+fus orar
+timing /tˈaɪmɪŋ/
+cronometrare
+tip /tˈɪp/
+1. pont
+2. vîrf
+title /tˈaɪtəl/
+titlu
+third party /θˈɜːd pˈɑːti/
+1. terță parte
+2. terț
+todo /tədˈuː/
+de făcut
+toggle /tˈɒɡəl/
+comutare
+tolerance /tˈɒləɹəns/
+toleranță
+token /tˈəʊkən/
+1. semn
+2. simbol
+3. jeton
+token-ring /tˈəʊkənɹˈɪŋ/
+inel cu jeton (tip de rețea)
+tool /tˈuːl/
+unealtă
+toolkit /tˈuːlkɪt/
+trusă de unelte
+tool menu /tˈuːl mˈɛnjuː/
+meniu de unelte
+toolbar /tˈuːlbɑː/
+bara de unelte
+toolbox /tˈuːlbɒks/
+trusă (de unelte)
+tooltip /tˈuːltɪp/
+pont
+top /tˈɒp/
+vîrf
+topic /tˈɒpɪk/
+topică
+track /tɹˈak/
+1. a urmări
+2. urmărire
+3. pistă (de CD)
+transfer /tɹˈansfɜː/
+transfer
+transfer statement /tɹˈansfɜː stˈeɪtmənt/
+declarație de transfer
+transitive /tɹˈansɪtˌɪv/
+1. tranzitiv
+2. tranzitivitate
+translate /tɹanslˈeɪt/
+1. a traduce
+2. a converti
+transmission channel /tɹansmˈɪʃən tʃˈanəl/
+canal de transmisie
+transparent /tɹanspˈaɹənt/
+transparent
+transpose /tɹanspˈəʊz/
+1. transpunere
+2. a transpune
+trap /tɹˈap/
+1. a captura
+2. capcană
+trash /tɹˈaʃ/
+gunoi
+tree /tɹˈiː/
+arbore
+treeview /tɹˈiːvjuː/
+vizualizare arborescentă
+trigger /tɹˈɪɡə/
+declanșator
+trim /tɹˈɪm/
+1. în bună stare
+2. aranjat
+3. a pune în ordine
+4. a aranja
+5. a potrivi
+troubleshoot /tɹˈʌbəlʃˌuːt/
+1. a depana
+2. depanare
+troubleshooting /tɹˈʌbəlʃˌuːtɪŋ/
+depanare
+tune /tjˈuːn/
+1. a ajusta
+2. ajustare
+3. a regla
+4. reglare
+5. melodie
+turing machine /tjˈʊəɹɪŋ məʃˈiːn/
+mașină turing
+type /tˈaɪp/
+tip
+type bindings /tˈaɪp bˈaɪndɪŋz/
+legături de tip
+type mismatch /tˈaɪp mɪsmˈatʃ/
+nepotrivire de tip
+unable to /ʌnˈeɪbəl tuː/
+1. nu pot să
+2. nu se poate
+3. nu este posibil
+undelete /ˌʌndɪlˈiːt/
+restaurează
+underline /ˌʌndəlˈaɪn/
+1. a sublinia
+2. subliniat
+undo /ʌndˈuː/
+anulează
+unexpected /ˌʌnɛkspˈɛktɪd/
+neașteptat
+unexpected end /ˌʌnɛkspˈɛktɪd ˈɛnd/
+sfîrșit neașteptat
+unexpected error /ˌʌnɛkspˈɛktɪd ˈɛɹə/
+eroare neașteptată
+unicode /jˈuːnɪkˌəʊd/
+unicode
+uninstall /ˌʌnɪnstˈɔːl/
+1. a dezinstala
+2. dezinstalare
+unit /jˈuːnɪt/
+unitate
+unix /jˈuːnɪks/
+UNIX
+unknown /ʌnnˈəʊn/
+necunoscut
+unknown host /ʌnnˈəʊn hˈəʊst/
+gazdă necunoscută
+unload /ʌnlˈəʊd/
+a descărca
+unmount /ʌnmˈaʊnt/
+1. a demonta
+2. demontare
+unplugged /ʌnplˈʌɡd/
+1. deconectat
+2. decuplat
+unshade /ʌnʃˈeɪd/
+1. luminează
+2. dezumbrește
+untitled /ʌntˈaɪtəld/
+fără titlu
+update /ˈʌpdeɪt/
+1. a actualiza
+2. actualizare
+upgrade /ˈʌpɡɹeɪd/
+1. promovare
+2. urcuș
+upload /ˈʌpləʊd/
+încărcare
+upside down /ˈʌpsaɪd dˈaʊn/
+vertical răsturnat
+upstream /ʌpstɹˈiːm/
+amonte
+urgent /ˈɜːdʒənt/
+urgent
+usage /jˈuːsɪdʒ/
+1. utilizare
+2. mod de utilizare
+user /jˈuːzə/
+utilizator
+user defined /jˈuːzə dɪfˈaɪnd/
+definit de către utilizator
+user directory /jˈuːzə daɪɹˈɛktəɹi/
+1. directorul utilizatorului
+2. vezi home
+user interface /jˈuːzəɹ ˈɪntəfˌeɪs/
+interfață cu utilizatorul
+username /jˈuːzənˌeɪm/
+numele utilizatorului
+valid chars /vˈalɪd tʃˈɑːz/
+caractere valide
+value /vˈaljuː/
+valoare
+variable /vˈeəɹɪəbəl/
+variabil
+variance /vˈeəɹiəns/
+variație
+vector graphics /vˈɛktə ɡɹˈafɪks/
+grafică vectorială
+vendor /vˈɛndə/
+vînzător
+verbose /vɜːbˈəʊs/
+vorbăreț
+verify /vˈɛɹɪfˌaɪ/
+1. a verifica
+2. verificare
+version /vˈɜːʃən/
+versiune
+vertical /vˈɜːtɪkəl/
+vertical
+vertical alignment /vˈɜːtɪkəl ɐlˈaɪnmənt/
+aliniere verticală
+vfs /vˌiːˌɛfˈɛs/
+sistem de fișiere virtual
+Virtual File System /vˈɜːtʃuːəl fˈaɪl sˈɪstəm/
+sistem de fișiere virtual
+video /vˈɪdɪəʊ/
+video (imagini în mișcare)
+view /vjˈuː/
+1. vizualizare
+2. vedere
+viewer /vjˈuːə/
+1. vizor
+2. observator
+viewport /vjˈuːpɔːt/
+punct de vedere
+virtual /vˈɜːtʃuːəl/
+virtual
+visualization /vˌɪʒuːəlaɪzˈeɪʃən/
+vizualizare
+volume /vˈɒljuːm/
+volum
+q&a /kjˈuː and ˈeɪ/
+întrebări și răspunsuri
+wallpaper /wˈɔːlpeɪpə/
+tapet
+warning /wˈɔːnɪŋ/
+1. avertizare
+2. warning! = atenție!
+watch /wˈɒtʃ/
+1. a monitoriza
+2. monitorizare
+3. a supraveghea
+4. supraveghere
+watch dog /wˈɒtʃ dˈɒɡ/
+câine de pază
+watch file /wˈɒtʃ fˈaɪl/
+fișier observator
+web /wˈɛb/
+plasă
+web page /wˈɛb pˈeɪdʒ/
+pagină web
+weight /wˈeɪt/
+greutate
+width /wˈɪdθ/
+lățime
+wildcard /wˈaɪldkɑːd/
+metacaracter
+window /wˈɪndəʊ/
+fereastră
+window manager /wˈɪndəʊ mˈanɪdʒə/
+administrator de ferestre
+wizard /wˈɪzəd/
+1. asistent
+2. vrăjitor
+white paper /wˈaɪt pˈeɪpə/
+carte albă
+word /wˈɜːd/
+cuvînt
+work /wˈɜːk/
+muncă
+workflow /wˈɜːkfləʊ/
+flux de lucru
+working directory /wˈɜːkɪŋ daɪɹˈɛktəɹi/
+directorul de lucru
+workspace /wˈɜːkspeɪs/
+spațiu de lucru
+wrap /ɹˈap/
+1. a înfășura
+2. a împacheta
+unwrap /ʌnɹˈap/
+1. a desfășura
+2. a dezpacheta
+write /ɹˈaɪt/
+a scrie
+wysiwyg /wˈɪziːwˌɪɡ/
+1. occv
+2. obții ceea ce vezi
+What You See Is What You Get /wˌɒt juː sˈiː ɪz wɒt juː ɡˈɛt/
+1. occv
+2. obții ceea ce vezi
+x align /ˈɛks ɐlˈaɪn/
+aliniere pe orizontală
+your /jˈɔː/
+dvs.
+your computer /jɔː kəmpjˈuːtə/
+calculatorul dvs.
+zero /zˈiəɹəʊ/
+zero
+zigzagline /zˈɪɡzɐɡlˌaɪn/
+linie în zigzag
+unknown
+ abcdefghijklmnopqrstuvwxyz
