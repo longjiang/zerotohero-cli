@@ -2,7 +2,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vue from 'vue'
 import VTooltip from 'v-tooltip'
 import BootstrapVue from 'bootstrap-vue'
-import EnglishZeroToHero from './EnglishZeroToHero'
+import ZeroToHero from './ZeroToHero'
 import Test from './Test'
 import Annotate from '@/components/Annotate'
 import WordList from '@/components/WordList'
@@ -93,7 +93,7 @@ if (location.hash === '#/test') {
       router,
       store,
       i18n,
-      render: h => h(EnglishZeroToHero)
-    }).$mount('#englishzerotohero')
+      render: h => h(ZeroToHero)
+    }).$mount('#zerotohero')
   })
 }

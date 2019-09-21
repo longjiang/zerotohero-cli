@@ -1,4 +1,4 @@
-# englishzerotohero
+# zerotohero
 
 ## Project setup
 ```
