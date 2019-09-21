@@ -92,7 +92,7 @@ export default {
       type: Function,
       default: function(entry) {
         if (entry) {
-          return `#/${this.$l1.code}/dictionary/freedict/${entry.id}`
+          return `#/${this.$l1.code}/${this.$l2.code}/dictionary/freedict/${entry.id}`
         }
       }
     },

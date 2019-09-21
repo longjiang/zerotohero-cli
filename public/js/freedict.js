@@ -253,45 +253,5 @@ const Dictionary = {
   },
   accent(text) {
     return text.replace(/'/g, '́')
-  },
-  stylize(name) {
-    const stylize = {
-      adjectives: 'adjective',
-      incomparable: 'incomparable',
-      short_f: 'short (fem.)',
-      short_m: 'short (masc.)',
-      short_n: 'short (neut.)',
-      short_pl: 'short plural',
-      superlative: 'superlative',
-      conjugations: 'conjugation',
-      pl1: 'мы',
-      pl2: 'вы',
-      pl3: 'они',
-      sg1: 'я',
-      sg2: 'ты',
-      sg3: 'он/она',
-      declensions: 'declension',
-      decl_sg: 'singular',
-      decl_pl: 'plural',
-      decl_f: 'feminine',
-      decl_m: 'masculine',
-      decl_n: 'neuter',
-      acc: 'accusative',
-      dat: 'dative',
-      gen: 'genitive',
-      inst: 'instrumental',
-      nom: 'nominative',
-      prep: 'prepositional',
-      verbs: '',
-      aspect: 'aspect',
-      imperative_pl: 'imperative plural',
-      imperative_sg: 'imperative singular',
-      partner: 'partner',
-      past_f: 'past tense (feminine)',
-      past_m: 'past tense (masculine)',
-      past_n: 'past tense (neuter)',
-      past_pl: 'past tense (plural)'
-    }
-    return stylize[name]
   }
 }
