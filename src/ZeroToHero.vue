@@ -13,8 +13,10 @@
                 class="btn btn-success btn-sign-in text-white"
                 href="https://wazuc.duanshu.com/#/"
                 target="_blank"
-                >登陆 <img src="/img/logo-duanshu-light.png" class="logo-small ml-1"
-              /></a>
+              >
+                登陆
+                <img src="/img/logo-duanshu-light.png" class="logo-small ml-1" />
+              </a>
             </div>
           </div>
           <div class="row">
@@ -72,6 +74,29 @@
         </div>
       </footer>
     </template>
+    <template v-else>
+      <div class="container-fluid bg-dark text-light pt-5 pb-5">
+        <div class="container">
+          <div class="row mb-4">
+            <div class="col-sm-12 text-center pt-3">
+              <h1 style="font-family: 'Helvetica Neue'; font-weight: 500;">Zero to Hero Education</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container main mt-5 mb-5">
+        Choose your language
+      </div>
+
+      <footer class="container-fluid bg-dark text-light pt-4 pb-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+            </div>
+          </div>
+        </div>
+      </footer>
+    </template>
   </div>
 </template>
 
@@ -104,33 +129,34 @@ export default {
   },
   watch: {
     async $route() {
-      if (this.lang && this.$route.params.lang !== this.lang) {
-        // switching language
-        location.reload()
-      } else {
-        // first time loading, set the language
-        this.lang = this.$route.params.lang
-        Vue.prototype.$lang = this.languages.find(
-          lang => lang.code === this.$route.params.lang
-        )
-        if (!Vue.prototype.$dictionary) {
-          Vue.prototype.$dictionary = Dict.load({
-            dict: this.$lang.enDictionary,
-            lang: this.lang
-          })
+      if (this.$route.params.lang) {
+        if (this.lang && this.$route.params.lang !== this.lang) {
+          // switching language
+          location.reload()
+        } else {
+          // first time loading, set the language
+          this.lang = this.$route.params.lang
+          Vue.prototype.$lang = this.languages.find(
+            lang => lang.code === this.$route.params.lang
+          )
+          if (!Vue.prototype.$dictionary) {
+            Vue.prototype.$dictionary = Dict.load({
+              dict: this.$lang.enDictionary,
+              lang: this.lang
+            })
+          }
+          this.$lang.options = (await import(
+            `@/lib/langs/${this.$lang.code}.js`
+          )).default
+          let enOptions = (await import(`@/lib/langs/en.js`)).default
+          this.$i18n.setLocaleMessage('en', enOptions.translations)
+          this.$i18n.setLocaleMessage(
+            this.$lang.code,
+            this.$lang.options.translations
+          )
+          this.$i18n.locale = this.$lang.code
+          this.langLoaded = true
         }
-        this.$lang.options = (await import(
-          `@/lib/langs/${this.$lang.code}.js`
-        )).default
-        let enOptions = (await import(`@/lib/langs/en.js`))
-          .default
-        this.$i18n.setLocaleMessage('en', enOptions.translations)
-        this.$i18n.setLocaleMessage(
-          this.$lang.code,
-          this.$lang.options.translations
-        )
-        this.$i18n.locale = this.$lang.code
-        this.langLoaded = true
       }
     }
   }

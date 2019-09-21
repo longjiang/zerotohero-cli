@@ -10,8 +10,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home-redirect',
-      redirect: `/zh` // defaulting to /zh if no language is set
+      name: 'choose',
+      props: true,
+      component: () => import('./views/Choose.vue')
     },
     {
       path: '/:lang',
