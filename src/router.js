@@ -15,7 +15,7 @@ export default new Router({
       component: () => import('./views/Choose.vue')
     },
     {
-      path: '/:lang',
+      path: '/:l1',
       name: 'home',
       props: true,
       component: () => import('./views/Home.vue'),
@@ -30,7 +30,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/about-english-online-courses',
+      path: '/:l1/about-english-online-courses',
       name: 'courses',
       component: () => import('./views/Courses.vue'),
       props: true,
@@ -46,7 +46,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/transfer',
+      path: '/:l1/transfer',
       name: 'transfer',
       component: () => import('./views/Transfer.vue'),
       props: true,
@@ -62,7 +62,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/video-count',
+      path: '/:l1/video-count',
       name: 'video-count',
       component: () => import('./views/VideoCount.vue'),
       props: true,
@@ -78,7 +78,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/pricing/:args?',
+      path: '/:l1/pricing/:args?',
       name: 'pricing',
       component: () => import('./views/Pricing.vue'),
       props: true,
@@ -94,7 +94,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/course-release-schedule',
+      path: '/:l1/course-release-schedule',
       name: 'course-release-schedule',
       component: () => import('./views/ReleaseSchedule.vue'),
       props: true,
@@ -110,7 +110,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/textbooks-workbooks',
+      path: '/:l1/textbooks-workbooks',
       name: 'textbooks-workbooks',
       component: () => import('./views/Textbooks.vue'),
       props: true,
@@ -127,7 +127,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/faq',
+      path: '/:l1/faq',
       name: 'faq',
       component: () => import('./views/FAQ.vue'),
       props: true,
@@ -143,7 +143,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/dictionary/:method?/:args?',
+      path: '/:l1/dictionary/:method?/:args?',
       name: 'dictionary',
       props: true,
       component: () => import('./views/Dictionary.vue'),
@@ -158,7 +158,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/phrase/:method?/:args?',
+      path: '/:l1/phrase/:method?/:args?',
       name: 'phrase',
       component: () => import('./views/Phrase.vue'),
       props: true,
@@ -173,7 +173,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/saved-words',
+      path: '/:l1/saved-words',
       name: 'saved-words',
       component: () => import('./views/SavedWords.vue'),
       meta: {
@@ -187,7 +187,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/library',
+      path: '/:l1/library',
       name: 'library',
       component: () => import('./views/Library.vue'),
       props: true,
@@ -203,7 +203,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/reader/:method?/:arg?',
+      path: '/:l1/reader/:method?/:arg?',
       name: 'reader',
       component: () => import('./views/Reader.vue'),
       meta: {
@@ -218,7 +218,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/book/chapter/:args?',
+      path: '/:l1/book/chapter/:args?',
       name: 'book-chapter',
       component: () => import('./views/BookChapter.vue'),
       props: true,
@@ -234,7 +234,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/book/index/:args?',
+      path: '/:l1/book/index/:args?',
       name: 'book-index',
       component: () => import('./views/BookIndex.vue'),
       props: true,
@@ -250,7 +250,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/book/list/:args?',
+      path: '/:l1/book/list/:args?',
       name: 'book-list',
       component: () => import('./views/BookList.vue'),
       props: true,
@@ -266,7 +266,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/youtube/search/:args?',
+      path: '/:l1/youtube/search/:args?',
       name: 'youtube-search',
       component: () => import('./views/YouTubeSearch.vue'),
       props: true,
@@ -281,7 +281,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/youtube/view/:args?',
+      path: '/:l1/youtube/view/:args?',
       name: 'youtube-view',
       component: () => import('./views/YouTubeView.vue'),
       props: true,
@@ -296,7 +296,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/youtube/browse/:args?',
+      path: '/:l1/youtube/browse/:args?',
       name: 'youtube-browse',
       component: () => import('./views/YouTubeBrowse.vue'),
       props: true,
@@ -311,7 +311,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/youtube/channel/:args?',
+      path: '/:l1/youtube/channel/:args?',
       name: 'youtube-channel',
       component: () => import('./views/YouTubeChannel.vue'),
       props: true,
@@ -326,7 +326,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/youtube/playlist/:args?',
+      path: '/:l1/youtube/playlist/:args?',
       name: 'youtube-playlist',
       component: () => import('./views/YouTubePlaylist.vue'),
       props: true,
@@ -341,7 +341,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/contact-us',
+      path: '/:l1/contact-us',
       name: 'contact',
       component: () => import('./views/Contact.vue'),
       props: true,
@@ -356,7 +356,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/faq',
+      path: '/:l1/faq',
       name: 'faq',
       component: () => import('./views/FAQ.vue'),
       props: true,
@@ -372,7 +372,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/affiliate-program',
+      path: '/:l1/affiliate-program',
       name: 'affiliate-program',
       component: () => import('./views/Affiliate.vue'),
       props: true,
@@ -387,7 +387,7 @@ export default new Router({
       }
     },
     {
-      path: '/:lang/settings',
+      path: '/:l1/settings',
       name: 'settings',
       component: () => import('./views/Settings.vue'),
       meta: {

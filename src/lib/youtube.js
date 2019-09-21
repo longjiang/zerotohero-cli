@@ -48,13 +48,13 @@ export default {
     })
   },
   search(text, callback, options) {
-    options = Object.assign({ lang: 'en', subs: false, cacheLife: -1 }, options)
+    options = Object.assign({ l1: 'en', subs: false, cacheLife: -1 }, options)
     let subsQueryVar = options.subs ? '&sp=EgIoAQ%253D%253D' : ''
     Helper.scrape2(
       `https://www.youtube.com/results?search_query=${text.replace(
         / /g,
         '+'
-      )}+lang%3A${options.lang}${subsQueryVar}`,
+      )}+l1%3A${options.l1}${subsQueryVar}`,
       options.cacheLife
     ).then($html => {
       let videos = []

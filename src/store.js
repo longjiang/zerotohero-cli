@@ -9,32 +9,32 @@ export default new Vuex.Store({
   },
   mutations: {
     ADD_SAVED_WORD(state, options) {
-      if (!state.savedWords[options.lang]) {
-        state.savedWords[options.lang] = []
+      if (!state.savedWords[options.l1]) {
+        state.savedWords[options.l1] = []
       }
       if (
-        !state.savedWords[options.lang].find(item => {
+        !state.savedWords[options.l1].find(item => {
           if (item && Array.isArray(item)) {
             return item.join(',') === options.wordForms.join(',')
           }
         })
       ) {
-        state.savedWords[options.lang].push(options.wordForms)
+        state.savedWords[options.l1].push(options.wordForms)
         localStorage.setItem('ezhSavedWords', JSON.stringify(state.savedWords))
       }
     },
     REMOVE_SAVED_WORD(state, options) {
-      if (state.savedWords[options.lang]) {
-        const keepers = state.savedWords[options.lang].filter(
+      if (state.savedWords[options.l1]) {
+        const keepers = state.savedWords[options.l1].filter(
           item => !item.includes(options.wordForm)
         )
-        state.savedWords[options.lang] = keepers
+        state.savedWords[options.l1] = keepers
         localStorage.setItem('ezhSavedWords', JSON.stringify(state.savedWords))
       }
     },
     REMOVE_ALL_SAVED_WORDS(state, options) {
-      if (state.savedWords[options.lang]) {
-        state.savedWords[options.lang] = []
+      if (state.savedWords[options.l1]) {
+        state.savedWords[options.l1] = []
         localStorage.setItem('ezhSavedWords', JSON.stringify(state.savedWords))
       }
     }
@@ -64,16 +64,16 @@ export default new Vuex.Store({
   },
   getters: {
     hasSavedWord: state => options => {
-      if (state.savedWords[options.lang]) {
-        let yes = state.savedWords[options.lang].find(
+      if (state.savedWords[options.l1]) {
+        let yes = state.savedWords[options.l1].find(
           item => Array.isArray(item) && item.includes(options.text)
         )
         return yes
       }
     },
     savedWordCount: state => options => {
-      if (state.savedWords[options.lang]) {
-        return state.savedWords[options.lang].length
+      if (state.savedWords[options.l1]) {
+        return state.savedWords[options.l1].length
       } else {
         return 0
       }

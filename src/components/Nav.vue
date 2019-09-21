@@ -44,7 +44,7 @@
             $route.name === 'reader')
       }"
       :to="{ name: 'reader' }"
-      :title="`Improve your ${lang ? lang.name : ''} through reading`"
+      :title="`Improve your ${l1 ? l1.name : ''} through reading`"
     >
       <i class="fas fa-book-open"></i>{{ $t('Reading') }}
     </router-link>
@@ -54,7 +54,7 @@
         'router-link-active': $route.name && $route.name.startsWith('youtube')
       }"
       :to="{ name: 'youtube-browse' }"
-      :title="`Learn ${lang ? lang.name : ''} with audio-visual material.`"
+      :title="`Learn ${l1 ? l1.name : ''} with audio-visual material.`"
     >
       <i class="fas fa-video"></i>{{ $t('Audio-Visual') }}
     </router-link>
@@ -78,7 +78,7 @@
 export default {
   data() {
     return {
-      lang: this.$l1
+      l1: this.$l1
     }
   }
 }

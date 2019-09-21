@@ -116,7 +116,7 @@
 export default {
   methods: {
     savedWordsCount() {
-      let count = this.$store.getters.savedWordCount({ lang: this.$l1.code })
+      let count = this.$store.getters.savedWordCount({ l1: this.$l1.code })
       // eslint-disable-next-line vue/no-parsing-error
       return count < 100 ? count : '多'
     }

@@ -75,7 +75,7 @@ export default {
       this.sketch = undefined
       this.sketch = await SketchEngine.wsketch({
         term: this.term,
-        lang: this.$l1.code
+        l1: this.$l1.code
       })
       this.colDesc = await SketchEngine.collocationDescription(this.term)
     },

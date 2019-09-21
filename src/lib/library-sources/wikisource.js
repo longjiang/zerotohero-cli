@@ -3,18 +3,18 @@ import Helper from '@/lib/helper'
 export default {
   host: /.+\.wikisource\.org/,
   name: 'Wikisource',
-  example(lang) {
-    return `https://${lang}.wikisource.org/wiki/(Article Name)`
+  example(l1) {
+    return `https://${l1}.wikisource.org/wiki/(Article Name)`
   },
-  logo(lang) {
-    return `https://${lang}.wikisource.org/static/images/project-logos/${lang}wikisource.png`
+  logo(l1) {
+    return `https://${l1}.wikisource.org/static/images/project-logos/${l1}wikisource.png`
   },
-  async getChapter(url, lang) {
+  async getChapter(url, l1) {
     let $chapterHTML = await Helper.scrape2(url)
     let a = $chapterHTML.find('#ws-author a')
     let bookPath = $(a).attr('href')
     let book = {
-      url: bookPath ? `https://${lang}.wikisource.org${bookPath}` : undefined,
+      url: bookPath ? `https://${l1}.wikisource.org${bookPath}` : undefined,
       title: $chapterHTML.find('.subpages a').text(),
       author: $(a).text(),
       thumbnail: '',
@@ -48,10 +48,10 @@ export default {
     }
     return chapter
   },
-  async getBook(url, lang) {
+  async getBook(url, l1) {
     let $bookHTML = await Helper.scrape2(url)
     let chapters = []
-    if (lang === 'fr') {
+    if (l1 === 'fr') {
       for (let a of $bookHTML.find('.mw-parser-output > ul a')) {
         let title = $(a)
           .text()
@@ -63,7 +63,7 @@ export default {
           })
         }
       }
-    } else if (lang === 'de') {
+    } else if (l1 === 'de') {
       for (let a of $bookHTML.find('.mw-parser-output b a')) {
         chapters.push({
           title: $(a).text(),
@@ -72,10 +72,10 @@ export default {
       }
     }
     let thumbnail = undefined
-    if (lang === 'de') {
+    if (l1 === 'de') {
       thumbnail = 'https:' + $bookHTML.find('table img').attr('src')
       links = $bookHTML.find('.mw-parser-output b a')
-    } else if (lang === 'fr') {
+    } else if (l1 === 'fr') {
       thumbnail = 'https:' + $bookHTML.find('img.photo').attr('src')
     }
     return {
@@ -85,26 +85,26 @@ export default {
       chapters
     }
   },
-  async getBooklist(url, lang) {
+  async getBooklist(url, l1) {
     let $html = await Helper.scrape2(url)
     $html
       .find('.mw-parser-output > p:first-child, #toc, .mw-editsection')
       .remove()
     let list = []
-    if (lang === 'fr') {
+    if (l1 === 'fr') {
       for (let a of $html.find('.mw-category a')) {
         list.push({
-          url: `https://${lang}.wikisource.org${$(a).attr('href')}`,
+          url: `https://${l1}.wikisource.org${$(a).attr('href')}`,
           title: $(a)
             .text()
             .trim()
             .replace('Auteur:', '')
         })
       }
-    } else if (lang === 'de') {
+    } else if (l1 === 'de') {
       for (let a of $html.find('.mw-parser-output td:first-child a')) {
         list.push({
-          url: `https://${lang}.wikisource.org${$(a).attr('href')}`,
+          url: `https://${l1}.wikisource.org${$(a).attr('href')}`,
           title: $(a)
             .text()
             .trim()
@@ -113,9 +113,9 @@ export default {
     }
     return list.filter(item => !item.title.includes('Категория:'))
   },
-  booklists(lang) {
+  booklists(l1) {
     let booklists = []
-    if (lang === 'de') {
+    if (l1 === 'de') {
       booklists = [
         {
           title: 'Browse Authors',
@@ -123,7 +123,7 @@ export default {
         }
       ]
     }
-    if (lang === 'fr') {
+    if (l1 === 'fr') {
       for (let letter of [
         'A',
         'B',

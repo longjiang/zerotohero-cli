@@ -3,13 +3,13 @@ import Helper from '@/lib/helper'
 export default {
   host: /.+\.wikipedia\.org/,
   name: 'Wikipedia',
-  example(lang) {
-    return `https://${lang}.wikipedia.org/wiki/(Article Title)`
+  example(l1) {
+    return `https://${l1}.wikipedia.org/wiki/(Article Title)`
   },
-  logo(lang) {
-    return `https://${lang}.wikipedia.org/static/images/project-logos/${lang}wiki.png`
+  logo(l1) {
+    return `https://${l1}.wikipedia.org/static/images/project-logos/${l1}wiki.png`
   },
-  async getChapter(url, lang) {
+  async getChapter(url, l1) {
     let $chapterHTML = await Helper.scrape2(url, 0)
     $chapterHTML.find('.mw-parser-output > table:first-of-type').remove()
     $chapterHTML.find('.mw-editsection').remove()
@@ -24,7 +24,7 @@ export default {
         }
       })
     let langs = []
-    for (let a of $chapterHTML.find('#p-lang li a')) {
+    for (let a of $chapterHTML.find('#p-l1 li a')) {
       langs.push({
         title: `${$(a).attr('title')} (${$(a).text()})`,
         url: $(a).attr('href')
@@ -50,7 +50,7 @@ export default {
     }
     return chapter
   },
-  async getBook(url, lang) {
+  async getBook(url, l1) {
     let $bookHTML = await Helper.scrape2(url)
     let chapters = []
     for (let a of $bookHTML.find('#mw-pages li a')) {
@@ -65,12 +65,12 @@ export default {
       chapters
     }
   },
-  async getBooklist(url, lang) {
+  async getBooklist(url, l1) {
     let $html = await Helper.scrape2(url)
     let list = []
     for (let a of $html.find('#mw-content-text a')) {
       list.push({
-        url: `https://${lang}.wikipedia.org${$(a).attr('href')}`,
+        url: `https://${l1}.wikipedia.org${$(a).attr('href')}`,
         title: $(a)
           .text()
           .trim()
@@ -78,7 +78,7 @@ export default {
     }
     return list
   },
-  booklists(lang) {
+  booklists(l1) {
     return []
   }
 }

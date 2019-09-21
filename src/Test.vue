@@ -26,7 +26,7 @@ export default {
       SimplifyECDICT.simplify()
     },
     async testCorpInfo() {
-      let gramrels = await SketchEngine.gramrels({lang: 'en'})
+      let gramrels = await SketchEngine.gramrels({l1: 'en'})
       console.log(gramrels)
       let descriptions = {}
       for (let gramrel of gramrels) {

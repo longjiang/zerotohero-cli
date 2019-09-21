@@ -1,6 +1,6 @@
 <template>
   <div id="english-zero-to-hero">
-    <template v-if="langLoaded">
+    <template v-if="l1Loaded">
       <div class="container-fluid bg-dark pt-4 pl-0 pr-0">
         <div class="container">
           <div class="row mb-4">
@@ -120,8 +120,8 @@ export default {
     return {
       Config,
       languages: [],
-      lang: undefined,
-      langLoaded: false
+      l1: undefined,
+      l1Loaded: false
     }
   },
   async mounted() {
@@ -129,20 +129,20 @@ export default {
   },
   watch: {
     async $route() {
-      if (this.$route.params.lang) {
-        if (this.lang && this.$route.params.lang !== this.lang) {
+      if (this.$route.params.l1) {
+        if (this.l1 && this.$route.params.l1 !== this.l1) {
           // switching language
           location.reload()
         } else {
           // first time loading, set the language
-          this.lang = this.$route.params.lang
+          this.l1 = this.$route.params.l1
           Vue.prototype.$l1 = this.languages.find(
-            lang => lang.code === this.$route.params.lang
+            l1 => l1.code === this.$route.params.l1
           )
           if (!Vue.prototype.$dictionary) {
             Vue.prototype.$dictionary = Dict.load({
               dict: this.$l1.enDictionary,
-              lang: this.lang
+              l1: this.l1
             })
           }
           this.$l1.options = (await import(
@@ -155,7 +155,7 @@ export default {
             this.$l1.options.translations
           )
           this.$i18n.locale = this.$l1.code
-          this.langLoaded = true
+          this.l1Loaded = true
         }
       }
     }

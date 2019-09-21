@@ -35,7 +35,7 @@ export default {
         },
         {
           subs: true,
-          lang: 'en'
+          l1: 'en'
         }
       )
     }

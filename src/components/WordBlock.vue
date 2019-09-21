@@ -151,7 +151,7 @@ export default {
         this.speak(this.text)
         this.$store.dispatch('addSavedWord', {
           wordForms: await this.allForms(),
-          lang: this.$l1.code
+          l1: this.$l1.code
         })
       }
       this.saved = !this.saved
@@ -199,7 +199,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style l1="scss">
 .tooltip-images {
   width: 3rem;
   float: right;

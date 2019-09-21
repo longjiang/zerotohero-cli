@@ -128,7 +128,7 @@ export default {
       for (let language of languages) {
         promises.push(
           Helper.scrape(
-            `https://www.youtube.com/api/timedtext?v=${this.args}&lang=en&fmt=srv3`,
+            `https://www.youtube.com/api/timedtext?v=${this.args}&l1=en&fmt=srv3`,
             $html => {
               chosenLanguage = language
               for (let p of $html.find('p')) {
@@ -145,7 +145,7 @@ export default {
       await Promise.all(promises)
       if (this.english.length > 0) {
         await Helper.scrape(
-          `https://www.youtube.com/api/timedtext?v=${this.args}&lang=en&fmt=srv3&tlang=${chosenLanguage}`,
+          `https://www.youtube.com/api/timedtext?v=${this.args}&l1=en&fmt=srv3&tl1=${chosenLanguage}`,
           $html => {
             for (let p of $html.find('p')) {
               let line = {

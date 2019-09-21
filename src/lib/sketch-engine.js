@@ -5,16 +5,16 @@ import SketchEngineCorpora from './sketch-engine-corpora'
 
 export default {
   corpora: SketchEngineCorpora,
-  corpname(lang) {
-    if (lang) {
+  corpname(l1) {
+    if (l1) {
       let corpnames = JSON.parse(localStorage.getItem('ezhCorpnames') || '{}')
       let defaultCorpusName = 'preloaded/ententen15_tt21'
-      let corpname = corpnames[lang] || defaultCorpusName
+      let corpname = corpnames[l1] || defaultCorpusName
       return corpname
     }
   },
   async collocationDescription() {
-    let gramrels = await this.gramrels({lang: 'en'})
+    let gramrels = await this.gramrels({l1: 'en'})
     let descriptions = {}
     for (let gramrel of gramrels) {
       descriptions[gramrel] = gramrel.replace('%w', '{word}')
@@ -509,7 +509,7 @@ export default {
         `${
           Config.sketchEngineProxy
         }?https://api.sketchengine.eu/bonito/run.cgi/wsketch?corpname=${this.corpname(
-          options.lang
+          options.l1
         )}&lemma=${options.term}`,
         function(response) {
           if (response.data.Gramrels && response.data.Gramrels.length > 0) {
@@ -535,7 +535,7 @@ export default {
         `${
           Config.sketchEngineProxy
         }?https://api.sketchengine.eu/bonito/run.cgi/corp_info?corpname=${this.corpname(
-          options.lang
+          options.l1
         )}&gramrels=1`,
         function(response) {
           let results = []
@@ -554,17 +554,17 @@ export default {
     })
   },
   concordance(options) {
-    let corpus = this.corpora.find(corpus => corpus.corpname === this.corpname(options.lang))
+    let corpus = this.corpora.find(corpus => corpus.corpname === this.corpname(options.l1))
     let parallel = corpus.aligned && corpus.aligned.length > 0
     let requestJSON = parallel
-      ? `{"attrs":"word","structs":"s,g","refs":"=doc.subcorpus","ctxattrs":"word","viewmode":"align","usesubcorp":"","freqml":[{"attr":"word","ctx":"0","base":"kwic"}],"fromp":1,"pagesize":1000,"concordance_query":[{"queryselector":"iqueryrow","sel_aligned":["opus2_${options.lang}"],"cql":"","iquery":"${options.term}","queryselector_opus2_${options.lang}":"iqueryrow","iquery_opus2_${options.lang}":"","pcq_pos_neg_opus2_${options.lang}":"pos","filter_nonempty_opus2_${options.lang}":"on"}]}`
+      ? `{"attrs":"word","structs":"s,g","refs":"=doc.subcorpus","ctxattrs":"word","viewmode":"align","usesubcorp":"","freqml":[{"attr":"word","ctx":"0","base":"kwic"}],"fromp":1,"pagesize":1000,"concordance_query":[{"queryselector":"iqueryrow","sel_aligned":["opus2_${options.l1}"],"cql":"","iquery":"${options.term}","queryselector_opus2_${options.l1}":"iqueryrow","iquery_opus2_${options.l1}":"","pcq_pos_neg_opus2_${options.l1}":"pos","filter_nonempty_opus2_${options.l1}":"on"}]}`
       : `{"lpos":"","wpos":"","default_attr":"word","attrs":"word","refs":"=doc.website","ctxattrs":"word","attr_allpos":"all","usesubcorp":"","viewmode":"kwic","cup_hl":"q","cup_err":"true","cup_corr":"","cup_err_code":"true","structs":"s,g","gdex_enabled":0,"fromp":1,"pagesize":50,"concordance_query":[{"queryselector":"iqueryrow","iquery":"${options.term}"}],"kwicleftctx":"100#","kwicrightctx":"100#"}`
     return new Promise(resolve => {
       $.post(
         `${
           Config.sketchEngineProxy
         }?https://app.sketchengine.eu/bonito/run.cgi/concordance?corpname=${this.corpname(
-          options.lang
+          options.l1
         )}`,
         {
           json: requestJSON
@@ -608,7 +608,7 @@ export default {
     $.post(
       `${
         Config.sketchEngineProxy
-      }?https://app.sketchengine.eu/bonito/run.cgi/thes?corpname=${this.corpname(options.lang)}`,
+      }?https://app.sketchengine.eu/bonito/run.cgi/thes?corpname=${this.corpname(options.l1)}`,
       {
         lemma: options.term,
         lpos: '',

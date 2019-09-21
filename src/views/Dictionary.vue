@@ -124,7 +124,7 @@ export default {
   },
   data() {
     return {
-      langName: this.$l1.name,
+      l1Name: this.$l1.name,
       entry: undefined,
       characters: [],
       character: {},

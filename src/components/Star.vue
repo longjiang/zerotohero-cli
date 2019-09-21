@@ -47,7 +47,7 @@ export default {
         text: this.word
           ? this.word.bare.toLowerCase()
           : this.text.toLowerCase(),
-        lang: this.$l1.code
+        l1: this.$l1.code
       })
       return saved
     },
@@ -55,7 +55,7 @@ export default {
       let word = this.word ? await this.allForms() : [this.text.toLowerCase()]
       this.$store.dispatch('addSavedWord', {
         wordForms: word,
-        lang: this.$l1.code
+        l1: this.$l1.code
       })
     },
     removeWordClick() {
@@ -63,7 +63,7 @@ export default {
         wordForm: this.word
           ? this.word.bare.toLowerCase()
           : this.text.toLowerCase(),
-        lang: this.$l1.code
+        l1: this.$l1.code
       })
     }
   }

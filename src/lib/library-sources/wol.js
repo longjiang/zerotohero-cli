@@ -3,14 +3,14 @@ import Helper from '@/lib/helper'
 export default {
   host: 'wol.jw.org',
   name: 'WOL',
-  example(lang) {
-    lang = lang.replace('zh', 'cmn-Hans')
-    return `https://wol.jw.org/${lang}/(article path)`
+  example(l1) {
+    l1 = l1.replace('zh', 'cmn-Hans')
+    return `https://wol.jw.org/${l1}/(article path)`
   },
-  logo(lang) {
+  logo(l1) {
     return 'https://assetsnffrgf-a.akamaihd.net/assets/m/802013134/univ/art/802013134_univ_cnt_8_xl.jpg'
   },
-  async getChapter(url, lang) {
+  async getChapter(url, l1) {
     let $chapterHTML = await Helper.scrape2(url)
     let title = $chapterHTML
       .find('header h1')
@@ -35,7 +35,7 @@ export default {
     }
     return chapter
   },
-  async getBook(url, lang) {
+  async getBook(url, l1) {
     let $bookHTML = await Helper.scrape2(url)
     let thumbnail = $bookHTML
       .find('ul.directory li.row:first-child img')
@@ -64,7 +64,7 @@ export default {
     }
     return book
   },
-  async getBooklist(url, lang) {
+  async getBooklist(url, l1) {
     let $html = await Helper.scrape2(url)
     let list = []
     for (let li of $html.find('ul.directory li.row')) {
@@ -87,7 +87,7 @@ export default {
 
     return list
   },
-  booklists(lang) {
+  booklists(l1) {
     return []
   }
 }

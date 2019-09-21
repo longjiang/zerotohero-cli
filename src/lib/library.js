@@ -5,16 +5,16 @@ import Litnet from '@/lib/library-sources/litnet'
 
 export default {
   universalSources: [Wikipedia, Wikisource, WOL, Litnet],
-  langSources: [],
+  l1Sources: [],
   async setLangSources(sources) {
     for (let source of sources) {
-      this.langSources.push(
+      this.l1Sources.push(
         (await import(`@/lib/library-sources/${source}.js`)).default
       )
     }
   },
   sources() {
-    return this.langSources.concat(this.universalSources)
+    return this.l1Sources.concat(this.universalSources)
   },
   source(url) {
     const host = url.replace(/.*\/\/([^/]*).*/, '$1')
@@ -27,8 +27,8 @@ export default {
   getChapter(url) {
     return this.source(url) ? this.source(url).getChapter(url) : false
   },
-  getBooklist(url, lang) {
+  getBooklist(url, l1) {
     
-    return this.source(url) ? this.source(url).getBooklist(url, lang) : false
+    return this.source(url) ? this.source(url).getBooklist(url, l1) : false
   }
 }

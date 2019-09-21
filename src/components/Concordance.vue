@@ -108,7 +108,7 @@ export default {
       this.words = [this.term].concat(forms)
       this.examples = await SketchEngine.concordance({
         term: this.term,
-        lang: this.$l1.code
+        l1: this.$l1.code
       })
       this.concordanceKey += 1
     }
