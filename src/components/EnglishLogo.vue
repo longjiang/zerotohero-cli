@@ -1,6 +1,6 @@
 <template>
   <a
-    :href="language.enURL.replace('https://en.zerotohero.ca/', '/')"
+    :href="`#/${language.code}/en`"
     target="_blank"
     class="mr-4 mb-4 d-inline-block link-unstyled"
   >

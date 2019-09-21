@@ -104,7 +104,7 @@ export default {
           this.$l1.options.features.includes('home')
         )
       ) {
-        location.hash = `/${this.$l1.code}/dictionary`
+        location.hash = `/${this.$l1.code}/${this.$l2.code}/youtube/browse`
       }
     }
   }
