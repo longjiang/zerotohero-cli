@@ -13,7 +13,7 @@
       <a
         v-if="random"
         class="btn btn-secondary btn-random ml-2"
-        :href="`#/${$l1.code}/dictionary/freedict/random`"
+        :href="`#/${$l1.code}/${$l2.code}/dictionary/freedict/random`"
       >
         <i class="fas fa-random mr-1"></i>
         <span>{{ $t('Random') }}</span>

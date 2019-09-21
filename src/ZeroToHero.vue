@@ -1,6 +1,6 @@
 <template>
   <div id="english-zero-to-hero">
-    <template v-if="l1Loaded">
+    <template v-if="langsLoaded">
       <div class="container-fluid bg-dark pt-4 pl-0 pr-0">
         <div class="container">
           <div class="row mb-4">
@@ -121,41 +121,60 @@ export default {
       Config,
       languages: [],
       l1: undefined,
-      l1Loaded: false
+      l2: undefined,
+      langsLoaded: false
     }
   },
   async mounted() {
     this.languages = this.$langs
   },
+  methods: {
+    async setL1() {
+      this.l1 = this.$route.params.l1
+      Vue.prototype.$l1 = this.languages.find(
+        l1 => l1.code === this.$route.params.l1
+      )
+      this.$l1.options = (await import(
+        `@/lib/langs/${this.$l1.code}.js`
+      )).default
+      this.$i18n.setLocaleMessage(
+        this.$l1.code,
+        this.$l1.options.translations
+      )
+      this.$i18n.locale = this.$l1.code
+    },
+    async setL2() {
+      this.l2 = this.$route.params.l2
+      Vue.prototype.$l2 = this.languages.find(
+        l2 => l2.code === this.$route.params.l2
+      )
+      this.$l2.options = (await import(
+        `@/lib/langs/${this.$l2.code}.js`
+      )).default
+      this.$i18n.setLocaleMessage(
+        this.$l2.code,
+        this.$l2.options.translations
+      )
+    }
+  },
   watch: {
     async $route() {
-      if (this.$route.params.l1) {
-        if (this.l1 && this.$route.params.l1 !== this.l1) {
+      if (this.$route.params.l1 && this.$route.params.l2) {
+        if (this.l1 && this.$route.params.l1 !== this.l1 || this.l2 && this.$route.params.l2 !== this.l2) {
           // switching language
           location.reload()
         } else {
           // first time loading, set the language
-          this.l1 = this.$route.params.l1
-          Vue.prototype.$l1 = this.languages.find(
-            l1 => l1.code === this.$route.params.l1
-          )
+          await this.setL1()
+          await this.setL2()
           if (!Vue.prototype.$dictionary) {
             Vue.prototype.$dictionary = Dict.load({
               dict: this.$l1.enDictionary,
-              l1: this.l1
+              l1: this.l1,
+              l2: this.l2
             })
           }
-          this.$l1.options = (await import(
-            `@/lib/langs/${this.$l1.code}.js`
-          )).default
-          let enOptions = (await import(`@/lib/langs/en.js`)).default
-          this.$i18n.setLocaleMessage('en', enOptions.translations)
-          this.$i18n.setLocaleMessage(
-            this.$l1.code,
-            this.$l1.options.translations
-          )
-          this.$i18n.locale = this.$l1.code
-          this.l1Loaded = true
+          this.langsLoaded = true
         }
       }
     }
