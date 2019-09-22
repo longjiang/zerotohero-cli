@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-sm-12">
           <h4>{{ $t('Text Reader') }}</h4>
-          <p v-html="$t('textReaderIntro')"/>
+          <p v-html="$t('textReaderIntro', {l2: $l2.name})"/>
           <Loader class="mb-5" />
           <div
             v-if="text.length > 0"

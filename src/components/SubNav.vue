@@ -100,11 +100,13 @@
         <i class="fas fa-id-card"></i>
         {{$t('Contact Us')}}
       </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'faq' }">
+      <router-link class="secondary-menu-item" :to="{ name: 'faq' }"
+      v-if="$hasFeature('courses')">
         <i class="fas fa-question"></i>
         {{$t('FAQ')}}
       </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'affiliate-program' }">
+      <router-link class="secondary-menu-item" :to="{ name: 'affiliate-program' }"
+      v-if="$hasFeature('courses')">
         <i class="fas fa-share-alt"></i>
         {{$t('Affiliate Program')}}
       </router-link>
