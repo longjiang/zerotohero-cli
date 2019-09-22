@@ -1,6 +1,7 @@
 export default {
   translations: {
     'Contact {l2} Zero to Hero': 'Contact {l2} Zero to Hero',
+    'For the love of {l2} words.': 'For the love of {l2} words.',
     'Enter a search term in {l2}...': 'Enter a search term in {l2}...',
     'Study any YouTube video that has {l2} subtitles.': 'Study any YouTube video that has {l2} subtitles.',
     'Courses that take your {l2} to the next level.': 'Courses that take your {l2} to the next level.',
