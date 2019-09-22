@@ -9,7 +9,7 @@
               <span
                 v-html="
                   Helper.highlightMultiple(
-                    example.english,
+                    example.l2,
                     words,
                     level || 'outside'
                   )
@@ -108,7 +108,7 @@ export default {
       this.words = [this.term].concat(forms)
       this.examples = await SketchEngine.concordance({
         term: this.term,
-        l1: this.$l1.code
+        l2: this.$l2.code
       })
       this.concordanceKey += 1
     }
