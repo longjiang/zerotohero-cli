@@ -2,6 +2,7 @@ export default {
   dictionaries: [],
   languages: [],
   translations: [],
+  features: [],
   l1s: [],
   loadFile(file) {
     return new Promise(resolve => {
@@ -23,11 +24,17 @@ export default {
   async loadTranslations() {
     this.translations = await this.loadFile('/data/languages/translations.csv')
   },
+  async loadFeatures() {
+    this.features = await this.loadFile('/data/languages/features.csv')
+  },
   get(iso639_2t) {
     return this.l1s.find(language => language['iso639-2t'] === iso639_2t)
   },
   getSmart(code) {
-    return this.l1s.find(language => language['iso639-2t'] === code || language['iso639-1'] === code)
+    return this.l1s.find(
+      language =>
+        language['iso639-2t'] === code || language['iso639-1'] === code
+    )
   },
   constructL1Data() {
     let l1s = []
@@ -56,26 +63,43 @@ export default {
         'iso639-2t': language['iso639-2t'],
         name: language.name,
         direction: language.direction || 'ltr',
-        published: true,
+        published: true
       })
     }
     for (let translation of this.translations) {
-      let l1 = l1s.find(language => language['iso639-2t'] === translation['iso639-2t'])
+      let l1 = l1s.find(
+        language => language['iso639-2t'] === translation['iso639-2t']
+      )
       if (l1) {
         l1.translations = translation
-      }      
+      }
     }
     for (let dictionary of this.dictionaries) {
       let l1 = l1s.find(language => language['iso639-2t'] === dictionary.l1)
       l1.dictionaries = l1.dictionaries || {}
-      l1.dictionaries[dictionary.l2] = l1.dictionaries[dictionary.l2] || [] 
+      l1.dictionaries[dictionary.l2] = l1.dictionaries[dictionary.l2] || []
       l1.dictionaries[dictionary.l2].push(dictionary.dictionary) // "freedict"
+    }
+    for (let features of this.features) {
+      let l1 = l1s.find(language => language['iso639-2t'] === features.l1)
+      l1.features = l1.features || {}
+      l1.features[features.l2] = l1.features[features.l2] || []
+      for (let key in features) { // key = 'home'
+        if (key !== 'l1' && key !== 'l2' && features[key] === 'TRUE') {
+          l1.features[features.l2].push(key) // key = 'home'
+        }
+      }
     }
     return l1s
   },
   async load() {
     console.log('Loading language data...')
-    let promises = [this.loadDictionaries(), this.loadLanguages(), this.loadTranslations()]
+    let promises = [
+      this.loadDictionaries(),
+      this.loadLanguages(),
+      this.loadTranslations(),
+      this.loadFeatures()
+    ]
     return new Promise(async resolve => {
       await Promise.all(promises)
       this.l1s = this.constructL1Data()

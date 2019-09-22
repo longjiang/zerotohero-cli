@@ -100,8 +100,9 @@ export default {
     redirect() {
       if (
         !(
-          this.$l1.options.features &&
-          this.$l1.options.features.includes('home')
+          this.$l1.features &&
+          this.$l1.features[this.$l2['iso639-2t']] &&
+          this.$l1.features[this.$l2['iso639-2t']].includes('home')
         )
       ) {
         location.hash = `/${this.$l1.code}/${this.$l2.code}/youtube/browse`
