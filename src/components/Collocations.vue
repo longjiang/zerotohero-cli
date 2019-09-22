@@ -75,9 +75,9 @@ export default {
       this.sketch = undefined
       this.sketch = await SketchEngine.wsketch({
         term: this.term,
-        l1: this.$l1.code
+        l2: this.$l2.code
       })
-      this.colDesc = await SketchEngine.collocationDescription(this.term)
+      this.colDesc = await SketchEngine.collocationDescription({l2: this.$l2.code})
     },
     getGramrelsByName(gramrels, name) {
       return gramrels.find(

@@ -15,14 +15,14 @@
         <tr
           v-for="corpus in SketchEngine.corpora.filter(
             corpus =>
-              corpus.language_id === 'en' && (!(corpus.tags && corpus.tags.includes('learner')))
+              corpus.language_id === $l2.code && (!(corpus.tags && corpus.tags.includes('learner')))
           ).sort((a,b) => b.sizes.wordcount - a.sizes.wordcount)"
         >
           <td>
             <input
               type="radio"
               :value="corpus.corpname"
-              :checked="corpus.corpname === SketchEngine.corpname($l1.code)"
+              :checked="corpus.corpname === SketchEngine.corpname($l2.code)"
               v-model="corpname"
             />
           </td>
@@ -54,13 +54,13 @@ export default {
   data() {
     return {
       SketchEngine,
-      corpname: SketchEngine.corpname(this.$l1.code)
+      corpname: SketchEngine.corpname(this.$l2.code)
     }
   },
   watch: {
     corpname() {
-      let corpnames = JSON.parse(localStorage.getItem('ezhCorpnames')) || {}
-      corpnames[this.$l1.code] = this.corpname
+      let corpnames = JSON.parse(localStorage.getItem('zthCorpnames')) || {}
+      corpnames[this.$l2.code] = this.corpname
       localStorage.setItem('ezhCorpnames', JSON.stringify(corpnames))
       location.reload() // Otherwise users won't see the new collocations and example sentences, leaving them confused.
     }
