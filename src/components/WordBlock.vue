@@ -199,7 +199,7 @@ export default {
 }
 </script>
 
-<style l1="scss">
+<style lang="scss">
 .tooltip-images {
   width: 3rem;
   float: right;
