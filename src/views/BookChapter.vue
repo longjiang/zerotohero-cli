@@ -202,10 +202,10 @@ export default {
       }
     },
     previousClick() {
-      location.hash = `#/${this.$l1.code}/book/chapter/${encodeURIComponent(this.previous)}`
+      location.hash = `#/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.previous)}`
     },
     nextClick() {
-      location.hash = `#/${this.$l1.code}/book/chapter/${encodeURIComponent(this.next)}`
+      location.hash = `#/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.next)}`
     }
   },
   async mounted() {

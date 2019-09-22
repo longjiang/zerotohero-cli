@@ -106,7 +106,7 @@ export default {
                 }
               ]
       } else {
-        location.hash = `#/${this.$l1.code}/book/chapter/${encodeURIComponent(this.args)}`
+        location.hash = `#/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.args)}`
       }
     }
   },
