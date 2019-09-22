@@ -1,7 +1,4 @@
 export default {
-  youtube: {
-    channels: []
-  },
   translations: {
     'Images of “{text}” on the Web': 'Images of “{text}” on the Web',
     'Collocations with “{ text }”': 'Collocations with “{ text }”',

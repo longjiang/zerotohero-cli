@@ -1,20 +1,18 @@
-import Wikisource from '@/lib/library-sources/wikisource'
 import Wikipedia from '@/lib/library-sources/wikipedia'
 import WOL from '@/lib/library-sources/wol'
-import Litnet from '@/lib/library-sources/litnet'
 
 export default {
-  universalSources: [Wikipedia, Wikisource, WOL, Litnet],
-  l1Sources: [],
+  universalSources: [Wikipedia, WOL],
+  l2Sources: [],
   async setLangSources(sources) {
     for (let source of sources) {
-      this.l1Sources.push(
+      this.l2Sources.push(
         (await import(`@/lib/library-sources/${source}.js`)).default
       )
     }
   },
   sources() {
-    return this.l1Sources.concat(this.universalSources)
+    return this.l2Sources.concat(this.universalSources)
   },
   source(url) {
     const host = url.replace(/.*\/\/([^/]*).*/, '$1')

@@ -78,17 +78,23 @@ export default {
   data() {
     return {
       Library,
+      libraryL2: undefined,
       location,
       booklists: [],
       sources: []
     }
   },
   async mounted() {
-    this.sources = Library.sources()
-    for(let source of this.sources) {
-      let booklist = await source.booklists()
-      this.booklists = this.booklists.concat(booklist)
+    try {
+      this.libraryL2 = await (await import(`@/lib/library-l2s/library-${this.$l2['iso639-2t']}.js`)).default
+      Library.setLangSources(this.libraryL2.sources)
+      this.booklists = await this.libraryL2.booklists()
+    } catch (err) {
+      console.log(
+        `Booklists for ${this.$l2['iso639-2t']} is unavailable.`
+      )
     }
+    this.sources = Library.sources()
   }
 }
 </script>
