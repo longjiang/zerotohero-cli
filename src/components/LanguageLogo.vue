@@ -1,7 +1,7 @@
 <template>
   <a
     :href="`#/${l1.code}/${l2.code}/`"
-    class="mr-4 mb-4 d-inline-block zerotohero-item link-unstyled"
+    class="mr-4 mb-4 d-inline-block link-unstyled"
   >
     <div class="logo-constructed">
       <div class="logo-circle" :style="`background-image:url(/img/logo-square/${l2.code}.jpg)`">
