@@ -7,7 +7,7 @@
             <div class="col-sm-12 text-center pt-3">
               <LanguageLogo :l1="$l1" :l2="$l2" style="transform: scale(1.5)" />
               <a
-                v-if="$l1.features && $l1.features.includes('courses')"
+                v-if="$hasFeature('courses')"
                 class="btn btn-success btn-sign-in text-white"
                 href="https://wazuc.duanshu.com/#/"
                 target="_blank"
@@ -93,12 +93,13 @@ export default {
       try {
         this.$i18n.setLocaleMessage(
           this.$l1.code,
-          (await import(`@/lib/langs/${this.$l1['iso639-2t']}.js`)).default
+          (await import(`@/lib/langs/${this.$l1['iso639-2t']}.js`)).default.translations
         )
-      } catch(err) {
-        console.log(`UI translations for ${this.$l1['iso639-2t']} is unavailable.`)
+      } catch (err) {
+        console.log(
+          `UI translations for ${this.$l1['iso639-2t']} is unavailable.`
+        )
       }
-      
     },
     async setL2() {
       Vue.prototype.$l2 = this.$languages.getSmart(this.$route.params.l2)
@@ -117,7 +118,16 @@ export default {
           // first time loading, set the language
           await this.setL1()
           await this.setL2()
-          let dictionaries = this.$l1.dictionaries ? this.$l1.dictionaries[this.$l2['iso639-2t']] : undefined
+          Vue.prototype.$hasFeature = feature =>
+            this.$languages
+              .getFeatures({
+                l1: this.$l1,
+                l2: this.$l2
+              })
+              .includes(feature)
+          let dictionaries = this.$l1.dictionaries
+            ? this.$l1.dictionaries[this.$l2['iso639-2t']]
+            : undefined
           if (!Vue.prototype.$dictionary && dictionaries) {
             Vue.prototype.$dictionary = Dict.load({
               dict: dictionaries[0],

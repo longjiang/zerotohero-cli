@@ -84,13 +84,19 @@ export default {
       let l1 = l1s.find(language => language['iso639-2t'] === features.l1)
       l1.features = l1.features || {}
       l1.features[features.l2] = l1.features[features.l2] || []
-      for (let key in features) { // key = 'home'
+      for (let key in features) {
+        // key = 'home'
         if (key !== 'l1' && key !== 'l2' && features[key] === 'TRUE') {
           l1.features[features.l2].push(key) // key = 'home'
         }
       }
     }
     return l1s
+  },
+  getFeatures(options) {
+    return options.l1.features && options.l1.features[options.l2['iso639-2t']]
+      ? options.l1.features[options.l2['iso639-2t']]
+      : []
   },
   async load() {
     console.log('Loading language data...')
