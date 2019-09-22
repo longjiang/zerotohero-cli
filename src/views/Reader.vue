@@ -15,7 +15,6 @@
           >
             <Annotate
               tag="div"
-              :fullscreen="buttons"
               v-for="line of marked
                 .trim()
                 .replace(/<(div|p|li|h1|h2|h3|h4|h5|h6)/g, '\n<$1')
@@ -29,7 +28,6 @@
             <button @click="smaller" class="btn btn-unstyled"><small>A</small></button>
             <button @click="bigger" class="btn btn-unstyled" style="font-size:1.25rem;">A</button>
             <button @click="togglePresentMode" class="btn btn-unstyled">Present Mode</button>
-            <button @click="toggleButtons" class="btn btn-unstyled">{{ this.buttons ? 'Hide Buttons' : 'Show Buttons' }}</button>
           </div>
           <div>
             <textarea
@@ -93,8 +91,7 @@ export default {
       readerKey: 0, // used to force re-render this component
       savedWordsKey: 0,
       fontSize: 1,
-      buttons: true,
-      presentMode: true,
+      presentMode: false,
     }
   },
   computed: {
