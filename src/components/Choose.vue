@@ -4,7 +4,7 @@
     <div class="zerotohero">
       <LanguageLogo
         class="zerotohero-item"
-        v-for="language in $languages.l1s.sort((a,b) => b.name > a.name ? -1 : 0)"
+        v-for="language in $languages.l1s.filter(language => !language.name.includes('languages') && !language.name.includes('Creoles')).sort((a,b) => b.name > a.name ? -1 : 0)"
         :l1="$languages.get('eng')"
         :l2="language"
       />
