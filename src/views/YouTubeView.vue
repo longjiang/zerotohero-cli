@@ -118,8 +118,8 @@ export default {
     async getL2Transcript() {
       const promises = []
       let locales = [this.$l2.code]
-      if (this.$l2.options.locales) {
-        locales = locales.concat(this.$l2.options.locales)
+      if (this.$l2.locales) {
+        locales = locales.concat(this.$l2.locales)
       }
       for (let locale of locales) {
         promises.push(

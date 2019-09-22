@@ -81,7 +81,7 @@ export default {
   data() {
     return {
       location,
-      channels: this.$l1.options.youtube.channels
+      channels: this.$l1.youtube && this.$l1.youtube.channels ? this.$l1.youtube.channels : []
     }
   }
 }

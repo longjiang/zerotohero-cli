@@ -185,8 +185,8 @@ export default {
       this.$refs.search.text = url
       this.chapterTitle = ''
       this.chapterContent = ''
-      if(this.$l1.options.library && this.$l1.options.library.sources) {
-        await Library.setLangSources(this.$l1.options.library.sources)
+      if(this.$l1.library && this.$l1.library.sources) {
+        await Library.setLangSources(this.$l1.library.sources)
       }
       let chapter = await Library.getChapter(url)
       if (chapter) {

@@ -11,7 +11,7 @@
       <i class="fas fa-video"></i>{{ $t('Audio-Visual') }}
     </router-link>
     <router-link
-      v-if="$l1.options.features && $l1.options.features.includes('courses')"
+      v-if="$l1.features && $l1.features.includes('courses')"
       :class="{
         tab: true,
         'router-link-active':

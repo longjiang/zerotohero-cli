@@ -7,7 +7,7 @@
             <div class="col-sm-12 text-center pt-3">
               <LanguageLogo :l1="$l1" :l2="$l2" style="transform: scale(1.5)" />
               <a
-                v-if="$l1.options.features && $l1.options.features.includes('courses')"
+                v-if="$l1.features && $l1.features.includes('courses')"
                 class="btn btn-success btn-sign-in text-white"
                 href="https://wazuc.duanshu.com/#/"
                 target="_blank"
@@ -52,15 +52,12 @@
           </div>
         </div>
       </div>
-      <div class="container main mt-5 mb-5">
-        Choose your language
-      </div>
+      <div class="container main mt-5 mb-5">Choose your language</div>
 
       <footer class="container-fluid bg-dark text-light pt-4 pb-4">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12">
-            </div>
+            <div class="col-sm-12"></div>
           </div>
         </div>
       </footer>
@@ -92,37 +89,35 @@ export default {
   methods: {
     async setL1() {
       Vue.prototype.$l1 = this.$languages.getSmart(this.$route.params.l1)
-      this.$l1.options = (await import(
-        `@/lib/langs/${this.$l1['iso639-2t']}.js`
-      )).default
-      this.$i18n.setLocaleMessage(
-        this.$l1.code,
-        this.$l1.options.translations
-      )
       this.$i18n.locale = this.$l1.code
+      try {
+        this.$i18n.setLocaleMessage(
+          this.$l1.code,
+          (await import(`@/lib/langs/${this.$l1['iso639-2t']}.js`)).default
+        )
+      } catch(err) {
+        console.log(`UI translations for ${this.$l1['iso639-2t']} is unavailable.`)
+      }
+      
     },
     async setL2() {
       Vue.prototype.$l2 = this.$languages.getSmart(this.$route.params.l2)
-      this.$l2.options = (await import(
-        `@/lib/langs/${this.$l2['iso639-2t']}.js`
-      )).default
-      this.$i18n.setLocaleMessage(
-        this.$l2.code,
-        this.$l2.options.translations
-      )
     }
   },
   watch: {
     async $route() {
       if (this.$route.params.l1 && this.$route.params.l2) {
-        if (this.$l1 && this.$route.params.l1 !== this.$l1.code || this.$l2 && this.$route.params.l2 !== this.$l2.code) {
+        if (
+          (this.$l1 && this.$route.params.l1 !== this.$l1.code) ||
+          (this.$l2 && this.$route.params.l2 !== this.$l2.code)
+        ) {
           // switching language
           location.reload()
         } else {
           // first time loading, set the language
           await this.setL1()
           await this.setL2()
-          let dictionaries = this.$l1.dictionaries[this.$l2['iso639-2t']]
+          let dictionaries = this.$l1.dictionaries ? this.$l1.dictionaries[this.$l2['iso639-2t']] : undefined
           if (!Vue.prototype.$dictionary && dictionaries) {
             Vue.prototype.$dictionary = Dict.load({
               dict: dictionaries[0],
