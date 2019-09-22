@@ -2,6 +2,7 @@ export default {
   dictionaries: [],
   languages: [],
   translations: [],
+  l1s: [],
   loadFile(file) {
     return new Promise(resolve => {
       Papa.parse(file, {
@@ -21,6 +22,12 @@ export default {
   },
   async loadTranslations() {
     this.translations = await this.loadFile('/data/languages/translations.csv')
+  },
+  get(iso639_2t) {
+    return this.l1s.find(language => language['iso639-2t'] === iso639_2t)
+  },
+  getSmart(code) {
+    return this.l1s.find(language => language['iso639-2t'] === code || language['iso639-1'] === code)
   },
   constructL1Data() {
     let l1s = []
@@ -71,8 +78,8 @@ export default {
     let promises = [this.loadDictionaries(), this.loadLanguages(), this.loadTranslations()]
     return new Promise(async resolve => {
       await Promise.all(promises)
-      let l1s = this.constructL1Data()
-      resolve(l1s)
+      this.l1s = this.constructL1Data()
+      resolve(this)
     })
   }
 }

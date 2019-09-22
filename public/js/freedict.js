@@ -1,99 +1,4 @@
 const Dictionary = {
-  dictionaries: {
-    af: {
-      filename: 'eng-afr',
-      parser: 'regular'
-    },
-    ar:  {
-      filename: 'eng-ara',
-      parser: 'regular'
-    },
-    el:  {
-      filename: 'eng-ell',
-      parser: 'regular'
-    },
-    fi:  {
-      filename: 'eng-fin',
-      parser: 'regular'
-    },
-    fr:  {
-      filename: 'eng-fra',
-      parser: 'regular'
-    },
-    ga:  {
-      filename: 'eng-gle',
-      parser: 'regular'
-    },
-    hi:  {
-      filename: 'eng-hin',
-      parser: 'regular'
-    },
-    hr:  {
-      filename: 'eng-hrv',
-      parser: 'regular'
-    },
-    hu:  {
-      filename: 'eng-hun',
-      parser: 'regular'
-    },
-    it:  {
-      filename: 'eng-ita',
-      parser: 'regular'
-    },
-    ja:  {
-      filename: 'eng-jpn',
-      parser: 'regular'
-    },
-    la:  {
-      filename: 'eng-lat',
-      parser: 'regular'
-    },
-    lt:  {
-      filename: 'eng-lit',
-      parser: 'regular'
-    },
-    nl:  {
-      filename: 'eng-nld',
-      parser: 'regular'
-    },
-    pl:  {
-      filename: 'eng-pol',
-      parser: 'regular'
-    },
-    pt:  {
-      filename: 'eng-por',
-      parser: 'regular'
-    },
-    ro:  {
-      filename: 'eng-rom',
-      parser: 'regular'
-    },
-    ru:  {
-      filename: 'eng-rus',
-      parser: 'regular'
-    },
-    es:  {
-      filename: 'eng-spa',
-      parser: 'regular'
-    },
-    sr:  {
-      filename: 'eng-srp',
-      parser: 'regular'
-    },
-    sv:  {
-      filename: 'eng-swe',
-      parser: 'regular'
-    },
-    sw:  {
-      filename: 'eng-swh',
-      parser: 'regular'
-    },
-    tr:  {
-      filename: 'eng-tur',
-      parser: 'regular'
-    },
-  },
-  lang: undefined,
   file: undefined,
   words: [],
   index: {},
@@ -144,7 +49,7 @@ const Dictionary = {
           head: matches
             ? matches[1].replace(/\(.*\)\/ /, '').toLowerCase()
             : undefined,
-          pronunciation: ['fi', 'lt', 'cy', 'ku'].includes(this.lang)? undefined : pronunciation,
+          pronunciation: pronunciation,
           definitions: definitions,
           pos: matches2 && matches2.length > 1 ? matches2[1] : undefined
         }
@@ -171,13 +76,17 @@ const Dictionary = {
     })
     return words
   },
-  load(lang) {
+  dictionaryFile(options) {
+    let filename = `/data/freedict/${options.l2}-${options.l1}.dict.txt`
+    console.log(filename)
+    return filename
+  },
+  load(options) {
     console.log('Loading FreeDict...')
-    this.lang = lang
+    this.l1 = options.l1
     // let server = 'http://hsk-server.local:8888/'
     // let server = 'https://server.chinesezerotohero.com/'
-    let server = '/'
-    this.file = `${server}data/freedict/${this.dictionaries[this.lang].filename}.dict.txt`
+    this.file = this.dictionaryFile(options)
     return new Promise(async resolve => {
       let promises = [this.loadWords()]
       await Promise.all(promises)

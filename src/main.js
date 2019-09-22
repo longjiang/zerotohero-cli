@@ -87,9 +87,9 @@ if (location.hash === '#/test') {
     render: h => h(Test)
   }).$mount('#test')
 } else {
-  Languages.load().then(l1s => {
-    console.log('l1s', l1s)
-    Vue.prototype.$langs = l1s
+  Languages.load().then(languages => {
+    console.log('l1s', languages.l1s)
+    Vue.prototype.$languages = languages
     new Vue({
       router,
       store,
