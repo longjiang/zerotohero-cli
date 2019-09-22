@@ -2,7 +2,7 @@
   <div class="container mt-5 mb-5">
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="mb-5 text-center">{{ $t('Courses that take your English to the next level.') }}</h1>
+        <h1 class="mb-5 text-center">{{ $t('Courses that take your {l2} to the next level.', {l2: $l2.name}) }}</h1>
       </div>
     </div>
     <div class="row">

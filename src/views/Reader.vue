@@ -35,7 +35,7 @@
               class="form-control"
               cols="30"
               rows="5"
-              :placeholder="$t('Enter your English text here. Markdown and HTML also supported.')"
+              :placeholder="$t('Enter your {l2} text here. Markdown and HTML also supported.', {l2: $l2.name})"
               v-model="text"
             ></textarea>
           </div>

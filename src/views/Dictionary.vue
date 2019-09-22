@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="text-center">
-              <h2 class="mb-4">{{ $t(`For the love of ${$l2.name} words.`) }}</h2>
+              <h2 class="mb-4">{{ $t('For the love of {l2} words.', {l2: $t($l2.name)}) }}</h2>
               <Loader ref="loader" class="mb-5" />
             </div>
             <SearchCompare
@@ -98,14 +98,12 @@ import EntryHeader from '@/components/EntryHeader.vue'
 import WebImages from '@/components/WebImages.vue'
 import SearchCompare from '@/components/SearchCompare.vue'
 import DefinitionsList from '@/components/DefinitionsList'
-import EntryForms from '@/components/EntryForms'
 import Paginator from '@/components/Paginator'
 import EntryYouTube from '@/components/EntryYouTube.vue'
 
 export default {
   components: {
     SearchCompare,
-    EntryForms,
     Collocations,
     Concordance,
     EntryHeader,

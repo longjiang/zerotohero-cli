@@ -1,11 +1,16 @@
 export default {
   translations: {
-    'Images of “{text}” on the Web': 'Images of “{text}” on the Web',
-    'Collocations with “{ text }”': 'Collocations with “{ text }”',
+    'Contact {l2} Zero to Hero': 'Contact {l2} Zero to Hero',
+    'Enter a search term in {l2}...': 'Enter a search term in {l2}...',
+    'Study any YouTube video that has {l2} subtitles.': 'Study any YouTube video that has {l2} subtitles.',
+    'Courses that take your {l2} to the next level.': 'Courses that take your {l2} to the next level.',
+    'Enter your {l2} text here. Markdown and HTML also supported.': 'Enter your {l2} text here. Markdown and HTML also supported.',
     'This is where you can enjoy reading a variety of {l2} books with the help of hover dictionary and the ability to save words.': 'This is where you can enjoy reading a variety of {l2} books with the help of hover dictionary and the ability to save words.',
     copyPasteCSV: '<b>Copy</b> the text below and <b>paste</b> into your spreadsheet program, or a flashcard app like Anki or Quizlet.',
     textReaderIntro: 'Write or paste in some {l2} text, and annotated text will show up below the textbox. You can also use <b>Markdown or HTML tags</b>. Everything is autosaved to your browser’s <code>localStorage</code>, so even if you refresh your browser everything you entered is still here.',
     libraryIntro: 'Read books from various {l2} sources directly in our Library.',
+    'Images of “{text}” on the Web': 'Images of “{text}” on the Web',
+    'Collocations with “{ text }”': 'Collocations with “{ text }”',
     'Collocations with “{text}”': 'Collocations with “{text}”',
     'Sentences with “{text}”': 'Sentences with “{text}”',
     '“{text}” videos on YouTube': '“{text}” videos on YouTube',

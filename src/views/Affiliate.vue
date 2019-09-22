@@ -1,7 +1,7 @@
 <template>
   <div class="affiliate container mt-5 mb-5">
     <h1 class="mb-2 text-center">Join Our Affiliate Program</h1>
-    <p class="lead text-center mb-5">Let more people benefit from English Zero to Hero.</p>
+    <p class="lead text-center mb-5">Let more people benefit from {{ $l2.name }} Zero to Hero.</p>
     <div class="bg-success p-4 rounded text-light text-center">
       <b>tl;dr</b> The commission rate is
       <b class="bigger">15-20%</b> with bonuses for strong performance.
@@ -11,7 +11,7 @@
     <div class="row mt-5">
       <div class="col-sm-4">
         <h5>High Commission</h5>
-        <p>As an affiliate, you can earn high commission by promoting over 18 English Zero To Hero courses. The commission rate is 15-20% with bonuses for strong performance.</p>
+        <p>As an affiliate, you can earn high commission by promoting over 18 {{ $l2.name }} Zero To Hero courses. The commission rate is 15-20% with bonuses for strong performance.</p>
       </div>
       <div class="col-sm-4">
         <h5>Easy Setup</h5>

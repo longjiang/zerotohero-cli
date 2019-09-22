@@ -24,7 +24,7 @@
               is a large collection of text written in a language, where we can
               extract collocations and example sentences.
               <a href="https://www.sketchengine.eu/">Sketch Engine</a>, our text
-              corpora provider, has a number of English text corpora to select
+              corpora provider, has a number of {{ $l2.name }} text corpora to select
               from. Depending on the corpus you choose, the example sentences
               and collocations you see will be different.
             </p>

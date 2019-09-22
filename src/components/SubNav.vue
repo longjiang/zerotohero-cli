@@ -54,7 +54,7 @@
         {{$t('Lookup Words')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'phrase' }">
-        <i class="fas fa-quote-left" />Lookup Phrases
+        <i class="fas fa-quote-left" /> {{$t('Lookup Phrases')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'saved-words' }">
         <i class="fas fa-star"></i>

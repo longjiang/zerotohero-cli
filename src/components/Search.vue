@@ -8,7 +8,7 @@
         v-model="text"
         type="text"
         class="form-control lookup"
-        :placeholder="placeholder"
+        :placeholder="placeholder || $t('Look up words here...')"
       />
       <a
         v-if="random"
@@ -97,7 +97,7 @@ export default {
       }
     },
     placeholder: {
-      default: 'Look up words here...'
+      type: String,
     },
     random: {
       default: false

@@ -77,7 +77,7 @@ export default {
       savedTexts: [],
       selectedCsvOptions: ['en', 'definitions'],
       csvOptions: [
-        { text: this.$t('English'), value: 'en' },
+        { text: this.$t(this.$l2.name), value: this.$l2.code },
         { text: this.$t('Pronunciation'), value: 'pronunciation' },
         { text: this.$t('Definitions'), value: 'definitions' }
       ]

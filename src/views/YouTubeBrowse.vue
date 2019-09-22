@@ -5,7 +5,7 @@
         <h1 class="mb-5 text-center">{{$t('Study YouTube Subtitles')}}</h1>
         <h4 class="mt-5 mb-5 text-center">{{ $t('Search YouTube') }}</h4>
         <SimpleSearch
-          :placeholder="$t('Enter a search term in English...')"
+          :placeholder="$t('Enter a search term in {l2}...', {l2: $l2.name})"
           :action="
             url => {
               location.hash = `#/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(url)}`
@@ -24,14 +24,14 @@
         </template>
 
         <h4 class="mt-5 mb-5 text-center">
-          {{$t('Study any YouTube video that has English subtitles.')}}
+          {{$t('Study any YouTube video that has {l2} subtitles.', {l2: $l2.name})}}
         </h4>
 
         <div class="jumbotron bg-light pt-4 pb-3 mt-3 mb-3">
           <YouTubeNav class="mb-4" />
           <ol>
             <li>
-              Go to YouTube, search an English word.
+              Go to YouTube, search an {{ $l2.name }} word.
             </li>
             <li>
               Click on
@@ -44,7 +44,7 @@
               <small>
                 <b>Note:</b> Many have closed captions, but they are in
                 other languages. You need to look for
-                <em>English</em> closed
+                <em>{{ $l2.name }}</em> closed
                 captions. These are hard to find. If you cannot find any, look
                 in the suggested channels listed on this page.
               </small>
