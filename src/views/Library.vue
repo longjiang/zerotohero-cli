@@ -6,7 +6,7 @@
         <p
           class="text-center lead"
           style="margin-bottom: 5rem"
-        >{{ $t('This is where you can enjoy reading a variety of English books with the help of hover dictionary and the ability to save words.') }}</p>
+        >{{ $t('This is where you can enjoy reading a variety of {l2} books with the help of hover dictionary and the ability to save words.', {l2: $t($l2.name)}) }}</p>
         
         <ul class="list-unstyled p-0 mb-5 booklists">
           <li v-for="booklist in booklists" class="text-center mb-5">

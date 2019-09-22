@@ -3,8 +3,10 @@ export default {
     channels: []
   },
   translations: {
+    English: '英语',
     'Learn varous languages through English:': '通过英语学习其他语言：',
     'Learn English through various languages:': '让全世界学习英语：',
+    'This is where you can enjoy reading a variety of {l2} books with the help of hover dictionary and the ability to save words.': '在这里，你可以借助光标取词词典阅读各种{l2}书籍。点击任何{l2}单词，将其存入单词表，之后可前往“词典 > 单词表”查看。',
     Dictionary: '词典',
     Reading: '阅读材料',
     'Audio-Visual': '视听资源',
@@ -68,7 +70,6 @@ export default {
     libraryIntro: '在 “阅览室” 页面直接阅读各式{l2}文献。',
     'YouTube Transcript': '学习 YouTube 字幕',
     'Library': '阅览室',
-    'This is where you can enjoy reading a variety of English books with the help of hover dictionary and the ability to save words.': '在这里，你可以借助光标取词词典阅读各种英语书籍。点击任何英语单词，将其存入单词表，之后可前往“词典 > 单词表”查看。',
     'Custom Reading': '自定义阅读',
     'Read any online document by pasting the URL.': '粘贴网址，阅读任意网上文章。',
     'Study YouTube Subtitles': '学习 YouTube 字幕',
