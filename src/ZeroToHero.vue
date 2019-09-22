@@ -45,7 +45,20 @@
       </footer>
     </template>
     <template v-else>
-      <Choose />
+      <div class="container-fluid bg-dark text-light pt-4 pb-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1 class="text-light mt-5 mb-5 text-center" style="font-weight: 500">Learn languages, from zero to hero.</h1>
+              <p class="lead">
+                <b style="font-weight: 900">Zero to Hero Education, Canada</b> is dedicated to help you learn languages, from the very beginning (“zero”) to a very very advanced level (“hero”).
+              </p>
+              <p>Although our focus is teaching Mandarin Chinese to English speakers (<a href="#/en/zh/">Chinese Zero to Hero</a>), and teaching English to Mandarin Chinese speakers (<a href="#/zh/en/">English Zero to Hero</a>), we've also created free, open-source learning resources that work with hundres of other language pairs.</p>
+              <Choose class="mt-5" />
+            </div>
+          </div>
+        </div>
+      </div>
     </template>
   </div>
 </template>
@@ -80,7 +93,8 @@ export default {
       try {
         this.$i18n.setLocaleMessage(
           this.$l1.code,
-          (await import(`@/lib/langs/${this.$l1['iso639-2t']}.js`)).default.translations
+          (await import(`@/lib/langs/${this.$l1['iso639-2t']}.js`)).default
+            .translations
         )
       } catch (err) {
         console.log(
@@ -93,7 +107,8 @@ export default {
       try {
         this.$i18n.setLocaleMessage(
           this.$l2.code,
-          (await import(`@/lib/langs/${this.$l2['iso639-2t']}.js`)).default.translations
+          (await import(`@/lib/langs/${this.$l2['iso639-2t']}.js`)).default
+            .translations
         )
       } catch (err) {
         console.log(

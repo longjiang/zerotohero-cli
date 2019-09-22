@@ -9,7 +9,7 @@
           class="logo-speech-bubble"
           :style="`background-image: url(/img/speech-light.png)`"
         >
-          <b>{{ l2.code.slice(0,1).toUpperCase()}}{{ l2.code.slice(1,2) }}</b>
+          <b>{{ l2.code }}</b>
         </div>
       </div>
       <div class="logo-text text-white">

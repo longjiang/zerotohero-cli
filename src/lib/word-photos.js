@@ -75,10 +75,10 @@ export default {
       }
     )
   },
-  getGoogleImages(text) {
+  getGoogleImages(text, options = {}) {
     return new Promise(async resolve => {
       let $html = await Helper.scrape2(
-        `https://www.google.com/search?q=${text.replace(/ /g, '+')}&tbm=isch&sout=1#spf=1567955134767`
+        `https://www.google.com/search?q=${text.replace(/ /g, '+')}&tbm=isch&sout=1${options.itp ? '&tbs=itp:' + options.itp : ''}`
       )
       let images = []
       for (let td of $html.find('.images_table td')) {
