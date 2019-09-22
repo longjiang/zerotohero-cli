@@ -82,8 +82,10 @@ export default {
 .logo-text-language {
   font-weight: 100;
   margin-bottom: -0.3em;
+  text-transform: uppercase;
 }
 .logo-text-zth {
   font-weight: bold;
+  text-transform: uppercase;
 }
 </style>

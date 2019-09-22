@@ -1,6 +1,6 @@
 <template>
   <div id="english-zero-to-hero">
-    <template v-if="langsLoaded">
+    <template v-if="langsLoaded && this.$route.path !== '/'">
       <div class="container-fluid bg-dark pt-4 pl-0 pr-0">
         <div class="container">
           <div class="row mb-4">
@@ -43,24 +43,9 @@
       </footer>
     </template>
     <template v-else>
-      <div class="container-fluid bg-dark text-light pt-5 pb-5">
-        <div class="container">
-          <div class="row mb-4">
-            <div class="col-sm-12 text-center pt-3">
-              <h1 style="font-family: 'Helvetica Neue'; font-weight: 500;">Zero to Hero Education</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container main mt-5 mb-5">Choose your language</div>
-
-      <footer class="container-fluid bg-dark text-light pt-4 pb-4">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12"></div>
-          </div>
-        </div>
-      </footer>
+      <keep-alive>
+        <router-view ref="routerView" />
+      </keep-alive>
     </template>
   </div>
 </template>
