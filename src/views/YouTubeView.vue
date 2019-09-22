@@ -30,24 +30,24 @@
           <SyncedTranscript
             ref="transcript"
             :onSeek="seekYouTube"
-            :lines="this.english"
-            :parallellines="this.l1"
+            :lines="this.l2Lines"
+            :parallellines="this.l1Lines"
             v-else-if="!loading && hasSubtitles"
           />
           <div v-else-if="!loading && !hasSubtitles" class="jumbotron pt-4 pb-3 bg-light">
-            <h6>Sorry, this YouTube video does not have {{ $l1.name }} closed captions.</h6>
+            <h6>Sorry, this YouTube video does not have {{ $l2.name }} closed captions.</h6>
             <p>
               You can tell if a YouTube video has closed captions by clicking on
               the
               <b>CC</b> icon in the player bar, and click on the
               <i class="fas fa-cog"></i>next to it. If you can find the
               subtitle with the language
-              <b>{{ $l1.name }}</b>
-              then the video has {{ $l1.name }}
+              <b>{{ $l2.name }}</b>
+              then the video has {{ $l2.name }}
               subtitles.
             </p>
             <p>
-              To look for videos with t{{ $l1.name }} subtitles, search with a {{ $l1.name }}
+              To look for videos with t{{ $l2.name }} subtitles, search with a {{ $l2.name }}
               keyword, and click
               <b>Filter</b>, then
               <b>CC</b>.
@@ -87,12 +87,13 @@ export default {
   },
   data() {
     return {
-      english: [],
-      l1: [],
+      l1Lines: [],
+      l2Lines: [],
       title: undefined,
       channel: undefined,
       hasSubtitles: false,
-      loading: true
+      loading: true,
+      l2Locale: undefined
     }
   },
   methods: {
@@ -114,49 +115,54 @@ export default {
         }
       })
     },
-    async getTranscript() {
-      this.english = []
-      this.l1 = []
-      this.hasSubtitles = false
-      this.loading = true
-      let chosenLanguage
+    async getL2Transcript() {
       const promises = []
-      let languages = [this.$l1.code]
-      if (this.$l1.options.locales) {
-        languages = languages.concat(this.$l1.options.locales)
+      let locales = [this.$l2.code]
+      if (this.$l2.options.locales) {
+        locales = locales.concat(this.$l2.options.locales)
       }
-      for (let language of languages) {
+      for (let locale of locales) {
         promises.push(
           Helper.scrape(
-            `https://www.youtube.com/api/timedtext?v=${this.args}&l1=en&fmt=srv3`,
+            `https://www.youtube.com/api/timedtext?v=${this.args}&lang=${locale}&fmt=srv3`,
             $html => {
-              chosenLanguage = language
+              this.l2Locale = locale
               for (let p of $html.find('p')) {
                 let line = {
                   line: $(p).text(),
                   starttime: parseInt($(p).attr('t')) / 1000
                 }
-                this.english.push(line)
+                this.l2Lines.push(line)
               }
             }
           )
         )
       }
       await Promise.all(promises)
-      if (this.english.length > 0) {
-        await Helper.scrape(
-          `https://www.youtube.com/api/timedtext?v=${this.args}&l1=en&fmt=srv3&tl1=${chosenLanguage}`,
-          $html => {
-            for (let p of $html.find('p')) {
-              let line = {
-                line: $(p).text(),
-                starttime: parseInt($(p).attr('t')) / 1000
-              }
-              this.l1.push(line)
+    },
+    async getL1Transcript() {
+      await Helper.scrape(
+        `https://www.youtube.com/api/timedtext?v=${this.args}&lang=${this.l2Locale}&fmt=srv3&tlang=${this.$l1.code}`,
+        $html => {
+          for (let p of $html.find('p')) {
+            let line = {
+              line: $(p).text(),
+              starttime: parseInt($(p).attr('t')) / 1000
             }
+            this.l1Lines.push(line)
           }
-        )
-        this.hasSubtitles = true
+        }
+      )
+      this.hasSubtitles = true
+    },
+    async getTranscript() {
+      this.l1Lines = []
+      this.l2Lines = []
+      this.hasSubtitles = false
+      this.loading = true
+      await this.getL2Transcript()
+      if (this.l2Lines.length > 0) {
+        await this.getL1Transcript()
       }
       this.loading = false
     }

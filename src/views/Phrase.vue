@@ -10,7 +10,7 @@
               placeholder="Lookup a word or phrase"
               type="generic"
               :term="args"
-              :defaultURL="text => `#/${$l1.code}/phrase/search/${text}`"
+              :defaultURL="text => `#/${$l1.code}/${$l2.code}/phrase/search/${text}`"
             />
           </div>
           <div :key="args" class="focus">

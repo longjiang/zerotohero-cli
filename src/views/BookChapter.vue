@@ -6,7 +6,7 @@
           placeholder="Enter the URL of a book chapter from a variety of eBook websites"
           :action="
             url => {
-              location.hash = `#/${$l1.code}/book/chapter/${encodeURIComponent(url)}`
+              location.hash = `#/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(url)}`
             }
           "
           ref="search"
@@ -33,7 +33,7 @@
               chapterContent.replace(
                 /href=&quot;([^&quot;]+)&quot;/g,
                 (match, p1) =>
-                  `href=&quot;#/${$l1.code}/book/chapter/${encodeURIComponent(p1)}&quot;`
+                  `href=&quot;#/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(p1)}&quot;`
               )
             "
           />
@@ -51,7 +51,7 @@
       <div class="col-md-4 text-center" :key="'book-' + bookTitle">
         <a
           :href="
-            bookURL ? `#/${$l1.code}/book/index/${encodeURIComponent(bookURL)}` : false
+            bookURL ? `#/${$l1.code}/${$l2.code}/book/index/${encodeURIComponent(bookURL)}` : false
           "
           class="link-unstyled"
         >
@@ -98,9 +98,9 @@
               'link-unstyled': true,
               active:
                 location.hash ===
-                `#/${$l1.code}/book/chapter/${encodeURIComponent(chapter.url)}`
+                `#/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`
             }"
-            :href="`#/${$l1.code}/book/chapter/${encodeURIComponent(chapter.url)}`"
+            :href="`#/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`"
             ><span>{{ chapter.title }}</span></Annotate
           >
         </div>

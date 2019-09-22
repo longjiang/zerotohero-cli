@@ -29,7 +29,7 @@
         Sorry, we could not find any “{{ term }}” collocations in this corpus
         (dataset). You can set a different corpus in
         <a
-          :href="`#/${$l1.code}/settings`"
+          :href="`#/${$l1.code}/${$l2.code}/settings`"
         >Settings</a>.
       </div>
       <hr />
