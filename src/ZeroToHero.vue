@@ -103,6 +103,16 @@ export default {
     },
     async setL2() {
       Vue.prototype.$l2 = this.$languages.getSmart(this.$route.params.l2)
+      try {
+        this.$i18n.setLocaleMessage(
+          this.$l2.code,
+          (await import(`@/lib/langs/${this.$l2['iso639-2t']}.js`)).default.translations
+        )
+      } catch (err) {
+        console.log(
+          `UI translations for ${this.$l2['iso639-2t']} is unavailable.`
+        )
+      }
     }
   },
   watch: {
