@@ -34,6 +34,8 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
+              <a href="#/">Study other languages</a>
+              <hr class="border-light" style="opacity: 0.5" />
               <p>
                 <b>Zero to Hero Education, Canada.</b>
               </p>
@@ -43,9 +45,7 @@
       </footer>
     </template>
     <template v-else>
-      <keep-alive>
-        <router-view ref="routerView" />
-      </keep-alive>
+      <Choose />
     </template>
   </div>
 </template>
@@ -54,6 +54,7 @@
 import Nav from '@/components/Nav'
 import SubNav from '@/components/SubNav'
 import LanguageLogo from '@/components/LanguageLogo'
+import Choose from '@/components/Choose'
 import Config from '@/lib/config'
 import Vue from 'vue'
 import Dict from '@/lib/dict'
@@ -62,6 +63,7 @@ export default {
   components: {
     Nav,
     SubNav,
+    Choose,
     LanguageLogo
   },
   data() {

@@ -9,12 +9,6 @@ export default new Router({
   },
   routes: [
     {
-      path: '/',
-      name: 'choose',
-      props: true,
-      component: () => import('./views/Choose.vue')
-    },
-    {
       path: '/:l1/:l2',
       name: 'home',
       props: true,

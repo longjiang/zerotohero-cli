@@ -23,7 +23,10 @@
       <img src="img/jon-sitting.png" alt="Jon" class="photo-jon d-none d-lg-block" />
     </div>
     <!-- <Sale /> -->
-    <div class="jumbotron-fluid bg-dark pt-5 pl-5 pr-5 pb-4 text-light mb-0 courses" style="position: relative">
+    <div
+      class="jumbotron-fluid bg-dark pt-5 pl-5 pr-5 pb-4 text-light mb-0 courses"
+      style="position: relative"
+    >
       <div class="container text-center foreground">
         <h3 class="mb-4">分级课程</h3>
         <p>
@@ -98,12 +101,8 @@ export default {
   },
   methods: {
     redirect() {
-      if (
-        !(
-          this.$hasFeature('home')
-        )
-      ) {
-        location.hash = `/${this.$l1.code}/${this.$l2.code}/youtube/browse`
+      if (!this.$hasFeature('home')) {
+        location.hash = location.hash + 'youtube/browse'
       }
     }
   }
