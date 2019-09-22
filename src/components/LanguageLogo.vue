@@ -14,8 +14,8 @@
       </div>
       <div class="logo-text text-white">
         <template v-if="l2['iso639-2t'] === 'eng'">
-          <div class="logo-text-language">{{ l2.translations ? l2.translations['english'] : 'English' }}</div>
-          <div class="logo-text-zth">{{ l2.translations ? l2.translations['zerotohero'] : 'Zero to Hero' }}</div>
+          <div class="logo-text-language">{{ l1.translations ? l1.translations['english'] : 'English' }}</div>
+          <div class="logo-text-zth">{{ l1.translations ? l1.translations['zerotohero'] : 'Zero to Hero' }}</div>
         </template>
         <template v-else>
           <div class="logo-text-language">{{ l2.name.toUpperCase() }}</div>
