@@ -1,29 +1,26 @@
 <template>
   <a
-    :href="`#/en/${language.code}/`"
-    target="_blank"
+    :href="`#/${l1.code}/${l2.code}/`"
     class="mr-4 mb-4 d-inline-block zerotohero-item link-unstyled"
   >
-    <img
-      :src="
-        `/img/logo-${language.code}-zth-light.png`
-    "
-      :alt="`${language.name} Zero to Hero`"
-      v-if="language.logo"
-      class="logo-image"
-    />
-    <div v-else class="logo-constructed">
-      <div class="logo-circle" :style="`background-image:url(/img/logo-square/${language.code}.jpg)`">
+    <div class="logo-constructed">
+      <div class="logo-circle" :style="`background-image:url(/img/logo-square/${l2.code}.jpg)`">
         <div
           class="logo-speech-bubble"
           :style="`background-image: url(/img/speech-light.png)`"
         >
-          <b>{{ language.code.slice(0,1).toUpperCase()}}{{ language.code.slice(1,2) }}</b>
+          <b>{{ l2.code.slice(0,1).toUpperCase()}}{{ l2.code.slice(1,2) }}</b>
         </div>
       </div>
       <div class="logo-text text-white">
-        <div class="logo-text-language">{{ language.name.toUpperCase() }}</div>
-        <div class="logo-text-zth">ZERO TO HERO</div>
+        <template v-if="l2['iso639-2t'] === 'eng'">
+          <div class="logo-text-language">{{ l2.translations ? l2.translations['english'] : 'English' }}</div>
+          <div class="logo-text-zth">{{ l2.translations ? l2.translations['zerotohero'] : 'Zero to Hero' }}</div>
+        </template>
+        <template v-else>
+          <div class="logo-text-language">{{ l2.name.toUpperCase() }}</div>
+          <div class="logo-text-zth">ZERO TO HERO</div>
+        </template>
       </div>
     </div>
   </a>
@@ -33,7 +30,7 @@
 import Config from '@/lib/config'
 
 export default {
-  props: ['language'],
+  props: ['l1', 'l2'],
   data() {
     return {
       Config

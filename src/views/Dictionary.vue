@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="text-center">
-              <h2 class="mb-4">{{ $t('For the love of English words.') }}</h2>
+              <h2 class="mb-4">{{ $t(`For the love of ${$l2.name} words.`) }}</h2>
               <Loader ref="loader" class="mb-5" />
             </div>
             <SearchCompare

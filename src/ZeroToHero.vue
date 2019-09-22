@@ -5,9 +5,7 @@
         <div class="container">
           <div class="row mb-4">
             <div class="col-sm-12 text-center pt-3">
-              <router-link :to="`/${$l1.code}`">
-                <EnglishLogo :language="$l1" style="transform: scale(1.5)" />
-              </router-link>
+              <LanguageLogo :l1="$l1" :l2="$l2" style="transform: scale(1.5)" />
               <a
                 v-if="$l1.options.features && $l1.options.features.includes('courses')"
                 class="btn btn-success btn-sign-in text-white"
@@ -87,7 +85,6 @@
 import Nav from '@/components/Nav'
 import SubNav from '@/components/SubNav'
 import LanguageLogo from '@/components/LanguageLogo'
-import EnglishLogo from '@/components/EnglishLogo'
 import Config from '@/lib/config'
 import Vue from 'vue'
 import Dict from '@/lib/dict'
@@ -96,8 +93,7 @@ export default {
   components: {
     Nav,
     SubNav,
-    LanguageLogo,
-    EnglishLogo
+    LanguageLogo
   },
   data() {
     return {
