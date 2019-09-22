@@ -11,7 +11,7 @@ import Star from '@/components/Star'
 import Speak from '@/components/Speak'
 import ShowMoreButton from '@/components/ShowMoreButton'
 import VueObserveVisibility from 'vue-observe-visibility'
-import Config from '@/lib/config'
+import Languages from '@/lib/languages'
 
 Vue.config.productionTip = false
 
@@ -87,8 +87,9 @@ if (location.hash === '#/test') {
     render: h => h(Test)
   }).$mount('#test')
 } else {
-  $.getJSON('/data/languages.json', langs => {
-    Vue.prototype.$langs = langs
+  Languages.load().then(l1s => {
+    console.log('l1s', l1s)
+    Vue.prototype.$langs = l1s
     new Vue({
       router,
       store,
