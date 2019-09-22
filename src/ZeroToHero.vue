@@ -37,19 +37,6 @@
               <p>
                 <b>Zero to Hero Education, Canada.</b>
               </p>
-              <p v-if="$l1.enDictionary">
-                <b>Credits:</b>
-                {{ $l1.name }}-English dictionary data from
-                <span
-                  v-if="$l1.enDictionary === 'freedict'"
-                >
-                  <a href="https://freedict.org/">freedict.org</a>
-                </span>
-                <span v-if="$l1.enDictionary === 'ecdict'">
-                  <a href="https://github.com/skywind3000/ECDICT">ECDICT</a>
-                </span>
-                .
-              </p>
             </div>
           </div>
         </div>

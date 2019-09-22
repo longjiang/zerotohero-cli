@@ -67,7 +67,7 @@ export default {
     }
     for (let dictionary of this.dictionaries) {
       let l1 = l1s.find(language => language['iso639-2t'] === dictionary.l1)
-      l1.dictionaries = l1.dictidictionariesonary || {}
+      l1.dictionaries = l1.dictionaries || {}
       l1.dictionaries[dictionary.l2] = l1.dictionaries[dictionary.l2] || [] 
       l1.dictionaries[dictionary.l2].push(dictionary.dictionary) // "freedict"
     }
