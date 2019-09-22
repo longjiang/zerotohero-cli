@@ -48,9 +48,9 @@
           <p>{{ $t('Try these resources:') }}</p>
           <ul>
             <li>
-              {{ $t('Look for English music lyrics on Google.') }}
+              {{ $t(`Look for ${$l2.name} music lyrics on Google.`) }}
             </li>
-            <li v-html="$t('libraryIntro', {l1: $l1.code})" />
+            <li v-html="$t('libraryIntro', {l2: $l2.name})" />
           </ul>
         </div>
       </div>

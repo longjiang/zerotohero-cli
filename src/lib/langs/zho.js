@@ -65,7 +65,7 @@ export default {
     'Not sure what to read?': '不知道该读什么吗？',
     'Try these resources:': '试试以下资源',
     'Look for English music lyrics on Google.': '使用搜索引擎查找英文歌词。',
-    libraryIntro: '在 “<a href="#/{l1}/library">阅览室</a>” 页面直接阅读各式英文文献。',
+    libraryIntro: '在 “阅览室” 页面直接阅读各式{l2}文献。',
     'YouTube Transcript': '学习 YouTube 字幕',
     'Library': '阅览室',
     'This is where you can enjoy reading a variety of English books with the help of hover dictionary and the ability to save words.': '在这里，你可以借助光标取词词典阅读各种英语书籍。点击任何英语单词，将其存入单词表，之后可前往“词典 > 单词表”查看。',
