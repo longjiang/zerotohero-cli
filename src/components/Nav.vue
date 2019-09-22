@@ -1,16 +1,6 @@
 <template>
   <nav class="tabs">
     <router-link
-      :class="{
-        tab: true,
-        'router-link-active': $route.name && $route.name.startsWith('youtube')
-      }"
-      :to="{ name: 'youtube-browse' }"
-      :title="`Learn ${l1 ? l1.name : ''} with audio-visual material.`"
-    >
-      <i class="fas fa-video"></i>{{ $t('Audio-Visual') }}
-    </router-link>
-    <router-link
       v-if="$hasFeature('courses')"
       :class="{
         tab: true,
@@ -25,6 +15,16 @@
       title="Courses"
     >
       <i class="fas fa-graduation-cap"></i>{{$t('Courses')}}
+    </router-link>
+    <router-link
+      :class="{
+        tab: true,
+        'router-link-active': $route.name && $route.name.startsWith('youtube')
+      }"
+      :to="{ name: 'youtube-browse' }"
+      :title="`Learn ${l1 ? l1.name : ''} with audio-visual material.`"
+    >
+      <i class="fas fa-video"></i>{{ $t('Audio-Visual') }}
     </router-link>
     <router-link
       :class="{
