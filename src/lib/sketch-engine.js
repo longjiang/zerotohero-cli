@@ -18,7 +18,6 @@ export default {
           .sort((a, b) => b.sizes.wordcount - a.sizes.wordcount)[0].corpname
       if (l2 === 'en') defaultCorpusName = 'preloaded/ententen15_tt21'
       let corpname = corpnames[l2] || defaultCorpusName
-      console.log(corpname)
       return corpname
     }
   },
@@ -116,7 +115,7 @@ export default {
     let corpus = this.corpora.find(corpus => corpus.corpname === this.corpname(options.l2))
     let parallel = corpus.aligned && corpus.aligned.length > 0
     let requestJSON = parallel
-      ? `{"attrs":"word","structs":"s,g","refs":"=doc.subcorpus","ctxattrs":"word","viewmode":"align","usesubcorp":"","freqml":[{"attr":"word","ctx":"0","base":"kwic"}],"fromp":1,"pagesize":1000,"concordance_query":[{"queryselector":"iqueryrow","sel_aligned":["opus2_${options.l2}"],"cql":"","iquery":"${options.term}","queryselector_opus2_${options.l2}":"iqueryrow","iquery_opus2_${options.l2}":"","pcq_pos_neg_opus2_${options.l2}":"pos","filter_nonempty_opus2_${options.l2}":"on"}]}`
+      ? `{"attrs":"word","structs":"s,g","refs":"=doc.subcorpus","ctxattrs":"word","viewmode":"align","usesubcorp":"","freqml":[{"attr":"word","ctx":"0","base":"kwic"}],"fromp":1,"pagesize":1000,"concordance_query":[{"queryselector":"iqueryrow","sel_aligned":["opus2_${options.l1}"],"cql":"","iquery":"${options.term}","queryselector_opus2_${options.l1}":"iqueryrow","iquery_opus2_${options.l1}":"","pcq_pos_neg_opus2_${options.l1}":"pos","filter_nonempty_opus2_${options.l1}":"on"}]}`
       : `{"lpos":"","wpos":"","default_attr":"word","attrs":"word","refs":"=doc.website","ctxattrs":"word","attr_allpos":"all","usesubcorp":"","viewmode":"kwic","cup_hl":"q","cup_err":"true","cup_corr":"","cup_err_code":"true","structs":"s,g","gdex_enabled":0,"fromp":1,"pagesize":50,"concordance_query":[{"queryselector":"iqueryrow","iquery":"${options.term}"}],"kwicleftctx":"100#","kwicrightctx":"100#"}`
     return new Promise(resolve => {
       $.post(
