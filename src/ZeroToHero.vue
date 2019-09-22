@@ -167,9 +167,10 @@ export default {
           // first time loading, set the language
           await this.setL1()
           await this.setL2()
-          if (!Vue.prototype.$dictionary) {
+          let dictionaries = this.$l1.dictionaries[this.$l2['iso639-2t']]
+          if (!Vue.prototype.$dictionary && dictionaries) {
             Vue.prototype.$dictionary = Dict.load({
-              dict: this.$l1.enDictionary,
+              dict: dictionaries[0],
               l1: this.l1,
               l2: this.l2
             })
