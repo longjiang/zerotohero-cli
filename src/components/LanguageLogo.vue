@@ -1,12 +1,12 @@
 <template>
-  <a
-    :href="`#/${l1.code}/${l2.code}/`"
-    class="mr-4 mb-4 d-inline-block link-unstyled"
-  >
+  <a :href="`#/${l1.code}/${l2.code}/`" class="mr-4 mb-4 d-inline-block link-unstyled">
     <div class="logo-constructed">
-      <div class="logo-circle" :style="`background-image:url(/img/logo-square/${l2.code}.jpg)`">
+      <div class="logo-circle-wrapper">
+        <div :class="`${randomBlendClass()} logo-circle`">
+          <img :src="`/img/logo-square/${l2.code}.jpeg`" alt />
+        </div>
         <div
-          class="logo-speech-bubble"
+          class="logo-speech-bubble shadowed"
           :style="`background-image: url(/img/speech-light.png)`"
         >
           <b>{{ l2.code }}</b>
@@ -14,11 +14,19 @@
       </div>
       <div class="logo-text text-white">
         <template v-if="l2['iso639-2t'] === 'eng'">
-          <div class="logo-text-language">{{ l1.translations ? l1.translations['english'] : 'English' }}</div>
-          <div class="logo-text-zth">{{ l1.translations ? l1.translations['zerotohero'] : 'Zero to Hero' }}</div>
+          <div
+            class="logo-text-language"
+          >{{ l1.translations ? l1.translations['english'] : 'English' }}</div>
+          <div
+            class="logo-text-zth"
+          >{{ l1.translations ? l1.translations['zerotohero'] : 'Zero to Hero' }}</div>
         </template>
         <template v-else>
-          <div class="logo-text-language">{{ l2.name.toUpperCase() }}</div>
+          <div class="logo-text-language">
+            <Annotate>
+              <span>{{ l2.name.toUpperCase() }}</span>
+            </Annotate>
+          </div>
           <div class="logo-text-zth">ZERO TO HERO</div>
         </template>
       </div>
@@ -28,12 +36,21 @@
 
 <script>
 import Config from '@/lib/config'
+import Helper from '@/lib/helper'
 
 export default {
   props: ['l1', 'l2'],
   data() {
     return {
       Config
+    }
+  },
+  methods: {
+    randomBlendClass() {
+      let colors = ['blue-yellow', 'pink-yellow', 'red-blue']
+      let shade = ['']
+      return 'blend-' + colors[this.l2.name.length % 3]
+      // return 'red-orange'
     }
   }
 }
@@ -48,14 +65,22 @@ export default {
   align-items: flex-end;
   padding-top: 0.8rem;
 }
+.logo-circle-wrapper {
+  position: relative;
+  margin-right: 0.7rem;
+}
 .logo-circle {
   height: 2.75rem;
   width: 2.75rem;
-  background: #ccc;
   border-radius: 100%;
+  overflow: hidden;
   position: relative;
-  margin-right: 0.7rem;
-  background-size: cover;
+}
+.logo-circle img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .logo-text {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
@@ -71,8 +96,8 @@ export default {
   font-size: 0.7rem;
   color: #555;
   position: absolute;
-  right: -0.4rem;
-  top: -0.8rem;
+  top: -1rem;
+  right: -1rem;
 }
 .logo-speech-bubble b {
   display: block;
@@ -81,8 +106,9 @@ export default {
 }
 .logo-text-language {
   font-weight: 100;
-  margin-bottom: -0.3em;
+  margin-bottom: -0.2em;
   text-transform: uppercase;
+  line-height: 1.15;
 }
 .logo-text-zth {
   font-weight: bold;
