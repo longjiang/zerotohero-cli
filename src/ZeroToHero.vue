@@ -34,26 +34,19 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <a href="#/">Study other languages</a>
-              <hr class="border-light" style="opacity: 0.5" />
-              <p>
-                <b>Zero to Hero Education, Canada.</b>
-              </p>
+              <p class="lead mt-4">Learn other languages:</p>
+              <Choose />
             </div>
           </div>
         </div>
       </footer>
     </template>
     <template v-else>
-      <div class="container-fluid bg-dark text-light pt-4 pb-4">
+      <div class="container-fluid bg-dark text-light pt-4 pb-4" style="min-height: 100vh">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <h1 class="text-light mt-5 mb-5 text-center" style="font-weight: 500">Learn languages, from zero to hero.</h1>
-              <p class="lead">
-                <b style="font-weight: 900">Zero to Hero Education, Canada</b> is dedicated to help you learn languages, from the very beginning (“zero”) to a very very advanced level (“hero”).
-              </p>
-              <p>Although our focus is teaching Mandarin Chinese to English speakers (<a href="#/en/zh/">Chinese Zero to Hero</a>), and teaching English to Mandarin Chinese speakers (<a href="#/zh/en/">English Zero to Hero</a>), we've also created free, open-source learning resources that work with hundres of other language pairs.</p>
+              <h1 class="text-light mt-5 mb-5 text-center" style="font-weight: 500">Learn the world’s languages, from zero to hero.</h1>
               <Choose class="mt-5" />
             </div>
           </div>

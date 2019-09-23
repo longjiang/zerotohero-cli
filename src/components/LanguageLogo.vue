@@ -23,9 +23,7 @@
         </template>
         <template v-else>
           <div class="logo-text-language">
-            <Annotate>
-              <span>{{ l2.name.toUpperCase() }}</span>
-            </Annotate>
+            <span>{{ l2.name.toUpperCase() }}</span>
           </div>
           <div class="logo-text-zth">ZERO TO HERO</div>
         </template>
@@ -36,7 +34,6 @@
 
 <script>
 import Config from '@/lib/config'
-import Helper from '@/lib/helper'
 
 export default {
   props: ['l1', 'l2'],
@@ -48,9 +45,7 @@ export default {
   methods: {
     randomBlendClass() {
       let colors = ['blue-yellow', 'pink-yellow', 'red-blue']
-      let shade = ['']
-      return 'blend-' + colors[this.l2.name.length % 3]
-      // return 'red-orange'
+      return !['en', 'zh', 'jp', 'ko', 'ru', 'fr', 'de'].includes(this.l2.code) ? 'blend-' + colors[this.l2.name.length % 3] : ''
     }
   }
 }
