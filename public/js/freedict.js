@@ -1,4 +1,5 @@
 const Dictionary = {
+  name: 'freedict',
   file: undefined,
   words: [],
   index: {},
@@ -78,7 +79,6 @@ const Dictionary = {
   },
   dictionaryFile(options) {
     let filename = `/data/freedict/${options.l2}-${options.l1}.dict.txt`
-    console.log(filename)
     return filename
   },
   load(options) {
@@ -129,7 +129,7 @@ const Dictionary = {
   lookupByDef(text, limit = 30) {
     text = text.toLowerCase()
     let words = this.words
-      .filter(word => word.definitions.join(', ').includes(text))
+      .filter(word => word.definitions && word.definitions.join(', ').includes(text))
       .slice(0, limit)
     return words
   },

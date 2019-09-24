@@ -138,12 +138,13 @@ export default {
               .includes(feature)
             }
           }
-          let dictionaries = this.$l1.dictionaries
+          let dictionaries = this.$l1.dictionaries // ['freedict']
             ? this.$l1.dictionaries[this.$l2['iso639-2t']]
             : undefined
           if (!Vue.prototype.$dictionary && dictionaries) {
-            Vue.prototype.$dictionary = Dict.load({
-              dict: dictionaries[0],
+            Vue.prototype.$dictionaryName = dictionaries[0] // 'freedict'
+            Vue.prototype.$dictionary = await Dict.load({
+              dict: Vue.prototype.$dictionaryName,
               l1: this.$l1['iso639-2t'],
               l2: this.$l2['iso639-2t']
             })

@@ -47,7 +47,7 @@
           <p>
             想知道课本详情及如何购买，请参考这个页面的信息：
             <a
-              href="#/zh/textbooks-workbooks"
+              href="#/${$l1.code}/${$l2.code}/textbooks-workbooks"
             >如何购买课本？</a>
           </p>
           <h2>
@@ -59,7 +59,7 @@
           </p>
           <p>
             想知道“英语英雄”各个课程的制作计划与进度，请参考
-            <a href="#/zh/course-release-schedule">课程发布时间表</a>。
+            <a :href="`#/${$l1.code}/${$l2.code}/course-release-schedule`">课程发布时间表</a>。
           </p>
         </div>
         <div class="col-md-2"></div>

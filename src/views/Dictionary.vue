@@ -28,7 +28,7 @@
           :findCurrent="item => item.join(',').replace(/ /g, '_') === entry.id"
           :url="
             item =>
-              `#/dictionary/freedict/${item.join(',').replace(/ /g, '_')}`
+              `#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${item.join(',').replace(/ /g, '_')}`
           "
           title="Saved Words"
         />
@@ -141,22 +141,18 @@ export default {
     },
     async route() {
       if (this.method && this.args) {
-        if (this.method === 'freedict') {
+        if (this.method === this.$dictionaryName) {
           if (this.args === 'random') {
             this.random()
           } else {
             this.entry = await (await this.$dictionary).get(this.args)
-          }
-        } else {
-          if (!this.entry) {
-            this.random()
           }
         }
       }
     },
     async random() {
       let randomId = (await (await this.$dictionary).random()).id
-      location.hash = `#/${this.$l1.code}/${this.$l2.code}/dictionary/freedict/${randomId}`
+      location.hash = `#/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${randomId}`
     }
   },
   watch: {

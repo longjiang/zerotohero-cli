@@ -11,7 +11,7 @@
           </div>
         </div>
         <div>
-          <a :href="`#/dictionary/freedict/${entry.bare}`">
+          <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${entry.bare}`">
             <span
               class="entry-word"
               :data-level="entry.level || 'outside'"

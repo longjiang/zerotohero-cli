@@ -38,7 +38,7 @@ export default {
       dCompare: this.compare,
       compareHrefFunc: compareEntry => {
         const entry = this.$refs.search.entry || this.entry
-        return `#/compare/cedict/${entry.identifier},${compareEntry.identifier}`
+        return `#/${this.$l1.code}/${this.$l2.code}/compare/cedict/${entry.identifier},${compareEntry.identifier}`
       }
     }
   },

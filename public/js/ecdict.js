@@ -1,4 +1,5 @@
 const Dictionary = {
+  name: 'ecdict',
   lang: undefined,
   file: undefined,
   words: [],

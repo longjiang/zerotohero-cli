@@ -96,23 +96,6 @@ export default {
       el.innerHTML = wordArray.join(' ') + '...'
     }
   },
-  tooltipTemplateFilter() {
-    return (candidates, block, html) => {
-      let $newHtml = $('<div />').html(html)
-      for (let i in candidates) {
-        let candidate = candidates[i]
-        $newHtml
-          .find(
-            `.tooltip-entries .tooltip-entry:eq(${i}) span.tooltip-entry-character`
-          )
-          .wrap(
-            `<a href="#/${this.$l1.code}/${this.$l2.code}/dictionary/freedict/${candidate.identifier}" class="tooltip-entry-character"></a>`
-          )
-      }
-      let newHTML = $newHtml.html()
-      return newHTML
-    }
-  },
   unique(names) {
     var uniqueNames = []
     $.each(names, function(i, el) {
