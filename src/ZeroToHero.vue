@@ -46,7 +46,10 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <h1 class="text-light mt-5 mb-5 text-center" style="font-weight: 500">Learn the world’s languages, from zero to hero.</h1>
+              <h1
+                class="text-light mt-5 mb-5 text-center"
+                style="font-weight: 500"
+              >Learn the world’s languages, from zero to hero.</h1>
               <Choose class="mt-5" />
             </div>
           </div>
@@ -123,13 +126,18 @@ export default {
           // first time loading, set the language
           await this.setL1()
           await this.setL2()
-          Vue.prototype.$hasFeature = feature =>
-            this.$languages
+          Vue.prototype.$hasFeature = feature => {
+            if (feature === 'dictionary') {
+              return this.$dictionary
+            } else {
+            return this.$languages
               .getFeatures({
                 l1: this.$l1,
                 l2: this.$l2
               })
               .includes(feature)
+            }
+          }
           let dictionaries = this.$l1.dictionaries
             ? this.$l1.dictionaries[this.$l2['iso639-2t']]
             : undefined

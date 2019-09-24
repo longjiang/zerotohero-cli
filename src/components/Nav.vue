@@ -27,7 +27,7 @@
       <i class="fas fa-video"></i>{{ $t('Audio-Visual') }}
     </router-link>
     <router-link
-      v-if="$dictionary"
+      v-if="$hasFeature('dictionary')"
       :class="{
         tab: true,
         'router-link-active':
