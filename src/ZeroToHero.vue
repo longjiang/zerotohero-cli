@@ -126,16 +126,17 @@ export default {
           // first time loading, set the language
           await this.setL1()
           await this.setL2()
-          Vue.prototype.$hasFeature = async feature => {
+          Vue.prototype.$hasFeature = feature => {
+            console.log('has feature?', feature)
             if (feature === 'dictionary') {
-              return await this.$dictionary
+              return this.$l1.dictionaries && this.$l1.dictionaries[this.$l2['iso639-2t']]
             } else {
-            return this.$languages
-              .getFeatures({
-                l1: this.$l1,
-                l2: this.$l2
-              })
-              .includes(feature)
+              return this.$languages
+                .getFeatures({
+                  l1: this.$l1,
+                  l2: this.$l2
+                })
+                .includes(feature)
             }
           }
           this.langsLoaded = true
