@@ -126,9 +126,9 @@ export default {
           // first time loading, set the language
           await this.setL1()
           await this.setL2()
-          Vue.prototype.$hasFeature = feature => {
+          Vue.prototype.$hasFeature = async feature => {
             if (feature === 'dictionary') {
-              return this.$dictionary
+              return await this.$dictionary
             } else {
             return this.$languages
               .getFeatures({
@@ -138,18 +138,18 @@ export default {
               .includes(feature)
             }
           }
+          this.langsLoaded = true
           let dictionaries = this.$l1.dictionaries // ['freedict']
             ? this.$l1.dictionaries[this.$l2['iso639-2t']]
             : undefined
           if (!Vue.prototype.$dictionary && dictionaries) {
             Vue.prototype.$dictionaryName = dictionaries[0] // 'freedict'
-            Vue.prototype.$dictionary = await Dict.load({
+            Vue.prototype.$dictionary = Dict.load({
               dict: Vue.prototype.$dictionaryName,
               l1: this.$l1['iso639-2t'],
               l2: this.$l2['iso639-2t']
             })
           }
-          this.langsLoaded = true
         }
       }
     }
