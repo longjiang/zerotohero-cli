@@ -65,23 +65,12 @@ export default {
       this.update()
     }
   },
-  async beforeMount() {
+  beforeMount() {
     this.update()
   },
   methods: {
-    async getForms() {
-      if (this.word) {
-        let forms = (await (await this.$dictionary).wordForms(this.word)).map(
-          form => form.form.replace(/'/g, '')
-        )
-        return forms
-      } else {
-        return [this.term]
-      }
-    },
-    async update() {
+    update() {
       this.lines = []
-      let forms = await this.getForms()
       if (this.collocation && this.collocation.Words) {
         this.collocation.Words = this.collocation.Words.filter(Word => Word.cm)
           .sort((a, b) => {
@@ -93,11 +82,7 @@ export default {
         for (let Word of this.collocation.Words) {
           if (Word.cm) {
             lines.push(
-              Helper.highlightMultiple(
-                Word.cm,
-                forms,
-                this.level || 'outside'
-              )
+              Word.cm
             )
           }
         }
