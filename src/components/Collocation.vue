@@ -1,6 +1,6 @@
 <template>
   <div :id="id || `collocation-${type}`">
-    <h6>{{ title.replace(/{word}/g, term) }}</h6>
+    <h6>{{ $t(title, {word: term}).replace(/{word}/g, term) }}</h6>
     <hr class="mt-0 mb-2" />
     <div v-if="collocation">
       <ul class="collapsed gramrel pl-0" data-collapse-target>

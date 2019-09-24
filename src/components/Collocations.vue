@@ -18,7 +18,7 @@
             :word="word"
             :text="text"
             :level="level"
-            :title="$t(colDesc[name], {word: term})"
+            :title="colDesc[name]"
             :type="name"
             :id="`collocation-${name}`"
             :collocation="getGramrelsByName(sketch.Gramrels, name)"
