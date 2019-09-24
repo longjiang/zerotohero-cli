@@ -64,7 +64,7 @@
               :entry="entry"
               limit="10"
             />
-
+            <EntryForms class="mt-5" :word="entry" />
             <Collocations
               class="mt-5 mb-5"
               :word="entry"
@@ -100,9 +100,11 @@ import SearchCompare from '@/components/SearchCompare.vue'
 import DefinitionsList from '@/components/DefinitionsList'
 import Paginator from '@/components/Paginator'
 import EntryYouTube from '@/components/EntryYouTube.vue'
+import EntryForms from '@/components/EntryForms'
 
 export default {
   components: {
+    EntryForms,
     SearchCompare,
     Collocations,
     Concordance,
