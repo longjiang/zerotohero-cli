@@ -56,6 +56,7 @@
             class="pl-1 pr-1 ml-1 rounded d-inlin-block"
             style="font-size: 0.8em; position:relative; bottom: 0.2rem;"
           >{{ word.level }}</span>
+          <span v-if="word.cjk && word.cjk.canonical" class="ml-1" style="font-size: 1.2em; color: #999">[{{ word.cjk.canonical }}]</span>
         </div>
         <div>
           <span class="word-type" v-if="word.type !== 'other'" style="color: #999">

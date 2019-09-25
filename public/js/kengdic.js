@@ -18,7 +18,7 @@ const Dictionary = {
               accented: row.hangul,
               definitions: [row.english],
               cjk: {
-                canonical: row.hanja,
+                canonical: row.hanja && row.hanja !== 'NULL' ? row.hanja : undefined,
               }
             })
             data.push(word)

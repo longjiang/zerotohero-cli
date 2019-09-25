@@ -26,6 +26,9 @@
             >
           </a>
         </div>
+        <div v-if="entry.cjk && entry.cjk.canonical" class="mt-1">
+          <span class="ml-2 entry-cjk">{{ entry.cjk.canonical }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -86,5 +89,9 @@ export default {
 
 .entry-head-wrapper {
   position: relative;
+}
+
+.entry-cjk{
+  font-size: 1.5rem;
 }
 </style>
