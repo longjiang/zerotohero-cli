@@ -7,7 +7,7 @@
             <div class="col-sm-12 text-center pt-3">
               <LanguageLogo :l1="$l1" :l2="$l2" style="transform: scale(1.5)" />
               <a
-                v-if="$hasFeature('courses')"
+                v-if="$l1.code === 'zh' && $l2.code === 'en'"
                 class="btn btn-success btn-sign-in text-white"
                 href="https://wazuc.duanshu.com/#/"
                 target="_blank"
@@ -15,6 +15,12 @@
                 登陆
                 <img src="/img/logo-duanshu-light.png" class="logo-small ml-1" />
               </a>
+              <a
+                v-if="$l1.code === 'en' && $l2.code === 'zh'"
+                class="btn btn-danger btn-sign-in"
+                href="https://sso.teachable.com/secure/133035/users/sign_in"
+                >Login to <img src="/img/teachable_light.png" class="logo-small"
+              /></a>
             </div>
           </div>
           <div class="row">
