@@ -91,8 +91,8 @@ export default {
       id: `wordblock-${Helper.uniqueId()}`,
       hover: false,
       loading: true,
-      text: this.$slots.default[0].text,
-      saved: this.$store.getters.hasSavedWord(this.$slots.default[0].text),
+      text: this.$slots.default ? this.$slots.default[0].text : undefined,
+      saved: this.$slots.default ? this.$store.getters.hasSavedWord(this.$slots.default[0].text) : false,
       images: [],
       words: [],
       Config

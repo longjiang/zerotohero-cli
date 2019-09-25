@@ -67,6 +67,8 @@ export default {
       annotated: false,
       showDefOn: false,
       fullscreenMode: false,
+      tokenizeBatchNum: 0,
+      tokenized: []
     }
   },
   methods: {
@@ -108,9 +110,25 @@ export default {
     async tokenize(text) {
       let html = text
       if ((await this.$dictionary).tokenize) {
+        html = ''
+        let tokenized = await (await this.$dictionary).tokenize(text)
+        
+        this.tokenized[this.tokenizeBatchNum] = tokenized
+        console.log(this.tokenized[this.tokenizeBatchNum])
+        for (let index = 0; index < this.tokenized[this.tokenizeBatchNum].length; index++) {
+          let item = this.tokenized[this.tokenizeBatchNum][index]
+          if (typeof item === 'string') {
+            html += item
+          } else {
+            // html += `<WordBlock :token="tokenized[tokenizeBatchNum][${index}]" />`
+            html += `<WordBlock>${this.tokenized[this.tokenizeBatchNum][index].text}</WordBlock>`
+          }
+        }
+        this.tokenizeBatchNum = this.tokenizeBatchNum + 1
       } else {
         html = text.replace(/([\Sß]+)/gi, '<WordBlock>$1</WordBlock>')
       }
+      console.log(html)
       return html
     },
     async recursive(node) {
