@@ -44,8 +44,8 @@ const Dictionary = {
   accent(text) {
     return text
   },
-  lookupByDef(text) {
-    let results = this.words.filter(row => row.english && row.english.includes(text))
+  lookupByDef(text, limit = 30) {
+    let results = this.words.filter(row => row.english && row.english.includes(text)).slice(0, limit)
     return results
   },
   unique(array) {
@@ -61,6 +61,9 @@ const Dictionary = {
   },
   isChinese(text) {
     if (this.matchChinese(text)) return true
+  },
+  isRoman(text) {
+    return text.match(/\w+/) ? true : false
   },
   matchChinese(text) {
     return text.match(
@@ -98,26 +101,28 @@ const Dictionary = {
     }
     return results
   },
-  lookupFuzzy(text, limit = false) {
+  lookupFuzzy(text, limit = 30) {
     text = text.trim()
-    let results = []
-    if (this.isChinese(text)) {
-      results = this.words.filter(row => row.kanji && row.kanji.includes(text))
-    } else {
-      let words = this.words
-        .filter(word => word.bare && word.bare.startsWith(text))
-      if (words.length === 0) {
-        words = this.words
-          .filter(word => text.includes(word.bare))
-          .sort((a, b) => b.bare.length - a.bare.length)
+    if (!this.isRoman(text)) {
+      let results = []
+      if (this.isChinese(text)) {
+        results = this.words.filter(row => row.kanji && row.kanji.includes(text))
+      } else {
+        let words = this.words
+          .filter(word => word.bare && word.bare.startsWith(text))
+        if (words.length === 0) {
+          words = this.words
+            .filter(word => text.includes(word.bare))
+            .sort((a, b) => b.bare.length - a.bare.length)
+        }
+        results = words
       }
-      results = words
-    }
-    if (results) {
-      if (limit) {
-        results = results.slice(0, limit)
+      if (results) {
+        if (limit) {
+          results = results.slice(0, limit)
+        }
+        return results
       }
-      return results
     }
   }
 }

@@ -31,7 +31,7 @@
     </div>
     <div class="suggestions" :key="suggestionsKey" v-cloak v-if="active && text && text.length > 0">
       <a class="suggestion" v-for="suggestion in suggestions" :href="hrefFunc(suggestion)">
-        <span>
+        <span v-if="suggestion">
           <span
             class="suggestion-word font-weight-bold mr-1"
             data-level="outside"

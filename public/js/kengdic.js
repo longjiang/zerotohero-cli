@@ -66,8 +66,8 @@ const Dictionary = {
   stylize(name) {
     return name
   },
-  lookupByDef(text) {
-    let results = this.words.filter(row => row.english && row.english.includes(text))
+  lookupByDef(text, limit = 30) {
+    let results = this.words.filter(row => row.english && row.english.includes(text)).slice(0, limit)
     return results
   },
   random() {
@@ -97,7 +97,7 @@ const Dictionary = {
     }
     return results
   },
-  lookupFuzzy(text, limit = false) {
+  lookupFuzzy(text, limit = 30) {
     text = text.toLowerCase().trim()
     let results = []
     if (this.isChinese(text)) {
