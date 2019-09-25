@@ -103,6 +103,9 @@ const Dictionary = {
   formTable() {
     return this.tables
   },
+  stylize(name) {
+    return name
+  },
   wordForms(word) {
     let forms = [{
       table: 'head',
