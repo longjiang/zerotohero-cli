@@ -7,18 +7,29 @@ export default {
   corpora: SketchEngineCorpora,
   corpname(l2) {
     if (l2) {
-      let corpnames = JSON.parse(localStorage.getItem('ezhCorpnames') || '{}')
-      let defaultCorpus = this.corpora.find(
-        corpus => corpus.language_id === l2 && corpus.is_featured
-      )
-      let defaultCorpusName = defaultCorpus
-        ? defaultCorpus.corpname
-        : this.corpora
-          .filter(corpus => corpus.language_id === l2)
-          .sort((a, b) => b.sizes.wordcount - a.sizes.wordcount)[0].corpname
-      if (l2 === 'en') defaultCorpusName = 'preloaded/ententen15_tt21'
-      let corpname = corpnames[l2] || defaultCorpusName
-      return corpname
+      let corpnames = JSON.parse(localStorage.getItem('zthCorpnames') || '{}')
+      if (corpnames[l2.code]) {
+        // use saved option if there is one
+        let corpname = corpnames[l2.code]
+        return corpname
+      } else {
+        let locales = l2.locales ? l2.locales.slice(0) : []
+        locales.push(l2.code)
+        let defaultCorpus = this.corpora.find(
+          corpus => locales.includes(corpus.language_id) && corpus.is_featured
+        )
+        // if there is no 'featured' corpus, use the one with the most words
+        defaultCorpus = defaultCorpus
+          ? defaultCorpus
+          : this.corpora
+            .filter(corpus => locales.includes(corpus.language_id))
+            .sort((a, b) => b.sizes.wordcount - a.sizes.wordcount)[0]
+        if (defaultCorpus) {
+          let defaultCorpusName = defaultCorpus.corpname
+          if (l2.code === 'en') defaultCorpusName = 'preloaded/ententen15_tt21'
+          return defaultCorpusName
+        }
+      } 
     }
   },
   gramrels(options) {

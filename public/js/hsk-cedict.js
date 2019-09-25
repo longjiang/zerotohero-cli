@@ -17,6 +17,28 @@ const Dictionary = {
       })
     })
   },
+  wordForms(word) {
+    let forms = [
+      {
+        table: 'head',
+        field: 'head',
+        form: word.bare
+      }
+    ]
+    return forms
+  },
+  stylize(name) {
+    return name
+  },
+  accent(text) {
+    return text
+  },
+  lookupByDef(text, limit = 30) {
+    let results = this.words
+      .filter(row => row.search && row.search.includes(text))
+      .slice(0, limit)
+    return results
+  },
   unique(array) {
     var uniqueArray = []
     for (let i in array) {
@@ -72,28 +94,33 @@ const Dictionary = {
   lookupFuzzy(text, limit = false) {
     let results = []
     if (this.isChinese(text)) {
-      results = this.words.filter(
-        row => row.simplified.includes(text) || row.traditional.includes(text)
-      ).sort((a, b) => b.weight - a.weight)
+      results = this.words
+        .filter(
+          row => row.simplified.includes(text) || row.traditional.includes(text)
+        )
+        .sort((a, b) => b.weight - a.weight)
     } else {
       text = text.toLowerCase().trim()
-      results = this.words.filter(row => {
-        return (
+      results = this.words
+        .filter(row =>
           this.removeTones(row.pinyin.replace(/ /g, '')).includes(
             text.replace(/ /g, '')
-          ) || row.search.includes(text)
+          )
         )
-      }).slice(0,1000).sort((a, b) => b.weight - a.weight).slice(0,100).sort((a,b) => {
-        let am = a.search.match(new RegExp('^' + text + '\\b'))
-        let bm = b.search.match(new RegExp('^' + text + '\\b'))
-        if (!am && bm) {
-          return 1
-        } else if (am && !bm) {
-          return -1
-        } else {
-          return 0
-        }
-      })
+        .slice(0, 1000)
+        .sort((a, b) => b.weight - a.weight)
+        .slice(0, 100)
+        .sort((a, b) => {
+          let am = a.search.match(new RegExp('^' + text + '\\b'))
+          let bm = b.search.match(new RegExp('^' + text + '\\b'))
+          if (!am && bm) {
+            return 1
+          } else if (am && !bm) {
+            return -1
+          } else {
+            return 0
+          }
+        })
     }
     if (results) {
       if (limit) {
@@ -170,66 +197,20 @@ const Dictionary = {
   augment(row) {
     let hskCEDICT = this
     let augmented = Object.assign(row, {
-      id: `${row.traditional},${row.pinyin.replace(
-        / /g,
-        '_'
-      )},${row.index}`,
+      id: `${row.traditional},${row.pinyin.replace(/ /g, '_')},${row.index}`,
       bare: row.simplified,
       accented: row.simplified,
       cjk: {
-        canonical: row.simplified && row.simplified !== 'NULL' ? row.simplified : undefined,
+        canonical:
+          row.simplified && row.simplified !== 'NULL'
+            ? row.simplified
+            : undefined,
         phonetics: row.pinyin
       },
       definitions: row.definitions.split('/'),
       search: row.definitions.toLowerCase()
     })
     this._maxWeight = Math.max(augmented.weight, this._maxWeight)
-    if (augmented && augmented.definitions) {
-      augmented.definitions.forEach((definition, index) => {
-        if (typeof definition === 'string') {
-          let definitionObj = {
-            type: 'definition',
-            text: definition
-              .replace(/\[(.*)\]/, function(match, p1) {
-                return ' (' + p1 + ')'
-              })
-              .replace(/([^\s]+)\|([^\s]+)/, '$2')
-          }
-          var m = definition.match(/variant of (.*)/)
-          if (m) {
-            definitionObj.type = 'variant'
-            definitionObj.variant = hskCEDICT.parseWord(m[1])
-            definitionObj.text = `variant of ${
-              definitionObj.variant.simplified
-            } (${definitionObj.variant.pinyin})`
-          }
-          m = definition.match(/see (.*)/)
-          if (m) {
-            definitionObj.type = 'reference'
-            definitionObj.variant = hskCEDICT.parseWord(m[1])
-            definitionObj.text = `see ${definitionObj.variant.simplified} (${
-              definitionObj.variant.pinyin
-            })`
-          }
-          m = definition.match(/CL:(.*)/)
-          if (m) {
-            let measureWords = []
-            for (let item of m[1].split(',')) {
-              const mw = hskCEDICT.parseWord(item)
-              if (mw.simplified !== '个') {
-                measureWords.push(mw)
-              }
-            }
-            if (measureWords.length > 0) {
-              augmented.measureWords = measureWords
-            }
-            augmented.definitions.splice(index, 1) // Remove CL:  definition
-          } else {
-            augmented.definitions[index] = definitionObj
-          }
-        }
-      })
-    }
     return augmented
   },
   /* Returns the longest word in the dictionary that is inside `text` */
