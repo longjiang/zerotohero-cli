@@ -120,6 +120,7 @@ export default {
       let locales = [this.$l2.code]
       if (this.$l2.locales) {
         locales = locales.concat(this.$l2.locales)
+        console.log(locales)
       }
       for (let locale of locales) {
         promises.push(

@@ -26,7 +26,7 @@
         <i class="fas fa-tag"></i>
         {{$t('Pricing')}}
       </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'transfer' }">
+      <router-link v-if="$l1.code === 'zh' && $l2.code === 'en'" class="secondary-menu-item" :to="{ name: 'transfer' }">
         <i class="fas fa-exchange-alt"></i>
         {{ $t('Transfer Purchases')}}
       </router-link>

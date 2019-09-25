@@ -4,6 +4,7 @@ export default {
   translations: [],
   features: [],
   l1s: [],
+  locales: [],
   loadFile(file) {
     return new Promise(resolve => {
       Papa.parse(file, {
@@ -27,6 +28,9 @@ export default {
   async loadFeatures() {
     this.features = await this.loadFile('/data/languages/features.csv')
   },
+  async loadLocales() {
+    this.locales = await this.loadFile('/data/languages/locales.csv')
+  },
   get(iso639_2t) {
     return this.l1s.find(language => language['iso639-2t'] === iso639_2t)
   },
@@ -48,7 +52,8 @@ export default {
       "direction": 'ltr',
       "dictionaries": {
         "eng": ["freedict"] // means we have a English-Afrikaans dictionary
-      }
+      },
+      "locales": ['zh-CN', 'zh-HK']
       "published": true,
       "translations": {
         "english": "Engels",
@@ -91,6 +96,13 @@ export default {
         }
       }
     }
+    for (let locale of this.locales) {
+      let l1 = l1s.find(language => language['iso639-1'] === locale['iso639-1'])
+      if(l1) {
+        l1.locales = l1.locales || []
+        l1.locales.push(locale.locale)
+      }
+    }
     return l1s
   },
   getFeatures(options) {
@@ -104,7 +116,8 @@ export default {
       this.loadDictionaries(),
       this.loadLanguages(),
       this.loadTranslations(),
-      this.loadFeatures()
+      this.loadFeatures(),
+      this.loadLocales()
     ]
     return new Promise(async resolve => {
       await Promise.all(promises)

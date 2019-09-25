@@ -1,7 +1,4 @@
 export default {
-  youtube: {
-    channels: []
-  },
   translations: {
     'Enter your {l2} text here. Markdown and HTML also supported.': '在此键入{l2}文本。同时支持 Markdown 和 HTML。',
     'Look for {l2} music lyrics on Google.': '使用搜索引擎查找{l2}歌词。',
