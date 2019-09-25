@@ -7,6 +7,7 @@
           <div class="entry-pinyin">
             <Star :word="entry"></Star>
             <span v-if="entry.pronunciation" class='ml-2 mr-1'>/{{ entry.pronunciation }}/</span>
+            <span v-if="$l2.code === 'ja'" class="ml-2 mr-1">{{ entry.cjk.phonetics }}</span>
             <Speak class="ml-1" :text="entry.bare" :mp3="entry.audio" />
           </div>
         </div>
@@ -26,7 +27,7 @@
             >
           </a>
         </div>
-        <div v-if="entry.cjk && entry.cjk.canonical" class="mt-1">
+        <div v-if="$l2.code === 'ko' && entry.cjk && entry.cjk.canonical" class="mt-1">
           <span class="ml-2 entry-cjk">{{ entry.cjk.canonical }}</span>
         </div>
       </div>

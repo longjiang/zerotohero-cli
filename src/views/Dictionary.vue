@@ -67,18 +67,25 @@
           </div>
         </div>
         <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
-          <div class="col-sm-6">
+          <div class="col-sm-6" v-if="$l2.code !== 'zh'">
             <Chinese
-              v-if="entry.hanja && entry.hanja !== 'NULL'"
+              v-if="entry.cjk && entry.cjk.canonical && entry.cjk.canonical !== 'NULL'"
               class="mt-5 mb-5"
-              :text="entry.hanja"
+              :text="entry.cjk.canonical"
             />
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6" v-if="$l2.code !== 'ja'">
             <Japanese
-              v-if="entry.hanja && entry.hanja !== 'NULL'"
+              v-if="entry.cjk && entry.cjk.canonical && entry.cjk.canonical !== 'NULL'"
               class="mt-5 mb-5"
-              :text="entry.hanja"
+              :text="entry.cjk.canonical"
+            />
+          </div>
+          <div class="col-sm-6" v-if="$l2.code !== 'ko'">
+            <Korean
+              v-if="entry.cjk && entry.cjk.canonical && entry.cjk.canonical !== 'NULL'"
+              class="mt-5 mb-5"
+              :text="entry.cjk.canonical"
             />
           </div>
         </div>
@@ -130,11 +137,13 @@ import EntryForms from '@/components/EntryForms'
 import EntryCharacters from '@/components/EntryCharacters'
 import Chinese from '@/components/Chinese'
 import Japanese from '@/components/Japanese'
+import Korean from '@/components/Korean'
 
 export default {
   components: {
     Chinese,
     Japanese,
+    Korean,
     EntryForms,
     SearchCompare,
     Collocations,
