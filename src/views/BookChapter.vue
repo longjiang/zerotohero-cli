@@ -186,8 +186,14 @@ export default {
       this.$refs.search.text = url
       this.chapterTitle = ''
       this.chapterContent = ''
-      this.libraryL2 = await (await import(`@/lib/library-l2s/library-${this.$l2['iso639-2t']}.js`)).default
-      await Library.setLangSources(this.libraryL2.sources)
+      try {
+        this.libraryL2 = await (await import(`@/lib/library-l2s/library-${this.$l2['iso639-2t']}.js`)).default
+        await Library.setLangSources(this.libraryL2.sources)
+      } catch (err) {
+        console.log(
+          `Booklists for ${this.$l2['iso639-2t']} is unavailable.`
+        )
+      }
       let chapter = await Library.getChapter(url)
       if (chapter) {
         this.chapterTitle = chapter.title

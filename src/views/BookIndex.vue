@@ -92,8 +92,14 @@ export default {
       this.chapters = []
       let url = decodeURIComponent(this.args)
       this.$refs.search.text = url
-      this.libraryL2 = await (await import(`@/lib/library-l2s/library-${this.$l2['iso639-2t']}.js`)).default
-      await Library.setLangSources(this.libraryL2.sources)
+      try {
+        this.libraryL2 = await (await import(`@/lib/library-l2s/library-${this.$l2['iso639-2t']}.js`)).default
+        await Library.setLangSources(this.libraryL2.sources)
+      } catch (err) {
+        console.log(
+          `Booklists for ${this.$l2['iso639-2t']} is unavailable.`
+        )
+      }
       let book = await Library.getBook(url)
       if (book) {
         this.bookThumbnail = book.thumbnail

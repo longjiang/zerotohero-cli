@@ -7,9 +7,7 @@ export default {
     l1 = l1.replace('zh', 'cmn-Hans')
     return `https://wol.jw.org/${l1}/(article path)`
   },
-  logo(l1) {
-    return 'https://assetsnffrgf-a.akamaihd.net/assets/m/802013134/univ/art/802013134_univ_cnt_8_xl.jpg'
-  },
+  logo: 'https://assetsnffrgf-a.akamaihd.net/assets/m/802013134/univ/art/802013134_univ_cnt_8_xl.jpg',
   async getChapter(url, l1) {
     let $chapterHTML = await Helper.scrape2(url)
     let title = $chapterHTML
