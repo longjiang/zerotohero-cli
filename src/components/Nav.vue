@@ -22,7 +22,7 @@
         'router-link-active': $route.name && $route.name.startsWith('youtube')
       }"
       :to="{ name: 'youtube-browse' }"
-      :title="`Learn ${l1 ? l1.name : ''} with audio-visual material.`"
+      :title="`Learn ${l2 ? l2.name : ''} with audio-visual material.`"
     >
       <i class="fas fa-video"></i>{{ $t('Audio-Visual') }}
     </router-link>
@@ -55,10 +55,23 @@
             $route.name === 'reader')
       }"
       :to="{ name: 'reader' }"
-      :title="`Improve your ${l1 ? l1.name : ''} through reading`"
+      :title="`Improve your ${l2 ? l2.name : ''} through reading`"
     >
       <i class="fas fa-book-open"></i>{{ $t('Reading') }}
     </router-link>
+    <router-link
+      :class="{
+        tab: true,
+        'router-link-active':
+          $route.name &&
+          $route.name === 'keyboard'
+      }"
+      :to="{ name: 'keyboard' }"
+      :title="`Type in ${l2 ? l2.name : ''} using this online keyboard`"
+    >
+      <i class="fas fa-keyboard"></i>{{ $t('Keyboard') }}
+    </router-link>
+
     <router-link 
       :class="{
         tab: true,
@@ -79,7 +92,7 @@
 export default {
   data() {
     return {
-      l1: this.$l1
+      l2: this.$l2
     }
   }
 }

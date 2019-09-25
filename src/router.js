@@ -335,6 +335,21 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/keyboard',
+      name: 'keyboard',
+      component: () => import('./views/Keyboard.vue'),
+      props: true,
+      meta: {
+        title: 'Keyboard | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Type in the target language with this online keyboard.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/contact-us',
       name: 'contact',
       component: () => import('./views/Contact.vue'),

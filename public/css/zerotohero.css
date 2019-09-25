@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Klingon pIqaD HaSta';
+  src: url('/fonts/Klingon-pIqaD-HaSta.ttf') format('truetype');
+}
+
+.klingon {
+  font-family: Constructium, Unifont CSUR, Klingon pIqaD HaSta, Code2000, Horta;
+  font-size: 2rem;
+}
+
 html * {
   font-family: Helvetica, sans-serif;
 }
