@@ -43,7 +43,7 @@
                     />
                     <h5 class="mt-2">
                       Path to Fluency
-                      <font-awesome-icon icon="external-link-alt" class="small ml-1" />
+                      <i class="fa fa-external-link-alt small ml-1" />
                     </h5>
                   </a>
                 </div>
@@ -61,7 +61,7 @@
                     />
                     <h5 class="mt-2">
                       Phonetics with Chinese Characteristics
-                      <font-awesome-icon icon="external-link-alt" class="small ml-1" />
+                      <i class="fa fa-external-link-alt small ml-1" />
                     </h5>
                   </a>
                 </div>

@@ -1,4 +1,5 @@
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'css-percentage-circle'
 import Vue from 'vue'
 import VTooltip from 'v-tooltip'
 import BootstrapVue from 'bootstrap-vue'

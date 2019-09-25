@@ -18,7 +18,7 @@
               href="https://en.wikipedia.org/wiki/Bookmarklet"
               target="_blank"
               >What's a bookmarklet?
-              <font-awesome-icon icon="external-link-alt" /> </a
+              <i class="fa fa-external-link-alt" /> </a
             >)
           </p>
           <div class="mt-2 mb-4 bg-light p-4 shadow rounded">
@@ -39,7 +39,7 @@
                   href="https://www.bhaskar.com/international/news/pm-narendra-modi-bhutan-visit-news-and-updates-01620015.html"
                   target="_blank"
                   >this article from bhaskar.com
-                  <font-awesome-icon icon="external-link-alt"/></a
+                  <i class="fa fa-external-link-alt"/></a
                 >.
               </li>
               <li>

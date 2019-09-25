@@ -411,6 +411,22 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/hall-of-heroes',
+      name: 'hall-of-heroes',
+      component: () => import('./views/HallOfHeroes.vue'),
+      props: true,
+      meta: {
+        title: 'Hall of Heroes | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'In this page we showcase some of our students who have successfully passed language exams after taking courses from us! Read their testimonials and reviews.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/settings',
       name: 'settings',
       component: () => import('./views/Settings.vue'),

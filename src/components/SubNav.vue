@@ -19,9 +19,9 @@
         <i class="fas fa-book"></i>
         {{$t('Textbooks')}}
       </router-link>
-      <!-- <router-link class="secondary-menu-item" :to="{ name: 'video-count' }">
+      <router-link v-if="$l1.code === 'en' && $l2.code === 'zh'" class="secondary-menu-item" :to="{ name: 'video-count' }">
         <i class="fas fa-list-ol"></i>{{$t('Video Count')}}
-      </router-link>-->
+      </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'pricing' }">
         <i class="fas fa-tag"></i>
         {{$t('Pricing')}}

@@ -14,7 +14,16 @@
       :to="{ name: 'courses' }"
       title="Courses"
     >
-      <i class="fas fa-graduation-cap"></i>{{$t('Courses')}}
+      <i class="fas fa-graduation-cap"></i>
+      {{$t('Courses')}}
+    </router-link>
+    <router-link
+      v-if="$l1.code === 'en' && $l2.code === 'zh'"
+      class="tab"
+      :to="{ name: 'hall-of-heroes' }"
+      title="Hall of Heroes"
+    >
+      <i class="fa fa-trophy" />Heroes
     </router-link>
     <router-link
       :class="{
@@ -24,7 +33,8 @@
       :to="{ name: 'youtube-browse' }"
       :title="`Learn ${l2 ? l2.name : ''} with audio-visual material.`"
     >
-      <i class="fas fa-video"></i>{{ $t('Audio-Visual') }}
+      <i class="fas fa-video"></i>
+      {{ $t('Audio-Visual') }}
     </router-link>
     <router-link
       v-if="$hasFeature('dictionary')"
@@ -43,7 +53,8 @@
       :to="{ name: 'dictionary' }"
       title="Lookup and compare words"
     >
-      <i class="fas fa-book"></i>{{ $t('Dictionary') }}
+      <i class="fas fa-book"></i>
+      {{ $t('Dictionary') }}
     </router-link>
     <router-link
       :class="{
@@ -57,7 +68,8 @@
       :to="{ name: 'reader' }"
       :title="`Improve your ${l2 ? l2.name : ''} through reading`"
     >
-      <i class="fas fa-book-open"></i>{{ $t('Reading') }}
+      <i class="fas fa-book-open"></i>
+      {{ $t('Reading') }}
     </router-link>
     <router-link
       v-if="$hasFeature('keyboard')"
@@ -70,7 +82,8 @@
       :to="{ name: 'keyboard' }"
       :title="`Type in ${l2 ? l2.name : ''} using this online keyboard`"
     >
-      <i class="fas fa-keyboard"></i>{{ $t('Keyboard') }}
+      <i class="fas fa-keyboard"></i>
+      {{ $t('Keyboard') }}
     </router-link>
     <router-link
       v-if="$hasFeature('bookmarklet')"
@@ -83,20 +96,26 @@
       :to="{ name: 'bookmarklet' }"
       :title="`Read ${l2 ? l2.name : ''} with phonetic annotations using our bookmarklet.`"
     >
-      <i class="fas fa-bookmark"></i>{{ $t('Bookmarklet') }}
+      <i class="fas fa-bookmark"></i>
+      {{ $t('Bookmarklet') }}
     </router-link>
-    <router-link 
+    <router-link
       :class="{
         tab: true,
         'router-link-active': $route.name && 
           ($route.name === 'contact' ||
             $route.name === 'faq' ||
             $route.name === 'affiliate-program')
-      }" :to="{ name: 'contact' }" title="Contact Us">
-      <i class="fas fa-id-card"></i>{{ $t('Contact') }}
+      }"
+      :to="{ name: 'contact' }"
+      title="Contact Us"
+    >
+      <i class="fas fa-id-card"></i>
+      {{ $t('Contact') }}
     </router-link>
     <router-link class="tab" :to="{ name: 'settings' }" title="Settings">
-      <i class="fas fa-cog"></i>{{ $t('Settings') }}
+      <i class="fas fa-cog"></i>
+      {{ $t('Settings') }}
     </router-link>
   </nav>
 </template>
