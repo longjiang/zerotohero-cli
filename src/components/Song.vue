@@ -49,7 +49,7 @@
             style="float:right"
             @click="remove"
           >
-            <i class="fa fa-trash" class="mr-2" />Delete
+            <i class="fa fa-trash mr-2" />Delete
           </button>
           <Annotate
             tag="div"
@@ -66,7 +66,7 @@
             collapse="true"
           />
           <span v-if="removed">
-            <i class="fa fa-check" class="ml-2 text-success" />Removed
+            <i class="fa fa-check ml-2 text-success" />Removed
           </span>
         </div>
       </div>

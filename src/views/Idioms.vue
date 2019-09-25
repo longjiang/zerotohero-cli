@@ -57,7 +57,6 @@
 </template>
 
 <script>
-import Papa from 'papaparse'
 export default {
   data() {
     return {

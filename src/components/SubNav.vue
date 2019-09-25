@@ -19,14 +19,23 @@
         <i class="fas fa-book"></i>
         {{$t('Textbooks')}}
       </router-link>
-      <router-link v-if="$l1.code === 'en' && $l2.code === 'zh'" class="secondary-menu-item" :to="{ name: 'video-count' }">
-        <i class="fas fa-list-ol"></i>{{$t('Video Count')}}
+      <router-link
+        v-if="$l1.code === 'en' && $l2.code === 'zh'"
+        class="secondary-menu-item"
+        :to="{ name: 'video-count' }"
+      >
+        <i class="fas fa-list-ol"></i>
+        {{$t('Video Count')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'pricing' }">
         <i class="fas fa-tag"></i>
         {{$t('Pricing')}}
       </router-link>
-      <router-link v-if="$l1.code === 'zh' && $l2.code === 'en'" class="secondary-menu-item" :to="{ name: 'transfer' }">
+      <router-link
+        v-if="$l1.code === 'zh' && $l2.code === 'en'"
+        class="secondary-menu-item"
+        :to="{ name: 'transfer' }"
+      >
         <i class="fas fa-exchange-alt"></i>
         {{ $t('Transfer Purchases')}}
       </router-link>
@@ -54,7 +63,45 @@
         {{$t('Lookup Words')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'phrase' }">
-        <i class="fas fa-quote-left" /> {{$t('Lookup Phrases')}}
+        <i class="fas fa-quote-left" />
+        {{$t('Lookup Phrases')}}
+      </router-link>
+      <router-link
+        v-if="$hasFeature('levels')"
+        class="secondary-menu-item"
+        :to="{ name: 'levels' }"
+      >
+        <i class="fa fa-signal" />Words by Level
+      </router-link>
+      <router-link v-if="$l2.code === 'zh'" class="secondary-menu-item" :to="{ name: 'idioms' }">
+        <i class="fa fa-border-all" />Idioms
+      </router-link>
+      <router-link v-if="$l2.code === 'zh'" class="secondary-menu-item" :to="{ name: 'separable' }">
+        <i class="fa fa-angle-double-right" />Separables
+      </router-link>
+      <router-link
+        v-if="$hasFeature('roots')"
+        class="secondary-menu-item"
+        :to="{ name: 'explore-roots' }"
+      >
+        <i class="fab fa-pagelines" />Roots
+      </router-link>
+      <router-link
+        v-if="$hasFeature('explore-topics')"
+        class="secondary-menu-item"
+        :to="{ name: 'explore-topics' }"
+      >
+        <i class="fas fa-certificate" />Topics
+      </router-link>
+      <router-link
+        v-if="$hasFeature('related')"
+        class="secondary-menu-item"
+        :to="{ name: 'explore-related' }"
+      >
+        <i class="fas fa-expand-arrows-alt" />Related
+      </router-link>
+      <router-link v-if="$hasFeature('learn')" class="secondary-menu-item" :to="{ name: 'learn' }">
+        <i class="fa fa-chalkboard" />Learn
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'saved-words' }">
         <i class="fas fa-star"></i>
@@ -100,13 +147,15 @@
         <i class="fas fa-id-card"></i>
         {{$t('Contact Us')}}
       </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'faq' }"
-      v-if="$hasFeature('courses')">
+      <router-link class="secondary-menu-item" :to="{ name: 'faq' }" v-if="$hasFeature('courses')">
         <i class="fas fa-question"></i>
         {{$t('FAQ')}}
       </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'affiliate-program' }"
-      v-if="$hasFeature('courses')">
+      <router-link
+        class="secondary-menu-item"
+        :to="{ name: 'affiliate-program' }"
+        v-if="$hasFeature('courses')"
+      >
         <i class="fas fa-share-alt"></i>
         {{$t('Affiliate Program')}}
       </router-link>

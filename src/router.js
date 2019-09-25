@@ -34,7 +34,7 @@ export default new Router({
           {
             name: 'description',
             content:
-              'Achieve fluent communication and outstanding HSK results. Engaging, comprehensive and structured courses at all CEFR levels. Learning is hard work, but it should never be boring, so we designed our courses to be concise yet fun and engaging.'
+              'Achieve fluent communication and outstanding results. Engaging, comprehensive and structured courses at all CEFR levels. Learning is hard work, but it should never be boring, so we designed our courses to be concise yet fun and engaging.'
           }
         ]
       }
@@ -162,6 +162,157 @@ export default new Router({
           {
             name: 'description',
             content: 'See how phrases are used in real context..'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/idioms/:method?/:args?',
+      name: 'idioms',
+      component: () => import('./views/Idioms.vue'),
+      props: true,
+      meta: {
+        title: 'Idioms | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Learn idioms (成语 chéngyǔ).'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/separable/:method?/:args?',
+      name: 'separable',
+      component: () => import('./views/Separable.vue'),
+      props: true,
+      meta: {
+        title: 'Separable Words | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'verbs that are separable (离合词 líhécí).'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/explore',
+      name: 'explore',
+      redirect: '/:l1/:l2/explore/levels'
+    },
+    {
+      path: '/:l1/:l2/explore/roots/:arg?',
+      name: 'explore-roots',
+      component: () => import('./views/Roots.vue'),
+      meta: {
+        title: 'Roots | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'Learn some common word-building patterns.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/explore/related/:arg?',
+      name: 'explore-related',
+      component: () => import('./views/Related.vue'),
+      meta: {
+        title: 'Related Words | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'For any given word, find words related ot it.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/explore/topics',
+      name: 'explore-topics',
+      component: () => import('./views/Topics.vue'),
+      meta: {
+        title: 'Words by Topic | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Explore new words by topics'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/pinyin-list',
+      name: 'pinyin',
+      component: () => import('./views/PinyinList.vue'),
+      meta: {
+        title: 'Pinyin List | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'Get a list of pinyin transcriptions for the list of words you provide.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/grammar',
+      name: 'grammar',
+      component: () => import('./views/Grammar.vue'),
+      meta: {
+        title: 'Grammar Cheatsheet | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'The succint and comprehensive grammar chart, following the Standard Course textbook.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/grammar/view/:id',
+      name: 'grammar',
+      props: true,
+      component: () => import('./views/GrammarView.vue'),
+      meta: {
+        title: 'Grammar Note | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Check out this grammar point.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/explore/levels',
+      name: 'levels',
+      component: () => import('./views/Levels.vue'),
+      meta: {
+        title: 'Words by Level | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Learn words by levels (levels 1 to 6).'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/compare/:method/:args',
+      name: 'compare',
+      component: () => import('./views/Compare.vue'),
+      meta: {
+        title: 'Compare | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Compare two words and see how they are used differently.'
           }
         ]
       }
@@ -330,6 +481,90 @@ export default new Router({
           {
             name: 'description',
             content: 'Watch YouTube videos and study the subtitles.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/articles',
+      name: 'articles',
+      redirect: '/:l1/:l2/articles/wiki/list'
+    },
+    {
+      path: '/:l1/:l2/articles/wiki/:method?/:args?',
+      name: 'articles-wiki',
+      component: () => import('./views/Articles.vue'),
+      meta: {
+        title: 'Learning Wiki Articles | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'Read Wiki articles about grammar and language.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/community',
+      name: 'community',
+      redirect: '/:l1/:l2/community/list'
+    },
+    {
+      path: '/:l1/:l2/community/:method?/:args?',
+      name: 'community-reddit',
+      component: () => import('./views/Community.vue'),
+      props: true,
+      meta: {
+        title: 'Community | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Connect with various Chinese-learning communities.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/resources/:method?/:args?',
+      name: 'resources',
+      component: () => import('./views/Resources.vue'),
+      props: true,
+      meta: {
+        title: 'Resources | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'User voted Chinese-learning resources.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/articles/reddit/:method?/:args?',
+      name: 'articles-reddit',
+      component: () => import('./views/Reddit.vue'),
+      props: true,
+      meta: {
+        title: 'Reddit Posts | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Read Reddit posts related to language.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/learn/:method?/:args?',
+      name: 'learn',
+      component: () => import('./views/Learn.vue'),
+      meta: {
+        title: 'Learn | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Learn words interactively by seeing how they are used.'
           }
         ]
       }
