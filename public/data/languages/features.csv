@@ -1,3 +1,5 @@
-l1,l2,home,courses
-eng,zho,TRUE,TRUE
-zho,eng,TRUE,TRUE
+l1,l2,home,courses,keyboard,bookmarklet
+eng,zho,TRUE,TRUE,,
+zho,eng,TRUE,TRUE,,
+eng,tlh,,,TRUE,
+eng,hin,,,,TRUE

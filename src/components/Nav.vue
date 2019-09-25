@@ -50,7 +50,7 @@
         tab: true,
         'router-link-active':
           $route.name &&
-          ($route.name.startsWith('book') ||
+          ($route.name.startsWith('book-') ||
             $route.name === 'library' ||
             $route.name === 'reader')
       }"
@@ -60,6 +60,7 @@
       <i class="fas fa-book-open"></i>{{ $t('Reading') }}
     </router-link>
     <router-link
+      v-if="$hasFeature('keyboard')"
       :class="{
         tab: true,
         'router-link-active':
@@ -71,7 +72,19 @@
     >
       <i class="fas fa-keyboard"></i>{{ $t('Keyboard') }}
     </router-link>
-
+    <router-link
+      v-if="$hasFeature('bookmarklet')"
+      :class="{
+        tab: true,
+        'router-link-active':
+          $route.name &&
+          $route.name === 'bookmarklet'
+      }"
+      :to="{ name: 'bookmarklet' }"
+      :title="`Read ${l2 ? l2.name : ''} with phonetic annotations using our bookmarklet.`"
+    >
+      <i class="fas fa-bookmark"></i>{{ $t('Bookmarklet') }}
+    </router-link>
     <router-link 
       :class="{
         tab: true,

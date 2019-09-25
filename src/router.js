@@ -335,6 +335,21 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/bookmarklet',
+      name: 'bookmarklet',
+      component: () => import('./views/Bookmarklet.vue'),
+      props: true,
+      meta: {
+        title: 'Keyboard | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Read the target language with phonetic annotations using our bookmarklet.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/keyboard',
       name: 'keyboard',
       component: () => import('./views/Keyboard.vue'),

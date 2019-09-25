@@ -74,7 +74,7 @@
       class="secondary-menu text-center"
       v-if="
         ($route.name &&
-          ($route.name.startsWith('book') || $route.name === 'library')) ||
+          ($route.name.startsWith('book-') || $route.name === 'library')) ||
           $route.name === 'reader'
       "
     >
