@@ -150,6 +150,10 @@ export default {
               l2: this.$l2['iso639-2t']
             })
           }
+          if (!Vue.prototype.$hanzi && ['zh', 'ko', 'ja'].includes(this.$l2.code)) {
+            Vue.prototype.$hanzi = (await import(`@/lib/hanzi.js`)).default.load()
+            Vue.prototype.$unihan = (await import(`@/lib/unihan.js`)).default.load()
+          }
         }
       }
     }

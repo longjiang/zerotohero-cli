@@ -58,6 +58,12 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
+            <EntryCharacters
+              v-if="entry.cjk && entry.cjk.canonical"
+              class="mb-4"
+              :text="entry.cjk.canonical"
+              :pinyin="entry.cjk.phonetics ? entry.cjk.phonetics : undefined"
+            ></EntryCharacters>
             <WebImages
               class="mt-5"
               :text="entry.bare"
@@ -101,6 +107,7 @@ import DefinitionsList from '@/components/DefinitionsList'
 import Paginator from '@/components/Paginator'
 import EntryYouTube from '@/components/EntryYouTube.vue'
 import EntryForms from '@/components/EntryForms'
+import EntryCharacters from '@/components/EntryCharacters'
 
 export default {
   components: {
@@ -112,7 +119,8 @@ export default {
     DefinitionsList,
     Paginator,
     WebImages,
-    EntryYouTube
+    EntryYouTube,
+    EntryCharacters
   },
   props: {
     method: {
