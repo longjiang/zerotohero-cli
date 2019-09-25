@@ -63,7 +63,11 @@
             class="pl-1 pr-1 ml-1 rounded d-inlin-block"
             style="font-size: 0.8em; position:relative; bottom: 0.2rem;"
           >{{ word.level }}</span>
-          <span v-if="word.cjk && word.cjk.canonical" class="ml-1" style="font-size: 1.2em; color: #999">[{{ word.cjk.canonical }}]</span>
+          <span
+            v-if="word.cjk && word.cjk.canonical"
+            class="ml-1"
+            style="font-size: 1.2em; color: #999"
+          >[{{ word.cjk.canonical }}]</span>
         </div>
         <div>
           <span class="word-type" v-if="word.type !== 'other'" style="color: #999">
@@ -104,7 +108,12 @@ export default {
       hover: false,
       loading: true,
       text: this.$slots.default ? this.$slots.default[0].text : undefined,
-      saved: this.$slots.default ? this.$store.getters.hasSavedWord(this.$slots.default[0].text) : false,
+      saved: this.$slots.default
+        ? this.$store.getters.hasSavedWord({
+          l2: this.$l2.code,
+          text: this.$slots.default[0].text
+        })
+        : false,
       images: [],
       words: [],
       Config
@@ -143,7 +152,9 @@ export default {
       }, 300)
     },
     async allForms() {
-      let forms = [this.text.toLowerCase()]
+      let forms = this.token
+        ? [this.token.text.toLowerCase()]
+        : [this.text.toLowerCase()]
       if (this.words.length > 0) {
         for (let word of this.words) {
           let wordForms = (await (await this.$dictionary).wordForms(word)) || []
@@ -164,7 +175,7 @@ export default {
         this.speak(this.text)
         this.$store.dispatch('addSavedWord', {
           wordForms: await this.allForms(),
-          l1: this.$l1.code
+          l2: this.$l2.code
         })
       }
       this.saved = !this.saved
@@ -180,11 +191,15 @@ export default {
             if (word && word.matches) {
               for (let match of word.matches) {
                 match.form = await (await this.$dictionary).accent(match.form)
-                match.field = await (await this.$dictionary).stylize(match.field)
+                match.field = await (await this.$dictionary).stylize(
+                  match.field
+                )
                 match.number = await (await this.$dictionary).stylize(
                   match.number
                 )
-                match.table = await (await this.$dictionary).stylize(match.table)
+                match.table = await (await this.$dictionary).stylize(
+                  match.table
+                )
               }
             }
           }
@@ -192,7 +207,9 @@ export default {
         this.words = words
       }
       this.loading = false
-      this.images = (await WordPhotos.getGoogleImages(this.token ? this.token.text : this.text)).slice(0, 5)
+      this.images = (await WordPhotos.getGoogleImages(
+        this.token ? this.token.text : this.text
+      )).slice(0, 5)
     },
     abbreviate(type) {
       let abb = {

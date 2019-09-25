@@ -5,37 +5,37 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    savedWords: JSON.parse(localStorage.getItem('ezhSavedWords')) || {}
+    savedWords: JSON.parse(localStorage.getItem('zthSavedWords')) || {}
   },
   mutations: {
     ADD_SAVED_WORD(state, options) {
-      if (!state.savedWords[options.l1]) {
-        state.savedWords[options.l1] = []
+      if (!state.savedWords[options.l2]) {
+        state.savedWords[options.l2] = []
       }
       if (
-        !state.savedWords[options.l1].find(item => {
+        !state.savedWords[options.l2].find(item => {
           if (item && Array.isArray(item)) {
             return item.join(',') === options.wordForms.join(',')
           }
         })
       ) {
-        state.savedWords[options.l1].push(options.wordForms)
-        localStorage.setItem('ezhSavedWords', JSON.stringify(state.savedWords))
+        state.savedWords[options.l2].push(options.wordForms)
+        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
       }
     },
     REMOVE_SAVED_WORD(state, options) {
-      if (state.savedWords[options.l1]) {
-        const keepers = state.savedWords[options.l1].filter(
+      if (state.savedWords[options.l2]) {
+        const keepers = state.savedWords[options.l2].filter(
           item => !item.includes(options.wordForm)
         )
-        state.savedWords[options.l1] = keepers
-        localStorage.setItem('ezhSavedWords', JSON.stringify(state.savedWords))
+        state.savedWords[options.l2] = keepers
+        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
       }
     },
     REMOVE_ALL_SAVED_WORDS(state, options) {
-      if (state.savedWords[options.l1]) {
-        state.savedWords[options.l1] = []
-        localStorage.setItem('ezhSavedWords', JSON.stringify(state.savedWords))
+      if (state.savedWords[options.l2]) {
+        state.savedWords[options.l2] = []
+        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
       }
     }
   },
@@ -64,16 +64,16 @@ export default new Vuex.Store({
   },
   getters: {
     hasSavedWord: state => options => {
-      if (state.savedWords[options.l1]) {
-        let yes = state.savedWords[options.l1].find(
+      if (state.savedWords[options.l2]) {
+        let yes = state.savedWords[options.l2].find(
           item => Array.isArray(item) && item.includes(options.text)
         )
         return yes
       }
     },
     savedWordCount: state => options => {
-      if (state.savedWords[options.l1]) {
-        return state.savedWords[options.l1].length
+      if (state.savedWords[options.l2]) {
+        return state.savedWords[options.l2].length
       } else {
         return 0
       }

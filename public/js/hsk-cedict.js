@@ -129,6 +129,12 @@ const Dictionary = {
       return results
     }
   },
+  lookup(text) {
+    let results = this.lookupSimplified(text) || this.lookupTraditional(text)
+    if (results.length > 0) {
+      return results[0]
+    }
+  },
   lookupByCharacter(char) {
     return this.words.filter(row => row.simplified.includes(char))
   },
