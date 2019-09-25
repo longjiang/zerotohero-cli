@@ -51,6 +51,7 @@
           </div>
           <div>
             <span style="color: #999" v-if="word.pronunciation">/{{ word.pronunciation }}/</span>
+            <span style="color: #999" v-if="word.pinyin">{{ word.pinyin }}</span>
             <Speak :text="word.bare" :mp3="word.audio" class="ml-1" />
           </div>
           <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${words[0].id}`">
@@ -170,24 +171,28 @@ export default {
       return false
     },
     async lookup() {
-      let words = await (await this.$dictionary).lookupFuzzy(this.text)
-      if (words) {
-        for (let word of words) {
-          if (word && word.matches) {
-            for (let match of word.matches) {
-              match.form = await (await this.$dictionary).accent(match.form)
-              match.field = await (await this.$dictionary).stylize(match.field)
-              match.number = await (await this.$dictionary).stylize(
-                match.number
-              )
-              match.table = await (await this.$dictionary).stylize(match.table)
+      if (this.token) {
+        this.words = this.token.candidates
+      } else {
+        let words = await (await this.$dictionary).lookupFuzzy(this.text)
+        if (words) {
+          for (let word of words) {
+            if (word && word.matches) {
+              for (let match of word.matches) {
+                match.form = await (await this.$dictionary).accent(match.form)
+                match.field = await (await this.$dictionary).stylize(match.field)
+                match.number = await (await this.$dictionary).stylize(
+                  match.number
+                )
+                match.table = await (await this.$dictionary).stylize(match.table)
+              }
             }
           }
         }
+        this.words = words
       }
-      this.words = words
       this.loading = false
-      this.images = (await WordPhotos.getGoogleImages(this.text)).slice(0, 5)
+      this.images = (await WordPhotos.getGoogleImages(this.token ? this.token.text : this.text)).slice(0, 5)
     },
     abbreviate(type) {
       let abb = {
