@@ -20,8 +20,10 @@
       @mouseout="mouseout"
     >
       <template v-if="token">
-        <span>{{ token.candidates[0].pinyin}}</span>
-        <span>{{ token.candidates[0].simplified}}</span>
+        <span class="word-block-definition">{{ token.candidates[0].definitions[0] }}</span>
+        <span class="word-block-pinyin">{{ token.candidates[0].pinyin }}</span>
+        <span class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
+        <span class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
       </template>
       <slot v-else></slot>
     </span>

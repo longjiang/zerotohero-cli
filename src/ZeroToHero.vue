@@ -1,5 +1,13 @@
 <template>
-  <div id="english-zero-to-hero">
+  <div id="english-zero-to-hero"
+    :class="{
+      'hide-except-focus': focus,
+      'show-pinyin': !hidePinyinExceptSaved,
+      'show-pinyin-for-saved': hidePinyinExceptSaved,
+      'show-simplified': !useTraditional,
+      'show-traditional': useTraditional,
+      'show-definition': showDefinition
+    }">
     <template v-if="langsLoaded && this.$route.path !== '/'">
       <div class="container-fluid bg-dark pt-4 pl-0 pr-0">
         <div class="container">
@@ -85,7 +93,13 @@ export default {
     return {
       Config,
       languages: [],
-      langsLoaded: false
+      langsLoaded: false,
+      focus: false,
+      loaded: false,
+      showDefinition: localStorage.getItem('zthShowDefinition') === 'true',
+      hidePinyinExceptSaved:
+        localStorage.getItem('zthHidePinyinExceptSaved') === 'true',
+      useTraditional: localStorage.getItem('zthUseTraditional') === 'true',
     }
   },
   methods: {
