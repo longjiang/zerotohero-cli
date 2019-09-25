@@ -67,7 +67,7 @@ export default {
       annotated: false,
       showDefOn: false,
       fullscreenMode: false,
-      tokenizeBatchNum: 0,
+      batchId: 0,
       tokenized: []
     }
   },
@@ -107,28 +107,26 @@ export default {
       let sentences = text.split('SENTENCEENDING!!!')
       return sentences.filter(sentence => sentence.trim() !== '')
     },
-    async tokenize(text) {
+    async tokenize(text, batchId) {
       let html = text
       if ((await this.$dictionary).tokenize) {
         html = ''
         let tokenized = await (await this.$dictionary).tokenize(text)
         
-        this.tokenized[this.tokenizeBatchNum] = tokenized
-        console.log(this.tokenized[this.tokenizeBatchNum])
-        for (let index = 0; index < this.tokenized[this.tokenizeBatchNum].length; index++) {
-          let item = this.tokenized[this.tokenizeBatchNum][index]
-          if (typeof item === 'string') {
-            html += item
+        this.tokenized[batchId] = tokenized
+        for (let index = 0; index < this.tokenized[batchId].length; index++) {
+          let item = this.tokenized[batchId][index]
+          if (typeof item === 'object') {
+            if (this.tokenized[batchId]) {
+              html += `<WordBlock :token="tokenized[${batchId}][${index}]"/>`
+            }
           } else {
-            // html += `<WordBlock :token="tokenized[tokenizeBatchNum][${index}]" />`
-            html += `<WordBlock>${this.tokenized[this.tokenizeBatchNum][index].text}</WordBlock>`
+            html += item
           }
         }
-        this.tokenizeBatchNum = this.tokenizeBatchNum + 1
       } else {
         html = text.replace(/([\Sß]+)/gi, '<WordBlock>$1</WordBlock>')
       }
-      console.log(html)
       return html
     },
     async recursive(node) {
@@ -138,8 +136,9 @@ export default {
         let sentences = this.breakSentences(node.nodeValue)
         for (let sentence of sentences) {
           let sentenceSpan = $(
-            `<span class="sentence">${await this.tokenize(sentence)}</span>`
+            `<span class="sentence">${await this.tokenize(sentence, this.batchId)}</span>`
           )
+          this.batchId = this.batchId + 1
           $(node).before(sentenceSpan)
         }
         $(node).remove()

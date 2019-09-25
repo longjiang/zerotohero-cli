@@ -19,7 +19,11 @@
       @mouseover="mouseover"
       @mouseout="mouseout"
     >
-      <slot></slot>
+      <template v-if="token">
+        <span>{{ token.candidates[0].pinyin}}</span>
+        <span>{{ token.candidates[0].simplified}}</span>
+      </template>
+      <slot v-else></slot>
     </span>
     <template slot="popover">
       <div
@@ -86,6 +90,11 @@ import Config from '@/lib/config'
 import WordPhotos from '@/lib/word-photos'
 
 export default {
+  props: {
+    token: {
+      type: Object
+    }
+  },
   data() {
     return {
       id: `wordblock-${Helper.uniqueId()}`,
