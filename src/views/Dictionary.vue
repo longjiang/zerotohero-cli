@@ -56,7 +56,7 @@
       <!-- <EntryRelated class="mb-5" :entry="entry"></EntryRelated> -->
 
       <div class="container">
-        <div class="row">
+        <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
           <div class="col-sm-12">
             <EntryCharacters
               v-if="entry.cjk && entry.cjk.canonical"
@@ -64,6 +64,26 @@
               :text="entry.cjk.canonical"
               :pinyin="entry.cjk.phonetics ? entry.cjk.phonetics : undefined"
             ></EntryCharacters>
+          </div>
+        </div>
+        <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
+          <div class="col-sm-6">
+            <Chinese
+              v-if="entry.hanja && entry.hanja !== 'NULL'"
+              class="mt-5 mb-5"
+              :text="entry.hanja"
+            />
+          </div>
+          <div class="col-sm-6">
+            <Japanese
+              v-if="entry.hanja && entry.hanja !== 'NULL'"
+              class="mt-5 mb-5"
+              :text="entry.hanja"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
             <WebImages
               class="mt-5"
               :text="entry.bare"
@@ -108,9 +128,13 @@ import Paginator from '@/components/Paginator'
 import EntryYouTube from '@/components/EntryYouTube.vue'
 import EntryForms from '@/components/EntryForms'
 import EntryCharacters from '@/components/EntryCharacters'
+import Chinese from '@/components/Chinese'
+import Japanese from '@/components/Japanese'
 
 export default {
   components: {
+    Chinese,
+    Japanese,
     EntryForms,
     SearchCompare,
     Collocations,
