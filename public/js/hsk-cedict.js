@@ -195,7 +195,6 @@ const Dictionary = {
     return results
   },
   augment(row) {
-    let hskCEDICT = this
     let augmented = Object.assign(row, {
       id: `${row.traditional},${row.pinyin.replace(/ /g, '_')},${row.index}`,
       bare: row.simplified,
@@ -236,6 +235,59 @@ const Dictionary = {
     return {
       matches: matches,
       text: matches && matches.length > 0 ? matches[0][tradOrSimp] : ''
+    }
+  },
+  tokenize(text) {
+    return this.tokenizeRecursively(
+      text,
+      this.subdictFromText(text),
+      this.isTraditional(text)
+    )
+  },
+  tokenizeRecursively(text, subdict, traditional = false) {
+    const isChinese = subdict.isChinese(text)
+    if (!isChinese) {
+      return [text]
+    }
+    const longest = subdict.longest(text, traditional)
+    if (longest.matches.length > 0) {
+      let result = [] 
+      /* 
+      result = [
+        '我', 
+        {
+          text: '是'
+          candidates: [{...}, {...}, {...}
+        ],
+        '中国人。'
+      ]
+      */
+      for (let textFragment of text.split(longest.text)) {
+        result.push(textFragment) // '我'
+        result.push({
+          text: longest.text,
+          candidates: longest.matches
+        })
+      }
+      result = result.filter(item => item !== '')
+      result.pop() // last item is always useless, remove it
+      var tokens = []
+      for (let item of result) {
+        if (typeof item === 'string') {
+          for (let token of this.tokenizeRecursively(
+            item,
+            subdict,
+            traditional
+          )) {
+            tokens.push(token)
+          }
+        } else {
+          tokens.push(item)
+        }
+      }
+      return tokens
+    } else {
+      return [text]
     }
   },
   // text = 涎[xian2]

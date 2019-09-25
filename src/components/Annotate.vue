@@ -86,17 +86,17 @@ export default {
     fullscreenClick() {
       this.fullscreenMode = !this.fullscreenMode
     },
-    visibilityChanged(isVisible) {
+    async visibilityChanged(isVisible) {
       if (isVisible && !this.annotated) {
         this.annotated = true
-        this.annotate()
+        await this.annotate()
       }
     },
-    annotate() {
+    async annotate() {
       if (this.$slots.default) {
         for (let slot of this.$slots.default) {
           let $before = $(slot.elm)
-          this.annotatedSlots.push($(this.recursive($before[0]))[0].outerHTML)
+          this.annotatedSlots.push($(await this.recursive($before[0]))[0].outerHTML)
         }
       }
     },
@@ -105,18 +105,22 @@ export default {
       let sentences = text.split('SENTENCEENDING!!!')
       return sentences.filter(sentence => sentence.trim() !== '')
     },
-    markL2Words(text) {
-      let html = text.replace(/([\Sß]+)/gi, '<WordBlock>$1</WordBlock>')
+    async tokenize(text) {
+      let html = text
+      if ((await this.$dictionary).tokenize) {
+      } else {
+        html = text.replace(/([\Sß]+)/gi, '<WordBlock>$1</WordBlock>')
+      }
       return html
     },
-    recursive(node) {
+    async recursive(node) {
       if (node.nodeType === 3) {
         // textNode
         // break setnences
         let sentences = this.breakSentences(node.nodeValue)
         for (let sentence of sentences) {
           let sentenceSpan = $(
-            `<span class="sentence">${this.markL2Words(sentence)}</span>`
+            `<span class="sentence">${await this.tokenize(sentence)}</span>`
           )
           $(node).before(sentenceSpan)
         }
@@ -128,7 +132,7 @@ export default {
           nodes.push(n)
         }
         for (let n of nodes) {
-          this.recursive(n)
+          await this.recursive(n)
         }
       }
       return node
