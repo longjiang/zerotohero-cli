@@ -1,7 +1,7 @@
 import Helper from '@/lib/helper'
 
 export default {
-  host: /.+\.wikipedia\.org/,
+  host: /.+\.wikipedia\.org.*/,
   name: 'Wikipedia',
   example(l1) {
     return `https://${l1}.wikipedia.org/wiki/(Article Title)`

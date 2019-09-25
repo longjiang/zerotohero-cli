@@ -56,6 +56,7 @@ export default {
     return {
       Config,
       location,
+      libraryL2: undefined,
       booklist: []
     }
   },
@@ -69,6 +70,8 @@ export default {
       let url = decodeURIComponent(this.args)
       this.$refs.search.text = url
       this.booklist = []
+      this.libraryL2 = await (await import(`@/lib/library-l2s/library-${this.$l2['iso639-2t']}.js`)).default
+      await Library.setLangSources(this.libraryL2.sources)
       this.booklist = await Library.getBooklist(url, this.$l1.code)
     }
   },

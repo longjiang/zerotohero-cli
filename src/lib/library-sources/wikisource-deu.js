@@ -1,7 +1,7 @@
 import Helper from '@/lib/helper'
 
 export default {
-  host: /.+\.wikisource\.org/,
+  host: /.+\.wikisource\.org.*/,
   name: 'Wikisource',
   example() {
     return `https://de.wikisource.org/wiki/(Article Name)`

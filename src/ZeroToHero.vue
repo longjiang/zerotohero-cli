@@ -127,7 +127,6 @@ export default {
           await this.setL1()
           await this.setL2()
           Vue.prototype.$hasFeature = feature => {
-            console.log('has feature?', feature)
             if (feature === 'dictionary') {
               return this.$l1.dictionaries && this.$l1.dictionaries[this.$l2['iso639-2t']]
             } else {

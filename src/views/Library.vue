@@ -23,7 +23,7 @@
                   <span>{{ booklist.title }}</span>
                 </Annotate>
               </h5>
-              <p class="mb-0" style="color: #aaa">Source: {{ Library.source(booklist.url).name }}</p>
+              <p class="mb-0" style="color: #aaa" v-if="Library.source(booklist.url)">Source: {{ Library.source(booklist.url).name }}</p>
             </a>
           </li>
         </ul>

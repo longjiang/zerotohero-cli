@@ -15,8 +15,9 @@ export default {
     return this.l2Sources.concat(this.universalSources)
   },
   source(url) {
-    const host = url.replace(/.*\/\/([^/]*).*/, '$1')
-    const source = this.sources().find(source => host.match(source.host))
+    const source = this.sources().find(source => {
+      return url.match(source.host)
+    })
     return source
   },
   getBook(url) {

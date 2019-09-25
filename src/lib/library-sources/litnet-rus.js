@@ -1,28 +1,21 @@
 import Helper from '@/lib/helper'
 
 export default {
-  host: /.*litnet\.com\/en.*/,
+  host: /.*litnet\.com\/ru.*/,
   name: 'litnet',
   logo: 'https://litnet.com/el-amor-mistico/img/litnet-logo.png',
-  example() {
-    return 'https://litnet.com/en/reader/astray-b162274'
-  },
+  example: 'https://litnet.com/ru/reader/esli-on-oboroten-b9679',
   async getChapter(url) {
     let $chapterHTML = await Helper.scrape2(url)
     let title = $chapterHTML
       .find('.reader-text h2')
       .text()
       .trim()
-      $chapterHTML.find('.reader-text h2').remove()
     $chapterHTML.find('.reader-pagination').remove()
     let chapter = {
       url: url,
       title: title,
-      content: $chapterHTML.find('.reader-text').html(),
-      id: $chapterHTML.find('.reader-text').attr('data-chapter'),
-      pages: $('a.first')
-        .eq(0)
-        .text()
+      content: $chapterHTML.find('.reader-text').html()
     }
     let href = $chapterHTML.find('#reader a').attr('href')
     if (href) {
@@ -55,7 +48,7 @@ export default {
       book.chapters.push({
         title: 1,
         url:
-          'https://litnet.com' + 
+          'https://litnet.com' +
           $bookHTML.find('.btn-primary-new').attr('href')
       })
     }
@@ -86,6 +79,6 @@ export default {
       })
     }
 
-    return list.filter(item => item.price === 'Free') // free items only
-  },
+    return list.filter(item => item.price === 'Бесплатно') // free items only
+  }
 }

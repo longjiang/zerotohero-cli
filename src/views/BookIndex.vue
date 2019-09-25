@@ -74,6 +74,7 @@ export default {
       bookThumbnail: undefined,
       bookTitle: '',
       bookAuthor: '',
+      libraryL2: undefined,
       chapters: [],
       location
     }
@@ -91,6 +92,8 @@ export default {
       this.chapters = []
       let url = decodeURIComponent(this.args)
       this.$refs.search.text = url
+      this.libraryL2 = await (await import(`@/lib/library-l2s/library-${this.$l2['iso639-2t']}.js`)).default
+      await Library.setLangSources(this.libraryL2.sources)
       let book = await Library.getBook(url)
       if (book) {
         this.bookThumbnail = book.thumbnail
