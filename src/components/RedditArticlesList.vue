@@ -3,7 +3,7 @@
     <li v-for="article in articles" class="article-list-item collapsed">
       <a
         :href="
-          `#/articles/reddit/view/${article.id},${encodeURIComponent(
+          `#/${$l1.code}/${$l2.code}/articles/reddit/view/${article.id},${encodeURIComponent(
             article.title
           )}`
         "

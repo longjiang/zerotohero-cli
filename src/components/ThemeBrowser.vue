@@ -6,12 +6,12 @@
           <i
             v-if="!showL1[i]"
             @click="toggleL1(i)"
-            class="glyphicon glyphicon-plus expand-btn"
+            class="fas fa-plus expand-btn"
           ></i>
           <i
             v-if="showL1[i]"
             @click="toggleL1(i)"
-            class="glyphicon glyphicon-minus collapse-btn"
+            class="fas fa-minus collapse-btn"
           ></i>
           <span class="dewey-code ml-3">{{ l1.code }}</span>
 
@@ -19,7 +19,7 @@
             tag="span"
             class="dewey-l1-title"
             :wordBlockTemplateFilter="wordBlockTemplateFilter"
-            >{{ l1.title }}</Annotate
+            ><span>{{ l1.title }}</span></Annotate
           >
         </h4>
         <div :key="l1Key + i * 1000">
@@ -28,12 +28,12 @@
               <h5>
                 <i
                   @click="toggleL2(i, j)"
-                  class="glyphicon glyphicon-plus expand-btn"
+                  class="fas fa-plus expand-btn"
                   v-if="!showL2[i][j]"
                 ></i>
                 <i
                   @click="toggleL2(i, j)"
-                  class="glyphicon glyphicon-minus collapse-btn"
+                  class="fas fa-minus collapse-btn"
                   v-if="showL2[i][j]"
                 ></i>
                 <span class="dewey-code ml-3">{{ l2.code }}</span>
@@ -41,7 +41,7 @@
                   tag="span"
                   class="dewey-l2-title"
                   :wordBlockTemplateFilter="wordBlockTemplateFilter"
-                  >{{ l2.title }}</Annotate
+                  ><span>{{ l2.title }}</span></Annotate
                 >
               </h5>
               <div :key="l2Key + i + j * 1000">
@@ -54,7 +54,7 @@
                         class="dewey-l3-title"
                         :wordBlockTemplateFilter="wordBlockTemplateFilter"
                       >
-                        {{ l3.title }}
+                        <span>{{ l3.title }}</span>
                       </Annotate>
                     </h6>
                   </li>
@@ -84,23 +84,18 @@ export default {
       browseKey: 0
     }
   },
-  mounted() {
-    Helper.loaded(
-      (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-        Dewey.load().then(() => {
-          window.Dewey = Dewey
-          let top = Dewey.top()
-          for (let i in top) {
-            this.showL1[i] = false
-            this.showL2[i] = []
-            for (let j in top[i].children) {
-              this.showL2[i][j] = false
-            }
-          }
-          this.l1s = top
-        })
+  async mounted() {
+    await Dewey.load()
+    window.Dewey = Dewey
+    let top = Dewey.top()
+    for (let i in top) {
+      this.showL1[i] = false
+      this.showL2[i] = []
+      for (let j in top[i].children) {
+        this.showL2[i][j] = false
       }
-    )
+    }
+    this.l1s = top
   },
   methods: {
     toggleL1(i) {
@@ -123,9 +118,9 @@ export default {
         $(block)
           .addClass('word-block-related')
           .click(function() {
-            location.hash = `#/explore/related/${candidates[0].identifier}`
+            location.hash = `#/${this.$l1.code}/${this.$l2.code}/explore/related/${candidates[0].identifier}`
           })
-          .prepend(`<i class="glyphicon glyphicon-fullscreen"></i>`)
+          .prepend('<i class="fas fa-expand-arrows-alt"></i>')
       }
     }
   }
@@ -168,7 +163,7 @@ export default {
   height: 1.2em;
   text-align: center;
   border-radius: 0.23em;
-  line-height: 1em !important;
+  line-height: 1.2em !important;
 }
 
 .collapse-btn:hover,

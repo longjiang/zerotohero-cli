@@ -8,7 +8,7 @@
             The Chinese word
             <a
               :href="
-                `https://zh.zerotohero.ca/#/view/cedict/${
+                `#/en/zh/view/cedict/${
                   word.traditional
                 },${word.pinyin.replace(/ /g, '_')},${word.index}`
               "

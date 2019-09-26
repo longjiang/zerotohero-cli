@@ -7,7 +7,7 @@
           <div>
             The Korean word
             <a
-              :href="`https://ko.zerotohero.ca/#/dictionary/kengdic/${word.kid}`"
+              :href="`#/en/ko/dictionary/kengdic/${word.kid}`"
               class="link-unstyled"
               target="_blank"
               ><b>{{ word.hangul }}</b> [<b

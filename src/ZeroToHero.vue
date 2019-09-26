@@ -1,5 +1,5 @@
 <template>
-  <div id="english-zero-to-hero"
+  <div id="zerotohero"
     :class="{
       'hide-except-focus': focus,
       'show-pinyin': !hidePinyinExceptSaved,
@@ -173,6 +173,9 @@ export default {
           if (!Vue.prototype.$hanzi && ['zh', 'ko', 'ja'].includes(this.$l2.code)) {
             Vue.prototype.$hanzi = (await import(`@/lib/hanzi.js`)).default.load()
             Vue.prototype.$unihan = (await import(`@/lib/unihan.js`)).default.load()
+          }
+          if (!Vue.prototype.$grammar && ['zh'].includes(this.$l2.code)) {
+            Vue.prototype.$grammar = (await import(`@/lib/grammar.js`)).default.load()
           }
         }
       }

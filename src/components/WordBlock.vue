@@ -170,7 +170,7 @@ export default {
       // [ [...all word forms, lowercase] ]
       this.hover = true
       if (this.saved) {
-        this.$store.dispatch('removeSavedWord', this.text)
+        this.$store.dispatch('removeSavedWord', {text: this.text, l2: this.$l2.code} )
       } else {
         this.speak(this.text)
         this.$store.dispatch('addSavedWord', {

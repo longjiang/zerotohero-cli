@@ -17,7 +17,7 @@
               <tbody>
                 <tr v-for="root in rootsAugmented">
                   <td class="character-example">
-                    <a :href="`#/explore/roots/${root.pattern}`">
+                    <a :href="`#/${$l1.code}/${$l2.code}/explore/roots/${root.pattern}`">
                       <span
                         class="character-example-word"
                         v-if="root.word"
@@ -28,8 +28,8 @@
                             root.word.hsk
                           )
                         "
-                      ></span
-                    ></a>
+                      ></span>
+                    </a>
                   </td>
                   <td>
                     <b>{{ root.count }}</b> HSK words match this pattern.
@@ -39,27 +39,21 @@
             </table>
           </div>
           <div v-if="arg" class="focus">
-            <button
-              class="paginate-button previous focus-hover"
-              v-on:click="previousClick"
-            >
-              <img src="img/angle-left.svg" alt />
-            </button>
-            <button
-              class="paginate-button next focus-hover"
-              v-on:click="nextClick"
-            >
-              <img src="img/angle-right.svg" alt />
-            </button>
+            <div class="paginate-buttons">
+              <button class="paginate-button previous focus-hover" v-on:click="previousClick">
+                <img src="img/angle-left.svg" alt />
+              </button>
+              <button class="paginate-button next focus-hover" v-on:click="nextClick">
+                <img src="img/angle-right.svg" alt />
+              </button>
+            </div>
             <div :key="rootsKey">
               <div class="big-word text-center">
-                <Annotate>{{ arg }}</Annotate> Words
+                <Annotate><span>{{ arg }}</span></Annotate>Words
               </div>
               <Loader class="mt-5 text-center" />
               <div style="max-width: 30rem; margin: 0 auto;">
-                <EntryCharacters
-                  :text="arg.replace(/～/g, '')"
-                ></EntryCharacters>
+                <EntryCharacters :text="arg.replace(/～/g, '')"></EntryCharacters>
               </div>
             </div>
             <WordListExtended v-if="rootWords" :words="rootWords" />
@@ -90,52 +84,40 @@ export default {
     previousClick() {
       const i = this.currentIndex()
       if (i > 0) {
-        location.hash = '#/explore/roots/' + this.roots[i - 1].pattern
+        location.hash = `#/${this.$l1.code}/${this.$l2.code}/explore/roots/` + this.roots[i - 1].pattern
       }
     },
     nextClick() {
       const i = this.currentIndex()
       if (i < this.roots.length - 1) {
-        location.hash = '#/explore/roots/' + this.roots[i + 1].pattern
+        location.hash = `#/${this.$l1.code}/${this.$l2.code}/explore/roots/` + this.roots[i + 1].pattern
       }
     },
-    route() {
+    async route() {
       if (this.$route.params.arg) {
         this.rootCharacter = undefined
         this.rootWords = []
         this.arg = this.$route.params.arg
         this.rootsKey++
-        Helper.loaded(
-          (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-            LoadedHSKCEDICT.lookupByPattern(
-              words => {
-                this.rootWords = words
-                  .sort((a, b) => a.simplified.length - b.simplified.length)
-                  .sort((a, b) => a.hsk - b.hsk)
-              },
-              [this.arg]
-            )
-            this.rootCharacter = LoadedHanzi.lookup(this.arg.replace(/～/g, ''))
-            document.title = `${this.arg} (${this.rootCharacter.pinyin}, ${
-              this.rootCharacter.definition.split(',')[0]
-            }) Words  | Chinese Learning Wiki`
-          }
+        let words = await (await this.$dictionary).lookupByPattern(this.arg)
+        this.rootWords = words
+          .sort((a, b) => a.simplified.length - b.simplified.length)
+          .sort((a, b) => a.hsk - b.hsk)
+        this.rootCharacter = (await this.$hanzi).lookup(
+          this.arg.replace(/～/g, '')
         )
+        document.title = `${this.arg} (${this.rootCharacter.pinyin}, ${
+          this.rootCharacter.definition.split(',')[0]
+        }) Words  | Chinese Learning Wiki`
       } else {
         this.arg = ''
-        Helper.loaded(
-          (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-            for (let root of this.roots) {
-              LoadedHSKCEDICT.lookupSimplified(
-                words => {
-                  root.word = words[0]
-                  this.rootsAugmented.push(root)
-                },
-                [root.pattern.replace(/～/g, '')]
-              )
-            }
-          }
-        )
+        for (let root of this.roots) {
+          let words = await (await this.$dictionary).lookupSimplified(
+            root.pattern.replace(/～/g, '')
+          )
+          root.word = words[0]
+          this.rootsAugmented.push(root)
+        }
       }
     }
   },
@@ -1188,3 +1170,28 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.paginate-buttons {
+  position: relative;
+  .paginate-button {
+    background: none;
+    position: absolute;
+    border: 0;
+    top: 0;
+    &.previous {
+      left: 0;
+    }
+    &.next {
+      right: 0;
+    }
+    img {
+      height: 5rem;
+      opacity: 0.5;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+</style>

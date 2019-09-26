@@ -13,7 +13,7 @@
       <div class="text-center">
         <a
           class="btn show-more focus-exclude"
-          :href="`#/explore/related/${entry.identifier}`"
+          :href="`#/${$l1.code}/${$l2.code}/explore/related/${entry.identifier}`"
           :data-bg-hsk="entry.hsk"
         >
           <i class="glyphicon glyphicon-fullscreen"></i> Explore Related Words
@@ -25,7 +25,6 @@
 
 <script>
 import WordList from '@/components/WordList.vue'
-import Helper from '@/lib/helper'
 
 export default {
   components: {
@@ -53,74 +52,41 @@ export default {
     }
   },
   methods: {
-    getOtherPronunciations() {
-      Helper.loaded(
-        (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-          LoadedHSKCEDICT.lookupSimplified(
-            words => {
-              for (let word of words) {
-                if (word.identifier !== this.entry.identifier) {
-                  this.similarWords.push(word)
-                }
-              }
-            },
-            [this.entry.simplified]
-          )
+    async getOtherPronunciations() {
+      let words = await (await this.$dictionary).lookupSimplified(this.entry.simplified)
+      for (let word of words) {
+        if (word.identifier !== this.entry.identifier) {
+          this.similarWords.push(word)
         }
-      )
+      }
     },
-    getReverse() {
+    async getReverse() {
       const reverse = this.entry.simplified
         .split('')
         .reverse()
         .join('')
-
-      Helper.loaded(
-        (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-          LoadedHSKCEDICT.lookupSimplified(
-            words => {
-              for (let word of words) {
-                this.similarWords.push(word)
-              }
-            },
-            [reverse]
-          )
-        }
-      )
+      let words = await (await this.$dictionary).lookupSimplified(reverse)
+      for (let word of words) {
+        this.similarWords.push(word)
+      }
     },
-    getSimilarWords() {
-      Helper.loaded(
-        (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-          for (let definition of this.entry.definitions) {
-            LoadedHSKCEDICT.lookupByDefinition(
-              words => {
-                for (let word of words) {
-                  if (word.identifier !== this.entry.identifier) {
-                    this.similarWords.push(word)
-                  }
-                }
-              },
-              [definition.text]
-            )
+    async getSimilarWords() {
+      for (let definition of this.entry.definitions) {
+        let words = await (await this.$dictionary).lookupByDefinition(definition.text)
+        for (let word of words) {
+          if (word.identifier !== this.entry.identifier) {
+            this.similarWords.push(word)
           }
         }
-      )
+      }
     },
-    getHomonyms() {
-      Helper.loaded(
-        (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-          LoadedHSKCEDICT.lookupPinyinFuzzy(
-            words => {
-              for (let word of words) {
-                if (word.identifier !== this.entry.identifier) {
-                  this.similarWords.push(word)
-                }
-              }
-            },
-            [this.entry.pinyin]
-          )
+    async getHomonyms() {
+      let words = await (await this.$dictionary).lookupPinyinFuzzy(this.entry.pinyin)
+      for (let word of words) {
+        if (word.identifier !== this.entry.identifier) {
+          this.similarWords.push(word)
         }
-      )
+      }
     }
   }
 }

@@ -6,7 +6,6 @@
           How do you use this word in a sentence?
         </div>
         <div>
-          <PinyinButton class="mb-1" :selector="`#${id}-slide-1 .big-word`" />
           <Speak :text="word.simplified" class="ml-2"></Speak>
         </div>
         <div class="text-center big-word" :data-hsk="word.hsk">
@@ -30,10 +29,6 @@
           />
         </div>
         <div>
-          <PinyinButton
-            class="mb-4"
-            :selector="`#${id}-slide-2 .example-sentence-word`"
-          />
           <Speak :text="word.example" class="ml-2"></Speak>
         </div>
         <div

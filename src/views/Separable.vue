@@ -3,15 +3,15 @@
     <div class="row">
       <div class="col-sm-12">
         <h1 class="text-center">
-          Seperable verbs (<Annotate>离合词</Annotate>)
+          Seperable verbs (<Annotate><span>离合词</span></Annotate>)
         </h1>
         <p class="text-center mb-5">
-          <Annotate>
+          <Annotate><span>
             A <em>separable</em> verb (for example, 唱歌) consists of a verb
             (唱) and an object (歌). Because of this, they can take the
             following forms. Note that a variety of measure words and
             complements can be used, not just the ones listed in the chart.
-          </Annotate>
+          </span></Annotate>
         </p>
         <table
           class="table table-responsive seperable-table"
@@ -25,8 +25,8 @@
               <th>V 了 O</th>
               <th>V 了 一 M O</th>
               <th>V 没 V O?</th>
-              <th><a href="#/grammar/view/259">V V O</a></th>
-              <th><a href="#/grammar/view/260">V 了 V O</a></th>
+              <th><a :href="`#/${$l1.code}/${$l2.code}/grammar/view/259`">V V O</a></th>
+              <th><a :href="`#/${$l1.code}/${$l2.code}/grammar/view/260`">V 了 V O</a></th>
               <th>V Complement O</th>
               <th>V 得 Complement O</th>
               <th>V 不 Complement O</th>
@@ -38,34 +38,34 @@
                 {{ s.hsk }}
               </th>
               <th>
-                <Annotate>{{ s.v }}{{ s.o }}</Annotate>
+                <Annotate><span>{{ s.v }}{{ s.o }}</span></Annotate>
               </th>
               <td>
-                <Annotate>{{ s.v }}不{{ s.v }}{{ s.o }}？</Annotate>
+                <Annotate><span>{{ s.v }}不{{ s.v }}{{ s.o }}？</span></Annotate>
               </td>
               <td>
-                <Annotate>{{ s.v }}了{{ s.o }}</Annotate>
+                <Annotate><span>{{ s.v }}了{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate>{{ s.v }}了一{{ s.measure }}{{ s.o }}</Annotate>
+                <Annotate><span>{{ s.v }}了一{{ s.measure }}{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate>{{ s.v }}没{{ s.v }}{{ s.o }}？</Annotate>
+                <Annotate><span>{{ s.v }}没{{ s.v }}{{ s.o }}？</span></Annotate>
               </td>
               <td>
-                <Annotate>{{ s.v }}{{ s.v }}{{ s.o }}</Annotate>
+                <Annotate><span>{{ s.v }}{{ s.v }}{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate>{{ s.v }}了{{ s.v }}{{ s.o }}</Annotate>
+                <Annotate><span>{{ s.v }}了{{ s.v }}{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate>{{ s.v }}完{{ s.o }}</Annotate>
+                <Annotate><span>{{ s.v }}完{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate>{{ s.v }}得了{{ s.o }}</Annotate>
+                <Annotate><span>{{ s.v }}得了{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate>{{ s.v }}不了{{ s.o }}</Annotate>
+                <Annotate><span>{{ s.v }}不了{{ s.o }}</span></Annotate>
               </td>
             </tr>
           </tbody>

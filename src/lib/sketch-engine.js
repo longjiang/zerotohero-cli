@@ -29,7 +29,7 @@ export default {
           if (l2.code === 'en') defaultCorpusName = 'preloaded/ententen15_tt21'
           return defaultCorpusName
         }
-      } 
+      }
     }
   },
   gramrels(options) {
@@ -40,13 +40,13 @@ export default {
         }?https://api.sketchengine.eu/bonito/run.cgi/corp_info?corpname=${this.corpname(
           options.l2
         )}&gramrels=1`,
-        function(response) {
+        function (response) {
           let results = []
           for (let gramrel of response.data.gramrels) {
             if (!Array.isArray(gramrel)) {
               results.push(gramrel)
             } else {
-              for(let g of gramrel) {
+              for (let g of gramrel) {
                 results.push(g)
               }
             }
@@ -57,7 +57,7 @@ export default {
     })
   },
   async collocationDescription(options) {
-    let gramrels = await this.gramrels({l2: options.l2})
+    let gramrels = await this.gramrels({ l2: options.l2 })
     let descriptions = {}
     for (let gramrel of gramrels) {
       descriptions[gramrel] = gramrel.replace('%w', '{word}')
@@ -104,10 +104,10 @@ export default {
         }?https://api.sketchengine.eu/bonito/run.cgi/wsketch?corpname=${this.corpname(
           options.l2
         )}&lemma=${options.term}`,
-        function(response) {
+        function (response) {
           if (response.data.Gramrels && response.data.Gramrels.length > 0) {
-            response.data.Gramrels.forEach(function(Gramrel) {
-              Gramrel.Words = Gramrel.Words.filter(function(Word) {
+            response.data.Gramrels.forEach(function (Gramrel) {
+              Gramrel.Words = Gramrel.Words.filter(function (Word) {
                 return Word.cm !== ''
               })
               for (let Word of Gramrel.Words) {
@@ -138,7 +138,7 @@ export default {
         {
           json: requestJSON
         },
-        function(response) {
+        function (response) {
           try {
             const data = JSON.parse(response).data
             var result = []
@@ -162,7 +162,7 @@ export default {
                 result.push(parallelLine)
               }
             }
-            result = result.sort(function(a, b) {
+            result = result.sort(function (a, b) {
               return a.l2.length - b.l2.length
             })
             resolve(Helper.unique(result))
@@ -173,29 +173,32 @@ export default {
       )
     })
   },
-  thesaurus(options, callback) {
-    $.post(
-      `${
-        Config.sketchEngineProxy
-      }?https://app.sketchengine.eu/bonito/run.cgi/thes?corpname=${this.corpname(options.l1)}`,
-      {
-        lemma: options.term,
-        lpos: '',
-        clusteritems: 0,
-        maxthesitems: 100,
-        minthesscore: 0,
-        minsim: 0.3
-      },
-      function(response) {
-        let data = {}
-        try {
-          data = JSON.parse(response).data
-        } catch (err) {
-          throw 'Error in thesaurus'
+  thesaurus(options) {
+    return new Promise(resolve => {
+      $.post(
+        `${
+          Config.sketchEngineProxy
+        }?https://app.sketchengine.eu/bonito/run.cgi/thes?corpname=${this.corpname(options.l1)}`,
+        {
+          lemma: options.term,
+          lpos: '',
+          clusteritems: 0,
+          maxthesitems: 100,
+          minthesscore: 0,
+          minsim: 0.3
+        },
+        function (response) {
+          let data = {}
+          try {
+            data = JSON.parse(response).data
+          } catch (err) {
+            throw 'Error in thesaurus'
+          }
+          resolve(data)
         }
-        callback(data)
-      }
-    )
+      )
+
+    })
   },
   mistakes(options, callback) {
     $.post(
@@ -231,19 +234,19 @@ export default {
           kwicrightctx: '100#'
         })
       },
-      function(response) {
+      function (response) {
         const data = JSON.parse(response).data
         let results = []
         for (let Line of data.Lines) {
           try {
-            const ml = Line.Left.map(function(item) {
+            const ml = Line.Left.map(function (item) {
               return item.str || item.strc
             })
               .join('')
               .match(/(.*)<s>([^<s>]*?)$/)
             const left = ml[2]
             const leftContext = ml[1].replace(/<s>/g, '').replace(/<\/s>/g, '')
-            let mr = Line.Right.map(function(item) {
+            let mr = Line.Right.map(function (item) {
               return item.str || item.strc
             })
               .join('')
@@ -275,7 +278,7 @@ export default {
             console.log(err)
           }
         }
-        results = results.sort(function(a, b) {
+        results = results.sort(function (a, b) {
           return a.text.length - b.text.length
         })
         callback(results)

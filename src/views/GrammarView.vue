@@ -34,21 +34,15 @@ export default {
     }
   },
   methods: {
-    loadGrammar() {
-      Helper.loaded(
-        (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-          this.grammar = loadedGrammar._grammarData.find(
-            row => row.id === this.id
-          )
-        }
-      )
+    async loadGrammar() {
+      this.grammar = (await this.$grammar)._grammarData.find(row => row.id === this.id)
     },
     prevClick() {
-      location.hash = '#/grammar/view/' + Math.max(0, parseInt(this.id) - 1)
+      location.hash = `#/${this.$l1.code}/${this.$l2.code}/grammar/view/` + Math.max(0, parseInt(this.id) - 1)
     },
     nextClick() {
       location.hash =
-        '#/grammar/view/' +
+        `#/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
         Math.min(Grammar._grammarData.length - 1, parseInt(this.id) + 1)
     }
   },

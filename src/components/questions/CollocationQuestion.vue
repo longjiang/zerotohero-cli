@@ -28,12 +28,6 @@
               <div class="question-prompt mb-4">
                 An example phrase:
               </div>
-              <PinyinButton
-                class="mb-3"
-                sticky="true"
-                :selector="`#${id}-slide-1 .big-word`"
-                ref="pinyinButton"
-              />
               <Speak :text="phrase" class="ml-2"></Speak>
               <div
                 class="text-center big-word"

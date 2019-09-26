@@ -1,12 +1,12 @@
 <template>
   <div class="container main mt-5 mb-5">
     <h1 class="mb-5 text-center">
-      Idioms (<Annotate>成语</Annotate>) in the HSK
+      Idioms (<Annotate><span>成语</span></Annotate>) in the HSK
     </h1>
     <div class="text-center mb-5">
       <p>
         The HSK curriculum has a total <b>112 idioms</b>. With the exception of
-        <Annotate>讨价还价 and 名胜古迹</Annotate> being in HSK 5, the rest 110
+        <Annotate><span>讨价还价 and 名胜古迹</span></Annotate> being in HSK 5, the rest 110
         are all in HSK 6.
       </p>
     </div>
@@ -22,15 +22,15 @@
       <tbody>
         <tr v-for="idiom in idioms.filter(row => row.idiom === 'yes')">
           <th class="text-center">
-            <Annotate>{{ idiom.simplified }}</Annotate>
+            <Annotate><span>{{ idiom.simplified }}</span></Annotate>
           </th>
           <td>
-            <Annotate>{{ idiom.sourcePeriod }}</Annotate>
+            <Annotate><span>{{ idiom.sourcePeriod }}</span></Annotate>
           </td>
           <td style="min-width: 30rem">
             <Annotate
-              >{{ idiom.sourceAuthor }} {{ idiom.sourceBook }}
-              {{ idiom.sourceChapter }}：{{ idiom.sourceQuote }}</Annotate
+              ><span>{{ idiom.sourceAuthor }} {{ idiom.sourceBook }}
+              {{ idiom.sourceChapter }}：{{ idiom.sourceQuote }}</span></Annotate
             >
           </td>
           <td>
@@ -49,8 +49,8 @@
       There are also 9 four-character phrases in the HSK that are obviously
       <b><em>not</em> idioms:</b>
       <Annotate
-        >公共汽车 电子邮件 高速公路 归根到底 二氧化碳 新陈代谢 烟花爆竹 迄今为止
-        通货膨胀</Annotate
+        ><span>公共汽车 电子邮件 高速公路 归根到底 二氧化碳 新陈代谢 烟花爆竹 迄今为止
+        通货膨胀</span></Annotate
       >
     </p>
   </div>
@@ -64,7 +64,7 @@ export default {
     }
   },
   mounted() {
-    Papa.parse('/data/4char.csv', {
+    Papa.parse('/data/zh-4char/4char.csv', {
       download: true,
       header: true,
       complete: results => {

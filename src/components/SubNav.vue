@@ -53,9 +53,12 @@
             $route.name === 'compare' ||
             $route.name === 'phrase' ||
             $route.name === 'levels' ||
+            $route.name === 'idioms' ||
+            $route.name === 'separable' ||
             $route.name === 'learn' ||
             $route.name === 'saved-words' ||
-            $route.name.startsWith('explore'))
+            $route.name.startsWith('explore') ||
+            $route.name === 'pinyin-list')
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'dictionary' }">

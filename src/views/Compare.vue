@@ -212,41 +212,21 @@ export default {
     }
   },
   methods: {
-    route() {
+    async route() {
       let method = this.$route.params.method
       let args = this.$route.params.args.split(',')
       if (method && args) {
         if (method === 'cedict') {
-          Helper.loaded(
-            (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-              LoadedHSKCEDICT.getByIdentifier(entry => (this.a = entry), [
-                [args[0], args[1], args[2]].join(',')
-              ])
-              LoadedHSKCEDICT.getByIdentifier(entry => (this.b = entry), [
-                [args[3], args[4], args[5]].join(',')
-              ])
-            }
-          )
+          this.a = await (await this.$dictionary).getByIdentifier([args[0], args[1], args[2]].join(','))
+          this.b = await (await this.$dictionary).getByIdentifier([args[3], args[4], args[5]].join(','))
         } else if (method === 'hsk') {
-          Helper.loaded(
-            (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-              LoadedHSKCEDICT.getByHSKId(entry => (this.a = entry), [args[0]])
-              LoadedHSKCEDICT.getByHSKId(entry => (this.b = entry), [args[1]])
-            }
-          )
+          this.a = await (await this.$dictionary).getByHSKId(args[0]) 
+          this.b = await (await this.$dictionary).getByHSKId(args[1])
         } else if (method === 'simplified') {
-          Helper.loaded(
-            (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-              LoadedHSKCEDICT.lookupSimplified(
-                results => (this.a = results[0]),
-                [args[0]]
-              )
-              LoadedHSKCEDICT.lookupSimplified(
-                results => (this.b = results[0]),
-                [args[1]]
-              )
-            }
-          )
+          let resultsA = await (await this.$dictionary).lookupSimplified(args[0])
+          this.a = resultsA[0]
+          let resultsB = await (await this.$dictionary).lookupSimplified(args[1])
+          this.b = resultsB[0]
         }
       }
     }

@@ -34,7 +34,6 @@
 </template>
 
 <script>
-import Helper from '@/lib/helper'
 export default {
   data() {
     return {
@@ -58,23 +57,15 @@ export default {
         .join('\n')
     },
     lookup(text) {
-      let words = text.split('\n').map(line => {
+      let words = text.split('\n').map(async line => {
         let seen = []
-        Helper.loaded(
-          (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-            LoadedHSKCEDICT.lookupSimplified(
-              candidates => {
-                this.words = candidates.filter(candidate => {
-                  const keep = !seen.includes(candidate.pinyin)
-                  seen.push(candidate.pinyin)
-                  return keep
-                })
-                this.csv = this.getCsv(this.words)
-              },
-              [line]
-            )
-          }
-        )
+        let candidates = await (await this.$dictionary).lookupSimplified(line)
+        this.words = candidates.filter(candidate => {
+          const keep = !seen.includes(candidate.pinyin)
+          seen.push(candidate.pinyin)
+          return keep
+        })
+        this.csv = this.getCsv(this.words)
       })
       return words
     }

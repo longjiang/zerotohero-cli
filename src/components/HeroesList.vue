@@ -42,7 +42,7 @@ export default {
       $.getJSON(`${Config.wiki}items/heroes?fields=*,avatar.*`, response => {
         this.heroes = response.data
           .map(hero => {
-            hero.url = `#/hall-of-heroes/view/${hero.id},${encodeURIComponent(
+            hero.url = `#/${this.$l1.code}/${this.$l2.code}/hall-of-heroes/view/${hero.id},${encodeURIComponent(
               hero.name
             )}`
             return hero

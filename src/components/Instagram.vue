@@ -27,9 +27,6 @@
           v-if="entry.example && entry.example.length > 0"
         >
           <div class="example-sentence mt-4">
-            <!-- <p class="example-sentence-pinyin">{{ entry.examplePinyin }} <i class="speak glyphicon glyphicon-volume-up" v-bind:data-speak="entry.example"></i></p> -->
-
-            <PinyinButton always="true" class="mb-3" />
             <p
               class="example-sentence-word"
               v-html="

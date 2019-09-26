@@ -11,7 +11,6 @@
           <Loader class="mt-5" />
           <div v-if="arg">
             <div v-if="related && related.length > 1">
-              <PinyinButton />
               <h4 class="text-center mt-5">
                 Words related to “
                 <span class="simplified">
@@ -63,52 +62,39 @@ export default {
       word: undefined,
       arg: undefined,
       related: [],
-      hrefFunc: entry => `#/explore/related/${entry.identifier}`
+      hrefFunc: entry => `#/${this.$l1.code}/${this.$l2.code}/explore/related/${entry.identifier}`
     }
   },
   methods: {
-    route() {
+    async route() {
       if (this.$route.params.arg) {
         this.word = undefined
         this.related = []
         this.arg = this.$route.params.arg
-        Helper.loaded(
-          (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-            LoadedHSKCEDICT.getByIdentifier(
-              word => {
-                document.title = `Words Related to ${word.simplified} (${word.pinyin}) ${word.definitions[0].text}`
-                this.word = word
-                this.$refs.search.dEntry = word
-                this.$refs.search.text = word.simplified
-                this.related = [this.word]
-                SketchEngine.thesaurus(this.word.simplified, response => {
-                  this.words = []
-                  if (response) {
-                    for (let Word of response.Words) {
-                      Helper.loaded((LoadedAnnotator, LoadedHSKCEDICT) => {
-                        LoadedHSKCEDICT.lookupSimplified(
-                          words => {
-                            if (words.length > 0) {
-                              let word = words[0]
-                              this.related.push(word)
-                            }
-                          },
-                          [Word.word]
-                        )
-                        this.related = this.related.sort((a, b) => {
-                          let ahsk = a.hsk === 'outside' ? 7 : parseInt(a.hsk)
-                          let bhsk = b.hsk === 'outside' ? 7 : parseInt(b.hsk)
-                          return ahsk - bhsk
-                        })
-                      })
-                    }
-                  }
-                })
-              },
-              [this.arg]
+        let word = await (await this.$dictionary).getByIdentifier(this.arg)
+        document.title = `Words Related to ${word.simplified} (${word.pinyin}) ${word.definitions[0].text}`
+        this.word = word
+        this.$refs.search.dEntry = word
+        this.$refs.search.text = word.simplified
+        this.related = [this.word]
+        let response = await SketchEngine.thesaurus(this.word.simplified)
+        this.words = []
+        if (response) {
+          for (let Word of response.Words) {
+            let words = await (await this.$dictionary).lookupSimplified(
+              Word.word
             )
+            if (words.length > 0) {
+              let word = words[0]
+              this.related.push(word)
+            }
+            this.related = this.related.sort((a, b) => {
+              let ahsk = a.hsk === 'outside' ? 7 : parseInt(a.hsk)
+              let bhsk = b.hsk === 'outside' ? 7 : parseInt(b.hsk)
+              return ahsk - bhsk
+            })
           }
-        )
+        }
       } else {
         this.arg = ''
       }

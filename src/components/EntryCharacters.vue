@@ -22,7 +22,6 @@
 
 <script>
 import Character from '@/components/Character'
-import Helper from '@/lib/helper'
 
 
 export default {

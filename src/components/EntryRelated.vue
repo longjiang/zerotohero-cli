@@ -21,25 +21,18 @@ export default {
       relatedKey: 0
     }
   },
-  mounted() {
-    SketchEngine.thesaurus(this.entry.simplified, response => {
+  async mounted() {
+    let response = await SketchEngine.thesaurus(this.entry.simplified)
+    if (response) {
       this.words = []
-      if (response) {
-        for (let Word of response.Words) {
-          Helper.loaded((LoadedAnnotator, LoadedHSKCEDICT) => {
-            LoadedHSKCEDICT.lookupSimplified(
-              words => {
-                if (words.length > 0) {
-                  let word = words[0]
-                  this.words.push(word)
-                }
-              },
-              [Word.word]
-            )
-          })
+      for (let Word of response.Words) {
+        let words = await (await this.$dictionary).lookupSimplified(Word.word)
+        if (words.length > 0) {
+          let word = words[0]
+          this.words.push(word)
         }
       }
-    })
+    }
   }
 }
 </script>

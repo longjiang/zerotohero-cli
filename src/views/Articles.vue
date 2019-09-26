@@ -74,7 +74,7 @@ export default {
           this.articles = []
           $.getJSON(`${Config.wiki}items/articles`, response => {
             this.articles = response.data.map(article => {
-              article.url = `#/articles/wiki/view/${
+              article.url = `#/${this.$l1.code}/${this.$l2.code}/articles/wiki/view/${
                 article.id
               },encodeURIComponent(${article.title})`
               return article
@@ -91,7 +91,7 @@ export default {
           )
         }
       } else {
-        location.hash = '#/articles/wiki/list'
+        location.hash = `#/${this.$l1.code}/${this.$l2.code}/articles/wiki/list`
       }
     }
   },

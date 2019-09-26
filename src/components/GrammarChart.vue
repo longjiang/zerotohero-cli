@@ -124,15 +124,11 @@ export default {
   },
   methods: {
     grammarRowClick(row) {
-      location.hash = `#/grammar/view/${row.id}`
+      location.hash = `#/${this.$l1.code}/${this.$l2.code}/grammar/view/${row.id}`
     }
   },
-  created() {
-    Helper.loaded(
-      (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-        this.grammar = loadedGrammar._grammarData
-      }
-    )
+  async created() {
+    this.grammar = (await this.$grammar)._grammarData
   }
 }
 </script>

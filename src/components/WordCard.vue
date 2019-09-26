@@ -16,7 +16,7 @@
           <i class="fa fa-times" />
         </button>
       </div>
-      <a :href="`#/view/cedict/${word.identifier}`">
+      <a :href="`#/${$l1.code}/${$l2.code}/view/cedict/${word.identifier}`">
         <img
           v-if="srcs && srcs.length > 0"
           :src="srcs[0]"
@@ -35,7 +35,7 @@
         {{ word.pinyin }}
         <Speak :text="word.simplified" />
       </div>
-      <a v-if="word" :href="`#/view/cedict/${word.identifier}`">
+      <a v-if="word" :href="`#/${$l1.code}/${$l2.code}/view/cedict/${word.identifier}`">
         <div :data-hsk="word.hsk" class="word-list-ext-item-word simplified">
           {{ word.simplified }}
         </div>
@@ -51,7 +51,6 @@
           }}</span>
         </div>
       </div>
-      <PinyinButton />
       <div
         v-html="Helper.highlight(word.example, word.simplified, word.hsk)"
         class="word-list-ext-example"
@@ -61,7 +60,7 @@
       </div>
       <a
         v-if="compareWith"
-        :href="`#/compare/cedict/${compareWith.identifier},${word.identifier}`"
+        :href="`#/${$l1.code}/${$l2.code}/compare/cedict/${compareWith.identifier},${word.identifier}`"
         class="btn show-more word-list-ext-compare-btn mt-3"
         :data-bg-hsk="word.hsk"
       >
@@ -69,7 +68,7 @@
       </a>
       <a
         v-if="compareWith"
-        :href="`#/explore/related/${word.identifier}`"
+        :href="`#/${$l1.code}/${$l2.code}/explore/related/${word.identifier}`"
         class="btn show-more word-list-ext-related-btn mt-3"
         :data-bg-hsk="word.hsk"
       >

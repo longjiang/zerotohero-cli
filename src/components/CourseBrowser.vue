@@ -52,7 +52,7 @@
                     class="btn btn-small ml-2 learn-all-button"
                     :data-bg-hsk="bookIndex"
                     :href="
-                      `#/learn/hsk/${bookIndex},${lessonIndex},${dialogIndex}`
+                      `#/${$l1.code}/${$l2.code}/learn/hsk/${bookIndex},${lessonIndex},${dialogIndex}`
                     "
                   >
                     <i class="glyphicon glyphicon-blackboard"></i> Learn These
@@ -80,13 +80,8 @@ export default {
       savedWordsKey: 0
     }
   },
-  mounted() {
-    let that = this
-    Helper.loaded(
-      (LoadedAnnotator, LoadedHSKCEDICT, loadedGrammar, LoadedHanzi) => {
-        LoadedHSKCEDICT.compileBooks(books => (that.books = books))
-      }
-    )
+  async mounted() {
+    this.books = await (await this.$dictionary).compileBooks()
   },
   methods: {
     saveAllClick: function(e) {

@@ -7,7 +7,7 @@
           <div>
             The Japanese word
             <a
-              :href="`https://ja.zerotohero.ca/#/dictionary/edict/${word.id}`"
+              :href="`#/en/ja/dictionary/edict/${word.id}`"
               class="link-unstyled"
               target="_blank"
             >
