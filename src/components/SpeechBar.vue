@@ -23,23 +23,19 @@
         </b-dropdown>
       </b-button-group>
     </div>
-    <Annotate
-      tag="div"
+    <template 
       v-for="line of html
         .trim()
         .replace(/<(div|p|h1|h2|h3|h4|h5|h6|dd)/g, 'ANNOTATORSEPARATOR!!!<$1')
-        .split('ANNOTATORSEPARATOR!!!')"
-      v-if="line.trim().length > 0"
-      class="mb-4"
-    >
-      <div v-html="line.trim()" />
-    </Annotate>
+        .split('ANNOTATORSEPARATOR!!!')">
+      <Annotate v-if="line.trim().length > 0" class="mb-4" tag="div">
+        <span v-html="line.trim()" />
+      </Annotate>
+    </template>
   </div>
 </template>
 
 <script>
-import Helper from '@/lib/helper'
-
 export default {
   props: {
     html: {
