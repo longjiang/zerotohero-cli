@@ -522,3 +522,28 @@ ul.collapsed li:nth-child(n+5) {
 #zerotohero:not(.show-traditional) .traditional {
   display: none;
 }
+
+.btn-small {
+  color: #a7a7a7;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.2rem;
+  background: #f3f3f3;
+  position: relative;
+  margin: 0.2rem;
+  display: inline-block;
+  bottom: 0.2rem;
+  border: none;
+}
+
+.btn-small:hover {
+  background-color: #b5b5b5;
+  text-decoration: none;
+  color: #868686;
+}
+
+.btn-small img {
+  height: 0.9rem;
+  margin-bottom: 0.2rem;
+  filter: opacity(0.3);
+}
