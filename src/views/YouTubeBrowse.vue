@@ -81,7 +81,17 @@ export default {
   data() {
     return {
       location,
-      channels: this.$l1.youtube && this.$l1.youtube.channels ? this.$l1.youtube.channels : []
+      channels: []
+    }
+  },
+  async mounted() {
+    try {
+      this.youtubeL2 = await (await import(`@/lib/youtube-l2s/youtube-${this.$l2['iso639-2t']}.js`)).default
+      this.channels = await this.youtubeL2.channels()
+    } catch (err) {
+      console.log(
+        `YouTube channels for ${this.$l2['iso639-2t']} is unavailable.`
+      )
     }
   }
 }
