@@ -234,24 +234,106 @@ export default {
 </script>
 
 <style lang="scss">
+
+
+.word-block {
+  cursor: pointer;
+  &.saved {
+    font-weight: bold;
+  }
+}
+
+
+.add-pinyin {
+  line-height: 2;
+
+  .word-block {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    text-indent: 0;
+    
+    span {
+      display: block;
+      line-height: 1.3;
+      text-indent: 0;
+    }
+    
+    /* Hide by default */
+    .word-block-pinyin,
+    .word-block-simplified,
+    .word-block-traditional,
+    .word-block-definition {
+      display: none;
+    }
+  }
+}
+
+
+/* Shown on demand */
+
+.show-pinyin .word-block .word-block-pinyin,
+.show-simplified .word-block .word-block-simplified,
+.show-traditional .word-block .word-block-traditional,
+.show-definition .word-block .word-block-definition {
+  display: block;
+}
+
+.show-definition .word-block {
+  position: relative;
+}
+
+/* Line style */
+
+.word-block-pinyin {
+  font-size: 0.7em;
+  margin: 0 0.2rem;
+}
+
+.word-block-definition {
+  display: none;
+  color: #aaa;
+  font-size: 0.7em;
+  font-style: italic;
+  margin-top: 0.5em;
+  max-width: 6rem;
+  margin: 0 0.5em 0.2em 0.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.show-pinyin-for-saved {
+  .word-block:hover:not(.saved) {
+    .word-block-pinyin {
+      display: inherit;
+      position: absolute;
+      top: -1.25em;
+      left: 50%;
+      margin-left: -5em;
+      width: 10em;
+    }
+  }
+  .word-block.saved {
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    .word-block-pinyin {
+      display: block;
+    }
+  }
+}
+
 .tooltip-images {
   width: 3rem;
   float: right;
   margin-left: 0.5rem;
-}
-
-.tooltip-images img {
-  width: 3rem;
-  height: auto;
-  margin: 0.2rem 0;
-}
-
-.word-block {
-  cursor: pointer;
-}
-
-.word-block.saved {
-  font-weight: bold;
+  img {
+    width: 3rem;
+    height: auto;
+    margin: 0.2rem 0;
+  }
 }
 
 .tooltip-entry {
