@@ -10,9 +10,70 @@
         <div class="col-sm-12">
           <div class="jumbotron text-center courses">
             <div class="container mb-3">
+              <h3>Course Bundles</h3>
+              <hr />
+              <div class="row">
+                <div class="col-sm-6 col-md-4 mb-3">
+                  <a
+                    target="_blank"
+                    :href="
+                    `https://chinesezerotohero.teachable.com/p/ultimate-bundle`
+                  "
+                  >
+                    <img
+                      :src="`/img/courses/bundle-ultimate.jpg`"
+                      alt="Ultimate Bundle"
+                      class="img-fluid shadow rounded"
+                    />
+                    <h5 class="mt-2">
+                      Ultimate HSK 1 - 6 Bundle
+                      <i class="fa fa-external-link-alt small ml-1" />
+                    </h5>
+                  </a>
+                </div>
+                <div class="col-sm-6 col-md-4 mb-3">
+                  <a
+                    target="_blank"
+                    :href="
+                    `https://chinesezerotohero.teachable.com/p/hsk-1-4-bundle`
+                  "
+                  >
+                    <img
+                      :src="`/img/courses/bundle-hsk-1-4.jpg`"
+                      alt="HSK 1 - 4 Bundle"
+                      class="img-fluid shadow rounded"
+                    />
+                    <h5 class="mt-2">
+                      HSK 1 - 4 Bundle
+                      <i class="fa fa-external-link-alt small ml-1" />
+                    </h5>
+                  </a>
+                </div>
+                <div class="col-sm-6 col-md-4 mb-3">
+                  <a
+                    target="_blank"
+                    :href="
+                    `https://chinesezerotohero.teachable.com/p/hsk-5-6-bundle`
+                  "
+                  >
+                    <img
+                      :src="`/img/courses/bundle-hsk-5-6.jpg`"
+                      alt="HSK 5 - 6 Bundle"
+                      class="img-fluid shadow rounded"
+                    />
+                    <h5 class="mt-2">
+                      HSK 5 - 6 Bundle
+                      <i class="fa fa-external-link-alt small ml-1" />
+                    </h5>
+                  </a>
+                </div>
+              </div>
+              <h3>Individual Courses</h3>
+              <hr />
               <div class="row">
                 <div class="col-sm-6 col-md-4 mb-3" v-for="hsk in [1, 2, 3, 4, 5, 6]">
                   <a
+                    target="_blank"
                     :href="
                     `https://courses.chinesezerotohero.com/p/hsk-${hsk}-course`
                   "
@@ -21,7 +82,6 @@
                       :src="`/img/courses/hsk${hsk}.jpg`"
                       :alt="`HSK ${hsk} Course`"
                       class="img-fluid shadow rounded"
-                      target="_blank"
                     />
                     <h5 class="mt-2">
                       HSK {{ hsk }} Course
@@ -31,6 +91,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4 mb-3">
                   <a
+                    target="_blank"
                     :href="
                     `https://chinesezerotohero.teachable.com/p/path-to-fluency`
                   "
@@ -39,7 +100,6 @@
                       :src="`/img/courses/fluency.jpg`"
                       alt="Path to Fluency Course"
                       class="img-fluid shadow rounded"
-                      target="_blank"
                     />
                     <h5 class="mt-2">
                       Path to Fluency
@@ -47,8 +107,13 @@
                     </h5>
                   </a>
                 </div>
+              </div>
+              <h3>Free Courses</h3>
+              <hr />
+              <div class="row">
                 <div class="col-sm-6 col-md-4 mb-3">
                   <a
+                    target="_blank"
                     :href="
                     `https://chinesezerotohero.teachable.com/p/phonetics-with-chinese-characteristics`
                   "
@@ -57,10 +122,29 @@
                       :src="`/img/courses/phonetics.jpg`"
                       alt="Phonetics with Chinese Characteristics"
                       class="img-fluid shadow rounded"
-                      target="_blank"
                     />
                     <h5 class="mt-2">
                       Phonetics with Chinese Characteristics
+                      <i
+                        class="fa fa-external-link-alt small ml-1"
+                      />
+                    </h5>
+                  </a>
+                </div>
+                <div class="col-sm-6 col-md-4 mb-3">
+                  <a
+                    target="_blank"
+                    :href="
+                    `https://chinesezerotohero.teachable.com/p/ci-shifu-vocabulary-course`
+                  "
+                  >
+                    <img
+                      :src="`/img/courses/cishifu.jpg`"
+                      alt="Ci Shifu Vocabulary Master"
+                      class="img-fluid shadow rounded"
+                    />
+                    <h5 class="mt-2">
+                      Ci Shifu Vocabulary Master
                       <i class="fa fa-external-link-alt small ml-1" />
                     </h5>
                   </a>
@@ -72,7 +156,7 @@
               class="btn btn-success view-courses pb-1 bigger"
               target="_blank"
             >
-              View all of our courses on
+              View all of our courses and bundles on
               <img
                 src="/img/teachable_light.png"
                 alt="Teachable"
@@ -124,7 +208,9 @@
             plenty of practice, both written and oral. &nbsp;We help and encourage
             students to practice with a language exchange partner via sites such
             as
-            <a href="https://www.italki.com/">iTalki</a>.&nbsp; This way
+            <a
+              href="https://www.italki.com/"
+            >iTalki</a>.&nbsp; This way
             students learn to use the language in real life, not just to pass
             tests.
           </p>
@@ -164,7 +250,9 @@
             learners need much more than a set of courses. They must be willing to
             make use of a variety of resources and expose themselves to large
             amounts of the target language through reading and listening.
-            <span data-offset-key="e61re-0-0">Nevertheless, our courses can form the</span>
+            <span
+              data-offset-key="e61re-0-0"
+            >Nevertheless, our courses can form the</span>
             <span data-offset-key="e61re-0-1">
               “
               <strong>backbone</strong>“

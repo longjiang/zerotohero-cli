@@ -25,7 +25,7 @@
               </a>
               <a
                 v-if="$l1.code === 'en' && $l2.code === 'zh'"
-                class="btn btn-danger btn-sign-in"
+                class="btn btn-success btn-sign-in text-white"
                 href="https://sso.teachable.com/secure/133035/users/sign_in"
                 >Login to <img src="/img/teachable_light.png" class="logo-small"
               /></a>
