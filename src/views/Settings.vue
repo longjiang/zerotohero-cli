@@ -6,6 +6,10 @@
           <h1 class="page-title mb-4">
             {{ $t('Settings') }}
           </h1>
+          <div v-if="$l2.code === 'zh'">
+            <h4>{{ $t('Annotation Settings') }}</h4>
+            <AnnotationSettings />
+          </div>
           <div>
             <h4>{{ $t('Text Corpus Settings') }}</h4>
             <p v-if="$l1.code === 'zh'">
@@ -50,10 +54,12 @@
 
 <script>
 import CorpusSelect from '@/components/CorpusSelect'
+import AnnotationSettings from '@/components/AnnotationSettings'
 
 export default {
   components: {
-    CorpusSelect
+    CorpusSelect,
+    AnnotationSettings
   },
   data() {
     return {
