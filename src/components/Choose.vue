@@ -10,7 +10,7 @@
         <option v-for="language in enLanguages" :value="language.code">{{ language.name }}</option>
       </select>
     </div>
-    <div class="zerotohero mt-5">
+    <div class="zerotohero mt-5" v-if="!compact || l2">
       <LanguageLogo
         class="zerotohero-item mb-4"
         v-for="language in languages"
@@ -19,7 +19,7 @@
         v-if="l2 !== 'en' && (!l2 || l2 === language.code)"
       />
     </div>
-    <div class="zerotohero">
+    <div class="zerotohero" v-if="!compact || l2">
       <LanguageLogo
         class="zerotohero-item mb-4"
         v-for="language in enLanguages"
@@ -47,12 +47,34 @@ export default {
   components: {
     LanguageLogo
   },
+  props: {
+    compact: false
+  },
   data() {
     return {
       languages: [],
       enLanguages: [],
       l1: undefined,
       l2: undefined
+    }
+  },
+  watch: {
+    l2() {
+      this.route()
+    },
+    l1() {
+      this.route()
+    }
+  },
+  methods: {
+    route() {
+      if (this.l2 !== 'en') {
+        location.hash = `#/en/${this.l2}/`
+      } else {
+        if (this.l1) {
+          location.hash = `#/${this.l1}/${this.l2}/`
+        }
+      }
     }
   },
   mounted() {

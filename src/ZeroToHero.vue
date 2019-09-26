@@ -42,7 +42,7 @@
           <div class="row">
             <div class="col-sm-12">
               <p class="lead mt-4">Learn other languages:</p>
-              <Choose />
+              <Choose :compact="true" />
             </div>
           </div>
         </div>
