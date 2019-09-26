@@ -8,7 +8,7 @@
         <div>
           <Speak :text="word.simplified" class="ml-2"></Speak>
         </div>
-        <div class="text-center big-word" :data-hsk="word.hsk">
+        <div class="text-center big-word" :data-level="word.hsk">
           {{ word.simplified }}
         </div>
         <div class="text-center character-example-english mt-4">

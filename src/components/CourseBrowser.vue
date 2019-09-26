@@ -10,7 +10,7 @@
         <div
           class="book-title collapsed"
           v-on:click="toggleCollapsed"
-          :data-bg-hsk="bookIndex"
+          :data-bg-level="bookIndex"
         >HSK {{ bookIndex }}</div>
         <ul class="lessons collapsed">
           <li
@@ -24,7 +24,7 @@
               <br />
               <span
                 class="tile"
-                :data-bg-hsk="bookIndex"
+                :data-bg-level="bookIndex"
                 v-for="i in countWordsInLesson(lesson)"
                 v-bind:key="'lesson-tile-' + i"
               ></span>
@@ -41,7 +41,7 @@
                   <br />
                   <span
                     class="tile"
-                    :data-bg-hsk="bookIndex"
+                    :data-bg-level="bookIndex"
                     v-for="(i, dialogIndex) in dialog"
                     v-bind:key="'dialog-tile-' + dialogIndex"
                   ></span>
@@ -50,7 +50,7 @@
                   <WordList :words="dialog" class="ml-2" />
                   <a
                     class="btn btn-small ml-2 learn-all-button"
-                    :data-bg-hsk="bookIndex"
+                    :data-bg-level="bookIndex"
                     :href="
                       `#/${$l1.code}/${$l2.code}/learn/hsk/${bookIndex},${lessonIndex},${dialogIndex}`
                     "

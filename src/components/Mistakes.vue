@@ -55,7 +55,7 @@
             </div>
           </li>
         </ul>
-        <ShowMoreButton :length="mistakes.length" min="4" data-bg-hsk="outside"></ShowMoreButton>
+        <ShowMoreButton :length="mistakes.length" min="4" data-bg-level="outside"></ShowMoreButton>
       </div>
       <div
         v-if="mistakes && mistakes.length === 0"

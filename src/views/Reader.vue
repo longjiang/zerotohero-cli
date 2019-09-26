@@ -13,16 +13,15 @@
             :class="{focus: true, present: presentMode}"
             :style="`font-size: ${fontSize}rem; margin-top: 3rem; margin-bottom: 3rem;`"
           >
-            <Annotate
-              tag="div"
+            <template 
               v-for="line of marked
                 .trim()
                 .replace(/<(div|p|li|h1|h2|h3|h4|h5|h6)/g, '\n<$1')
-                .split('\n')"
-              v-if="line.trim().length > 0"
-              class="mb-3"
-              ><div v-html="line.trim()"
-            /></Annotate>
+                .split('\n')">
+              <Annotate v-if="line.trim().length > 0" class="mb-3" tag="div">
+                <span v-html="line.trim()" />
+              </Annotate>
+            </template>
           </div>
           <div class="text-right">
             <button @click="smaller" class="btn btn-unstyled"><small>A</small></button>

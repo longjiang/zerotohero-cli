@@ -2,7 +2,7 @@
   <div class="question-decomposition" v-if="text" :id="id">
     <div class="question-slide-aspect" v-for="rc in [randomChar(text)]">
       <div class="question-slide" :id="`question-${id}-slide-1`">
-        <div :data-hsk="hsk" class="text-center big-word-pinyin mb-4">
+        <div :data-level="hsk" class="text-center big-word-pinyin mb-4">
           {{ pinyin }}
           <Speak :text="text" class="ml-2"></Speak>
         </div>

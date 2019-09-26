@@ -127,7 +127,7 @@ export default {
   top: 5%;
 }
 
-.instagram-content .word [data-hsk] {
+.instagram-content .word [data-level] {
   color: white !important;
   font-size: 2em;
 }
@@ -194,7 +194,7 @@ export default {
   font-weight: 200;
 }
 
-.instagram-content .example-sentence-word span[data-hsk] {
+.instagram-content .example-sentence-word span[data-level] {
   font-weight: bold;
   color: white !important;
 }

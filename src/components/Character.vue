@@ -117,7 +117,7 @@ export default {
       if (text) {
         return text.replace(
           character,
-          '<span data-hsk="' + hsk + '">' + character + '</span>'
+          '<span data-level="' + hsk + '">' + character + '</span>'
         )
       }
     }
@@ -146,7 +146,7 @@ export default {
   color: inherit;
 }
 
-.character-example [data-hsk] {
+.character-example [data-level] {
   font-weight: bold;
 }
 
@@ -158,7 +158,7 @@ export default {
   font-size: 1.4rem;
 }
 
-.character-example-word[data-hsk] {
+.character-example-word[data-level] {
   font-weight: bold;
 }
 

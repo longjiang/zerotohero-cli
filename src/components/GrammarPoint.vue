@@ -23,7 +23,7 @@
     <a
       v-if="grammar.url !== ''"
       :href="grammar.url"
-      :data-bg-hsk="grammar.book"
+      :data-bg-level="grammar.book"
       class="btn-medium btn-gray mt-3 pl-3 pr-3"
       target="_blank"
     >

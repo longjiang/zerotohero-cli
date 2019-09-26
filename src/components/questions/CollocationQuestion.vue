@@ -56,7 +56,7 @@
               <button
                 class="btn-medium btn-gray mt-3"
                 v-on:click="choosePhrase()"
-                :data-bg-hsk="word.hsk"
+                :data-bg-level="word.hsk"
                 :data-target-selector="`#Gramrels-${type}`"
               >
                 Another Example

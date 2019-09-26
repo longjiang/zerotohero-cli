@@ -36,7 +36,7 @@
       <button
         v-for="n in 6"
         class="tab text-dark"
-        :data-bg-hsk="n"
+        :data-bg-level="n"
         @click="level = n"
       >
         HSK {{ n }}
@@ -143,7 +143,7 @@ export default {
   }
 }
 
-.grammar-table [data-hsk] {
+.grammar-table [data-level] {
   font-weight: bold;
 }
 </style>

@@ -2,14 +2,14 @@
   <div :class="{'frequency-wrapper': true, 'd-inline-block': true, mini: mini}">
     <div
       class="frequency-level text-center"
-      v-bind:data-bg-hsk="entry.hsk"
+      v-bind:data-bg-level="entry.hsk"
     >
       {{ entry.hsk === 'outside' ? 'Non-HSK' : 'HSK ' + entry.hsk }}
     </div>
     <div class="frequency mt-1">
       <div
         class="frequency-fill"
-        :data-bg-hsk="entry.hsk"
+        :data-bg-level="entry.hsk"
         :style="`width: ${(Math.log10(1 + entry.rank * 10000) * 100) / 4}%`"
       ></div>
     </div>

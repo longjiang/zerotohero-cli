@@ -11,7 +11,7 @@
               class="link-unstyled"
               target="_blank"
             >
-              <b :data-hsk="hsk" class="bigger">{{ word.kanji }}</b> ({{
+              <b :data-level="hsk" class="bigger">{{ word.kanji }}</b> ({{
                 word.kana
               }})</a
             >

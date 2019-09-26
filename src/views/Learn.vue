@@ -13,7 +13,7 @@
           ></i> icon next to it.
         </p>
         <h4 class="page-title mb-4" v-if="method === 'hsk'">
-          <b :data-hsk="args[0]" class="mr-1">HSK {{ args[0] }}</b>
+          <b :data-level="args[0]" class="mr-1">HSK {{ args[0] }}</b>
           <b>Lesson {{ args[1] }}</b>
           (Part {{ args[2] }}) Vocabulary
         </h4>

@@ -35,7 +35,7 @@
         </thead>
         <tbody class="table-hover">
           <tr>
-            <td class="text-left text-light" data-bg-hsk="1">
+            <td class="text-left text-light" data-bg-level="1">
               <a href="https://courses.chinesezerotohero.com/p/hsk-1-course">HSK 1</a>
             </td>
             <td class="text-center">
@@ -54,7 +54,7 @@
           </tr>
 
           <tr>
-            <td class="text-left text-light" data-bg-hsk="2">
+            <td class="text-left text-light" data-bg-level="2">
               <a href="https://courses.chinesezerotohero.com/p/hsk-2-course">HSK 2</a>
             </td>
             <td class="text-center">
@@ -63,7 +63,7 @@
           </tr>
 
           <tr>
-            <td class="text-left text-light" data-bg-hsk="3">
+            <td class="text-left text-light" data-bg-level="3">
               <a href="https://courses.chinesezerotohero.com/p/hsk-3-course">HSK 3</a>
             </td>
             <td class="text-center">
@@ -72,7 +72,7 @@
           </tr>
 
           <tr>
-            <td class="text-left text-light" data-bg-hsk="4">
+            <td class="text-left text-light" data-bg-level="4">
               <a href="https://courses.chinesezerotohero.com/p/hsk-4-course">HSK 4</a>
             </td>
             <td class="text-center">
@@ -81,7 +81,7 @@
           </tr>
 
           <tr>
-            <td class="text-left text-light" data-bg-hsk="5">
+            <td class="text-left text-light" data-bg-level="5">
               <a href="https://courses.chinesezerotohero.com/p/hsk-5-course">HSK 5 + Path to Fluency</a>
             </td>
             <td class="text-center">
@@ -94,7 +94,7 @@
             </td>
           </tr>
           <tr>
-            <td class="text-left text-light" data-bg-hsk="6">
+            <td class="text-left text-light" data-bg-level="6">
               <a href="https://courses.chinesezerotohero.com/p/hsk-6-course">HSK 6 + Path to Fluency</a>
             </td>
             <td class="text-center">
@@ -120,7 +120,7 @@
             </td>
           </tr>
           <tr>
-            <td class="text-left text-light" data-bg-hsk="outside">
+            <td class="text-left text-light" data-bg-level="outside">
               <a :href="`#/${$l1.code}/${$l2.code}/youtube/channel/UCMoxI3OhLuyItB8__6iuJhg`">Hero Academy</a>
             </td>
             <td class="text-center" colspan="3">
@@ -128,7 +128,7 @@
             </td>
           </tr>
           <tr>
-            <td class="text-left text-light" data-bg-hsk="outside">
+            <td class="text-left text-light" data-bg-level="outside">
               <a :href="`#/${$l1.code}/${$l2.code}/view`">Dictionary</a>,
               <a :href="`#/${$l1.code}/${$l2.code}/grammar`">Grammar</a>,
               <a :href="`#/${$l1.code}/${$l2.code}/youtube/browse`">Theater</a>,

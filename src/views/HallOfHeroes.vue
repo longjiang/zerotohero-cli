@@ -16,7 +16,7 @@
           <button
             @click="filter = hero => hero"
             class="btn mr-2"
-            data-bg-hsk="outside"
+            data-bg-level="outside"
           >
             All
           </button>
@@ -24,7 +24,7 @@
             v-for="hsk in ['1', '2', '3', '4', '5']"
             @click="filter = hero => hero.hsk === hsk"
             class="btn mr-2"
-            :data-bg-hsk="hsk"
+            :data-bg-level="hsk"
           >
             HSK {{ hsk }}
           </button>

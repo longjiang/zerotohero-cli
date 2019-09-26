@@ -35,7 +35,7 @@
         <h5 class="mb-0 text-center">{{ hero.name }}</h5>
       </div>
 
-      <div class="p-3 text-center shadow" :data-bg-hsk="hero.hsk">
+      <div class="p-3 text-center shadow" :data-bg-level="hero.hsk">
         <div>
           HSK {{ hero.hsk }} Score: <span class="bigger"><b>{{ hero.score }}</b></span> /
           {{ fullScore(hero.hsk) }}

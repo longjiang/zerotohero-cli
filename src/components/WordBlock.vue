@@ -42,7 +42,7 @@
           :src="`${Config.imageProxy}?${image.src}`"
         />
       </div>
-      <div v-for="word in words" class="tooltip-entry">
+      <div v-for="word in words" :class="classes">
         <div v-if="word">
           <div v-for="match in word.matches" style="color: #999">
             <b>{{ match.field }} {{ match.number }}</b>
@@ -58,16 +58,21 @@
             <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ word.accented }}</b>
           </a>
           <span
-            v-if="word.level"
-            :data-bg-level="word.level"
-            class="pl-1 pr-1 ml-1 rounded d-inlin-block"
-            style="font-size: 0.8em; position:relative; bottom: 0.2rem;"
-          >{{ word.level }}</span>
+            v-if="word.traditional && word.traditional !== word.simplified"
+            class="ml-1"
+            style="font-size: 1.2em; color: #999"
+          >{{ word.traditional }}</span>
           <span
-            v-if="word.cjk && word.cjk.canonical"
+            v-if="$l2.code === 'ko' && word.cjk && word.cjk.canonical"
             class="ml-1"
             style="font-size: 1.2em; color: #999"
           >[{{ word.cjk.canonical }}]</span>
+          <span
+            v-if="word.level && word.level !== 'outside'"
+            :data-bg-level="word.level"
+            class="pl-1 pr-1 ml-1 rounded d-inlin-block"
+            style="font-size: 0.8em"
+          >{{ $l2.code === 'zh' ? 'HSK ' : ''}}{{ word.level }}</span>
         </div>
         <div>
           <span class="word-type" v-if="word.type !== 'other'" style="color: #999">
@@ -116,10 +121,20 @@ export default {
         : false,
       images: [],
       words: [],
+      classes: {
+        'tooltip-entry': true
+      },
       Config
     }
   },
+  mounted() {
+    this.updateClasses()
+  },
   methods: {
+    updateClasses() {
+      if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
+      if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
+    },
     matchCase(text) {
       if (this.text.match(/^[\wА-ЯЁ]/)) {
         if (this.text.match(/^.[\wА-ЯЁ]/)) {

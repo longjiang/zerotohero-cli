@@ -5,7 +5,7 @@
       <div class="frequency mt-1">
         <div
           class="frequency-fill"
-          :data-bg-hsk="entry.hsk"
+          :data-bg-level="entry.hsk"
           :style="`width: ${(Math.log10(1 + entry.rank * 10000) * 100) / 4}%`"
         ></div>
       </div>

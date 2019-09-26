@@ -213,7 +213,8 @@ const Dictionary = {
         phonetics: row.pinyin
       },
       definitions: row.definitions.split('/'),
-      search: row.definitions.toLowerCase()
+      search: row.definitions.toLowerCase(),
+      level: row.hsk
     })
     this._maxWeight = Math.max(augmented.weight, this._maxWeight)
     return augmented

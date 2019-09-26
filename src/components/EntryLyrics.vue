@@ -1,7 +1,7 @@
 <template>
   <div v-if="lrcs && lrcs.length > 0">
     <!-- ANCHOR img/anchors/lyrics-bar.png -->
-    <div class="container-fluid song-lyrics-bar" :data-bg-hsk="entry.hsk" v-cloak>
+    <div class="container-fluid song-lyrics-bar" :data-bg-level="entry.hsk" v-cloak>
       <div class="container">
         <div class="col-sm-12 text-center">
           <strong>

@@ -5,7 +5,7 @@
       <button
         v-on:click="startClick()"
         class="btn"
-        :data-bg-hsk="book"
+        :data-bg-level="book"
         id="another-set-btn"
       >
         Start Learning
@@ -68,7 +68,7 @@
         <button
           v-on:click="tryAnotherClick()"
           class="btn"
-          :data-bg-hsk="book"
+          :data-bg-level="book"
           id="another-set-btn"
         >
           Try Another Set

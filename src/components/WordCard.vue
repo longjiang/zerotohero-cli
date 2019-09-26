@@ -36,10 +36,10 @@
         <Speak :text="word.simplified" />
       </div>
       <a v-if="word" :href="`#/${$l1.code}/${$l2.code}/view/cedict/${word.identifier}`">
-        <div :data-hsk="word.hsk" class="word-list-ext-item-word simplified">
+        <div :data-level="word.hsk" class="word-list-ext-item-word simplified">
           {{ word.simplified }}
         </div>
-        <div :data-hsk="word.hsk" class="word-list-ext-item-word traditional">
+        <div :data-level="word.hsk" class="word-list-ext-item-word traditional">
           {{ word.traditional }}
         </div>
       </a>
@@ -62,7 +62,7 @@
         v-if="compareWith"
         :href="`#/${$l1.code}/${$l2.code}/compare/cedict/${compareWith.identifier},${word.identifier}`"
         class="btn show-more word-list-ext-compare-btn mt-3"
-        :data-bg-hsk="word.hsk"
+        :data-bg-level="word.hsk"
       >
         <i class="glyphicon glyphicon-adjust"></i> Compare
       </a>
@@ -70,7 +70,7 @@
         v-if="compareWith"
         :href="`#/${$l1.code}/${$l2.code}/explore/related/${word.identifier}`"
         class="btn show-more word-list-ext-related-btn mt-3"
-        :data-bg-hsk="word.hsk"
+        :data-bg-level="word.hsk"
       >
         <i class="glyphicon glyphicon-fullscreen"></i> Related
       </a>

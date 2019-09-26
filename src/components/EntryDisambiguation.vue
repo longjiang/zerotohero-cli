@@ -14,7 +14,7 @@
         <a
           class="btn show-more focus-exclude"
           :href="`#/${$l1.code}/${$l2.code}/explore/related/${entry.identifier}`"
-          :data-bg-hsk="entry.hsk"
+          :data-bg-level="entry.hsk"
         >
           <i class="glyphicon glyphicon-fullscreen"></i> Explore Related Words
         </a>

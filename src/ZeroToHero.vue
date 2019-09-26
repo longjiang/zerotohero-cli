@@ -1,13 +1,6 @@
 <template>
   <div id="zerotohero"
-    :class="{
-      'hide-except-focus': focus,
-      'show-pinyin': !hidePinyinExceptSaved,
-      'show-pinyin-for-saved': hidePinyinExceptSaved,
-      'show-simplified': !useTraditional,
-      'show-traditional': useTraditional,
-      'show-definition': showDefinition
-    }">
+    :class="classes">
     <template v-if="langsLoaded && this.$route.path !== '/'">
       <div class="container-fluid bg-dark pt-4 pl-0 pr-0">
         <div class="container">
@@ -92,6 +85,7 @@ export default {
   data() {
     return {
       Config,
+      classes: undefined,
       languages: [],
       langsLoaded: false,
       focus: false,
@@ -103,6 +97,18 @@ export default {
     }
   },
   methods: {
+    updateClasses() {
+      this.classes = {
+        'hide-except-focus': this.focus,
+        'show-pinyin': !this.hidePinyinExceptSaved,
+        'show-pinyin-for-saved': this.hidePinyinExceptSaved,
+        'show-simplified': !this.useTraditional,
+        'show-traditional': this.useTraditional,
+        'show-definition': this.showDefinition,
+      }
+      if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
+      if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
+    },
     async setL1() {
       Vue.prototype.$l1 = this.$languages.getSmart(this.$route.params.l1)
       this.$i18n.locale = this.$l1.code
@@ -134,6 +140,15 @@ export default {
     }
   },
   watch: {
+    showDefinition() {
+      this.updateClasses()
+    },
+    hidePinyinExceptSaved() {
+      this.updateClasses()
+    },
+    useTraditional() {
+      this.updateClasses()
+    },
     async $route() {
       if (this.$route.params.l1 && this.$route.params.l2) {
         if (
@@ -146,6 +161,7 @@ export default {
           // first time loading, set the language
           await this.setL1()
           await this.setL2()
+          this.updateClasses()
           Vue.prototype.$hasFeature = feature => {
             if (feature === 'dictionary') {
               return this.$l1.dictionaries && this.$l1.dictionaries[this.$l2['iso639-2t']]
