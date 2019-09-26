@@ -215,18 +215,24 @@ export default {
     async route() {
       let method = this.$route.params.method
       let args = this.$route.params.args.split(',')
+      let aId = args[0]
+      let bId = args[1]
+      if (args.length === 6) { // When we use hsk-cedict for chinese
+        aId = [args[0], args[1], args[2]].join(',')
+        bId = [args[3], args[4], args[5]].join(',')
+      }
       if (method && args) {
         if (method === 'hsk') {
-          this.a = await (await this.$dictionary).getByHSKId(args[0]) 
-          this.b = await (await this.$dictionary).getByHSKId(args[1])
+          this.a = await (await this.$dictionary).getByHSKId(aId) 
+          this.b = await (await this.$dictionary).getByHSKId(bId)
         } else if (method === 'simplified') {
-          let resultsA = await (await this.$dictionary).lookupSimplified(args[0])
+          let resultsA = await (await this.$dictionary).lookupSimplified(aId)
           this.a = resultsA[0]
-          let resultsB = await (await this.$dictionary).lookupSimplified(args[1])
+          let resultsB = await (await this.$dictionary).lookupSimplified(bId)
           this.b = resultsB[0]
         } else {
-          this.a = await (await this.$dictionary).get([args[0], args[1], args[2]].join(','))
-          this.b = await (await this.$dictionary).get([args[3], args[4], args[5]].join(','))
+          this.a = await (await this.$dictionary).get(aId)
+          this.b = await (await this.$dictionary).get(bId)
         }
       }
     }
@@ -234,16 +240,16 @@ export default {
   watch: {
     a() {
       if (this.b)
-        document.title = `${this.a.simplified} vs ${
-          this.b.simplified
-        } | Chinese Learning Wiki`
+        document.title = `${this.a.bare} vs ${
+          this.b.bare
+        } | Zero to Hero`
       this.aKey++
     },
     b() {
       if (this.a)
-        document.title = `${this.a.simplified} vs ${
-          this.b.simplified
-        } | Chinese Learning Wiki`
+        document.title = `${this.a.bare} vs ${
+          this.b.bare
+        } | Zero to Hero`
       this.bKey++
     },
     $route() {
