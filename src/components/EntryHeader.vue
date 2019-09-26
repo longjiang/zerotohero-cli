@@ -19,7 +19,7 @@
               v-html="entry.accented"
             ></span>
             <span
-              v-if="entry.level"
+              v-if="entry.level && entry.level !== 'outside' && $l2.code !== 'zh'"
               class="entry-level p-1 rounded ml-2"
               style="position: relative; bottom: 0.5em"
               :data-bg-level="entry.level"
