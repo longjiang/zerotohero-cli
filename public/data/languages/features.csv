@@ -1,5 +1,5 @@
-l1,l2,home,courses,keyboard,bookmarklet,levels,roots,explore-topics,related,learn
-eng,zho,TRUE,TRUE,,,TRUE,TRUE,TRUE,TRUE,TRUE
-zho,eng,TRUE,TRUE,,,,,,,
-eng,tlh,,,TRUE,,,,,,
-eng,hin,,,,TRUE,,,,,
+l1,l2,home,courses,keyboard,bookmarklet,levels,roots,explore-topics,related,learn,grammar
+eng,zho,TRUE,TRUE,,,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+zho,eng,TRUE,TRUE,,,,,,,,
+eng,tlh,,,TRUE,,,,,,,
+eng,hin,,,,TRUE,,,,,,

@@ -57,6 +57,14 @@
       {{ $t('Dictionary') }}
     </router-link>
     <router-link
+      v-if="$hasFeature('grammar')"
+      class="tab"
+      :to="{ name: 'grammar' }"
+      title="Chinese grammar cheatsheet"
+    >
+      <i class="fas fa-list-ol"></i>Grammar
+    </router-link>
+    <router-link
       :class="{
         tab: true,
         'router-link-active':
