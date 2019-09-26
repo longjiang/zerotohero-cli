@@ -8,6 +8,13 @@
       placeholder="Compare with..."
       :hrefFunc="compareHrefFunc"
     ></Search>
+    <button class="btn btn-compare ml-2" @click="compareClick">
+      <span v-if="dCompare"><i class="glyphicon glyphicon-remove-sign"></i></span
+      ><span v-if="!dCompare"
+        ><i class="glyphicon glyphicon-adjust"></i>
+        <span class="compare-btn-text ml-1">Compare</span></span
+      >
+    </button>
   </div>
 </template>
 
@@ -38,7 +45,7 @@ export default {
       dCompare: this.compare,
       compareHrefFunc: compareEntry => {
         const entry = this.$refs.search.entry || this.entry
-        return `#/${this.$l1.code}/${this.$l2.code}/compare/cedict/${entry.identifier},${compareEntry.identifier}`
+        return `#/${this.$l1.code}/${this.$l2.code}/compare/${this.$dictionaryName}/${entry.id},${compareEntry.id}`
       }
     }
   },

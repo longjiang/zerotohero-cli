@@ -224,7 +224,7 @@ export default {
   methods: {
     redirect() {
       if (!this.$hasFeature('home')) {
-        location.hash = location.hash + 'youtube/browse'
+        location.hash = (location.hash + '/youtube/browse').replace('//', '/')
       }
     }
   }

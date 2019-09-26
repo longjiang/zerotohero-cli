@@ -20,10 +20,12 @@
 
 <script>
 import DefinitionsList from '@/components/DefinitionsList.vue'
+import Merge from '@/components/Merge'
 
 export default {
   components: {
-    DefinitionsList
+    DefinitionsList,
+    Merge
   },
   props: ['a', 'b'],
   data() {

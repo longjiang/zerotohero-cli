@@ -55,6 +55,9 @@ import Collocation from '@/components/Collocation.vue'
 import SketchEngine from '@/lib/sketch-engine'
 
 export default {
+  components: {
+    Collocation
+  },
   props: {
     word: {
       type: Object
@@ -66,8 +69,12 @@ export default {
       default: 'outside'
     }
   },
-  components: {
-    Collocation
+  data() {
+    return {
+      colDesc: undefined,
+      sketch: undefined,
+      SketchEngine
+    }
   },
   methods: {
     async update() {
@@ -83,13 +90,6 @@ export default {
       return gramrels.find(
         gram => gram.name === name && gram.Words && gram.Words.length > 0
       )
-    }
-  },
-  data() {
-    return {
-      colDesc: undefined,
-      sketch: undefined,
-      SketchEngine
     }
   },
   computed: {

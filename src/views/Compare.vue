@@ -133,6 +133,7 @@
     </div>
 
     <div class="container mt-5 focus">
+      <!--
       <div class="row">
         <div class="col-sm-6">
           <Mistakes v-if="a" :text="a.simplified" :key="aKey"></Mistakes>
@@ -141,6 +142,7 @@
           <Mistakes v-if="b" :text="b.simplified" :key="bKey"></Mistakes>
         </div>
       </div>
+      -->
       <div class="row">
         <div class="col-sm-6">
           <Korean v-if="a" class="mt-5 mb-5" :text="a.traditional" />
@@ -166,7 +168,6 @@
     ></EntryCourseAd>
 
     <EntryLyrics v-if="a" :entry="a" limit="1" :key="aKey"></EntryLyrics>
-
     <EntryLyrics v-if="b" :entry="b" limit="1" :key="bKey"></EntryLyrics>
   </div>
 </template>
@@ -183,7 +184,6 @@ import EntryLyrics from '@/components/EntryLyrics.vue'
 import CompareCollocations from '@/components/CompareCollocations.vue'
 import CompareDefs from '@/components/CompareDefs.vue'
 import SearchCompare from '@/components/SearchCompare.vue'
-import Helper from '@/lib/helper'
 import Korean from '@/components/Korean'
 import Japanese from '@/components/Japanese'
 
@@ -216,10 +216,7 @@ export default {
       let method = this.$route.params.method
       let args = this.$route.params.args.split(',')
       if (method && args) {
-        if (method === 'cedict') {
-          this.a = await (await this.$dictionary).getByIdentifier([args[0], args[1], args[2]].join(','))
-          this.b = await (await this.$dictionary).getByIdentifier([args[3], args[4], args[5]].join(','))
-        } else if (method === 'hsk') {
+        if (method === 'hsk') {
           this.a = await (await this.$dictionary).getByHSKId(args[0]) 
           this.b = await (await this.$dictionary).getByHSKId(args[1])
         } else if (method === 'simplified') {
@@ -227,6 +224,9 @@ export default {
           this.a = resultsA[0]
           let resultsB = await (await this.$dictionary).lookupSimplified(args[1])
           this.b = resultsB[0]
+        } else {
+          this.a = await (await this.$dictionary).get([args[0], args[1], args[2]].join(','))
+          this.b = await (await this.$dictionary).get([args[3], args[4], args[5]].join(','))
         }
       }
     }

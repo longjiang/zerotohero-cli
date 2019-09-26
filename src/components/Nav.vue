@@ -64,7 +64,7 @@
       :to="{ name: 'grammar' }"
       title="Chinese grammar cheatsheet"
     >
-      <i class="fas fa-list-ol"></i>Grammar
+      <i class="fas fa-list-ul"></i>Grammar
     </router-link>
     <router-link
       :class="{

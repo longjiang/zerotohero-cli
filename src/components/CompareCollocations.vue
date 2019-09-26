@@ -1,12 +1,12 @@
 <template>
   <div class="container" :key="'collocations-' + collocationsKey">
     <div class="widget-title">
-      Collocations with “{{ a.simplified }}” and “{{ b.simplified }}”
+      Collocations with “{{ a.bare }}” and “{{ b.bare }}”
     </div>
     <div class="jumbotron-fluid bg-light p-4">
       <div
         class="row"
-        v-for="(description, name) in colDesc.a"
+        v-for="(description, name) in colDesc"
         v-bind:key="'collocation-' + name"
         v-if="
           (a.sketch &&
@@ -22,9 +22,9 @@
         <div class="col-sm-6 mb-5">
           <Collocation
             v-if="a.sketch && a.sketch.Gramrels"
-            :word="a.simplified"
+            :word="a"
             :level="a.hsk"
-            :title="colDesc.a[name]"
+            :title="colDesc[name]"
             :type="name"
             :id="`collocation-a-${name}`"
             :collocation="getGramrelsByName(a.sketch.Gramrels, name)"
@@ -33,9 +33,9 @@
         <div class="col-sm-6 mb-5">
           <Collocation
             v-if="b.sketch && b.sketch.Gramrels"
-            :word="b.simplified"
+            :word="b"
             :level="b.hsk"
-            :title="colDesc.b[name]"
+            :title="colDesc[name]"
             :type="name"
             :id="`collocation-a-${name}`"
             :collocation="getGramrelsByName(b.sketch.Gramrels, name)"
@@ -59,7 +59,7 @@
           :href="
             `https://app.sketchengine.eu/#wordsketch?corpname=${encodeURIComponent(
               SketchEngine.corpname
-            )}&tab=basic&lemma=${a.simplified}&showresults=1`
+            )}&tab=basic&lemma=${a.bare}&showresults=1`
           "
         >
           <img
@@ -88,29 +88,35 @@ export default {
   data() {
     return {
       SketchEngine,
-      colDesc: {
-        a: SketchEngine.collocationDescription(this.a.simplified),
-        b: SketchEngine.collocationDescription(this.b.simplified)
-      },
+      colDesc: undefined,
       collocationsKey: 0
     }
   },
   methods: {
+    async update() {
+      this.colDesc = await SketchEngine.collocationDescription({l2: this.$l2})
+      this.a.sketch = await SketchEngine.wsketch({term: this.a.bare, l2: this.$l2})
+      this.b.sketch = await SketchEngine.wsketch({term: this.b.bare, l2: this.$l2})
+      this.collocationsKey += 1
+    },
     getGramrelsByName(gramrels, name) {
       return gramrels.find(
         gram => gram.name === name && gram.Words && gram.Words.length > 0
       )
     }
   },
+  watch: {
+    a() {
+      this.update()
+    },
+    b() {
+      this.update()
+    }
+  },
   mounted() {
-    SketchEngine.wsketch(this.a.simplified, response => {
-      this.a.sketch = response
-      this.collocationsKey += 1
-    })
-    SketchEngine.wsketch(this.b.simplified, response => {
-      this.b.sketch = response
-      this.collocationsKey += 1
-    })
+    if (!this.colDesc) {
+      this.update()
+    }
   }
 }
 </script>
