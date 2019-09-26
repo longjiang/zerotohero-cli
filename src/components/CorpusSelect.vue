@@ -15,7 +15,7 @@
         <tr
           v-for="corpus in SketchEngine.corpora.filter(
             corpus =>
-              corpus.language_id === $l2.code && (!(corpus.tags && corpus.tags.includes('learner')))
+              [$l2.code].concat($l2.locales || []).includes(corpus.language_id) && (!(corpus.tags && corpus.tags.includes('learner')))
           ).sort((a,b) => b.sizes.wordcount - a.sizes.wordcount)"
         >
           <td>
