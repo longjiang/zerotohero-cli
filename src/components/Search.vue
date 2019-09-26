@@ -34,7 +34,7 @@
         <span v-if="suggestion">
           <span
             class="suggestion-word font-weight-bold mr-1"
-            data-level="outside"
+            :data-level="suggestion.level || 'outside'"
           >{{ suggestion.bare }}</span>
           <span class="mr-1" v-if="suggestion.match">
             {{ suggestion.match.field }} of

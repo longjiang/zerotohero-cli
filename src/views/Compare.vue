@@ -74,7 +74,7 @@
         <div class="col-sm-6">
           <WebImages
             v-if="a"
-            :text="a.simplified"
+            :text="a.bare"
             limit="10"
             :key="aKey"
           ></WebImages>
@@ -82,7 +82,7 @@
         <div class="col-sm-6">
           <WebImages
             v-if="b"
-            :text="b.simplified"
+            :text="b.bare"
             limit="10"
             :key="bKey"
           ></WebImages>
@@ -105,7 +105,7 @@
         <div class="col-sm-6">
           <Concordance
             v-if="a"
-            :text="a.simplified"
+            :text="a.bare"
             :level="a.hsk"
             :key="aKey"
           ></Concordance>
@@ -113,7 +113,7 @@
         <div class="col-sm-6">
           <Concordance
             v-if="b"
-            :text="b.simplified"
+            :text="b.bare"
             :level="b.hsk"
             :key="bKey"
           ></Concordance>
@@ -124,10 +124,10 @@
     <div class="container focus mt-5">
       <div class="row">
         <div class="col-sm-6">
-          <Grammar v-if="a" :text="a.simplified" :key="aKey"></Grammar>
+          <Grammar v-if="a" :text="a.bare" :key="aKey"></Grammar>
         </div>
         <div class="col-sm-6">
-          <Grammar v-if="b" text="b.simplified" :key="bKey"></Grammar>
+          <Grammar v-if="b" text="b.bare" :key="bKey"></Grammar>
         </div>
       </div>
     </div>
@@ -136,33 +136,42 @@
       <!--
       <div class="row">
         <div class="col-sm-6">
-          <Mistakes v-if="a" :text="a.simplified" :key="aKey"></Mistakes>
+          <Mistakes v-if="a" :text="a.bare" :key="aKey"></Mistakes>
         </div>
         <div class="col-sm-6">
-          <Mistakes v-if="b" :text="b.simplified" :key="bKey"></Mistakes>
+          <Mistakes v-if="b" :text="b.bare" :key="bKey"></Mistakes>
         </div>
       </div>
       -->
-      <div class="row">
+
+      <div class="row" v-if="['ja', 'ko'].includes($l2.code)">
         <div class="col-sm-6">
-          <Korean v-if="a" class="mt-5 mb-5" :text="a.traditional" />
+          <Chinese v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'" class="mb-5" :text="a.cjk.canonical" />
         </div>
         <div class="col-sm-6">
-          <Korean v-if="b" class="mt-5 mb-5" :text="b.traditional" />
+          <Chinese v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'" class="mb-5" :text="b.cjk.canonical" />
+        </div>
+      </div>
+      <div class="row" v-if="['zh', 'ja'].includes($l2.code)">
+        <div class="col-sm-6">
+          <Korean v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'" class="mt-5 mb-5" :text="a.cjk.canonical" />
+        </div>
+        <div class="col-sm-6">
+          <Korean v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'" class="mt-5 mb-5" :text="b.cjk.canonical" />
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-6">
-          <Japanese v-if="a" class="mb-5" :text="a.traditional" />
+        <div class="col-sm-6" v-if="['zh', 'ko'].includes($l2.code)">
+          <Japanese v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'" class="mb-5" :text="a.cjk.canonical" />
         </div>
         <div class="col-sm-6">
-          <Japanese v-if="b" class="mb-5" :text="b.traditional" />
+          <Japanese v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'" class="mb-5" :text="b.cjk.canonical" />
         </div>
       </div>
     </div>
 
     <EntryCourseAd
-      v-if="a && b"
+      v-if="$l2 === 'zh' && a && b"
       :entry="b.hsk > a.hsk ? b : a"
       :key="aKey + bKey"
     ></EntryCourseAd>
@@ -186,6 +195,7 @@ import CompareDefs from '@/components/CompareDefs.vue'
 import SearchCompare from '@/components/SearchCompare.vue'
 import Korean from '@/components/Korean'
 import Japanese from '@/components/Japanese'
+import Chinese from '@/components/Chinese'
 
 export default {
   components: {
@@ -201,6 +211,7 @@ export default {
     WebImages,
     Korean,
     Japanese,
+    Chinese,
     CompareDefs
   },
   data() {
@@ -225,10 +236,10 @@ export default {
         if (method === 'hsk') {
           this.a = await (await this.$dictionary).getByHSKId(aId) 
           this.b = await (await this.$dictionary).getByHSKId(bId)
-        } else if (method === 'simplified') {
-          let resultsA = await (await this.$dictionary).lookupSimplified(aId)
+        } else if (method === 'bare') {
+          let resultsA = await (await this.$dictionary).lookupbare(aId)
           this.a = resultsA[0]
-          let resultsB = await (await this.$dictionary).lookupSimplified(bId)
+          let resultsB = await (await this.$dictionary).lookupbare(bId)
           this.b = resultsB[0]
         } else {
           this.a = await (await this.$dictionary).get(aId)

@@ -34,10 +34,11 @@ const Dictionary = {
     return text
   },
   lookupByDef(text, limit = 30) {
-    let results = this.words
-      .filter(row => row.search && row.search.includes(text))
-      .slice(0, limit)
-    return results
+    let preferred = this.words
+      .filter(row => row.search && row.search.startsWith(text)).sort((a, b) => b.weight - a.weight)
+    let others = this.words
+      .filter(row => row.search && row.search.includes('/' + text)).sort((a, b) => b.weight - a.weight) // definitions are separated by '/'
+    return preferred.concat(others).slice(0, limit)
   },
   unique(array) {
     var uniqueArray = []
@@ -138,9 +139,6 @@ const Dictionary = {
   lookupByCharacter(char) {
     return this.words.filter(row => row.simplified.includes(char))
   },
-  lookupByDefinition(definition) {
-    return this.words.filter(row => row.search.split('/').includes(definition))
-  },
   lookupPinyinFuzzy(pinyin) {
     return this.words.filter(
       row =>
@@ -207,8 +205,8 @@ const Dictionary = {
       accented: row.simplified,
       cjk: {
         canonical:
-          row.simplified && row.simplified !== 'NULL'
-            ? row.simplified
+          row.traditional && row.traditional !== 'NULL'
+            ? row.traditional
             : undefined,
         phonetics: row.pinyin
       },
