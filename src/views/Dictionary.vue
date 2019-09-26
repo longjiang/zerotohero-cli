@@ -1,5 +1,5 @@
 <template>
-  <div class="main focus">
+  <div class="main focus" :key="`entry-${entryKey}`">
     <div class="jumbotron jumbotron-fluid bg-white pt-5 pb-3 mb-0">
       <div class="container focus-exclude">
         <div class="row">
@@ -170,7 +170,8 @@ export default {
       characters: [],
       character: {},
       unsplashSrcs: [],
-      unsplashSearchTerm: ''
+      unsplashSearchTerm: '',
+      entryKey: 0
     }
   },
   methods: {
@@ -179,6 +180,7 @@ export default {
       // return this.entry && this.$store.getters.hasSavedWord(this.entry.id)
     },
     show(entry) {
+      this.entryKey += 1
       this.entry = entry
       document.title = `${entry.bare} (${entry.l1}) | ${this.$l1 ? this.$l1.name : ''} Zero to Hero`
     },
@@ -188,7 +190,8 @@ export default {
           if (this.args === 'random') {
             this.random()
           } else {
-            this.entry = await (await this.$dictionary).get(this.args)
+            let entry = await (await this.$dictionary).get(this.args)
+            this.show(entry)
           }
         }
       }

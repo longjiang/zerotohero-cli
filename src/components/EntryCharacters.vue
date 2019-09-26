@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     pinyinArr() {
-      return this.pinyin.split('')
+      return this.$l2.code === 'zh' ? this.pinyin.split(' ') : this.pinyin.split('')
     }
   },
   data() {
