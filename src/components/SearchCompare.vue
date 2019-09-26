@@ -9,9 +9,9 @@
       :hrefFunc="compareHrefFunc"
     ></Search>
     <button class="btn btn-compare ml-2" @click="compareClick">
-      <span v-if="dCompare"><i class="glyphicon glyphicon-remove-sign"></i></span
+      <span v-if="dCompare"><i class="fas fa-times"></i></span
       ><span v-if="!dCompare"
-        ><i class="glyphicon glyphicon-adjust"></i>
+        ><i class="fas fa-adjust"></i>
         <span class="compare-btn-text ml-1">Compare</span></span
       >
     </button>
