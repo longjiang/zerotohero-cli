@@ -40,6 +40,7 @@ export default {
   },
   methods: {
     async update() {
+
       this.title = undefined
       this.videos = []
       YouTube.channel(
@@ -51,6 +52,7 @@ export default {
         3600
       )
       let playlists = await YouTube.channelPlayListsByAPI(this.channelId, 3600)
+
       if (playlists) {
         this.playlists = playlists.sort((a, b) => (a.title < b.title ? -1 : 1))
       }

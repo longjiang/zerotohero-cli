@@ -411,6 +411,36 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/hero-academy',
+      name: 'hero-academy',
+      component: () => import('./views/HeroAcademy.vue'),
+      props: true,
+      meta: {
+        title: 'Hero Academy | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Learn by learning subject matters in the target language.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/music/:method?/:args?',
+      name: 'music',
+      component: () => import('./views/Music.vue'),
+      props: true,
+      meta: {
+        title: 'Music | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Learn through music.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/youtube/search/:args?',
       name: 'youtube-search',
       component: () => import('./views/YouTubeSearch.vue'),

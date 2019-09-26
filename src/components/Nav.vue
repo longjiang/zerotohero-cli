@@ -28,7 +28,9 @@
     <router-link
       :class="{
         tab: true,
-        'router-link-active': $route.name && $route.name.startsWith('youtube')
+        'router-link-active': $route.name && $route.name.startsWith('youtube') ||
+          $route.name === 'hero-academy' ||
+          $route.name === 'music'
       }"
       :to="{ name: 'youtube-browse' }"
       :title="`Learn ${l2 ? l2.name : ''} with audio-visual material.`"

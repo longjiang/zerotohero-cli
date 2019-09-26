@@ -113,10 +113,22 @@
       </router-link>
     </nav>
 
-    <nav class="secondary-menu text-center" v-if="$route.name && $route.name.startsWith('youtube')">
+    <nav class="secondary-menu text-center" 
+      v-if="
+        $route.name &&
+          ($route.name.startsWith('youtube') ||
+            $route.name === 'hero-academy' ||
+            $route.name === 'music')
+      ">
+      <router-link v-if="$hasFeature('hero-academy')" class="secondary-menu-item" :to="{ name: 'hero-academy' }">
+        <i class="fas fa-school" />Hero Academy
+      </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'youtube-browse' }">
-        <i class="fab fa-youtube"></i>
+        <i class="fab fa-youtube" />
         {{ $t('YouTube Transcript') }}
+      </router-link>
+      <router-link v-if="$hasFeature('music')" class="secondary-menu-item" :to="{ name: 'music' }">
+        <i class="fas fa-music" />Music Video Lyrics
       </router-link>
     </nav>
 
