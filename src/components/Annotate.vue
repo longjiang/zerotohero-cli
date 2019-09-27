@@ -90,9 +90,11 @@ export default {
       this.fullscreenMode = !this.fullscreenMode
     },
     async visibilityChanged(isVisible) {
-      if (isVisible && !this.annotated) {
-        this.annotated = true
-        await this.annotate()
+      if (this.$hasFeature('dictionary')) {
+        if (isVisible && !this.annotated) {
+          this.annotated = true
+          await this.annotate()
+        }
       }
     },
     async annotate() {
