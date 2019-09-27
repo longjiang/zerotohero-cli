@@ -1,15 +1,14 @@
 <template>
   <div class="main mt-5 mb-5">
-    <div v-if="method === 'list'" class="container">
+    <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <h3>
-            Chinese Learning Resources
+            Learning Resources
           </h3>
           <hr>
           <p class="mb-5">
-            This is a collection of Chinese-learning resources contributed by
-            users over Reddit.
+            This is a collection of learning resources.
           </p>
         </div>
       </div>
@@ -25,14 +24,7 @@
           </div>
         </div>
         <div class="col-sm-12 col-md-8">
-          <RedditArticlesList path="r/ChineseLanguage/top" />
-        </div>
-      </div>
-    </div>
-    <div v-if="method === 'view' && articleId" class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <RedditArticle v-if="articleId" :articleId="articleId" />
+          <ResourceList :resources="resources" />
         </div>
       </div>
     </div>
@@ -42,21 +34,18 @@
 <script>
 import Config from '@/lib/config'
 import Helper from '@/lib/helper'
-import RedditArticlesList from '@/components/RedditArticlesList.vue'
-import RedditArticle from '@/components/RedditArticle.vue'
+import ResourceList from '@/components/ResourceList'
 
 export default {
   components: {
-    RedditArticlesList,
-    RedditArticle
+    ResourceList
   },
-  props: ['method', 'args'],
+  props: ['type'],
   data() {
     return {
-      articles: [],
-      articleId: undefined,
       Config,
-      Helper
+      Helper,
+      resources: []
     }
   },
   watch: {
@@ -67,14 +56,9 @@ export default {
     }
   },
   methods: {
-    route() {
-      if (this.method) {
-        if (this.method === 'view' && this.args) {
-          this.articleId = this.args.split(',')[0]
-        }
-      } else {
-        location.hash = `#/${this.$l1.code}/${this.$l2.code}/resources/list`
-      }
+    async route() {
+      let response = await $.getJSON(`${Config.wiki}items/resources?filter[l2][eq]=${this.$l2.id}&fields=*,thumbnail.*`)
+      this.resources = response.data || []
     }
   },
   created() {
