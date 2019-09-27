@@ -26,20 +26,6 @@
       <i class="fa fa-trophy" />Heroes
     </router-link>
     <router-link
-      v-if="$hasFeature('youtube')"
-      :class="{
-        tab: true,
-        'router-link-active': $route.name && $route.name.startsWith('youtube') ||
-          $route.name === 'hero-academy' ||
-          $route.name === 'music'
-      }"
-      :to="{ name: 'youtube-browse' }"
-      :title="`Learn ${l2 ? l2.name : ''} with audio-visual material.`"
-    >
-      <i class="fas fa-video"></i>
-      {{ $t('Audio-Visual') }}
-    </router-link>
-    <router-link
       v-if="$hasFeature('dictionary')"
       :class="{
         tab: true,
@@ -60,6 +46,20 @@
       {{ $t('Dictionary') }}
     </router-link>
     <router-link
+      v-if="$hasFeature('youtube')"
+      :class="{
+        tab: true,
+        'router-link-active': $route.name && $route.name.startsWith('youtube') ||
+          $route.name === 'hero-academy' ||
+          $route.name === 'music'
+      }"
+      :to="{ name: 'youtube-browse' }"
+      :title="`Learn ${l2 ? l2.name : ''} with audio-visual material.`"
+    >
+      <i class="fas fa-video"></i>
+      {{ $t('Audio-Visual') }}
+    </router-link>
+    <router-link
       v-if="$hasFeature('grammar')"
       class="tab"
       :to="{ name: 'grammar' }"
@@ -68,6 +68,7 @@
       <i class="fas fa-list-ul"></i>Grammar
     </router-link>
     <router-link
+      v-if="$hasFeature('dictionary')"
       :class="{
         tab: true,
         'router-link-active':
