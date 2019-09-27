@@ -2,14 +2,8 @@
   <div class="main mt-5 mb-5">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12">
-          <h3>Learning Resources</h3>
-          <hr />
-          <p class="mb-5">This is a collection of learning resources.</p>
-        </div>
-      </div>
-      <div class="row">
         <div class="col-sm-12 col-md-8">
+          <h3 class="mb-5">Resources for learning {{ $l2.name }}</h3>
           <ResourceList :resources="resources" />
         </div>
         <div class="col-sm-12 col-md-4">
@@ -79,22 +73,22 @@ export default {
       Helper,
       resources: [],
       types: {
-        multiple: 'Comprehensive',
         av: 'Audio-Visual',
         games: 'Games',
         lists: 'Lists of Resources',
         music: 'Music',
         reading: 'Reading',
         software: 'Software',
-        textbooks: 'Textbooks'
+        textbooks: 'Textbooks',
+        multiple: 'Miscellaneous'
       },
       topics: {
-        multiple: 'Comprehensive',
         strategy: 'Learning Strategy',
         character: 'Characters',
         culture: 'Culture',
         grammar: 'Grammar',
-        vocabulary: 'Vocabulary'
+        vocabulary: 'Vocabulary',
+        multiple: 'Miscellaneous'
       }
     }
   },

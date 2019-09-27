@@ -114,6 +114,19 @@
     <router-link
       :class="{
         tab: true,
+        'router-link-active':
+          $route.name &&
+          $route.name === 'resources'
+      }"
+      :to="`/${$l1.code}/${$l2.code}/resource/list/all/all`"
+      :title="`Resources for learning ${l2 ? l2.name : 'the language'}.`"
+    >
+      <i class="fas fa-gem"></i>
+      {{ $t('Resources') }}
+    </router-link>
+    <router-link
+      :class="{
+        tab: true,
         'router-link-active': $route.name && 
           ($route.name === 'contact' ||
             $route.name === 'faq' ||
