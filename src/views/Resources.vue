@@ -16,7 +16,7 @@
                 'list-group-item-action': topic === 'all',
                 active: topic === 'all'
               }"
-              :href="`#/${$l1.code}/${$l2.code}/resource/list/all/${topic}`"
+              :href="`#/${$l1.code}/${$l2.code}/resource/list/all/${type}`"
             >All</a>
             <a
               v-for="(topicName, topicValue) in topics"

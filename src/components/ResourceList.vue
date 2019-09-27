@@ -10,7 +10,7 @@
     </div>
     <div v-else class="resources">
       <div v-for="resource of resources" class="resource media rounded shadow">
-        <a :href="resource.url" class="link-unstyled">
+        <a :href="resource.url" target="_blank" class="link-unstyled">
           <img :src="resource.thumbnail.data.full_url" class="resource-thumbnail img-fluid" />
           <div class="media-body">
             <h6>
@@ -44,5 +44,7 @@ export default {
 .resource {
   min-width: 15rem;
   flex: 1;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 </style>
