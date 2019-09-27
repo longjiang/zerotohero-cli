@@ -556,7 +556,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/resources/:method?/:args?',
+      path: '/:l1/:l2/resource/list/:topic/:type',
       name: 'resources',
       component: () => import('./views/Resources.vue'),
       props: true,

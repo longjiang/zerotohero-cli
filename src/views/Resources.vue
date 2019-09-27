@@ -3,28 +3,60 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h3>
-            Learning Resources
-          </h3>
-          <hr>
-          <p class="mb-5">
-            This is a collection of learning resources.
-          </p>
+          <h3>Learning Resources</h3>
+          <hr />
+          <p class="mb-5">This is a collection of learning resources.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-12 col-md-4">
-          <div class="list-group">
-            <a class="list-group-item list-group-item-action active">All</a>
-            <a class="list-group-item">Courses</a>
-            <a class="list-group-item">Tutoring</a>
-            <a class="list-group-item">Dictionaries</a>
-            <a class="list-group-item">Flashcard</a>
-            <a class="list-group-item">Books (Readers)</a>
-          </div>
-        </div>
         <div class="col-sm-12 col-md-8">
           <ResourceList :resources="resources" />
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <h6 class="text-center mb-4">Topic</h6>
+          <div class="list-group">
+            <a
+              :class="{
+                'link-unstyled': true,
+                'list-group-item': true,
+                'list-group-item-action': topic === 'all',
+                active: topic === 'all'
+              }"
+              :href="`#/${$l1.code}/${$l2.code}/resource/list/all/${topic}`"
+            >All</a>
+            <a
+              v-for="(topicName, topicValue) in topics"
+              :class="{
+                'link-unstyled': true,
+                'list-group-item': true,
+                'list-group-item-action': topicValue === topic,
+                active: topicValue === topic
+              }"
+              :href="`#/${$l1.code}/${$l2.code}/resource/list/${topicValue}/${type}`"
+            >{{ topicName }}</a>
+          </div>
+          <h6 class="mt-4 mb-4 text-center">Format</h6>
+          <div class="list-group">
+            <a
+              :class="{
+                'link-unstyled': true,
+                'list-group-item': true,
+                'list-group-item-action': type === 'all',
+                active: type === 'all'
+              }"
+              :href="`#/${$l1.code}/${$l2.code}/resource/list/${topic}/all`"
+            >All</a>
+            <a
+              v-for="(typeName, typeValue) in types"
+              :class="{
+                'link-unstyled': true,
+                'list-group-item': true,
+                'list-group-item-action': typeValue === type,
+                active: typeValue === type
+              }"
+              :href="`#/${$l1.code}/${$l2.code}/resource/list/${topic}/${typeValue}`"
+            >{{ typeName }}</a>
+          </div>
         </div>
       </div>
     </div>
@@ -40,12 +72,30 @@ export default {
   components: {
     ResourceList
   },
-  props: ['type'],
+  props: ['topic', 'type'],
   data() {
     return {
       Config,
       Helper,
-      resources: []
+      resources: [],
+      types: {
+        multiple: 'Comprehensive',
+        av: 'Audio-Visual',
+        games: 'Games',
+        lists: 'Lists of Resources',
+        music: 'Music',
+        reading: 'Reading',
+        software: 'Software',
+        textbooks: 'Textbooks'
+      },
+      topics: {
+        multiple: 'Comprehensive',
+        strategy: 'Learning Strategy',
+        character: 'Characters',
+        culture: 'Culture',
+        grammar: 'Grammar',
+        vocabulary: 'Vocabulary'
+      }
     }
   },
   watch: {
@@ -57,7 +107,16 @@ export default {
   },
   methods: {
     async route() {
-      let response = await $.getJSON(`${Config.wiki}items/resources?filter[l2][eq]=${this.$l2.id}&fields=*,thumbnail.*`)
+      let filters = ''
+      if (this.topic !== 'all') {
+        filters += '&filter[topic][eq]=' + this.topic
+      }
+      if (this.type !== 'all') {
+        filters += '&filter[type][eq]=' + this.type
+      }
+      let response = await $.getJSON(
+        `${Config.wiki}items/resources?filter[l2][eq]=${this.$l2.id}${filters}&fields=*,thumbnail.*`
+      )
       this.resources = response.data || []
     }
   },
