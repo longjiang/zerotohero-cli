@@ -26,6 +26,7 @@
       <i class="fa fa-trophy" />Heroes
     </router-link>
     <router-link
+      v-if="$hasFeature('youtube')"
       :class="{
         tab: true,
         'router-link-active': $route.name && $route.name.startsWith('youtube') ||
@@ -75,7 +76,7 @@
             $route.name === 'library' ||
             $route.name === 'reader')
       }"
-      :to="{ name: 'reader' }"
+      :to="{ name: 'library' }"
       :title="`Improve your ${l2 ? l2.name : ''} through reading`"
     >
       <i class="fas fa-book-open"></i>

@@ -120,12 +120,12 @@
             $route.name === 'hero-academy' ||
             $route.name === 'music')
       ">
-      <router-link v-if="$hasFeature('hero-academy')" class="secondary-menu-item" :to="{ name: 'hero-academy' }">
-        <i class="fas fa-school" />Hero Academy
-      </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'youtube-browse' }">
         <i class="fab fa-youtube" />
         {{ $t('YouTube Transcript') }}
+      </router-link>
+      <router-link v-if="$hasFeature('hero-academy')" class="secondary-menu-item" :to="{ name: 'hero-academy' }">
+        <i class="fas fa-school" />Hero Academy
       </router-link>
       <router-link v-if="$hasFeature('music')" class="secondary-menu-item" :to="{ name: 'music' }">
         <i class="fas fa-music" />Music Video Lyrics
@@ -140,13 +140,13 @@
           $route.name === 'reader'
       "
     >
-      <router-link class="secondary-menu-item" :to="{ name: 'reader' }">
-        <i class="fas fa-file-alt"></i>
-        {{$t('Text Reader')}}
-      </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'library' }">
         <i class="fas fa-book-open"></i>
         {{$t('Library')}}
+      </router-link>
+      <router-link v-if="$hasFeature('dictionary')" class="secondary-menu-item" :to="{ name: 'reader' }">
+        <i class="fas fa-file-alt"></i>
+        {{$t('Text Reader')}}
       </router-link>
     </nav>
 

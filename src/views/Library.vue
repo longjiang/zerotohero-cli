@@ -53,7 +53,7 @@
           <ul>
             <li v-for="source in sources">
               {{ source.name }}, example URL:
-              <code v-html="`${source.example($l1.code)}`"></code>
+              <code v-html="`${source.example($l2.code)}`"></code>
             </li>
           </ul>
         </div>

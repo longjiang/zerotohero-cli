@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <div v-if="$l1.code === 'en' && $l2.code === 'zh'">
       <div class="jumbotron-fluid p-5 bg-white mb-0" style="overflow: hidden; position: relative">
         <div class="container">
@@ -210,23 +210,6 @@ export default {
   components: {
     YouTubeVideo,
     Sale
-  },
-  mounted() {
-    this.redirect()
-  },
-  watch: {
-    $route() {
-      if (this.$route.name === 'home') {
-        this.redirect()
-      }
-    }
-  },
-  methods: {
-    redirect() {
-      if (!this.$hasFeature('home')) {
-        location.hash = (location.hash + '/youtube/browse').replace('//', '/')
-      }
-    }
   }
 }
 </script>
