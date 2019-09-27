@@ -2,7 +2,7 @@
   <div class="main mt-5 mb-5">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-8">
+        <div class="col-sm-12 col-md-8 pr-4">
           <h3 class="mb-5">Resources for learning {{ $l2.name }}</h3>
           <ResourceList :resources="resources" />
         </div>
