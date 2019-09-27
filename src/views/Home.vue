@@ -67,7 +67,6 @@
             class="btn btn-danger mt-3 mb-2"
           >Browse All Courses</a>
         </div>
-        <img src="/img/ultimate-bundle.jpg" alt class="img-background" style="opacity: 0.2" />
       </div>
       <div class="jumbotron-fluid mb-0 pb-0 pt-0">
         <div class="container">
@@ -202,7 +201,6 @@
             />
           </a>
         </div>
-        <img src="/img/ultimate-bundle.jpg" alt class="img-background" style="opacity: 0.2" />
       </div>
       <div class="jumbotron-fluid mb-0 pb-0 pt-0">
         <div class="container">
