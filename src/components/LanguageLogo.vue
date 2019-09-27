@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="logo-text text-white">
-        <template v-if="l2['iso639-2t'] === 'eng'">
+        <template v-if="l2['iso639-3'] === 'eng'">
           <div
             class="logo-text-language"
           >{{ l1.translations ? l1.translations['english'] : 'English' }}</div>

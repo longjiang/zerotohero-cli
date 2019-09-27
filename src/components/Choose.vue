@@ -3,30 +3,12 @@
     <div class="d-flex">
       <select class="custom-select custom-select-lg mb-3 mr-2" v-model="l2">
         <option value="undefined">I want to learn...</option>
-        <option v-for="language in languages" :value="language.code">{{ language.name }}</option>
+        <option v-for="language in languages" :value="language.code">{{ language.name }}{{ language.type === 'A' ? ' [Ancient]' : ''}}{{ language.type === 'C' ? ' [Constructed]' : ''}}{{ language.type === 'H' ? ' [Historic]' : ''}}{{ language.type === 'E' ? ' [Extinct]' : ''}}</option>
       </select>
       <select class="custom-select custom-select-lg mb-3" v-model="l1" v-if="l2 == 'en'">
         <option value="undefined">Choose your native language...</option>
         <option v-for="language in enLanguages" :value="language.code">{{ language.name }}</option>
       </select>
-    </div>
-    <div class="zerotohero mt-5" v-if="!compact || l2">
-      <LanguageLogo
-        class="zerotohero-item mb-4"
-        v-for="language in languages"
-        :l1="$languages.get('eng')"
-        :l2="language"
-        v-if="l2 !== 'en' && (!l2 || l2 === language.code)"
-      />
-    </div>
-    <div class="zerotohero" v-if="!compact || l2">
-      <LanguageLogo
-        class="zerotohero-item mb-4"
-        v-for="language in enLanguages"
-        :l1="language"
-        :l2="$languages.get('eng')"
-        v-if="(!l2 || l2 === 'en') && (!l1 || l1 === language.code)"
-      />
     </div>
     <hr class="border-light mt-5 mb-5" style="opacity: 0.5" />
     <p>
@@ -81,13 +63,14 @@ export default {
     this.languages = this.$languages.l1s
       .filter(
         language =>
-          !language.name.includes('languages') &&
-          !language.name.includes('Creoles')
+          ['A', 'C', 'L', 'E', 'H'].includes(language.type) // Only living, extinct or historical languages (exclusing special codes 'S' and macro languages 'M')
       )
-      .sort((a, b) => (b.name > a.name ? -1 : 0))
-    this.enLanguages = this.$languages.l1s
-      .filter(language => language.translations)
-      .sort((a, b) => (b.name > a.name ? -1 : 0))
+      .sort((a, b) => {
+        if(a.name < b.name) { return -1 }
+        if(a.name > b.name) { return 1 }
+        return 0
+      })
+    this.enLanguages = this.languages.filter(language => !['E', 'H'].includes(language.type))
   }
 }
 </script>

@@ -57,7 +57,7 @@
                 class="text-light mt-5 mb-5 text-center"
                 style="font-weight: 500"
               >Learn the world’s languages, from zero to hero.</h1>
-              <Choose class="mt-5" />
+              <Choose :compact="true" class="mt-5" />
             </div>
           </div>
         </div>
@@ -115,12 +115,12 @@ export default {
       try {
         this.$i18n.setLocaleMessage(
           this.$l1.code,
-          (await import(`@/lib/langs/${this.$l1['iso639-2t']}.js`)).default
+          (await import(`@/lib/langs/${this.$l1['iso639-3']}.js`)).default
             .translations
         )
       } catch (err) {
         console.log(
-          `UI translations for ${this.$l1['iso639-2t']} is unavailable.`
+          `UI translations for ${this.$l1['iso639-3']} is unavailable.`
         )
       }
     },
@@ -129,12 +129,12 @@ export default {
       try {
         this.$i18n.setLocaleMessage(
           this.$l2.code,
-          (await import(`@/lib/langs/${this.$l2['iso639-2t']}.js`)).default
+          (await import(`@/lib/langs/${this.$l2['iso639-3']}.js`)).default
             .translations
         )
       } catch (err) {
         console.log(
-          `UI translations for ${this.$l2['iso639-2t']} is unavailable.`
+          `UI translations for ${this.$l2['iso639-3']} is unavailable.`
         )
       }
     }
@@ -164,7 +164,9 @@ export default {
           this.updateClasses()
           Vue.prototype.$hasFeature = feature => {
             if (feature === 'dictionary') {
-              return this.$l1.dictionaries && this.$l1.dictionaries[this.$l2['iso639-2t']]
+              return this.$l1.dictionaries && this.$l1.dictionaries[this.$l2['iso639-3']]
+            } else if (feature === 'youtube') {
+              return this.$languages.hasYouTube(this.$l1, this.$l2)
             } else {
               return this.$languages
                 .getFeatures({
@@ -176,14 +178,14 @@ export default {
           }
           this.langsLoaded = true
           let dictionaries = this.$l1.dictionaries // ['freedict']
-            ? this.$l1.dictionaries[this.$l2['iso639-2t']]
+            ? this.$l1.dictionaries[this.$l2['iso639-3']]
             : undefined
           if (!Vue.prototype.$dictionary && dictionaries) {
             Vue.prototype.$dictionaryName = dictionaries[0] // 'freedict'
             Vue.prototype.$dictionary = Dict.load({
               dict: Vue.prototype.$dictionaryName,
-              l1: this.$l1['iso639-2t'],
-              l2: this.$l2['iso639-2t']
+              l1: this.$l1['iso639-3'],
+              l2: this.$l2['iso639-3']
             })
           }
           if (!Vue.prototype.$hanzi && ['zh', 'ko', 'ja'].includes(this.$l2.code)) {

@@ -1,4 +1,4 @@
-iso639-2t,english,zerotohero
+iso639-3,english,zerotohero
 afr,Engels,Nul tot held
 ara,الإنجليزية,من الصفر الى البطل
 ell,Αγγλικά,Μηδέν στον Ήρωα

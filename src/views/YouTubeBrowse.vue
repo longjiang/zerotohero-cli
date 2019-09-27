@@ -86,11 +86,11 @@ export default {
   },
   async mounted() {
     try {
-      this.youtubeL2 = await (await import(`@/lib/youtube-l2s/youtube-${this.$l2['iso639-2t']}.js`)).default
+      this.youtubeL2 = await (await import(`@/lib/youtube-l2s/youtube-${this.$l2['iso639-3']}.js`)).default
       this.channels = await this.youtubeL2.channels()
     } catch (err) {
       console.log(
-        `YouTube channels for ${this.$l2['iso639-2t']} is unavailable.`
+        `YouTube channels for ${this.$l2['iso639-3']} is unavailable.`
       )
     }
   }

@@ -170,27 +170,27 @@ export default {
     })
   },
   async loadDictionaries() {
-    this.dictionaries = await this.loadFile('/data/languages/dictionaries.csv')
+    this.dictionaries = await this.loadFile('/data/languages/dictionaries.csv.txt')
   },
   async loadLanguages() {
-    this.languages = await this.loadFile('/data/languages/languages.csv')
+    this.languages = await this.loadFile('/data/languages/languages.csv.txt')
   },
   async loadTranslations() {
-    this.translations = await this.loadFile('/data/languages/translations.csv')
+    this.translations = await this.loadFile('/data/languages/translations.csv.txt')
   },
   async loadFeatures() {
-    this.features = await this.loadFile('/data/languages/features.csv')
+    this.features = await this.loadFile('/data/languages/features.csv.txt')
   },
   async loadLocales() {
-    this.locales = await this.loadFile('/data/languages/locales.csv')
+    this.locales = await this.loadFile('/data/languages/locales.csv.txt')
   },
   get(iso639_2t) {
-    return this.l1s.find(language => language['iso639-2t'] === iso639_2t)
+    return this.l1s.find(language => language['iso639-3'] === iso639_2t)
   },
   getSmart(code) {
     return this.l1s.find(
       language =>
-        language['iso639-2t'] === code || language['iso639-1'] === code
+        language['iso639-3'] === code || language['iso639-1'] === code
     )
   },
   hasYouTube(l1, l2) {
@@ -199,12 +199,22 @@ export default {
     return this.googleTranslateLangs.includes(this.code(l1)) && this.googleLangs.includes(this.code(l2))
   },
   code(language) {
-    return language['iso639-1'] || language['iso639-2t']
+    return language['iso639-1'] || language['iso639-3']
   },
   loadL1Features(l1s) {
-    console.log('loading features')
+    /*
+     Goal:
+    {
+      "code": "af",
+      ...
+      "features": {
+        "eng": [ "home", "courses" ] // means we have the "home" feature if you are studing English through Afrikaans
+      }
+    },
+     */
+    console.log('Loading language features.')
     for (let features of this.features) {
-      let l1 = l1s.find(language => language['iso639-2t'] === features.l1)
+      let l1 = l1s.find(language => language['iso639-3'] === features.l1)
       l1.features = l1.features || {}
       l1.features[features.l2] = l1.features[features.l2] || []
       for (let key in features) {
@@ -214,18 +224,7 @@ export default {
         }
       }
     }
-    for (let l1 of l1s) {
-      for (let l2 of this.languages.filter(l => this.code(l) !== this.code(l1))) {
-        if(this.code(l1) === 'en' && this.code(l2) === 'zh') {
-          console.log('chinese?')
-        }
-        if (this.hasYouTube(l1, l2)) {
-          l1.features = l1.features || {}
-          l1.features[l2['iso639-2t']] = l1.features[l2['iso639-2t']] || []
-          l1.features[l2['iso639-2t']].push('youtube')
-        }
-      }
-    }
+    console.log('Features loaded.')
   },
   constructL1Data() {
     let l1s = []
@@ -234,7 +233,7 @@ export default {
     {
       "code": "af",
       "iso639-1": "afr",
-      "iso639-2t": "afr",
+      "iso639-3": "afr",
       "name": "Afrikaans",
       "direction": 'ltr',
       "dictionaries": {
@@ -254,9 +253,12 @@ export default {
     for (let language of this.languages) {
       let l1 = {
         code: this.code(language),
+        id: language.id,
         'iso639-1': language['iso639-1'],
         'iso639-2t': language['iso639-2t'],
+        'iso639-3': language['iso639-3'],
         name: language.name,
+        type: language.type,
         direction: language.direction || 'ltr',
         published: true
       }
@@ -264,14 +266,14 @@ export default {
     }
     for (let translation of this.translations) {
       let l1 = l1s.find(
-        language => language['iso639-2t'] === translation['iso639-2t']
+        language => language['iso639-3'] === translation['iso639-3']
       )
       if (l1) {
         l1.translations = translation
       }
     }
     for (let dictionary of this.dictionaries) {
-      let l1 = l1s.find(language => language['iso639-2t'] === dictionary.l1)
+      let l1 = l1s.find(language => language['iso639-3'] === dictionary.l1)
       l1.dictionaries = l1.dictionaries || {}
       l1.dictionaries[dictionary.l2] = l1.dictionaries[dictionary.l2] || []
       l1.dictionaries[dictionary.l2].push(dictionary.dictionary) // "freedict"
@@ -287,8 +289,8 @@ export default {
     return l1s
   },
   getFeatures(options) {
-    return options.l1.features && options.l1.features[options.l2['iso639-2t']]
-      ? options.l1.features[options.l2['iso639-2t']]
+    return options.l1.features && options.l1.features[options.l2['iso639-3']]
+      ? options.l1.features[options.l2['iso639-3']]
       : []
   },
   async load() {

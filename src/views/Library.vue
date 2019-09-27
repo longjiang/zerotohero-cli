@@ -86,12 +86,12 @@ export default {
   },
   async mounted() {
     try {
-      this.libraryL2 = await (await import(`@/lib/library-l2s/library-${this.$l2['iso639-2t']}.js`)).default
+      this.libraryL2 = await (await import(`@/lib/library-l2s/library-${this.$l2['iso639-3']}.js`)).default
       Library.setLangSources(this.libraryL2.sources)
       this.booklists = await this.libraryL2.booklists()
     } catch (err) {
       console.log(
-        `Booklists for ${this.$l2['iso639-2t']} is unavailable.`
+        `Booklists for ${this.$l2['iso639-3']} is unavailable.`
       )
     }
     this.sources = Library.sources()
