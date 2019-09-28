@@ -268,9 +268,8 @@ export default {
       }
       l1s.push(l1)
     }
-    console.log(this.scripts)
     for (let l1 of l1s) {
-      l1.scripts = this.scripts.filter(script => script.lang === l1.code)
+      l1.scripts = this.scripts.filter(script => script.lang === l1.code && script.ms !== 'N' && script.p !== 'N' && script.ml !== 'O')
     }
     for (let translation of this.translations) {
       let l1 = l1s.find(

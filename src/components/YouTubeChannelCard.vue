@@ -5,7 +5,7 @@
       <h6>
         <Annotate><span>{{ channel.title }}</span></Annotate>
       </h6>
-      <Annotate><div v-if="channel.description">{{ channel.description }}</div></Annotate>
+      <Annotate v-if="channel.description"><div>{{ channel.description }}</div></Annotate>
     </div>
   </a>
 </template>

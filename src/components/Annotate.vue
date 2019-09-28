@@ -2,9 +2,10 @@
   <component
     :is="tag"
     v-observe-visibility="visibilityChanged"
+    :dir="$l2.scripts && $l2.scripts[0].direction === 'rtl' ? 'rtl' : 'ltr'"
     :class="{
       'annotated': true,
-      'add-pinyin': nonLatin(),
+      'add-pinyin': $l2.scripts && $l2.scripts.length > 0 && $l2.scripts[0].script !== 'Latn',
       'show-definition': showDefOn,
       fullscreen: fullscreenMode
     }"
@@ -75,7 +76,10 @@ export default {
     // https://stackoverflow.com/questions/2550951/what-regular-expression-do-i-need-to-check-for-some-non-latin-characters
     nonLatin() {
       var rforeign = /[^\u0000-\u007f]/
-      return rforeign.test(this.text())
+      let nonLatin = rforeign.test(this.text())
+      console.log(this.text())
+      console.log(nonLatin)
+      return nonLatin
     },
     empty() {
       return (
@@ -96,8 +100,8 @@ export default {
     async visibilityChanged(isVisible) {
       if (isVisible && !this.annotated) {
         if (this.$hasFeature('dictionary') || this.nonLatin()) {
-          this.annotated = true
           await this.annotate()
+          this.annotated = true
         }
       }
     },

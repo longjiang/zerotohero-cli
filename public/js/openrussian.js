@@ -151,7 +151,6 @@ const Dictionary = {
       // promises.push(this.merge())
       promises.push(this.createIndex())
       await Promise.all(promises)
-      console.log(this)
       resolve(this)
     })
   },
