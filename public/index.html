@@ -4,14 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Zero to Hero">
-    <meta name="description" content="Learn languages of the world.">
-    <meta name="theme-color" content="#2F3BA2" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="apple-touch-icon" href="<%= BASE_URL %>apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/vendor/css-spinners/spinner/heartbeat.css">
     <link rel="stylesheet" href="/vendor/css-spinners/spinner/inner-circles.css">
@@ -29,16 +22,6 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/papaparse/papaparse.min.js"></script>
     <script src="vendor/kyujitai/kyujitai.js"></script>
-    <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-            .then((reg) => {
-              console.log('Service worker registered.', reg);
-            });
-      });
-    }
-    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>
