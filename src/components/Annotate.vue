@@ -1,11 +1,14 @@
 <template>
-  <component :is="tag" v-observe-visibility="visibilityChanged" 
+  <component
+    :is="tag"
+    v-observe-visibility="visibilityChanged"
     :class="{
       'annotated': true,
-      'add-pinyin': $l2.code === 'zh',
+      'add-pinyin': nonLatin(),
       'show-definition': showDefOn,
       fullscreen: fullscreenMode
-    }">
+    }"
+  >
     <div class="annotator-buttons" v-if="!empty()">
       <Speak
         v-if="speak"
@@ -31,11 +34,7 @@
       <i class="fas fa-times" />
     </span>
     <slot v-if="!this.annotated"></slot>
-    <v-runtime-template
-      v-else
-      v-for="template of annotatedSlots"
-      :template="template"
-    />
+    <v-runtime-template v-else v-for="template of annotatedSlots" :template="template" />
   </component>
 </template>
 
@@ -73,6 +72,11 @@ export default {
     }
   },
   methods: {
+    // https://stackoverflow.com/questions/2550951/what-regular-expression-do-i-need-to-check-for-some-non-latin-characters
+    nonLatin() {
+      var rforeign = /[^\u0000-\u007f]/
+      return rforeign.test(this.text())
+    },
     empty() {
       return (
         $(this.$el)
@@ -90,8 +94,8 @@ export default {
       this.fullscreenMode = !this.fullscreenMode
     },
     async visibilityChanged(isVisible) {
-      if (this.$hasFeature('dictionary')) {
-        if (isVisible && !this.annotated) {
+      if (isVisible && !this.annotated) {
+        if (this.$hasFeature('dictionary') || this.nonLatin()) {
           this.annotated = true
           await this.annotate()
         }
@@ -101,7 +105,9 @@ export default {
       if (this.$slots.default) {
         for (let slot of this.$slots.default) {
           let $before = $(slot.elm)
-          this.annotatedSlots.push($(await this.recursive($before[0]))[0].outerHTML)
+          this.annotatedSlots.push(
+            $(await this.recursive($before[0]))[0].outerHTML
+          )
         }
       }
     },
@@ -112,10 +118,10 @@ export default {
     },
     async tokenize(text, batchId) {
       let html = text
-      if ((await this.$dictionary).tokenize) {
+      if (await this.$dictionary && (await this.$dictionary).tokenize) {
         html = ''
         let tokenized = await (await this.$dictionary).tokenize(text)
-        
+
         this.tokenized[batchId] = tokenized
         for (let index = 0; index < this.tokenized[batchId].length; index++) {
           let item = this.tokenized[batchId][index]
@@ -139,7 +145,10 @@ export default {
         let sentences = this.breakSentences(node.nodeValue)
         for (let sentence of sentences) {
           let sentenceSpan = $(
-            `<span class="sentence">${await this.tokenize(sentence, this.batchId)}</span>`
+            `<span class="sentence">${await this.tokenize(
+              sentence,
+              this.batchId
+            )}</span>`
           )
           this.batchId = this.batchId + 1
           $(node).before(sentenceSpan)
@@ -207,5 +216,4 @@ export default {
     opacity: 1;
   }
 }
-  
 </style>

@@ -2,7 +2,7 @@
   <div class="main mt-5 mb-5">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-8 pr-4">
+        <div class="col-sm-12 col-md-8 pr-4 mb-5">
           <h3 class="mb-5">Resources for learning {{ $l2.name }}</h3>
           <ResourceList :resources="resources" />
         </div>
@@ -29,7 +29,7 @@
               :href="`#/${$l1.code}/${$l2.code}/resource/list/${topicValue}/${type}`"
             >{{ topicName }}</a>
           </div>
-          <h6 class="mt-4 mb-4 text-center">Format</h6>
+          <h6 class="mt-4 mb-4 text-center">Type</h6>
           <div class="list-group">
             <a
               :class="{
@@ -74,6 +74,7 @@ export default {
       resources: [],
       types: {
         av: 'Audio-Visual',
+        community: 'Community',
         games: 'Games',
         lists: 'Lists of Resources',
         music: 'Music',

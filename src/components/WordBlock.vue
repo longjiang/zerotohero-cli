@@ -25,7 +25,10 @@
         <span class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
         <span class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
       </template>
-      <slot v-else></slot>
+      <template v-else>
+        <span class="word-block-pinyin">{{ tr(text) }}</span>
+        <span class="word-block-text"><slot></slot></span>
+      </template>
     </span>
     <template slot="popover">
       <div
@@ -100,6 +103,7 @@
 import Helper from '@/lib/helper'
 import Config from '@/lib/config'
 import WordPhotos from '@/lib/word-photos'
+import { transliterate as tr } from 'transliteration'
 
 export default {
   props: {
@@ -109,6 +113,7 @@ export default {
   },
   data() {
     return {
+      tr,
       id: `wordblock-${Helper.uniqueId()}`,
       hover: false,
       loading: true,
