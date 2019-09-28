@@ -6,7 +6,7 @@
           <h1 class="page-title mb-4">
             {{ $t('Settings') }}
           </h1>
-          <div v-if="$l2.code === 'zh'">
+          <div v-if="$hasFeature('transliteration')">
             <h4>{{ $t('Annotation Settings') }}</h4>
             <AnnotationSettings />
           </div>

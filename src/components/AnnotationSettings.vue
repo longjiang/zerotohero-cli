@@ -1,12 +1,12 @@
 <template>
   <div>
-    <p>Set how pinyin-annotated text is displayed throughtout the site.</p>
+    <p>Set how annotated text is displayed throughtout the site.</p>
     <div class="mt-3">
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="show-pinyin" v-model="showPinyin" />
-        <label for="show-pinyin">Always show pinyin</label>
+        <label for="show-pinyin">Always show {{ $l2.code === 'zh' ? 'pinyin' : 'romanization' }}</label>
       </div>
-      <div class="form-check">
+      <div class="form-check" v-if="$hasFeature('dictionary')">
         <input
           type="checkbox"
           class="form-check-input"
@@ -15,7 +15,7 @@
         />
         <label for="show-definition">Always show definition</label>
       </div>
-      <div class="form-check">
+      <div class="form-check" v-if="$l2.code === 'zh'">
         <input
           type="radio"
           id="use-traditional"
@@ -25,7 +25,7 @@
         />
         <label for="use-traditional">Use Traditional (正體字/繁體字)</label>
       </div>
-      <div class="form-check">
+      <div class="form-check" v-if="$l2.code === 'zh'">
         <input
           type="radio"
           id="use-simplified"
@@ -38,15 +38,25 @@
     </div>
     <div class="jumbotron text-center mt-4 p-4">
       <p>
-        <b>Testing area:</b> Pinyin annotation will look like this
+        <b>Testing area:</b> Romanization will look like this
         throughout the site. Hover over the word blocks below, and adjust
         the settings as desired.
       </p>
       <hr />
       <Annotate tag="div" class="mt-4 mb-4 text-left">
-        <h4>神奇的丝瓜</h4>
-        <p>《标准教程 HSK 6》第18课课文</p>
-        <p>春天，孩子们在楼旁空地上开出一个小小的花园，随即种上了一棵树、几株花和几粒丝瓜种子。土壤不是很肥沃，但有水的滋润，阳光的照耀，没几天，丝瓜就从土里冒了出来，接着我惊讶地发现，它好像每时每刻都在长大。看着丝瓜，我心中难免不解:古人是怎么想的，愣是编出个拔苗助长的故事来？要是我，宁愿用别的比喻。</p>
+        <div v-if="$l2.code === 'zh'">
+          <h4>神奇的丝瓜</h4>
+          <p>《标准教程 HSK 6》第18课课文</p>
+          <p>春天，孩子们在楼旁空地上开出一个小小的花园，随即种上了一棵树、几株花和几粒丝瓜种子。土壤不是很肥沃，但有水的滋润，阳光的照耀，没几天，丝瓜就从土里冒了出来，接着我惊讶地发现，它好像每时每刻都在长大。看着丝瓜，我心中难免不解:古人是怎么想的，愣是编出个拔苗助长的故事来？要是我，宁愿用别的比喻。</p>
+        </div>
+        <div v-else>
+          <div v-if="$l2.scripts && $l2.scripts[0].direction === 'rtl'">
+            أم تلك غرّة، ارتكبها, و ليرتفع بمعارضة انه. ان خطّة اتفاق سنغافورة الا, بين مايو وقرى في. لان قد قبضتهم ايطاليا،. وسفن إحكام الجديدة، ثم حين, لكون الواقعة الإيطالية فعل أن. به، اعلان أسابيع الوراء ٣٠, أم حدى يذكر أحدث. هو رئيس الأخذ بالرغم حدى, به، أن عرفها أجزاء. بل وفرنسا بلديهما التقليدي مدن, الخطّة العالم، يبق أن, من وزارة استراليا، بحث.
+          </div>
+          <div v-else>
+            Лорем ипсум долор сит амет, вим еи цаусае импетус, не стет тамяуам про, пер цу ерант тхеопхрастус. Ех вих аутем албуциус ментитум, ад дицит елигенди оффициис иус. Еним лабитур оффендит сед цу, апериам цонсулату продессет нец еа, нулла зрил виртуте цу пер. Еа посидониум детерруиссет вих, вих не партем деленит импердиет. Меа ат харум чоро, деленит фабеллас сит ет, нонумы алтера иисяуе еам ет. Еам еи нисл виртуте.
+          </div>
+        </div>
       </Annotate>
     </div>
   </div>
@@ -56,25 +66,25 @@
 export default {
   data() {
     return {
-      showDefinition: localStorage.getItem('tzhShowDefinition') === 'true',
+      showDefinition: localStorage.getItem('zthShowDefinition') === 'true',
       showPinyin:
-        localStorage.getItem('tzhHidePinyinExceptSaved') === 'true'
+        localStorage.getItem('zthHidePinyinExceptSaved') === 'true'
           ? false
           : true,
-      useTraditional: localStorage.getItem('tzhUseTraditional') === 'true'
+      useTraditional: localStorage.getItem('zthUseTraditional') === 'true'
     }
   },
   watch: {
     showDefinition() {
-      localStorage.setItem('tzhShowDefinition', this.showDefinition)
+      localStorage.setItem('zthShowDefinition', this.showDefinition)
       this.$parent.$parent.showDefinition = this.showDefinition
     },
     showPinyin() {
-      localStorage.setItem('tzhHidePinyinExceptSaved', !this.showPinyin)
+      localStorage.setItem('zthHidePinyinExceptSaved', !this.showPinyin)
       this.$parent.$parent.hidePinyinExceptSaved = !this.showPinyin
     },
     useTraditional() {
-      localStorage.setItem('tzhUseTraditional', this.useTraditional === 'true')
+      localStorage.setItem('zthUseTraditional', this.useTraditional === 'true')
       this.$parent.$parent.useTraditional = this.useTraditional === 'true'
     }
   }

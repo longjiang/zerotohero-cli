@@ -5,7 +5,7 @@
     :dir="$l2.scripts && $l2.scripts[0].direction === 'rtl' ? 'rtl' : 'ltr'"
     :class="{
       'annotated': true,
-      'add-pinyin': $l2.scripts && $l2.scripts.length > 0 && $l2.scripts[0].script !== 'Latn',
+      'add-pinyin': $hasFeature('transliteration'),
       'show-definition': showDefOn,
       fullscreen: fullscreenMode
     }"

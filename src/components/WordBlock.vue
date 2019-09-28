@@ -134,7 +134,7 @@ export default {
   },
   mounted() {
     this.updateClasses()
-    if (this.$l2.code !== 'ja' && this.$l2.scripts && this.$l2.scripts.length > 0 && this.$l2.scripts[0].script !== 'Latn') {
+    if (this.$hasFeature('transliteration')) {
       this.transliteration = tr(this.text)
     }
   },

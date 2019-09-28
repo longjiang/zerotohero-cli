@@ -171,6 +171,8 @@ export default {
               return speechSynthesis
                 .getVoices()
                 .find(voice => voice.lang.startsWith(this.$l2.code))
+            } else if (feature === 'transliteration') {
+              return this.$l2.code !== 'ja' && this.$l2.scripts && this.$l2.scripts.length > 0 && this.$l2.scripts[0].script !== 'Latn'
             } else {
               return this.$languages
                 .getFeatures({
