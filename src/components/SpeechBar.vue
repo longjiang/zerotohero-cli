@@ -1,6 +1,6 @@
 <template>
   <div v-if="html" id="speech-container">
-    <div class="speech-bar mb-4 sticky bg-white pt-2 pb-2" v-if="$hasFeature('speech')">
+    <div class="speech-bar mb-4 sticky bg-white pt-2 pb-2">
       <b-button-group class="d-flex">
         <b-button @click="previous()">
           <i class="fas fa-chevron-left"></i>
@@ -51,6 +51,9 @@ export default {
       speaking: false,
       voices: []
     }
+  },
+  mounted() {
+    this.getVoices()
   },
   methods: {
     getSentences() {
