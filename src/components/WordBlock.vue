@@ -316,6 +316,7 @@ export default {
 .word-block-pinyin {
   font-size: 0.7em;
   margin: 0 0.2rem;
+  opacity: 0.7;
 }
 
 .word-block-definition {

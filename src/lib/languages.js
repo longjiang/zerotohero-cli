@@ -5,6 +5,7 @@ export default {
   features: [],
   l1s: [],
   locales: [],
+  scripts: [],
   googleLangs: [
     'af',
     'ar',
@@ -184,6 +185,9 @@ export default {
   async loadLocales() {
     this.locales = await this.loadFile('/data/languages/locales.csv.txt')
   },
+  async loadScripts() {
+    this.scripts = await this.loadFile('/data/languages/scripts.csv.txt')
+  },
   get(iso639_2t) {
     return this.l1s.find(language => language['iso639-3'] === iso639_2t)
   },
@@ -264,6 +268,10 @@ export default {
       }
       l1s.push(l1)
     }
+    console.log(this.scripts)
+    for (let l1 of l1s) {
+      l1.scripts = this.scripts.filter(script => script.lang === l1.code)
+    }
     for (let translation of this.translations) {
       let l1 = l1s.find(
         language => language['iso639-3'] === translation['iso639-3']
@@ -300,7 +308,8 @@ export default {
       this.loadLanguages(),
       this.loadTranslations(),
       this.loadFeatures(),
-      this.loadLocales()
+      this.loadLocales(),
+      this.loadScripts()
     ]
     return new Promise(async resolve => {
       await Promise.all(promises)
