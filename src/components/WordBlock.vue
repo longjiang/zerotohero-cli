@@ -26,7 +26,7 @@
         <span class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
       </template>
       <template v-else>
-        <span class="word-block-pinyin">{{ tr(text) }}</span>
+        <span class="word-block-pinyin" v-if="transliteration && transliteration !== text">{{ transliteration }}</span>
         <span class="word-block-text"><slot></slot></span>
       </template>
     </span>
@@ -113,7 +113,7 @@ export default {
   },
   data() {
     return {
-      tr,
+      transliteration: undefined,
       id: `wordblock-${Helper.uniqueId()}`,
       hover: false,
       loading: true,
@@ -134,6 +134,7 @@ export default {
   },
   mounted() {
     this.updateClasses()
+    this.transliteration = tr(this.text)
   },
   methods: {
     updateClasses() {
@@ -151,17 +152,19 @@ export default {
         return text
       }
     },
-    mouseover() {
-      if (this.loading === true) {
-        if (this.words && this.words.length === 0) {
-          this.lookup()
+    async mouseover() {
+      if (await this.$dictionary) {
+        if (this.loading === true) {
+          if (this.words && this.words.length === 0) {
+            this.lookup()
+          }
         }
+        setTimeout(() => {
+          if ($('.popover:hover').length === 0) {
+            this.hover = true
+          }
+        }, 300) // Allow user to interact with previous popover
       }
-      setTimeout(() => {
-        if ($('.popover:hover').length === 0) {
-          this.hover = true
-        }
-      }, 300) // Allow user to interact with previous popover
     },
     mouseout() {
       setTimeout(() => {
@@ -188,7 +191,9 @@ export default {
     },
     async click(e) {
       // [ [...all word forms, lowercase] ]
-      this.hover = true
+      if (await this.$dictionary) {
+        this.hover = true
+      }
       if (this.saved) {
         this.$store.dispatch('removeSavedWord', {text: this.text, l2: this.$l2.code} )
       } else {
@@ -243,10 +248,12 @@ export default {
       return abb[type] || type
     },
     speak(text) {
-      if (!speechSynthesis.speaking) {
-        this.utterance = new SpeechSynthesisUtterance(text)
-        this.utterance.lang = 'en-US'
-        speechSynthesis.speak(this.utterance)
+      if (this.$hasFeature('speech')) {
+        if (!speechSynthesis.speaking) {
+          this.utterance = new SpeechSynthesisUtterance(text)
+          this.utterance.lang = this.$l2.code
+          speechSynthesis.speak(this.utterance)
+        }
       }
     }
   }

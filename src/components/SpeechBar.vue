@@ -1,6 +1,6 @@
 <template>
   <div v-if="html" id="speech-container">
-    <div class="speech-bar mb-4 sticky bg-white pt-2 pb-2">
+    <div class="speech-bar mb-4 sticky bg-white pt-2 pb-2" v-if="$hasFeature('speech')">
       <b-button-group class="d-flex">
         <b-button @click="previous()">
           <i class="fas fa-chevron-left"></i>
@@ -65,7 +65,7 @@ export default {
     getVoices() {
       let voices = speechSynthesis
         .getVoices()
-        .filter(voice => voice.lang.startsWith('en'))
+        .filter(voice => voice.lang.startsWith(this.$l2.code))
       this.voices = voices
     },
     setvoice(index) {
@@ -85,7 +85,7 @@ export default {
     speak(text) {
       if (this.voices.length === 0) this.getVoices()
       this.utterance = new SpeechSynthesisUtterance(text)
-      this.utterance.lang = 'en-US'
+      this.utterance.lang = this.$l2.code
       this.utterance.voice = this.voices[this.voice]
       speechSynthesis.speak(this.utterance)
     },

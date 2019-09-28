@@ -167,6 +167,10 @@ export default {
               return this.$l1.dictionaries && this.$l1.dictionaries[this.$l2['iso639-3']]
             } else if (feature === 'youtube') {
               return this.$languages.hasYouTube(this.$l1, this.$l2)
+            } else if (feature === 'speech') {
+              return speechSynthesis
+                .getVoices()
+                .find(voice => voice.lang.startsWith(this.$l2.code))
             } else {
               return this.$languages
                 .getFeatures({

@@ -1,5 +1,6 @@
 <template>
   <i
+    v-if="$hasFeature('speech')"
     class="fas fa-volume-up focus-exclude speak"
     @click="speak"
   ></i>
@@ -17,7 +18,7 @@ export default {
         audio.play()
       } else if (this.text) {
         var utterance = new SpeechSynthesisUtterance(this.text)
-        utterance.lang = 'en'
+        utterance.lang = this.$l2.code
         speechSynthesis.speak(utterance)
       }
     }
