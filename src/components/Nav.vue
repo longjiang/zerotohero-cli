@@ -68,7 +68,7 @@
       <i class="fas fa-list-ul"></i>Grammar
     </router-link>
     <router-link
-      v-if="$hasFeature('dictionary')"
+      v-if="$hasFeature('dictionary') || $hasFeature('transliteration')"
       :class="{
         tab: true,
         'router-link-active':

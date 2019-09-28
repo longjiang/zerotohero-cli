@@ -77,8 +77,6 @@ export default {
     nonLatin() {
       var rforeign = /[^\u0000-\u007f]/
       let nonLatin = rforeign.test(this.text())
-      console.log(this.text())
-      console.log(nonLatin)
       return nonLatin
     },
     empty() {
