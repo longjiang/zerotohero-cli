@@ -66,6 +66,7 @@
 import YouTubeNav from '@/components/YouTubeNav'
 import YouTubeChannelCard from '@/components/YouTubeChannelCard'
 import SimpleSearch from '@/components/SimpleSearch'
+import Config from '@/lib/config'
 
 export default {
   components: {
@@ -85,13 +86,20 @@ export default {
     }
   },
   async mounted() {
-    try {
-      this.youtubeL2 = await (await import(`@/lib/youtube-l2s/youtube-${this.$l2['iso639-3']}.js`)).default
-      this.channels = await this.youtubeL2.channels()
-    } catch (err) {
-      console.log(
-        `YouTube channels for ${this.$l2['iso639-3']} is unavailable.`
-      )
+    let response = await $.getJSON(
+      `${Config.wiki}items/youtube_channels?filter[language][eq]=${this.$l2.id}&fields=*,avatar.*`
+    )
+    console.log(response.data)
+    let channels = response.data || []
+    if(channels.length > 0) {
+      this.channels = channels.map(channel => {
+        return {
+          id: channel.channel_id,
+          avatar: channel.avatar.data.full_url,
+          title: channel.name,
+          description: channel.description
+        }
+      })
     }
   }
 }
