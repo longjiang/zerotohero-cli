@@ -70,7 +70,6 @@
 
 <script>
 import $ from 'jquery'
-import Helper from '@/lib/helper'
 
 export default {
   data() {

@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import Helper from '@/lib/helper'
 import GrammarPoint from '@/components/GrammarPoint'
 import Grammar from '@/lib/grammar'
 

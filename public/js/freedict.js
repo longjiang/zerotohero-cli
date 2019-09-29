@@ -10,8 +10,8 @@ const Dictionary = {
       console.log('FreeDict: Loading words')
       let xhttp = new XMLHttpRequest()
       let that = this
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+      xhttp.onload = function() {
+        if (this.readyState == 4 && (this.status >= 200 && this.status < 400)) {
           that.words = that.parseDictionary(this.responseText)
           resolve()
         }

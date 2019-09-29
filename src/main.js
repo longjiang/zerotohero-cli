@@ -19,6 +19,7 @@ Vue.config.productionTip = false
 import { i18n } from './plugins/i18n.js'
 import router from './router'
 import store from './store'
+import './registerServiceWorker'
 
 Vue.use(BootstrapVue)
 Vue.use(VTooltip)
