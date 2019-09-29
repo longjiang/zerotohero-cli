@@ -1,6 +1,6 @@
 <template>
   <div v-if="html" id="speech-container">
-    <div class="speech-bar mb-4 sticky bg-white pt-2 pb-2" v-if="$hasFeature('speech')">
+    <div class="speech-bar mb-4 sticky bg-white pt-2 pb-2">
       <b-button-group class="d-flex">
         <b-button @click="previous()">
           <i class="fas fa-chevron-left"></i>
@@ -28,7 +28,7 @@
         .trim()
         .replace(/<(div|p|h1|h2|h3|h4|h5|h6|dd)/g, 'ANNOTATORSEPARATOR!!!<$1')
         .split('ANNOTATORSEPARATOR!!!')">
-      <Annotate v-if="line.trim().length > 0" class="mb-4" tag="div">
+      <Annotate v-if="line.trim().length > 0" class="mb-4" tag="div" :showTranslate="true">
         <span v-html="line.trim()" />
       </Annotate>
     </template>
@@ -52,6 +52,9 @@ export default {
       voices: []
     }
   },
+  mounted() {
+    this.getVoices()
+  },
   methods: {
     getSentences() {
       let sentences = []
@@ -72,8 +75,17 @@ export default {
       this.voice = index
     },
     sentenceText(sentence) {
-      let text = $(sentence).text()
-      return text
+      let text = ''
+      for (let block of $(sentence).find('.word-block, .word-block-text')) {
+        if ($(block).is('.word-block-text')) {
+          text += $(block).text()
+        } else {
+          text += $(block)
+            .find('.word-block-simplified')
+            .text()
+        }
+      }
+      return text || $(sentence).text()
     },
     update() {
       for (let sentence of this.getSentences() ) {

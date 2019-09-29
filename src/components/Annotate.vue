@@ -6,17 +6,16 @@
     :class="{
       'annotated': true,
       'add-pinyin': $hasFeature('transliteration'),
-      'show-definition': showDefOn,
       fullscreen: fullscreenMode
     }"
   >
     <div class="annotator-buttons" v-if="!empty()">
       <Speak
         v-if="speak"
-        :text="text()"
+        :text="text"
         style="position: relative; top: 0.08rem; position: relative;"
       />
-      <span class="annotator-show-def ml-2 focus-exclude" @click="showDefClick" v-if="showDef">
+      <span class="annotator-show-translate ml-2 focus-exclude" @click="translate = !translate" v-if="showTranslate">
         <i class="fas fa-language"></i>
       </span>
       <span
@@ -36,6 +35,7 @@
     </span>
     <slot v-if="!this.annotated"></slot>
     <v-runtime-template v-else v-for="template of annotatedSlots" :template="template" />
+    <iframe v-if="translate" height="500" width="100%" :src="`https://www.bing.com/translator/?from=${$l2.code}&to=${$l1.code}&text=${text}`" />
   </component>
 </template>
 
@@ -55,7 +55,7 @@ export default {
     tag: {
       default: 'span'
     },
-    showDef: {
+    showTranslate: {
       default: false
     },
     fullscreen: {
@@ -66,9 +66,10 @@ export default {
     return {
       annotatedSlots: [],
       annotated: false,
-      showDefOn: false,
+      translate: false,
       fullscreenMode: false,
       batchId: 0,
+      text: '',
       tokenized: []
     }
   },
@@ -76,7 +77,7 @@ export default {
     // https://stackoverflow.com/questions/2550951/what-regular-expression-do-i-need-to-check-for-some-non-latin-characters
     nonLatin() {
       var rforeign = /[^\u0000-\u007f]/
-      let nonLatin = rforeign.test(this.text())
+      let nonLatin = rforeign.test(this.text)
       return nonLatin
     },
     empty() {
@@ -85,12 +86,6 @@ export default {
           .text()
           .trim() === ''
       )
-    },
-    text() {
-      return $(this.$slots.default[0].elm).text()
-    },
-    showDefClick() {
-      this.showDefOn = !this.showDefOn
     },
     fullscreenClick() {
       this.fullscreenMode = !this.fullscreenMode
@@ -107,6 +102,7 @@ export default {
       if (this.$slots.default) {
         for (let slot of this.$slots.default) {
           let $before = $(slot.elm)
+          this.text += $before.text()
           this.annotatedSlots.push(
             $(await this.recursive($before[0]))[0].outerHTML
           )
@@ -114,7 +110,7 @@ export default {
       }
     },
     breakSentences(text) {
-      text = text.replace(/([.!?:])/g, '$1SENTENCEENDING!!!')
+      text = text.replace(/([.!?:。！？：])/g, '$1SENTENCEENDING!!!')
       let sentences = text.split('SENTENCEENDING!!!')
       return sentences.filter(sentence => sentence.trim() !== '')
     },
@@ -128,11 +124,12 @@ export default {
         for (let index = 0; index < this.tokenized[batchId].length; index++) {
           let item = this.tokenized[batchId][index]
           if (typeof item === 'object') {
-            if (this.tokenized[batchId]) {
+            let token = this.tokenized[batchId]
+            if (token && typeof token === 'object') {
               html += `<WordBlock :token="tokenized[${batchId}][${index}]"/>`
             }
           } else {
-            html += item
+            html += `<span class="word-block-text">${item}</span>`
           }
         }
       } else {
@@ -190,7 +187,7 @@ export default {
   padding: 3rem;
   .speak,
   .annotator-copy,
-  .annotator-show-def,
+  .annotator-show-translate,
   .annotator-fullscreen {
     display: none;
   }

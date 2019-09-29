@@ -6,7 +6,7 @@
       class="mr-2"
     />
     <div class="media-body">
-      <Annotate tag="h5" class="article-title">
+      <Annotate tag="h5" class="article-title"  :showTranslate="true">
         {{ article.title }}
         <a
           v-if="edit"
@@ -16,7 +16,7 @@
           >Edit</a
         >
       </Annotate>
-      <Annotate tag="div" v-html="article.body" class="article-body"></Annotate>
+      <Annotate tag="div" v-html="article.body" class="article-body" :showTranslate="true"></Annotate>
     </div>
   </article>
 </template>

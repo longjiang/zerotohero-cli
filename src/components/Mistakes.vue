@@ -6,9 +6,9 @@
         <ul class="collapsed pl-0" data-collapse-target>
           <li class="list-unstyled mistake-item mt-4 mb-4" v-for="mistake in mistakes">
             <span class="mistake-context collapsed" data-collapse-target>
-              <Annotate>{{ mistake.leftContext }}</Annotate>
+              <Annotate :showTranslate="true">{{ mistake.leftContext }}</Annotate>
             </span>
-            <Annotate class="mistake-sentence">
+            <Annotate class="mistake-sentence" :showTranslate="true">
               {{ mistake.left }}
               <span class="mistake-word">{{ text }}</span>
               {{ mistake.right }}
@@ -17,8 +17,8 @@
               <Annotate
                 :speak="true"
                 :copy="true"
-                :showDef="true"
                 :fullscreen="true"
+                :showTranslate="true"
               >{{ mistake.rightContext }}</Annotate>
             </span>
             <ShowMoreButton class="mb-2 btn-small ml-2">Context</ShowMoreButton>

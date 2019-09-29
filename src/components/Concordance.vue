@@ -5,7 +5,7 @@
       <div v-if="examples && examples.length > 0">
         <ul v-if="examples" class="collapsed list-unstyled" data-collapse-target>
           <li v-for="example in examples">
-            <Annotate tag="div" class="pt-2 pb-2">
+            <Annotate tag="div" class="pt-2 pb-2" :showTranslate="true">
               <span
                 v-html="
                   Helper.highlightMultiple(

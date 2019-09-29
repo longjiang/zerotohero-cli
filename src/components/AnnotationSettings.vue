@@ -43,7 +43,7 @@
         the settings as desired.
       </p>
       <hr />
-      <Annotate tag="div" class="mt-4 mb-4 text-left">
+      <Annotate tag="div" class="mt-4 mb-4 text-left" :showTranslate="true">
         <div v-if="$l2.code === 'zh'">
           <h4>神奇的丝瓜</h4>
           <p>《标准教程 HSK 6》第18课课文</p>

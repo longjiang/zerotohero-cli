@@ -55,6 +55,7 @@
             tag="div"
             class="transcript-title"
             v-html="lrc.artist + '《' + lrc.title + '》'"
+             :showTranslate="true"
           ></Annotate>
           <hr />
           <SyncedTranscript

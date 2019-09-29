@@ -16,12 +16,12 @@
         preload="auto"
       ></video>
       <div class="media-body">
-        <Annotate tag="h4" class="article-title">{{ article.title }}</Annotate>
+        <Annotate tag="h4" class="article-title" :showTranslate="true">{{ article.title }}</Annotate>
         <div
           v-if="article.media && article.media.oembed"
           v-html="Helper.unescape(article.media.oembed.html)"
         ></div>
-        <Annotate tag="div" v-html="Helper.unescape(article.selftext_html)" class="article-body"></Annotate>
+        <Annotate tag="div" v-html="Helper.unescape(article.selftext_html)" class="article-body" :showTranslate="true"></Annotate>
       </div>
     </div>
   </article>

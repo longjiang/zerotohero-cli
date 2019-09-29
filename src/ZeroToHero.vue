@@ -168,9 +168,10 @@ export default {
             } else if (feature === 'youtube') {
               return this.$languages.hasYouTube(this.$l1, this.$l2)
             } else if (feature === 'speech') {
-              return speechSynthesis
+              let voices = speechSynthesis
                 .getVoices()
-                .find(voice => voice.lang.startsWith(this.$l2.code))
+                .filter(voice => voice.lang.startsWith(this.$l2.code))
+              return voices.length > 0
             } else if (feature === 'transliteration') {
               return this.$l2.code !== 'ja' && this.$l2.scripts && this.$l2.scripts.length > 0 && this.$l2.scripts[0].script !== 'Latn'
             } else {
