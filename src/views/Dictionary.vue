@@ -181,8 +181,9 @@ export default {
     },
     show(entry) {
       this.entryKey += 1
+      entry.definitions = entry.definitions.map(definition => definition.replace(/\[.*\] /g, ''))
       this.entry = entry
-      document.title = `${entry.bare} (${entry.l1}) | ${this.$l1 ? this.$l1.name : ''} Zero to Hero`
+      document.title = `${entry.bare} (${entry.definitions[0]}) | ${this.$l2 ? this.$l2.name : ''} Zero to Hero`
     },
     async route() {
       if (this.method && this.args) {
