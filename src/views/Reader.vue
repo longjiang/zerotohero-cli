@@ -18,7 +18,7 @@
                 .trim()
                 .replace(/<(div|p|li|h1|h2|h3|h4|h5|h6)/g, '\n<$1')
                 .split('\n')">
-              <Annotate v-if="line.trim().length > 0" class="mb-3" tag="div">
+              <Annotate v-if="line.trim().length > 0" class="mb-3" tag="div" :showTranslate="true">
                 <span v-html="line.trim()" />
               </Annotate>
             </template>

@@ -38,34 +38,34 @@
                 {{ s.hsk }}
               </th>
               <th>
-                <Annotate><span>{{ s.v }}{{ s.o }}</span></Annotate>
+                <Annotate :showTranslate="true"><span>{{ s.v }}{{ s.o }}</span></Annotate>
               </th>
               <td>
-                <Annotate><span>{{ s.v }}不{{ s.v }}{{ s.o }}？</span></Annotate>
+                <Annotate :showTranslate="true"><span>{{ s.v }}不{{ s.v }}{{ s.o }}？</span></Annotate>
               </td>
               <td>
-                <Annotate><span>{{ s.v }}了{{ s.o }}</span></Annotate>
+                <Annotate :showTranslate="true"><span>{{ s.v }}了{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate><span>{{ s.v }}了一{{ s.measure }}{{ s.o }}</span></Annotate>
+                <Annotate :showTranslate="true"><span>{{ s.v }}了一{{ s.measure }}{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate><span>{{ s.v }}没{{ s.v }}{{ s.o }}？</span></Annotate>
+                <Annotate :showTranslate="true"><span>{{ s.v }}没{{ s.v }}{{ s.o }}？</span></Annotate>
               </td>
               <td>
-                <Annotate><span>{{ s.v }}{{ s.v }}{{ s.o }}</span></Annotate>
+                <Annotate :showTranslate="true"><span>{{ s.v }}{{ s.v }}{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate><span>{{ s.v }}了{{ s.v }}{{ s.o }}</span></Annotate>
+                <Annotate :showTranslate="true"><span>{{ s.v }}了{{ s.v }}{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate><span>{{ s.v }}完{{ s.o }}</span></Annotate>
+                <Annotate :showTranslate="true"><span>{{ s.v }}完{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate><span>{{ s.v }}得了{{ s.o }}</span></Annotate>
+                <Annotate :showTranslate="true"><span>{{ s.v }}得了{{ s.o }}</span></Annotate>
               </td>
               <td>
-                <Annotate><span>{{ s.v }}不了{{ s.o }}</span></Annotate>
+                <Annotate :showTranslate="true"><span>{{ s.v }}不了{{ s.o }}</span></Annotate>
               </td>
             </tr>
           </tbody>

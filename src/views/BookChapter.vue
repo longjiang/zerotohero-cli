@@ -25,7 +25,7 @@
           <Loader :sticky="true" />
         </div>
         <Annotate tag="h1"
-          ><span>{{ chapterTitle }}</span></Annotate
+          :showTranslate="true"><span>{{ chapterTitle }}</span></Annotate
         >
         <div class="chapter-content" v-if="chapterContent">
           <SpeechBar
@@ -37,6 +37,7 @@
               )
             "
           />
+          
         </div>
         <b-button-group class="d-flex mb-5">
           <b-button variant="light" v-if="previous" @click="previousClick">

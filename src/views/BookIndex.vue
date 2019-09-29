@@ -24,7 +24,7 @@
           alt="Book cover"
           class="mb-4 shadow book-thumb"
         />
-        <Annotate v-if="bookTitle">
+        <Annotate v-if="bookTitle" :showTranslate="true">
           <h6>
             <em>{{ bookTitle }}</em>
           </h6>

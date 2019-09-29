@@ -90,6 +90,7 @@
               v-html="
                 Helper.highlightMultiple(row.structure, row.words, row.book)
               "
+              :showTranslate="true"
             ></Annotate>
           </td>
           <td class="align-middle">
@@ -100,6 +101,7 @@
               v-html="
                 Helper.highlightMultiple(row.example, row.words, row.book)
               "
+              :showTranslate="true"
             ></Annotate>
           </td>
           <td class="align-middle">

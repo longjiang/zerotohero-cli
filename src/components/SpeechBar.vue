@@ -28,7 +28,7 @@
         .trim()
         .replace(/<(div|p|h1|h2|h3|h4|h5|h6|dd)/g, 'ANNOTATORSEPARATOR!!!<$1')
         .split('ANNOTATORSEPARATOR!!!')">
-      <Annotate v-if="line.trim().length > 0" class="mb-4" tag="div">
+      <Annotate v-if="line.trim().length > 0" class="mb-4" tag="div" :showTranslate="true">
         <span v-html="line.trim()" />
       </Annotate>
     </template>
@@ -75,8 +75,17 @@ export default {
       this.voice = index
     },
     sentenceText(sentence) {
-      let text = $(sentence).text()
-      return text
+      let text = ''
+      for (let block of $(sentence).find('.word-block, .word-block-text')) {
+        if ($(block).is('.word-block-text')) {
+          text += $(block).text()
+        } else {
+          text += $(block)
+            .find('.word-block-simplified')
+            .text()
+        }
+      }
+      return text || $(sentence).text()
     },
     update() {
       for (let sentence of this.getSentences() ) {

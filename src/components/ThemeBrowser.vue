@@ -19,6 +19,7 @@
             tag="span"
             class="dewey-l1-title"
             :wordBlockTemplateFilter="wordBlockTemplateFilter"
+             :showTranslate="true"
             ><span>{{ l1.title }}</span></Annotate
           >
         </h4>
@@ -41,6 +42,7 @@
                   tag="span"
                   class="dewey-l2-title"
                   :wordBlockTemplateFilter="wordBlockTemplateFilter"
+                   :showTranslate="true"
                   ><span>{{ l2.title }}</span></Annotate
                 >
               </h5>
@@ -53,6 +55,7 @@
                         tag="span"
                         class="dewey-l3-title"
                         :wordBlockTemplateFilter="wordBlockTemplateFilter"
+                         :showTranslate="true"
                       >
                         <span>{{ l3.title }}</span>
                       </Annotate>

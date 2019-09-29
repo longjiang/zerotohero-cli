@@ -12,7 +12,7 @@
       ></b>
     </Annotate>
     <div class="example-sentence-english grammar-english">{{ grammar.english }}</div>
-    <Annotate tag="div" class="example-sentence-word grammar-example">
+    <Annotate tag="div" class="example-sentence-word grammar-example" :showTranslate="true">
       <span
         v-html="
         Helper.highlightMultiple(grammar.example, grammar.words, grammar.book)

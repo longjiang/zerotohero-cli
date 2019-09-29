@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-sm-12">
           <h3 :key="title">
-            <Annotate>
+            <Annotate :showTranslate="true">
               <span>{{ title }}</span>
             </Annotate>
           </h3>

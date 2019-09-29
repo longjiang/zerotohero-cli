@@ -23,7 +23,7 @@
 
       <div v-for="comment in comments">
         <h6>{{ comment.author }}</h6>
-        <Annotate v-html="Helper.unescape(comment.body_html)"></Annotate>
+        <Annotate v-html="Helper.unescape(comment.body_html)" :showTranslate="true"></Annotate>
         <hr />
       </div>
     </div>

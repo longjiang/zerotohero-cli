@@ -32,7 +32,7 @@
               class="example-sentence-word"
               :speak="true"
               :copy="true"
-              :showDef="true"
+              :showTranslate="true"
               :fullscreen="true"
             >
               <span
