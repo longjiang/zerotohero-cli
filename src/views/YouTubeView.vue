@@ -1,6 +1,6 @@
 <template>
-  <div class="youtube-view main">
-    <div class="container mt-5 mb-5">
+  <div class="youtube-view main pt-5 pb-5">
+    <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <YouTubeNav class="mb-5" ref="search" />
@@ -17,6 +17,8 @@
           <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-5" />
         </div>
       </div>
+    </div>
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-6 sticky">
           <div class="sticky pt-3 pb-3 bg-white" :key="'youtube-' + args">

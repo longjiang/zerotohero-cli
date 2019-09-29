@@ -75,10 +75,13 @@ export default {
       }
     )
   },
-  getGoogleImages(text) {
+  getGoogleImages(options) {
+    options = Object.assign({
+      lang: 'en'
+    }, options)
     return new Promise(async resolve => {
       let $html = await Helper.scrape2(
-        `https://www.google.com/search?q=${text.replace(/ /g, '+')}&safe=active&sout=1&tbas=0&tbm=isch`
+        `https://www.google.com/search?q=${options.term.replace(/ /g, '+')}&lr=lang_${options.lang}&safe=active&sout=1&tbas=0&tbm=isch`
       )
       let images = []
       for (let td of $html.find('.images_table td')) {

@@ -234,9 +234,10 @@ export default {
         this.words = words
       }
       this.loading = false
-      this.images = (await WordPhotos.getGoogleImages(
-        this.token ? this.token.text : this.text
-      )).slice(0, 5)
+      this.images = (await WordPhotos.getGoogleImages({
+        term: this.token ? this.token.text : this.text,
+        lang: this.$l2.code
+      })).slice(0, 5)
     },
     abbreviate(type) {
       let abb = {
