@@ -48,13 +48,14 @@ export default {
     async updateURL() {
       let url = decodeURIComponent(this.args)
       this.$refs.search.text = url
-      YouTube.search(
-        this.args,
-        videos => {
-          this.videos = videos.filter(video => video.cc)
-        },
-        { subs: true, l2: this.$l2.code }
+      let videos = await YouTube.searchByGoogle(
+        {
+          term: this.args,
+          lang: this.$l2.code,
+          captions: true
+        }
       )
+      this.videos = videos
     }
   }
 }

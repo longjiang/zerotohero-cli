@@ -8,7 +8,7 @@ export default {
     if (this.limit) {
       url = url + this.limit
     }
-    $.getJSON(url, function(result) {
+    $.getJSON(url, function (result) {
       youtubeVue.lrcs = result
     })
   },
@@ -18,16 +18,16 @@ export default {
   searchYouTubeByProxy(searchTerm, callback) {
     $.ajax(
       Config.lrcServer +
-        'proxy.php?' +
-        'https://www.youtube.com/results?search_query=' +
-        searchTerm.replace(/ /g, '+')
-    ).done(function(response) {
+      'proxy.php?' +
+      'https://www.youtube.com/results?search_query=' +
+      searchTerm.replace(/ /g, '+')
+    ).done(function (response) {
       var videoIds = []
       // We use 'ownerDocument' so we don't load the images and scripts!
       // https://stackoverflow.com/questions/15113910/jquery-parse-html-without-loading-images
       var ownerDocument = document.implementation.createHTMLDocument('virtual')
       let $html = $(response, ownerDocument)
-      $html.find('.item-section li .yt-uix-tile-link').each(function() {
+      $html.find('.item-section li .yt-uix-tile-link').each(function () {
         if (
           !$(this)
             .attr('href')
@@ -93,6 +93,32 @@ export default {
       }
       callback(videos)
     })
+  },
+  async searchByGoogle(options) {
+    options = Object.assign({
+      lang: 'en',
+      captions: true
+    }, options)
+    let $html = await Helper.scrape2(`https://www.google.com/search?q=${options.term.replace(
+      / /g,
+      '+'
+    )}&lr=lang_${options.lang}&safe=active&tbs=srcf:H4sIAAAAAAAAANOuzC8tKU1K1UvOz1VLS0xOTcrPz4ZwMnNyy1OT9Apy1ErKM0tKUovAwpl5QFZmIki4ID-nOLEkL7W8GMQDAIqXaqNKAAAA${options.captions ? ',cc:1' : ''}&tbm=vid`)
+    let videos = []
+    let main = $html.toArray().find(element => element.id === 'main')
+    for (let a of $(main).find('a[href^="/url?q=https://www.youtube.com/watch"]')) {
+      let url = $(a).attr('href').replace(/\/url\?q=([^&]+).*/, '$1')
+      let title = $(a).find('div:first-child').text().replace(' - YouTube', '')
+      let id = url.replace('https://www.youtube.com/watch%3Fv%3D', '')
+      if (url && title && title !== '') {
+        videos.push({
+          id: id,
+          cc: options.captions ? true : undefined,
+          title: title,
+          thumbnail: `//img.youtube.com/vi/${id}/hqdefault.jpg`
+        })
+      }
+    }
+    return videos
   },
   mapChannelPlaylistsData(item) {
     return {
