@@ -25,7 +25,7 @@
             <YouTubeVideo ref="youtube" :youtube="args" />
           </div>
         </div>
-        <div class="col-sm-6" :key="'transcript-' + args">
+        <div class="col-md-6" :key="'transcript-' + args">
           <div v-if="loading" class="text-center">
             <Loader :sticky="true" />
           </div>

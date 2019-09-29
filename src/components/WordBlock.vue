@@ -83,7 +83,7 @@
             {{ abbreviate(word.type) }}
           </span>
           <span class="word-translation" v-if="word.definitions">
-            <em>{{ word.definitions.join(', ') }}</em>
+            <em>{{ word.definitions.map(definition => definition.replace(/\[.*\] /g, '')).join(', ') }}</em>
           </span>
         </div>
       </div>
