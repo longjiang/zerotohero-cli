@@ -18,6 +18,11 @@
             <h6 class="mt-5 mb-4">Vocabulary focus:</h6>
             <div v-html="lesson.vocabulary"></div>
           </div>
+          <div class="lesson-section"  v-if="lesson.youtubeVideos">
+            <h4>Pre-Study</h4>
+            <p>Watch any one of the videos and study the subtitles:</p>
+            <YouTubeVideoList :videos="lesson.youtubeVideos" />
+          </div>
           <div class="lesson-section">
             <h4>Activity 1: Read Together</h4>
             <p>Read any one of the following articles with the help of your tutor. Use the <a target="_blank" :href="`/#/${$l1.code}/${$l2.code}/reader`">Text Reader</a> for word lookup.</p>
@@ -78,8 +83,12 @@
 import WordPhotos from '@/lib/word-photos'
 import Config from '@/lib/config'
 import Helper from '@/lib/helper'
+import YouTubeVideoList from '@/components/YouTubeVideoList'
 
 export default {
+  components: {
+    YouTubeVideoList
+  },
   props: ['id'],
   data() {
     return {
@@ -97,10 +106,19 @@ export default {
       let readings = (await $.getJSON(
         `${Config.wiki}items/reading?filter[l2][eq]=${this.$l2.id}&filter[lesson][eq]=${this.id}`
       )).data
+      let youtubeVideos = (await $.getJSON(
+        `${Config.wiki}items/youtube_videos?filter[l2][eq]=${this.$l2.id}&filter[lesson][eq]=${this.id}`
+      )).data.map(video => {
+        return {
+          id: video.youtube_id,
+          title: video.title
+        }
+      })
       if (lesson) {
         this.lesson = lesson
         this.lesson.readings = readings
-        this.updateImages(this.lesson.name)
+        this.lesson.youtubeVideos = youtubeVideos
+        this.updateImages(this.$l2.name + ' ' + this.lesson.name)
       }
     },
     async updateImages(term) {
@@ -127,6 +145,9 @@ export default {
 
 <style lang="scss" scoped>
 .reading-card {
+  div {
+    opacity: 0.5;
+  }
 }
 .topics-heading {
   margin-top: 1rem;
