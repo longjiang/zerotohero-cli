@@ -21,6 +21,19 @@ export default {
   },
   loaderMessages: [],
   lastId: 0,
+  level(level) {
+    let levels = {
+      1: 'Pre-A1',
+      2: 'A1',
+      3: 'A2',
+      4: 'B1',
+      5: 'B2',
+      6: 'C1',
+      7: 'C2',
+      all: 'Any'
+    }
+    return levels[level]
+  },
   unescape(html) {
     return $('<div/>')
       .html(html)

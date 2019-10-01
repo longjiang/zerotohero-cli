@@ -1,159 +1,109 @@
 <template>
-  <div class="container main pt-5 pb-5">
-    <div class="row">
-      <div class="col-sm-12">
-        <div v-if="lesson">
-          <h6>
-            {{ $l2.name }} Tutoring Kit /
-            <span
-              :data-level="levels[lesson.level].replace('-', '')"
-            >{{ levels[lesson.level] }} Level</span>
-          </h6>
-          <hr />
-
-          <h1 class="mt-5 mb-5 text-center">{{ lesson.name }}</h1>
-          <div class="jumbotron shadow rounded mt-5 mb-5 pt-5 pb-3 bg-white topics">
-            <h6 class="mb-4">Topic focus:</h6>
-            <div v-html="lesson.subjects"></div>
-            <h6 class="mt-5 mb-4">Vocabulary focus:</h6>
-            <div v-html="lesson.vocabulary"></div>
-          </div>
-          <div class="lesson-section">
-            <h4>Activity 1: Read Together</h4>
-            <p>Read with the help of your tutor:</p>
-            <div v-html="lesson.reading"></div>
-          </div>
-          <div class="lesson-section">
-            <h4>Activity 2: Free Talk</h4>
-            <div v-html="lesson.free_talk"></div>
-            <p>• Describe one of the pictures to your tutor, and ask him or her to guess which picture you are talking about.</p>
-            <div
-              class="image-wall"
-              :key="`web-images-${lesson.name}`"
-              v-cloak
-              v-if="images && images.length > 0"
-            >
-              <img
-                alt
-                class="image-wall-image"
-                v-for="(image, index) in images"
-                :key="`web-images-${lesson.name}-${index}`"
-                :src="`${Config.imageProxy}?${image.src}`"
-                @click="goto(image.url)"
-              />
-            </div>
-          </div>
-          <div class="lesson-section">
-            <h4>Homework: Writing</h4>
-            <p>Complete the following task as homework, and go over with your tutor at the next session.</p>
-            <div v-html="lesson.writing"></div>
+  <div class="main pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="mb-5">Online Tutoring Lesson Kit</h1>
+          <div>
+            <p>
+              <b>About this kit:</b>When you are having a lesson with either a free language exchange partner or a paid tutor through services such as
+              <a
+                href="https://www.tandem.net/"
+              >Tandem</a>,
+              <a href="https://amikumu.com/">Amikumu</a>,
+              <a href="https://www.italki.com/">iTalki</a>,
+              <a href="https://www.hellotalk.com/">HelloTalk</a> or
+              <a href="https://preply.com/">Preply</a>, you can make use of this lesson kit to give structure and content to your lesson.
+            </p>
+            <p>
+              The kit is based around the Cambridge
+              <em>Touchstone</em> and
+              <em>Viewpoint</em> series of American English textbooks.
+            </p>
           </div>
         </div>
-        <hr class="mt-5 mb-5" />
-        <p>
-          <b>About this kit: </b>When you are having a lesson with either a free language exchange partner or a paid tutor through services such as
-          <a
-            href="https://www.tandem.net/"
-          >Tandem</a>,
-          <a href="https://amikumu.com/">Amikumu</a>,
-          <a href="https://www.italki.com/">iTalki</a>,
-          <a href="https://www.hellotalk.com/">HelloTalk</a> or
-          <a href="https://preply.com/">Preply</a>, you can make use of this lesson kit to give structure and content to your lesson.
-        </p>
-        <p>The kit is based around the Cambridge <em>Touchstone</em> and <em>Viewpoint</em> series of American English textbooks.</p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="tabs text-center">
+            <a :href="`#/${$l1.code}/${$l2.code}/tutoring/`" class="link-unstyled tab bg-dark">All</a>
+            <a
+              v-for="n in 7"
+              :href="`#/${$l1.code}/${$l2.code}/tutoring/${n}`"
+              class="tab link-unstyled"
+              :data-bg-level="Helper.level(n).replace('-', '')"
+            >{{ Helper.level(n) }}</a>
+            <div
+              style="height: 0.5rem"
+              :class="level ? `bg-level${Helper.level(level).replace('-', '')}` : `bg-dark`"
+            ></div>
+          </div>
+          <table v-if="lessons && lessons.length > 0" class="table table-responsive lessons-table">
+            <thead>
+              <tr>
+                <th class="text-center">ID</th>
+                <th>Topic</th>
+                <th>Read Together</th>
+                <th>Free Talk</th>
+                <th>Writing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="row in lessons"
+                :class="{
+                  'lessons-table-row': true,
+                  hidden: !(level === undefined || row.level === level)
+                }"
+                @click="goto(row.id)"
+              >
+                <td class="text-center">{{ row.id }}</td>
+                <td>{{ row.name }}</td>
+                <td v-html="row.reading"></td>
+                <td v-html="row.free_talk + '<p>• Describe a picture</p>'"></td>
+                <td v-html="row.writing"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import WordPhotos from '@/lib/word-photos'
+import Helper from '@/lib/helper'
 import Config from '@/lib/config'
 
 export default {
-  props: ['id'],
+  props: ['level'],
   data() {
     return {
-      Config,
-      lesson: undefined,
-      images: [],
-      levels: {
-        1: 'Pre-A1',
-        2: 'A1',
-        3: 'A2',
-        4: 'B1',
-        5: 'B2',
-        6: 'C1',
-        7: 'C2',
-        all: 'Any'
-      }
+      Helper,
+      lessons: undefined
     }
+  },
+  async created() {
+    let response = await $.getJSON(
+      `${Config.wiki}items/tutoring_kit?fields=id,name,reading,free_talk,writing,level`
+    )
+    this.lessons = response.data || []
   },
   methods: {
-    async route() {
-      let response = await $.getJSON(
-        `${Config.wiki}items/tutoring_kit/${this.id}`
-      )
-      if (response) {
-        this.lesson = response.data
-        this.updateImages(this.lesson.name)
-      }
-    },
-    async updateImages(term) {
-      this.images = []
-      let images = (await WordPhotos.getGoogleImages({
-        term: term,
-        lang: this.$l2.code
-      }))
-      this.images = images
-    },
-  },
-  watch: {
-    $route() {
-      if (this.$route.name === 'tutoring-view') {
-        this.route()
-      }
+    goto(id) {
+      location.hash = `/${this.$l1.code}/${this.$l2.code}/tutoring/lesson/${id}`
     }
-  },
-  created() {
-    this.route()
   }
 }
 </script>
 
-<style lang="scss" scoped>
-.topics-heading {
-  margin-top: 1rem;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
-.lesson-section {
-  margin-top: 3rem;
-  h4 {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-  }
-}
-.image-wall {
-  display: flex;
-  flex-wrap: wrap;
-}
-.image-wall-image {
-  object-fit: cover;
-  flex: 1;
-  height: 5rem;
-  width: auto;
-  background-color: #f5f5f5;
+<style>
+.lessons-table-row {
   cursor: pointer;
-  margin: 0.2rem;
-  max-width: 10rem;
 }
-.image-wall-image:last-child {
-  flex: 0;
+.lessons-table-row:hover {
+  background-color: #eee;
 }
 </style>
