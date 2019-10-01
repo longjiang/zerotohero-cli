@@ -692,6 +692,21 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/tutoring/view/:id',
+      name: 'tutoring-view',
+      component: () => import('./views/Tutoring.vue'),
+      props: true,
+      meta: {
+        title: 'Tutoring Kit | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Tools to help you get the most out of your online tutoring lessons.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/settings',
       name: 'settings',
       component: () => import('./views/Settings.vue'),
