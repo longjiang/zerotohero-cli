@@ -175,6 +175,23 @@
         {{$t('Affiliate Program')}}
       </router-link>
     </nav>
+
+    <nav
+      class="secondary-menu text-center"
+      v-if="
+        $route.name === 'resources' ||
+          $route.name === 'tutoring'
+      "
+    >
+      <router-link class="secondary-menu-item" :to="`/${$l1.code}/${$l2.code}/resource/list/all/all`">
+        <i class="fas fa-gem"></i>
+        {{ $t('Resources') }}
+      </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'tutoring' }">
+        <i class="fas fa-folder"></i>
+        {{ $t('Tutoring Kit') }}
+      </router-link>
+    </nav>
   </div>
 </template>
 
