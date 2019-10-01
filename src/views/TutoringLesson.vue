@@ -20,8 +20,16 @@
           </div>
           <div class="lesson-section">
             <h4>Activity 1: Read Together</h4>
-            <p>Read with the help of your tutor:</p>
-            <div v-html="lesson.reading"></div>
+            <p>Read any one of the following articles with the help of your tutor. Use the <a target="_blank" :href="`/#/${$l1.code}/${$l2.code}/reader`">Text Reader</a> for word lookup.</p>
+            <div v-if="!lesson.readings" v-html="lesson.reading"></div>
+            <div v-else>
+              <div v-for="reading in lesson.readings" class="reading-card rounded shadow p-3 mb-4">
+                <a class="link-unstyled" :href="reading.url" target="_blank">
+                  <h6>{{ reading.title }}</h6>
+                  <div>{{ reading.body | striphtml | truncate(150, '...') }}</div>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="lesson-section">
             <h4>Activity 2: Free Talk</h4>
@@ -83,11 +91,15 @@ export default {
   },
   methods: {
     async route() {
-      let response = await $.getJSON(
+      let lesson = (await $.getJSON(
         `${Config.wiki}items/tutoring_kit/${this.id}`
-      )
-      if (response) {
-        this.lesson = response.data
+      )).data
+      let readings = (await $.getJSON(
+        `${Config.wiki}items/reading?filter[l2][eq]=${this.$l2.id}&filter[lesson][eq]=${this.id}`
+      )).data
+      if (lesson) {
+        this.lesson = lesson
+        this.lesson.readings = readings
         this.updateImages(this.lesson.name)
       }
     },
@@ -98,7 +110,7 @@ export default {
         lang: this.$l2.code
       }))
       this.images = images
-    },
+    }
   },
   watch: {
     $route() {
@@ -114,6 +126,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.reading-card {
+}
 .topics-heading {
   margin-top: 1rem;
   font-weight: 700;
