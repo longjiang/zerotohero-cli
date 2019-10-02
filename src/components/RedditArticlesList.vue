@@ -2,6 +2,7 @@
   <ul class="articles list-unstyled">
     <li v-for="article in articles" class="article-list-item collapsed">
       <a
+        class="link-unstyled"
         :href="
           `#/${$l1.code}/${$l2.code}/articles/reddit/view/${article.id},${encodeURIComponent(
             article.title
