@@ -57,8 +57,6 @@ const decompositionTemplate = {
 }
 
 import Helper from '@/lib/helper'
-import Hanzi from '@/lib/hanzi'
-
 
 export default {
   props: ['char'],
@@ -71,9 +69,10 @@ export default {
     this.drawDecomposition(this.char, '#' + this.id)
   },
   methods: {
-    drawDecomposition(char, selector) {
-      const character = Hanzi.lookup(char)
-      character.walkDecompositionTree(node => {
+    async drawDecomposition(char, selector) {
+      const character = (await this.$hanzi).lookup(char)
+      if (!character) return
+      character.walkDecompositionTree(async node => {
         if (character.isIdeographicDescCharacter(node.character)) {
           if (node.parent) {
             node.selector = `${node.parent.selector} > .description-${
@@ -89,14 +88,12 @@ export default {
           if (node.character === '？') {
             $template = $(`<div class="part-pinyin">(other elements)</div>`)
           } else {
-            const childCharacter = Hanzi.lookupShallow(node.character)
+            const childCharacter = (await this.$hanzi).lookupShallow(
+              node.character
+            )
             $template = $(`
-            <div class="part-pinyin part-pinyin-${node.character}">${
-              childCharacter.pinyin
-            }</div>
-            <div class="part-character part-character-${node.character}">${
-              childCharacter.character
-            }</div>`)
+            <div class="part-pinyin part-pinyin-${node.character}">${childCharacter.pinyin}</div>
+            <div class="part-character part-character-${node.character}">${childCharacter.character}</div>`)
           }
           if (node.parent) {
             node.selector = `${node.parent.selector} > .description-${

@@ -159,7 +159,6 @@ const Dictionary = {
   },
   random() {
     let rand = this.randomProperty(this.words)
-    console.log(rand)
     return rand
   },
   lookupSimplified(simplified, pinyin = false) {

@@ -1,10 +1,10 @@
 <template>
-  <div class="main mt-4 mb-4 container" v-cloak>
+  <div class="main pt-5 pb-5 container" v-cloak>
     <div class="row">
       <div class="col-sm-12">
         <h4 class="page-title mb-4" v-if="method === 'saved'">Learn the words you saved</h4>
         <p
-          v-if="method === 'saved' && savedWordIds.length === 0"
+          v-if="method === 'saved' && savedWords.length === 0"
           class="alert alert-warning no-saved-words"
         >
           You don't have any words saved yet. Save words by clicking on the
@@ -44,6 +44,7 @@ export default {
       words: [],
       method: false,
       args: [],
+      savedWords: [],
       questionTypes: [
         'fill-in-the-blank',
         'make-a-sentence',
@@ -58,26 +59,33 @@ export default {
         this.route()
       }
     },
-    savedWordIds() {
-      if (this.method == 'saved') {
-        this.updateWords()
-      }
+    stateSavedWords() {
+      this.updateWords()
     }
   },
   beforeMount() {
     this.route()
   },
-  computed: mapState({
-    savedWordIds: state => state.savedWords
-  }),
+  computed: {
+    stateSavedWords() {
+      return this.$store.state.savedWords[this.$l2.code]
+    }
+  },
   methods: {
     async updateWords() {
-      this.words = []
-      for (let item of this.savedWordIds) {
-        let identifier = item.join(',').replace(/ /g, '_')
-        let entry = await (await this.$dictionary).getByIdentifier(identifier)
-        this.words.push(entry)
+      this.savedWords = []
+      this.savedTexts = []
+      if(this.$store.state.savedWords && this.$store.state.savedWords[this.$l2.code]) {
+        for (let wordForms of this.$store.state.savedWords[this.$l2.code]) {
+          let word = await (await this.$dictionary).lookup(wordForms[0])
+          if (word) {
+            this.savedWords.push(word)
+          } else {
+            this.savedTexts.push(wordForms[0].form)
+          }
+        }
       }
+      this.words = this.savedWords
     },
     async route() {
       if (this.$route.params.method) {
