@@ -183,7 +183,6 @@ export default {
                 .includes(feature)
             }
           }
-          this.langsLoaded = true
           let dictionaries = this.$l1.dictionaries // ['freedict']
             ? this.$l1.dictionaries[this.$l2['iso639-3']]
             : undefined
@@ -202,6 +201,7 @@ export default {
           if (!Vue.prototype.$grammar && ['zh'].includes(this.$l2.code)) {
             Vue.prototype.$grammar = (await import(`@/lib/grammar.js`)).default.load()
           }
+          this.langsLoaded = true
         }
       }
     }

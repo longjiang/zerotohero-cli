@@ -113,18 +113,24 @@
       </router-link>
     </nav>
 
-    <nav class="secondary-menu text-center" 
+    <nav
+      class="secondary-menu text-center"
       v-if="
         $route.name &&
           ($route.name.startsWith('youtube') ||
             $route.name === 'hero-academy' ||
             $route.name === 'music')
-      ">
+      "
+    >
       <router-link class="secondary-menu-item" :to="{ name: 'youtube-browse' }">
         <i class="fab fa-youtube" />
         {{ $t('YouTube Transcript') }}
       </router-link>
-      <router-link v-if="$hasFeature('hero-academy')" class="secondary-menu-item" :to="{ name: 'hero-academy' }">
+      <router-link
+        v-if="$hasFeature('hero-academy')"
+        class="secondary-menu-item"
+        :to="{ name: 'hero-academy' }"
+      >
         <i class="fas fa-school" />Hero Academy
       </router-link>
       <router-link v-if="$hasFeature('music')" class="secondary-menu-item" :to="{ name: 'music' }">
@@ -148,6 +154,38 @@
         <i class="fas fa-file-alt"></i>
         {{$t('Text Reader')}}
       </router-link>
+    </nav>
+
+    <nav
+      class="secondary-menu text-center"
+      v-if="
+        $route.name &&
+          ($route.name === 'grammar' || $route.name === 'noun-cases' || $route.name === 'analyzer' || $route.name === 'endings')"
+    >
+      <router-link
+        v-if="$hasFeature('grammar')"
+        class="secondary-menu-item"
+        :to="{ name: 'grammar' }"
+        title="A concise list of grammar points."
+      ><i class="fas fa-list-ul"></i> Grammar Cheat Sheet</router-link>
+      <router-link
+        v-if="$hasFeature('noun-cases')"
+        class="secondary-menu-item"
+        :to="{ name: 'noun-cases' }"
+        title="Learn how to decline nouns."
+      ><i class="fas fa-dice-two"></i> Noun Cases</router-link>
+      <router-link
+        v-if="$hasFeature('analyzer')"
+        class="secondary-menu-item"
+        :to="{ name: 'analyzer' }"
+        title="Take a piece of text and figure out the case of each adjective + noun combo."
+      ><i class="fas fa-dice-two"></i> Case Analyzer</router-link>
+      <router-link
+        v-if="$hasFeature('endings')"
+        class="secondary-menu-item"
+        :to="{ name: 'endings' }"
+        title="Figure out the dictionary form and case by looking up the ending."
+      ><i class="fas fa-dice-two"></i> Case Ending Lookup</router-link>
     </nav>
 
     <nav
@@ -183,7 +221,10 @@
           $route.name === 'tutoring'
       "
     >
-      <router-link class="secondary-menu-item" :to="`/${$l1.code}/${$l2.code}/resource/list/all/all`">
+      <router-link
+        class="secondary-menu-item"
+        :to="`/${$l1.code}/${$l2.code}/resource/list/all/all`"
+      >
         <i class="fas fa-gem"></i>
         {{ $t('Resources') }}
       </router-link>

@@ -63,7 +63,20 @@
       v-if="$hasFeature('grammar')"
       class="tab"
       :to="{ name: 'grammar' }"
-      title="Chinese grammar cheatsheet"
+      title="Grammar cheatsheet"
+    >
+      <i class="fas fa-list-ul"></i>Grammar
+    </router-link>
+    <router-link
+      v-if="$hasFeature('noun-cases')"
+      :class="{
+        tab: true,
+        'router-link-active': $route.name && $route.name === 'noun-cases' ||
+          $route.name === 'analyzer' ||
+          $route.name === 'endings'
+      }"
+      :to="{ name: 'noun-cases' }"
+      title="Grammar tools."
     >
       <i class="fas fa-list-ul"></i>Grammar
     </router-link>

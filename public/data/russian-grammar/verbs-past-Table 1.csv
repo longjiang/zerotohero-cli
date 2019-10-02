@@ -1,0 +1,17 @@
+gender,number,example,infinitive,past
+masculine,singular,жить,ть,л
+feminine,singular,жить,ть,ла
+neuter,singular,жить,ть,ло
+any,plural,жить,ть,ли
+masculine,singular,ползти́,ти,[аэыуояеёюибвгджзклмнпрстфхцчшщйьъ]
+feminine,singular,ползти́,ти,ла
+neuter,singular,ползти́,ти,ло
+any,plural,ползти́,ти,ли
+masculine,singular,мочь,чь,г
+feminine,singular,мочь,чь,гла́
+neuter,singular,мочь,чь,гло́
+any,plural,мочь,чь,гли́
+masculine,singular,печь,чь,к
+feminine,singular,печь,чь,кла́
+neuter,singular,печь,чь,кло́
+any,plural,печь,чь,кли́

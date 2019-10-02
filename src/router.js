@@ -571,6 +571,51 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/cases/nouns/:args?',
+      name: 'noun-cases',
+      props: true,
+      component: () => import('./views/NounCases.vue'),
+      meta: {
+        title: 'Learn Noun Cases | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Learn how to decline nouns.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/endings',
+      name: 'endings',
+      props: true,
+      component: () => import('./views/Endings.vue'),
+      meta: {
+        title: 'Lookup Case Endings | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Figure out the dictionary form and case by looking up the ending.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/analyzer',
+      name: 'analyzer',
+      props: true,
+      component: () => import('./views/Analyzer.vue'),
+      meta: {
+        title: 'Analyze Cases in Text | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Take a piece of text and figure out the case of each adjective + noun combo.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/articles/reddit/:method?/:args?',
       name: 'articles-reddit',
       component: () => import('./views/Reddit.vue'),
