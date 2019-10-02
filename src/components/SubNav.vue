@@ -217,8 +217,7 @@
     <nav
       class="secondary-menu text-center"
       v-if="
-        $route.name === 'resources' ||
-          $route.name === 'tutoring'
+        ['resources', 'tutoring', 'tutoring-lesson', 'articles-wiki', 'reddit', 'articles-reddit'].includes($route.name)
       "
     >
       <router-link
@@ -231,6 +230,15 @@
       <router-link class="secondary-menu-item" :to="{ name: 'tutoring' }">
         <i class="fas fa-folder"></i>
         {{ $t('Tutoring Kit') }}
+      </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'articles-wiki' }">
+        <i class="fab fa-wikipedia-w" />{{ $l2.name }} Learning Wiki
+      </router-link>
+      <router-link
+        class="secondary-menu-item"
+        :to="{ name: 'articles-reddit' }"
+      >
+        <i class="fab fa-reddit" />From Reddit
       </router-link>
     </nav>
   </div>

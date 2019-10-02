@@ -129,7 +129,7 @@
         tab: true,
         'router-link-active':
           $route.name &&
-          $route.name === 'resources'
+          ['resources', 'tutoring', 'tutoring-lesson', 'articles-wiki', 'reddit', 'articles-reddit'].includes($route.name)
       }"
       :to="`/${$l1.code}/${$l2.code}/resource/list/all/all`"
       :title="`Resources for learning ${l2 ? l2.name : 'the language'}.`"
