@@ -51,6 +51,13 @@
         <div>
           <Loader />
           <WordList :words="savedWords" :texts="savedTexts"></WordList>
+          <a
+            v-if="savedWords.length > 0"
+            class="btn btn-warning mt-4 mb-5"
+            :href="`#/${$l1.code}/${$l2.code}/learn/saved`"
+          >
+            <i class="fa fa-chalkboard"></i> Learn These Words
+          </a>
         </div>
       </div>
     </div>

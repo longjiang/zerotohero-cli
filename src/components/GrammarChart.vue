@@ -129,8 +129,10 @@ export default {
       location.hash = `#/${this.$l1.code}/${this.$l2.code}/grammar/view/${row.id}`
     }
   },
-  async created() {
-    this.grammar = (await this.$grammar)._grammarData
+  async mounted() {
+    this.$grammar.then(grammar => {
+      this.grammar = grammar._grammarData
+    })
   }
 }
 </script>

@@ -63,7 +63,20 @@
       v-if="$hasFeature('grammar')"
       class="tab"
       :to="{ name: 'grammar' }"
-      title="Chinese grammar cheatsheet"
+      title="Grammar cheatsheet"
+    >
+      <i class="fas fa-list-ul"></i>Grammar
+    </router-link>
+    <router-link
+      v-if="$hasFeature('noun-cases')"
+      :class="{
+        tab: true,
+        'router-link-active': $route.name && $route.name === 'noun-cases' ||
+          $route.name === 'analyzer' ||
+          $route.name === 'endings'
+      }"
+      :to="{ name: 'noun-cases' }"
+      title="Grammar tools."
     >
       <i class="fas fa-list-ul"></i>Grammar
     </router-link>
@@ -116,7 +129,7 @@
         tab: true,
         'router-link-active':
           $route.name &&
-          $route.name === 'resources'
+          ['resources', 'tutoring', 'tutoring-lesson', 'articles-wiki', 'reddit', 'articles-reddit'].includes($route.name)
       }"
       :to="`/${$l1.code}/${$l2.code}/resource/list/all/all`"
       :title="`Resources for learning ${l2 ? l2.name : 'the language'}.`"

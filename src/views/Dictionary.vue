@@ -194,6 +194,9 @@ export default {
             let entry = await (await this.$dictionary).get(this.args)
             this.show(entry)
           }
+        } else if (this.method === 'hsk') {
+          let entry = await (await this.$dictionary).getByHSKId(this.args)
+          this.show(entry)
         }
       }
     },
