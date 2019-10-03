@@ -57,12 +57,24 @@
 
       <div class="container">
         <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
-          <div class="col-sm-12">
+          <div class="col-sm-12" v-if="$l2.code !== 'zh'">
             <EntryCharacters
               v-if="entry.cjk && entry.cjk.canonical"
               class="mb-4"
               :text="entry.cjk.canonical"
               :pinyin="entry.cjk.phonetics ? entry.cjk.phonetics : undefined"
+            ></EntryCharacters>
+          </div>
+          <div class="col-sm-12" v-else>
+            <EntryCharacters
+              class="mb-4 simplified"
+              :text="entry.simplified"
+              :pinyin="entry.pinyin"
+            ></EntryCharacters>
+            <EntryCharacters
+              class="mb-4 traditional"
+              :text="entry.traditional"
+              :pinyin="entry.pinyin"
             ></EntryCharacters>
           </div>
         </div>
