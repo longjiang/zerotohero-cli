@@ -111,12 +111,10 @@ export default {
       this.savedWords = []
       this.savedTexts = []
       if(this.$store.state.savedWords && this.$store.state.savedWords[this.$l2.code]) {
-        for (let wordForms of this.$store.state.savedWords[this.$l2.code]) {
-          let word = await (await this.$dictionary).lookup(wordForms[0])
+        for (let savedWord of this.$store.state.savedWords[this.$l2.code]) {
+          let word = await (await this.$dictionary).get(savedWord.id)
           if (word) {
             this.savedWords.push(word)
-          } else {
-            this.savedTexts.push(wordForms[0].form)
           }
         }
       }

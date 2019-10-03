@@ -15,7 +15,6 @@
       :data-hover-level="
         words && words.length > 0 ? words[0].level || 'outside' : 'outside'
       "
-      @click="click"
       @mouseover="mouseover"
       @mouseout="mouseout"
     >
@@ -57,6 +56,7 @@
             <span style="color: #999" v-if="word.pinyin">{{ word.pinyin }}</span>
             <Speak :text="word.bare" :mp3="word.audio" class="ml-1" />
           </div>
+          <Star :word="word"></Star>
           <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${words[0].id}`">
             <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ word.accented }}</b>
           </a>
@@ -175,38 +175,6 @@ export default {
           this.hover = false
         }
       }, 300)
-    },
-    async allForms() {
-      let forms = this.token
-        ? [this.token.text.toLowerCase()]
-        : [this.text.toLowerCase()]
-      if (this.words.length > 0) {
-        for (let word of this.words) {
-          let wordForms = (await (await this.$dictionary).wordForms(word)) || []
-          wordForms = wordForms
-            .map(form => form.form.replace(/'/g, '').toLowerCase())
-            .filter(form => form !== '' && form !== '0' && form !== '1')
-          forms = forms.concat(wordForms)
-        }
-      }
-      return Helper.unique(forms)
-    },
-    async click(e) {
-      // [ [...all word forms, lowercase] ]
-      if (await this.$dictionary) {
-        this.hover = true
-      }
-      if (this.saved) {
-        this.$store.dispatch('removeSavedWord', {text: this.text, l2: this.$l2.code} )
-      } else {
-        this.speak(this.text)
-        this.$store.dispatch('addSavedWord', {
-          wordForms: await this.allForms(),
-          l2: this.$l2.code
-        })
-      }
-      this.saved = !this.saved
-      return false
     },
     async lookup() {
       if (this.token) {
