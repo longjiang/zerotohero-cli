@@ -94,8 +94,8 @@ export default {
     async updateImages(term) {
       this.images = []
       let images = (await WordPhotos.getGoogleImages({
-        term: term,
-        lang: this.$l2.code
+        term: `${this.$l2.name} + ${term}`,
+        lang: 'en'
       }))
       this.images = images
     },
