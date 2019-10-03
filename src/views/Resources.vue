@@ -26,7 +26,7 @@
                 'list-group-item-action': topicValue === topic,
                 active: topicValue === topic
               }"
-              :href="`#/${$l1.code}/${$l2.code}/resource/list/${topicValue}/${type}`"
+              :href="`#/${$l1.code}/${$l2.code}/resource/list/${topicValue}/all`"
             >{{ topicName }}</a>
           </div>
           <h6 class="mt-4 mb-4 text-center">Type</h6>
@@ -48,7 +48,7 @@
                 'list-group-item-action': typeValue === type,
                 active: typeValue === type
               }"
-              :href="`#/${$l1.code}/${$l2.code}/resource/list/${topic}/${typeValue}`"
+              :href="`#/${$l1.code}/${$l2.code}/resource/list/all/${typeValue}`"
             >{{ typeName }}</a>
           </div>
         </div>
@@ -75,6 +75,7 @@ export default {
       types: {
         av: 'Audio-Visual',
         community: 'Community',
+        courses: 'Courses',
         games: 'Games',
         lists: 'Lists of Resources',
         music: 'Music',
