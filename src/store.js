@@ -15,26 +15,32 @@ export default new Vuex.Store({
       if (
         !state.savedWords[options.l2].find(item => item.id === options.word.id)
       ) {
-        state.savedWords[options.l2].push({
+        let savedWords = Object.assign({}, state.savedWords)
+        savedWords[options.l2].push({
           id: options.word.id,
           forms: options.wordForms
         })
-        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
+        localStorage.setItem('zthSavedWords', JSON.stringify(savedWords))
+        Vue.set(state, 'savedWords', savedWords)
       }
     },
     REMOVE_SAVED_WORD(state, options) {
       if (state.savedWords[options.l2]) {
         const keepers = state.savedWords[options.l2].filter(
-          item => !item.id === options.word.id
+          item => item.id !== options.word.id
         )
-        state.savedWords[options.l2] = keepers
-        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
+        let savedWords = Object.assign({}, state.savedWords)
+        savedWords[options.l2] = keepers
+        localStorage.setItem('zthSavedWords', JSON.stringify(savedWords))
+        Vue.set(state, 'savedWords', savedWords)
       }
     },
     REMOVE_ALL_SAVED_WORDS(state, options) {
       if (state.savedWords[options.l2]) {
-        state.savedWords[options.l2] = []
-        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
+        let savedWords = Object.assign({}, state.savedWords)
+        savedWords[options.l2] = []
+        localStorage.setItem('zthSavedWords', JSON.stringify(savedWords))
+        Vue.set(state, 'savedWords', savedWords)
       }
     }
   },

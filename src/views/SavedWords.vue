@@ -11,14 +11,14 @@
           <button
             class="upload-list btn btn-primary"
             v-on:click="showExportClick"
-            :disabled="this.savedWords.length <= 0"
+            :disabled="this.sW.length <= 0"
           >
             <i class="glyphicon glyphicon-cloud-download"></i> {{ $t('Export CSV') }}
           </button>&nbsp;
           <button
             class="remove-all btn btn-danger"
             v-on:click="removeAllClick"
-            :disabled="this.savedWords.length <= 0"
+            :disabled="this.sW.length <= 0"
           >
             <i class="glyphicon glyphicon-trash"></i>
             {{ $t('Clear') }}
@@ -42,7 +42,7 @@
     <!-- .row -->
     <div class="row">
       <div class="col-sm-12">
-        <p v-if="loaded && savedWords.length <= 0" class="alert alert-warning no-saved-words">
+        <p v-if="loaded && sW.length <= 0" class="alert alert-warning no-saved-words">
           You don't have any words saved yet. Save words by clicking on the
           <i
             class="glyphicon glyphicon-star-empty"
@@ -50,9 +50,9 @@
         </p>
         <div>
           <Loader />
-          <WordList :words="savedWords" :texts="savedTexts"></WordList>
+          <WordList :words="sW" :texts="savedTexts"></WordList>
           <a
-            v-if="savedWords.length > 0"
+            v-if="sW.length > 0"
             class="btn btn-warning mt-4 mb-5"
             :href="`#/${$l1.code}/${$l2.code}/learn/saved`"
           >
@@ -80,7 +80,7 @@ export default {
       loaded: false,
       csvText: '',
       showExport: false,
-      savedWords: [],
+      sW: [],
       savedTexts: [],
       selectedCsvOptions: ['en', 'definitions'],
       csvOptions: [
@@ -94,38 +94,34 @@ export default {
     async selectedCsvOptions() {
       this.csvText = await this.csv()
     },
-    stateSavedWords() {
+    savedWords() {
       this.updateWords()
     }
   },
   mounted() {
     this.updateWords()
   },
-  computed: {
-    stateSavedWords() {
-      return this.$store.state.savedWords[this.$l2.code]
-    }
-  },
+  computed: mapState(['savedWords']),
   methods: {
     async updateWords() {
-      this.savedWords = []
+      this.sW = []
       this.savedTexts = []
       if(this.$store.state.savedWords && this.$store.state.savedWords[this.$l2.code]) {
         for (let savedWord of this.$store.state.savedWords[this.$l2.code]) {
           let word = await (await this.$dictionary).get(savedWord.id)
           if (word) {
-            this.savedWords.push(word)
+            this.sW.push(word)
           }
         }
       }
     },
     async csv() {
-      if (this.savedWords.length <= 0) {
+      if (this.sW.length <= 0) {
         return ''
       }
 
       let csv = ''
-      for (let word of this.savedWords) {
+      for (let word of this.sW) {
         if (this.selectedCsvOptions.includes('en')) {
           let a = word.accented
           csv += `${a}\t`
