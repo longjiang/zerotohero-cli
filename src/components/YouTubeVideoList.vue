@@ -3,7 +3,7 @@
     <div v-for="video of videos" class="youtube-video media rounded shadow">
       <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.id}`" class="youtube-link">
         <div class="youtube-thumbnail-wrapper aspect-wrapper">
-          <img :src="video.thumbnail" class="youtube-thumbnail aspect" />
+          <img :src="video.thumbnail || `//img.youtube.com/vi/${video.id}/hqdefault.jpg`" class="youtube-thumbnail aspect" />
         </div>
         <div class="youtube-title media-body"><Annotate><span>{{ video.title }}</span></Annotate></div>
       </a>

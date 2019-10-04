@@ -18,10 +18,23 @@
             <h6 class="mt-5 mb-4">Vocabulary focus:</h6>
             <div v-html="lesson.vocabulary"></div>
           </div>
+          <div class="lesson-section"  v-if="lesson.youtubeVideos">
+            <h4>Pre-Study</h4>
+            <p>Watch any one of the videos and study the subtitles:</p>
+            <YouTubeVideoList :videos="lesson.youtubeVideos" />
+          </div>
           <div class="lesson-section">
             <h4>Activity 1: Read Together</h4>
-            <p>Read with the help of your tutor:</p>
-            <div v-html="lesson.reading"></div>
+            <p>Read any one of the following articles with the help of your tutor. Use the <a target="_blank" :href="`/#/${$l1.code}/${$l2.code}/reader`">Text Reader</a> for word lookup.</p>
+            <div v-if="!lesson.readings" v-html="lesson.reading"></div>
+            <div v-else>
+              <div v-for="reading in lesson.readings" class="reading-card rounded shadow p-3 mb-4">
+                <a class="link-unstyled" :href="reading.url" target="_blank">
+                  <h6>{{ reading.title }}</h6>
+                  <div>{{ reading.body | striphtml | truncate(150, '...') }}</div>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="lesson-section">
             <h4>Activity 2: Free Talk</h4>
@@ -70,8 +83,12 @@
 import WordPhotos from '@/lib/word-photos'
 import Config from '@/lib/config'
 import Helper from '@/lib/helper'
+import YouTubeVideoList from '@/components/YouTubeVideoList'
 
 export default {
+  components: {
+    YouTubeVideoList
+  },
   props: ['id'],
   data() {
     return {
@@ -83,12 +100,25 @@ export default {
   },
   methods: {
     async route() {
-      let response = await $.getJSON(
+      let lesson = (await $.getJSON(
         `${Config.wiki}items/tutoring_kit/${this.id}`
-      )
-      if (response) {
-        this.lesson = response.data
-        this.updateImages(this.lesson.name)
+      )).data
+      let readings = (await $.getJSON(
+        `${Config.wiki}items/reading?filter[l2][eq]=${this.$l2.id}&filter[lesson][eq]=${this.id}`
+      )).data
+      let youtubeVideos = (await $.getJSON(
+        `${Config.wiki}items/youtube_videos?filter[l2][eq]=${this.$l2.id}&filter[lesson][eq]=${this.id}`
+      )).data.map(video => {
+        return {
+          id: video.youtube_id,
+          title: video.title
+        }
+      })
+      if (lesson) {
+        this.lesson = lesson
+        this.lesson.readings = readings
+        this.lesson.youtubeVideos = youtubeVideos
+        this.updateImages(this.$l2.name + ' ' + this.lesson.name)
       }
     },
     async updateImages(term) {
@@ -98,7 +128,7 @@ export default {
         lang: 'en'
       }))
       this.images = images
-    },
+    }
   },
   watch: {
     $route() {
@@ -114,6 +144,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.reading-card {
+  div {
+    opacity: 0.5;
+  }
+}
 .topics-heading {
   margin-top: 1rem;
   font-weight: 700;

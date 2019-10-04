@@ -32,6 +32,23 @@ Vue.component('Speak', Speak)
 Vue.component('ShowMoreButton', ShowMoreButton)
 Vue.component('WordList', WordList)
 
+// https://stackoverflow.com/questions/44371639/how-to-remove-html-tags-from-rendered-text
+Vue.filter('striphtml', function (value) {
+  var div = document.createElement('div')
+  div.innerHTML = value
+  var text = div.textContent || div.innerText || ''
+  return text
+})
+
+https://stackoverflow.com/questions/35070271/vue-js-components-how-to-truncate-the-text-in-the-slot-element-in-a-component
+Vue.filter('truncate', function(text, length, clamp){
+  clamp = clamp || '...'
+  var node = document.createElement('div')
+  node.innerHTML = text
+  var content = node.textContent
+  return content.length > length ? content.slice(0, length) + clamp : content
+})
+
 // https://alligator.io/vuejs/vue-router-modify-head/
 // This callback runs before every route change, including on page load.
 router.beforeEach((to, from, next) => {
