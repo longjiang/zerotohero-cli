@@ -13,29 +13,34 @@ export default new Vuex.Store({
         state.savedWords[options.l2] = []
       }
       if (
-        !state.savedWords[options.l2].find(item => {
-          if (item && Array.isArray(item)) {
-            return item.join(',') === options.wordForms.join(',')
-          }
-        })
+        !state.savedWords[options.l2].find(item => item.id === options.word.id)
       ) {
-        state.savedWords[options.l2].push(options.wordForms)
-        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
+        let savedWords = Object.assign({}, state.savedWords)
+        savedWords[options.l2].push({
+          id: options.word.id,
+          forms: options.wordForms
+        })
+        localStorage.setItem('zthSavedWords', JSON.stringify(savedWords))
+        Vue.set(state, 'savedWords', savedWords)
       }
     },
     REMOVE_SAVED_WORD(state, options) {
       if (state.savedWords[options.l2]) {
         const keepers = state.savedWords[options.l2].filter(
-          item => !item.includes(options.wordForm)
+          item => item.id !== options.word.id
         )
-        state.savedWords[options.l2] = keepers
-        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
+        let savedWords = Object.assign({}, state.savedWords)
+        savedWords[options.l2] = keepers
+        localStorage.setItem('zthSavedWords', JSON.stringify(savedWords))
+        Vue.set(state, 'savedWords', savedWords)
       }
     },
     REMOVE_ALL_SAVED_WORDS(state, options) {
       if (state.savedWords[options.l2]) {
-        state.savedWords[options.l2] = []
-        localStorage.setItem('zthSavedWords', JSON.stringify(state.savedWords))
+        let savedWords = Object.assign({}, state.savedWords)
+        savedWords[options.l2] = []
+        localStorage.setItem('zthSavedWords', JSON.stringify(savedWords))
+        Vue.set(state, 'savedWords', savedWords)
       }
     }
   },
@@ -66,7 +71,7 @@ export default new Vuex.Store({
     hasSavedWord: state => options => {
       if (state.savedWords[options.l2]) {
         let yes = state.savedWords[options.l2].find(
-          item => Array.isArray(item) && item.includes(options.text)
+          item => item.forms.includes(options.text)
         )
         return yes
       }

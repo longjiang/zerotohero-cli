@@ -13,11 +13,25 @@
         </div>
         <div>
           <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${entry.bare}`">
-            <span
-              class="entry-word"
-              :data-level="entry.level || 'outside'"
-              v-html="entry.accented"
-            ></span>
+            <template v-if="$l2.code === 'zh'">
+              <span
+                class="entry-word simplified"
+                :data-level="entry.level || 'outside'"
+                v-html="entry.simplified"
+              ></span>
+              <span
+                class="entry-word traditional"
+                :data-level="entry.level || 'outside'"
+                v-html="entry.traditional"
+              ></span>
+            </template>
+            <template v-else>
+              <span
+                class="entry-word"
+                :data-level="entry.level || 'outside'"
+                v-html="entry.accented"
+              ></span>
+            </template>
             <span
               v-if="entry.level && entry.level !== 'outside' && $l2.code !== 'zh'"
               class="entry-level p-1 rounded ml-2"
@@ -29,6 +43,10 @@
         </div>
         <div v-if="$l2.code === 'ko' && entry.cjk && entry.cjk.canonical" class="mt-1">
           <span class="ml-2 entry-cjk">{{ entry.cjk.canonical }}</span>
+        </div>
+        <div v-if="$l2.code === 'zh' && entry.simplified !== entry.traditional" class="mt-1">
+          <span class="ml-2 entry-cjk simplified">{{ entry.traditional }}</span>
+          <span class="ml-2 entry-cjk traditional">{{ entry.simplified }}</span>
         </div>
       </div>
     </div>

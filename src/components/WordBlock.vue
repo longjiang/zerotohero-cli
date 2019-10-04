@@ -15,7 +15,6 @@
       :data-hover-level="
         words && words.length > 0 ? words[0].level || 'outside' : 'outside'
       "
-      @click="click"
       @mouseover="mouseover"
       @mouseout="mouseout"
     >
@@ -26,8 +25,13 @@
         <span class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
       </template>
       <template v-else>
-        <span class="word-block-pinyin" v-if="transliteration && transliteration !== text">{{ transliteration }}</span>
-        <span class="word-block-text"><slot></slot></span>
+        <span
+          class="word-block-pinyin"
+          v-if="transliteration && transliteration !== text"
+        >{{ transliteration }}</span>
+        <span class="word-block-text">
+          <slot></slot>
+        </span>
       </template>
     </span>
     <template slot="popover">
@@ -57,6 +61,7 @@
             <span style="color: #999" v-if="word.pinyin">{{ word.pinyin }}</span>
             <Speak :text="word.bare" :mp3="word.audio" class="ml-1" />
           </div>
+          <Star :word="word" class="mr-1"></Star>
           <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${words[0].id}`">
             <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ word.accented }}</b>
           </a>
@@ -73,7 +78,7 @@
           <span
             v-if="word.level && word.level !== 'outside'"
             :data-bg-level="word.level"
-            class="pl-1 pr-1 ml-1 rounded d-inlin-block"
+            class="pl-1 pr-1 ml-1 rounded d-inline-block"
             style="font-size: 0.8em"
           >{{ $l2.code === 'zh' ? 'HSK ' : ''}}{{ word.level }}</span>
         </div>
@@ -103,6 +108,7 @@
 import Helper from '@/lib/helper'
 import Config from '@/lib/config'
 import WordPhotos from '@/lib/word-photos'
+import { mapState } from 'vuex'
 import { transliterate as tr } from 'transliteration'
 
 export default {
@@ -118,12 +124,7 @@ export default {
       hover: false,
       loading: true,
       text: this.$slots.default ? this.$slots.default[0].text : undefined,
-      saved: this.$slots.default
-        ? this.$store.getters.hasSavedWord({
-          l2: this.$l2.code,
-          text: this.$slots.default[0].text
-        })
-        : false,
+      saved: false,
       images: [],
       words: [],
       classes: {
@@ -132,16 +133,39 @@ export default {
       Config
     }
   },
+  computed: mapState(['savedWords']),
   mounted() {
-    this.updateClasses()
+    this.update()
     if (this.$hasFeature('transliteration')) {
       this.transliteration = tr(this.text)
     }
   },
+  watch: {
+    savedWords() {
+      this.update()
+    }
+  },
   methods: {
-    updateClasses() {
+    update() {
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
+      if (this.token) {
+        for(let word of this.token.candidates) {
+          if (this.$store.getters.hasSavedWord({
+            l2: this.$l2.code,
+            text: word.bare
+          })) {
+            this.saved = true
+          }
+        }
+      } else {
+        this.saved = this.$slots.default
+          ? this.$store.getters.hasSavedWord({
+            l2: this.$l2.code,
+            text: this.$slots.default[0].text
+          })
+          : false
+      }
     },
     matchCase(text) {
       if (this.text.match(/^[\wА-ЯЁ]/)) {
@@ -175,38 +199,6 @@ export default {
           this.hover = false
         }
       }, 300)
-    },
-    async allForms() {
-      let forms = this.token
-        ? [this.token.text.toLowerCase()]
-        : [this.text.toLowerCase()]
-      if (this.words.length > 0) {
-        for (let word of this.words) {
-          let wordForms = (await (await this.$dictionary).wordForms(word)) || []
-          wordForms = wordForms
-            .map(form => form.form.replace(/'/g, '').toLowerCase())
-            .filter(form => form !== '' && form !== '0' && form !== '1')
-          forms = forms.concat(wordForms)
-        }
-      }
-      return Helper.unique(forms)
-    },
-    async click(e) {
-      // [ [...all word forms, lowercase] ]
-      if (await this.$dictionary) {
-        this.hover = true
-      }
-      if (this.saved) {
-        this.$store.dispatch('removeSavedWord', {text: this.text, l2: this.$l2.code} )
-      } else {
-        this.speak(this.text)
-        this.$store.dispatch('addSavedWord', {
-          wordForms: await this.allForms(),
-          l2: this.$l2.code
-        })
-      }
-      this.saved = !this.saved
-      return false
     },
     async lookup() {
       if (this.token) {
@@ -264,15 +256,12 @@ export default {
 </script>
 
 <style lang="scss">
-
-
 .word-block {
   cursor: pointer;
   &.saved {
     font-weight: bold;
   }
 }
-
 
 .add-pinyin {
   line-height: 2;
@@ -283,13 +272,13 @@ export default {
     margin: 0;
     position: relative;
     text-indent: 0;
-    
+
     span {
       display: block;
       line-height: 1.3;
       text-indent: 0;
     }
-    
+
     /* Hide by default */
     .word-block-pinyin,
     .word-block-simplified,
@@ -299,7 +288,6 @@ export default {
     }
   }
 }
-
 
 /* Shown on demand */
 
@@ -334,7 +322,6 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 .show-pinyin-for-saved {
   .word-block:hover:not(.saved) {
@@ -383,7 +370,6 @@ export default {
   .tooltip-inner {
     border-radius: 1rem;
     text-align: left;
-    max-width: 30rem;
   }
 
   .tooltip-arrow {
@@ -473,7 +459,7 @@ export default {
     .popover-inner {
       overflow: scroll;
       max-height: 15rem;
-      min-width: 15rem;
+      min-width: 20rem;
       background: $color;
       color: black;
       padding: 1rem;

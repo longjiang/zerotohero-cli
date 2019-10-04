@@ -29,13 +29,27 @@
         <div class="col-sm-12">
           <div class="tabs text-center">
             <a :href="`#/${$l1.code}/${$l2.code}/tutoring/`" class="link-unstyled tab bg-dark">All</a>
-            <a
-              v-for="n in 7"
-              :href="`#/${$l1.code}/${$l2.code}/tutoring/${n}`"
-              class="tab link-unstyled"
-              :data-bg-level="Helper.level(n).replace('-', '')"
-            >{{ Helper.level(n) }}</a>
+            <template v-if="$l2.code === 'zh'">
+              <a
+                v-for="n in 7"
+                :href="`#/${$l1.code}/${$l2.code}/tutoring/${n}`"
+                class="tab link-unstyled"
+                :data-bg-level="n < 7 ? n : 'outside' "
+              >{{ Helper.level(n, $l2) }}</a>
+            </template>
+            <template v-else>
+              <a
+                v-for="n in 7"
+                :href="`#/${$l1.code}/${$l2.code}/tutoring/${n}`"
+                class="tab link-unstyled"
+                :data-bg-level="Helper.level(n).replace('-', '')"
+              >{{ Helper.level(n, $l2) }}</a>
+            </template>
+            <div v-if="$l2.code === 'zh'"
+              style="height: 0.5rem"
+              :class="level ? `bg-level${level}` : `bg-dark`"></div>
             <div
+              v-else
               style="height: 0.5rem"
               :class="level ? `bg-level${Helper.level(level).replace('-', '')}` : `bg-dark`"
             ></div>
@@ -61,9 +75,9 @@
               >
                 <td class="text-center">{{ row.id }}</td>
                 <td>{{ row.name }}</td>
-                <td v-html="row.reading"></td>
-                <td v-html="row.free_talk + '<p>• Describe a picture</p>'"></td>
-                <td v-html="row.writing"></td>
+                <td v-html="row.reading || ''"></td>
+                <td v-html="row.free_talk || '' + '<p>• Describe a picture</p>'"></td>
+                <td v-html="row.writing || ''"></td>
               </tr>
             </tbody>
           </table>

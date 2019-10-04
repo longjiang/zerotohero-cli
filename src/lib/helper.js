@@ -21,8 +21,17 @@ export default {
   },
   loaderMessages: [],
   lastId: 0,
-  level(level) {
-    let levels = {
+  level(level, l2 = undefined) {
+    let levels = l2 && l2.code === 'zh' ? {
+      1: 'HSK 1',
+      2: 'HSK 2',
+      3: 'HSK 3',
+      4: 'HSK 4',
+      5: 'HSK 5',
+      6: 'HSK 6',
+      7: 'C2',
+      all: 'Any',
+    } : {
       1: 'Pre-A1',
       2: 'A1',
       3: 'A2',

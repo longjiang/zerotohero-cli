@@ -38,7 +38,7 @@ export default {
         (await (await this.$dictionary).wordForms(this.word)) || []
       wordForms = wordForms.filter(form => form !== '')
       wordForms = Helper.unique(
-        [this.word.bare.toLowerCase()].concat(wordForms)
+        [this.word.bare.toLowerCase()].concat(wordForms.map(form => form.form.replace(/'/g, '')))
       )
       return wordForms
     },
@@ -52,17 +52,16 @@ export default {
       return saved
     },
     async saveWordClick() {
-      let word = this.word ? await this.allForms() : [this.text.toLowerCase()]
+      let wordForms = this.word ? await this.allForms() : [this.text.toLowerCase()]
       this.$store.dispatch('addSavedWord', {
-        wordForms: word,
+        word: this.word,
+        wordForms: wordForms,
         l2: this.$l2.code
       })
     },
     removeWordClick() {
       this.$store.dispatch('removeSavedWord', {
-        wordForm: this.word
-          ? this.word.bare.toLowerCase()
-          : this.text.toLowerCase(),
+        word: this.word,
         l2: this.$l2.code
       })
     }

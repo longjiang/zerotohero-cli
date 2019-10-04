@@ -3,26 +3,38 @@
     <div
       v-if="method === 'list'"
       class="container"
+      :key="`subreddits-${key}`"
     >
       <div class="row">
         <div class="col-sm-12 col-md-8">
-          <h3 class="mb-5">
-            Reddit Posts under
-            <a href="https://www.reddit.com/r/ChineseLanguage"
-              >r/ChineseLanguage</a
-            >
-          </h3>
-          <RedditArticlesList path="r/ChineseLanguage/top" />
+          <div v-if="subreddits && subreddits.length > 0">
+            <h3 class="mb-5">
+              Reddit Posts under
+              <a :href="`https://www.reddit.com/r/${subreddits[0].sub}`"
+                >r/{{subreddits[0].sub}}</a
+              >
+            </h3>
+            <RedditArticlesList :path="`r/${subreddits[0].sub}/top`" />
+          </div>
+          <div v-if="subreddits && subreddits.length === 0">
+            <div class="jumbotron shadow rounded bg-white text-center">
+              <h5>We don’t know about a subreddit for learning {{$l2.name}} yet.</h5>
+              <p class="lead mb-3">If you know of a subreddit related to learning {{$l2.name}}, pleaes let us know so we can add it.</p>
+              <div class="text-center">
+                <a :href="`#/${$l1.code}/${$l2.code}/contact-us`" class="btn btn-success">Contact Us</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-4" v-if="subreddits && subreddits.length > 0">
           <h4 class="mb-5">About Reddit</h4>
           <hr />
           <p>
-            This is a community for people studying or teaching Chinese - or
+            This is a community for people studying or teaching {{$l2.name}} - or
             just interested in the language. Please post interesting links,
-            language learning advice, or questions about the Chinese language.
+            language learning advice, or questions about the {{$l2.name}} language.
             To participate and create new content,
-            <a href="https://www.reddit.com/r/ChineseLanguage/"
+            <a :href="`https://www.reddit.com/r/${subreddits[0].sub}/`"
               >visit the community on Reddit</a
             >.
           </p>
@@ -53,10 +65,12 @@ export default {
   props: ['method', 'args'],
   data() {
     return {
+      subreddits: undefined,
       articles: [],
       articleId: undefined,
       Config,
-      Helper
+      Helper,
+      key: 0,
     }
   },
   watch: {
@@ -67,10 +81,17 @@ export default {
     }
   },
   methods: {
-    route() {
+    async route() {
       if (this.method) {
         if (this.method === 'view' && this.args) {
           this.articleId = this.args.split(',')[0]
+        } else if (this.method === 'list') {
+          if (!this.subreddits) {
+            let response = await $.getJSON(`${Config.wiki}items/subreddits?filter[l2][eq]=${this.$l2.id}`)
+            if (response) {
+              this.subreddits = response.data
+            }
+          }
         }
       } else {
         location.hash = `#/${this.$l1.code}/${this.$l2.code}/articles/reddit/list`

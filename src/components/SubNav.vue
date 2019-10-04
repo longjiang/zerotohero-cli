@@ -231,14 +231,14 @@
         <i class="fas fa-folder"></i>
         {{ $t('Tutoring Kit') }}
       </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'articles-wiki' }">
-        <i class="fab fa-wikipedia-w" />{{ $l2.name }} Learning Wiki
-      </router-link>
       <router-link
         class="secondary-menu-item"
         :to="{ name: 'articles-reddit' }"
       >
-        <i class="fab fa-reddit" />From Reddit
+        <i class="fab fa-reddit" />Reddit Articles
+      </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'articles-wiki' }">
+        <i class="fab fa-wikipedia-w" />{{ $l2.name }} Learning Wiki
       </router-link>
     </nav>
   </div>
