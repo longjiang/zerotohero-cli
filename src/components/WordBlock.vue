@@ -149,12 +149,23 @@ export default {
     update() {
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
-      this.saved = this.$slots.default
-        ? this.$store.getters.hasSavedWord({
-          l2: this.$l2.code,
-          text: this.$slots.default[0].text
-        })
-        : false
+      if (this.token) {
+        for(let word of this.token.candidates) {
+          if (this.$store.getters.hasSavedWord({
+            l2: this.$l2.code,
+            text: word.bare
+          })) {
+            this.saved = true
+          }
+        }
+      } else {
+        this.saved = this.$slots.default
+          ? this.$store.getters.hasSavedWord({
+            l2: this.$l2.code,
+            text: this.$slots.default[0].text
+          })
+          : false
+      }
     },
     matchCase(text) {
       if (this.text.match(/^[\wА-ЯЁ]/)) {
