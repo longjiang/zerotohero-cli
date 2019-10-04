@@ -86,7 +86,7 @@ export default {
       },
       topics: {
         strategy: 'Learning Strategy',
-        character: 'Characters',
+        characters: 'Characters',
         culture: 'Culture',
         grammar: 'Grammar',
         vocabulary: 'Vocabulary',

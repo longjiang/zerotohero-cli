@@ -15,9 +15,7 @@
       <b style="font-weight: 900">Zero to Hero Education, Canada</b> is dedicated to help you learn the world’s languages, from the very beginning (“zero”) to a very very advanced level (“hero”).
     </p>
     <p>
-      Although our focus is teaching Mandarin Chinese to English speakers (
-      <a href="#/en/zh/">Chinese Zero to Hero</a>), and teaching English to Mandarin Chinese speakers (
-      <a href="#/zh/en/">English Zero to Hero</a>), we've also created free, open-source learning resources that work with hundres of other language pairs.
+      Although our focus is <a href="#/en/zh/" class="text-light"><b>teaching Mandarin Chinese to English speakers</b></a>, and <a href="#/zh/en/" class="text-light"><b>teaching English to Mandarin Chinese speakers</b></a>, we've also created free, open-source learning resources that work with hundres of other language pairs.
     </p>
   </div>
 </template>
