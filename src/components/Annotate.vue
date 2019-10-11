@@ -177,6 +177,9 @@ export default {
 </script>
 
 <style lang="scss">
+.annotated {
+  min-height: 2rem;
+}
 .annotated.fullscreen {
   position: fixed;
   left: 0;

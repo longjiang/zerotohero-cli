@@ -5,8 +5,8 @@
     <div v-if="collocation">
       <ul class="collapsed gramrel pl-0" data-collapse-target>
         <li v-for="(line, index) in lines" class="gramrel-item list-unstyled" :key="`${term}-collocation-${type}-${index}`">
-          <Annotate :showTranslate="true">
-            <span v-html="line" />
+          <Annotate tag="div" :showTranslate="true">
+            <div v-html="line" />
           </Annotate>
         </li>
       </ul>
