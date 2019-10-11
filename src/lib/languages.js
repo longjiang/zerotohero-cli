@@ -200,6 +200,7 @@ export default {
   hasYouTube(l1, l2) {
     // l1.code = 'ceb', l2.code = 'en' -> yes, becuase we can find English YouTube videos, with sub translated in cebuano 
     // l1.code = 'en', l2.code = 'ceb' -> no, because we can't FIND cebuano subtitlted YouTube videos
+    if (l2.code === 'ceb') return true
     return this.googleTranslateLangs.includes(this.code(l1)) && this.googleLangs.includes(this.code(l2))
   },
   code(language) {
@@ -287,7 +288,7 @@ export default {
     }
     this.loadL1Features(l1s)
     for (let locale of this.locales) {
-      let l1 = l1s.find(language => language['iso639-1'] === locale['iso639-1'])
+      let l1 = l1s.find(language => language.code === locale.code)
       if (l1) {
         l1.locales = l1.locales || []
         l1.locales.push(locale.locale)

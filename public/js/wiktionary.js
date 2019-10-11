@@ -58,7 +58,7 @@ const Dictionary = {
     return words
   },
   dictionaryFile(options) {
-    let filename = `/data/wiktionary/${options.l2}-${options.l1}.json`
+    let filename = `/data/wiktionary/${options.l2}-${options.l1}.json.txt`
     return filename
   },
   load(options) {
