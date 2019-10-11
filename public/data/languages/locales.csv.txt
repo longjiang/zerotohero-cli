@@ -1,4 +1,4 @@
-iso639-1,locale
+code,locale
 af,af-ZA
 am,am-ET
 ar,ar-AE
@@ -212,3 +212,4 @@ zh,zh-MO
 zh,zh-SG
 zh,zh-TW
 zu,zu-ZA
+ceb,fil
