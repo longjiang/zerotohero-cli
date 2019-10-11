@@ -64,7 +64,7 @@ export default {
     }
   },
   mounted() {
-    Papa.parse('/data/zh-4char/4char.csv', {
+    Papa.parse('/data/zh-4char/4char.csv.txt', {
       download: true,
       header: true,
       complete: results => {

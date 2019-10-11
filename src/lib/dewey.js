@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 export default {
   _data: [],
-  _json: 'data/dewey/dewey-zho.json',
+  _json: 'data/dewey/dewey-zho.json.txt',
 
   load() {
     return new Promise(resolve => {

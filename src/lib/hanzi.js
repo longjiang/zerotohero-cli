@@ -496,7 +496,7 @@ export default {
     pictographic: '象形字',
     pictophonetic: '形声字'
   },
-  _makeMeAHanziDictionaryTxt: '/data/hanzi/hanzi.json',
+  _makeMeAHanziDictionaryTxt: '/data/hanzi/hanzi.json.txt',
 
   load: function() {
     return new Promise(resolve => {
