@@ -40,7 +40,7 @@
             $route.name === 'saved-words')
       }"
       :to="{ name: 'dictionary' }"
-      title="Lookup and compare words"
+      title="Look up and compare words"
     >
       <i class="fas fa-book"></i>
       {{ $t('Dictionary') }}

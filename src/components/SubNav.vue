@@ -63,11 +63,11 @@
     >
       <router-link class="secondary-menu-item" :to="{ name: 'dictionary' }">
         <i class="fas fa-font"></i>
-        {{$t('Lookup Words')}}
+        {{$t('Look Up Words')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'phrase' }">
         <i class="fas fa-quote-left" />
-        {{$t('Lookup Phrases')}}
+        {{$t('Look Up Phrases')}}
       </router-link>
       <router-link
         v-if="$hasFeature('levels')"
