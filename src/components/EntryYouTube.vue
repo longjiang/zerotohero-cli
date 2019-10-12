@@ -26,18 +26,16 @@ export default {
     }
   },
   methods: {
-    update() {
+    async update() {
       this.videos = []
-      YouTube.search(
-        this.text,
-        videos => {
-          this.videos = videos.filter(video => video.cc)
-        },
+      let videos = await YouTube.searchByGoogle(
         {
-          subs: true,
-          l2: this.$l2.code
+          term: this.text,
+          lang: this.$l2.code,
+          captions: true
         }
       )
+      this.videos = videos
     }
   },
   watch: {
