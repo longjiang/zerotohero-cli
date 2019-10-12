@@ -53,3 +53,4 @@ kor,eng,kengdic
 jpn,eng,edict
 zho,eng,hsk-cedict
 ceb,eng,wiktionary
+fas,eng,wiktionary
