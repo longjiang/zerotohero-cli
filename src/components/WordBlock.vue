@@ -344,13 +344,13 @@ export default {
 }
 
 .tooltip-images {
-  width: 3rem;
-  float: right;
-  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
   img {
-    width: 3rem;
-    height: auto;
-    margin: 0.2rem 0;
+    flex: 1;
+    height: 4rem;
+    width: auto;
+    margin: 0 0.2rem;
   }
 }
 
