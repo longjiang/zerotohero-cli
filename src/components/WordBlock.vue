@@ -19,7 +19,7 @@
       @mouseout="mouseout"
     >
       <template v-if="token">
-        <span class="word-block-definition">{{ token.candidates[0].definitions[0] }}</span>
+        <span class="word-block-definition" v-html="token.candidates[0].definitions[0]"></span>
         <span class="word-block-pinyin">{{ token.candidates[0].pinyin }}</span>
         <span class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
         <span class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
@@ -88,7 +88,7 @@
             {{ abbreviate(word.type) }}
           </span>
           <span class="word-translation" v-if="word.definitions">
-            <em>{{ word.definitions.map(definition => definition.replace(/\[.*\] /g, '')).join(', ') }}</em>
+            <em v-html="word.definitions.map(definition => definition.replace(/\[.*\] /g, '')).join(', ')"></em>
           </span>
         </div>
       </div>

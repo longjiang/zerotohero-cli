@@ -2,9 +2,7 @@
   <div>
     <div v-if="definitions && definitions.length > 0">
       <ul class="definitions collapsed mb-2 list-unstyled" data-collapse-target>
-        <li v-for="definition in definitions" class="definition-list-item">
-          {{ definition.text ? definition.text : definition }}
-        </li>
+        <li v-for="definition in definitions" class="definition-list-item" v-html="definition.text ? definition.text : definition"></li>
       </ul>
       <ShowMoreButton
         :length="definitions.length"

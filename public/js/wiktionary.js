@@ -32,9 +32,18 @@ const Dictionary = {
         if (item.senses && item.senses[0]) {
           for (let sense of item.senses) {
             if (sense.glosses) {
-              definitions.push(sense.glosses[0])
+              if (sense.complex_inflection_of) {
+                for (let inflection of sense.complex_inflection_of) {
+                  definitions.push(`${inflection['3']} ${inflection['4']} ${inflection['5']} inflection of <a href="https://en.wiktionary.org/wiki/${inflection['2']}" target="_blank">${inflection['2']}</a>`)
+                }
+              } else {
+                definitions.push(sense.glosses[0])
+              }
             }
           }
+        }
+        if (definitions.length === 0) {
+          definitions.push(`See <a href="https://en.wiktionary.org/wiki/${item.word}" target="_blank">${item.word}</a> on Wiktionary`)
         }
         words.push(Object.assign(item, {
           bare: item.word,
