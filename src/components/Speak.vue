@@ -1,9 +1,11 @@
 <template>
-  <i
-    v-if="$hasFeature('speech')"
-    class="fas fa-volume-up focus-exclude speak"
-    @click="speak"
-  ></i>
+  <span>
+    <i
+      class="fas fa-volume-up focus-exclude speak"
+      @click="speak"
+    ></i>
+    <span v-if="!$hasFeature('speech')" class="text-muted ml-1" style="opacity: 0.7; font-size: 0.8em">Forvo</span>
+  </span>
 </template>
 <script>
 export default {
@@ -17,9 +19,13 @@ export default {
         let audio = new Audio(this.mp3)
         audio.play()
       } else if (this.text) {
-        var utterance = new SpeechSynthesisUtterance(this.text)
-        utterance.lang = this.$l2.code
-        speechSynthesis.speak(utterance)
+        if (this.$hasFeature('speech')) {
+          var utterance = new SpeechSynthesisUtterance(this.text)
+          utterance.lang = this.$l2.code
+          speechSynthesis.speak(utterance)
+        } else {
+          window.open(`https://forvo.com/search/${this.text}`)
+        }
       }
     }
   }
