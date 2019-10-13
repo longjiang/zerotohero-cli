@@ -56,3 +56,5 @@ ceb,eng,wiktionary
 fas,eng,wiktionary
 hin,eng,wiktionary
 pan,eng,wiktionary
+kat,eng,wiktionary
+mlt,eng,wiktionary

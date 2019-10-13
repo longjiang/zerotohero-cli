@@ -16,7 +16,7 @@
         :text="text"
         style="position: relative; top: 0.08rem; position: relative;"
       />
-      <span class="annotator-show-translate ml-2 focus-exclude" @click="translate = !translate" v-if="showTranslate">
+      <span class="annotator-show-translate ml-2 focus-exclude" @click="translateClick" v-if="showTranslate">
         <i class="fas fa-language"></i>
       </span>
       <span
@@ -36,7 +36,6 @@
     </span>
     <slot v-if="!this.annotated"></slot>
     <v-runtime-template v-else v-for="template of annotatedSlots" :template="template" />
-    <iframe v-if="translate" height="500" width="100%" :src="`https://www.bing.com/translator/?from=${$l2.code}&to=${$l1.code}&text=${text}`" />
   </component>
 </template>
 
@@ -82,6 +81,9 @@ export default {
     }
   },
   methods: {
+    translateClick() {
+      window.open(`https://translate.google.com/#view=home&op=translate&sl=${this.$l2.code}&tl=${this.$l1.code}&text=${encodeURIComponent(this.text)}`)
+    },
     // https://stackoverflow.com/questions/2550951/what-regular-expression-do-i-need-to-check-for-some-non-latin-characters
     nonLatin() {
       var rforeign = /[^\u0000-\u007f]/
@@ -217,6 +219,11 @@ export default {
 .annotator-buttons {
   float: right;
   padding: 0 0 0.5rem 0.5rem;
+}
+
+[dir="rtl"] .annotator-buttons {
+  float: left;
+  padding: 0 0.5rem 0.5rem 0;
 }
 
 .annotator-buttons > *:not(.speak) {
