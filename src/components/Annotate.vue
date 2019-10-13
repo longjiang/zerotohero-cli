@@ -218,12 +218,12 @@ export default {
 
 .annotator-buttons {
   float: right;
-  padding: 0 0 0.5rem 0.5rem;
+  padding: 0 0 0 0.5rem;
 }
 
 [dir="rtl"] .annotator-buttons {
   float: left;
-  padding: 0 0.5rem 0.5rem 0;
+  padding: 0 0.5rem 0 0;
 }
 
 .annotator-buttons > *:not(.speak) {

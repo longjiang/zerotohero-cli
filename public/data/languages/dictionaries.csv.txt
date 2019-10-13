@@ -58,3 +58,4 @@ hin,eng,wiktionary
 pan,eng,wiktionary
 kat,eng,wiktionary
 mlt,eng,wiktionary
+ell,eng,wiktionary

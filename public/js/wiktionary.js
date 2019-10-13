@@ -43,7 +43,7 @@ const Dictionary = {
           }
         }
         if (definitions.length === 0) {
-          definitions.push(`See <a href="https://en.wiktionary.org/wiki/${item.word}" target="_blank">${item.word}</a> on Wiktionary`)
+          definitions.push(`(inflected form, see <a href="https://en.wiktionary.org/wiki/${item.word}" target="_blank">Wiktionary</a> for details)`)
         }
         words.push(Object.assign(item, {
           bare: item.word,
