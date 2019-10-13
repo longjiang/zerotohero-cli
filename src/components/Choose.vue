@@ -1,9 +1,15 @@
 <template>
   <div>
+    <p class="lead mt-4">Learning resources for thousands of languages:</p>
     <div>
       <Search placeholder="Search for a language..." :hrefFunc="hrefFunc" :suggestionsFunc="suggestionsFunc" type="generic"  :defaultURL="text => `#/en/${text}/`" ref="l1" />
     </div>
-    <hr class="border-light mt-5 mb-5" style="opacity: 0.5" />
+    <p class="lead mt-5">Online courses:</p>
+    <div class="mt-3" v-if="languages && languages.length > 0">
+      <LanguageLogo :l1="language('en')" :l2="language('zh')" />
+      <LanguageLogo :l1="language('zh')" :l2="language('en')" />
+    </div>
+    <hr class="border-light mt-4 mb-5" style="opacity: 0.5" />
     <p>
       <b style="font-weight: 900">Zero to Hero Education, Canada</b> is dedicated to help you learn the world’s languages, from the very beginning (“zero”) to a very very advanced level (“hero”).
     </p>
@@ -15,10 +21,12 @@
 
 <script>
 import Search from '@/components/Search'
+import LanguageLogo from '@/components/LanguageLogo'
 
 export default {
   components: {
-    Search
+    Search,
+    LanguageLogo
   },
   data() {
     return {
@@ -40,6 +48,9 @@ export default {
     this.enLanguages = this.languages.filter(language => !['E', 'H'].includes(language.type))
   },
   methods: {
+    language(code) {
+      return this.languages.find(language => language.code === code)
+    },
     suggestionsFunc(text) {
       text = text.toLowerCase()
       let english = this.languages.find(language => language.code === 'en')
