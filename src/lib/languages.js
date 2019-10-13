@@ -297,9 +297,25 @@ export default {
     return l1s
   },
   getFeatures(options) {
-    return options.l1.features && options.l1.features[options.l2['iso639-3']]
+    let features = options.l1.features && options.l1.features[options.l2['iso639-3']]
       ? options.l1.features[options.l2['iso639-3']]
       : []
+    if (options.l1.dictionaries && options.l1.dictionaries[options.l2['iso639-3']]) {
+      if(!features.includes('dictionary')) features.push('dictionary')
+    }
+    if (this.hasYouTube(options.l1, options.l2)) {
+      if(!features.includes('youtube')) features.push('youtube')
+    }
+    let voices = speechSynthesis
+      .getVoices()
+      .filter(voice => voice.lang.startsWith(options.l2.code))
+    if (voices.length > 0) {
+      if(!features.includes('speech')) features.push('speech')
+    }
+    if (options.l2.code !== 'ja' && options.l2.scripts && options.l2.scripts.length > 0 && options.l2.scripts[0].script !== 'Latn') {
+      if(!features.includes('transliteration')) features.push('transliteration')
+    }
+    return features
   },
   async load() {
     console.log('Loading language data...')

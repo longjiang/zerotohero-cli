@@ -88,6 +88,10 @@ export default {
     entry: {
       default: undefined
     },
+    suggestionsFunc: {
+      type: Function,
+      default: undefined
+    },
     hrefFunc: {
       type: Function,
       default: function(entry) {
@@ -139,6 +143,8 @@ export default {
         ).sort((a, b) => 
           a.bare.startsWith(this.text) ? -1 : 0
         )
+      } else if (this.suggestionsFunc) {
+        this.suggestions = this.suggestionsFunc(this.text)
       }
     }
   },

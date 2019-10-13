@@ -1,14 +1,7 @@
 <template>
   <div>
-    <div class="d-flex">
-      <select class="custom-select custom-select-lg mb-3 mr-2" v-model="l2">
-        <option value="undefined">I want to learn...</option>
-        <option v-for="language in languages" :value="language.code">{{ language.name }}{{ language.type === 'A' ? ' [Ancient]' : ''}}{{ language.type === 'C' ? ' [Constructed]' : ''}}{{ language.type === 'H' ? ' [Historic]' : ''}}{{ language.type === 'E' ? ' [Extinct]' : ''}}</option>
-      </select>
-      <select class="custom-select custom-select-lg mb-3" v-model="l1" v-if="l2 == 'en'">
-        <option value="undefined">Choose your native language...</option>
-        <option v-for="language in enLanguages" :value="language.code">{{ language.name }}</option>
-      </select>
+    <div>
+      <Search placeholder="Search for a language..." :hrefFunc="hrefFunc" :suggestionsFunc="suggestionsFunc" type="generic"  :defaultURL="text => `#/en/${text}/`" ref="l1" />
     </div>
     <hr class="border-light mt-5 mb-5" style="opacity: 0.5" />
     <p>
@@ -21,40 +14,16 @@
 </template>
 
 <script>
-import LanguageLogo from '@/components/LanguageLogo'
+import Search from '@/components/Search'
 
 export default {
   components: {
-    LanguageLogo
-  },
-  props: {
-    compact: false
+    Search
   },
   data() {
     return {
       languages: [],
-      enLanguages: [],
-      l1: undefined,
-      l2: undefined
-    }
-  },
-  watch: {
-    l2() {
-      this.route()
-    },
-    l1() {
-      this.route()
-    }
-  },
-  methods: {
-    route() {
-      if (this.l2 !== 'en') {
-        location.hash = `#/en/${this.l2}/`
-      } else {
-        if (this.l1) {
-          location.hash = `#/${this.l1}/${this.l2}/`
-        }
-      }
+      enLanguages: []
     }
   },
   mounted() {
@@ -69,6 +38,31 @@ export default {
         return 0
       })
     this.enLanguages = this.languages.filter(language => !['E', 'H'].includes(language.type))
+  },
+  methods: {
+    suggestionsFunc(text) {
+      text = text.toLowerCase()
+      let english = this.languages.find(language => language.code === 'en')
+      return this.languages.filter(language => language.code.includes(text) || language['iso639-3'].includes(text) || language.name.toLowerCase().includes(text))
+        .sort((a,b) => b.name.length - a.name.length)
+        .sort(language => language['iso639-3'].startsWith(text) || language.name.startsWith(text) ? 1: -1 )
+        .map(language => {
+          return {
+            bare: `${language.name} (${language.code})`,
+            definitions: this.$languages.getFeatures({
+              l1: english,
+              l2: language
+            }),
+            l1: english,
+            l2: language
+          }
+        }).slice(0,30)
+    },
+    hrefFunc(suggestion) {
+      if (suggestion && suggestion.l1 && suggestion.l2) {
+        return `#/${suggestion.l1.code}/${suggestion.l2.code}/`
+      }
+    }
   }
 }
 </script>
