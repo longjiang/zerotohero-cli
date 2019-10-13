@@ -27,7 +27,7 @@ const Dictionary = {
     this.dictionary = JSON.parse(json)
     let words = []
     for(let item of this.dictionary) {
-      if (item.word) {
+      if (item.word && !item.redirect) {
         let definitions = []
         if (item.senses && item.senses[0]) {
           for (let sense of item.senses) {
