@@ -34,6 +34,7 @@ export default {
     'it',
     'ja',
     'ko',
+    'kk',
     'lv',
     'lt',
     'no',

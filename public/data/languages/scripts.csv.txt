@@ -6,6 +6,7 @@ Arab,,ar,,,rtl
 Arab,,az,,,rtl
 Arab,,fa,,,rtl
 Arab,,id,,,rtl
+Cyrl,,kk,,,
 Arab,,kk,,,rtl
 Arab,,ky,,,rtl
 Arab,,ms,,,rtl
@@ -109,7 +110,6 @@ Cyrl,,az,,,
 Cyrl,,be,,,
 Cyrl,,bg,,,
 Cyrl,,bs,,,
-Cyrl,,kk,,,
 Cyrl,,ky,,,
 Cyrl,,mk,,,
 Cyrl,,mn,,,

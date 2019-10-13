@@ -61,3 +61,4 @@ mlt,eng,wiktionary
 ell,eng,wiktionary
 vie,eng,wiktionary
 hye,eng,wiktionary
+kaz,eng,wiktionary
