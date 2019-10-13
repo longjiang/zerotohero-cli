@@ -1,8 +1,9 @@
 import Wikipedia from '@/lib/library-sources/wikipedia'
 import WOL from '@/lib/library-sources/wol'
+import Omniglot from '@/lib/library-sources/omniglot'
 
 export default {
-  universalSources: [Wikipedia, WOL],
+  universalSources: [Wikipedia, Omniglot, WOL],
   l2Sources: [],
   async setLangSources(sources) {
     for (let source of sources) {

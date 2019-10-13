@@ -77,7 +77,7 @@
             Read the original on
             <img
               class="logo-small ml-2"
-              :src="Library.source(args).logo"
+              :src="Library.source(args).logo($l2.code)"
               :alt="Library.source(args).name"
             />
           </a>
