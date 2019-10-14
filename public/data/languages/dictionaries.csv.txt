@@ -62,3 +62,4 @@ ell,eng,wiktionary
 vie,eng,wiktionary
 hye,eng,wiktionary
 kaz,eng,wiktionary
+uzb,eng,wiktionary

@@ -200,6 +200,8 @@ uk,uk-UA
 ur,ur-PK
 uz,uz-Cyrl-UZ
 uz,uz-Latn-UZ
+uz,uz-Latn
+uz,uz-Cyrl
 vi,vi-VN
 wo,wo-SN
 xh,xh-ZA

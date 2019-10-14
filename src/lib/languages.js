@@ -52,6 +52,7 @@ export default {
     'th',
     'tr',
     'uk',
+    'uz',
     'vi'
   ],
   googleTranslateLangs: [

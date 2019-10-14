@@ -1,4 +1,6 @@
 script,ms,lang,ml,p,direction
+Latn,,uz,,,
+Cyrl,,kk,,,
 Adlm,,ff,,N,rtl
 Ahom,N,und,?,?,
 Hluw,N,und,?,?,
@@ -6,7 +8,6 @@ Arab,,ar,,,rtl
 Arab,,az,,,rtl
 Arab,,fa,,,rtl
 Arab,,id,,,rtl
-Cyrl,,kk,,,
 Arab,,kk,,,rtl
 Arab,,ky,,,rtl
 Arab,,ms,,,rtl
@@ -379,7 +380,6 @@ Latn,,tr,,,
 Latn,,tvl,,,
 Latn,,ty,,,
 Latn,,tzm,,,
-Latn,,uz,,,
 Latn,,vi,,,
 Latn,,wo,,,
 Latn,,yo,,,
