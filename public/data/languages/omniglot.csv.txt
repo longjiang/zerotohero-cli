@@ -1,44 +1,4 @@
 iso639-3,url
-sac,fox.htm
-srb,savara.htm
-dih,tiipai.htm
-nbl,ndebele.php
-sgh,shughni.htm
-alt,altay.htm
-ang,oldenglish.htm
-apc,lebanese.htm
-bea,beaver.htm
-blc,nuxalk.htm
-brx,bodo.htm
-bkx,dawan.php
-cuk,kuna.htm
-ddd,dongotono.htm
-dgr,tlicho.htm
-div,thaana.htm
-dzo,dzongkha.php
-ful,fula.htm
-fub,adamaua.htm
-gsw,swissgerman.htm
-hmn,hmong.htm
-kek,qeqchi.htm
-khm,khmer.htm
-kic,kickapoo.htm
-kvn,kuna.htm
-lug,ganda.php
-naq,khoekhoe.htm
-nde,sindebele.htm
-nld,dutch.htm
-vls,flemish.htm
-nod,lanna.htm
-nrf,jerriais.htm
-orm,oromo.htm
-sce,santa.htm
-sot,sesotho.htm
-wya,wyandot.htm
-xav,shavante.php
-xpg,phrygian.htm
-xpq,mohegan.htm
-yue,../chinese/yue.htm
 aae,arberesh.htm
 aaq,abenaki.php
 aar,afar.htm
@@ -46,14 +6,13 @@ aat,arvanitic.php
 aaz,amarasi.htm
 abe,abenaki.php
 abk,abkhaz.htm
-abl ,lampung.htm
+abl,lampung.htm
 abp,abellen.htm
 abq,abaza.htm
 abz,abui.htm
 aca,achagua.htm
 ace,acehnese.htm
 acf,saintluciancreole.htm
-acf ,guadeloupean.php
 ach,acholi.htm
 acm,arabic_syrian.htm
 acn,achang.htm
@@ -62,12 +21,12 @@ acu,achuarshiwiar.htm
 acv,achumawi.htm
 acy,cypriotarabic.htm
 acz,acheron.htm
-adg ,arrernte.htm
+adg,arrernte.htm
 ady,adyghe.htm
 adz,adzera.htm
 aeb,arabic_tunisian.htm
 aem,kri.htm
-aer ,arrernte.htm
+aer,arrernte.htm
 aey,amele.htm
 afr,afrikaans.htm
 agj,argobba.htm
@@ -92,8 +51,8 @@ akv,akhvakh.htm
 akz,alabama.php
 ale,aleut.htm
 alq,algonquin.htm
+alt,altay.htm
 aly,alyawarr.htm
-aly ,arrernte.htm
 alz,alur.htm
 amc,amahuaca.htm
 ame,yanesha.htm
@@ -102,9 +61,10 @@ amh,amharic.htm
 ami,amis.htm
 amr,amarakaeri.htm
 amw,westernneoaramaic.htm
-amx ,arrernte.htm
+amx,arrernte.htm
 anb,andoa.htm
 ane,xaracuu.htm
+ang,oldenglish.htm
 ani,andi.htm
 ank,goemai.htm
 anq,jarawa.htm
@@ -112,6 +72,7 @@ aoi,enindhilyagwa.htm
 aot,atong.htm
 aoz,dawan.php
 apa,apache.htm
+apc,lebanese.htm
 apj,jicarilla.htm
 apm,mescalero-chiricahua.htm
 app,apma.htm
@@ -119,7 +80,7 @@ apu,apurina.htm
 aqc,archi.htm
 arb,arabic.htm
 arc,aramaic.htm
-are ,arrernte.htm
+are,arrernte.htm
 arg,aragonese.php
 ari,arikara.htm
 arl,arabela.htm
@@ -144,12 +105,12 @@ awa,awadhi.htm
 awc,cipu.htm
 awn,awngi.htm
 awx,awara.htm
-axe ,arrernte.htm
+axe,arrernte.htm
 aym,aymara.htm
 ayp,arabic_syrian.htm
 aze,azeri.htm
 azo,awing.htm
-azz ,nahuatl.htm
+azz,nahuatl.htm
 bak,bashkir.htm
 bal,baluchi.php
 bam,bambara.htm
@@ -160,13 +121,14 @@ bax,bamum.htm
 bba,bariba.htm
 bbb,barai.htm
 bbl,batsbi.htm
-bca ,bai.htm
+bca,bai.htm
 bci,baoule.htm
 bcq,bench.htm
 bcr,babinewitsuwiten.htm
 bde,bade.htm
 bdk,budukh.htm
 bdy,bundjalung.htm
+bea,beaver.htm
 bej,beja.htm
 bel,belarusian.htm
 bem,bemba.php
@@ -175,9 +137,9 @@ beu,blagar.htm
 bew,betawi.htm
 bex,jurmodo.htm
 bfa,bari.htm
-bfc ,bai.htm
+bfc,bai.htm
 bfq,badaga.htm
-bfs ,bai.htm
+bfs,bai.htm
 bft,balti.htm
 bgs,tagabawa.htm
 bho,bhojpuri.htm
@@ -187,14 +149,16 @@ bin,edo.htm
 bis,bislama.php
 biu,biete.htm
 bjf,jewishneoaramaic.htm
-bkc ,baka.htm
+bkc,baka.htm
 bkm,kom.htm
 bku,buhid.htm
+bkx,dawan.php
 bla,blackfoot.htm
+blc,nuxalk.htm
 bll,biloxi.htm
 blt,taidam.htm
 blw,balangao.htm
-bme ,baka.htm
+bme,baka.htm
 bnc,bontoc.htm
 bnn,bunun.htm
 bno,bantoanon.htm
@@ -207,7 +171,8 @@ bph,botlikh.htm
 bqj,bandial.htm
 bqp,busa.htm
 bre,breton.htm
-brl ,nsotho.htm
+brl,nsotho.htm
+brx,bodo.htm
 bsk,burushaski.php
 bsq,bassa.htm
 bua,buryat.htm
@@ -236,7 +201,7 @@ cbs,kashinawa.htm
 cbt,chayahuita.htm
 cbu,candoshishapra.htm
 ccc,chamicuro.htm
-cco ,chinanteco.htm
+cco,chinanteco.htm
 ccp,chakma.htm
 cdh,takri.htm
 ceb,cebuano.htm
@@ -246,19 +211,19 @@ cha,chamorro.htm
 che,chechen.htm
 chg,chagatai.htm
 chh,chinook.htm
-chj ,chinanteco.htm
+chj,chinanteco.htm
 chk,chuukese.htm
 chl,ivilyuat.htm
 chm,mari.htm
 chn,chinookjargon.htm
 cho,choctaw.htm
 chp,chipewyan.htm
-chq ,chinanteco.htm
+chq,chinanteco.htm
 chr,cherokee.htm
 chu,ocslavonic.htm
 chv,chuvash.htm
 chy,cheyenne.htm
-chz ,chinanteco.htm
+chz,chinanteco.htm
 cia,ciacia.htm
 cic,chickasaw.htm
 cim,cimbrian.htm
@@ -276,16 +241,16 @@ cku,koasati.htm
 ckv,kavalan.htm
 clc,chilcotin.htm
 cld,chaldeanneoaramaic.htm
-cle ,chinanteco.htm
+cle,chinanteco.htm
 clk,idumishmi.htm
 clm,klallam.htm
 clu,caluyanon.htm
 cmn,../chinese/mandarin.htm
 cmr,mro.htm
 cni,ashaninka.htm
-cnl ,chinanteco.htm
+cnl,chinanteco.htm
 cnr,montenegrin.htm
-cnt ,chinanteco.htm
+cnt,chinanteco.htm
 coc,cocopah.htm
 cof,tsafiki.htm
 cok,cora.htm
@@ -297,10 +262,10 @@ cor,cornish.htm
 cos,corsican.htm
 cot,caquinte.htm
 cox,nanti.htm
-cpa ,chinanteco.htm
+cpa,chinanteco.htm
 cpb,asheninka.htm
 cpc,asheninka.htm
-cpg ,greek.htm
+cpg,greek.htm
 cpu,asheninka.htm
 cpx,../chinese/puxian.htm
 cpy,asheninka.htm
@@ -313,37 +278,40 @@ cro,crow.htm
 crs,seselwa.htm
 crw,chrau.htm
 crx,carrier.htm
-csa ,chinanteco.htm
+csa,chinanteco.htm
 csb,kashubian.htm
-cso ,chinanteco.htm
+cso,chinanteco.htm
 css,mutsun.htm
 ctd,tedim.htm
-cte ,chinanteco.htm
-ctl ,chinanteco.htm
+cte,chinanteco.htm
+ctl,chinanteco.htm
 ctm,chitimacha.htm
 ctu,chol.htm
 cub,cubeo.htm
-cuc ,chinanteco.htm
+cuc,chinanteco.htm
+cuk,kuna.htm
 cuu,taiya.htm
-cvn ,chinanteco.htm
+cvn,chinanteco.htm
 cym,welsh.htm
 cyo,cuyonon.htm
 dag,dagbani.htm
-dak,sioux.htm
-dak ,sioux.htm
 dan,danish.htm
 dar,dargwa.htm
+ddd,dongotono.htm
 ddo,tsez.htm
 dec,dengebu.htm
 deu,german.htm
-dga ,dagaare.htm
+dga,dagaare.htm
 dgc,casiguran.htm
-dgd ,dagaare.htm
-dgi ,dagaare.htm
+dgd,dagaare.htm
+dgi,dagaare.htm
+dgr,tlicho.htm
 dgz,daga.htm
 dhs,kamda.htm
 dhv,drehu.php
+dih,tiipai.htm
 din,dinka.php
+div,thaana.htm
 djd,jaminjung.htm
 dje,zarma.htm
 djk,ndjuka.htm
@@ -363,20 +331,21 @@ duu,drung.htm
 dyo,jolafonyi.htm
 dyu,nko.htm#dioula
 dzg,daza.htm
+dzo,dzongkha.php
 efi,efik.htm
-egl ,emilian-romagnol.htm
+egl,emilian-romagnol.htm
 eko,koti.htm
-eky ,kayahli.htm
-ell ,greek.htm
+eky,kayahli.htm
+ell,greek.htm
 elx,elamite.htm#cuneiform
-emk ,mwangwego.htm
+emk,mwangwego.htm
 ems,alutiiq.htm
 end,ende.htm
 enf,enets.htm
 eng,english.htm
 epo,esperanto.htm
-esi ,inupiaq.php
-esk ,inupiaq.php
+esi,inupiaq.php
+esk,inupiaq.php
 est,estonian.htm
 esu,yupik.htm
 ett,etruscan.htm
@@ -402,7 +371,9 @@ fra,french.htm
 frp,francoprovencal.htm
 frr,northfrisian.htm
 fry,westfrisian.htm
+fub,adamaua.htm
 fud,futunan.htm
+ful,fula.htm
 fur,friulian.htm
 fvr,fur.htm
 gaa,ga.htm
@@ -412,9 +383,9 @@ gan,../chinese/gan.htm
 gbj,gadaba.htm
 gbm,garhwali.htm
 gcc,mali.htm
-gcf ,guadeloupean.php
+gcf,guadeloupean.php
 gcr,guyanais.htm
-gdi ,baka.htm
+gdi,baka.htm
 gdo,godoberi.htm
 gez,ethiopic.htm
 ggd,gugadja.php
@@ -431,16 +402,17 @@ gle,irish.htm
 glg,galician.htm
 glk,gilaki.htm
 glv,manx.htm
-gmy ,greek.htm
+gmy,greek.htm
 gnc,guanche.htm
 gni,gooniyandi.php
-gnz ,baka.htm
+gnz,baka.htm
 gon,gondi.htm
 got,gothic.htm
-grc ,greek.htm
+grc,greek.htm
 grj,jabo.htm
 grn,guarani.htm
 grt,garo.htm
+gsw,swissgerman.htm
 guc,wayuu.php
 guj,gujarati.htm
 gum,guambiano.htm
@@ -463,7 +435,7 @@ hau,hausa.htm
 haw,hawaiian.htm
 haz,hazaragi.htm
 hch,huichol.htm
-hea ,hmu.htm
+hea,hmu.htm
 heb,hebrew.htm
 hei,heiltsuk.htm
 her,herero.php
@@ -475,15 +447,16 @@ hin,hindi.htm
 hit,hittite.htm
 hix,hixkaryana.htm
 hlu,luwian.htm
-hma ,mashanmiao.htm
+hma,mashanmiao.htm
 hmd,ahmao.htm
 hml,luobohemiao.htm
-hmm ,mashanmiao.htm
-hmp ,mashanmiao.htm
-hmq ,hmu.htm
+hmm,mashanmiao.htm
+hmn,hmong.htm
+hmp,mashanmiao.htm
+hmq,hmu.htm
 hmr,hmar.htm
-hms ,hmu.htm
-hmw ,mashanmiao.htm
+hms,hmu.htm
+hmw,mashanmiao.htm
 hni,hani.htm
 hnj,hmongnjua.htm
 hnn,hanunoo.htm
@@ -508,25 +481,25 @@ iba,iban.htm
 ibb,ibibio.htm
 ibo,igbo.htm
 ido,ido.htm
-ifa ,ifugao.htm
-ifb ,ifugao.htm
-ifk ,ifugao.htm
-ifu ,ifugao.htm
+ifa,ifugao.htm
+ifb,ifugao.htm
+ifk,ifugao.htm
+ifu,ifugao.htm
 igs,interglossa.htm
 iii,yi.htm
 iku,inuktitut.htm
 ikz,ikizu.htm
 ilo,ilocano.htm
 ina,interlingua.htm
-inb ,kichwa.htm
+inb,kichwa.htm
 ind,indonesian.htm
 Indi,inupiaq.php
 ing,degxinag.htm
 inh,ingush.htm
-inj ,kichwa.htm
+inj,kichwa.htm
 ior,inor.htm
 iow,chiwere.htm
-ipk ,inupiaq.php
+ipk,inupiaq.php
 irk,iraqw.htm
 iru,irula.htm
 isd,isnag.htm
@@ -552,15 +525,15 @@ jiv,shuar.htm
 jje,jeju.htm
 jmr,kammara.htm
 jmx,mixtec.htm
-jod ,mwangwego.htm
+jod,mwangwego.htm
 jpn,japanese_language.htm
 jqr,jaqaru.htm
 jra,jarai.htm
 jrb,judeo-arabic.htm
-jud ,mwangwego.htm
+jud,mwangwego.htm
 kaa,karakalpak.php
 kab,kabyle.php
-kac ,jingpho.htm
+kac,jingpho.htm
 kal,greenlandic.htm
 kam,kamda.htm
 kan,kannada.htm
@@ -582,23 +555,26 @@ kdx,kam.htm
 kea,kriol.php
 kec,keiga.htm
 kee,keres.htm
+kek,qeqchi.htm
 ket,ket.htm
 key,kupia.htm
 kfa,coorgicox.htm
 kfb,kolam.htm
 kfc,konda.htm
 kff,koya.htm
-kfo ,mwangwego.htm
+kfo,mwangwego.htm
 kfr,kutchi.htm
-kga ,mwangwego.htm
-kge ,lampung.htm
+kga,mwangwego.htm
+kge,lampung.htm
 kgk,kaiwa.htm
 kgo,krongo.htm
 kgp,kaingang.php
 kha,khasi.htm
 khb,tailue.htm
+khm,khmer.htm
 khv,khwarshi.htm
 khw,khowar.htm
+kic,kickapoo.htm
 kik,kikuyu.htm
 kim,tofa.htm
 kin,kinyarwanda.htm
@@ -648,7 +624,7 @@ ktm,kurti.htm
 kto,kuot.htm
 ktu,kituba.htm
 ktz,juhoan.htm
-kua ,oshiwambo.php
+kua,oshiwambo.php
 kud,auhelawa.htm
 kum,kumyk.php
 kur,kurdish.htm
@@ -656,22 +632,23 @@ kut,kutenai.htm
 kuu,dinaki.htm
 kva,bagvalal.htm
 kvc,kove.htm
+kvn,kuna.htm
 kvr,kerinci.htm
-kvy ,kayahli.htm
+kvy,kayahli.htm
 kwi,awapit.htm
 kwk,kwakwala.htm
-kwm ,oshiwambo.php
-kxf ,kayahli.htm
+kwm,oshiwambo.php
+kxf,kayahli.htm
 kxm,northernkhmer.htm
 kxv,jatapu.htm
 kyh,karuk.htm
-kyu ,kayahli.htm
+kyu,kayahli.htm
 lac,lacandon.htm
 lad,ladino.htm
 lao,lao.htm
 lat,latin2.htm
 lav,latvian.htm
-lay ,bai.htm
+lay,bai.htm
 lbe,lak.htm
 lbj,ladakhi.htm
 lbo,jru.htm
@@ -693,9 +670,8 @@ lis,fraser.htm
 lit,lithuanian.htm
 liv,livonian.htm
 ljl,ende.htm
-ljp ,lampung.htm
+ljp,lampung.htm
 lkt,sioux.htm
-lkt ,sioux.htm
 lky,lokoya.htm
 lld,ladin.htm
 lln,lele.htm
@@ -704,7 +680,7 @@ lmd,lumun.htm
 lml,raga.htm
 lmn,sugali.htm
 lmo,lombard.htm
-lnb ,oshiwambo.php
+lnb,oshiwambo.php
 loh,narim.htm
 lom,loma.htm
 lot,lotuko.htm
@@ -716,29 +692,28 @@ ltz,luxembourgish.htm
 lua,tshiluba.php
 luc,aringa.htm
 lud,ludic.htm
+lug,ganda.php
 lui,luseno.htm
 lul,olubo.htm
 luo,dholuo.php
 lus,mizo.htm
 lut,lushootseed.htm
 lzz,laz.htm
-maa ,mazatec.htm
+maa,mazatec.htm
 mab,mixtec.htm
 mad,madurese.htm
 mag,magahi.htm
 mah,marshallese.php
 mai,maithili.htm
 maj,jalapamazatec.htm
-maj ,mazatec.htm
 mak,makassarese.htm
 mal,malayalam.htm
 mam,mam.htm
 maq,chiquihuitlanmazatec.htm
-maq ,mazatec.htm
 mar,marathi.htm
 mas,maasai.htm
-mau ,mazatec.htm
-maz ,mazahua.htm
+mau,mazatec.htm
+maz,mazahua.htm
 mbc,macushi.htm
 mbt,matigsalug.htm
 mbz,mixtec.htm
@@ -792,7 +767,6 @@ mkf,miya.htm
 mkj,mokilese.htm
 mks,mixtec.htm
 mku,maninka.htm
-mku ,mwangwego.htm
 mkw,kituba.htm
 mld,neomandaic.htm
 mlg,malagasy.htm
@@ -800,7 +774,7 @@ mlt,maltese.htm
 mlu,toqabaqita.htm
 mlv,mwotlap.htm
 mlz,aklan.htm
-mmc ,mazahua.htm
+mmc,mazahua.htm
 mmk,mukhadora.htm
 mmr,qoxiong.htm
 mna,mbula.htm
@@ -830,7 +804,7 @@ mrv,mangareva.htm
 mrw,maranao.htm
 msa,malay.htm
 msb,masbateno.htm
-msc ,mwangwego.htm
+msc,mwangwego.htm
 mse,musey.htm
 msn,vures.htm
 mtd,mualang.htm
@@ -855,79 +829,85 @@ mxj,miju.htm
 mxs,mixtec.htm
 mxt,mixtec.htm
 mxv,mixtec.htm
-mxx ,mwangwego.htm
+mxx,mwangwego.htm
 mxy,mixtec.htm
 mya,burmese.htm
 myh,makah.htm
 myp,piraha.php
 myv,erzya.htm
 mza,mixtec.htm
-mzi ,mazatec.htm
-mzj ,mwangwego.htm
+mzi,mazatec.htm
+mzj,mwangwego.htm
 mzn,mazandarani.htm
 nag,nagamese.php
 nan,../chinese/taiwanese.htm
 nap,neapolitan.php
+naq,khoekhoe.htm
 nau,nauruan.htm
 nav,navajo.htm
-naz ,nahuatl.htm
+naz,nahuatl.htm
 nbc,chang.htm
+nbl,ndebele.php
 ncg,nisgaa.htm
-nch ,nahuatl.htm
-nci ,nahuatl.htm
-ncj ,nahuatl.htm
-ncl ,nahuatl.htm
-ncx ,nahuatl.htm
+nch,nahuatl.htm
+nci,nahuatl.htm
+ncj,nahuatl.htm
+ncl,nahuatl.htm
+ncx,nahuatl.htm
 ncz,natchez.htm
-ndo ,oshiwambo.php
+nde,sindebele.htm
+ndo,oshiwambo.php
 nds,lowgerman.htm
 neg,negidal.htm
-neo ,hmu.htm
+neo,hmu.htm
 nep,nepali.htm
 new,ranjana.htm
 nfa,dhao.htm
 ngh,niuu.htm
 ngi,ngizim.htm
-ngu ,nahuatl.htm
-nhc ,nahuatl.htm
-nhe ,nahuatl.htm
-nhg ,nahuatl.htm
-nhi ,nahuatl.htm
-nhk ,nahuatl.htm
-nhm ,nahuatl.htm
-nhn ,nahuatl.htm
-nhp ,nahuatl.htm
-nhq ,nahuatl.htm
+ngu,nahuatl.htm
+nhc,nahuatl.htm
+nhe,nahuatl.htm
+nhg,nahuatl.htm
+nhi,nahuatl.htm
+nhk,nahuatl.htm
+nhm,nahuatl.htm
+nhn,nahuatl.htm
+nhp,nahuatl.htm
+nhq,nahuatl.htm
 nhr,naro.htm
-nht ,nahuatl.htm
-nhv ,nahuatl.htm
-nhw ,nahuatl.htm
-nhx ,nahuatl.htm
-nhy ,nahuatl.htm
-nhz ,nahuatl.htm
+nht,nahuatl.htm
+nhv,nahuatl.htm
+nhw,nahuatl.htm
+nhx,nahuatl.htm
+nhy,nahuatl.htm
+nhz,nahuatl.htm
 nia,nias.htm
 nio,nganasan.htm
 niu,niuean.php
 niv,nivkh.htm
 njm,angami.htm
 nkr,nukuoro.htm
-nln ,nahuatl.htm
-nlv ,nahuatl.htm
+nld,dutch.htm
+nln,nahuatl.htm
+nlv,nahuatl.htm
 nmf,tangkhul.htm
 nmn,taa.htm
-nne ,oshiwambo.php
+nne,oshiwambo.php
+nod,lanna.htm
 nog,nogai.htm
 nom,kashibo.htm
 non,oldnorse.htm
 nor,norwegian.htm
 not,nomatsiguenga.htm
 nov,novial.htm
-npl ,nahuatl.htm
+npl,nahuatl.htm
 npo,pochuri.htm
+nrf,jerriais.htm
 nrn,norn.htm
 nsk,naskapi.php
-nso ,nsotho.htm
-nsu ,nahuatl.htm
+nso,nsotho.htm
+nsu,nahuatl.htm
 ntj,ngaanyatjarra.htm
 ntp,tepehuan.htm
 nuf,nushu.htm
@@ -937,7 +917,7 @@ num,niuafoou.htm
 nup,nupe.htm
 nus,nuer.htm
 nuy,nunggubuyu.htm
-nuz ,nahuatl.htm
+nuz,nahuatl.htm
 nwx,ranjana.htm
 nxq,naxi.htm
 nya,chichewa.php
@@ -961,20 +941,21 @@ ood,oodham.htm
 oon,onge.htm
 orh,oroqen.htm
 ori,kotia.htm
+orm,oromo.htm
 ory,oriya.htm
 osa,osage.php
 oss,ossetian.htm
-ote ,otomi.htm
+ote,otomi.htm
 otk,orkhon.htm
-otl ,otomi.htm
-otm ,otomi.htm
-otn ,otomi.htm
-otq ,otomi.htm
-ots ,otomi.htm
-ott ,otomi.htm
+otl,otomi.htm
+otm,otomi.htm
+otn,otomi.htm
+otq,otomi.htm
+ots,otomi.htm
+ott,otomi.htm
 otw,ottawa.htm
-otx ,otomi.htm
-otz ,otomi.htm
+otx,otomi.htm
+otz,otomi.htm
 oui,orkhon.htm
 ovd,elfdalian.htm
 pag,pangasinan.htm
@@ -987,7 +968,7 @@ pau,palauan.htm
 paw,pawnee.htm
 pbb,paez.htm
 pbg,paraujuano.htm
-pbm ,mazatec.htm
+pbm,mazatec.htm
 pcc,bouyei.htm
 pcd,picard.htm
 pci,porja.htm
@@ -1013,7 +994,6 @@ pma,paama.htm
 pms,piedmontese.htm
 pnk,pauna.htm
 pnt,pontic.htm
-pnt ,greek.htm
 pny,pinyin.htm
 pol,polish.htm
 pon,pohnpeian.htm
@@ -1023,7 +1003,6 @@ pot,potawatomi.htm
 pov,guineabissaucreole.htm
 ppi,paipai.htm
 ppl,pipil.htm
-ppl ,nahuatl.htm
 pqm,malecitepassamaquoddy.htm
 pri,paici.htm
 prq,asheninka.htm
@@ -1033,26 +1012,26 @@ pwi,patwin.htm
 pwn,paiwan.htm
 qua,quapaw.htm
 quc,kiche.htm
-qud ,kichwa.htm
+qud,kichwa.htm
 que,quechua.htm
-qug ,kichwa.htm
+qug,kichwa.htm
 quh,southbolivianquechua.htm
-qup ,kichwa.htm
-quw ,kichwa.htm
-qvi ,kichwa.htm
-qvj ,kichwa.htm
-qvo ,kichwa.htm
-qvz ,kichwa.htm
-qxl ,kichwa.htm
+qup,kichwa.htm
+quw,kichwa.htm
+qvi,kichwa.htm
+qvj,kichwa.htm
+qvo,kichwa.htm
+qvz,kichwa.htm
+qxl,kichwa.htm
 qxq,qashqai.htm
-qxr ,kichwa.htm
+qxr,kichwa.htm
 rad,rade.htm
 raj,rajasthani.htm
 rap,rapanui.htm
 rar,rarotongan.htm
 rcf,reunioncreole.htm
 rej,redjang.htm
-rgn ,emilian-romagnol.htm
+rgn,emilian-romagnol.htm
 rhg,rohingya.htm
 rif,rifian.htm
 rki,arakanese.htm
@@ -1073,6 +1052,7 @@ ruq,meglenoromanian.htm
 rus,russian.htm
 rut,rutul.htm
 ryu,okinawan.php
+sac,fox.htm
 sag,sango.php
 sah,yakut.htm
 san,sanskrit.htm
@@ -1082,7 +1062,8 @@ sav,safen.htm
 saz,saurashtra.htm
 sbe,saliba.htm
 sbl,botolan.htm
-scf ,guadeloupean.php
+sce,santa.htm
+scf,guadeloupean.php
 scl,shina.htm
 scn,sicilian.htm
 sco,scots.htm
@@ -1098,7 +1079,8 @@ sek,sekani.htm
 sel,selkup.htm
 ser,serrano.htm
 sey,secoya.htm
-sgp ,jingpho.htm
+sgh,shughni.htm
+sgp,jingpho.htm
 sgy,sanglechi.htm
 she,sheko.htm
 shh,shoshone.htm
@@ -1108,20 +1090,16 @@ shn,shan.htm
 shp,shipibo.htm
 shs,shuswap.htm
 shy,shawiya.htm
-sia ,saami.htm
+sia,saami.htm
 sin,sinhala.htm
 sip,sikkimese.htm
 sjd,kildinsami.htm
-sjd ,saami.htm
 sje,pitesami.htm
-sje ,saami.htm
-sjk ,saami.htm
+sjk,saami.htm
 sjo,xibe.htm
 sjr,siar.htm
 sjt,tersami.htm
-sjt ,saami.htm
 sju,umesami.htm
-sju ,saami.htm
 sjw,shawnee.php
 skr,saraiki.htm
 sku,sakao.htm
@@ -1131,33 +1109,30 @@ slm,beli.htm
 slr,salar.htm
 slv,slovene.htm
 sma,southernsami.htm
-sma ,saami.htm
 sme,northernsami.htm
-sme ,saami.htm
 smj,lulesami.htm
-smj ,saami.htm
 smk,bolinao.htm
 sml,centralsinama.htm
 smn,inarisami.htm
-smn ,saami.htm
 smo,samoan.htm
 smp,samaritan.htm
 sms,skoltsami.htm
-sms ,saami.htm
 smw,sumbawa.htm
 sna,shona.php
 snd,sindhi.htm
 snf,noon.htm
 snk,soninke.htm
 sog,sogdian.htm
-soi ,rana.htm
+soi,rana.htm
 som,somali.htm
 soq,kanasi.htm
+sot,sesotho.htm
 spa,spanish.htm
 spo,salish.htm
 spp,supyire.htm
 sqi,albanian.htm
 squ,squamish.htm
+srb,savara.htm
 srd,sardinian.htm
 srh,sarikoli.htm
 srm,saramaccan.htm
@@ -1182,7 +1157,6 @@ sva,svan.htm
 svs,savosavo.htm
 swa,swahili.htm
 swb,maore.htm
-swb ,comorian.htm
 swe,swedish.htm
 swi,sui.htm
 sxr,saaroa.htm
@@ -1190,14 +1164,14 @@ syl,syloti.htm
 syr,syriac.htm
 szl,silesian.php
 tab,tabassaran.htm
-tac ,tarahumara.htm
+tac,tarahumara.htm
 tae,tariana.htm
 tah,tahitian.htm
 tam,tamil.htm
 tan,tangale.htm
 tao,yami.htm
 taq,tamasheq.htm
-tar ,tarahumara.htm
+tar,tarahumara.htm
 tat,tatar.htm
 tau,uppertanana.htm
 tay,atayal.htm
@@ -1207,11 +1181,11 @@ tbl,tboli.htm
 tbw,tagbanwa.htm
 tca,ticuna.htm
 tcb,tanacross.htm
-tce ,tutchone.htm
-tcf ,tlapanec.htm
-tcl ,jingpho.htm
+tce,tutchone.htm
+tcf,tlapanec.htm
+tcl,jingpho.htm
 tcs,tsc.htm
-tcu ,tarahumara.htm
+tcu,tarahumara.htm
 tcx,toda.htm
 tcy,tulu.htm
 tdd,tainua.htm
@@ -1226,12 +1200,12 @@ tgk,tajik.htm
 tgl,tagalog.htm
 tha,thai.htm
 thd,kuukthaayorre.htm
-the ,rana.htm
-thh ,tarahumara.htm
+the,rana.htm
+thh,tarahumara.htm
 thi,tainua.htm
-thl ,rana.htm
-thq ,rana.htm
-thr ,rana.htm
+thl,rana.htm
+thq,rana.htm
+thr,rana.htm
 tht,tahltan.htm
 thv,tamahaq.htm
 tig,tigre.htm
@@ -1240,11 +1214,11 @@ tir,tigrinya.htm
 tiw,tiwi.htm
 tix,southerntiwa.htm
 tjs,tujia.htm
-tkb ,rana.htm
+tkb,rana.htm
 tkl,tokelauan.htm
 tkp,tikopia.htm
 tkr,tsakhur.htm
-tkt ,rana.htm
+tkt,rana.htm
 tla,tepehuan.htm
 tli,tlingit.htm
 tly,talysh.htm
@@ -1258,18 +1232,17 @@ toi,tongan.htm
 toj,tojolabal.htm
 tol,tolowa.htm
 toq,toposa.htm
-tpc ,tlapanec.htm
+tpc,tlapanec.htm
 tpi,tokpisin.htm
-tpl ,tlapanec.htm
+tpl,tlapanec.htm
 tpu,tampuan.htm
-tpx ,tlapanec.htm
+tpx,tlapanec.htm
 tri,tiriyo.htm
 tru,turoyo.htm
 trv,seediq.htm
 trw,torwali.htm
 tsc,tswa.htm
 tsd,tsakonian.htm
-tsd ,greek.htm
 tsg,tausug.htm
 tsi,tsimshian.htm
 tsj,tshangla.htm
@@ -1277,7 +1250,7 @@ tsn,tswana.php
 tso,tsonga.php
 tsz,purepecha.htm
 tta,tutelo.htm
-ttm ,tutchone.htm
+ttm,tutchone.htm
 ttt,tat.htm
 tuk,turkmen.htm
 tum,tumbuka.htm
@@ -1290,8 +1263,8 @@ tvl,tuvaluan.htm
 twe,teiwa.htm
 twf,taos.htm
 twi,twi.htm
-two ,nsotho.htm
-twr ,tarahumara.htm
+two,nsotho.htm
+twr,tarahumara.htm
 txb,tocharian.htm
 txg,tangut.htm
 txq,tii.htm
@@ -1328,15 +1301,16 @@ vec,venetian.htm
 ven,venda.htm
 vep,veps.htm
 vie,vietnamese.htm
+vls,flemish.htm
 vmc,mixtec.htm
 vmj,mixtec.htm
 vmm,mixtec.htm
-vmp ,mazatec.htm
+vmp,mazatec.htm
 vmq,mixtec.htm
 vmw,makhuwa.php
 vmx,mixtec.htm
-vmy ,mazatec.htm
-vmz ,mazatec.htm
+vmy,mazatec.htm
+vmz,mazatec.htm
 vol,volapuk.htm
 vot,votic.htm
 vro,voro.htm
@@ -1353,13 +1327,13 @@ wec,guere.htm
 wic,wichita.htm
 wim,wik-mungkan.php
 win,hotcak.htm
-wlc ,comorian.htm
+wlc,comorian.htm
 wln,walloon.htm
 wls,wallisian.htm
 wmb,wambaya.htm
 wmw,mwani.htm
 wnc,wantoat.htm
-wni ,comorian.htm
+wni,comorian.htm
 wnw,wintu.htm
 woe,woleaian.htm
 wol,wolof.htm
@@ -1367,17 +1341,19 @@ wrh,wiradjuri.php
 wrk,garawa.htm
 wrr,wardaman.htm
 wuu,../chinese/wu.htm
+wya,wyandot.htm
 wyb,ngiyambaa.php
 wym,wymysorys.htm
 xad,adaizan.htm
 xal,kalmyk.htm
 xan,xamtanga.htm
+xav,shavante.php
 xaw,kawaiisu.htm
 xcb,cumbric.htm
 xce,celtiberian.htm
-xcg ,gaulish.htm
+xcg,gaulish.htm
 xcr,carian.php
-xga ,gaulish.htm
+xga,gaulish.htm
 xgf,tongva.htm
 xhd,southarabian.htm
 xho,xhosa.htm
@@ -1385,7 +1361,6 @@ xib,iberian.htm
 xlc,lycian.php
 xld,lydian.php
 xlp,lepontic.htm
-xlp ,gaulish.htm
 xls,iberian.htm
 xlu,luwian.htm
 xmf,mingrelian.htm
@@ -1393,7 +1368,9 @@ xmm,manadomalay.htm
 xmr,meroitic.htm
 xog,soga.htm
 xom,komo.htm
-xpo ,nahuatl.htm
+xpg,phrygian.htm
+xpo,nahuatl.htm
+xpq,mohegan.htm
 xpr,parthian.htm
 xqt,southarabian.htm
 xsa,sabaean.htm
@@ -1404,7 +1381,7 @@ xta,mixtec.htm
 xtb,mixtec.htm
 xtc,kadugli.htm
 xtd,mixtec.htm
-xtg ,gaulish.htm
+xtg,gaulish.htm
 xti,mixtec.htm
 xtj,mixtec.htm
 xtl,mixtec.htm
@@ -1427,7 +1404,6 @@ yaq,yaqui.htm
 ybb,yemba.htm
 ycn,yucuna.htm
 yej,yevanic.htm
-yej ,greek.htm
 yeu,yerukula.htm
 yid,yiddish.htm
 yij,yindjibarndi.php
@@ -1440,11 +1416,12 @@ yrk,nenets.htm
 yrl,nheengatu.htm
 yua,yucatec.htm
 yuc,yuchi.htm
+yue,../chinese/yue.htm
 yum,quechan.htm
 yur,yurok.htm
 zag,zaghawa.htm
 zap,zapotec.php
-zdj ,comorian.htm
+zdj,comorian.htm
 zea,zeelandic.htm
 zen,zenaga.htm
 zgh,tamazight.htm
@@ -1459,6 +1436,7 @@ zro,zaparo.htm
 zul,zulu.htm
 zun,zuni.htm
 zza,zazaki.htm
+,mwangwego.htm
 ,sorangsompeng.htm
 ,ipai.htm
 ,kumeyaay.htm
