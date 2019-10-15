@@ -16,17 +16,32 @@
         </div>
       </div>
     </div>
-    <div v-for="level in levels" class="level" :data-learning-path-level="level.name">
-      <h4 class="level-title">
-        {{ level.category }} <span :data-level="level.name">({{ level.name }})</span>
+    <div v-for="level in levels" class="level" :data-learning-path-level="level.cefr">
+      <h4 class="level-title" :data-level="level.cefr">
+        {{ level.category }} ({{ level.cefr }}) Phase
       </h4>
-      <div v-for="exam in examsA1">
-        Pass the exam:
-        <a :href="exam.url">
-          {{ exam.title }}
-          <span v-if="exam.level === 'all'">({{level.name}})</span>
-        </a>
-      </div>
+      <template v-if="coursesLoaded">
+        <div v-for="course in courses[level.cefr]">
+          <p>Take (or continue to take) the online course:</p>
+          <Resource
+            :resource="{
+              title: course.title,
+              url: course.url,
+              thumbnail: course.thumbnail.data.full_url
+            }"
+          />
+        </div>
+      </template>
+      <template v-if="examsLoaded">
+        <div v-for="exam in exams[level.cefr]" class="level-milestone">
+          <div class="level-milestone-dot" :data-bg-level="level.cefr"></div>
+          Pass the exam:
+          <a :href="exam.url" target="_blank">
+            {{ exam.title }}
+            <span v-if="exam.level === 'all'">({{level.cefr}})</span>
+          </a>
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -48,61 +63,88 @@ export default {
     return {
       levels: [
         {
-          name: 'PreA1',
+          number: '1',
+          cefr: 'PreA1',
           category: 'Beginner'
         },
         {
-          name: 'A1',
+          number: '2',
+          cefr: 'A1',
           category: 'Beginner'
         },
         {
-          name: 'A2',
+          number: '3',
+          cefr: 'A2',
           category: 'Beginner'
         },
         {
-          name: 'B1',
+          number: '4',
+          cefr: 'B1',
           category: 'Intermediate'
         },
         {
-          name: 'B2',
+          number: '5',
+          cefr: 'B2',
           category: 'Intermediate'
         },
         {
-          name: 'C1',
+          number: '6',
+          cefr: 'C1',
           category: 'Advanced'
         },
         {
-          name: 'C2',
+          number: '7',
+          cefr: 'C2',
           category: 'Advanced'
         }
       ],
-      examsA1: [],
-      examsA2: [],
-      examsB1: [],
-      examsB2: [],
-      examsC1: [],
-      examsC2: []
+      exams: {},
+      courses: {},
+      examsLoaded: false,
+      coursesLoaded: false,
     }
   },
-  async mounted() {
-    let response = await $.getJSON(
-      `${Config.wiki}items/exams?filter[l2][eq]=${this.$l2.id}`
-    )
-    let exams = response.data || []
-    for (let exam of exams) {
-      for (let level of ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']) {
-        if (exam.level && ['all', level].includes(exam.level)) {
-          this[`exams${level}`].push(exam)
+  methods: {
+    async loadExams() {
+      let response = await $.getJSON(
+        `${Config.wiki}items/exams?filter[l2][eq]=${this.$l2.id}`
+      )
+      let exams = response.data || []
+      for (let exam of exams) {
+        for (let level of this.levels) {
+          if (exam.level && ['all', level.number].includes(exam.level)) {
+            this.exams[level.cefr] = this.exams[level.cefr] || []
+            this.exams[level.cefr].push(exam)
+          }
         }
       }
+      this.examsLoaded = true
+    },
+    async loadCourses() {
+      let response = await $.getJSON(
+        `${Config.wiki}items/resources?filter[l2][eq]=${this.$l2.id}&filter[type][eq]=courses&filter[featured][eq]=1&fields=*,thumbnail.*`
+      )
+      let courses = response.data || []
+      for (let course of courses) {
+        for (let level of this.levels) {
+          if (course.level && course.level.includes(level.number)) {
+            this.courses[level.cefr] = this.courses[level.cefr] || []
+            this.courses[level.cefr].push(course)
+          }
+        }
+      }
+      this.coursesLoaded = true
     }
+  },
+  mounted() {
+    this.loadExams()
+    this.loadCourses()
   }
 }
 </script>
 
 <style lang="scss">
 .learning-path {
-
   .level {
     padding-bottom: 3rem;
     padding-left: 1.5rem;
@@ -110,67 +152,67 @@ export default {
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       background: white;
       display: block;
       position: absolute;
-      left: -1rem;
+      left: -1.25rem;
       top: 0;
       border-radius: 100%;
-      height: 1.5rem;
-      width: 1.5rem;
-      border: 0.3rem solid #ccc;
+      height: 2rem;
+      width: 2rem;
+      border: 0.5rem solid #ccc;
     }
 
-    &[data-learning-path-level="PreA1"] {
-      border-left-color: #B51700;
+    &[data-learning-path-level='PreA1'] {
+      border-left-color: #b51700;
       &::before {
-        border-color: #B51700;
+        border-color: #b51700;
       }
     }
 
-    &[data-learning-path-level="A1"] {
-      border-left-color: #0076BA;
+    &[data-learning-path-level='A1'] {
+      border-left-color: #0076ba;
       &::before {
-        border-color: #0076BA;
+        border-color: #0076ba;
       }
     }
 
-    &[data-learning-path-level="A2"] {
-      border-left-color: #00882B;
+    &[data-learning-path-level='A2'] {
+      border-left-color: #00882b;
       &::before {
-        border-color: #00882B;
+        border-color: #00882b;
       }
     }
 
-    &[data-learning-path-level="B1"] {
-      border-left-color: #6A348A;
+    &[data-learning-path-level='B1'] {
+      border-left-color: #6a348a;
       &::before {
-        border-color: #6A348A;
+        border-color: #6a348a;
       }
     }
 
-    &[data-learning-path-level="B2"] {
-      border-left-color: #5B0516;
+    &[data-learning-path-level='B2'] {
+      border-left-color: #5b0516;
       &::before {
-        border-color: #5B0516;
+        border-color: #5b0516;
       }
     }
 
-    &[data-learning-path-level="C1"] {
-      border-left-color: #011B3C;
+    &[data-learning-path-level='C1'] {
+      border-left-color: #011b3c;
       &::before {
-        border-color: #011B3C;
+        border-color: #011b3c;
       }
     }
 
-    &[data-learning-path-level="C2"] {
+    &[data-learning-path-level='C2'] {
       border-left-color: #0f575c;
       &::before {
         border-color: #0f575c;
       }
       &::after {
-        content: "";
+        content: '';
         border-top: 2rem solid #0f575c;
         border-left: 1rem solid transparent;
         border-right: 1rem solid transparent;
@@ -185,6 +227,19 @@ export default {
 
     .level-title {
       margin-bottom: 1rem;
+    }
+
+    .level-milestone {
+      position: relative;
+      .level-milestone-dot {
+        display: block;
+        position: absolute;
+        left: -2.35rem;
+        top: 0;
+        border-radius: 100%;
+        height: 1.25rem;
+        width: 1.25rem;
+      }
     }
   }
 }
