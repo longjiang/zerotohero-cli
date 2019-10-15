@@ -23,4 +23,7 @@ export default {
 </script>
 
 <style>
+.resource-thumbnail {
+  width: 100%;
+}
 </style>

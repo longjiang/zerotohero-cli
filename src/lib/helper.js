@@ -153,6 +153,9 @@ export default {
     return string.charAt(0).toUpperCase() + string.slice(1)
   },
   absoluteURL(base, relative) {
+    if(relative.startsWith('http') || relative.startsWith('//')) {
+      return relative
+    }
     if (relative.startsWith('#')) {
       return base + relative
     }

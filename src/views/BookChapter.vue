@@ -30,13 +30,7 @@
         <div class="chapter-content" v-if="chapterContent">
           <SpeechBar
             :lang="chapterLang ? chapterLang : $l2.code"
-            :html="
-              chapterContent.replace(
-                /href=&quot;([^&quot;]+)&quot;/g,
-                (match, p1) =>
-                  `href=&quot;#/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(p1)}&quot;`
-              )
-            "
+            :html="chapterContent"
           />
           
         </div>
@@ -202,7 +196,14 @@ export default {
       let chapter = await Library.getChapter(url)
       if (chapter) {
         this.chapterTitle = chapter.title
-        this.chapterContent = chapter.content
+        let $chapterContent = $('<div>').html(chapter.content)
+        for (let a of $chapterContent.find('a')) {
+          if (!$(a).attr('target')) {
+            let url = $(a).attr('href')
+            $(a).attr('href', `#/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(url)}`)
+          }
+        }
+        this.chapterContent = $chapterContent.html()
         if (chapter.lang && chapter.lang === this.$l1.code) {
           this.foreign = false
         }
@@ -215,7 +216,6 @@ export default {
         }
         this.chapterLang = chapter.lang
       }
-      console.log(chapter)
       this.loaded = true
     },
     previousClick() {

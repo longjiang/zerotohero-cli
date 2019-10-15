@@ -20,6 +20,22 @@ export default {
     }
     let title = $chapterHTML.find('#body h1').text().trim()
     $chapterHTML.find('#body table').addClass('table').addClass('table-bordered')
+    for (let item of $chapterHTML.find('#body [src]')) {
+      $(item).attr('src', Helper.absoluteURL(url, $(item).attr('src')))
+    }
+    for (let a of $chapterHTML.find('#body a')) {
+      let href = $(a).attr('href')
+      if (href) {
+        if (href.startsWith('http') || href.startsWith('//') || href.endsWith('mp3')) {
+          $(a).attr('target', '_blank')
+        }
+        let absoluteHref = Helper.absoluteURL(url, href)
+        $(a).attr('href', absoluteHref)
+        if(href.endsWith('mp3')) {
+          $(a).after(`<br/><audio controls><source src="${absoluteHref}" /></audio>`)
+        }
+      }
+    }
     $chapterHTML.find('#body h1').remove()
     let chapter = {
       title,
