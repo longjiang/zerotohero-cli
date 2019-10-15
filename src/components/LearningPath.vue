@@ -2,18 +2,16 @@
   <div class="learning-path">
     <div class="level">
       <h4 class="level-title">Introduction to {{ l2.name }}</h4>
-      <div>
-        <div v-if="l2.omniglot">
-          <p>Learn information about {{ l2.name }} and learn some beginner phrases from Omniglot.</p>
-          <Resource
-            :resource="{
-              title: `Getting started with ${l2.name} from Omniglot`,
-              url: `/#/${$l1.code}/${l2.code}/book/chapter/https%3A%2F%2Fwww.omniglot.com%2Fwriting%2F${encodeURIComponent(l2.omniglot)}`,
-              thumbnail: '/img/omniglot-banner.jpg'
-            }"
-            :internal="true"
-          />
-        </div>
+      <div v-if="l2.omniglot" class="level-activity">
+        <p>Learn information about {{ l2.name }} and learn some beginner phrases from Omniglot.</p>
+        <Resource
+          :resource="{
+            title: `Getting started with ${l2.name} from Omniglot`,
+            url: `/#/${$l1.code}/${l2.code}/book/chapter/https%3A%2F%2Fwww.omniglot.com%2Fwriting%2F${encodeURIComponent(l2.omniglot)}`,
+            thumbnail: '/img/omniglot-banner.jpg'
+          }"
+          :internal="true"
+        />
       </div>
     </div>
     <div v-for="level in levels" class="level" :data-learning-path-level="level.cefr">
@@ -21,7 +19,7 @@
         {{ level.category }} ({{ level.cefr }}) Phase
       </h4>
       <template v-if="coursesLoaded">
-        <div v-for="course in courses[level.cefr]">
+        <div v-for="course in courses[level.cefr]" class="level-activity">
           <p>Take (or continue to take) the online course:</p>
           <Resource
             :resource="{
@@ -32,6 +30,17 @@
           />
         </div>
       </template>
+      <div class="level-activity" v-if="level.number < 7">
+        <p>Take online tutoring lessons with the help of our Tutoring Kit</p>
+        <Resource
+          :resource="{
+            title: `Online tutoring lesson plans (${level.cefr} level)`,
+            url: `/#/${$l1.code}/${l2.code}/tutoring/${level.number}`,
+            thumbnail: '/img/online-tutoring.jpg'
+          }"
+            :internal="true"
+        />
+      </div>
       <template v-if="examsLoaded">
         <div v-for="exam in exams[level.cefr]" class="level-milestone">
           <div class="level-milestone-dot" :data-bg-level="level.cefr"></div>
@@ -227,6 +236,10 @@ export default {
 
     .level-title {
       margin-bottom: 1rem;
+    }
+
+    .level-activity {
+      margin-bottom: 2rem;
     }
 
     .level-milestone {
