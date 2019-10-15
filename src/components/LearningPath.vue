@@ -1,7 +1,7 @@
 <template>
   <div class="learning-path">
     <div class="level">
-      <h4 class="level-title">Introduction to {{ l2.name }}</h4>
+      <h4 class="level-title">Getting to know {{ l2.name }}</h4>
       <div v-if="l2.omniglot" class="level-activity">
         <p>Learn information about {{ l2.name }} and learn some beginner phrases from Omniglot.</p>
         <Resource
@@ -16,7 +16,7 @@
     </div>
     <div v-for="level in levels" class="level" :data-learning-path-level="level.cefr">
       <h4 class="level-title" :data-level="level.cefr">
-        {{ level.category }} ({{ level.cefr }}) Phase
+        {{ level.category }} ({{ level.cefr }}) phase
       </h4>
       <p v-if="level.number > 1">
         The goal of this phase is to reach the {{ level.cefr }} level according to the <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages" target="_blank">Common European Framework of Reference for Languages (CEFR)</a>.
@@ -33,6 +33,28 @@
           />
         </div>
       </template>
+      <div class="level-activity" v-if="level.number > 1 && $hasFeature('youtube')">
+        <p><b :data-level="level.cefr">Activity:</b> Watch YouTube in {{ l2.name }} and study the subtitles with the help of our YouTube study tool.</p>
+        <Resource
+          :resource="{
+            title: `${l2.name} YouTube Study Tool`,
+            url: `/#/${$l1.code}/${l2.code}/youtube/browse`,
+            thumbnail: '/img/youtube-banner.jpg'
+          }"
+            :internal="true"
+        />
+      </div>
+      <div class="level-activity" v-if="level.number > 3 && $hasFeature('dictionary')">
+        <p><b :data-level="level.cefr">Activity:</b> Read books and text in {{ l2.name }} with the help of our popup dictionary.</p>
+        <Resource
+          :resource="{
+            title: `${l2.name} reading with popup dictionary`,
+            url: `/#/${$l1.code}/${l2.code}/library`,
+            thumbnail: '/img/library-banner.jpg'
+          }"
+            :internal="true"
+        />
+      </div>
       <div class="level-activity" v-if="level.number < 7">
         <p><b :data-level="level.cefr">Activity:</b> Take online tutoring lessons with the help of our Tutoring Kit</p>
         <Resource

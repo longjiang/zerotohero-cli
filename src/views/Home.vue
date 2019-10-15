@@ -3,7 +3,8 @@
     <div class="container pt-5 pb-5" v-if="!$hasFeature('home')">
       <div class="row">
         <div class="col-sm-12">
-          <h1 class="mb-5">{{ $l2.name }} Learning Path</h1>
+          <h1 class="mb-2 text-center">How to master {{ $l2.name }}</h1>
+          <p class="lead text-center" style="margin-bottom: 3rem">A visual overview</p>
           <LearningPath :l2="$l2" />
         </div>
       </div>
