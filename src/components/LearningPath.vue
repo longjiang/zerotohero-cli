@@ -18,9 +18,12 @@
       <h4 class="level-title" :data-level="level.cefr">
         {{ level.category }} ({{ level.cefr }}) Phase
       </h4>
+      <p v-if="level.number > 1">
+        The goal of this phase is to reach the {{ level.cefr }} level according to the <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages" target="_blank">Common European Framework of Reference for Languages (CEFR)</a>.
+      </p>
       <template v-if="coursesLoaded">
         <div v-for="course in courses[level.cefr]" class="level-activity">
-          <p>Take (or continue to take) the online course:</p>
+          <p><b :data-level="level.cefr">Activity:</b> Take (or continue to take) the online course:</p>
           <Resource
             :resource="{
               title: course.title,
@@ -31,7 +34,7 @@
         </div>
       </template>
       <div class="level-activity" v-if="level.number < 7">
-        <p>Take online tutoring lessons with the help of our Tutoring Kit</p>
+        <p><b :data-level="level.cefr">Activity:</b> Take online tutoring lessons with the help of our Tutoring Kit</p>
         <Resource
           :resource="{
             title: `Online tutoring lesson plans (${level.cefr} level)`,
@@ -41,10 +44,10 @@
             :internal="true"
         />
       </div>
-      <template v-if="examsLoaded">
+      <template v-if="examsLoaded && level.number > 1">
         <div v-for="exam in exams[level.cefr]" class="level-milestone">
           <div class="level-milestone-dot" :data-bg-level="level.cefr"></div>
-          Pass the exam:
+          <b :data-level="level.cefr">Milestone:</b> Pass the exam:
           <a :href="exam.url" target="_blank">
             {{ exam.title }}
             <span v-if="exam.level === 'all'">({{level.cefr}})</span>
