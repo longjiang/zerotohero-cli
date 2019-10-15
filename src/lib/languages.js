@@ -6,14 +6,25 @@ export default {
   l1s: [],
   locales: [],
   scripts: [],
+  omniglot: [],
   googleLangs: [
     'af',
+    'sq',
+    'am',
     'ar',
     'hy',
+    'az',
+    'eu',
     'be',
+    'bn',
+    'bs',
     'bg',
     'ca',
+    'ceb',
+    'ny',
     'zh',
+    'zh',
+    'co',
     'hr',
     'cs',
     'da',
@@ -24,36 +35,83 @@ export default {
     'tl',
     'fi',
     'fr',
+    'fy',
+    'gl',
+    'ka',
     'de',
     'el',
+    'gu',
+    'ht',
+    'ha',
+    'haw',
     'iw',
     'hi',
+    'hmn',
     'hu',
     'is',
+    'ig',
     'id',
+    'ga',
     'it',
     'ja',
-    'ko',
+    'jw',
+    'kn',
     'kk',
+    'km',
+    'ko',
+    'ku',
+    'ky',
+    'lo',
+    'la',
     'lv',
     'lt',
+    'lb',
+    'mk',
+    'mg',
+    'ms',
+    'ml',
+    'mt',
+    'mi',
+    'mr',
+    'mn',
+    'my',
+    'ne',
     'no',
+    'ps',
     'fa',
     'pl',
     'pt',
+    'pa',
     'ro',
     'ru',
+    'sm',
+    'gd',
     'sr',
+    'st',
+    'sn',
+    'sd',
+    'si',
     'sk',
     'sl',
+    'so',
     'es',
+    'su',
     'sw',
     'sv',
+    'tg',
+    'ta',
+    'te',
     'th',
     'tr',
     'uk',
+    'ur',
     'uz',
-    'vi'
+    'vi',
+    'cy',
+    'xh',
+    'yi',
+    'yo',
+    'zu'
   ],
   googleTranslateLangs: [
     'af',
@@ -190,6 +248,9 @@ export default {
   async loadScripts() {
     this.scripts = await this.loadFile('/data/languages/scripts.csv.txt')
   },
+  async loadOmniglot() {
+    this.omniglot = await this.loadFile('/data/languages/omniglot.csv.txt')
+  },
   get(iso639_2t) {
     return this.l1s.find(language => language['iso639-3'] === iso639_2t)
   },
@@ -273,6 +334,10 @@ export default {
     }
     for (let l1 of l1s) {
       l1.scripts = this.scripts.filter(script => script.lang === l1.code && script.ms !== 'N' && script.p !== 'N' && script.ml !== 'O')
+      let omniglot = this.omniglot.find(item => item['iso639-3'] === l1['iso639-3'])
+      if (omniglot) {
+        l1.omniglot = omniglot.url
+      }
     }
     for (let translation of this.translations) {
       let l1 = l1s.find(
@@ -317,6 +382,9 @@ export default {
     if (options.l2.code !== 'ja' && options.l2.scripts && options.l2.scripts.length > 0 && options.l2.scripts[0].script !== 'Latn') {
       if(!features.includes('transliteration')) features.push('transliteration')
     }
+    if (options.l2.omniglot) {
+      if(!features.includes('omniglot')) features.push('omniglot')
+    }
     return features
   },
   async load() {
@@ -327,7 +395,8 @@ export default {
       this.loadTranslations(),
       this.loadFeatures(),
       this.loadLocales(),
-      this.loadScripts()
+      this.loadScripts(),
+      this.loadOmniglot()
     ]
     return new Promise(async resolve => {
       await Promise.all(promises)

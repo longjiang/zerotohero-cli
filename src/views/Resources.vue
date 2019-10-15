@@ -113,7 +113,10 @@ export default {
       let response = await $.getJSON(
         `${Config.wiki}items/resources?filter[l2][eq]=${this.$l2.id}${filters}&fields=*,thumbnail.*`
       )
-      this.resources = response.data || []
+      this.resources = response.data.map(resource => {
+        resource.thumbnail = resource.thumbnail.data.full_url
+        return resource
+      }) || []
     }
   },
   created() {

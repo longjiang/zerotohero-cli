@@ -9,25 +9,18 @@
       </div>
     </div>
     <div v-else class="resources">
-      <div v-for="resource of resources" class="resource media rounded shadow">
-        <a :href="resource.url" target="_blank" class="link-unstyled">
-          <img :src="resource.thumbnail.data.full_url" class="resource-thumbnail img-fluid" />
-          <div class="media-body">
-            <h6>
-              <Annotate>
-                <span>{{ resource.title }}</span>
-              </Annotate>
-            </h6>
-            <div>{{ resource.description }}</div>
-          </div>
-        </a>
-      </div>
+      <Resource v-for="resource of resources" :resource="resource" />
     </div>
   </div>
 </template>
 
 <script>
+import Resource from '@/components/Resource'
+
 export default {
+  components: {
+    Resource
+  },
   props: {
     resources: {
       type: Array
