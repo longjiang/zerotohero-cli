@@ -67,7 +67,8 @@ const Dictionary = {
     return words
   },
   dictionaryFile(options) {
-    let filename = `/data/wiktionary/${options.l2}-${options.l1}.json.txt`
+    let l2 = options.l2.replace('nor', 'nob') // Default Norwegian to Bokmål
+    let filename = `/data/wiktionary/${l2}-${options.l1}.json.txt`
     return filename
   },
   load(options) {

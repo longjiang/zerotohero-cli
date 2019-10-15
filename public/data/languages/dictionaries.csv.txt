@@ -66,3 +66,7 @@ uzb,eng,wiktionary
 ron,eng,wiktionary
 nor,eng,wiktionary
 sqi,eng,wiktionary
+mkd,eng,wiktionary
+nob,eng,wiktionary
+enm,eng,wiktionary
+grc,eng,wiktionary
