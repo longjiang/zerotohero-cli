@@ -44,6 +44,21 @@
             :internal="true"
         />
       </div>
+      <template v-if="resourcesLoaded && resources[level.cefr] && resources[level.cefr].length > 0">
+        <div class="level-activity">
+          <p><b :data-level="level.cefr">Resources:</b> At the {{ level.cefr }} level, we recommend using the following resources, products, or services:</p>
+          <div v-for="resource in resources[level.cefr]">
+            <Resource
+              :resource="{
+                title: resource.title,
+                url: resource.url,
+                thumbnail: resource.thumbnail.data.full_url
+              }"
+                :internal="true"
+            />
+          </div>
+        </div>
+      </template>
       <template v-if="examsLoaded && level.number > 1">
         <div v-for="exam in exams[level.cefr]" class="level-milestone">
           <div class="level-milestone-dot" :data-bg-level="level.cefr"></div>
@@ -112,8 +127,10 @@ export default {
       ],
       exams: {},
       courses: {},
+      resources: {},
       examsLoaded: false,
       coursesLoaded: false,
+      resourcesLoaded: false,
     }
   },
   methods: {
@@ -146,11 +163,28 @@ export default {
         }
       }
       this.coursesLoaded = true
+    },
+    async loadResources() {
+      let response = await $.getJSON(
+        `${Config.wiki}items/resources?filter[l2][eq]=${this.$l2.id}&filter[type][neq]=courses&filter[featured][eq]=1&fields=*,thumbnail.*`
+      )
+      let resources = response.data || []
+      for (let resource of resources) {
+        for (let level of this.levels) {
+          if (resource.level && resource.level.includes(level.number)) {
+            this.resources[level.cefr] = this.resources[level.cefr] || []
+            this.resources[level.cefr].push(resource)
+          }
+        }
+      }
+      console.log(this.resources)
+      this.resourcesLoaded = true
     }
   },
   mounted() {
     this.loadExams()
     this.loadCourses()
+    this.loadResources()
   }
 }
 </script>
@@ -242,7 +276,8 @@ export default {
     }
 
     .level-activity {
-      margin-bottom: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
     }
 
     .level-milestone {
