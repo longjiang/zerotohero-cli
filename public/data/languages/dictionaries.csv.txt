@@ -70,3 +70,6 @@ mkd,eng,wiktionary
 nob,eng,wiktionary
 enm,eng,wiktionary
 grc,eng,wiktionary
+cat,eng,wiktionary
+tha,eng,wiktionary
+glg,eng,wiktionary
