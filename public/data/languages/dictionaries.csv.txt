@@ -65,3 +65,4 @@ kaz,eng,wiktionary
 uzb,eng,wiktionary
 ron,eng,wiktionary
 nor,eng,wiktionary
+sqi,eng,wiktionary
