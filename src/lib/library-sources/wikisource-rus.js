@@ -4,8 +4,9 @@ export default {
   host: /.*ru\.wikisource\.org.*/,
   name: 'Wikisource',
   example: 'https://ru.wikisource.org/wiki/Духовная_война/Душа_и_ее_падение',
-  logo:
-    'https://ru.wikisource.org/static/images/project-logos/ruwikisource-2x.png',
+  logo() {
+    return 'https://ru.wikisource.org/static/images/project-logos/ruwikisource-2x.png'
+  },
   async getBook(url) {
     let $bookHTML = await Helper.scrape2(url)
     $bookHTML

@@ -3,7 +3,9 @@ import Helper from '@/lib/helper'
 export default {
   host: /www\.51shucheng\.(net|com)/,
   name: '无忧书城 51shucheng.com',
-  logo: 'https://www.51shucheng.net/images/logo.png',
+  logo() {
+    return 'https://www.51shucheng.net/images/logo.png'
+  },
   example: 'https://www.51shucheng.net/kehuan/santi',
   async getBooklist(url) {
     let $html = await Helper.scrape2(url)

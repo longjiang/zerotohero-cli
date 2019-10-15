@@ -3,7 +3,9 @@ import Helper from '@/lib/helper'
 export default {
   host: /.*litnet\.com\/ru.*/,
   name: 'litnet',
-  logo: 'https://litnet.com/el-amor-mistico/img/litnet-logo.png',
+  logo() {
+    'https://litnet.com/el-amor-mistico/img/litnet-logo.png'
+  },
   example: 'https://litnet.com/ru/reader/esli-on-oboroten-b9679',
   async getChapter(url) {
     let $chapterHTML = await Helper.scrape2(url)

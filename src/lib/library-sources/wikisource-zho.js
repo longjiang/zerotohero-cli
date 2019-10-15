@@ -4,8 +4,9 @@ export default {
   host: 'zh.wikisource.org',
   name: 'Wikisource',
   example: 'https://zh.wikisource.org/wiki/西遊記',
-  logo:
-    'https://zh.wikisource.org/static/images/project-logos/zhwikisource-2x.png',
+  logo() {
+    return 'https://zh.wikisource.org/static/images/project-logos/zhwikisource-2x.png'
+  },
   async getBook(url) {
     let $bookHTML = await Helper.scrape2(url)
     $bookHTML.find('.sisitem').remove()

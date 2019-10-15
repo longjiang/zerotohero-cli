@@ -4,7 +4,9 @@ import Vue from 'vue'
 export default {
   host: /.*lib\.ru.*/,
   name: 'Lib.Ru',
-  logo: '/img/book.png',
+  logo() {
+    return '/img/book.png'
+  },
   example: 'http://az.lib.ru/a/awdeew_m_w/text_0005.shtml',
   async getChapter(url) {
     Vue.config.ignoredElements = [

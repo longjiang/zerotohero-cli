@@ -3,8 +3,9 @@ import Helper from '@/lib/helper'
 export default {
   host: /.*librebook\.me.*/,
   name: 'LibreBook',
-  logo:
-    'https://res.librebook.me/static/logo-57412dd2af5f1a655af443850d5c0a51.png',
+  logo() {
+    return 'https://res.librebook.me/static/logo-57412dd2af5f1a655af443850d5c0a51.png'
+  },
   example: 'https://librebook.me/evgenii_onegin/vol1/2?mtr=',
   async getChapter(url) {
     let $chapterHTML = await Helper.scrape2(url)

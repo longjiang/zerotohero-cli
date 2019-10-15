@@ -3,7 +3,9 @@ import Helper from '@/lib/helper'
 export default {
   host: /.*litnet\.com\/en.*/,
   name: 'litnet',
-  logo: 'https://litnet.com/el-amor-mistico/img/litnet-logo.png',
+  logo() {
+    return 'https://litnet.com/el-amor-mistico/img/litnet-logo.png'
+  },
   example() {
     return 'https://litnet.com/en/reader/astray-b162274'
   },

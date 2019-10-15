@@ -3,7 +3,9 @@ import Helper from '@/lib/helper'
 export default {
   host: /.*adonai\.pl.*/,
   name: 'Adonai.pl',
-  logo: 'https://adonai.pl/graph/logo960_d.png',
+  logo() {
+    return 'https://adonai.pl/graph/logo960_d.png'
+  },
   example: 'https://adonai.pl/opowiadania/bajki/?id=1',
   async getChapter(url) {
     let $chapterHTML = await Helper.scrape2(url, -1, 'ISO-8859-2')
