@@ -74,3 +74,4 @@ cat,eng,wiktionary
 tha,eng,wiktionary
 glg,eng,wiktionary
 ukr,eng,wiktionary
+nno,eng,wiktionary

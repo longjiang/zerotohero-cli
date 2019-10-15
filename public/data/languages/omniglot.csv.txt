@@ -899,6 +899,7 @@ nog,nogai.htm
 nom,kashibo.htm
 non,oldnorse.htm
 nor,norwegian.htm
+nno,norwegian.htm
 not,nomatsiguenga.htm
 nov,novial.htm
 npl,nahuatl.htm
