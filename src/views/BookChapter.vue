@@ -13,7 +13,7 @@
         />
       </div>
     </div>
-    <div class="row">
+    <div class="row" v-if="loaded">
       <div
         class="col-md-8"
         :key="'chapter-' + encodeURIComponent(chapterTitle)"
@@ -25,10 +25,11 @@
           <Loader :sticky="true" />
         </div>
         <Annotate tag="h1"
-          :showTranslate="true"><span>{{ chapterTitle }}</span></Annotate
+          :showTranslate="foreign"><span>{{ chapterTitle }}</span></Annotate
         >
         <div class="chapter-content" v-if="chapterContent">
           <SpeechBar
+            :lang="chapterLang ? chapterLang : $l2.code"
             :html="
               chapterContent.replace(
                 /href=&quot;([^&quot;]+)&quot;/g,
@@ -141,7 +142,10 @@ export default {
       chapters: [],
       chapterTitle: '',
       chapterContent: '',
-      location
+      chapterLang: undefined,
+      location,
+      foreign: true,
+      loaded: false
     }
   },
   watch: {
@@ -199,6 +203,9 @@ export default {
       if (chapter) {
         this.chapterTitle = chapter.title
         this.chapterContent = chapter.content
+        if (chapter.lang && chapter.lang === this.$l1.code) {
+          this.foreign = false
+        }
         if (chapter.book) {
           this.chapters = chapter.book.chapters
           this.bookThumbnail = chapter.book.thumbnail
@@ -206,7 +213,10 @@ export default {
           this.bookAuthor = chapter.book.author
           this.bookURL = chapter.book.url
         }
+        this.chapterLang = chapter.lang
       }
+      console.log(chapter)
+      this.loaded = true
     },
     previousClick() {
       location.hash = `#/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.previous)}`

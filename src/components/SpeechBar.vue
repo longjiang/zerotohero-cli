@@ -28,7 +28,7 @@
         .trim()
         .replace(/<(div|p|h1|h2|h3|h4|h5|h6|dd)/g, 'ANNOTATORSEPARATOR!!!<$1')
         .split('ANNOTATORSEPARATOR!!!')">
-      <Annotate v-if="line.trim().length > 0" class="mb-4" tag="div" :showTranslate="true">
+      <Annotate v-if="line.trim().length > 0" class="mb-4" tag="div" :showTranslate="!(lang && lang === $l1.code)">
         <span v-html="line.trim()" />
       </Annotate>
     </template>
@@ -40,6 +40,9 @@ export default {
   props: {
     html: {
       type: String
+    },
+    lang: {
+      default: undefined
     }
   },
   data() {
@@ -68,7 +71,7 @@ export default {
     getVoices() {
       let voices = speechSynthesis
         .getVoices()
-        .filter(voice => voice.lang.startsWith(this.$l2.code))
+        .filter(voice => voice.lang.startsWith(this.lang || this.$l2.code))
       this.voices = voices
     },
     setvoice(index) {
@@ -97,7 +100,7 @@ export default {
     speak(text) {
       if (this.voices.length === 0) this.getVoices()
       this.utterance = new SpeechSynthesisUtterance(text)
-      this.utterance.lang = this.$l2.code
+      this.utterance.lang = this.lang || this.$l2.code
       this.utterance.voice = this.voices[this.voice]
       speechSynthesis.speak(this.utterance)
     },

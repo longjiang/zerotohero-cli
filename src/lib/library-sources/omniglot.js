@@ -19,6 +19,7 @@ export default {
       })
     }
     let title = $chapterHTML.find('#body h1').text().trim()
+    $chapterHTML.find('#body table').addClass('table').addClass('table-bordered')
     $chapterHTML.find('#body h1').remove()
     let chapter = {
       title,
@@ -27,6 +28,9 @@ export default {
         title: chapters[0].title,
         chapters
       }
+    }
+    if(!url.includes('babel')) {
+      chapter.lang = 'en'
     }
     return chapter
   },
@@ -41,7 +45,8 @@ export default {
     return {
       url: url,
       title: chapters[0].title,
-      chapters
+      chapters,
+      lang: 'en'
     }
   },
   async getBooklist(url, l1) {
@@ -50,6 +55,7 @@ export default {
     for (let a of $html.find('#list2 a')) {
       list.push({
         url: Helper.absoluteURL(url, $(a).attr('href')),
+        lang: 'en',
         title: $(a)
           .text()
           .trim()
