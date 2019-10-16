@@ -59,6 +59,7 @@
           <div>
             <span style="color: #999" v-if="word.pronunciation">/{{ word.pronunciation }}/</span>
             <span style="color: #999" v-if="word.pinyin">{{ word.pinyin }}</span>
+            <span style="color: #999" v-if="word.kana && word.kana !== word.bare">{{ word.kana }}</span>
             <Speak :text="word.bare" :mp3="word.audio" class="ml-1" />
           </div>
           <Star :word="word" class="mr-1"></Star>
