@@ -7,6 +7,7 @@ export default {
   locales: [],
   scripts: [],
   omniglot: [],
+  hours: [],
   googleLangs: [
     'af',
     'sq',
@@ -251,6 +252,9 @@ export default {
   async loadOmniglot() {
     this.omniglot = await this.loadFile('/data/languages/omniglot.csv.txt')
   },
+  async loadHours() {
+    this.hours = await this.loadFile('/data/languages/hours.csv.txt')
+  },
   get(iso639_2t) {
     return this.l1s.find(language => language['iso639-3'] === iso639_2t)
   },
@@ -338,6 +342,10 @@ export default {
       if (omniglot) {
         l1.omniglot = omniglot.url
       }
+      let hours = this.hours.find(item => item['iso639-3'] === l1['iso639-3'])
+      if (hours) {
+        l1.hours = hours.hours
+      }
     }
     for (let translation of this.translations) {
       let l1 = l1s.find(
@@ -396,7 +404,8 @@ export default {
       this.loadFeatures(),
       this.loadLocales(),
       this.loadScripts(),
-      this.loadOmniglot()
+      this.loadOmniglot(),
+      this.loadHours()
     ]
     return new Promise(async resolve => {
       await Promise.all(promises)

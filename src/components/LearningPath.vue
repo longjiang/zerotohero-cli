@@ -19,8 +19,9 @@
         {{ level.category }} ({{ level.cefr }}) phase
       </h4>
       <p v-if="level.number > 1">
-        The goal of this phase is to reach the {{ level.cefr }} level according to the <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages" target="_blank">Common European Framework of Reference for Languages (CEFR)</a>.
+        <b :data-level="level.cefr">Goal:</b> Reach the {{ level.cefr }} level according to the <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages" target="_blank">Common European Framework of Reference for Languages (CEFR)</a>.
       </p>
+      <p v-if="level.hours"><b :data-level="level.cefr">Time estimate: </b> <b>{{ Math.ceil(level.hours / 10) * 10 }} hours</b></p>
       <template v-if="coursesLoaded">
         <div v-for="course in courses[level.cefr]" class="level-activity">
           <p><b :data-level="level.cefr">Activity:</b> Take (or continue to take) the online course:</p>
@@ -201,9 +202,34 @@ export default {
       }
       console.log(this.resources)
       this.resourcesLoaded = true
+    },
+    loadHours() {
+      let hours = this.$l2.hours || 1100
+      for (let level of this.levels) {
+        if (level.number === '6') {
+          level.hours = hours
+        }
+        if (level.number === '5') {
+          level.hours = hours / 2
+        }
+        if (level.number === '4') {
+          level.hours = hours / 4
+        }
+        if (level.number === '3') {
+          level.hours = hours / 8
+        }
+        if (level.number === '2') {
+          level.hours = hours / 16
+        }
+        if (level.number === '1') {
+          level.hours = hours / 16
+        }
+      }
+      
     }
   },
   mounted() {
+    this.loadHours()
     this.loadExams()
     this.loadCourses()
     this.loadResources()
