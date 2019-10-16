@@ -6,6 +6,7 @@
     :open-group="'id' + _uid"
     :id="id"
     style="display: inline-block"
+    v-observe-visibility="visibilityChanged"
   >
     <span
       :class="{
@@ -58,8 +59,9 @@
           </div>
           <div>
             <span style="color: #999" v-if="word.pronunciation">/{{ word.pronunciation }}/</span>
-            <span style="color: #999" v-if="word.pinyin">{{ word.pinyin }}</span>
-            <span style="color: #999" v-if="word.kana && word.kana !== word.bare">{{ word.kana }}</span>
+            <span style="color: #999" v-else-if="word.pinyin">{{ word.pinyin }}</span>
+            <span style="color: #999" v-else-if="word.kana && word.kana !== word.bare">{{ word.kana }}</span>
+            <span style="color: #999" v-else="$hasFeature('transliteration')">{{ tr(word.bare) }}</span>
             <Speak :text="word.bare" :mp3="word.audio" class="ml-1" />
           </div>
           <Star :word="word" class="mr-1"></Star>
@@ -138,7 +140,9 @@ export default {
   mounted() {
     this.update()
     if (this.$hasFeature('transliteration')) {
-      this.transliteration = tr(this.text)
+      if (this.$l2.code !== 'ja') {
+        this.transliteration = tr(this.text)
+      }
     }
   },
   watch: {
@@ -147,6 +151,18 @@ export default {
     }
   },
   methods: {
+    visibilityChanged(isVisible) {
+      if (isVisible) {
+        if (this.loading === true) {
+          if (this.words && this.words.length === 0) {
+            this.lookup()
+          }
+        }
+      }
+    },
+    tr(text) {
+      return tr(text)
+    },
     update() {
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
@@ -185,6 +201,12 @@ export default {
           if (this.words && this.words.length === 0) {
             this.lookup()
           }
+        }
+        if (this.images.length === 0) {
+          this.images = (await WordPhotos.getGoogleImages({
+            term: this.token ? this.token.text : this.text,
+            lang: this.$l2.code
+          })).slice(0, 5)
         }
         setTimeout(() => {
           if ($('.popover:hover').length === 0) {
@@ -225,12 +247,13 @@ export default {
           }
         }
         this.words = words
+        if (this.$l2.code === 'ja') {
+          if (this.words.length > 0 && this.words[0].kana && this.words[0].bare === this.text && this.words[0].kana !== this.text) {
+            this.transliteration = this.words[0].kana
+          }
+        }
       }
       this.loading = false
-      this.images = (await WordPhotos.getGoogleImages({
-        term: this.token ? this.token.text : this.text,
-        lang: this.$l2.code
-      })).slice(0, 5)
     },
     abbreviate(type) {
       let abb = {

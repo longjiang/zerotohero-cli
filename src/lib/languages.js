@@ -379,7 +379,7 @@ export default {
     if (voices.length > 0) {
       if(!features.includes('speech')) features.push('speech')
     }
-    if (options.l2.code !== 'ja' && options.l2.scripts && options.l2.scripts.length > 0 && options.l2.scripts[0].script !== 'Latn' && options.l2.scripts[0].script !== 'Zzzz') {
+    if (options.l2.scripts && options.l2.scripts.length > 0 && options.l2.scripts[0].script !== 'Latn' && options.l2.scripts[0].script !== 'Zzzz') {
       if(!features.includes('transliteration')) features.push('transliteration')
     }
     if (options.l2.omniglot) {
