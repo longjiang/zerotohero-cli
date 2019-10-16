@@ -2,10 +2,10 @@
   <component
     :is="tag"
     v-observe-visibility="visibilityChanged"
-    :dir="foreign && $l2.scripts && $l2.scripts[0].direction === 'rtl' ? 'rtl' : 'ltr'"
+    :dir="foreign && $l2.scripts && $l2.scripts.length > 0 && $l2.scripts[0].direction === 'rtl' ? 'rtl' : 'ltr'"
     :class="{
       'annotated': true,
-      'text-right': foreign && $l2.scripts && $l2.scripts[0].direction === 'rtl',
+      'text-right': foreign && $l2.scripts && $l2.scripts.length > 0 && $l2.scripts[0].direction === 'rtl',
       'add-pinyin': $hasFeature('transliteration'),
       fullscreen: fullscreenMode
     }"

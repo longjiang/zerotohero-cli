@@ -6,12 +6,14 @@
         <ul class="collapsed pl-0" data-collapse-target>
           <li class="list-unstyled mistake-item mt-4 mb-4" v-for="mistake in mistakes">
             <span class="mistake-context collapsed" data-collapse-target>
-              <Annotate :showTranslate="true">{{ mistake.leftContext }}</Annotate>
+              <Annotate :showTranslate="true"><span>{{ mistake.leftContext }}</span></Annotate>
             </span>
             <Annotate class="mistake-sentence" :showTranslate="true">
-              {{ mistake.left }}
-              <span class="mistake-word">{{ text }}</span>
-              {{ mistake.right }}
+              <span>
+                {{ mistake.left }}
+                <span class="mistake-word">{{ text }}</span>
+                {{ mistake.right }}
+              </span>
             </Annotate>
             <span class="mistake-context collapsed" data-collapse-target>
               <Annotate
@@ -19,7 +21,7 @@
                 :copy="true"
                 :fullscreen="true"
                 :showTranslate="true"
-              >{{ mistake.rightContext }}</Annotate>
+              ><span>{{ mistake.rightContext }}</span></Annotate>
             </span>
             <ShowMoreButton class="mb-2 btn-small ml-2">Context</ShowMoreButton>
             <div>
@@ -108,10 +110,11 @@ export default {
       this.show = true
     }
   },
-  created() {
-    SketchEngine.mistakes(this.text, response => {
-      this.mistakes = response
+  async created() {
+    let results = await SketchEngine.mistakes({
+      term: this.text
     })
+    this.mistakes = results
   }
 }
 </script>

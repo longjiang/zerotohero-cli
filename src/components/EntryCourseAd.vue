@@ -72,3 +72,34 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  
+.learn-this {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.3rem;
+}
+
+.learn-this-bar {
+  padding: 1.5rem 1rem;
+  color: white !important;
+  font-size: 1.2rem;
+  background: #4a4a4a;
+  margin-top: 10rem;
+  margin-bottom: 0;
+}
+
+.learn-this-bar a {
+  color: white !important;
+}
+
+.course-cover {
+  box-shadow: 4px 6px 19px #00000091;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  margin-top: -8rem;
+  max-width: 80%;
+}
+
+</style>

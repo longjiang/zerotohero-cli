@@ -41,6 +41,7 @@
       <div class="container mb-4">
         <div class="row">
           <div class="col-sm-12 text-center">
+            <InstagramButton :entry="entry" class="mb-5"></InstagramButton>
             <EntryHeader :entry="entry" :key="`header-${args}`"></EntryHeader>
             <DefinitionsList
               :key="`def-list-${args}`"
@@ -109,7 +110,7 @@
               :entry="entry"
               limit="10"
             />
-            <EntryForms class="mt-5" :word="entry" />
+            <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
             <Collocations
               class="mt-5 mb-5"
               :word="entry"
@@ -120,6 +121,7 @@
               :word="entry"
               :level="entry.level"
             />
+            <Mistakes class="mt-5 mb-5" v-if="$l2.code === 'zh'" :text="entry.simplified"></Mistakes>
           </div>
         </div>
         <div class="row">
@@ -131,7 +133,8 @@
           </div>
         </div>
       </div>
-      <!-- <InstagramButton :entry="entry" class="mb-5"></InstagramButton> -->
+      <EntryCourseAd v-if="$l2.code === 'zh'" :entry="entry" class="focus-exclude"></EntryCourseAd>
+      <EntryLyrics v-if="$hasFeature('music')" :entry="entry" class="focus-exclude"></EntryLyrics>
     </div>
   </div>
 </template>
@@ -150,6 +153,10 @@ import EntryCharacters from '@/components/EntryCharacters'
 import Chinese from '@/components/Chinese'
 import Japanese from '@/components/Japanese'
 import Korean from '@/components/Korean'
+import Mistakes from '@/components/Mistakes'
+import EntryCourseAd from '@/components/EntryCourseAd'
+import EntryLyrics from '@/components/EntryLyrics'
+import InstagramButton from '@/components/InstagramButton'
 
 export default {
   components: {
@@ -165,7 +172,11 @@ export default {
     Paginator,
     WebImages,
     EntryYouTube,
-    EntryCharacters
+    EntryCharacters,
+    Mistakes,
+    EntryCourseAd,
+    EntryLyrics,
+    InstagramButton
   },
   props: {
     method: {

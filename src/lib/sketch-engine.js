@@ -5,6 +5,43 @@ import SketchEngineCorpora from './sketch-engine-corpora'
 
 export default {
   corpora: SketchEngineCorpora,
+  mistakeRefKeys: [
+    '=text.id',
+    '=err.type',
+    '=err.level',
+    '=u.proficiency',
+    '=u.score',
+    '=u.country',
+    '=u.l1',
+    '=u.gender',
+    '=text.genre',
+    '=text.interaction',
+    '=text.mode',
+    '=u.role',
+    '=text.wordcount',
+    '=text.topic',
+    '=u.who',
+    '=err.combin',
+    '=err.target',
+    '#',
+    'text'
+  ],
+  proficiency: {
+    初级: 'beginner',
+    中级: 'intermediate',
+    高级: 'advanced'
+  },
+  errors: {
+    orth: 'orthography',
+    punct: 'puncutation',
+    mean: 'word choice',
+    form: 'form',
+    col: 'collocation',
+    wo: 'word order',
+    incl: 'inclusion of extra word(s)',
+    anom: 'anomaly',
+    omit: 'omission of word(s)'
+  },
   corpname(l2) {
     if (l2) {
       let corpnames = JSON.parse(localStorage.getItem('zthCorpnames') || '{}')
@@ -201,88 +238,91 @@ export default {
     })
   },
   mistakes(options, callback) {
-    $.post(
-      `${Config.sketchEngineProxy}?https://app.sketchengine.eu/bonito/run.cgi/concordance?corpname=preloaded/guangwai`,
-      {
-        json: JSON.stringify({
-          lpos: '',
-          wpos: '',
-          default_attr: 'word',
-          attrs: 'word',
-          refs: SketchEngine.mistakeRefKeys.join(','),
-          ctxattrs: 'word',
-          attr_allpos: 'all',
-          usesubcorp: '',
-          viewmode: 'kwic',
-          cup_hl: 'q',
-          cup_err: '',
-          cup_corr: '',
-          cup_err_code: '',
-          structs: 's,g',
-          gdex_enabled: 0,
-          fromp: 1,
-          pagesize: 50,
-          concordance_query: [
-            {
-              queryselector: 'iqueryrow',
-              iquery: options.term,
-              'sca_err.level': ['col', 'form', 'mean', 'orth', 'punct'],
-              'sca_err.type': ['anom', 'incl', 'omit', 'wo']
+    return new Promise(resolve => {
+      $.post(
+        `${Config.sketchEngineProxy}?https://app.sketchengine.eu/bonito/run.cgi/concordance?corpname=preloaded/guangwai`,
+        {
+          json: JSON.stringify({
+            lpos: '',
+            wpos: '',
+            default_attr: 'word',
+            attrs: 'word',
+            refs: SketchEngine.mistakeRefKeys.join(','),
+            ctxattrs: 'word',
+            attr_allpos: 'all',
+            usesubcorp: '',
+            viewmode: 'kwic',
+            cup_hl: 'q',
+            cup_err: '',
+            cup_corr: '',
+            cup_err_code: '',
+            structs: 's,g',
+            gdex_enabled: 0,
+            fromp: 1,
+            pagesize: 50,
+            concordance_query: [
+              {
+                queryselector: 'iqueryrow',
+                iquery: options.term,
+                'sca_err.level': ['col', 'form', 'mean', 'orth', 'punct'],
+                'sca_err.type': ['anom', 'incl', 'omit', 'wo']
+              }
+            ],
+            kwicleftctx: '100#',
+            kwicrightctx: '100#'
+          })
+        },
+        function (response) {
+          const data = JSON.parse(response).data
+          let results = []
+          for (let Line of data.Lines) {
+            try {
+              const ml = Line.Left.map(function (item) {
+                return item.str || item.strc
+              })
+                .join('')
+                .match(/(.*)<s>([^<s>]*?)$/)
+              const left = ml[2]
+              const leftContext = ml[1].replace(/<s>/g, '').replace(/<\/s>/g, '')
+              let mr = Line.Right.map(function (item) {
+                return item.str || item.strc
+              })
+                .join('')
+                .match(/^([^</s>]*)<\/s>(.*)/)
+              const right = mr[1]
+              const rightContext = mr[2].replace(/<s>/g, '').replace(/<\/s>/g, '')
+              var refs = {}
+              for (let i in Line.Refs) {
+                refs[SketchEngine.mistakeRefKeys[i]] = Line.Refs[i]
+              }
+              const country = refs['=text.id'].replace(
+                /^[^_]*_[^_]*_[^_]*_[^_]*_([^_]*).*/g,
+                '$1'
+              )
+              results.push({
+                left: left,
+                right: right,
+                leftContext: leftContext,
+                rightContext: rightContext,
+                text: left + options.term + right,
+                country: Helper.country(country),
+                refs: refs,
+                proficiency: SketchEngine.proficiency[refs['=u.proficiency']],
+                errorType: SketchEngine.errors[refs['=err.type']],
+                errorLevel: SketchEngine.errors[refs['=err.level']],
+                l1: refs['=u.l1']
+              })
+            } catch (err) {
+              console.log(err)
             }
-          ],
-          kwicleftctx: '100#',
-          kwicrightctx: '100#'
-        })
-      },
-      function (response) {
-        const data = JSON.parse(response).data
-        let results = []
-        for (let Line of data.Lines) {
-          try {
-            const ml = Line.Left.map(function (item) {
-              return item.str || item.strc
-            })
-              .join('')
-              .match(/(.*)<s>([^<s>]*?)$/)
-            const left = ml[2]
-            const leftContext = ml[1].replace(/<s>/g, '').replace(/<\/s>/g, '')
-            let mr = Line.Right.map(function (item) {
-              return item.str || item.strc
-            })
-              .join('')
-              .match(/^([^</s>]*)<\/s>(.*)/)
-            const right = mr[1]
-            const rightContext = mr[2].replace(/<s>/g, '').replace(/<\/s>/g, '')
-            var refs = {}
-            for (let i in Line.Refs) {
-              refs[SketchEngine.mistakeRefKeys[i]] = Line.Refs[i]
-            }
-            const country = refs['=text.id'].replace(
-              /^[^_]*_[^_]*_[^_]*_[^_]*_([^_]*).*/g,
-              '$1'
-            )
-            results.push({
-              left: left,
-              right: right,
-              leftContext: leftContext,
-              rightContext: rightContext,
-              text: left + options.term + right,
-              country: Helper.country(country),
-              refs: refs,
-              proficiency: SketchEngine.proficiency[refs['=u.proficiency']],
-              errorType: SketchEngine.errors[refs['=err.type']],
-              errorLevel: SketchEngine.errors[refs['=err.level']],
-              l1: refs['=u.l1']
-            })
-          } catch (err) {
-            console.log(err)
           }
+          results = results.sort(function (a, b) {
+            return a.text.length - b.text.length
+          })
+          resolve(results)
         }
-        results = results.sort(function (a, b) {
-          return a.text.length - b.text.length
-        })
-        callback(results)
-      }
-    )
+      )
+
+    })
   }
 }
