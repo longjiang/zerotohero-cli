@@ -24,7 +24,7 @@
         >
           <Loader :sticky="true" />
         </div>
-        <Annotate tag="h1"  :foreign="foreign" :showTranslate="foreign"><span>{{ chapterTitle }}</span></Annotate
+        <Annotate tag="h1" :foreign="foreign" :showTranslate="foreign"><span>{{ chapterTitle }}</span></Annotate
         >
         <div class="chapter-content" v-if="chapterContent">
           <SpeechBar
@@ -207,6 +207,8 @@ export default {
         this.chapterContent = $chapterContent.html()
         if (chapter.lang && chapter.lang === this.$l1.code) {
           this.foreign = false
+        } else {
+          this.foreign = true
         }
         if (chapter.book) {
           this.chapters = chapter.book.chapters
