@@ -24,13 +24,13 @@
         >
           <Loader :sticky="true" />
         </div>
-        <Annotate tag="h1"
-          :showTranslate="foreign"><span>{{ chapterTitle }}</span></Annotate
+        <Annotate tag="h1"  :foreign="foreign" :showTranslate="foreign"><span>{{ chapterTitle }}</span></Annotate
         >
         <div class="chapter-content" v-if="chapterContent">
           <SpeechBar
             :lang="chapterLang ? chapterLang : $l2.code"
             :html="chapterContent"
+            :foreign="foreign"
           />
           
         </div>
@@ -60,7 +60,7 @@
             alt="Book cover"
             class="mb-4 shadow book-thumb"
           />
-          <Annotate v-if="bookTitle">
+          <Annotate v-if="bookTitle" :foreign="foreign">
             <h6>
               <em>{{ bookTitle }}</em>
             </h6>
@@ -96,6 +96,7 @@
                 location.hash ===
                 `#/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`
             }"
+            :foreign="foreign"
             :href="`#/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`"
             ><span>{{ chapter.title }}</span></Annotate
           >

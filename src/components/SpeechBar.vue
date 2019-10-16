@@ -28,7 +28,7 @@
         .trim()
         .replace(/<(div|p|h1|h2|h3|h4|h5|h6|dd)/g, 'ANNOTATORSEPARATOR!!!<$1')
         .split('ANNOTATORSEPARATOR!!!')">
-      <Annotate v-if="line.trim().length > 0" class="mb-4" tag="div" :showTranslate="!(lang && lang === $l1.code)">
+      <Annotate v-if="line.trim().length > 0" :foreign="foreign" class="mb-4" tag="div" :showTranslate="!(lang && lang === $l1.code)">
         <span v-html="line.trim()" />
       </Annotate>
     </template>
@@ -43,6 +43,9 @@ export default {
     },
     lang: {
       default: undefined
+    },
+    foreign: {
+      default: true
     }
   },
   data() {
