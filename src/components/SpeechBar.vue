@@ -1,6 +1,6 @@
 <template>
   <div v-if="html" id="speech-container">
-    <div class="speech-bar mb-4 sticky bg-white pt-2 pb-2">
+    <div v-if="$hasFeature('speech') || (!foreign)" class="speech-bar mb-4 sticky bg-white pt-2 pb-2">
       <b-button-group class="d-flex">
         <b-button @click="previous()">
           <i class="fas fa-chevron-left"></i>
@@ -85,6 +85,9 @@ export default {
       for (let block of $(sentence).find('.word-block, .word-block-text')) {
         if ($(block).is('.word-block-text')) {
           text += $(block).text()
+          if(!['zh', 'ja'].includes(this.$l2.code)) {
+            text += ' '
+          }
         } else {
           text += $(block)
             .find('.word-block-simplified')
@@ -104,7 +107,9 @@ export default {
       if (this.voices.length === 0) this.getVoices()
       this.utterance = new SpeechSynthesisUtterance(text)
       this.utterance.lang = this.lang || this.$l2.code
-      this.utterance.voice = this.voices[this.voice]
+      if (this.voices[this.voice]) {
+        this.utterance.voice
+      }
       speechSynthesis.speak(this.utterance)
     },
     scroll(sentence) {
