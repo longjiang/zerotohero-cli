@@ -21,6 +21,13 @@ export default {
 </script>
 
 <style>
+.resource {
+  min-width: 15rem;
+  max-width: 480px;
+  flex: 1;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
 .resource-thumbnail {
   width: 100%;
 }

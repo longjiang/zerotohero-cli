@@ -3,28 +3,42 @@
     <div class="level">
       <h4 class="level-title">Getting to know {{ l2.name }}</h4>
       <div v-if="l2.omniglot" class="level-activity">
-        <p>Learn information about {{ l2.name }} and learn some beginner phrases from Omniglot.</p>
         <Resource
           :resource="{
-            title: `Getting started with ${l2.name} from Omniglot`,
-            url: `/#/${$l1.code}/${l2.code}/book/chapter/https%3A%2F%2Fwww.omniglot.com%2Fwriting%2F${encodeURIComponent(l2.omniglot)}`,
+            title: `Basic information about ${l2.name} and quick phrases on Omniglot`,
+            url: `/#/${$l1.code}/${
+              l2.code
+            }/book/chapter/https%3A%2F%2Fwww.omniglot.com%2Fwriting%2F${encodeURIComponent(
+              l2.omniglot
+            )}`,
             thumbnail: '/img/omniglot-banner.jpg'
           }"
           :internal="true"
         />
       </div>
     </div>
-    <div v-for="level in levels" class="level" :data-learning-path-level="level.cefr">
+    <div
+      v-for="(level, index) in levels"
+      class="level"
+      :data-learning-path-level="level.cefr"
+    >
       <h4 class="level-title" :data-level="level.cefr">
-        {{ level.category }} ({{ level.cefr }}) phase
+        {{ level.category }} ({{
+          $l2.code === 'zh' && level.number < 7
+            ? `HSK ${level.number}`
+            : level.cefr
+        }}*) level
       </h4>
-      <p v-if="level.number > 1">
-        <b :data-level="level.cefr">Goal:</b> Reach the {{ level.cefr }} level according to the <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages" target="_blank">Common European Framework of Reference for Languages (CEFR)</a>.
+      <p v-if="level.hours">
+        <b :data-level="level.cefr">Time estimate: </b>
+        <b>{{ Math.ceil(level.hours / 10) * 10 }} hours</b>
       </p>
-      <p v-if="level.hours"><b :data-level="level.cefr">Time estimate: </b> <b>{{ Math.ceil(level.hours / 10) * 10 }} hours</b></p>
       <template v-if="coursesLoaded">
         <div v-for="course in courses[level.cefr]" class="level-activity">
-          <p><b :data-level="level.cefr">Activity:</b> Take (or continue to take) the online course:</p>
+          <p>
+            <b :data-level="level.cefr">Activity:</b> Take (or continue to take)
+            the online course:
+          </p>
           <Resource
             :resource="{
               title: course.title,
@@ -34,42 +48,67 @@
           />
         </div>
       </template>
-      <div class="level-activity" v-if="level.number > 1 && $hasFeature('youtube')">
-        <p><b :data-level="level.cefr">Activity:</b> Watch YouTube in {{ l2.name }} and study the subtitles with the help of our YouTube study tool.</p>
+      <div
+        class="level-activity"
+        v-if="level.number > 1 && $hasFeature('youtube')"
+      >
+        <p>
+          <b :data-level="level.cefr">Activity:</b> Watch YouTube in
+          {{ l2.name }} and study the subtitles with the help of our YouTube
+          study tool.
+        </p>
         <Resource
           :resource="{
             title: `${l2.name} YouTube Study Tool`,
             url: `/#/${$l1.code}/${l2.code}/youtube/browse`,
             thumbnail: '/img/youtube-banner.jpg'
           }"
-            :internal="true"
+          :internal="true"
         />
       </div>
-      <div class="level-activity" v-if="level.number > 3 && $hasFeature('dictionary')">
-        <p><b :data-level="level.cefr">Activity:</b> Read books and text in {{ l2.name }} with the help of our popup dictionary.</p>
+      <div
+        class="level-activity"
+        v-if="level.number > 3 && $hasFeature('dictionary')"
+      >
+        <p>
+          <b :data-level="level.cefr">Activity:</b> Read books and text in
+          {{ l2.name }} with the help of our popup dictionary.
+        </p>
         <Resource
           :resource="{
             title: `${l2.name} reading with popup dictionary`,
             url: `/#/${$l1.code}/${l2.code}/library`,
             thumbnail: '/img/library-banner.jpg'
           }"
-            :internal="true"
+          :internal="true"
         />
       </div>
-      <div class="level-activity" v-if="level.number < 7">
-        <p><b :data-level="level.cefr">Activity:</b> Take online tutoring lessons with the help of our Tutoring Kit</p>
+      <div class="level-activity" v-if="$l2.code !== 'zh' || level.number > 6">
+        <p>
+          <b :data-level="level.cefr">Activity:</b> Practice conversation through online language exchanges with the help of our Tutoring Kit
+        </p>
         <Resource
           :resource="{
             title: `Online tutoring lesson plans (${level.cefr} level)`,
             url: `/#/${$l1.code}/${l2.code}/tutoring/${level.number}`,
             thumbnail: '/img/online-tutoring.jpg'
           }"
-            :internal="true"
+          :internal="true"
         />
       </div>
-      <template v-if="resourcesLoaded && resources[level.cefr] && resources[level.cefr].length > 0">
+      <template
+        v-if="
+          resourcesLoaded &&
+            resources[level.cefr] &&
+            resources[level.cefr].length > 0
+        "
+      >
         <div class="level-activity">
-          <p><b :data-level="level.cefr">Resources:</b> At the {{ level.cefr }} level, we recommend using the following resources, products, or services:</p>
+          <p>
+            <b :data-level="level.cefr">Resources:</b> At the
+            {{ level.cefr }} level, we recommend using the following resources,
+            products, or services:
+          </p>
           <div v-for="resource in resources[level.cefr]">
             <Resource
               :resource="{
@@ -77,36 +116,49 @@
                 url: resource.url,
                 thumbnail: resource.thumbnail.data.full_url
               }"
-                :internal="true"
+              :internal="true"
             />
           </div>
         </div>
       </template>
-      <template v-if="examsLoaded && level.number > 1">
-        <div v-for="exam in exams[level.cefr]" class="level-milestone">
-          <div class="level-milestone-dot" :data-bg-level="level.cefr"></div>
-          <b :data-level="level.cefr">Milestone:</b> Pass the exam:
-          <a :href="exam.url" target="_blank">
-            {{ exam.title }}
-            <span v-if="exam.level === 'all'">({{level.cefr}})</span>
-          </a>
-        </div>
+      <template v-if="examsLoaded">
+        <template v-for="exam in exams[level.cefr]">
+          <div class="level-milestone mb-5" v-if="exam.level !== 'all' || level.number > 1">
+            <div class="level-milestone-dot" :data-bg-level="level.cefr"></div>
+            <b :data-level="level.cefr">Milestone:</b> Pass the exam:
+            <a :href="exam.url" target="_blank">
+              {{ exam.title }}
+              <span v-if="exam.level === 'all'">({{ level.cefr }})</span>
+            </a>
+          </div>
+        </template>
       </template>
+      <p v-if="level.number === '7'">
+        <span v-if="$l2.code === 'zh'">
+          * HSK stands for <Annotate><span><a href="http://www.chinesetest.cn/gosign.do?id=1&lid=0#" target="_blank">汉语水平考试</a></span></Annotate> (Chinese Proficiency Test). HSK 1, 2, 3 ... 6 refer to the levels of the test, level 6 being the highest.
+        </span>
+        <span>
+
+          * A1, A2, B1 ... C2 refer to language proficiency levels according to
+          the
+          <a
+            href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages"
+            target="_blank"
+            >Common European Framework of Reference for Languages (CEFR)</a
+          >.
+        </span>
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-import YouTubeVideo from '@/components/YouTubeVideo'
-import ResourceList from '@/components/ResourceList'
 import Resource from '@/components/Resource'
 import Config from '@/lib/config'
 
 export default {
   components: {
-    Resource,
-    YouTubeVideo,
-    ResourceList
+    Resource
   },
   props: ['l2'],
   data() {
@@ -153,7 +205,7 @@ export default {
       resources: {},
       examsLoaded: false,
       coursesLoaded: false,
-      resourcesLoaded: false,
+      resourcesLoaded: false
     }
   },
   methods: {
@@ -200,12 +252,14 @@ export default {
           }
         }
       }
-      console.log(this.resources)
       this.resourcesLoaded = true
     },
     loadHours() {
       let hours = this.$l2.hours || 1100
       for (let level of this.levels) {
+        if (level.number === '7') {
+          level.hours = hours * 2
+        }
         if (level.number === '6') {
           level.hours = hours
         }
@@ -225,7 +279,6 @@ export default {
           level.hours = hours / 16
         }
       }
-      
     }
   },
   mounted() {
