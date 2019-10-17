@@ -202,17 +202,17 @@ export default {
             this.lookup()
           }
         }
+        setTimeout(() => {
+          if ($('.popover:hover').length === 0) {
+            this.hover = true
+          }
+        }, 300) // Allow user to interact with previous popover
         if (this.images.length === 0) {
           this.images = (await WordPhotos.getGoogleImages({
             term: this.token ? this.token.text : this.text,
             lang: this.$l2.code
           })).slice(0, 5)
         }
-        setTimeout(() => {
-          if ($('.popover:hover').length === 0) {
-            this.hover = true
-          }
-        }, 300) // Allow user to interact with previous popover
       }
     },
     mouseout() {
