@@ -4,7 +4,7 @@
       <div class="instagram-content">
         <div class="instagram-border"></div>
         <div
-          v-if="entry.hsk !== 'outside'"
+          v-if="entry.hsk && entry.hsk !== 'outside'"
           :style="
             `background-image: url(${Config.imageUrl}${entry.hskId}-${
               entry.simplified
@@ -14,14 +14,20 @@
         />
         <div
           v-if="
-            entry.hsk === 'outside' && entry.images && entry.images.length > 0
+            (!entry.hsk || entry.hsk === 'outside') && entry.images && entry.images.length > 0
           "
-          :style="`background-image: url(${Config.imageProxy}?${entry.images[0].img})`"
+          :style="`background-image: url(${Config.imageProxy}?${entry.images[0].src})`"
           class="instagram-image"
         />
         <img src="img/instagram-badge.png" class="instagram-badge" />
-        <img src="img/czh-logo.png" class="instagram-logo" />
+        <div class="instagram-logo-wrapper">
+          <LanguageLogo class="instagram-logo" :l1="$l1" :l2="$l2" />
+        </div>
         <EntryHeader :entry="entry" />
+        <DefinitionsList
+          v-if="entry.definitions"
+          :definitions="entry.definitions"
+        ></DefinitionsList>
         <div
           class="example-wrapper pt-4 pb-4"
           v-if="entry.example && entry.example.length > 0"
@@ -48,10 +54,14 @@
 import EntryHeader from '@/components/EntryHeader'
 import Helper from '@/lib/helper'
 import Config from '@/lib/config'
+import LanguageLogo from'@/components/LanguageLogo'
+import DefinitionsList from '@/components/DefinitionsList'
 
 export default {
   components: {
-    EntryHeader
+    EntryHeader,
+    LanguageLogo,
+    DefinitionsList
   },
   props: {
     entry: {
@@ -120,11 +130,15 @@ export default {
   left: 25%;
 }
 
-.instagram-logo {
+.instagram-logo-wrapper {
   position: absolute;
-  width: 40%;
-  left: calc((100% - 40%) / 2);
-  top: 5%;
+  top: 7%;
+  width: 100%;
+}
+
+.instagram-logo {
+  margin: 0 auto;
+  transform: scale(1.5);
 }
 
 .instagram-content .word [data-level] {
@@ -158,8 +172,17 @@ export default {
 .instagram-content .entry-head-wrapper {
   position: absolute;
   width: 90%;
-  top: 20%;
+  top: 30%;
   left: 5%;
+  transform: scale(1.5);
+}
+
+.instagram-content .definitions-list {
+  position: absolute;
+  width: 90%;
+  top: 55%;
+  left: 5%;
+  transform: scale(1.5);
 }
 
 .instagram-content .instagram-border {

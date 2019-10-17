@@ -53,14 +53,14 @@ export default {
   methods: {
     async update() {
       this.images = []
-      if (this.entry) {
-        Vue.set(this.entry, 'images', this.images)
-      }
       let images = (await WordPhotos.getGoogleImages({
         term: this.text,
         lang: this.$l2.code
       })).slice(0, this.limit)
       this.images = images
+      if (this.entry) {
+        Vue.set(this.entry, 'images', this.images)
+      }
     },
     goto(url) {
       window.open(url)

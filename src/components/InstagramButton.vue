@@ -90,12 +90,6 @@ export default {
   padding: 0;
 }
 
-.instagram-btn-wrapper.collapsed {
-  position: absolute;
-  top: 0;
-  z-index: 2;
-}
-
 #instagram-canvas .canvas-image {
   box-shadow: 5px 5px 10px #00000040;
   width: 100% !important;
