@@ -24,11 +24,11 @@
       <div class="container focus-exclude text-center text-light">
         <Paginator
           :key="`paginator-${args}`"
-          :items="$store.state.savedWords"
-          :findCurrent="item => item.join(',').replace(/ /g, '_') === entry.id"
+          :items="sW"
+          :findCurrent="item => item.id === entry.id"
           :url="
             item =>
-              `#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${item.join(',').replace(/ /g, '_')}`
+              `#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${item.id}`
           "
           title="Saved Words"
         />
@@ -157,6 +157,7 @@ import Mistakes from '@/components/Mistakes'
 import EntryCourseAd from '@/components/EntryCourseAd'
 import EntryLyrics from '@/components/EntryLyrics'
 import InstagramButton from '@/components/InstagramButton'
+import { mapState } from 'vuex'
 
 export default {
   components: {
@@ -197,10 +198,25 @@ export default {
       entryKey: 0
     }
   },
+  computed: mapState(['savedWords']),
   methods: {
+    async updateWords() {
+      this.sW = []
+      this.savedTexts = []
+      if(this.$store.state.savedWords && this.$store.state.savedWords[this.$l2.code]) {
+        for (let savedWord of this.$store.state.savedWords[this.$l2.code]) {
+          let word = await (await this.$dictionary).get(savedWord.id)
+          if (word) {
+            this.sW.push(word)
+          }
+        }
+      }
+    },
     saved() {
-      return false
-      // return this.entry && this.$store.getters.hasSavedWord(this.entry.id)
+      return this.entry && this.$store.getters.hasSavedWord({
+        text: this.entry.bare.toLowerCase(),
+        l2: this.$l2.code
+      })
     },
     show(entry) {
       this.entryKey += 1
@@ -233,11 +249,15 @@ export default {
       if (this.$route.name === 'dictionary') {
         this.route()
       }
+    },
+    savedWords() {
+      this.updateWords()
     }
   },
   mounted() {
     if (this.$route.name === 'dictionary') {
       this.route()
+      this.updateWords()
     }
   }
 }
