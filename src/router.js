@@ -24,7 +24,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/about-english-online-courses',
+      path: '/:l1/:l2/online-courses',
       name: 'courses',
       component: () => import('./views/Courses.vue'),
       props: true,
