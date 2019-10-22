@@ -63,6 +63,7 @@ const Dictionary = {
   parseDictionary(text) {
     text = text.replace(/^[^\n]*\n/m, '') // remove title line
     console.log('Parsing FreeDict Dictionary from ' + this.file)
+    console.log(text)
     let lines = text.split('\n')
     let words = []
     words = this.parseLines(lines)
@@ -75,6 +76,7 @@ const Dictionary = {
       word.id = index
       return word
     })
+    console.log(words)
     return words
   },
   dictionaryFile(options) {

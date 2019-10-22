@@ -34,7 +34,10 @@ const Dictionary = {
             if (sense.glosses) {
               if (sense.complex_inflection_of) {
                 for (let inflection of sense.complex_inflection_of) {
-                  definitions.push(`${inflection['3']} ${inflection['4']} ${inflection['5']} inflection of <a href="https://en.wiktionary.org/wiki/${inflection['2']}" target="_blank">${inflection['2']}</a>`)
+                  let head = inflection['1'] || inflection['2']
+                  if (head) {
+                    definitions.push(`${inflection['3']} ${inflection['4']} ${inflection['5']} inflection of <a href="https://en.wiktionary.org/wiki/${head}" target="_blank">${head}</a>`)
+                  }
                 }
               } else {
                 definitions.push(sense.glosses[0])
@@ -69,6 +72,9 @@ const Dictionary = {
   dictionaryFile(options) {
     let l2 = options.l2.replace('nor', 'nob') // Default Norwegian to Bokmål
     let filename = `/data/wiktionary/${l2}-${options.l1}.json.txt`
+    if (['fi', 'fr', 'sh', 'it', 'la', 'pt', 'es'].includes(options.l2)) {
+      filename = `/data/wiktionary/large/${l2}-${options.l1}.json.txt`
+    }
     return filename
   },
   load(options) {

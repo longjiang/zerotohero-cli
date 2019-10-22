@@ -1,5 +1,6 @@
 script,ms,lang,ml,p,direction
 Latn,,uz,,,
+Latn,,tr,,,
 Cyrl,,kk,,,
 Adlm,,ff,,N,rtl
 Ahom,N,und,?,?,
@@ -376,7 +377,6 @@ Latn,,tkl,,,
 Latn,,tn,,,
 Latn,,to,,,
 Latn,,tpi,,,
-Latn,,tr,,,
 Latn,,tvl,,,
 Latn,,ty,,,
 Latn,,tzm,,,

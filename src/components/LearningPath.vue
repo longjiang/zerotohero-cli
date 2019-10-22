@@ -29,7 +29,7 @@
             : level.cefr
         }}*) level
       </h4>
-      <p v-if="level.hours">
+      <p v-if="hoursLoaded">
         <b :data-level="level.cefr">Time estimate: </b>
         <b>{{ Math.ceil(level.hours / 10) * 10 }} hours</b>
       </p>
@@ -203,6 +203,7 @@ export default {
       exams: {},
       courses: {},
       resources: {},
+      hoursLoaded: false,
       examsLoaded: false,
       coursesLoaded: false,
       resourcesLoaded: false
@@ -279,6 +280,7 @@ export default {
           level.hours = hours / 16
         }
       }
+      this.hoursLoaded = true
     }
   },
   mounted() {
