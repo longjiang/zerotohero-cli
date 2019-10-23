@@ -13,7 +13,11 @@
               <span>{{ title }}</span>
             </Annotate>
           </h3>
-          <hr class="mt-0" />
+          <template v-if="!loading && hasSubtitles">
+            <button class="btn btn-default" v-if="saved.length === 0" @click="save">Save video</button>
+            <button class="btn btn-primary" v-if="saved.length > 0">Saved</button>
+          </template>
+          <hr class="mt-3" />
           <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-5" />
         </div>
       </div>
@@ -67,6 +71,7 @@ import SyncedTranscript from '@/components/SyncedTranscript'
 import YouTubeNav from '@/components/YouTubeNav'
 import YouTubeChannelCard from '@/components/YouTubeChannelCard'
 import Helper from '@/lib/helper'
+import Config from '@/lib/config'
 
 export default {
   components: {
@@ -82,6 +87,7 @@ export default {
   },
   watch: {
     args() {
+      this.getSaved()
       this.getVideoDetails()
       this.getTranscript()
       this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
@@ -95,7 +101,8 @@ export default {
       channel: undefined,
       hasSubtitles: false,
       loading: true,
-      l2Locale: undefined
+      l2Locale: undefined,
+      saved: []
     }
   },
   methods: {
@@ -142,6 +149,19 @@ export default {
       }
       await Promise.all(promises)
     },
+    async save() {
+      let success = await $.post(`${Config.wiki}items/youtube_videos`, {
+        youtube_id: this.args,
+        title: this.title,
+        l2: this.$l2.id
+      })
+      if (success) {
+        this.saved = [{
+          id: success.data.youtube_id,
+          title: success.data.title
+        }]
+      }
+    },
     async getL1Transcript() {
       await Helper.scrape(
         `https://www.youtube.com/api/timedtext?v=${this.args}&lang=${this.l2Locale}&fmt=srv3&tlang=${this.$l1.code}`,
@@ -167,9 +187,21 @@ export default {
         await this.getL1Transcript()
       }
       this.loading = false
+    },
+    async getSaved() {
+      this.saved = []
+      this.saved = (await $.getJSON(
+        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}`
+      )).data.map(video => {
+        return {
+          id: video.youtube_id,
+          title: video.title
+        }
+      })
     }
   },
   mounted() {
+    this.getSaved()
     this.getVideoDetails()
     this.getTranscript()
     this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`

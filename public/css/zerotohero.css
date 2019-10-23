@@ -587,12 +587,12 @@ ul.collapsed li:nth-child(n+5) {
   display: none;
 }
 
-a.article-edit-btn {
+.btn-default {
   background: #cecece;
   color: white;
 }
 
-a.article-edit-btn:hover {
+.btn-default:hover {
   background: #fd4f1c;
   color: white;
 }

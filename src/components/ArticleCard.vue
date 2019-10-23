@@ -15,7 +15,7 @@
       <a
         v-if="edit"
         :href="`${Config.wikiAdmin}collections/articles/${article.id}`"
-        class="btn article-edit-btn"
+        class="btn btn-default"
         target="_blank"
         >Edit</a
       >
