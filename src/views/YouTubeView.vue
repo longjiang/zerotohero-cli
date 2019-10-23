@@ -15,7 +15,7 @@
           </h3>
           <template v-if="!loading && hasSubtitles">
             <button class="btn btn-default" v-if="saved.length === 0" @click="save">Save video</button>
-            <button class="btn btn-primary" v-if="saved.length > 0">Saved</button>
+            <div class="btn btn-default" v-if="saved.length > 0"><i class="fa fa-check mr-2"></i>Saved</div>
           </template>
           <hr class="mt-3" />
           <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-5" />

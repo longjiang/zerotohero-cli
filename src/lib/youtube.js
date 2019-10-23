@@ -193,7 +193,8 @@ export default {
       let channel = {
         id: channelID,
         title: $html.find('.branded-page-header-title-link').attr('title'),
-        videos: []
+        videos: [],
+        avatar: $html.find('.channel-header-profile-image').eq(0).attr('src')
       }
       for (let item of $html.find('.yt-lockup-content')) {
         let badge = $(item).find('.yt-badge')[0]

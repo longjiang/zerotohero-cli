@@ -46,6 +46,7 @@ export default {
   },
   methods: {
     async updateURL() {
+      this.videos = []
       let url = decodeURIComponent(this.args)
       this.$refs.search.text = url
       let videos = await YouTube.searchByGoogle(
