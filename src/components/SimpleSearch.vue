@@ -6,7 +6,7 @@
       :placeholder="placeholder"
     />
     <b-input-group-append>
-      <b-button variant="danger" @click="action(text)">{{$t('Go')}}</b-button>
+      <b-button variant="danger" @click="action(text)">{{$t(buttonText)}}</b-button>
     </b-input-group-append>
   </b-input-group>
 </template>
@@ -19,6 +19,9 @@ export default {
     },
     action: {
       type: Function
+    },
+    buttonText: {
+      default: 'Go'
     }
   },
   data() {
