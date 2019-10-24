@@ -72,7 +72,7 @@ const Dictionary = {
   dictionaryFile(options) {
     let l2 = options.l2.replace('nor', 'nob') // Default Norwegian to Bokmål
     let filename = `/data/wiktionary/${l2}-${options.l1}.json.txt`
-    if (['fi', 'fr', 'sh', 'it', 'la', 'pt', 'es'].includes(options.l2)) {
+    if (['fin', 'fra', 'hbs', 'ita', 'lat', 'por', 'spa'].includes(options.l2)) {
       filename = `/data/wiktionary/large/${l2}-${options.l1}.json.txt`
     }
     return filename
