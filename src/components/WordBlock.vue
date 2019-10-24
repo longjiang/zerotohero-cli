@@ -96,7 +96,7 @@
         </div>
       </div>
       <div v-if="loading === true">💭 Thinking...</div>
-      <div v-if="words.length === 0 && loading === false">
+      <div v-if="words && words.length === 0 && loading === false">
         🤷‍ No clue.
         <br />
         <a :href="`https://www.google.com/search?q=${this.text}`" target="_blank">Google</a>
@@ -218,7 +218,8 @@ export default {
     mouseout() {
       setTimeout(() => {
         // Allow user to interact with popover
-        if ($('.popover:hover').length === 0) {
+        let $popovers = $('.popover:hover')
+        if ($popovers && $popovers.length === 0) {
           this.hover = false
         }
       }, 300)
@@ -248,7 +249,7 @@ export default {
         }
         this.words = words
         if (this.$l2.code === 'ja') {
-          if (this.words.length > 0 && this.words[0].kana && this.words[0].bare === this.text && this.words[0].kana !== this.text) {
+          if (this.words && this.words.length > 0 && this.words[0].kana && this.words[0].bare === this.text && this.words[0].kana !== this.text) {
             this.transliteration = this.words[0].kana
           }
         }

@@ -65,7 +65,7 @@ export default {
       let response = (await $.getJSON(
         `${Config.wiki}items/youtube_channels?filter[channel_id][eq]=${this.args}`
       )).data
-      if (response) {
+      if (response && response.length > 0) {
         this.saved = response
       }
     },
