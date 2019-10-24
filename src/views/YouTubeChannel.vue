@@ -2,7 +2,7 @@
   <div class="youtube-browse container mt-5 mb-5 main">
     <div class="row">
       <div class="col-sm-12">
-        <div class="text-center mb-3">
+        <div v-if="avatar" class="text-center mb-3">
           <img :src="avatar" class="avatar" alt />
         </div>
         <h1 v-if="title" class="mb-4 text-center">
@@ -66,7 +66,7 @@ export default {
         `${Config.wiki}items/youtube_channels?filter[channel_id][eq]=${this.args}`
       )).data
       if (response) {
-        this.saved = response.data
+        this.saved = response
       }
     },
     async save() {
@@ -79,13 +79,13 @@ export default {
         language: this.$l2.id,
         avatar: file.data.id
       })
-      console.log(success)
       if (success) {
         this.saved = success.data
       }
     },
     update() {
       this.title = undefined
+      this.avatar = undefined
       this.videos = []
       this.getSaved()
       YouTube.channel(
