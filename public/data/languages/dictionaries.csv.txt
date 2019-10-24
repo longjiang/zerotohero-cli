@@ -1,6 +1,9 @@
 l2,l1,dictionary
+ady,eng,freedict
+aze,eng,wiktionary
 afr,eng,freedict
 ang,eng,wiktionary
+ast,eng,freedict
 ara,eng,freedict
 bre,eng,wiktionary
 bul,eng,wiktionary
@@ -53,6 +56,7 @@ hrv,eng,freedict
 hun,eng,freedict
 hye,eng,wiktionary
 ido,eng,wiktionary
+ind,eng,wiktionary
 isl,eng,freedict
 ita,eng,wiktionary
 jpn,eng,edict
@@ -67,6 +71,8 @@ lit,eng,freedict
 ltz,eng,wiktionary
 mkd,eng,wiktionary
 mlt,eng,wiktionary
+msa,eng,wiktionary
+mya,eng,wiktionary
 nav,eng,wiktionary
 nld,eng,wiktionary
 nno,eng,wiktionary
@@ -83,6 +89,7 @@ slk,eng,freedict
 spa,eng,wiktionary
 sqi,eng,wiktionary
 srp,eng,freedict
+sme,eng,wiktionary
 swa,eng,wiktionary
 swe,eng,wiktionary
 syc,eng,wiktionary
@@ -96,4 +103,5 @@ uzb,eng,wiktionary
 vie,eng,wiktionary
 xcl,eng,wiktionary
 yid,eng,wiktionary
+yue,eng,wiktionary
 zho,eng,hsk-cedict
