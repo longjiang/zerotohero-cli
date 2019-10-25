@@ -70,9 +70,16 @@ export default new Vuex.Store({
   getters: {
     hasSavedWord: state => options => {
       if (state.savedWords[options.l2]) {
-        let yes = state.savedWords[options.l2].find(
-          item => item.forms.includes(options.text)
-        )
+        let yes = false
+        if(options.id) {
+          yes = state.savedWords[options.l2].find(
+            item => item.id && item.id === options.id
+          )
+        } else {
+            yes = state.savedWords[options.l2].find(
+            item => item.forms.includes(options.text)
+          ) 
+        }
         return yes
       }
     },

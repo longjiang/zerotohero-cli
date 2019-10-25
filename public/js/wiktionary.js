@@ -121,13 +121,11 @@ const Dictionary = {
     let words = this.words
       .filter(word => word.head && word.head.startsWith(text))
       .slice(0, limit)
-    if (words.length === 0) {
-      words = this.words
-        .filter(word => text.includes(word.head))
+    let moreWords = this.words
+        .filter(word => text.includes(word.head) && text !== word.head)
         .sort((a, b) => b.head.length - a.head.length)
         .slice(0, limit)
-    }
-    return words
+    return words.concat(moreWords)
   },
   randomArrayItem(array, start = 0, length = false) {
     length = length || array.length

@@ -64,7 +64,7 @@
             <span style="color: #999" v-else="$hasFeature('transliteration')">{{ tr(word.bare) }}</span>
             <Speak :text="word.bare" :mp3="word.audio" class="ml-1" />
           </div>
-          <Star :word="word" class="mr-1"></Star>
+          <Star :word="word" :text="text" class="mr-1"></Star>
           <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${words[0].id}`">
             <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ word.accented }}</b>
           </a>

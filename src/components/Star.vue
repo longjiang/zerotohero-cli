@@ -38,17 +38,23 @@ export default {
         (await (await this.$dictionary).wordForms(this.word)) || []
       wordForms = wordForms.filter(form => form !== '')
       wordForms = Helper.unique(
-        [this.word.bare.toLowerCase()].concat(wordForms.map(form => form.form.replace(/'/g, '')))
+        [this.word.bare.toLowerCase()].concat(wordForms.map(form => form.form.replace(/'/g, ''))).concat([this.text])
       )
       return wordForms
     },
     saved() {
-      let saved = this.$store.getters.hasSavedWord({
-        text: this.word
-          ? this.word.bare.toLowerCase()
-          : this.text.toLowerCase(),
-        l2: this.$l2.code
-      })
+      let saved = false
+      if (this.word) {
+        saved = this.$store.getters.hasSavedWord({
+          id: this.word.id,
+          l2: this.$l2.code
+        })
+      } else {
+        saved = this.$store.getters.hasSavedWord({
+          text: this.text.toLowerCase(),
+          l2: this.$l2.code
+        })
+      }
       return saved
     },
     async saveWordClick() {
