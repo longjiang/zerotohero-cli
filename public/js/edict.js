@@ -106,7 +106,9 @@ const Dictionary = {
     if (!this.isRoman(text)) {
       let results = []
       if (this.isChinese(text)) {
-        results = this.words.filter(row => row.kanji && row.kanji.includes(text))
+        let words = this.words.filter(row => row.kanji && row.kanji === text)
+        let moreWords = this.words.filter(row => row.kanji && row.kanji !== text && row.kanji.includes(text))
+        results = results.concat(words).concat(moreWords)
       } else {
         let words = this.words
           .filter(word => word.bare && word.bare.startsWith(text))
