@@ -97,26 +97,29 @@ const Dictionary = {
     }
     return results
   },
-  lookupFuzzy(text, limit = 30) {
+  lookupFuzzy(text, limit = 30) { // text = 'abcde'
     text = text.toLowerCase().trim()
-    let results = []
     if (this.isChinese(text)) {
-      results = this.words.filter(row => row.hanja && row.hanja.includes(text))
-    } else {
-      let words = this.words
-        .filter(word => word.bare && word.bare.startsWith(text))
-      if (words.length === 0) {
-        words = this.words
-          .filter(word => text.includes(word.bare))
-          .sort((a, b) => b.bare.length - a.bare.length)
-      }
-      results = words
-    }
-    if (results) {
-      if (limit) {
-        results = results.slice(0, limit)
-      }
+      let results = this.words.filter(row => row.hanja && row.hanja.includes(text))
       return results
+    } else {
+      let subtexts = []
+      for (let i = 1; i < text.length; i++) {
+        subtexts.push(text.substring(0, text.length - i))
+      }
+      let words = this.words
+        .filter(word => word.hangul && word.hangul.startsWith(text)) // matches 'abcde, abcde...'
+      let moreWords = []
+      for (let subtext of subtexts.slice(0, 3)) {
+        let evenMoreWords = this.words
+        .filter(word => {
+          if(word.hangul && word.hangul.length < text.length + 1 && word.hangul.startsWith(subtext)) {
+            return true // matches 'abcd...', 'abc...'
+          }
+        })
+        moreWords = moreWords.concat(evenMoreWords)
+      }
+      return words.concat(moreWords).slice(0, limit)
     }
   }
 }

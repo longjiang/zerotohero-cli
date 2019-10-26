@@ -116,15 +116,31 @@ const Dictionary = {
       .slice(0, limit)
     return words
   },
-  lookupFuzzy(text, limit = 30) {
+  lookupFuzzy(text, limit = 30) { // text = 'abcde'
     text = text.toLowerCase()
+    let subtexts = []
+    for (let i = 1; i < text.length; i++) {
+      subtexts.push(text.substring(0, text.length - i))
+    }
     let words = this.words
       .filter(word => word.head && word.head.startsWith(text))
       .slice(0, limit)
     let moreWords = this.words
-        .filter(word => text.includes(word.head) && text !== word.head)
-        .sort((a, b) => b.head.length - a.head.length)
-        .slice(0, limit)
+      .filter(word => {
+        if (word.head !== text) {
+          if (text.includes(word.head)) {
+            return true // matches 'abcd', 'abc'
+          } else {
+            for (let subtext of subtexts) {
+              if(word.head.includes(subtext)) {
+                return true // matches 'abcd...', 'abc...'
+              }
+            }
+          }
+        }
+      })
+      .sort((a, b) => b.head.length - a.head.length)
+      .slice(0, limit)
     return words.concat(moreWords)
   },
   randomArrayItem(array, start = 0, length = false) {

@@ -6,7 +6,6 @@
     :open-group="'id' + _uid"
     :id="id"
     style="display: inline-block"
-    v-observe-visibility="visibilityChanged"
   >
     <span
       :class="{
@@ -151,15 +150,6 @@ export default {
     }
   },
   methods: {
-    visibilityChanged(isVisible) {
-      if (isVisible) {
-        if (this.loading === true) {
-          if (this.words && this.words.length === 0) {
-            this.lookup()
-          }
-        }
-      }
-    },
     tr(text) {
       return tr(text)
     },
