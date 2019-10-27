@@ -37,13 +37,14 @@ export default {
       }
     }
     $chapterHTML.find('#body h1').remove()
+    let book = chapters[0] ? {
+      title: chapters[0].title,
+      chapters
+    } : undefined
     let chapter = {
       title,
       content: $chapterHTML.find('#body').html(),
-      book: {
-        title: chapters[0].title,
-        chapters
-      }
+      book
     }
     if(!url.includes('babel')) {
       chapter.lang = 'en'

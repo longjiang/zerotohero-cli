@@ -53,6 +53,17 @@ export default {
     this.lastId += 1
     return this.lastId
   },
+  uniqueByValue(array, key) {
+    let flags = []
+    let unique = []
+    let l = array.length
+    for(let i = 0; i<l; i++) {
+      if( flags[array[i][key]]) continue
+      flags[array[i][key]] = true
+      unique.push(array[i])
+    }
+    return unique
+  },
   // json or plain text only, and returns object
   proxy(url, callback) {
     $.ajax(Config.proxy + '?' + url).done(function(response) {

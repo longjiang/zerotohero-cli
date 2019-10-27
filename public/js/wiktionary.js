@@ -71,8 +71,10 @@ const Dictionary = {
   },
   dictionaryFile(options) {
     let l2 = options.l2.replace('nor', 'nob') // Default Norwegian to Bokmål
+      .replace('hrv', 'hbs') // Serbian uses Serbo-Croatian
+      .replace('srp', 'hbs') // Croatian uses Serbo-Croatian
     let filename = `/data/wiktionary/${l2}-${options.l1}.json.txt`
-    if (['fin', 'fra', 'hbs', 'ita', 'lat', 'por', 'spa'].includes(options.l2)) {
+    if (['fin', 'fra', 'hbs', 'ita', 'lat', 'por', 'spa'].includes(l2)) {
       filename = `/data/wiktionary/large/${l2}-${options.l1}.json.txt`
     }
     return filename

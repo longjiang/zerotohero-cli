@@ -84,6 +84,7 @@ import YouTubeVideoList from '@/components/YouTubeVideoList'
 import YouTubeChannelCard from '@/components/YouTubeChannelCard'
 import SimpleSearch from '@/components/SimpleSearch'
 import Config from '@/lib/config'
+import Helper from '@/lib/helper'
 
 export default {
   components: {
@@ -105,7 +106,7 @@ export default {
     }
   },
   async mounted() {
-    this.videos = (await $.getJSON(
+    let videos = (await $.getJSON(
       `${Config.wiki}items/youtube_videos?filter[l2][eq]=${this.$l2.id}`
     )).data.map(video => {
       return {
@@ -113,12 +114,13 @@ export default {
         title: video.title
       }
     })
+    videos = Helper.uniqueByValue(videos, 'id')
+    this.videos = videos
     let response = await $.getJSON(
       `${Config.wiki}items/youtube_channels?filter[language][eq]=${this.$l2.id}&fields=*,avatar.*`
     )
-    let channels = response.data || []
-    if (channels.length > 0) {
-      this.channels = channels.map(channel => {
+    if (response.data && response.data.length > 0) {
+      let channels = response.data.map(channel => {
         return {
           id: channel.channel_id,
           avatar: channel.avatar.data.full_url,
@@ -126,6 +128,8 @@ export default {
           description: channel.description
         }
       })
+      channels = Helper.uniqueByValue(channels, 'id')
+      this.channels = channels
     }
   }
 }
