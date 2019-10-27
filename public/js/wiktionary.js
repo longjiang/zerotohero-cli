@@ -118,6 +118,17 @@ const Dictionary = {
       .slice(0, limit)
     return words
   },
+  uniqueByValue(array, key) {
+    let flags = []
+    let unique = []
+    let l = array.length
+    for(let i = 0; i<l; i++) {
+      if( flags[array[i][key]]) continue
+      flags[array[i][key]] = true
+      unique.push(array[i])
+    }
+    return unique
+  },
   lookupFuzzy(text, limit = 30) { // text = 'abcde'
     text = text.toLowerCase()
     let subtexts = []
@@ -125,25 +136,16 @@ const Dictionary = {
       subtexts.push(text.substring(0, text.length - i))
     }
     let words = this.words
-      .filter(word => word.head && word.head.startsWith(text))
+      .filter(word => word.head && word.head.startsWith(text)) // matches 'abcde', 'abcde...'
       .slice(0, limit)
       .sort((a, b) => a.head.length - b.head.length)
-    let moreWords = this.words
-      .filter(word => {
-        if (word.head !== text) {
-          if (text.startsWith(word.head)) {
-            return true // matches 'abcd', 'abc'
-          }
-        }
-      })
-      .sort((a, b) => b.head.length - a.head.length)
-      .slice(0, limit)
+    let moreWords = []
     for (let subtext of subtexts) {
       if (moreWords.length < limit) {
         moreWords = moreWords.concat(this.words.filter(word => word.head.startsWith(subtext)))// matches 'abcd...', 'abc...'
       }
     }
-    return words.concat(moreWords)
+    return this.uniqueByValue(words.concat(moreWords), 'head')
   },
   randomArrayItem(array, start = 0, length = false) {
     length = length || array.length
