@@ -127,22 +127,22 @@ const Dictionary = {
     let words = this.words
       .filter(word => word.head && word.head.startsWith(text))
       .slice(0, limit)
+      .sort((a, b) => a.head.length - b.head.length)
     let moreWords = this.words
       .filter(word => {
         if (word.head !== text) {
-          if (text.includes(word.head)) {
+          if (text.startsWith(word.head)) {
             return true // matches 'abcd', 'abc'
-          } else {
-            for (let subtext of subtexts) {
-              if(word.head.includes(subtext)) {
-                return true // matches 'abcd...', 'abc...'
-              }
-            }
           }
         }
       })
       .sort((a, b) => b.head.length - a.head.length)
       .slice(0, limit)
+    for (let subtext of subtexts) {
+      if (moreWords.length < limit) {
+        moreWords = moreWords.concat(this.words.filter(word => word.head.startsWith(subtext)))// matches 'abcd...', 'abc...'
+      }
+    }
     return words.concat(moreWords)
   },
   randomArrayItem(array, start = 0, length = false) {
