@@ -11,6 +11,7 @@ bak,eng,wiktionary
 bel,eng,wiktionary
 ben,eng,wiktionary
 bod,eng,wiktionary
+bos,eng,wiktionary
 bre,eng,wiktionary
 bul,eng,wiktionary
 cat,eng,wiktionary
@@ -21,6 +22,7 @@ crh,eng,wiktionary
 cym,eng,freedict
 dan,eng,wiktionary
 deu,eng,freedict
+dsb,eng,wiktionary
 dum,eng,wiktionary
 egy,eng,wiktionary
 ell,eng,wiktionary
@@ -68,9 +70,10 @@ got,eng,wiktionary
 grc,eng,wiktionary
 gsw,eng,wiktionary
 guj,eng,wiktionary
+hau,eng,wiktionary
 haw,eng,wiktionary
-heb,eng,wiktionary
 hbs,eng,wiktionary
+heb,eng,wiktionary
 hil,eng,wiktionary
 hin,eng,wiktionary
 hrv,eng,freedict
@@ -81,6 +84,7 @@ ina,eng,wiktionary
 ind,eng,wiktionary
 isl,eng,freedict
 ita,eng,wiktionary
+jav ,eng,wiktionary
 jpn,eng,edict
 kal,eng,wiktionary
 kat,eng,wiktionary
@@ -99,6 +103,7 @@ mkd,eng,wiktionary
 mlg,eng,wiktionary
 mlt,eng,wiktionary
 mon,eng,wiktionary
+mri,eng,wiktionary
 msa,eng,wiktionary
 mya,eng,wiktionary
 nav,eng,wiktionary
@@ -117,12 +122,15 @@ pdc,eng,wiktionary
 pli,eng,wiktionary
 pol,eng,wiktionary
 por,eng,wiktionary
+pus,eng,wiktionary
 que,eng,wiktionary
 roh,eng,wiktionary
 ron,eng,wiktionary
 rup,eng,wiktionary
 rus,eng,openrussian
 san,eng,wiktionary
+saw,eng,wiktionary
+scn,eng,wiktionary
 sco,eng,wiktionary
 sga,eng,wiktionary
 slk,eng,freedict
@@ -135,7 +143,9 @@ swa,eng,wiktionary
 swe,eng,wiktionary
 syc,eng,wiktionary
 tam,eng,wiktionary
+tat,eng,wiktionary
 tel,eng,wiktionary
+tgk,eng,wiktionary
 tgl,eng,wiktionary
 tha,eng,wiktionary
 tpi,eng,wiktionary

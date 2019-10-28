@@ -99,6 +99,7 @@ gl,gl-ES
 gsw,gsw-FR
 gu,gu-IN
 ha,ha-Latn-NG
+he,iw
 he,he-IL
 hi,hi-IN
 hr,hr-BA
@@ -157,6 +158,7 @@ quz,quz-EC
 quz,quz-PE
 rm,rm-CH
 ro,ro-RO
+ro,mo
 ru,ru-RU
 rw,rw-RW
 sah,sah-RU
@@ -215,4 +217,7 @@ zh,zh-SG
 zh,zh-TW
 zu,zu-ZA
 ceb,fil
+ceb,fil-PH
 tl,fil
+tl,fil-PH
+crh,tr

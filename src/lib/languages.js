@@ -354,6 +354,7 @@ export default {
     // l1.code = 'ceb', l2.code = 'en' -> yes, becuase we can find English YouTube videos, with sub translated in cebuano 
     // l1.code = 'en', l2.code = 'ceb' -> no, because we can't FIND cebuano subtitlted YouTube videos
     if (l2.code === 'ceb') return true
+    if (l2.code === 'crh') return true
     return this.googleTranslateLangs.includes(this.code(l1)) && this.youTubeLangs.includes(this.code(l2))
   },
   code(language) {

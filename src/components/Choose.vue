@@ -59,7 +59,7 @@ export default {
         .sort(language => language['iso639-3'].startsWith(text) || language.name.startsWith(text) ? 1: -1 )
         .map(language => {
           return {
-            bare: `${language.name} (${language.code})`,
+            bare: `${language.name} (${language.code !== language['iso639-3'] ? language.code + ', ' : ''}${language['iso639-3']})`,
             definitions: this.$languages.getFeatures({
               l1: english,
               l2: language
