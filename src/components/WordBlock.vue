@@ -18,11 +18,15 @@
       @mouseover="mouseover"
       @mouseout="mouseout"
     >
-      <template v-if="token">
+      <template v-if="token && token.candidates && token.candidates.length > 0">
         <span class="word-block-definition" v-html="token.candidates[0].definitions[0]"></span>
-        <span class="word-block-pinyin">{{ token.candidates[0].pinyin }}</span>
-        <span class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
-        <span class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
+        <span
+          class="word-block-pinyin"
+          v-if="transliteration && transliteration !== token.candidates[0].head"
+        >{{ transliteration }}</span>
+        <span v-if="$l2.code === 'zh'" class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
+        <span v-if="$l2.code === 'zh'" class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
+        <span v-if="$l2.code !== 'zh'" class="word-block-text">{{ token.candidates[0].head }}</span>
       </template>
       <template v-else>
         <span
@@ -139,7 +143,16 @@ export default {
   mounted() {
     this.update()
     if (this.$hasFeature('transliteration')) {
-      if (this.$l2.code !== 'ja') {
+      if (this.token && this.token.candidates && this.token.candidates.length > 0) {
+        if (this.$l2.code === 'ja' && this.token.candidates[0].kana) {
+          this.transliteration = this.token.candidates[0].kana
+        } else if (this.$l2.code === 'zh' && this.token.candidates[0].pinyin) {
+          this.transliteration = this.token.candidates[0].pinyin
+        } else {
+          this.transliteration = tr(this.token.candidates[0].head)
+        }
+      }
+      if (!this.transliteration) {
         this.transliteration = tr(this.text)
       }
     }

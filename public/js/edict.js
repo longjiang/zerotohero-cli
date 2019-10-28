@@ -14,6 +14,7 @@ const Dictionary = {
           let data = []
           for(let row of sorted) {
             let word = Object.assign(row, {
+              head: row.kanji || row.kana,
               bare: row.kanji || row.kana,
               accented: row.kanji || row.kana,
               definitions: [row.english],
@@ -24,7 +25,7 @@ const Dictionary = {
             })
             data.push(word)
           }
-          this.words = data
+          this.words = data.sort((a,b) => b.head && a.head ? b.head.length - a.head.length : 0)
           resolve(this)
         }
       })
@@ -126,5 +127,86 @@ const Dictionary = {
         return results
       }
     }
-  }
+  },
+  subdict(data) {
+    let newDict = Object.assign({}, this)
+    return Object.assign(newDict, { words: data })
+  },
+  subdictFromText(text) {
+    return this.subdict(
+      this.words.filter(function(row) {
+        return text.includes(row.head)
+      })
+    )
+  },
+  /* Returns the longest word in the dictionary that is inside `text` */
+  longest(text) {
+    // Only return the *first* seen word and those the same as it
+    let first = false
+    let matches = this.words
+      .filter(function(word) {
+        if (first) {
+          return word.head === first
+        } else {
+          if (text.includes(word.head)) {
+            first = word.head
+            return true
+          }
+        }
+      })
+      .sort((a, b) => {
+        return b.head.length - a.head.length
+      })
+    return {
+      matches: matches,
+      text: matches && matches.length > 0 ? matches[0].head : ''
+    }
+  },
+  tokenize(text) {
+    return this.tokenizeRecursively(
+      text,
+      this.subdictFromText(text)
+    )
+  },
+  tokenizeRecursively(text, subdict) {
+    const longest = subdict.longest(text)
+    if (longest.matches.length > 0) {
+      let result = [] 
+      /* 
+      result = [
+        '我', 
+        {
+          text: '是'
+          candidates: [{...}, {...}, {...}
+        ],
+        '中国人。'
+      ]
+      */
+      for (let textFragment of text.split(longest.text)) {
+        result.push(textFragment) // '我'
+        result.push({
+          text: longest.text,
+          candidates: longest.matches
+        })
+      }
+      result = result.filter(item => item !== '')
+      result.pop() // last item is always useless, remove it
+      var tokens = []
+      for (let item of result) {
+        if (typeof item === 'string') {
+          for (let token of this.tokenizeRecursively(
+            item,
+            subdict
+          )) {
+            tokens.push(token)
+          }
+        } else {
+          tokens.push(item)
+        }
+      }
+      return tokens
+    } else {
+      return [text]
+    }
+  },
 }

@@ -60,7 +60,7 @@ const Dictionary = {
     }
     words = words.sort((a, b) => {
       if (a.head && b.head) {
-        return a.head.length - b.head.length
+        return b.head.length - a.head.length
       }
     })
     words = words.map((word, index) => {
@@ -129,23 +129,105 @@ const Dictionary = {
     }
     return unique
   },
+  subdict(data) {
+    let newDict = Object.assign({}, this)
+    return Object.assign(newDict, { words: data })
+  },
+  subdictFromText(text) {
+    return this.subdict(
+      this.words.filter(function(row) {
+        return text.includes(row.head)
+      })
+    )
+  },
+  /* Returns the longest word in the dictionary that is inside `text` */
+  longest(text) {
+    // Only return the *first* seen word and those the same as it
+    let first = false
+    let matches = this.words
+      .filter(function(word) {
+        if (first) {
+          return word.head === first
+        } else {
+          if (text.includes(word.head)) {
+            first = word.head
+            return true
+          }
+        }
+      })
+      .sort((a, b) => {
+        return b.head.length - a.head.length
+      })
+    return {
+      matches: matches,
+      text: matches && matches.length > 0 ? matches[0].head : ''
+    }
+  },
+  tokenize(text) {
+    return this.tokenizeRecursively(
+      text,
+      this.subdictFromText(text)
+    )
+  },
+  tokenizeRecursively(text, subdict) {
+    const longest = subdict.longest(text)
+    if (longest.matches.length > 0) {
+      let result = [] 
+      /* 
+      result = [
+        '我', 
+        {
+          text: '是'
+          candidates: [{...}, {...}, {...}
+        ],
+        '中国人。'
+      ]
+      */
+      for (let textFragment of text.split(longest.text)) {
+        result.push(textFragment) // '我'
+        result.push({
+          text: longest.text,
+          candidates: longest.matches
+        })
+      }
+      result = result.filter(item => item !== '')
+      result.pop() // last item is always useless, remove it
+      var tokens = []
+      for (let item of result) {
+        if (typeof item === 'string') {
+          for (let token of this.tokenizeRecursively(
+            item,
+            subdict
+          )) {
+            tokens.push(token)
+          }
+        } else {
+          tokens.push(item)
+        }
+      }
+      return tokens
+    } else {
+      return [text]
+    }
+  },
   lookupFuzzy(text, limit = 30) { // text = 'abcde'
     text = text.toLowerCase()
+    let words = []
     let subtexts = []
-    for (let i = 1; i < text.length; i++) {
+    for (let i = 1; text.length - i > 2; i++) {
       subtexts.push(text.substring(0, text.length - i))
     }
-    let words = this.words
-      .filter(word => word.head && word.head.startsWith(text)) // matches 'abcde', 'abcde...'
-      .slice(0, limit)
-      .sort((a, b) => a.head.length - b.head.length)
-    let moreWords = []
-    for (let subtext of subtexts) {
-      if (moreWords.length < limit) {
-        moreWords = moreWords.concat(this.words.filter(word => word.head.startsWith(subtext)))// matches 'abcd...', 'abc...'
+    for (let word of this.words) {
+      if (word.head && word.head.includes(text)) {
+        words.push(Object.assign({score: text.length * 2 - word.head.length}, word)) // matches 'abcde', 'abcde...'
+      }
+      for (let subtext of subtexts) {
+        if (word.head.includes(subtext)) {
+          words.push(Object.assign({score: subtext.length * 2 - word.head.length}, word)) // matches 'abcde', 'abcde...'
+        }
       }
     }
-    return this.uniqueByValue(words.concat(moreWords), 'head')
+    return words.sort((a,b) => b.score - a.score).slice(0, limit)
   },
   randomArrayItem(array, start = 0, length = false) {
     length = length || array.length
