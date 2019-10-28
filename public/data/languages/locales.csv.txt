@@ -215,3 +215,4 @@ zh,zh-SG
 zh,zh-TW
 zu,zu-ZA
 ceb,fil
+tl,fil
