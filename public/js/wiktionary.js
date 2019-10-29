@@ -86,7 +86,7 @@ const Dictionary = {
       .replace('bos', 'hbs') // Bosnian uses Serbo-Croatian
       .replace('run', 'kin') // Rundi uses Rwanda-Rundi
     let filename = `/data/wiktionary/${l2}-${options.l1}.json.txt`
-    if (['fin', 'fra', 'hbs', 'ita', 'lat', 'por', 'spa'].includes(l2)) {
+    if (['ara', 'fin', 'fra', 'hbs', 'ita', 'lat', 'por', 'spa'].includes(l2)) {
       filename = `/data/wiktionary/large/${l2}-${options.l1}.json.txt`
     }
     return filename

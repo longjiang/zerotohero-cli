@@ -2,7 +2,7 @@ l2,l1,dictionary
 ady,eng,freedict
 afr,eng,freedict
 ang,eng,wiktionary
-ara,eng,freedict
+ara,eng,wiktionary
 arc,eng,wiktionary
 asm,eng,wiktionary
 ast,eng,freedict
