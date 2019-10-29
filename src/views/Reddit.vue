@@ -10,11 +10,11 @@
           <div v-if="subreddits && subreddits.length > 0">
             <h3 class="mb-5">
               Reddit Posts under
-              <a :href="`https://www.reddit.com/r/${subreddits[0].sub}`"
-                >r/{{subreddits[0].sub}}</a
+              <a :href="`https://www.reddit.com/${subreddits[0].sub}`"
+                >{{subreddits[0].sub}}</a
               >
             </h3>
-            <RedditArticlesList :path="`r/${subreddits[0].sub}/top`" />
+            <RedditArticlesList :path="`${subreddits[0].sub}/hot`" />
           </div>
           <div v-if="subreddits && subreddits.length === 0">
             <div class="jumbotron shadow rounded bg-white text-center">
@@ -34,7 +34,7 @@
             just interested in the language. Please post interesting links,
             language learning advice, or questions about the {{$l2.name}} language.
             To participate and create new content,
-            <a :href="`https://www.reddit.com/r/${subreddits[0].sub}/`"
+            <a :href="`https://www.reddit.com/${subreddits[0].sub}/`"
               >visit the community on Reddit</a
             >.
           </p>
