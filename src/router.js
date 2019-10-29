@@ -441,7 +441,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/youtube/search/:args?',
+      path: '/:l1/:l2/youtube/search/:term?/:start?',
       name: 'youtube-search',
       component: () => import('./views/YouTubeSearch.vue'),
       props: true,

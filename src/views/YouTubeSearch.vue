@@ -5,13 +5,17 @@
       :placeholder="$t('Enter a search term in {l2}...', {l2: $l2.name})"
       :action="
         url => {
-          location.hash = `#/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(url)}`
+          location.hash = `#/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(url)}/0`
         }
       "
       ref="search"
       class="mb-5"
     />
     <YouTubeVideoList :videos="videos" />
+    <div class="mt-4 text-center">
+      <a v-if="start > 9" :href="`#/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) - 10}`" class="btn btn-default mr-2">Previous</a>
+      <a :href="`#/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) + 10}`" class="btn btn-default">Next</a>
+    </div>
   </div>
 </template>
 
@@ -26,8 +30,12 @@ export default {
     SimpleSearch
   },
   props: {
-    args: {
+    term: {
       type: String
+    },
+    start: {
+      type: Number,
+      default: 0
     }
   },
   data() {
@@ -37,7 +45,10 @@ export default {
     }
   },
   watch: {
-    args() {
+    term() {
+      this.updateURL()
+    },
+    start() {
       this.updateURL()
     }
   },
@@ -47,11 +58,12 @@ export default {
   methods: {
     async updateURL() {
       this.videos = []
-      let url = decodeURIComponent(this.args)
+      let url = decodeURIComponent(this.term)
       this.$refs.search.text = url
       let videos = await YouTube.searchByGoogle(
         {
-          term: this.args,
+          term: this.term,
+          start: this.start || 0,
           lang: this.$l2.code,
           captions: true
         }
