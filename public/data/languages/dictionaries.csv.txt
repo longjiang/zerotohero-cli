@@ -17,6 +17,8 @@ bul,eng,wiktionary
 cat,eng,wiktionary
 ceb,eng,wiktionary
 ces,eng,wiktionary
+cho,eng,wiktionary
+chr,eng,wiktionary
 chu,eng,wiktionary
 crh,eng,wiktionary
 cym,eng,freedict
@@ -87,9 +89,10 @@ ita,eng,wiktionary
 jav ,eng,wiktionary
 jpn,eng,edict
 kal,eng,wiktionary
+kan,eng,wiktionary
 kat,eng,wiktionary
 kaz,eng,wiktionary
-khm,eng,edict
+khm,eng,wiktionary
 kor,eng,kengdic
 kur,eng,freedict
 lao,eng,wiktionary
@@ -98,6 +101,7 @@ lav,eng,wiktionary
 lit,eng,freedict
 lld,eng,wiktionary
 ltz,eng,wiktionary
+mal,eng,wiktionary
 mar,eng,wiktionary
 mkd,eng,wiktionary
 mlg,eng,wiktionary
@@ -108,6 +112,7 @@ msa,eng,wiktionary
 mya,eng,wiktionary
 nav,eng,wiktionary
 nci,eng,wiktionary
+nep,eng,wiktionary
 nld,eng,wiktionary
 nno,eng,wiktionary
 nob,eng,wiktionary
@@ -136,6 +141,7 @@ sga,eng,wiktionary
 slk,eng,freedict
 slv,eng,wiktionary
 sme,eng,wiktionary
+som,eng,wiktionary
 spa,eng,wiktionary
 sqi,eng,wiktionary
 srp,eng,wiktionary
@@ -163,3 +169,9 @@ yid,eng,wiktionary
 yue,eng,wiktionary
 zho,eng,hsk-cedict
 zul,eng,wiktionary
+amh,eng,wiktionary
+ile,eng,wiktionary
+kir,eng,wiktionary
+nan,eng,wiktionary
+sun,eng,wiktionary
+tuk,eng,wiktionary
