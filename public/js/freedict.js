@@ -138,18 +138,27 @@ const Dictionary = {
       .slice(0, limit)
     return words
   },
-  lookupFuzzy(text, limit = 30) {
+  lookupFuzzy(text, limit = 30) { // text = 'abcde'
     text = text.toLowerCase()
-    let words = this.words
-      .filter(word => word.head && word.head.startsWith(text))
-      .slice(0, limit)
-    if (words.length === 0) {
-      words = this.words
-        .filter(word => text.includes(word.head))
-        .sort((a, b) => b.head.length - a.head.length)
-        .slice(0, limit)
+    let words = []
+    let subtexts = []
+    for (let i = 1; text.length - i > 2; i++) {
+      subtexts.push(text.substring(0, text.length - i))
     }
-    return words
+    for (let word of this.words) {
+      if (word.head && word.head.includes(text)) {
+        words.push(Object.assign({score: text.length - (word.head.length - text.length)}, word)) // matches 'abcde', 'abcde...'
+      }
+      if (word.head && text.includes(word.head)) {
+        words.push(Object.assign({score: word.head.length}, word)) // matches 'cde', 'abc'
+      }
+      for (let subtext of subtexts) {
+        if (word.head.includes(subtext)) {
+          words.push(Object.assign({score: subtext.length - (word.head.length - subtext.length)}, word)) // matches 'abcxyz...'
+        }
+      }
+    }
+    return words.sort((a,b) => b.score - a.score).slice(0, limit)
   },
   randomArrayItem(array, start = 0, length = false) {
     length = length || array.length
