@@ -23,6 +23,19 @@ const Dictionary = {
       xhttp.send()
     })
   },
+  inflections(sense) {
+    let definitions = []
+    for (let inflection of sense.complex_inflection_of) {
+      let head = inflection['1'] || inflection['2']
+      if (head) {
+        definitions.push(`${inflection['3']} ${inflection['4']} ${inflection['5']} inflection of <a href="https://en.wiktionary.org/wiki/${head}" target="_blank">${head}</a>`)
+      }
+    }
+    return definitions
+  },
+  blankInflection(item) {
+    `(inflected form, see <a href="https://en.wiktionary.org/wiki/${item.word}" target="_blank">Wiktionary</a> for details)`
+  },
   parseDictionary(json) {
     this.dictionary = JSON.parse(json)
     let words = []
@@ -32,30 +45,27 @@ const Dictionary = {
         if (item.senses && item.senses[0]) {
           for (let sense of item.senses) {
             if (sense.glosses) {
-              if (sense.complex_inflection_of) {
-                for (let inflection of sense.complex_inflection_of) {
-                  let head = inflection['1'] || inflection['2']
-                  if (head) {
-                    definitions.push(`${inflection['3']} ${inflection['4']} ${inflection['5']} inflection of <a href="https://en.wiktionary.org/wiki/${head}" target="_blank">${head}</a>`)
-                  }
-                }
-              } else {
+              if (!sense.complex_inflection_of) {
                 definitions.push(sense.glosses[0])
+              } else {
+                // definitions.concat(this.inflections(sense)) // Probably not that useful in practice.
               }
             }
           }
         }
-        if (definitions.length === 0) {
-          definitions.push(`(inflected form, see <a href="https://en.wiktionary.org/wiki/${item.word}" target="_blank">Wiktionary</a> for details)`)
+        if (definitions.length > 0) {
+          words.push(Object.assign(item, {
+            bare: item.word,
+            head: item.word,
+            accented: item.word,
+            pronunciation: item.pronunciations && item.pronunciations[0].ipa ? item.pronunciations[0].ipa[0][1].replace(/\//g, '') : undefined,
+            definitions: definitions,
+            pos: item.pos
+          }))
+        } else {
+          // definitions.push(this.blankInflection(item))
+          // probably not that useful in practice
         }
-        words.push(Object.assign(item, {
-          bare: item.word,
-          head: item.word,
-          accented: item.word,
-          pronunciation: item.pronunciations && item.pronunciations[0].ipa ? item.pronunciations[0].ipa[0][1].replace(/\//g, '') : undefined,
-          definitions: definitions,
-          pos: item.pos
-        }))
       }
     }
     words = words.sort((a, b) => {
