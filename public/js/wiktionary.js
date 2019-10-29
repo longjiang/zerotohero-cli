@@ -233,9 +233,12 @@ const Dictionary = {
       if (word.head && word.head.includes(text)) {
         words.push(Object.assign({score: text.length * 2 - word.head.length}, word)) // matches 'abcde', 'abcde...'
       }
+      if (word.head && text.includes(word.head)) {
+        words.push(Object.assign({score: word.head.length}, word)) // matches 'cde', 'abc'
+      }
       for (let subtext of subtexts) {
         if (word.head.includes(subtext)) {
-          words.push(Object.assign({score: subtext.length * 2 - word.head.length}, word)) // matches 'abcde', 'abcde...'
+          words.push(Object.assign({score: subtext.length * 2 - word.head.length}, word)) // matches 'abcxyz...'
         }
       }
     }
