@@ -175,3 +175,8 @@ kir,eng,wiktionary
 nan,eng,wiktionary
 sun,eng,wiktionary
 tuk,eng,wiktionary
+ase,eng,wiktionary
+iku,eng,wiktionary
+sin,eng,wiktionary
+sot,eng,wiktionary
+tir,eng,wiktionary
