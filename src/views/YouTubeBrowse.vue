@@ -115,7 +115,7 @@ export default {
       }
     })
     videos = Helper.uniqueByValue(videos, 'id')
-    this.videos = videos
+    this.videos = videos.reverse()
     let response = await $.getJSON(
       `${Config.wiki}items/youtube_channels?filter[language][eq]=${this.$l2.id}&fields=*,avatar.*`
     )

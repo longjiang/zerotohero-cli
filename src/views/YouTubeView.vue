@@ -194,7 +194,7 @@ export default {
     async getSaved() {
       this.saved = []
       this.saved = (await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}`
+        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}`
       )).data.map(video => {
         return {
           id: video.youtube_id,
