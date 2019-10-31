@@ -23,7 +23,7 @@
         }"
         v-on:click="sock(line.starttime)"
       >
-        <Annotate tag="div" class="transcript-line-chinese"  :showTranslate="true"
+        <Annotate tag="div" class="transcript-line-chinese"
           ><span
             v-html="
               highlight

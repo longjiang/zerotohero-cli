@@ -122,6 +122,7 @@ export default {
             .text()
             .trim()
         }
+        document.title = `${this.title} | ${this.channel.title}`
       })
     },
     async getL2Transcript() {
@@ -132,9 +133,10 @@ export default {
       }
       for (let locale of locales) {
         promises.push(
-          Helper.scrape(
-            `https://www.youtube.com/api/timedtext?v=${this.args}&lang=${locale}&fmt=srv3`,
-            $html => {
+          Helper.scrape2(
+            `https://www.youtube.com/api/timedtext?v=${this.args}&lang=${locale}&fmt=srv3`
+          ).then($html => {
+            if ($html) {
               this.l2Locale = locale
               for (let p of $html.find('p')) {
                 let line = {
@@ -144,10 +146,10 @@ export default {
                 this.l2Lines.push(line)
               }
             }
-          )
+          })
         )
       }
-      await Promise.all(promises)
+      let values = await Promise.all(promises)
     },
     async save() {
       let success = await $.post(`${Config.wiki}items/youtube_videos`, {
@@ -176,6 +178,7 @@ export default {
         }
       )
       this.hasSubtitles = true
+      document.title = '✅ ' + document.title
     },
     async getTranscript() {
       this.l1Lines = []

@@ -16,6 +16,7 @@ export default {
     'Learn varous languages through English:': '通过英语学习其他语言：',
     'Learn English through various languages:': '让全世界学习英语：',
     Dictionary: '词典',
+    Resources: '资源',
     'Lookup Phrases': '查短语',
     Reading: '阅读材料',
     'Audio-Visual': '视听资源',

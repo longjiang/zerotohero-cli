@@ -82,7 +82,7 @@ export default {
     })
   },
   async scrape2(url, cacheLife = -1, encoding = false) {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       $.ajax(
         `${Config.scrape2}?url=${encodeURIComponent(
           url
@@ -94,6 +94,8 @@ export default {
           )
           var $html = $(response, ownerDocument)
           resolve($html, ownerDocument, response)
+        } else {
+          resolve(false)
         }
       })
     })
