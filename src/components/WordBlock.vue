@@ -24,9 +24,9 @@
           class="word-block-pinyin"
           v-if="transliteration && transliteration !== token.candidates[0].head"
         >{{ transliteration }}</span>
-        <span v-if="$l2.code === 'zh'" class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
-        <span v-if="$l2.code === 'zh'" class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
-        <span v-if="$l2.code !== 'zh'" class="word-block-text">{{ token.candidates[0].head }}</span>
+        <span v-if="['zh', 'yue'].includes($l2.code)" class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
+        <span v-if="['zh', 'yue'].includes($l2.code)" class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
+        <span v-else class="word-block-text">{{ token.candidates[0].head }}</span>
       </template>
       <template v-else>
         <span
