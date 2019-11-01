@@ -166,7 +166,7 @@ vol,eng,wiktionary
 xcl,eng,wiktionary
 xho,eng,wiktionary
 yid,eng,wiktionary
-yue,eng,wiktionary
+yue,eng,cc-canto
 zho,eng,hsk-cedict
 zul,eng,wiktionary
 amh,eng,wiktionary

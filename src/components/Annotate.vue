@@ -130,7 +130,7 @@ export default {
     },
     async tokenize(text, batchId) {
       let html = text
-      if (['zh', 'th', 'ja', 'km'].includes(this.$l2.code)) {
+      if (['zh', 'yue', 'th', 'ja', 'km'].includes(this.$l2.code)) {
         html = ''
         let tokenized = await (await this.$dictionary).tokenize(text)
         this.tokenized[batchId] = tokenized

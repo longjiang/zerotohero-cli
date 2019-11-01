@@ -470,9 +470,8 @@ export default {
     if (this.hasYouTube(options.l1, options.l2)) {
       if(!features.includes('youtube')) features.push('youtube')
     }
-    let voices = speechSynthesis
-      .getVoices()
-      .filter(voice => voice.lang.startsWith(options.l2.code))
+    let speechCode = options.l2.code === 'yue' ? 'zh-HK' : options.l2.code
+    let voices = speechSynthesis.getVoices().filter(voice => voice.lang.startsWith(speechCode))
     if (voices.length > 0) {
       if(!features.includes('speech')) features.push('speech')
     }

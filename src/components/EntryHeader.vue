@@ -7,13 +7,13 @@
           <div class="entry-pinyin">
             <Star :word="entry"></Star>
             <span v-if="entry.pronunciation" class='ml-2 mr-1'>/{{ entry.pronunciation }}/</span>
-            <span v-if="['zh', 'ja'].includes($l2.code)" class="ml-2 mr-1">{{ entry.cjk.phonetics }}</span>
+            <span v-if="['zh', 'ja', 'yue'].includes($l2.code)" class="ml-2 mr-1">{{ entry.cjk.phonetics }}</span>
             <Speak class="ml-1" :text="entry.bare" :mp3="entry.audio" />
           </div>
         </div>
         <div>
           <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${entry.bare}`">
-            <template v-if="$l2.code === 'zh'">
+            <template v-if="['zh', 'yue'].includes($l2.code)">
               <span
                 class="entry-word simplified"
                 :data-level="entry.level || 'outside'"
@@ -44,7 +44,7 @@
         <div v-if="$l2.code === 'ko' && entry.cjk && entry.cjk.canonical" class="mt-1">
           <span class="ml-2 entry-cjk">{{ entry.cjk.canonical }}</span>
         </div>
-        <div v-if="$l2.code === 'zh' && entry.simplified !== entry.traditional" class="mt-1">
+        <div v-if="['zh', 'yue'].includes($l2.code) && entry.simplified !== entry.traditional" class="mt-1">
           <span class="ml-2 entry-cjk simplified">{{ entry.traditional }}</span>
           <span class="ml-2 entry-cjk traditional">{{ entry.simplified }}</span>
         </div>
