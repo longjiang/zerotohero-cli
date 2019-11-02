@@ -21,7 +21,7 @@ export default {
       } else if (this.text) {
         if (this.$hasFeature('speech')) {
           var utterance = new SpeechSynthesisUtterance(this.text)
-          let speechCode = this.$l2.code === 'yue' ? 'zh-HK' : options.l2.code
+          let speechCode = this.$l2.code === 'yue' ? 'zh-HK' : this.$l2.code
           utterance.lang = speechCode
           speechSynthesis.speak(utterance)
         } else {

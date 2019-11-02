@@ -124,7 +124,8 @@ export default {
       }
     },
     breakSentences(text) {
-      text = text.replace(/([.!?:。！？：])/g, '$1SENTENCEENDING!!!')
+      text = text.replace(/([!?:。！？：])/g, '$1SENTENCEENDING!!!')
+      text = text.replace(/(\. )/g, '$1SENTENCEENDING!!!')
       let sentences = text.split('SENTENCEENDING!!!')
       return sentences.filter(sentence => sentence.trim() !== '')
     },
@@ -184,6 +185,9 @@ export default {
 </script>
 
 <style lang="scss">
+.sentence {
+  margin-right: 0.3em;
+}
 .annotated {
   min-height: 2rem;
 }

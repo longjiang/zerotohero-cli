@@ -160,7 +160,6 @@ yo,yo-NG
 zh,zh-Hans
 zh,zh-Hant
 zh,zh-CN
-zh,zh-HK
 zh,zh-MO
 zh,zh-SG
 zh,zh-TW
