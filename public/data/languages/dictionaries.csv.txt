@@ -180,3 +180,4 @@ iku,eng,wiktionary
 sin,eng,wiktionary
 sot,eng,wiktionary
 tir,eng,wiktionary
+uig,eng,wiktionary
