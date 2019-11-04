@@ -171,3 +171,5 @@ tl,fil-PH
 crh,tr
 yue,zh-HK
 ryu,ja
+nan,nan-TW
+nan,zh-TW
