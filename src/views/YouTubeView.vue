@@ -15,7 +15,9 @@
           </h3>
           <template v-if="!loading && hasSubtitles">
             <button class="btn btn-default" v-if="saved.length === 0" @click="save">Save video</button>
-            <div class="btn btn-default" v-if="saved.length > 0"><i class="fa fa-check mr-2"></i>Saved</div>
+            <div class="btn btn-default" v-if="saved.length > 0">
+              <i class="fa fa-check mr-2"></i>Saved
+            </div>
           </template>
           <hr class="mt-3" />
           <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-5" />
@@ -62,6 +64,27 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 class="mt-5 mb-4">{{ $t('Search for more videos on YouTube') }}</h4>
+          <SimpleSearch
+            class="mb-3"
+            :placeholder="$t('Enter a search term in {l2}...', { l2: $l2.name })"
+            buttonText="Search"
+            :action="
+            url => {
+              location.hash = `#/${$l1.code}/${
+                $l2.code
+              }/youtube/search/${encodeURIComponent(url)}`
+            }
+          "
+            ref="search"
+          />
+          <p class="mb-5">We will try our best to find YouTube videos with {{ $l2.name }} subtitles.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -70,11 +93,13 @@ import YouTubeVideo from '@/components/YouTubeVideo'
 import SyncedTranscript from '@/components/SyncedTranscript'
 import YouTubeNav from '@/components/YouTubeNav'
 import YouTubeChannelCard from '@/components/YouTubeChannelCard'
+import SimpleSearch from '@/components/SimpleSearch'
 import Helper from '@/lib/helper'
 import Config from '@/lib/config'
 
 export default {
   components: {
+    SimpleSearch,
     YouTubeNav,
     YouTubeVideo,
     YouTubeChannelCard,
@@ -158,10 +183,12 @@ export default {
         l2: this.$l2.id
       })
       if (success) {
-        this.saved = [{
-          id: success.data.youtube_id,
-          title: success.data.title
-        }]
+        this.saved = [
+          {
+            id: success.data.youtube_id,
+            title: success.data.title
+          }
+        ]
       }
     },
     async getL1Transcript() {

@@ -170,3 +170,4 @@ tl,fil
 tl,fil-PH
 crh,tr
 yue,zh-HK
+ryu,ja

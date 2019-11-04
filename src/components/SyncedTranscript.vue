@@ -31,7 +31,7 @@
                 : line.line
             "
         /></Annotate>
-        <div class="transcript-line-l1">
+        <div v-if="$l2.code !== $l1.code" class="transcript-line-l1">
           <span
             v-if="parallellines[lineIndex]"
             v-html="parallellines[lineIndex].line"

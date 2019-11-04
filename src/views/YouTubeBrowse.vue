@@ -7,21 +7,6 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <template v-if="videos && videos.length > 0">
-          <h4 class="mt-5 mb-5">{{ videos.length }} {{ $t('Recommended Videos') }}</h4>
-          <YouTubeVideoList :videos="videos" />
-        </template>
-        <template v-if="channels && channels.length > 0">
-          <h4 class="mt-5 mb-5">{{ channels.length }} {{ $t('Recommended Channels') }}</h4>
-          <ul class="list-unstyled p-0 mb-5 cards">
-            <li v-for="channel in channels" class="p-4 mb-4 card">
-              <YouTubeChannelCard :channel="channel" />
-            </li>
-          </ul>
-        </template>
-
-      </div>
-      <div class="col-sm-12">
         <h4 class="mt-5 mb-4">{{ $t('Search for more videos on YouTube') }}</h4>
         <SimpleSearch
           class="mb-3"
@@ -73,6 +58,21 @@
           </ol>
         </div>
         -->
+      </div>
+      <div class="col-sm-12">
+        <template v-if="videos && videos.length > 0">
+          <h4 class="mt-5 mb-5">{{ videos.length }} {{ $t('Recommended Videos') }}</h4>
+          <YouTubeVideoList :videos="videos" />
+        </template>
+        <template v-if="channels && channels.length > 0">
+          <h4 class="mt-5 mb-5">{{ channels.length }} {{ $t('Recommended Channels') }}</h4>
+          <ul class="list-unstyled p-0 mb-5 cards">
+            <li v-for="channel in channels" class="p-4 mb-4 card">
+              <YouTubeChannelCard :channel="channel" />
+            </li>
+          </ul>
+        </template>
+
       </div>
     </div>
   </div>
