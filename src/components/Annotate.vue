@@ -43,7 +43,6 @@
 import wordblock from '@/components/WordBlock'
 import VRuntimeTemplate from 'v-runtime-template'
 import TinySegmenter from 'tiny-segmenter'
-import ThaiWordcut from 'thai-wordcut'
 
 export default {
   components: {
@@ -131,7 +130,7 @@ export default {
     },
     async tokenize(text, batchId) {
       let html = text
-      if (['zh', 'yue', 'th', 'ja', 'km', 'ryu', 'bo'].includes(this.$l2.code)) {
+      if (['zh', 'yue', 'th', 'ja', 'km', 'ryu', 'bo', 'my'].includes(this.$l2.code)) {
         html = ''
         let tokenized = await (await this.$dictionary).tokenize(text)
         this.tokenized[batchId] = tokenized
