@@ -22,8 +22,6 @@ da,da-DK
 de,de-AT
 de,de-CH
 de,de-DE
-de,de-LI
-de,de-LU
 dsb,dsb-DE
 dv,dv-MV
 el,el-GR

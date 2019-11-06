@@ -1,5 +1,5 @@
 const Dictionary = {
-  name: 'wiktionary',
+  name: 'klingonska',
   file: undefined,
   dictionary: undefined,
   words: [],
@@ -10,7 +10,7 @@ const Dictionary = {
   l2: undefined,
   loadWords() {
     return new Promise(resolve => {
-      console.log('Wiktionary: Loading words')
+      console.log('Klingonska: Loading words')
       let xhttp = new XMLHttpRequest()
       let that = this
       xhttp.onload = function() {
@@ -23,49 +23,34 @@ const Dictionary = {
       xhttp.send()
     })
   },
-  inflections(sense) {
-    let definitions = []
-    for (let inflection of sense.complex_inflection_of) {
-      let head = inflection['1'] || inflection['2']
-      if (head) {
-        definitions.push(`${inflection['3']} ${inflection['4']} ${inflection['5']} inflection of <a href="https://en.wiktionary.org/wiki/${head}" target="_blank">${head}</a>`)
-      }
-    }
-    return definitions
-  },
-  blankInflection(item) {
-    `(inflected form, see <a href="https://en.wiktionary.org/wiki/${item.word}" target="_blank">Wiktionary</a> for details)`
-  },
-  parseDictionary(json) {
-    this.dictionary = JSON.parse(json)
+  parseDictionary(text) {
+    this.dictionary = text.split('\n\n')
     let words = []
-    for(let item of this.dictionary) {
-      if (item.word && !item.redirect) {
-        let definitions = []
-        if (item.senses && item.senses[0]) {
-          for (let sense of item.senses) {
-            if (sense.glosses) {
-              if (!sense.complex_inflection_of) {
-                definitions.push(sense.glosses[0])
-              } else {
-                // definitions.concat(this.inflections(sense)) // Probably not that useful in practice.
-              }
-            }
-          }
+    for(let block of this.dictionary) {
+      let item = {}
+      for(let line of block.split('\n')) {
+        let pair = line.split(':\t')
+        if (pair.length > 0) {
+          let key = pair[0]
+          let value = pair[1]
+          item[key] = value
         }
-        if (definitions.length > 0) {
-          words.push(Object.assign(item, {
+      }
+      if (item.tlh) {
+        item.word = item.tlh.replace(/.*\{(.*)\}.*/, '$1') || undefined
+        words.push(
+          Object.assign(item, {
             bare: item.word,
             head: item.word,
             accented: item.word,
-            pronunciation: item.pronunciations && item.pronunciations[0].ipa ? item.pronunciations[0].ipa[0][1].replace(/\//g, '') : undefined,
-            definitions: definitions,
+            pronunciation:
+                  item.pronunciations && item.pronunciations[0].ipa
+                    ? item.pronunciations[0].ipa[0][1].replace(/\//g, '')
+                    : undefined,
+            definitions: [item.en.replace(/[<>«»]/g, '')],
             pos: item.pos
-          }))
-        } else {
-          // definitions.push(this.blankInflection(item))
-          // probably not that useful in practice
-        }
+          })
+        )
       }
     }
     words = words.sort((a, b) => {
@@ -73,6 +58,7 @@ const Dictionary = {
         return b.head.length - a.head.length
       }
     })
+    
     words = words.map((word, index) => {
       word.id = index
       return word
@@ -80,19 +66,11 @@ const Dictionary = {
     return words
   },
   dictionaryFile(options) {
-    let l2 = options.l2.replace('nor', 'nob') // Default Norwegian to Bokmål
-      .replace('hrv', 'hbs') // Serbian uses Serbo-Croatian
-      .replace('srp', 'hbs') // Croatian uses Serbo-Croatian
-      .replace('bos', 'hbs') // Bosnian uses Serbo-Croatian
-      .replace('run', 'kin') // Rundi uses Rwanda-Rundi
-    let filename = `/data/wiktionary/${l2}-${options.l1}.json.txt`
-    if (['ara', 'fin', 'fra', 'hbs', 'ita', 'lat', 'por', 'spa'].includes(l2)) {
-      filename = `/data/wiktionary/large/${l2}-${options.l1}.json.txt`
-    }
+    let filename = '/data/klingonska/dict.zdb.txt'
     return filename
   },
   load(options) {
-    console.log('Loading Wiktionary...')
+    console.log('Loading Klingonska...')
     this.l1 = options.l1
     this.l2 = options.l2
     this.file = this.dictionaryFile(options)
@@ -106,7 +84,9 @@ const Dictionary = {
     return this.words[id]
   },
   lookup(text) {
-    let word = this.words.find(word => word && word.bare.toLowerCase() === text.toLowerCase())
+    let word = this.words.find(
+      word => word && word.bare.toLowerCase() === text.toLowerCase()
+    )
     return word
   },
   formTable() {
@@ -116,17 +96,21 @@ const Dictionary = {
     return name
   },
   wordForms(word) {
-    let forms = [{
-      table: 'head',
-      field: 'head',
-      form: word.bare
-    }]
+    let forms = [
+      {
+        table: 'head',
+        field: 'head',
+        form: word.bare
+      }
+    ]
     return forms
   },
   lookupByDef(text, limit = 30) {
     text = text.toLowerCase()
     let words = this.words
-      .filter(word => word.definitions && word.definitions.join(', ').includes(text))
+      .filter(
+        word => word.definitions && word.definitions.join(', ').includes(text)
+      )
       .slice(0, limit)
     return words
   },
@@ -134,8 +118,8 @@ const Dictionary = {
     let flags = []
     let unique = []
     let l = array.length
-    for(let i = 0; i<l; i++) {
-      if( flags[array[i][key]]) continue
+    for (let i = 0; i < l; i++) {
+      if (flags[array[i][key]]) continue
       flags[array[i][key]] = true
       unique.push(array[i])
     }
@@ -176,15 +160,12 @@ const Dictionary = {
     }
   },
   tokenize(text) {
-    return this.tokenizeRecursively(
-      text,
-      this.subdictFromText(text)
-    )
+    return this.tokenizeRecursively(text, this.subdictFromText(text))
   },
   tokenizeRecursively(text, subdict) {
     const longest = subdict.longest(text)
     if (longest.matches.length > 0) {
-      let result = [] 
+      let result = []
       /* 
       result = [
         '我', 
@@ -207,10 +188,7 @@ const Dictionary = {
       var tokens = []
       for (let item of result) {
         if (typeof item === 'string') {
-          for (let token of this.tokenizeRecursively(
-            item,
-            subdict
-          )) {
+          for (let token of this.tokenizeRecursively(item, subdict)) {
             tokens.push(token)
           }
         } else {
@@ -222,8 +200,9 @@ const Dictionary = {
       return [text]
     }
   },
-  lookupFuzzy(text, limit = 30) { // text = 'abcde'
-    text = text.toLowerCase()
+  lookupFuzzy(text, limit = 30) {
+    // text = 'abcde'
+    text = text.replace('ʼ', '\'').toLowerCase()
     let words = []
     let subtexts = []
     for (let i = 1; text.length - i > 2; i++) {
@@ -253,7 +232,7 @@ const Dictionary = {
         }
       }
     }
-    return words.sort((a,b) => b.score - a.score).slice(0, limit)
+    return words.sort((a, b) => b.score - a.score).slice(0, limit)
   },
   randomArrayItem(array, start = 0, length = false) {
     length = length || array.length
@@ -273,4 +252,3 @@ const Dictionary = {
     return text.replace(/'/g, '́')
   }
 }
-  
