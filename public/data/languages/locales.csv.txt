@@ -91,6 +91,8 @@ mr,mr-IN
 ms,ms-BN
 ms,ms-MY
 mt,mt-MT
+nb,no
+nn,no
 nb,nb-NO
 ne,ne-NP
 nl,nl-BE

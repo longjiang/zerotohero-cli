@@ -132,6 +132,8 @@ export default {
     'nv',
     'ne',
     'no',
+    'nb',
+    'nn',
     'oc',
     'or',
     'om',
