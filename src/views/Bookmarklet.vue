@@ -9,7 +9,7 @@
             reading the
             <a href="https://en.wikipedia.org/wiki/Devanagari"
               >Devanagari script</a
-            >, given its numerous subtly differnt sounds and letter-combining
+            >, given its numerous subtly different sounds and letter-combining
             rules.
           </p>
           <p>
@@ -27,7 +27,7 @@
             </p>
             <ol>
               <li>
-                <b>drag</b> the button below to your Desktoip browser's
+                <b>drag</b> the button below to your Desktop browser's
                 <b>bookmark bar:</b><br />
                 <a :href="bookmarkletURL" class="btn btn-primary mt-2 mb-2"
                   >Annotate Hindi</a

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-12">
         <h1 class="text-center">
-          Seperable verbs (<Annotate><span>离合词</span></Annotate>)
+          Separable verbs (<Annotate><span>离合词</span></Annotate>)
         </h1>
         <p class="text-center mb-5">
           <Annotate><span>
@@ -14,7 +14,7 @@
           </span></Annotate>
         </p>
         <table
-          class="table table-responsive seperable-table"
+          class="table table-responsive separable-table"
           style="color: #666"
         >
           <thead>
@@ -278,8 +278,8 @@ export default {
 </script>
 
 <style>
-.seperable-table th,
-.seperable-table td {
+.separable-table th,
+.separable-table td {
   white-space: nowrap;
   vertical-align: middle;
   text-align: center;
