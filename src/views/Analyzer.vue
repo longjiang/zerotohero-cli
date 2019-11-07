@@ -39,7 +39,7 @@
               Get lyrics of Russian songs at
               <a
                 href="http://www.megalyrics.ru/lyric/kino/gruppa-krovi.htm"
-              >Megalyrics</a>. Paste in the anlyzer. Study while you listen to the song.
+              >Megalyrics</a>. Paste in the analyzer. Study while you listen to the song.
             </li>
             <li>
               Use the

@@ -44,28 +44,28 @@
               </tr>
               <tr>
                 <td style="background-color: #ff771e;">HSK 3A</td>
-                <td>Janurary 2017</td>
+                <td>January 2017</td>
                 <td>
                   <i class="fa fa-check" />
                 </td>
               </tr>
               <tr>
                 <td style="background-color: #ff771e;">HSK 3B</td>
-                <td>Janurary 2017</td>
+                <td>January 2017</td>
                 <td>
                   <i class="fa fa-check" />
                 </td>
               </tr>
               <tr>
                 <td style="background-color: #bb1b17;">HSK 4A</td>
-                <td>Feburary 4, 2018</td>
+                <td>February 4, 2018</td>
                 <td>
                   <i class="fa fa-check" />
                 </td>
               </tr>
               <tr>
                 <td style="background-color: #bb1b17;">HSK 4B</td>
-                <td>Feburary 23, 2018</td>
+                <td>February 23, 2018</td>
                 <td>
                   <i class="fa fa-check" />
                 </td>

@@ -40,7 +40,7 @@
               placeholder="в"
             />
             <div class="input-group-append">
-              <button id="lookup-3" class="btn btn-success" type="botton">
+              <button id="lookup-3" class="btn btn-success" type="button">
                 <i class="fas fa-search" />
               </button>
             </div>

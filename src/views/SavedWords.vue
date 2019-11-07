@@ -25,7 +25,7 @@
           </button>
           <div class="export-wrapper text-left mt-4" v-if="showExport">
             <p v-html="$t('copyPasteCSV')" />
-            <b-form-group :label="$t('Inlcude:')">
+            <b-form-group :label="$t('Include:')">
               <b-form-checkbox-group v-model="selectedCsvOptions" :options="csvOptions" @click="updateCSVText()"></b-form-checkbox-group>
             </b-form-group>
             <textarea
