@@ -43,8 +43,6 @@ fr,fr-BE
 fr,fr-CA
 fr,fr-CH
 fr,fr-FR
-fr,fr-LU
-fr,fr-MC
 fy,fy-NL
 ga,ga-IE
 gd,gd-GB
@@ -64,8 +62,6 @@ id,id-ID
 ig,ig-NG
 ii,ii-CN
 is,is-IS
-it,it-CH
-it,it-IT
 iu,iu-Cans-CA
 iu,iu-Latn-CA
 ja,ja-JP
@@ -149,10 +145,6 @@ tzm,tzm-Latn-DZ
 ug,ug-CN
 uk,uk-UA
 ur,ur-PK
-uz,uz-Cyrl-UZ
-uz,uz-Latn-UZ
-uz,uz-Latn
-uz,uz-Cyrl
 vi,vi-VN
 wo,wo-SN
 xh,xh-ZA
