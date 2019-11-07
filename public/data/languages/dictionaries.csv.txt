@@ -120,7 +120,7 @@ mon,eng,wiktionary
 mri,eng,wiktionary
 msa,eng,wiktionary
 mya,eng,wiktionary
-nan,eng,wiktionary
+nan,eng,hsk-cedict
 nav,eng,wiktionary
 nci,eng,wiktionary
 nep,eng,wiktionary
