@@ -8,7 +8,7 @@
             <Star :word="entry"></Star>
             <span v-if="entry.pronunciation" class='ml-2 mr-1'>/{{ entry.pronunciation }}/</span>
             <span v-if="['zh', 'ja', 'yue'].includes($l2.code)" class="ml-2 mr-1">{{ entry.cjk.phonetics }}</span>
-            <Speak class="ml-1" :text="entry.bare" :mp3="entry.audio" />
+            <Speak class="ml-1" :text="entry.bare" :mp3="entry.audio" :wiktionary="entry.wiktionary" />
           </div>
         </div>
         <div>

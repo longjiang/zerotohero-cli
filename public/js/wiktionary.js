@@ -54,13 +54,23 @@ const Dictionary = {
           }
         }
         if (definitions.length > 0) {
+          let audio = undefined
+          if (item.pronunciations) {
+            for (let pronunciation of item.pronunciations) {
+              if (pronunciation.audios && pronunciation.audios[0] && pronunciation.audios[0].length > 0) {
+                audio = pronunciation.audios[0].find(text => text.endsWith('ogg') || text.endsWith('mp3'))
+              }
+            }
+          }
           words.push(Object.assign(item, {
             bare: item.word,
             head: item.word,
             accented: item.word,
             pronunciation: item.pronunciations && item.pronunciations[0].ipa ? item.pronunciations[0].ipa[0][1].replace(/\//g, '') : undefined,
+            audio: audio,
             definitions: definitions,
-            pos: item.pos
+            pos: item.pos,
+            wiktionary: true
           }))
         } else {
           // definitions.push(this.blankInflection(item))

@@ -4,19 +4,21 @@
       class="fas fa-volume-up focus-exclude speak"
       @click="speak"
     ></i>
-    <span v-if="!$hasFeature('speech')" class="text-muted ml-1" style="opacity: 0.7; font-size: 0.8em">Forvo</span>
+    <span v-if="!$hasFeature('speech') && (!mp3)" class="text-muted ml-1" style="opacity: 0.7; font-size: 0.8em">Forvo</span>
   </span>
 </template>
 <script>
+import commons from 'wikimedia-commons-file-path'
 export default {
   data() {
     return {}
   },
-  props: ['text', 'mp3'],
+  props: ['text', 'mp3', 'wiktionary'],
   methods: {
     speak() {
       if (this.mp3) {
-        let audio = new Audio(this.mp3)
+        let url = this.wiktionary ? commons(`File:${this.mp3}`) : this.mp3
+        let audio = new Audio(url)
         audio.play()
       } else if (this.text) {
         if (this.$hasFeature('speech')) {
@@ -25,7 +27,7 @@ export default {
           utterance.lang = speechCode
           speechSynthesis.speak(utterance)
         } else {
-          window.open(`https://forvo.com/search/${this.text}`)
+          window.open(`https://forvo.com/search/${this.text}/${this.$l2.code}`)
         }
       }
     }
