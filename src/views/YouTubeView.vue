@@ -205,7 +205,6 @@ export default {
         }
       )
       this.hasSubtitles = true
-      document.title = '✅ ' + document.title
     },
     async getTranscript() {
       this.l1Lines = []

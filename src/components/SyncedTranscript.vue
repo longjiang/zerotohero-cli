@@ -23,25 +23,27 @@
         }"
         v-on:click="sock(line.starttime)"
       >
-        <Annotate tag="div" class="transcript-line-chinese"
-          ><span
+        <Annotate tag="div" class="transcript-line-chinese">
+          <span
             v-html="
               highlight
                 ? Helper.highlight(line.line, highlight, hsk)
                 : line.line
             "
-        /></Annotate>
-        <div v-if="$l2.code !== $l1.code" class="transcript-line-l1">
-          <span
-            v-if="parallellines[lineIndex]"
-            v-html="parallellines[lineIndex].line"
           />
+        </Annotate>
+        <div
+          v-if="$l2.code !== $l1.code"
+          :class="{
+            'transcript-line-l1': true,
+            'text-right': $l2.scripts && $l2.scripts.length > 0 && $l2.scripts[0].direction === 'rtl'
+          }"
+        >
+          <span v-if="parallellines[lineIndex]" v-html="parallellines[lineIndex].line" />
         </div>
       </div>
     </div>
-    <ShowMoreButton v-if="collapse" :data-bg-level="hsk ? hsk : 'outside'"
-      >Show More</ShowMoreButton
-    >
+    <ShowMoreButton v-if="collapse" :data-bg-level="hsk ? hsk : 'outside'">Show More</ShowMoreButton>
   </div>
 </template>
 

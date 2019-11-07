@@ -1,11 +1,21 @@
 <template>
   <div class="youtube-videos">
-    <div v-for="video of videos" class="youtube-video media rounded shadow">
+    <div v-for="video of videos" :class="{
+      'youtube-video': true,
+      'media': true,
+      'rounded': true,
+      'shadow': true,
+      'nosubs': (!video.checkingSubs) && (!video.hasSubs)
+      }">
       <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.id}`" class="youtube-link">
         <div class="youtube-thumbnail-wrapper aspect-wrapper">
           <img :src="video.thumbnail || `//img.youtube.com/vi/${video.id}/hqdefault.jpg`" class="youtube-thumbnail aspect" />
         </div>
-        <div class="youtube-title media-body">{{ video.title }}</div>
+        <div class="media-body">
+          <div class="youtube-title">{{ video.title }}</div>
+          <div v-if="video.hasSubs" class="btn btn-small bg-success text-white mt-2">{{ $l2.name }} CC</div>
+          <div v-if="(video.checkingSubs === false) && (video.hasSubs === false)" class="btn btn-small text-white bg-dark mt-2">No {{ $l2.name }} CC</div>
+        </div>
       </a>
     </div>
   </div>
