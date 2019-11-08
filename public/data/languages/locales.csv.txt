@@ -17,7 +17,10 @@ fr,fr-CA
 fr,fr-CH
 fr,fr-FR
 fy,fy-NL
+hak,zh-CN
+hak,zh-TW
 hak,hak-TW
+hak,zh
 he,iw
 hi,hi-Latn
 nl,nl-BE

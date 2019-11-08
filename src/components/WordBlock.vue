@@ -24,8 +24,8 @@
           class="word-block-pinyin"
           v-if="transliteration && transliteration !== token.candidates[0].head"
         >{{ transliteration }}</span>
-        <span v-if="['zh', 'yue', 'nan'].includes($l2.code)" class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
-        <span v-if="['zh', 'yue', 'nan'].includes($l2.code)" class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
+        <span v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)" class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
+        <span v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)" class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
         <span v-else class="word-block-text">{{ token.candidates[0].head }}</span>
       </template>
       <template v-else>
@@ -148,7 +148,7 @@ export default {
       if (this.token && this.token.candidates && this.token.candidates.length > 0) {
         if (this.$l2.code === 'ja' && this.token.candidates[0].kana) {
           this.transliteration = this.token.candidates[0].kana
-        } else if (['zh', 'nan'].includes(this.$l2.code) && this.token.candidates[0].pinyin) {
+        } else if (['zh', 'nan', 'hak'].includes(this.$l2.code) && this.token.candidates[0].pinyin) {
           this.transliteration = this.token.candidates[0].pinyin
         } else if (this.$l2.code === 'yue' && this.token.candidates[0].jyutping) {
           this.transliteration = this.token.candidates[0].jyutping

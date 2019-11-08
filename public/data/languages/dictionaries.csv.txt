@@ -78,6 +78,7 @@ got,eng,wiktionary
 grc,eng,wiktionary
 gsw,eng,wiktionary
 guj,eng,wiktionary
+hak,eng,hsk-cedict
 hau,eng,wiktionary
 haw,eng,wiktionary
 hbs,eng,wiktionary
