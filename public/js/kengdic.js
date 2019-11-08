@@ -67,7 +67,8 @@ const Dictionary = {
     return name
   },
   lookupByDef(text, limit = 30) {
-    let results = this.words.filter(row => row.english && row.english.includes(text)).slice(0, limit)
+    text = text.toLowerCase()
+    let results = this.words.filter(row => row.english && row.english.toLowerCase().includes(text)).slice(0, limit)
     return results
   },
   random() {

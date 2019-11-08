@@ -36,7 +36,6 @@ zh,zh-CN
 zh,zh-MO
 zh,zh-SG
 zh,zh-TW
-zu,zu-ZA
 ceb,fil
 ceb,fil-PH
 tl,fil

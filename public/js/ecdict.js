@@ -87,7 +87,7 @@ const Dictionary = {
   lookupByDef(text, limit = 30) {
     text = text.toLowerCase()
     let words = this.words
-      .filter(word => word.definitions.join(', ').includes(text))
+      .filter(word => word.definitions.join(', ').toLowerCase().includes(text))
       .slice(0, limit)
     return words
   },

@@ -109,7 +109,7 @@ const Dictionary = {
     text = text.toLowerCase()
     let words = this.words
       .filter(
-        word => word.definitions && word.definitions.join(', ').includes(text)
+        word => word.definitions && word.definitions.join(', ').toLowerCase().includes(text)
       )
       .slice(0, limit)
     return words

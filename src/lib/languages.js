@@ -10,6 +10,7 @@ export default {
   hours: [],
   youTubeLangs: [
     'aa',
+    'ab',
     'af',
     'tw',
     'sq',
