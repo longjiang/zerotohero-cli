@@ -1,6 +1,5 @@
 <template>
-  <div id="zerotohero"
-    :class="classes">
+  <div id="zerotohero" :class="classes">
     <template v-if="langsLoaded && this.$route.path !== '/'">
       <div class="container-fluid bg-dark pt-4 pl-0 pr-0">
         <div class="container">
@@ -20,8 +19,10 @@
                 v-if="$l1.code === 'en' && $l2.code === 'zh'"
                 class="btn btn-success btn-sign-in text-white"
                 href="https://sso.teachable.com/secure/133035/users/sign_in"
-                >Login to <img src="/img/teachable_light.png" class="logo-small"
-              /></a>
+              >
+                Login to
+                <img src="/img/teachable_light.png" class="logo-small" />
+              </a>
             </div>
           </div>
           <div class="row">
@@ -55,7 +56,7 @@
               <h1
                 class="text-light mt-5 mb-5 text-center"
                 style="font-weight: 500"
-              >Learn the world’s languages, from zero to hero.</h1>
+              >Zero to Hero Education</h1>
               <Choose :compact="true" class="mt-5" />
             </div>
           </div>
@@ -93,7 +94,8 @@ export default {
       hidePinyinExceptSaved:
         localStorage.getItem('zthHidePinyinExceptSaved') === 'true',
       useTraditional: localStorage.getItem('zthUseTraditional') === 'true',
-      showTranslation: localStorage.getItem('zthShowTranslation') === 'false' ? false : true
+      showTranslation:
+        localStorage.getItem('zthShowTranslation') === 'false' ? false : true
     }
   },
   methods: {
@@ -111,14 +113,18 @@ export default {
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
     },
     updateFavicon() {
-      var link = document.querySelector("link[rel*='icon']") || document.createElement('link')
+      var link =
+        document.querySelector("link[rel*='icon']") ||
+        document.createElement('link')
       link.type = 'image/x-icon'
       link.rel = 'shortcut icon'
       link.href = `/img/logo-square/${this.$l2.code}.jpeg`
       document.getElementsByTagName('head')[0].appendChild(link)
     },
     updateTitle() {
-      document.title = document.title.replace('| Zero to Hero', `| ${this.$l2.name} Zero to Hero`).replace(/^Zero to Hero/, `${this.$l2.name} Zero to Hero`)
+      document.title = document.title
+        .replace('| Zero to Hero', `| ${this.$l2.name} Zero to Hero`)
+        .replace(/^Zero to Hero/, `${this.$l2.name} Zero to Hero`)
     },
     async setL1() {
       Vue.prototype.$l1 = this.$languages.getSmart(this.$route.params.l1)
@@ -197,12 +203,21 @@ export default {
               l2: this.$l2['iso639-3']
             })
           }
-          if (!Vue.prototype.$hanzi && ['zh', 'ko', 'ja'].includes(this.$l2.code)) {
-            Vue.prototype.$hanzi = (await import(`@/lib/hanzi.js`)).default.load()
-            Vue.prototype.$unihan = (await import(`@/lib/unihan.js`)).default.load()
+          if (
+            !Vue.prototype.$hanzi &&
+            ['zh', 'ko', 'ja'].includes(this.$l2.code)
+          ) {
+            Vue.prototype.$hanzi = (await import(
+              `@/lib/hanzi.js`
+            )).default.load()
+            Vue.prototype.$unihan = (await import(
+              `@/lib/unihan.js`
+            )).default.load()
           }
           if (!Vue.prototype.$grammar && ['zh'].includes(this.$l2.code)) {
-            Vue.prototype.$grammar = (await import(`@/lib/grammar.js`)).default.load()
+            Vue.prototype.$grammar = (await import(
+              `@/lib/grammar.js`
+            )).default.load()
           }
           this.langsLoaded = true
         }

@@ -19,13 +19,13 @@
           >{{ l1.translations ? l1.translations['english'] : 'English' }}</div>
           <div
             class="logo-text-zth"
-          >{{ l1.translations ? l1.translations['zerotohero'] : 'Zero to Hero' }}</div>
+          ><span v-if="!compact">{{ l1.translations ? l1.translations['zerotohero'] : 'Zero to Hero' }}</span><span v-else>&nbsp;</span></div>
         </template>
         <template v-else>
           <div class="logo-text-language">
             <span>{{ l2.name.toUpperCase() }}</span>
           </div>
-          <div class="logo-text-zth">ZERO TO HERO</div>
+          <div class="logo-text-zth"><span v-if="!compact">ZERO TO HERO</span><span v-else>&nbsp;</span></div>
         </template>
       </div>
     </div>
@@ -36,7 +36,7 @@
 import Config from '@/lib/config'
 
 export default {
-  props: ['l1', 'l2'],
+  props: ['l1', 'l2', 'compact'],
   data() {
     return {
       Config
