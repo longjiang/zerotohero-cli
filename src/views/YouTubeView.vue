@@ -134,7 +134,7 @@ export default {
     seekYouTube(starttime) {
       this.$refs.youtube.seek(starttime)
     },
-    getVideoDetails() {
+    async getVideoDetails() {
       this.title = undefined
       this.channel = undefined
       Helper.scrape(`https://www.youtube.com/watch?v=${this.args}`, $html => {

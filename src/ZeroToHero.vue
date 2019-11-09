@@ -93,6 +93,7 @@ export default {
       hidePinyinExceptSaved:
         localStorage.getItem('zthHidePinyinExceptSaved') === 'true',
       useTraditional: localStorage.getItem('zthUseTraditional') === 'true',
+      showTranslation: localStorage.getItem('zthShowTranslation') === 'false' ? false : true
     }
   },
   methods: {
@@ -104,6 +105,7 @@ export default {
         'show-simplified': !this.useTraditional,
         'show-traditional': this.useTraditional,
         'show-definition': this.showDefinition,
+        'show-translation': this.showTranslation
       }
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
@@ -146,6 +148,9 @@ export default {
       this.updateClasses()
     },
     useTraditional() {
+      this.updateClasses()
+    },
+    showTranslation() {
       this.updateClasses()
     },
     async $route() {

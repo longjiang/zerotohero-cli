@@ -133,5 +133,9 @@ export default {
   color: #aaa;
   font-style: italic;
   font-size: 0.8em;
+  display: none;
+}
+.show-translation .transcript-line-l1 {
+  display: inherit;
 }
 </style>

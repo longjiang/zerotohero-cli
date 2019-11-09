@@ -7,7 +7,6 @@
             {{ $t('Settings') }}
           </h1>
           <div v-if="$hasFeature('transliteration')">
-            <h4>{{ $t('Annotation Settings') }}</h4>
             <AnnotationSettings />
           </div>
           <div>
