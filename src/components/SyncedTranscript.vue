@@ -79,19 +79,18 @@ export default {
   },
   watch: {
     currentTime() {
-      for (let lineIndex in this.lines) {
+      for (let lineIndex = this.lines.length - 1; lineIndex >= 0; lineIndex--) {
         let line = this.lines[lineIndex]
         if (
-          parseFloat(line.starttime) < this.currentTime &&
-          this.currentTime <
-            parseFloat(
-              this.lines[Math.min(this.lines.length - 1, lineIndex + 1)].starttime
-            )
+          parseFloat(line.starttime) < this.currentTime + 0.5 // current time marker passed the start time of the line
         ) {
-          if (this.currentLine !== line) {
-            document.getElementById(`transcript-line-${lineIndex}`).scrollIntoView({behavior: 'smooth', block: 'nearest'})
+          if(line.line.trim() !== '') {
+            if (this.currentLine !== line) {
+              document.getElementById(`transcript-line-${lineIndex}`).scrollIntoView({behavior: 'smooth', block: 'nearest'})
+            }
+            this.currentLine = line
+            return
           }
-          this.currentLine = line
         }
       }
     }
