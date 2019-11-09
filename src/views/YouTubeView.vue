@@ -1,9 +1,21 @@
 <template>
-  <div class="youtube-view main pt-5 pb-5">
+  <div class="youtube-view main pt-3 pb-5">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <YouTubeNav class="mb-5" ref="search" />
+          <SimpleSearch
+            class="mb-5"
+            :placeholder="$t('Search YouTube', { l2: $l2.name })"
+            buttonText="Search"
+            :action="
+              url => {
+                location.hash = `#/${$l1.code}/${
+                  $l2.code
+                }/youtube/search/${encodeURIComponent(url)}`
+              }
+            "
+            ref="search"
+          />
         </div>
       </div>
       <div class="row">
@@ -45,7 +57,7 @@
             </b-dropdown>
           </template>
           <hr class="mt-3" />
-          <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-5" />
+          <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-4" />
         </div>
       </div>
     </div>

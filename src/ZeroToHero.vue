@@ -110,6 +110,16 @@ export default {
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
     },
+    updateFavicon() {
+      var link = document.querySelector("link[rel*='icon']") || document.createElement('link')
+      link.type = 'image/x-icon'
+      link.rel = 'shortcut icon'
+      link.href = `/img/logo-square/${this.$l2.code}.jpeg`
+      document.getElementsByTagName('head')[0].appendChild(link)
+    },
+    updateTitle() {
+      document.title = document.title.replace('| Zero to Hero', `| ${this.$l2.name} Zero to Hero`).replace(/^Zero to Hero/, `${this.$l2.name} Zero to Hero`)
+    },
     async setL1() {
       Vue.prototype.$l1 = this.$languages.getSmart(this.$route.params.l1)
       this.$i18n.locale = this.$l1.code
@@ -166,6 +176,8 @@ export default {
           await this.setL1()
           await this.setL2()
           this.updateClasses()
+          this.updateFavicon()
+          this.updateTitle()
           Vue.prototype.$hasFeature = feature => {
             return this.$languages
               .getFeatures({
