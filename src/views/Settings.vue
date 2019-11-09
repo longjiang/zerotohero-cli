@@ -6,9 +6,7 @@
           <h1 class="page-title mb-4">
             {{ $t('Settings') }}
           </h1>
-          <div v-if="$hasFeature('transliteration')">
-            <AnnotationSettings />
-          </div>
+          <AnnotationSettings />
           <div>
             <h4>{{ $t('Text Corpus Settings') }}</h4>
             <p v-if="$l1.code === 'zh'">

@@ -1,26 +1,34 @@
 <template>
   <div>
     <div class="mt-3">
+      <template v-if="$hasFeature('transliteration')">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="show-pinyin" v-model="showPinyin" />
+          <label for="show-pinyin">
+            Show
+            <span v-if="$l2.code === 'zh'">pinyin</span>
+            <span v-if="$l2.code === 'ja'">furigana</span>
+            <span v-else>romanization</span>
+            above words
+          </label>
+        </div>
+        <div class="form-check" v-if="$hasFeature('dictionary')">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="show-definition"
+            v-model="showDefinition"
+          />
+          <label for="show-definition">Show definition above words</label>
+        </div>
+      </template>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="show-pinyin" v-model="showPinyin" />
-        <label for="show-pinyin">Show 
-          <span v-if="$l2.code === 'zh'">pinyin</span>
-          <span v-if="$l2.code === 'ja'">furigana</span>
-          <span v-else>romanization</span>
-          above words
-        </label>
-      </div>
-      <div class="form-check" v-if="$hasFeature('dictionary')">
         <input
           type="checkbox"
           class="form-check-input"
-          id="show-definition"
-          v-model="showDefinition"
+          id="show-translation"
+          v-model="showTranslation"
         />
-        <label for="show-definition">Show definition above words</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="show-translation" v-model="showTranslation" />
         <label for="show-translation">Show translation</label>
       </div>
       <div class="form-check" v-if="['zh', 'yue'].includes($l2.code)">
@@ -70,7 +78,9 @@
           >Лорем ипсум долор сит амет, вим еи цаусае импетус, не стет тамяуам про, пер цу ерант тхеопхрастус. Ех вих аутем албуциус ментитум, ад дицит елигенди оффициис иус. Еним лабитур оффендит сед цу, апериам цонсулату продессет нец еа, нулла зрил виртуте цу пер. Еа посидониум детерруиссет вих, вих не партем деленит импердиет. Меа ат харум чоро, деленит фабеллас сит ет, нонумы алтера иисяуе еам ет. Еам еи нисл виртуте.</div>
         </div>
       </Annotate>
-      <div class="text-left translated-line">Translation text is shown. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      <div
+        class="text-left translated-line"
+      >Translation text is shown. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
     </div>
   </div>
 </template>
@@ -80,7 +90,8 @@ export default {
   data() {
     return {
       showDefinition: localStorage.getItem('zthShowDefinition') === 'true',
-      showTranslation: localStorage.getItem('zthShowTranslation') === 'false' ? false : true,
+      showTranslation:
+        localStorage.getItem('zthShowTranslation') === 'false' ? false : true,
       showPinyin:
         localStorage.getItem('zthHidePinyinExceptSaved') === 'true'
           ? false
@@ -102,22 +113,22 @@ export default {
       this.$parent.$parent.useTraditional = this.useTraditional === 'true'
     },
     showTranslation() {
-      localStorage.setItem('zthShowTranslation', this.showTranslation === 'true')
+      localStorage.setItem('zthShowTranslation', this.showTranslation)
       this.$parent.$parent.showTranslation = this.showTranslation
     }
   }
 }
 </script>
 <style>
-  .translated-line {
-    color: #aaa;
-    font-style: italic;
-    font-size: 0.8em;
-  }
-  .translated-line {
-    display: none;
-  }
-  .show-translation .translated-line {
-    display: inherit;
-  }
+.translated-line {
+  color: #aaa;
+  font-style: italic;
+  font-size: 0.8em;
+}
+.translated-line {
+  display: none;
+}
+.show-translation .translated-line {
+  display: inherit;
+}
 </style>
