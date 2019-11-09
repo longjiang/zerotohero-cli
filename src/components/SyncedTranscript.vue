@@ -10,6 +10,7 @@
     >
       <div
         v-for="(line, lineIndex) in lines"
+        v-if="line.line.trim() !== ''"
         :key="lineIndex"
         :class="{
           'transcript-line': true,
@@ -35,7 +36,9 @@
             'text-right': $l2.scripts && $l2.scripts.length > 0 && $l2.scripts[0].direction === 'rtl'
           }"
         >
-          <span v-if="parallellines[lineIndex]" v-html="parallellines[lineIndex].line" />
+          <template v-for="parallelLine in parallellines.filter(l => l.starttime === line.starttime)">
+            <span v-html="parallelLine.line" />
+          </template>
         </div>
       </div>
     </div>
