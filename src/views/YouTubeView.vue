@@ -94,6 +94,7 @@ import SyncedTranscript from '@/components/SyncedTranscript'
 import YouTubeNav from '@/components/YouTubeNav'
 import YouTubeChannelCard from '@/components/YouTubeChannelCard'
 import SimpleSearch from '@/components/SimpleSearch'
+import YouTube from '@/lib/youtube'
 import Helper from '@/lib/helper'
 import Config from '@/lib/config'
 
@@ -137,18 +138,13 @@ export default {
     async getVideoDetails() {
       this.title = undefined
       this.channel = undefined
-      Helper.scrape(`https://www.youtube.com/watch?v=${this.args}`, $html => {
-        this.title = $html.find('#eow-title').attr('title')
-        this.channel = {
-          id: $html.find('meta[itemprop="channelId"]').attr('content'),
-          avatar: $html.find('#watch7-user-header img').attr('data-thumb'),
-          title: $html
-            .find('#watch7-user-header .yt-uix-sessionlink')
-            .text()
-            .trim()
-        }
+      let video = await YouTube.videoByApi(this.args)
+      console.log(video)
+      if (video) {
+        this.title = video.title
+        this.channel = video.channel
         document.title = `${this.title} | ${this.channel.title}`
-      })
+      }
     },
     async getL2Transcript() {
       const promises = []

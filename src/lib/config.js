@@ -15,6 +15,8 @@ export default {
   imageProxy: dictionaryServer + 'image.php',
   listPhotos: dictionaryServer + 'list-photos.php',
   savePhoto: dictionaryServer + 'save-photo.php',
+  youtubeVideo: dictionaryServer + 'youtube-video.php',
+  youtubePlaylist: dictionaryServer + 'youtube-playlist.php',
   imageUrl: dictionaryServer + 'img/words/',
   animatedSvgUrl: dictionaryServer + 'data/svgs/',
   lrcSearch: lrcServer + 'lrc/search/',

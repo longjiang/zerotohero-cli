@@ -130,11 +130,33 @@ export default {
       data: item
     }
   },
+  videoByApi(id, cacheLife = -1) {
+    return new Promise(resolve => {
+      $.getJSON(
+        `${Config.youtubeVideo}?id=${id}&cache_life=${cacheLife}`
+      ).then(response => {
+        let video = false
+        if (response.data.items && response.data.items.length > 0) {
+          video = response.data.items.map(item => {
+            return {
+              id: id,
+              title: item.snippet.title,
+              channel: {
+                title: item.snippet.channelTitle,
+                id: item.snippet.channelId
+              }
+            }
+          })[0]
+        }
+        resolve(video)
+      })
+    })
+  },
   channelPlayListsByAPI(channelID, cacheLife = -1) {
 
     return new Promise(resolve => {
       $.getJSON(
-        `https://server.chinesezerotohero.com/youtube-playlist.php?channel=${channelID}&cache_life=${cacheLife}`
+        `${Config.youtubePlaylist}?channel=${channelID}&cache_life=${cacheLife}`
       ).then(response => {
 
         let playlists = []
