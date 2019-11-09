@@ -27,17 +27,15 @@
           </h3>
           <template v-if="!loading && hasSubtitles">
             <b-button v-if="!saved" @click="save">Save video</b-button>
-            <b-button-group v-if="saved">
-              <b-button >
-                <i class="fa fa-check mr-2"></i>Saved
-              </b-button>
-              <b-button variant="danger" @click="remove"><i class="fas fa-trash-alt"></i></b-button>
-            </b-button-group>
+            <b-button v-else variant="success">
+              <i class="fa fa-check mr-2"></i>Saved
+            </b-button>
           </template>
           <template v-if="saved">
             <b-dropdown
               id="dropdown-1"
               :text="saved.topic ? topics[saved.topic] : 'Choose topic'"
+              :variant="saved.topic ? 'success' : undefined"
               class="ml-1"
             >
               <b-dropdown-item
@@ -47,7 +45,8 @@
             </b-dropdown>
             <b-dropdown
               id="dropdown-1"
-              :text="saved.level ? levels[saved.level] : 'Choose level'"
+              :text="saved.level ? levels[saved.level] : 'Level'"
+              :variant="saved.level ? 'success' : undefined"
               class="ml-1"
             >
               <b-dropdown-item
@@ -55,6 +54,7 @@
                 @click="changeLevel(slug)"
               >{{ title }}</b-dropdown-item>
             </b-dropdown>
+            <b-button variant="danger" @click="remove" class="ml-1"><i class="fas fa-trash-alt"></i></b-button>
           </template>
           <hr class="mt-3" />
           <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-4" />

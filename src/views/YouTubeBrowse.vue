@@ -20,7 +20,7 @@
     <div class="row mt-5">
       <div class="col-sm-12 col-md-8 col-lg-9 pr-4 mb-5">
         <template v-if="videos && videos.length > 0">
-          <h4 class="mb-4 text-center">{{ videos.length }} {{ topic === 'all' ? $t('New') : ''}} {{ $t('Videos') }}</h4>
+          <h4 class="mb-4 text-center">{{ Math.min(videos.length, 100) }}{{ videos.length > 100 ? '+' : '' }} {{ topic === 'all' ? $t('New') : ''}} {{ $t('Videos') }}</h4>
           <YouTubeVideoList :videos="videos" />
         </template>
         <template v-if="channels && channels.length > 0">
@@ -125,9 +125,6 @@ export default {
       }
       if (this.level !== 'all') {
         filters += '&filter[level][eq]=' + this.level
-      }
-      if (this.level === 'all' && this.topic === 'all'){
-        filters += '&filter[topic][null]'
       }
       let response = await $.getJSON(
         `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}${filters}`
