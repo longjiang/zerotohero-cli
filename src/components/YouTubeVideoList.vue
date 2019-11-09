@@ -7,14 +7,15 @@
       'shadow': true,
       'nosubs': (!video.checkingSubs) && (!video.hasSubs)
       }">
-      <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.id}`" class="youtube-link">
+      <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id || video.id}`" class="youtube-link">
         <div class="youtube-thumbnail-wrapper aspect-wrapper">
-          <img :src="video.thumbnail || `//img.youtube.com/vi/${video.id}/hqdefault.jpg`" class="youtube-thumbnail aspect" />
+          <img :src="video.thumbnail || `//img.youtube.com/vi/${video.youtube_id || video.id}/hqdefault.jpg`" class="youtube-thumbnail aspect" />
         </div>
         <div class="media-body">
           <div class="youtube-title">{{ video.title }}</div>
           <div v-if="video.hasSubs" class="btn btn-small bg-success text-white mt-2">{{ $l2.name }} CC</div>
           <div v-if="(video.checkingSubs === false) && (video.hasSubs === false)" class="btn btn-small text-white bg-dark mt-2">No {{ $l2.name }} CC</div>
+          <div v-if="video.youtube_id && !video.topic" class="btn btn-small text-white bg-danger mt-2">Uncategorized</div>
         </div>
       </a>
     </div>

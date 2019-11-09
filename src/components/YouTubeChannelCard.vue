@@ -1,9 +1,9 @@
 <template>
   <a :href="`#/${$l1.code}/${$l2.code}/youtube/channel/${channel.id}`" class="link-unstyled channel">
-    <img :src="channel.avatar" class="channel-avatar" alt />
+    <img v-if="channel.avatar" :src="channel.avatar" class="channel-avatar" alt />
     <div class="channel-body">
       <h6>
-        <Annotate><span>{{ channel.title }}</span></Annotate>
+        Channel: <Annotate><span>{{ channel.title }}</span></Annotate>
       </h6>
       <Annotate v-if="channel.description"><div>{{ channel.description }}</div></Annotate>
     </div>

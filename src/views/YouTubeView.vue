@@ -14,10 +14,32 @@
             </Annotate>
           </h3>
           <template v-if="!loading && hasSubtitles">
-            <button class="btn btn-default" v-if="saved.length === 0" @click="save">Save video</button>
-            <div class="btn btn-default" v-if="saved.length > 0">
+            <b-button v-if="!saved" @click="save">Save video</b-button>
+            <b-button v-if="saved">
               <i class="fa fa-check mr-2"></i>Saved
-            </div>
+            </b-button>
+          </template>
+          <template v-if="saved">
+            <b-dropdown
+              id="dropdown-1"
+              :text="saved.topic ? topics[saved.topic] : 'Choose topic'"
+              class="ml-1"
+            >
+              <b-dropdown-item
+                v-for="(title, slug) in topics"
+                @click="changeTopic(slug)"
+              >{{ title }}</b-dropdown-item>
+            </b-dropdown>
+            <b-dropdown
+              id="dropdown-1"
+              :text="saved.level ? levels[saved.level] : 'Choose level'"
+              class="ml-1"
+            >
+              <b-dropdown-item
+                v-for="(title, slug) in levels"
+                @click="changeLevel(slug)"
+              >{{ title }}</b-dropdown-item>
+            </b-dropdown>
           </template>
           <hr class="mt-3" />
           <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-5" />
@@ -128,7 +150,9 @@ export default {
       hasSubtitles: false,
       loading: true,
       l2Locale: undefined,
-      saved: []
+      saved: undefined,
+      levels: Helper.levels(this.$l2),
+      topics: Helper.topics
     }
   },
   methods: {
@@ -139,7 +163,6 @@ export default {
       this.title = undefined
       this.channel = undefined
       let video = await YouTube.videoByApi(this.args)
-      console.log(video)
       if (video) {
         this.title = video.title
         this.channel = video.channel
@@ -173,18 +196,13 @@ export default {
       let values = await Promise.all(promises)
     },
     async save() {
-      let success = await $.post(`${Config.wiki}items/youtube_videos`, {
+      let response = await $.post(`${Config.wiki}items/youtube_videos`, {
         youtube_id: this.args,
         title: this.title,
         l2: this.$l2.id
       })
-      if (success) {
-        this.saved = [
-          {
-            id: success.data.youtube_id,
-            title: success.data.title
-          }
-        ]
+      if (response) {
+        this.saved = response.data
       }
     },
     async getL1Transcript() {
@@ -214,15 +232,47 @@ export default {
       this.loading = false
     },
     async getSaved() {
-      this.saved = []
-      this.saved = (await $.getJSON(
+      this.saved = undefined
+      let response = await $.getJSON(
         `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}`
-      )).data.map(video => {
-        return {
-          id: video.youtube_id,
-          title: video.title
+      )
+      if (response && response.data && response.data.length > 0) {
+        this.saved = response.data[0]
+      }
+    },
+    async changeTopic(slug) {
+      let response = await $.ajax({
+        url: `${Config.wiki}items/youtube_videos/${this.saved.id}`,
+        data: JSON.stringify({ topic: slug }),
+        type: 'PATCH',
+        contentType: 'application/json',
+        xhr: function() {
+          return window.XMLHttpRequest == null ||
+            new window.XMLHttpRequest().addEventListener == null
+            ? new window.ActiveXObject('Microsoft.XMLHTTP')
+            : $.ajaxSettings.xhr()
         }
       })
+      if (response && response.data) {
+        this.saved = response.data
+      }
+    },
+    async changeLevel(slug) {
+      let response = await $.ajax({
+        url: `${Config.wiki}items/youtube_videos/${this.saved.id}`,
+        data: JSON.stringify({ level: slug }),
+        type: 'PATCH',
+        contentType: 'application/json',
+        xhr: function() {
+          return window.XMLHttpRequest == null ||
+            new window.XMLHttpRequest().addEventListener == null
+            ? new window.ActiveXObject('Microsoft.XMLHTTP')
+            : $.ajaxSettings.xhr()
+        }
+      })
+      if (response && response.data && response.data.length > 0) {
+        this.saved = response.data
+      }
     }
   },
   mounted() {

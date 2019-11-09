@@ -471,7 +471,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/youtube/browse/:args?',
+      path: '/:l1/:l2/youtube/browse/:topic?/:level?',
       name: 'youtube-browse',
       component: () => import('./views/YouTubeBrowse.vue'),
       props: true,

@@ -22,26 +22,60 @@ export default {
   },
   loaderMessages: [],
   lastId: 0,
-  level(level, l2 = undefined) {
-    let levels = l2 && l2.code === 'zh' ? {
-      1: 'HSK 1',
-      2: 'HSK 2',
-      3: 'HSK 3',
-      4: 'HSK 4',
-      5: 'HSK 5',
-      6: 'HSK 6',
-      7: 'C2',
-      all: 'Any',
-    } : {
-      1: 'Pre-A1',
-      2: 'A1',
-      3: 'A2',
-      4: 'B1',
-      5: 'B2',
-      6: 'C1',
-      7: 'C2',
-      all: 'Any'
+  topics: {
+    animation: 'Animation',
+    art: 'Art',
+    engineering: 'Engineering',
+    education: 'Education',
+    entertainment: 'Entertainment',
+    food: 'Food',
+    geography: 'Geography',
+    history: 'History',
+    kids: 'Kids',
+    language: 'Language',
+    literature: 'Literature',
+    music: 'Music',
+    news: 'News',
+    religion: 'Religion',
+    science: 'Science',
+    society: 'Society'
+  },
+  levels(l2 = undefined) {
+    if(l2 && l2.code === 'zh') {
+      return {
+        1: 'HSK 1',
+        2: 'HSK 2',
+        3: 'HSK 3',
+        4: 'HSK 4',
+        5: 'HSK 5',
+        6: 'HSK 6',
+        7: 'C2'
+      }
+    } else if (l2 && l2.code === 'ja') {
+      return {
+        1: 'Pre-N5',
+        2: 'N5',
+        3: 'N4',
+        4: 'N3',
+        5: 'N2',
+        6: 'N1',
+        7: 'C2'
+      }
+    } else {
+      return {
+        1: 'Pre-A1',
+        2: 'A1',
+        3: 'A2',
+        4: 'B1',
+        5: 'B2',
+        6: 'C1',
+        7: 'C2',
+        all: 'Any'
+      }
     }
+  },
+  level(level, l2 = undefined) {
+    let levels = this.levels(l2)
     return levels[level]
   },
   unescape(html) {
