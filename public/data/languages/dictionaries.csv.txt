@@ -95,7 +95,7 @@ ina,eng,wiktionary
 ind,eng,wiktionary
 isl,eng,freedict
 ita,eng,wiktionary
-jav ,eng,wiktionary
+jav,eng,wiktionary
 jpn,eng,edict
 kal,eng,wiktionary
 kan,eng,wiktionary
