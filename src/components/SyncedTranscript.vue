@@ -1,8 +1,8 @@
 <template>
   <div class="synced-transcript">
     <div
+      id="transcript"
       :class="{
-        transcript: true,
         'mb-4': true,
         collapsed: collapse
       }"
@@ -14,14 +14,10 @@
         :class="{
           'transcript-line': true,
           matched: highlight && line & line.line.includes(highlight),
-          'transcript-line-current':
-            parseFloat(line.starttime) < currentTime &&
-            currentTime <
-              parseFloat(
-                lines[Math.min(lines.length - 1, lineIndex + 1)].starttime
-              )
+          'transcript-line-current': currentLine === line
         }"
         v-on:click="sock(line.starttime)"
+        :id="`transcript-line-${lineIndex}`"
       >
         <Annotate tag="div" class="transcript-line-chinese">
           <span
@@ -74,7 +70,27 @@ export default {
   data() {
     return {
       Helper,
-      currentTime: 0
+      currentTime: 0,
+      currentLine: this.lines ? this.lines[0] : undefined
+    }
+  },
+  watch: {
+    currentTime() {
+      for (let lineIndex in this.lines) {
+        let line = this.lines[lineIndex]
+        if (
+          parseFloat(line.starttime) < this.currentTime &&
+          this.currentTime <
+            parseFloat(
+              this.lines[Math.min(this.lines.length - 1, lineIndex + 1)].starttime
+            )
+        ) {
+          if (this.currentLine !== line) {
+            document.getElementById(`transcript-line-${lineIndex}`).scrollIntoView({behavior: 'smooth', block: 'nearest'})
+          }
+          this.currentLine = line
+        }
+      }
     }
   },
   methods: {
