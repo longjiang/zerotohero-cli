@@ -16,7 +16,6 @@ fr,fr-BE
 fr,fr-CA
 fr,fr-CH
 fr,fr-FR
-fy,fy-NL
 hak,zh-CN
 hak,zh-TW
 hak,hak-TW
