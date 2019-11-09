@@ -15,9 +15,12 @@
           </h3>
           <template v-if="!loading && hasSubtitles">
             <b-button v-if="!saved" @click="save">Save video</b-button>
-            <b-button v-if="saved">
-              <i class="fa fa-check mr-2"></i>Saved
-            </b-button>
+            <b-button-group v-if="saved">
+              <b-button >
+                <i class="fa fa-check mr-2"></i>Saved
+              </b-button>
+              <b-button variant="danger" @click="remove"><i class="fas fa-trash-alt"></i></b-button>
+            </b-button-group>
           </template>
           <template v-if="saved">
             <b-dropdown
@@ -40,7 +43,6 @@
                 @click="changeLevel(slug)"
               >{{ title }}</b-dropdown-item>
             </b-dropdown>
-            <b-button variant="danger" @click="remove" class="ml-1"><i class="fas fa-trash-alt"></i></b-button>
           </template>
           <hr class="mt-3" />
           <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-5" />
@@ -241,6 +243,23 @@ export default {
         this.saved = response.data[0]
       }
     },
+    async changeLevel(slug) {
+      let response = await $.ajax({
+        url: `${Config.wiki}items/youtube_videos/${this.saved.id}`,
+        data: JSON.stringify({ level: slug }),
+        type: 'PATCH',
+        contentType: 'application/json',
+        xhr: function() {
+          return window.XMLHttpRequest == null ||
+            new window.XMLHttpRequest().addEventListener == null
+            ? new window.ActiveXObject('Microsoft.XMLHTTP')
+            : $.ajaxSettings.xhr()
+        }
+      })
+      if (response && response.data) {
+        this.saved = response.data
+      }
+    },
     async changeTopic(slug) {
       let response = await $.ajax({
         url: `${Config.wiki}items/youtube_videos/${this.saved.id}`,
@@ -272,23 +291,6 @@ export default {
       })
       if (response) {
         this.saved = undefined
-      }
-    },
-    async changeLevel(slug) {
-      let response = await $.ajax({
-        url: `${Config.wiki}items/youtube_videos/${this.saved.id}`,
-        data: JSON.stringify({ level: slug }),
-        type: 'PATCH',
-        contentType: 'application/json',
-        xhr: function() {
-          return window.XMLHttpRequest == null ||
-            new window.XMLHttpRequest().addEventListener == null
-            ? new window.ActiveXObject('Microsoft.XMLHTTP')
-            : $.ajaxSettings.xhr()
-        }
-      })
-      if (response && response.data && response.data.length > 0) {
-        this.saved = response.data
       }
     }
   },

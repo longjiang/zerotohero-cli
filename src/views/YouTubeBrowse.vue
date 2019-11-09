@@ -20,11 +20,11 @@
     <div class="row mt-5">
       <div class="col-sm-12 col-md-8 col-lg-9 pr-4 mb-5">
         <template v-if="videos && videos.length > 0">
-          <h4 class="mb-5 text-center">{{ videos.length }} {{ $t('Recommended Videos') }}</h4>
+          <h4 class="mb-4 text-center">{{ videos.length }} {{ topic === 'all' ? $t('New') : ''}} {{ $t('Videos') }}</h4>
           <YouTubeVideoList :videos="videos" />
         </template>
         <template v-if="channels && channels.length > 0">
-          <h4 class="mt-5 mb-5 text-center">{{ channels.length }} {{ $t('Recommended Channels') }}</h4>
+          <h4 class="mt-5 mb-4 text-center">{{ channels.length }} {{ $t('Channels') }}</h4>
           <ul class="list-unstyled p-0 mb-5 cards">
             <li v-for="channel in channels" class="p-4 mb-4 card">
               <YouTubeChannelCard :channel="channel" />
@@ -33,7 +33,7 @@
         </template>
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3">
-        <h6 class="text-center mb-4">Topic</h6>
+        <h4 class="text-center mb-4">Topics</h4>
         <div class="list-group">
           <a
             :class="{
@@ -52,7 +52,7 @@
                 'list-group-item-action': topicValue === topic,
                 active: topicValue === topic
               }"
-            :href="`#/${$l1.code}/${$l2.code}/youtube/browse/${topicValue}/${level}`"
+            :href="`#/${$l1.code}/${$l2.code}/youtube/browse/${topicValue}/all`"
           >{{ topicName }}</a>
         </div>
         <h6 class="mt-4 mb-4 text-center">Level</h6>
@@ -74,7 +74,7 @@
                 'list-group-item-action': levelValue === level,
                 active: levelValue === level
               }"
-            :href="`#/${$l1.code}/${$l2.code}/youtube/browse/${topic}/${levelValue}`"
+            :href="`#/${$l1.code}/${$l2.code}/youtube/browse/all/${levelValue}`"
           >{{ levelName }}</a>
         </div>
       </div>
@@ -126,11 +126,14 @@ export default {
       if (this.level !== 'all') {
         filters += '&filter[level][eq]=' + this.level
       }
+      if (this.level === 'all' && this.topic === 'all'){
+        filters += '&filter[topic][null]'
+      }
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[l2][eq]=${this.$l2.id}${filters}`
+        `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}${filters}`
       )
       let videos = response.data || []
-      this.videos = Helper.uniqueByValue(videos, 'id').reverse()
+      this.videos = Helper.uniqueByValue(videos, 'youtube_id')
     },
     async getChannels() {
       let response = await $.getJSON(
@@ -145,7 +148,7 @@ export default {
             description: channel.description
           }
         })
-        channels = Helper.uniqueByValue(channels, 'id')
+        channels = Helper.uniqueByValue(channels, 'youtube_id')
         this.channels = channels
       }
     },
