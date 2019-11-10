@@ -323,17 +323,23 @@ export default {
         this.saved = undefined
       }
     },
-    bindSpacebar() {
+    bindKeys() {
       window.onkeydown = e => {
-        if (e.keyCode == 32) {
-          // e.stopPropagation()
-          // e.preventDefault()
+        if (e.keyCode == 32) { // Spacebar
           this.$refs.youtube.togglePaused()
+          return false
+        }
+        if (e.keyCode == 38) { // Up arrow
+          this.$refs.transcript.previousLine()
+          return false
+        }
+        if (e.keyCode == 40) { // Down arrow
+          this.$refs.transcript.nextLine()
           return false
         }
       }
     },
-    unbindSpacebar() {
+    unbindKeys() {
       window.onkeydown = null
     }
   },
@@ -351,10 +357,10 @@ export default {
     }, 1000)
   },
   activated() {
-    this.bindSpacebar()
+    this.bindKeys()
   },
   deactivated() {
-    this.unbindSpacebar()
+    this.unbindKeys()
   }
 }
 </script>

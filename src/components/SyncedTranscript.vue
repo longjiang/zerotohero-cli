@@ -16,7 +16,7 @@
           matched: highlight && line & line.line.includes(highlight),
           'transcript-line-current': currentLine === line
         }"
-        v-on:click="sock(line.starttime)"
+        @click="seekVideoTo(line.starttime)"
         :id="`transcript-line-${lineIndex}`"
       >
         <Annotate tag="div" class="transcript-line-chinese">
@@ -84,8 +84,7 @@ export default {
           parseFloat(line.starttime) < this.currentTime + 0.5 // current time marker passed the start time of the line
         ) {
           if (this.currentLine !== line) {
-            let el = document.getElementById(`transcript-line-${lineIndex}`)
-            if (el) el.scrollIntoView({behavior: 'smooth', block: 'nearest'})
+            this.scrollTo(lineIndex)
           }
           this.currentLine = line
           return
@@ -94,10 +93,28 @@ export default {
     }
   },
   methods: {
-    sock(starttime) {
+    seekVideoTo(starttime) {
       if (this.onSeek) {
         this.onSeek(starttime)
       }
+    },
+    scrollTo(lineIndex) {
+      let el = document.getElementById(`transcript-line-${lineIndex}`)
+      if (el) el.scrollIntoView({behavior: 'smooth', block: 'nearest'})
+    },
+    previousLine() {
+      let currentLineIndex = this.lines.findIndex(line => line === this.currentLine)
+      let previousLineIndex = Math.max(currentLineIndex - 1, 0)
+      this.currentLine = this.lines[previousLineIndex]
+      this.seekVideoTo(this.currentLine.starttime)
+      this.scrollTo(previousLineIndex)
+    },
+    nextLine() {
+      let currentLineIndex = this.lines.findIndex(line => line === this.currentLine)
+      let nextLineIndex = Math.min(currentLineIndex + 1, this.lines.length - 1)
+      this.currentLine = this.lines[nextLineIndex]
+      this.seekVideoTo(this.currentLine.starttime)
+      this.scrollTo(nextLineIndex)
     }
   }
 }
