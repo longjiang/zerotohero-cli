@@ -41,7 +41,8 @@
               <b-dropdown-item
                 v-for="(title, slug) in topics"
                 @click="changeTopic(slug)"
-              >{{ title }}</b-dropdown-item>
+                >{{ title }}</b-dropdown-item
+              >
             </b-dropdown>
             <b-dropdown
               id="dropdown-1"
@@ -52,9 +53,12 @@
               <b-dropdown-item
                 v-for="(title, slug) in levels"
                 @click="changeLevel(slug)"
-              >{{ title }}</b-dropdown-item>
+                >{{ title }}</b-dropdown-item
+              >
             </b-dropdown>
-            <b-button variant="danger" @click="remove" class="ml-1"><i class="fas fa-trash-alt"></i></b-button>
+            <b-button variant="danger" @click="remove" class="ml-1"
+              ><i class="fas fa-trash-alt"></i
+            ></b-button>
           </template>
           <hr class="mt-3" />
           <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-4" />
@@ -79,23 +83,29 @@
             :parallellines="this.l1Lines"
             v-else-if="!loading && hasSubtitles"
           />
-          <div v-else-if="!loading && !hasSubtitles" class="jumbotron pt-4 pb-3 bg-light">
-            <h6>Sorry, this YouTube video does not have {{ $l2.name }} closed captions.</h6>
+          <div
+            v-else-if="!loading && !hasSubtitles"
+            class="jumbotron pt-4 pb-3 bg-light"
+          >
+            <h6>
+              Sorry, this YouTube video does not have {{ $l2.name }} closed
+              captions.
+            </h6>
             <p>
               You can tell if a YouTube video has closed captions by clicking on
               the
               <b>CC</b> icon in the player bar, and click on the
-              <i class="fas fa-cog"></i>next to it. If you can find the
-              subtitle with the language
+              <i class="fas fa-cog"></i>next to it. If you can find the subtitle
+              with the language
               <b>{{ $l2.name }}</b>
               then the video has {{ $l2.name }}
               subtitles.
             </p>
             <p>
-              To look for videos with t{{ $l2.name }} subtitles, search with a {{ $l2.name }}
+              To look for videos with t{{ $l2.name }} subtitles, search with a
+              {{ $l2.name }}
               keyword, and click
-              <b>Filter</b>, then
-              <b>CC</b>.
+              <b>Filter</b>, then <b>CC</b>.
             </p>
           </div>
         </div>
@@ -104,21 +114,28 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h4 class="mt-5 mb-4">{{ $t('Search for more videos on YouTube') }}</h4>
+          <h4 class="mt-5 mb-4">
+            {{ $t('Search for more videos on YouTube') }}
+          </h4>
           <SimpleSearch
             class="mb-3"
-            :placeholder="$t('Enter a search term in {l2}...', { l2: $l2.name })"
+            :placeholder="
+              $t('Enter a search term in {l2}...', { l2: $l2.name })
+            "
             buttonText="Search"
             :action="
-            url => {
-              location.hash = `#/${$l1.code}/${
-                $l2.code
-              }/youtube/search/${encodeURIComponent(url)}`
-            }
-          "
+              url => {
+                location.hash = `#/${$l1.code}/${
+                  $l2.code
+                }/youtube/search/${encodeURIComponent(url)}`
+              }
+            "
             ref="search"
           />
-          <p class="mb-5">We will try our best to find YouTube videos with {{ $l2.name }} subtitles.</p>
+          <p class="mb-5">
+            We will try our best to find YouTube videos with
+            {{ $l2.name }} subtitles.
+          </p>
         </div>
       </div>
     </div>
@@ -128,7 +145,6 @@
 <script>
 import YouTubeVideo from '@/components/YouTubeVideo'
 import SyncedTranscript from '@/components/SyncedTranscript'
-import YouTubeNav from '@/components/YouTubeNav'
 import YouTubeChannelCard from '@/components/YouTubeChannelCard'
 import SimpleSearch from '@/components/SimpleSearch'
 import YouTube from '@/lib/youtube'
@@ -138,7 +154,6 @@ import Config from '@/lib/config'
 export default {
   components: {
     SimpleSearch,
-    YouTubeNav,
     YouTubeVideo,
     YouTubeChannelCard,
     SyncedTranscript
@@ -304,12 +319,26 @@ export default {
       if (response) {
         this.saved = undefined
       }
+    },
+    bindSpacebar() {
+      window.onkeydown = e => {
+        if (e.keyCode == 32) {
+          // e.stopPropagation()
+          // e.preventDefault()
+          this.$refs.youtube.togglePaused()
+          return false
+        }
+      }
+    },
+    unbindSpacebar() {
+      window.onkeydown = null
     }
   },
   mounted() {
     this.getSaved()
     this.getVideoDetails()
     this.getTranscript()
+    this.bindSpacebar()
     this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
     setInterval(() => {
       if (this.$refs.transcript) {
@@ -318,6 +347,9 @@ export default {
           : 0
       }
     }, 1000)
+  },
+  deactivated() {
+    this.unbindSpacebar()
   }
 }
 </script>

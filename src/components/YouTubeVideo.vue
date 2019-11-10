@@ -93,6 +93,13 @@ export default {
       if (this.player) {
         this.player.seekTo(starttime)
       }
+    },
+    togglePaused() {
+      if (this.player) {
+        this.player.getPlayerState() !== 1 ? this.player.playVideo() : this.player.pauseVideo()
+      } else {
+        this.loadYouTubeiFrame()
+      }
     }
   }
 }

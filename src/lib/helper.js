@@ -69,8 +69,7 @@ export default {
         4: 'B1',
         5: 'B2',
         6: 'C1',
-        7: 'C2',
-        all: 'Any'
+        7: 'C2'
       }
     }
   },

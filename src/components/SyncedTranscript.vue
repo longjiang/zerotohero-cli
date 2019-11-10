@@ -86,7 +86,8 @@ export default {
         ) {
           if(line.line.trim() !== '') {
             if (this.currentLine !== line) {
-              document.getElementById(`transcript-line-${lineIndex}`).scrollIntoView({behavior: 'smooth', block: 'nearest'})
+              let el = document.getElementById(`transcript-line-${lineIndex}`)
+              if (el) el.scrollIntoView({behavior: 'smooth', block: 'nearest'})
             }
             this.currentLine = line
             return

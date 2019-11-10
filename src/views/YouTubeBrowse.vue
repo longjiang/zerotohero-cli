@@ -140,7 +140,7 @@ export default {
         let channels = response.data.map(channel => {
           return {
             id: channel.channel_id,
-            avatar: channel.avatar.data.full_url,
+            avatar: channel.avatar && channel.avatar !== null ? channel.avatar.data.full_url : undefined,
             title: channel.name,
             description: channel.description
           }
