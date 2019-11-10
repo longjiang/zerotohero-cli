@@ -213,13 +213,15 @@ export default {
           ).then($html => {
             if ($html) {
               this.l2Locale = locale
+              let lines = []
               for (let p of $html.find('p')) {
                 let line = {
                   line: $(p).text(),
                   starttime: parseInt($(p).attr('t')) / 1000
                 }
-                this.l2Lines.push(line)
+                lines.push(line)
               }
+              this.l2Lines = lines.filter(line => line.line.trim() !== '')
             }
           })
         )

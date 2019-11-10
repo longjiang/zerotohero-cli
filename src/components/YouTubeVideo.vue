@@ -90,7 +90,7 @@ export default {
       }
     },
     seek(starttime) {
-      if (this.player) {
+      if (this.player && this.player.seekTo) {
         this.player.seekTo(starttime)
       }
     },

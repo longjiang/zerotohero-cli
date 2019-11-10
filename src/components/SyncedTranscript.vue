@@ -10,7 +10,6 @@
     >
       <div
         v-for="(line, lineIndex) in lines"
-        v-if="line.line.trim() !== ''"
         :key="lineIndex"
         :class="{
           'transcript-line': true,
@@ -84,14 +83,12 @@ export default {
         if (
           parseFloat(line.starttime) < this.currentTime + 0.5 // current time marker passed the start time of the line
         ) {
-          if(line.line.trim() !== '') {
-            if (this.currentLine !== line) {
-              let el = document.getElementById(`transcript-line-${lineIndex}`)
-              if (el) el.scrollIntoView({behavior: 'smooth', block: 'nearest'})
-            }
-            this.currentLine = line
-            return
+          if (this.currentLine !== line) {
+            let el = document.getElementById(`transcript-line-${lineIndex}`)
+            if (el) el.scrollIntoView({behavior: 'smooth', block: 'nearest'})
           }
+          this.currentLine = line
+          return
         }
       }
     }
