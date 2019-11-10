@@ -32,8 +32,6 @@ sr,sr-Latn
 zh,zh-Hans
 zh,zh-Hant
 zh,zh-CN
-zh,zh-MO
-zh,zh-SG
 zh,zh-TW
 ceb,fil
 ceb,fil-PH
