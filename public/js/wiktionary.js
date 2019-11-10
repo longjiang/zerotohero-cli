@@ -241,10 +241,10 @@ const Dictionary = {
     }
     for (let word of this.words) {
       let head = word.head ? word.head.toLowerCase() : undefined
-      if (head && head.includes(text)) {
+      if (head && head.startsWith(text)) {
         words.push(
           Object.assign(
-            { score: text.length - (head.length - text.length) },
+            { score: text.length - (head.length - text.length)},
             word
           )
         ) // matches 'abcde', 'abcde...'
@@ -253,7 +253,7 @@ const Dictionary = {
         words.push(Object.assign({ score: head.length }, word)) // matches 'cde', 'abc'
       }
       for (let subtext of subtexts) {
-        if (head.includes(subtext)) {
+        if (head && head.includes(subtext)) {
           words.push(
             Object.assign(
               { score: subtext.length - (head.length - subtext.length) },

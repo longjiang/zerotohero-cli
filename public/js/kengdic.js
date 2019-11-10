@@ -14,6 +14,7 @@ const Dictionary = {
           let data = []
           for(let row of sorted) {
             let word = Object.assign(row, {
+              head: row.hangul,
               bare: row.hangul,
               accented: row.hangul,
               definitions: [row.english],
@@ -104,23 +105,53 @@ const Dictionary = {
       let results = this.words.filter(row => row.hanja && row.hanja.includes(text))
       return results
     } else {
+      let words = []
       let subtexts = []
-      for (let i = 1; i < text.length; i++) {
+      for (let i = 1; text.length - i > 0; i++) {
         subtexts.push(text.substring(0, text.length - i))
       }
-      let words = this.words
-        .filter(word => word.hangul && word.hangul.startsWith(text)) // matches 'abcde, abcde...'
-      let moreWords = []
-      for (let subtext of subtexts.slice(0, 3)) {
-        let evenMoreWords = this.words
-        .filter(word => {
-          if(word.hangul && word.hangul.length < text.length + 1 && word.hangul.startsWith(subtext)) {
-            return true // matches 'abcd...', 'abc...'
+      for (let word of this.words) {
+        let head = word.head ? word.head.toLowerCase() : undefined
+        if (head && head === text) {
+          // match 'abcde' exactly
+          words.push(
+            Object.assign(
+              { score: 99999 },
+              word
+            )
+          )
+        } else if (head && head.startsWith(text)) {
+          // match 'abcdejkl', 'abcdexyz', etc
+          words.push(
+            Object.assign(
+              { score: text.length - (head.length - text.length)},
+              word
+            )
+          ) 
+        } else if (head && text.startsWith(head)) {
+          // matches 'abcde', 'abcd', 'abc', etc
+          words.push(Object.assign({ score: head.length + 1 }, word)) 
+        } else if (head && text.includes(head)) {
+          // matches 'abc', 'bcd', 'cde', etc
+          words.push(Object.assign({ score: head.length }, word)) 
+        } else {
+          // matches 'abcdxyz', 'abcxyz', 'abxyz', etc
+          for (let subtext of subtexts) {
+            if (head && head.startsWith(subtext)) {
+              let daBonus = 0
+              if (head.length > 1 && head.endsWith('다')) daBonus++
+              if (head.length > 1 && head.endsWith('하다')) daBonus++
+              words.push(
+                Object.assign(
+                  { score: subtext.length - (head.length - subtext.length) + daBonus },
+                  word
+                )
+              ) 
+            }
           }
-        })
-        moreWords = moreWords.concat(evenMoreWords)
+        }
       }
-      return words.concat(moreWords).slice(0, limit)
+      return words.sort((a,b) => b.score - a.score).slice(0, limit)
     }
   }
 }
