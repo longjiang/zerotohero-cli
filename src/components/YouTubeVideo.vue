@@ -95,7 +95,7 @@ export default {
       }
     },
     togglePaused() {
-      if (this.player) {
+      if (this.player && this.player.getPlayerState) {
         this.player.getPlayerState() !== 1 ? this.player.playVideo() : this.player.pauseVideo()
       } else {
         this.loadYouTubeiFrame()
