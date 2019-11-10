@@ -339,7 +339,6 @@ export default {
     this.getSaved()
     this.getVideoDetails()
     this.getTranscript()
-    this.bindSpacebar()
     this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
     setInterval(() => {
       if (this.$refs.transcript) {
@@ -348,6 +347,9 @@ export default {
           : 0
       }
     }, 1000)
+  },
+  activated() {
+    this.bindSpacebar()
   },
   deactivated() {
     this.unbindSpacebar()
