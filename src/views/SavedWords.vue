@@ -50,7 +50,7 @@
         </p>
         <div>
           <Loader />
-          <WordList :words="sW" :texts="savedTexts"></WordList>
+          <WordList :words="sW"></WordList>
           <a
             v-if="sW.length > 0"
             class="btn btn-warning mt-4 mb-5"
@@ -81,7 +81,6 @@ export default {
       csvText: '',
       showExport: false,
       sW: [],
-      savedTexts: [],
       selectedCsvOptions: ['en', 'definitions'],
       csvOptions: [
         { text: this.$t(this.$l2.name), value: this.$l2.code },
@@ -105,7 +104,6 @@ export default {
   methods: {
     async updateWords() {
       this.sW = []
-      this.savedTexts = []
       if(this.$store.state.savedWords && this.$store.state.savedWords[this.$l2.code]) {
         for (let savedWord of this.$store.state.savedWords[this.$l2.code]) {
           let word = await (await this.$dictionary).get(savedWord.id)

@@ -7,46 +7,75 @@
         collapsed: collapse
       }"
       data-collapse-target
+      :key="reviewKey"
     >
-      <div
-        v-for="(line, lineIndex) in lines"
-        :key="lineIndex"
-        :class="{
-          'transcript-line': true,
-          matched: highlight && line & line.line.includes(highlight),
-          'transcript-line-current': currentLine === line
-        }"
-        @click="seekVideoTo(line.starttime)"
-        :id="`transcript-line-${lineIndex}`"
-      >
-        <Annotate tag="div" class="transcript-line-chinese">
-          <span
-            v-html="
-              highlight
-                ? Helper.highlight(line.line, highlight, hsk)
-                : line.line
-            "
-          />
-        </Annotate>
+      <template v-for="(line, lineIndex) in lines">
         <div
-          v-if="$l2.code !== $l1.code"
+          :key="lineIndex"
           :class="{
-            'transcript-line-l1': true,
-            'text-right': $l2.scripts && $l2.scripts.length > 0 && $l2.scripts[0].direction === 'rtl'
+            'transcript-line': true,
+            matched: highlight && line & line.line.includes(highlight),
+            'transcript-line-current': currentLine === line
           }"
+          @click="seekVideoTo(line.starttime)"
+          :id="`transcript-line-${lineIndex}`"
         >
-          <template v-for="parallelLine in parallellines.filter(l => l.starttime === line.starttime)">
-            <span v-html="parallelLine.line" />
-          </template>
+          <Annotate tag="div" class="transcript-line-chinese">
+            <span
+              v-html="
+                highlight
+                  ? Helper.highlight(line.line, highlight, hsk)
+                  : line.line
+              "
+            />
+          </Annotate>
+          <div
+            v-if="$l2.code !== $l1.code"
+            :class="{
+              'transcript-line-l1': true,
+              'text-right':
+                $l2.scripts &&
+                $l2.scripts.length > 0 &&
+                $l2.scripts[0].direction === 'rtl'
+            }"
+          >
+            <template
+              v-for="parallelLine in parallellines.filter(
+                l => l.starttime === line.starttime
+              )"
+            >
+              <span v-html="parallelLine.line" />
+            </template>
+          </div>
         </div>
-      </div>
+        <div class="review" v-if="review[lineIndex] && review[lineIndex].length > 0">
+          <h6>Pop Quiz</h6>
+          <div class="review-item mt-2" v-for="reviewItem in review[lineIndex]">
+            <Annotate tag="div" class="transcript-line-chinese">
+              <span>{{ reviewItem.line.line.replace(reviewItem.text, '_____') }}</span>
+            </Annotate>
+            <button v-for="answer in reviewItem.answers" :class="{
+              'btn': true,
+              'btn-small': true,
+              'bg-white': true,
+              'mr-2': true,
+              'review-answer': true,
+              'checked': false,
+              'review-answer-correct': answer.correct
+            }" @click="answerClick">{{ answer.text }}</button>
+          </div>
+        </div>
+      </template>
     </div>
-    <ShowMoreButton v-if="collapse" :data-bg-level="hsk ? hsk : 'outside'">Show More</ShowMoreButton>
+    <ShowMoreButton v-if="collapse" :data-bg-level="hsk ? hsk : 'outside'"
+      >Show More</ShowMoreButton
+    >
   </div>
 </template>
 
 <script>
 import Helper from '@/lib/helper'
+import { mapState } from 'vuex'
 
 export default {
   props: {
@@ -69,19 +98,30 @@ export default {
       default: 'outside'
     }
   },
+  computed: mapState(['savedWords']),
   data() {
     return {
+      sW: [],
       Helper,
       currentTime: 0,
-      currentLine: this.lines ? this.lines[0] : undefined
+      currentLine: this.lines ? this.lines[0] : undefined,
+      review: {},
+      reviewKey: 0
     }
   },
+  mounted() {
+    this.updateWords()
+  },
   watch: {
+    savedWords() {
+      this.updateWords()
+    },
     currentTime() {
       for (let lineIndex = this.lines.length - 1; lineIndex >= 0; lineIndex--) {
         let line = this.lines[lineIndex]
         if (
-          parseFloat(line.starttime) < this.currentTime + 0.5 // current time marker passed the start time of the line
+          parseFloat(line.starttime) <
+          this.currentTime + 0.5 // current time marker passed the start time of the line
         ) {
           if (this.currentLine !== line) {
             this.scrollTo(lineIndex)
@@ -93,6 +133,57 @@ export default {
     }
   },
   methods: {
+    answerClick(e) {
+      $(e.target).addClass('checked')
+    },
+    async findSimilar(text) {
+      let words = await (await this.$dictionary).lookupFuzzy(text)
+      words = words.filter(word => word.head !== text)
+      words = Helper.uniqueByValue(words, 'head')
+      return words.map(word => word.head)
+    },
+    async updateWords() {
+      let review = {}
+      let lineOffset = 10 // Show review this number of lines after the first appearance of the word
+      if (
+        this.$store.state.savedWords &&
+        this.$store.state.savedWords[this.$l2.code]
+      ) {
+        for (let savedWord of this.$store.state.savedWords[this.$l2.code]) {
+          let word = await (await this.$dictionary).get(savedWord.id)
+          if (word) {
+            for (let form of savedWord.forms) {
+              for (let lineIndex in this.lines) {
+                let line = this.lines[lineIndex]
+                if (line.line.includes(form)) {
+                  let reviewIndex = Math.min(Number(lineIndex) + lineOffset, this.lines.length - 1)
+                  let answers = await this.findSimilar(form)
+                  answers = answers.map(similarText => {
+                    return {
+                      text: similarText,
+                      correct: false
+                    }
+                  }).slice(0,2)
+                  answers.push({
+                    text: form,
+                    correct: true
+                  })
+                  review[reviewIndex] = review[reviewIndex] || []
+                  review[reviewIndex].push({
+                    line: line,
+                    text: form,
+                    word: word,
+                    answers: Helper.shuffle(answers)
+                  })
+                }
+              }
+            }
+          }
+        }
+      }
+      this.review = review
+      this.reviewKey++
+    },
     seekVideoTo(starttime) {
       if (this.onSeek) {
         this.onSeek(starttime)
@@ -100,17 +191,21 @@ export default {
     },
     scrollTo(lineIndex) {
       let el = document.getElementById(`transcript-line-${lineIndex}`)
-      if (el) el.scrollIntoView({behavior: 'smooth', block: 'nearest'})
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
     },
     previousLine() {
-      let currentLineIndex = this.lines.findIndex(line => line === this.currentLine)
+      let currentLineIndex = this.lines.findIndex(
+        line => line === this.currentLine
+      )
       let previousLineIndex = Math.max(currentLineIndex - 1, 0)
       this.currentLine = this.lines[previousLineIndex]
       this.seekVideoTo(this.currentLine.starttime)
       this.scrollTo(previousLineIndex)
     },
     nextLine() {
-      let currentLineIndex = this.lines.findIndex(line => line === this.currentLine)
+      let currentLineIndex = this.lines.findIndex(
+        line => line === this.currentLine
+      )
       let nextLineIndex = Math.min(currentLineIndex + 1, this.lines.length - 1)
       this.currentLine = this.lines[nextLineIndex]
       this.seekVideoTo(this.currentLine.starttime)
@@ -121,6 +216,29 @@ export default {
 </script>
 
 <style>
+
+.review {
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 0.5rem;
+}
+
+.review-answer {
+  border: 1px solid #999;
+}
+
+.review-answer.checked:not(.review-answer-correct) {
+  background-color: rgb(211, 197, 197) !important; 
+  border-color: rgb(160, 48, 48) !important;
+  color: rgb(160, 48, 48) !important;
+}
+
+.review-answer.checked.review-answer-correct {
+  background-color: rgb(175, 226, 183)!important;
+  border-color: rgb(13, 94, 63) !important;
+  color: rgb(13, 94, 63) !important;
+}
+
 .transcript.collapsed .transcript-line:nth-child(n + 6) {
   display: none;
 }
