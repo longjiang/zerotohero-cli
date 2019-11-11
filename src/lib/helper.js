@@ -137,11 +137,9 @@ export default {
     let levelAttr = level ? ` data-level="${level}"` : ''
     if (text && word && word.trim() !== '') {
       return text
-        .replace(new RegExp(`^(${word})`, 'gi'), ' $1')
-        .replace(new RegExp(`(${word})$`, 'gi'), '$1 ')
         .replace(
-          new RegExp(`(["'“‘ ])(${word})(["'”’.!?:, ])`, 'gi'),
-          `$1<span ${levelAttr} class="highlight">$2</span>$3`
+          new RegExp(word, 'gi'),
+          `<span ${levelAttr} class="highlight">${word}</span>`
         )
     } else {
       return text
@@ -183,6 +181,9 @@ export default {
   shuffle(o) {
     for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
+  },
+  randomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max))
   },
   randomArrayItem(array, start = 0, length = false) {
     length = length || array.length

@@ -24,7 +24,7 @@
             <span
               v-html="
                 highlight
-                  ? Helper.highlight(line.line, highlight, hsk)
+                  ? Helper.highlight(line.line, highlight, word.level || 'outside')
                   : line.line
               "
             />
@@ -48,28 +48,52 @@
             </template>
           </div>
         </div>
-        <div class="review" v-if="review[lineIndex] && review[lineIndex].length > 0">
-          <h6>Pop Quiz</h6>
-          <div class="review-item mt-2" v-for="reviewItem in review[lineIndex]">
-            <Annotate tag="div" class="transcript-line-chinese">
-              <span>{{ reviewItem.line.line.replace(reviewItem.text, '_____') }}</span>
-            </Annotate>
-            <button v-for="answer in reviewItem.answers" :class="{
-              'btn': true,
-              'btn-small': true,
-              'bg-white': true,
-              'mr-2': true,
-              'review-answer': true,
-              'checked': false,
-              'review-answer-correct': answer.correct
-            }" @click="answerClick">{{ answer.text }}</button>
+        <template v-if="review[lineIndex] && review[lineIndex].length > 0">
+          <div class="review" v-for="reviewItem in review[lineIndex]">
+            <h6>Pop Quiz</h6>
+            <div class="review-item mt-2">
+              <div
+                v-if="$l2.code !== $l1.code"
+                :class="{
+                'transcript-line-l1': true,
+                'text-right':
+                  $l2.scripts &&
+                  $l2.scripts.length > 0 &&
+                  $l2.scripts[0].direction === 'rtl'
+              }"
+              >
+                <template
+                  v-for="parallelLine in parallellines.filter(
+                  l => l.starttime === reviewItem.line.starttime
+                )"
+                >
+                  <span v-html="parallelLine.line" />
+                </template>
+              </div>
+              <Annotate tag="div" class="transcript-line-chinese">
+                <span v-html="Helper.highlight(reviewItem.line.line, reviewItem.text, hsk)" />
+              </Annotate>
+              <div class="mt-2">
+                <button
+                  v-for="answer in reviewItem.answers"
+                  :class="{
+                  'btn': true,
+                  'btn-small': true,
+                  'bg-white': true,
+                  'mr-2': true,
+                  'review-answer': true,
+                  'checked': false,
+                  'review-answer-correct': answer.correct
+                }"
+                  @click="answerClick"
+                >{{ answer.text }}</button>
+              </div>
+            </div>
           </div>
-        </div>
+        </template>
       </template>
     </div>
-    <ShowMoreButton v-if="collapse" :data-bg-level="hsk ? hsk : 'outside'"
-      >Show More</ShowMoreButton
-    >
+    <ShowMoreButton v-if="collapse" :data-bg-level="hsk ? hsk : 'outside'">Show More</ShowMoreButton>
   </div>
 </template>
 
@@ -135,16 +159,20 @@ export default {
   methods: {
     answerClick(e) {
       $(e.target).addClass('checked')
+      if ($(e.target).hasClass('review-answer-correct')) {
+        $(e.target).parents('.review').addClass('show-answer')
+      }
     },
     async findSimilar(text) {
       let words = await (await this.$dictionary).lookupFuzzy(text)
       words = words.filter(word => word.head !== text)
       words = Helper.uniqueByValue(words, 'head')
-      return words.map(word => word.head)
+      return words.map(word => word.head).sort((a,b) => b.length - a.length)
     },
     async updateWords() {
       let review = {}
       let lineOffset = 10 // Show review this number of lines after the first appearance of the word
+      let lineOffsetRandom = 5
       if (
         this.$store.state.savedWords &&
         this.$store.state.savedWords[this.$l2.code]
@@ -152,29 +180,38 @@ export default {
         for (let savedWord of this.$store.state.savedWords[this.$l2.code]) {
           let word = await (await this.$dictionary).get(savedWord.id)
           if (word) {
+            let seenLines = []
             for (let form of savedWord.forms) {
               for (let lineIndex in this.lines) {
-                let line = this.lines[lineIndex]
-                if (line.line.includes(form)) {
-                  let reviewIndex = Math.min(Number(lineIndex) + lineOffset, this.lines.length - 1)
-                  let answers = await this.findSimilar(form)
-                  answers = answers.map(similarText => {
-                    return {
-                      text: similarText,
-                      correct: false
-                    }
-                  }).slice(0,2)
-                  answers.push({
-                    text: form,
-                    correct: true
-                  })
-                  review[reviewIndex] = review[reviewIndex] || []
-                  review[reviewIndex].push({
-                    line: line,
-                    text: form,
-                    word: word,
-                    answers: Helper.shuffle(answers)
-                  })
+                if (!seenLines.includes(lineIndex)) {
+                  let line = this.lines[lineIndex]
+                  if (line.line.includes(form)) {
+                    let reviewIndex = Math.min(
+                      Number(lineIndex) + lineOffset + Helper.randomInt(lineOffsetRandom),
+                      this.lines.length - 1
+                    )
+                    let answers = await this.findSimilar(form)
+                    answers = answers
+                      .map(similarText => {
+                        return {
+                          text: similarText,
+                          correct: false
+                        }
+                      })
+                      .slice(0, 2)
+                    answers.push({
+                      text: form,
+                      correct: true
+                    })
+                    review[reviewIndex] = review[reviewIndex] || []
+                    review[reviewIndex].push({
+                      line: line,
+                      text: form,
+                      word: word,
+                      answers: Helper.shuffle(answers)
+                    })
+                    seenLines.push(lineIndex)
+                  }
                 }
               }
             }
@@ -215,12 +252,26 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
 .review {
+  margin: 0.5rem 0;
   padding: 1rem;
-  background-color: #eee;
+  background-color: #f3f3f3;
   border-radius: 0.5rem;
+  &.show-answer {
+    background-color: #d6f5d8
+  }
+}
+
+.review:not(.show-answer) {
+  .highlight {
+    background-color: #ccc;
+    border-radius: 0.2rem;
+  }
+  .highlight * {
+    opacity: 0;
+    pointer-events: none
+  }
 }
 
 .review-answer {
@@ -228,15 +279,15 @@ export default {
 }
 
 .review-answer.checked:not(.review-answer-correct) {
-  background-color: rgb(211, 197, 197) !important; 
-  border-color: rgb(160, 48, 48) !important;
-  color: rgb(160, 48, 48) !important;
+  background-color: #dc3838 !important;
+  border-color: #a03030 !important;
+  color: white !important;
 }
 
 .review-answer.checked.review-answer-correct {
-  background-color: rgb(175, 226, 183)!important;
-  border-color: rgb(13, 94, 63) !important;
-  color: rgb(13, 94, 63) !important;
+  background-color: #63ab67 !important;
+  border-color: #36823b !important;
+  color: white !important;
 }
 
 .transcript.collapsed .transcript-line:nth-child(n + 6) {
