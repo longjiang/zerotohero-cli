@@ -176,6 +176,7 @@ export default {
       this.updateClasses()
     },
     async $route() {
+      this.$ga.page(this.$route.path)
       if (this.$route.params.l1 && this.$route.params.l2) {
         if (
           (this.$l1 && this.$route.params.l1 !== this.$l1.code) ||
