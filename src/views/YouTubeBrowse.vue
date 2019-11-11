@@ -4,7 +4,7 @@
       <div class="col-sm-12">
         <SimpleSearch
           class="mb-3"
-          :placeholder="$t('Search YouTube', { l2: $l2.name })"
+          :placeholder="$t('Search the entire YouTube for {l2} videos with CC', { l2: $l2.name })"
           buttonText="Search"
           :action="
             url => {

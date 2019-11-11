@@ -18,9 +18,9 @@
         <i class="fas fa-random mr-1"></i>
         <span>{{ $t('Random') }}</span>
       </a>
-      <div class="input-group-append">
+      <div v-if="button" class="input-group-append">
         <button
-          class="btn btn-danger lookup-button"
+          class="btn btn-primary lookup-button"
           v-on:click="go"
           type="button"
           title="Search"
@@ -84,6 +84,9 @@ export default {
     },
     type: {
       default: 'dictionary' // can also be 'generic'
+    },
+    button: {
+      default: true
     },
     entry: {
       default: undefined
@@ -170,7 +173,7 @@ export default {
 <style scoped>
 .suggestions {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   border-radius: 0.3rem;
   overflow: hidden;
   border: 1px solid #ccc;

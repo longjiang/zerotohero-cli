@@ -68,7 +68,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6 sticky">
-          <div class="sticky pt-3 pb-3 bg-white" :key="'youtube-' + args">
+          <div class="youtube-video-wrapper sticky pt-3 pb-3 bg-white" :key="'youtube-' + args">
             <YouTubeVideo ref="youtube" :youtube="args" />
           </div>
         </div>
@@ -120,7 +120,7 @@
           <SimpleSearch
             class="mb-3"
             :placeholder="
-              $t('Enter a search term in {l2}...', { l2: $l2.name })
+              $t('Search the entire YouTube for {l2} videos with CC', { l2: $l2.name })
             "
             buttonText="Search"
             :action="
@@ -364,3 +364,8 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .youtube-video-wrapper.sticky {
+    margin-top: 2.5rem;
+  }
+</style>

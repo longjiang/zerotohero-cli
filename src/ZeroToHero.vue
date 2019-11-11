@@ -1,35 +1,38 @@
 <template>
   <div id="zerotohero" :class="classes">
     <template v-if="langsLoaded && this.$route.path !== '/'">
-      <div class="container-fluid bg-dark pt-4 pl-0 pr-0">
+      <div class="container-fluid pl-0 pr-0 p-2 site-top-bar">
+        <LanguageSwitch style="flex: 1" />
+        <a
+          v-if="$l1.code === 'zh' && $l2.code === 'en'"
+          class="btn btn-primary btn-sign-in text-white ml-1"
+          href="https://wazuc.duanshu.com/#/"
+          target="_blank"
+        >
+          登陆
+          <img src="/img/logo-duanshu-light.png" class="logo-small ml-1" />
+        </a>
+        <a
+          v-if="$l1.code === 'en' && $l2.code === 'zh'"
+          class="btn btn-primary btn-sign-in text-white ml-1"
+          href="https://sso.teachable.com/secure/133035/users/sign_in"
+        >
+          Login to
+          <img src="/img/teachable_light.png" class="logo-small" />
+        </a>
+      </div>
+      <div class="container-fluid bg-dark pl-0 pr-0">
         <div class="container">
-          <div class="row mb-4">
-            <div class="col-sm-12 text-center pt-3">
-              <LanguageLogo :l1="$l1" :l2="$l2" style="transform: scale(1.5)" />
-              <a
-                v-if="$l1.code === 'zh' && $l2.code === 'en'"
-                class="btn btn-success btn-sign-in text-white"
-                href="https://wazuc.duanshu.com/#/"
-                target="_blank"
-              >
-                登陆
-                <img src="/img/logo-duanshu-light.png" class="logo-small ml-1" />
-              </a>
-              <a
-                v-if="$l1.code === 'en' && $l2.code === 'zh'"
-                class="btn btn-success btn-sign-in text-white"
-                href="https://sso.teachable.com/secure/133035/users/sign_in"
-              >
-                Login to
-                <img src="/img/teachable_light.png" class="logo-small" />
-              </a>
-            </div>
-          </div>
           <div class="row">
             <div class="col-sm-12 text-center">
-              <Nav />
+              <LanguageLogo :l1="$l1" :l2="$l2" style="margin-top: 1.5rem" />
             </div>
           </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-dark text-center sticky" style="z-index: 3">
+        <div class="row">
+          <Nav />
         </div>
       </div>
       <SubNav class="pt-4" />
@@ -72,15 +75,18 @@ import SubNav from '@/components/SubNav'
 import LanguageLogo from '@/components/LanguageLogo'
 import Choose from '@/components/Choose'
 import Config from '@/lib/config'
+import Search from '@/components/Search'
 import Vue from 'vue'
 import Dict from '@/lib/dict'
+import LanguageSwitch from '@/components/LanguageSwitch'
 
 export default {
   components: {
     Nav,
     SubNav,
     Choose,
-    LanguageLogo
+    LanguageLogo,
+    LanguageSwitch
   },
   data() {
     return {
@@ -228,24 +234,31 @@ export default {
 </script>
 
 <style lang="scss">
+.site-top-bar {
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo {
   height: 6rem;
 }
+
 .zerotohero {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
 }
+
 .zerotohero-item {
   width: 15rem;
 }
 
 .btn-sign-in {
-  padding: 0.5 1rem;
-  position: absolute;
-  top: 0;
-  right: 1rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  text-decoration: none;
   img {
     height: 1.2rem;
     margin-bottom: 0.2rem;
