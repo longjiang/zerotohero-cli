@@ -217,7 +217,7 @@
     <nav
       class="secondary-menu text-center"
       v-if="
-        ['resources', 'tutoring', 'tutoring-lesson', 'articles-wiki', 'reddit', 'articles-reddit'].includes($route.name)
+        ['resources', 'tutoring', 'tutoring-lesson', 'articles-wiki', 'reddit', 'articles-reddit', 'learning-path'].includes($route.name)
       "
     >
       <router-link
@@ -226,6 +226,13 @@
       >
         <i class="fas fa-gem"></i>
         {{ $t('Resources') }}
+      </router-link>
+      <router-link
+        class="secondary-menu-item"
+        :to="{name: 'learning-path'}"
+      >
+        <i class="fas fa-road"></i>
+        {{ $t('Learning Path') }}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'tutoring' }">
         <i class="fas fa-folder"></i>

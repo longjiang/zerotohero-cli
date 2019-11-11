@@ -24,6 +24,21 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/learning-path',
+      name: 'learning-path',
+      props: true,
+      component: () => import('./views/LearningPath.vue'),
+      meta: {
+        title: 'Learning Path | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'A visual representation of how you can achive langauge fluency, from zero to hero.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/online-courses',
       name: 'courses',
       component: () => import('./views/Courses.vue'),

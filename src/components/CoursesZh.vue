@@ -34,7 +34,7 @@
         </p>
         <a
           href="https://chinesezerotohero.teachable.com/"
-          class="btn btn-danger mt-3 mb-2"
+          class="btn btn-primary mt-3 mb-2"
         >Browse All Courses</a>
       </div>
     </div>

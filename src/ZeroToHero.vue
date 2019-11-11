@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid bg-dark text-center sticky" style="z-index: 3">
+      <div class="container-fluid bg-dark sticky" style="z-index: 3">
         <div class="row">
           <Nav />
         </div>
@@ -256,7 +256,6 @@ export default {
 }
 
 .btn-sign-in {
-  padding: 0.3rem 0.7rem;
   font-size: 0.8rem;
   text-decoration: none;
   img {

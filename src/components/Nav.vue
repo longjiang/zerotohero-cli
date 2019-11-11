@@ -1,5 +1,5 @@
 <template>
-  <nav class="tabs">
+  <nav class="site-nav tabs">
     <router-link
       v-if="$hasFeature('courses')"
       :class="{
@@ -26,6 +26,20 @@
       <i class="fa fa-trophy" />Heroes
     </router-link>
     <router-link
+      v-if="$hasFeature('youtube')"
+      :class="{
+        tab: true,
+        'router-link-active': $route.name && $route.name.startsWith('youtube') ||
+          $route.name === 'hero-academy' ||
+          $route.name === 'music'
+      }"
+      :to="{ name: 'youtube-browse' }"
+      :title="`Learn ${l2 ? l2.name : ''} with audio-visual material.`"
+    >
+      <i class="fas fa-video"></i>
+      {{ $t('Audio-Visual') }}
+    </router-link>
+    <router-link
       v-if="$hasFeature('dictionary')"
       :class="{
         tab: true,
@@ -46,18 +60,20 @@
       {{ $t('Dictionary') }}
     </router-link>
     <router-link
-      v-if="$hasFeature('youtube')"
+      v-if="$hasFeature('dictionary') || $hasFeature('transliteration')"
       :class="{
         tab: true,
-        'router-link-active': $route.name && $route.name.startsWith('youtube') ||
-          $route.name === 'hero-academy' ||
-          $route.name === 'music'
+        'router-link-active':
+          $route.name &&
+          ($route.name.startsWith('book-') ||
+            $route.name === 'library' ||
+            $route.name === 'reader')
       }"
-      :to="{ name: 'youtube-browse' }"
-      :title="`Learn ${l2 ? l2.name : ''} with audio-visual material.`"
+      :to="{ name: 'reader' }"
+      :title="`Improve your ${l2 ? l2.name : ''} through reading`"
     >
-      <i class="fas fa-video"></i>
-      {{ $t('Audio-Visual') }}
+      <i class="fas fa-book-open"></i>
+      {{ $t('Reading') }}
     </router-link>
     <router-link
       v-if="$hasFeature('grammar')"
@@ -79,22 +95,6 @@
       title="Grammar tools."
     >
       <i class="fas fa-list-ul"></i>Grammar
-    </router-link>
-    <router-link
-      v-if="$hasFeature('dictionary') || $hasFeature('transliteration')"
-      :class="{
-        tab: true,
-        'router-link-active':
-          $route.name &&
-          ($route.name.startsWith('book-') ||
-            $route.name === 'library' ||
-            $route.name === 'reader')
-      }"
-      :to="{ name: 'reader' }"
-      :title="`Improve your ${l2 ? l2.name : ''} through reading`"
-    >
-      <i class="fas fa-book-open"></i>
-      {{ $t('Reading') }}
     </router-link>
     <router-link
       v-if="$hasFeature('keyboard')"
@@ -129,7 +129,7 @@
         tab: true,
         'router-link-active':
           $route.name &&
-          ['resources', 'tutoring', 'tutoring-lesson', 'articles-wiki', 'reddit', 'articles-reddit'].includes($route.name)
+          ['resources', 'tutoring', 'tutoring-lesson', 'articles-wiki', 'reddit', 'articles-reddit', 'learning-path'].includes($route.name)
       }"
       :to="`/${$l1.code}/${$l2.code}/resource/list/all/all`"
       :title="`Resources for learning ${l2 ? l2.name : 'the language'}.`"
@@ -169,6 +169,11 @@ export default {
 </script>
 
 <style lang="scss">
+
+.site-nav {
+  margin: 0 auto;
+}
+
 .tabs {
   a svg,
   a i {

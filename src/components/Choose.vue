@@ -63,10 +63,30 @@ export default {
     LanguageLogo,
     LanguageSwitch
   },
+  data() {
+    return {
+      languages: []
+    }
+  },
   methods: {
     language(code) {
       return this.languages.find(language => language.code === code)
     },
+  },
+  mounted() {
+    this.languages = this.$languages.l1s
+      .filter(
+        language => ['A', 'C', 'L', 'E', 'H'].includes(language.type) // Only living, extinct or historical languages (exclusing special codes 'S' and macro languages 'M')
+      )
+      .sort((a, b) => {
+        if (a.name < b.name) {
+          return -1
+        }
+        if (a.name > b.name) {
+          return 1
+        }
+        return 0
+      })
   }
 }
 </script>

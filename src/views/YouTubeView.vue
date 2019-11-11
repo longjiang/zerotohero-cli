@@ -67,7 +67,7 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 sticky">
+        <div class="youtube-video-column col-md-6 sticky">
           <div class="youtube-video-wrapper sticky pt-3 pb-3 bg-white" :key="'youtube-' + args">
             <YouTubeVideo ref="youtube" :youtube="args" />
           </div>
@@ -365,7 +365,10 @@ export default {
 }
 </script>
 <style lang="scss">
+  .youtube-video-column.sticky {
+    top: 2.5rem;
+  }
   .youtube-video-wrapper.sticky {
-    margin-top: 2.5rem;
+    top: 2.5rem;
   }
 </style>
