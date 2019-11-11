@@ -146,13 +146,13 @@
           $route.name === 'reader'
       "
     >
-      <router-link class="secondary-menu-item" :to="{ name: 'library' }">
-        <i class="fas fa-book-open"></i>
-        {{$t('Library')}}
-      </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'reader' }">
         <i class="fas fa-file-alt"></i>
         {{$t('Text Reader')}}
+      </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'library' }">
+        <i class="fas fa-book-open"></i>
+        {{$t('Library')}}
       </router-link>
     </nav>
 

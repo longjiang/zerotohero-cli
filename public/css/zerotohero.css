@@ -465,6 +465,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   border-radius: 0.3rem;
 }
 
+.btn-primary {
+  background-color: #fd4f1c;
+  border-color: #fd4f1c;
+}
+
+.btn-primary:hover {
+  background-color: #ce3d11;
+  border-color: #ce3d11;
+}
+
 .btn-gray {
   background: #efefef;
   color: #8e8e8e;
@@ -594,5 +604,14 @@ ul.collapsed li:nth-child(n+5) {
 
 .btn-default:hover {
   background: #fd4f1c;
+  color: white;
+}
+
+.list-group-item.active {
+  background-color: #fd4f1c;
+  border-color: #fd4f1c;
+}
+
+.list-group-item.active:hover {
   color: white;
 }

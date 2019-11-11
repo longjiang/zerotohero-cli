@@ -90,7 +90,7 @@
             $route.name === 'library' ||
             $route.name === 'reader')
       }"
-      :to="{ name: 'library' }"
+      :to="{ name: 'reader' }"
       :title="`Improve your ${l2 ? l2.name : ''} through reading`"
     >
       <i class="fas fa-book-open"></i>

@@ -20,7 +20,8 @@
     <div class="row mt-5">
       <div class="col-sm-12 col-md-8 col-lg-9 pr-4 mb-5">
         <template v-if="videos && videos.length > 0">
-          <h4 class="mb-4 text-center">{{ Math.min(videos.length, 100) }}{{ videos.length > 100 ? '+' : '' }} {{ topic === 'all' ? $t('New') : ''}} {{ $t('Videos') }}</h4>
+          <h3 class="mb-2 text-center">Library</h3>
+          <p class="mb-4 text-center">{{ Math.min(videos.length, 100) }}{{ videos.length > 100 ? '+' : '' }} {{ topic === 'all' ? $t('New') : ''}} {{ $t('Videos') }}</p>
           <YouTubeVideoList :videos="videos" />
         </template>
         <template v-if="channels && channels.length > 0">
@@ -33,7 +34,7 @@
         </template>
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3">
-        <h4 class="text-center mb-4">Topics</h4>
+        <h4 class="text-center mb-4">Filter by Topic</h4>
         <div class="list-group">
           <a
             :class="{
@@ -55,7 +56,7 @@
             :href="`#/${$l1.code}/${$l2.code}/youtube/browse/${topicValue}/all`"
           >{{ topicName }}</a>
         </div>
-        <h6 class="mt-4 mb-4 text-center">Level</h6>
+        <h6 class="mt-4 mb-4 text-center">Filter by Level</h6>
         <div class="list-group">
           <a
             :class="{

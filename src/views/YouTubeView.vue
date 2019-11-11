@@ -26,15 +26,15 @@
             </Annotate>
           </h3>
           <template v-if="!loading && hasSubtitles">
-            <b-button v-if="!saved" @click="save">Save video</b-button>
+            <b-button v-if="!saved" @click="save"><i class="fas fa-plus mr-2"></i>Add to Library</b-button>
             <b-button v-else variant="success">
-              <i class="fa fa-check mr-2"></i>Saved
+              <i class="fa fa-check mr-2"></i>Added
             </b-button>
           </template>
           <template v-if="saved">
             <b-dropdown
               id="dropdown-1"
-              :text="saved.topic ? topics[saved.topic] : 'Choose topic'"
+              :text="saved.topic ? topics[saved.topic] : 'Topic'"
               :variant="saved.topic ? 'success' : undefined"
               class="ml-1"
             >

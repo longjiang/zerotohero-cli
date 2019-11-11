@@ -1,17 +1,16 @@
 <template>
   <div class="main pt-3 pb-5">
-    <div class="container mt2 mb2">
+    <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h4>{{ $t('Text Reader') }}</h4>
-          <p v-html="$t('textReaderIntro', {l2: $l2.name})"/>
           <Loader class="mb-5" />
+          <p v-if="text.length > 0" class="mt-2 mb-5 hide-for-present">👇 Now, hover or tap on words 👇</p>
           <div
             v-if="text.length > 0"
             :key="readerKey"
             id="reader-annotated"
             :class="{focus: true, present: presentMode}"
-            :style="`font-size: ${fontSize}rem; margin-top: 3rem; margin-bottom: 3rem;`"
+            :style="`font-size: ${fontSize}rem; margin-bottom: 3rem;`"
           >
             <template 
               v-for="line of marked
@@ -34,17 +33,19 @@
               class="form-control"
               cols="30"
               rows="5"
-              :placeholder="$t('Enter your {l2} text here. Markdown and HTML also supported.', {l2: $l2.name})"
+              :placeholder="$t('Paste {l2} text here', {l2: $l2.name})"
               v-model="text"
             ></textarea>
           </div>
         </div>
       </div>
-      <hr />
+      <h5 class="mt-5">Usage tips</h5>
+      <ul>
+        <li><code>Markdown</code> and <code>HTML</code> are also supported.</li>
+      </ul>
       <div class="row mt-5">
         <div class="col-sm-12">
           <h5 class="mb-3">{{$t('Not sure what to read?')}}</h5>
-          <p>{{ $t('Try these resources:') }}</p>
           <ul>
             <li>
               {{ $t(`Look for ${$l2.name} music lyrics on Google.`) }}
@@ -196,6 +197,10 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  .hide-for-present {
+    display: none;
+  }
 }
 
 </style>
