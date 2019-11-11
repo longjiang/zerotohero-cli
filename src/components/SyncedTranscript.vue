@@ -191,6 +191,12 @@ export default {
                       this.lines.length - 1
                     )
                     let answers = await this.findSimilar(form)
+                    if (answers.length < 2) {
+                      for (let i of [1, 2]) {
+                        let randomWord = await (await this.$dictionary).random()
+                        answers.push(randomWord.head)
+                      }
+                    }
                     answers = answers
                       .map(similarText => {
                         return {
