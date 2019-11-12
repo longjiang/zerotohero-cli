@@ -21,6 +21,7 @@ export default {
     return {
       youtubeIframeID: 'youtube-' + Helper.uniqueId(),
       time: this.starttime,
+      paused: true,
       player: undefined
     }
   },
@@ -46,6 +47,7 @@ export default {
   },
   methods: {
     currentTime() {
+      this.paused = this.player.getPlayerState() !== 1
       return this.player && this.player.getCurrentTime
         ? this.player.getCurrentTime()
         : 0
@@ -68,7 +70,12 @@ export default {
             playsinline: 1,
             rel: 0
           },
-          onReady() {}
+          onReady() {},
+          events: {
+            'onStageChange': () => {
+              this.paused = this.player.getPlayerState() !== 1
+            }
+          }
         })
       }
       $.getScript('//www.youtube.com/iframe_api')
@@ -92,16 +99,19 @@ export default {
     seek(starttime) {
       if (this.player && this.player.seekTo) {
         this.player.seekTo(starttime)
+        this.paused = this.player.getPlayerState() !== 1
       }
     },
     pause() {
       if (this.player && this.player.pauseVideo) {
         this.player.pauseVideo()
+        this.paused = this.player.getPlayerState() !== 1
       }
     },
     togglePaused() {
       if (this.player && this.player.getPlayerState) {
         this.player.getPlayerState() !== 1 ? this.player.playVideo() : this.player.pauseVideo()
+        this.paused = this.player.getPlayerState() !== 1
       } else {
         this.loadYouTubeiFrame()
       }

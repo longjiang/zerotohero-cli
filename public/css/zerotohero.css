@@ -470,7 +470,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   border-color: #fd4f1c;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled):active {
   background-color: #ce3d11;
   border-color: #ce3d11;
 }

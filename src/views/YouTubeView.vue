@@ -76,14 +76,19 @@
           <div v-if="loading" class="text-center">
             <Loader :sticky="true" />
           </div>
-          <SyncedTranscript
-            ref="transcript"
-            :onSeek="seekYouTube"
-            :onPause="pauseYouTube"
-            :lines="this.l2Lines"
-            :parallellines="this.l1Lines"
-            v-else-if="!loading && hasSubtitles"
-          />
+          <div v-else-if="!loading && hasSubtitles">
+            <SyncedTranscript
+              ref="transcript"
+              :onSeek="seekYouTube"
+              :onPause="pauseYouTube"
+              :lines="this.l2Lines"
+              :parallellines="this.l1Lines"
+              
+            />
+            <div class="play-pause-wrapper text-right">
+              <button class="play-pause shadow btn-primary" @click="togglePaused"><i v-if="paused" class="fas fa-play"></i><i v-else class="fas fa-pause"></i></button>
+            </div>
+          </div>
           <div
             v-else-if="!loading && !hasSubtitles"
             class="jumbotron pt-4 pb-3 bg-light"
@@ -170,6 +175,11 @@ export default {
       this.getVideoDetails()
       this.getTranscript()
       this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
+    }
+  },
+  computed: {
+    paused() {
+      return this.$refs.youtube.paused
     }
   },
   data() {
@@ -327,10 +337,13 @@ export default {
         this.saved = undefined
       }
     },
+    togglePaused() {
+      this.$refs.youtube.togglePaused()
+    },
     bindKeys() {
       window.onkeydown = e => {
         if (e.keyCode == 32) { // Spacebar
-          this.$refs.youtube.togglePaused()
+          this.togglePaused()
           return false
         }
         if (e.keyCode == 38) { // Up arrow
@@ -369,6 +382,18 @@ export default {
 }
 </script>
 <style lang="scss">
+  .play-pause-wrapper {
+    position: sticky;
+    bottom: 1.3rem;
+    right: 1.3rem;
+  }
+  .play-pause {
+    border-radius: 100%;
+    width: 2.6rem;
+    height: 2.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+  }
   .youtube-video-column.sticky {
     top: 2.5rem;
   }
