@@ -12,7 +12,7 @@
             above words
           </label>
         </div>
-        <div class="form-check" v-if="$hasFeature('dictionary')">
+        <div class="form-check" v-if="$hasFeature('dictionary') && ['zh', 'yue', 'nan', 'hak', 'th', 'lo', 'ja', 'km', 'ryu', 'bo', 'my'].includes(this.$l2.code) ">
           <input
             type="checkbox"
             class="form-check-input"
@@ -93,9 +93,9 @@ export default {
       showTranslation:
         localStorage.getItem('zthShowTranslation') === 'false' ? false : true,
       showPinyin:
-        localStorage.getItem('zthHidePinyinExceptSaved') === 'true'
-          ? false
-          : true,
+        localStorage.getItem('zthHidePinyinExceptSaved') === 'false'
+          ? true
+          : false,
       useTraditional: localStorage.getItem('zthUseTraditional') === 'true'
     }
   },

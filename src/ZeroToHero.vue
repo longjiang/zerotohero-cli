@@ -103,7 +103,7 @@ export default {
       loaded: false,
       showDefinition: localStorage.getItem('zthShowDefinition') === 'true',
       hidePinyinExceptSaved:
-        localStorage.getItem('zthHidePinyinExceptSaved') === 'true',
+        localStorage.getItem('zthHidePinyinExceptSaved') === 'false' ? false : true,
       useTraditional: localStorage.getItem('zthUseTraditional') === 'true',
       showTranslation:
         localStorage.getItem('zthShowTranslation') === 'false' ? false : true

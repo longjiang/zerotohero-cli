@@ -322,8 +322,7 @@ export default {
   padding: 0.5rem;
 }
 
-.transcript-line-current,
-.transcript-line:hover {
+.transcript-line-current {
   box-shadow: 0 0 10px rgba(255, 95, 32, 0.301);
   border-radius: 0.25rem;
 }
@@ -336,19 +335,6 @@ export default {
 .transcript-title {
   font-weight: bold;
   font-size: 1.5rem;
-}
-
-.transcript-line:hover::before {
-  content: '▶︎';
-  font-size: 1.5rem;
-  width: 4rem;
-  line-height: 0.8rem;
-  display: block;
-  color: #f7613540;
-  position: absolute;
-  right: -2rem;
-  bottom: 1rem;
-  font-weight: bold;
 }
 
 .transcript-line-l1 {

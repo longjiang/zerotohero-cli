@@ -415,7 +415,7 @@ export default {
   }
 
   &[x-placement^='top'] {
-    margin-bottom: 5px;
+    margin-bottom: 1rem;
 
     .tooltip-arrow {
       border-width: 5px 5px 0 5px;

@@ -85,8 +85,9 @@
               :parallellines="this.l1Lines"
               
             />
-            <div class="play-pause-wrapper text-right">
-              <button class="play-pause shadow btn-primary" @click="togglePaused"><i v-if="paused" class="fas fa-play"></i><i v-else class="fas fa-pause"></i></button>
+            <div class="play-pause-wrapper">
+              <!-- <router-link :to="{name: 'settings'}" class="play-pause shadow btn-secondary d-inline-block mb-2 text-center"><i class="fas fa-cog"></i></router-link><br/> -->
+              <span class="play-pause shadow btn-primary d-inline-block text-center" @click="togglePaused"><i v-if="paused" class="fas fa-play"></i><i v-else class="fas fa-pause"></i></span>
             </div>
           </div>
           <div
@@ -385,14 +386,17 @@ export default {
   .play-pause-wrapper {
     position: sticky;
     bottom: 1.3rem;
-    right: 1.3rem;
+    left: 100%;
+    width: 3.2rem;
   }
   .play-pause {
     border-radius: 100%;
-    width: 2.6rem;
-    height: 2.6rem;
-    line-height: 2.4rem;
-    text-align: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    line-height: 3rem;
+    border: none;
+    font-size: 1.3em;
+    cursor: pointer;
   }
   .youtube-video-column.sticky {
     top: 2.5rem;
