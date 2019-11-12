@@ -153,11 +153,11 @@ export default {
         ) {
           if (this.currentLine !== line) {
             // Pause video if there's a pop quiz
-            if (this.review[lineIndex - 1] && this.review[lineIndex - 1].length > 0 && !this.paused[lineIndex - 1]) {
-              this.pauseVideo()
-              this.paused[lineIndex - 1] = true
-              return
-            }
+            // if (this.review[lineIndex - 1] && this.review[lineIndex - 1].length > 0 && !this.paused[lineIndex - 1]) {
+            //   this.pauseVideo()
+            //   this.paused[lineIndex - 1] = true
+            //   return
+            // }
             this.scrollTo(lineIndex)
           }
           this.currentLine = line
