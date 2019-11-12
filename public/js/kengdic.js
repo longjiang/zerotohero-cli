@@ -2,6 +2,9 @@ const Dictionary = {
   file: '../data/kengdic/kengdic_2011.tsv.txt',
   words: [],
   name: 'kengdic',
+  credit() {
+    return 'The Korean dictionary is provided by <a href="https://github.com/garfieldnate/kengdic">kengdic</a> created by Joe Speigle, which is freely available from its GitHub project page.'
+  },
   load() {
     return new Promise(resolve => {
       Papa.parse(this.file, {
