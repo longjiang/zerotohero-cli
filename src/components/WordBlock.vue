@@ -69,10 +69,8 @@
             <span style="color: #999" v-if="word.jyutping && word.pinyin"> / {{ word.pinyin }}</span>
             <Speak :text="word.bare" :mp3="word.audio" :wiktionary="word.wiktionary" class="ml-1" />
           </div>
-          <Star :word="word" :text="text" class="mr-1"></Star>
-          <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${words[0].id}`">
-            <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ word.accented }}</b>
-          </a>
+          <Star :word="word" :text="text" class="mr-1" style="position: relative; bottom: 0.1rem"></Star>
+          <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ word.accented }}</b>
           <span
             v-if="word.traditional && word.traditional !== word.simplified"
             class="ml-1"
@@ -87,8 +85,11 @@
             v-if="word.level && word.level !== 'outside'"
             :data-bg-level="word.level"
             class="pl-1 pr-1 ml-1 rounded d-inline-block"
-            style="font-size: 0.8em"
+            style="font-size: 0.8em; position: relative; bottom: 0.1rem"
           >{{ $l2.code === 'zh' ? 'HSK ' : ''}}{{ word.level }}</span>
+          <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${words[0].id}`" class="ml-1 link-unstyled" style="color: #999">
+            <i class="fas fa-book"></i>
+          </a>
         </div>
         <div>
           <span class="word-type" v-if="word.type !== 'other'" style="color: #999">
