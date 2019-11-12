@@ -106,27 +106,53 @@ const Dictionary = {
   lookupFuzzy(text, limit = 30) {
     text = text.trim()
     if (!this.isRoman(text)) {
-      let results = []
-      if (this.isChinese(text)) {
-        let words = this.words.filter(row => row.kanji && row.kanji === text)
-        let moreWords = this.words.filter(row => row.kanji && row.kanji !== text && row.kanji.includes(text))
-        results = results.concat(words).concat(moreWords)
-      } else {
-        let words = this.words
-          .filter(word => word.bare && word.bare.startsWith(text))
-        if (words.length === 0) {
-          words = this.words
-            .filter(word => text.includes(word.bare))
-            .sort((a, b) => b.bare.length - a.bare.length)
-        }
-        results = words
+      let words = []
+      let subtexts = []
+      for (let i = 1; text.length - i > 0; i++) {
+        subtexts.push(text.substring(0, text.length - i))
       }
-      if (results) {
-        if (limit) {
-          results = results.slice(0, limit)
+      for (let word of this.words) {
+        let head = word.head ? word.head.toLowerCase() : undefined
+        if (head && head === text) {
+          // match 'abcde' exactly
+          words.push(
+            Object.assign(
+              { score: 99999 },
+              word
+            )
+          )
+        } else if (head && head.startsWith(text)) {
+          // match 'abcdejkl', 'abcdexyz', etc
+          words.push(
+            Object.assign(
+              { score: text.length - (head.length - text.length)},
+              word
+            )
+          ) 
+        } else if (head && text.startsWith(head)) {
+          // matches 'abcde', 'abcd', 'abc', etc
+          words.push(Object.assign({ score: head.length + 1 }, word)) 
+        } else if (head && text.includes(head)) {
+          // matches 'abc', 'bcd', 'cde', etc
+          words.push(Object.assign({ score: head.length }, word)) 
+        } else {
+          // matches 'abcdxyz', 'abcxyz', 'abxyz', etc
+          for (let subtext of subtexts) {
+            if (head && head.startsWith(subtext)) {
+              let daBonus = 0
+              if (head.length > 1 && head.endsWith('る')) daBonus++
+              if (head.length > 1 && head.endsWith('する')) daBonus++
+              words.push(
+                Object.assign(
+                  { score: subtext.length - (head.length - subtext.length) + daBonus },
+                  word
+                )
+              ) 
+            }
+          }
         }
-        return results
       }
+      return words.sort((a,b) => b.score - a.score).slice(0, limit)
     }
   },
   subdict(data) {
