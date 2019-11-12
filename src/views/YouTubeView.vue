@@ -79,6 +79,7 @@
           <SyncedTranscript
             ref="transcript"
             :onSeek="seekYouTube"
+            :onPause="pauseYouTube"
             :lines="this.l2Lines"
             :parallellines="this.l1Lines"
             v-else-if="!loading && hasSubtitles"
@@ -189,6 +190,9 @@ export default {
   methods: {
     seekYouTube(starttime) {
       this.$refs.youtube.seek(starttime)
+    },
+    pauseYouTube() {
+      this.$refs.youtube.pause()
     },
     async getVideoDetails() {
       this.title = undefined

@@ -94,6 +94,11 @@ export default {
         this.player.seekTo(starttime)
       }
     },
+    pause() {
+      if (this.player && this.player.pauseVideo) {
+        this.player.pauseVideo()
+      }
+    },
     togglePaused() {
       if (this.player && this.player.getPlayerState) {
         this.player.getPlayerState() !== 1 ? this.player.playVideo() : this.player.pauseVideo()

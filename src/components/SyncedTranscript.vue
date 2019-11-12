@@ -115,6 +115,9 @@ export default {
     onSeek: {
       default: false
     },
+    onPause: {
+      default: false
+    },
     highlight: {
       default: false
     },
@@ -130,6 +133,7 @@ export default {
       currentTime: 0,
       currentLine: this.lines ? this.lines[0] : undefined,
       review: {},
+      paused: {},
       reviewKey: 0
     }
   },
@@ -148,6 +152,12 @@ export default {
           this.currentTime + 0.5 // current time marker passed the start time of the line
         ) {
           if (this.currentLine !== line) {
+            // Pause video if there's a pop quiz
+            if (this.review[lineIndex - 1] && this.review[lineIndex - 1].length > 0 && !this.paused[lineIndex - 1]) {
+              this.pauseVideo()
+              this.paused[lineIndex - 1] = true
+              return
+            }
             this.scrollTo(lineIndex)
           }
           this.currentLine = line
@@ -172,7 +182,6 @@ export default {
     async updateWords() {
       let review = {}
       let lineOffset = 10 // Show review this number of lines after the first appearance of the word
-      let lineOffsetRandom = 5
       if (
         this.$store.state.savedWords &&
         this.$store.state.savedWords[this.$l2.code]
@@ -187,7 +196,7 @@ export default {
                   let line = this.lines[lineIndex]
                   if (line.line.includes(form)) {
                     let reviewIndex = Math.min(
-                      Number(lineIndex) + lineOffset + Helper.randomInt(lineOffsetRandom),
+                      Number(lineIndex) + lineOffset + Math.floor(form.length/2),
                       this.lines.length - 1
                     )
                     let answers = await this.findSimilar(form)
@@ -230,6 +239,11 @@ export default {
     seekVideoTo(starttime) {
       if (this.onSeek) {
         this.onSeek(starttime)
+      }
+    },
+    pauseVideo() {
+      if (this.onPause) {
+        this.onPause()
       }
     },
     scrollTo(lineIndex) {
