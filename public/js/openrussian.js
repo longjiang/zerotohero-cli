@@ -135,6 +135,7 @@ const Dictionary = {
             if (row.accented) {
               row.accented = this.accent(row.accented)
             }
+            if (row.bare) row.head = row.bare
             this.words[row.id] = row
           }
           resolve(this)

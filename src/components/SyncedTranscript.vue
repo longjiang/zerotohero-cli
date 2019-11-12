@@ -167,7 +167,7 @@ export default {
       let words = await (await this.$dictionary).lookupFuzzy(text)
       words = words.filter(word => word.head !== text)
       words = Helper.uniqueByValue(words, 'head')
-      return words.map(word => word.head).sort((a,b) => b.length - a.length)
+      return words.map(word => word.head).sort((a,b) => Math.abs(a.length - text.length) - Math.abs(b.length - text.length))
     },
     async updateWords() {
       let review = {}

@@ -296,7 +296,13 @@ const Dictionary = {
       let results = []
       if (this.isChinese(text)) {
         let words = this.words.filter(row => row.traditional && (row.traditional === text || row.simplified === text))
-        let moreWords = this.words.filter(row => row.traditional && row.traditional !== text && (row.traditional.includes(text) || row.simplified.includes(text)))
+        let moreWords = this.words.filter(row => {
+          if (row.traditional && row.traditional !== text) {
+            if ((row.traditional && row.traditional.includes(text)) || (row.simplified && row.simplified.includes(text))) {
+              return true
+            }
+          } 
+        })
         results = results.concat(words).concat(moreWords)
       } else {
         let words = this.words

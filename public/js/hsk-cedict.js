@@ -205,6 +205,7 @@ const Dictionary = {
     let augmented = Object.assign(row, {
       id: `${row.traditional},${row.pinyin.replace(/ /g, '_')},${row.index}`,
       bare: row.simplified,
+      head: row.simplified,
       accented: row.simplified,
       cjk: {
         canonical:
