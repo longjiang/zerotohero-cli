@@ -34,7 +34,8 @@
           v-if="transliteration && transliteration !== text"
         >{{ transliteration }}</span>
         <span class="word-block-text">
-          <slot></slot>
+          <template v-if="$l2.code === 'ru' && text.length > 9">{{ segment(text) }}</template>
+          <slot v-else></slot>
         </span>
       </template>
     </span>
@@ -70,7 +71,7 @@
             <Speak :text="word.bare" :mp3="word.audio" :wiktionary="word.wiktionary" class="ml-1" />
           </div>
           <Star :word="word" :text="text" class="mr-1" style="position: relative; bottom: 0.1rem"></Star>
-          <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ word.accented }}</b>
+          <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ $l2.code === 'ru' && text.length > 9 ? segment(word.accented) : word.accented }}</b>
           <span
             v-if="word.traditional && word.traditional !== word.simplified"
             class="ml-1"
@@ -170,6 +171,10 @@ export default {
   methods: {
     tr(text) {
       return tr(text)
+    },
+    segment(text) {
+      return text.replace(/([́ёеуюйыаоэяицкнгшщзхъфвпрлджчсмтьб])([цкнгшщзхъфвпрлджчсмтб])/gi, '$1·$2').replace(/^(.)·/, '$1')
+      //([ёеуюйыаоэяи])
     },
     update() {
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
