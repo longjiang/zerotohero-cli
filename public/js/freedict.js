@@ -5,6 +5,9 @@ const Dictionary = {
   index: {},
   cache: {},
   tables: [],
+  credit() {
+    return 'The dictionary is provided by <a href="https://freedict.org/">FreeDict</a> dict, open-source and <a href="https://freedict.org/about/">freely distribtued</a>.'
+  },
   loadWords() {
     return new Promise(resolve => {
       console.log('FreeDict: Loading words')

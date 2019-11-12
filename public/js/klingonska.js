@@ -8,6 +8,9 @@ const Dictionary = {
   tables: [],
   l1: undefined,
   l2: undefined,
+  credit() {
+    return 'The Klingon dictionary is provided by <a href="http://klingonska.org/dict/">klingonska.org</a>.'
+  },
   loadWords() {
     return new Promise(resolve => {
       console.log('Klingonska: Loading words')

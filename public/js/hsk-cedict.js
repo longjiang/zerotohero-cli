@@ -2,6 +2,9 @@ const Dictionary = {
   file: '../data/hsk-cedict/hsk_cedict.csv.txt',
   words: [],
   _maxWeight: 0,
+  credit() {
+    return 'The Chinese dictionary is provided by <a href="https://www.mdbg.net/chinese/dictionary?page=cedict">CC-CEDICT</a>, open-source and distribtued under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. We also added HSK information on top.'
+  },
   load() {
     return new Promise(resolve => {
       Papa.parse(this.file, {

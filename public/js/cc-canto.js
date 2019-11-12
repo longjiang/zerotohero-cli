@@ -179,6 +179,9 @@ const Dictionary = {
   file: '../data/cc-canto/cccanto-webdist.tsv.txt',
   words: [],
   name: 'cc-canto',
+  credit() {
+    return 'The Cantonese dictionary is provided by <a href="http://cantonese.org/download.html">CC-Canto</a> dict, open-source and distribtued under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 license</a>.'
+  },
   load() {
     return new Promise(resolve => {
       Papa.parse(this.file, {

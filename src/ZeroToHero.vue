@@ -52,14 +52,19 @@
       </footer>
     </template>
     <template v-else>
-      <div class="container-fluid bg-dark text-light pt-4 pb-4" style="min-height: 100vh">
+      <div
+        class="container-fluid bg-dark text-light pt-4 pb-4"
+        style="min-height: 100vh"
+      >
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
               <h1
                 class="text-light mt-5 mb-5 text-center"
                 style="font-weight: 500"
-              >Zero to Hero Education</h1>
+              >
+                Zero to Hero Education
+              </h1>
               <Choose :compact="true" class="mt-5" />
             </div>
           </div>

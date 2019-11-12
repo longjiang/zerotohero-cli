@@ -6,6 +6,9 @@ const Dictionary = {
   index: {},
   cache: {},
   tables: [],
+  credit() {
+    return '英汉词典由<a href="https://github.com/skywind3000/ECDICT">ECDICT</a>提供, 开源并以<a href="https://github.com/skywind3000/ECDICT/blob/master/LICENSE">MIT License</a>发行。'
+  },
   loadWords() {
     console.log('Loading words...')
     return new Promise(resolve => {

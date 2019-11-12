@@ -2,6 +2,9 @@ const Dictionary = {
   file: '../data/edict/edict.tsv.txt',
   words: [],
   name: 'edict',
+  credit() {
+    return 'The Japanese dictionary is provided by <a href="http://www.edrdg.org/jmdict/edict.html">EDICT</a>, open-source and distribtued under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 license</a>.'
+  },
   load() {
     return new Promise(resolve => {
       Papa.parse(this.file, {
