@@ -24,7 +24,11 @@
             <span
               v-html="
                 highlight
-                  ? Helper.highlight(line.line, highlight, word.level || 'outside')
+                  ? Helper.highlight(
+                      line.line,
+                      highlight,
+                      word.level || 'outside'
+                    )
                   : line.line
               "
             />
@@ -55,45 +59,53 @@
               <div
                 v-if="$l2.code !== $l1.code"
                 :class="{
-                'transcript-line-l1': true,
-                'text-right':
-                  $l2.scripts &&
-                  $l2.scripts.length > 0 &&
-                  $l2.scripts[0].direction === 'rtl'
-              }"
+                  'transcript-line-l1': true,
+                  'text-right':
+                    $l2.scripts &&
+                    $l2.scripts.length > 0 &&
+                    $l2.scripts[0].direction === 'rtl'
+                }"
               >
                 <template
                   v-for="parallelLine in parallellines.filter(
-                  l => l.starttime === reviewItem.line.starttime
-                )"
+                    l => l.starttime === reviewItem.line.starttime
+                  )"
                 >
                   <span v-html="parallelLine.line" />
                 </template>
               </div>
               <Annotate tag="div" class="transcript-line-chinese">
-                <span v-html="Helper.highlight(reviewItem.line.line, reviewItem.text, hsk)" />
+                <span
+                  v-html="
+                    Helper.highlight(reviewItem.line.line, reviewItem.text, hsk)
+                  "
+                />
               </Annotate>
               <div class="mt-2">
                 <button
                   v-for="answer in reviewItem.answers"
                   :class="{
-                  'btn': true,
-                  'btn-small': true,
-                  'bg-white': true,
-                  'mr-2': true,
-                  'review-answer': true,
-                  'checked': false,
-                  'review-answer-correct': answer.correct
-                }"
+                    btn: true,
+                    'btn-small': true,
+                    'bg-white': true,
+                    'mr-2': true,
+                    'review-answer': true,
+                    checked: false,
+                    'review-answer-correct': answer.correct
+                  }"
                   @click="answerClick"
-                >{{ answer.text }}</button>
+                >
+                  {{ answer.text }}
+                </button>
               </div>
             </div>
           </div>
         </template>
       </template>
     </div>
-    <ShowMoreButton v-if="collapse" :data-bg-level="hsk ? hsk : 'outside'">Show More</ShowMoreButton>
+    <ShowMoreButton v-if="collapse" :data-bg-level="hsk ? hsk : 'outside'"
+      >Show More</ShowMoreButton
+    >
   </div>
 </template>
 
@@ -170,14 +182,21 @@ export default {
     answerClick(e) {
       $(e.target).addClass('checked')
       if ($(e.target).hasClass('review-answer-correct')) {
-        $(e.target).parents('.review').addClass('show-answer')
+        $(e.target)
+          .parents('.review')
+          .addClass('show-answer')
       }
     },
     async findSimilar(text) {
       let words = await (await this.$dictionary).lookupFuzzy(text)
       words = words.filter(word => word.head !== text)
       words = Helper.uniqueByValue(words, 'head')
-      return words.map(word => word.head).sort((a,b) => Math.abs(a.length - text.length) - Math.abs(b.length - text.length))
+      return words
+        .map(word => word.head)
+        .sort(
+          (a, b) =>
+            Math.abs(a.length - text.length) - Math.abs(b.length - text.length)
+        )
     },
     async updateWords() {
       let review = {}
@@ -190,13 +209,24 @@ export default {
           let word = await (await this.$dictionary).get(savedWord.id)
           if (word) {
             let seenLines = []
-            for (let form of savedWord.forms.filter(form => form !== '-').sort((a, b) => b.length - a.length)) {
+            for (let form of savedWord.forms
+              .filter(form => form !== '-')
+              .sort((a, b) => b.length - a.length)) {
               for (let lineIndex in this.lines) {
                 if (!seenLines.includes(lineIndex)) {
                   let line = this.lines[lineIndex]
-                  if (line.line.includes(form)) {
+                  if (
+                    (this.$l1.continua && line.line.includes(form)) ||
+                    (!this.$l1.continua &&
+                      (new RegExp(`[ .,:!?]${form}[ .,:!?]`, 'gi').test(
+                        line.line
+                      ) ||
+                        new RegExp(`^${form}[ .,:!?]`, 'gi').test()))
+                  ) {
                     let reviewIndex = Math.min(
-                      Number(lineIndex) + lineOffset + Math.floor(form.length/2),
+                      Number(lineIndex) +
+                        lineOffset +
+                        Math.floor(form.length / 2),
                       this.lines.length - 1
                     )
                     let answers = await this.findSimilar(form)
@@ -279,7 +309,7 @@ export default {
   background-color: #f3f3f3;
   border-radius: 0.5rem;
   &.show-answer {
-    background-color: #d6f5d8
+    background-color: #d6f5d8;
   }
 }
 
@@ -290,7 +320,7 @@ export default {
   }
   .highlight * {
     opacity: 0;
-    pointer-events: none
+    pointer-events: none;
   }
 }
 
