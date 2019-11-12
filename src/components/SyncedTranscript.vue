@@ -190,7 +190,7 @@ export default {
           let word = await (await this.$dictionary).get(savedWord.id)
           if (word) {
             let seenLines = []
-            for (let form of savedWord.forms) {
+            for (let form of savedWord.forms.filter(form => form !== '-').sort((a, b) => b.length - a.length)) {
               for (let lineIndex in this.lines) {
                 if (!seenLines.includes(lineIndex)) {
                   let line = this.lines[lineIndex]

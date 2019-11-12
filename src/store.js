@@ -76,8 +76,8 @@ export default new Vuex.Store({
             item => item.id && item.id === options.id
           )
         } else {
-            yes = state.savedWords[options.l2].find(
-            item => item.forms.includes(options.text)
+          yes = state.savedWords[options.l2].find(
+            item => item.forms.map(form => form.toLowerCase()).includes(options.text.toLowerCase())
           ) 
         }
         return yes
