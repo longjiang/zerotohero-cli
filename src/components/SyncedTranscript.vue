@@ -1,8 +1,8 @@
 <template>
   <div class="synced-transcript">
     <div
-      id="transcript"
       :class="{
+        'transcript': true,
         'mb-4': true,
         collapsed: collapse
       }"
@@ -18,7 +18,7 @@
             'transcript-line-current': currentLine === line
           }"
           @click="seekVideoTo(line.starttime)"
-          :id="`transcript-line-${lineIndex}`"
+          :id="`transcript-line-${id}-${lineIndex}`"
         >
           <Annotate tag="div" class="transcript-line-chinese">
             <span
@@ -27,14 +27,14 @@
                   ? Helper.highlight(
                       line.line,
                       highlight,
-                      word.level || 'outside'
+                      hsk || 'outside'
                     )
                   : line.line
               "
             />
           </Annotate>
           <div
-            v-if="$l2.code !== $l1.code"
+            v-if="$l2.code !== $l1.code && parallellines"
             :class="{
               'transcript-line-l1': true,
               'text-right':
@@ -57,7 +57,7 @@
             <h6>Pop Quiz</h6>
             <div class="review-item mt-2">
               <div
-                v-if="$l2.code !== $l1.code"
+                v-if="$l2.code !== $l1.code && parallellines"
                 :class="{
                   'transcript-line-l1': true,
                   'text-right':
@@ -141,6 +141,7 @@ export default {
   data() {
     return {
       sW: [],
+      id: Helper.uniqueId(),
       Helper,
       currentTime: 0,
       currentLine: this.lines ? this.lines[0] : undefined,
@@ -277,7 +278,7 @@ export default {
       }
     },
     scrollTo(lineIndex) {
-      let el = document.getElementById(`transcript-line-${lineIndex}`)
+      let el = document.getElementById(`transcript-line-${this.id}-${lineIndex}`)
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
     },
     previousLine() {
@@ -303,42 +304,6 @@ export default {
 </script>
 
 <style lang="scss">
-.review {
-  margin: 0.5rem 0;
-  padding: 1rem;
-  background-color: #f3f3f3;
-  border-radius: 0.5rem;
-  &.show-answer {
-    background-color: #d6f5d8;
-  }
-}
-
-.review:not(.show-answer) {
-  .highlight {
-    background-color: #ccc;
-    border-radius: 0.2rem;
-  }
-  .highlight * {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-.review-answer {
-  border: 1px solid #999;
-}
-
-.review-answer.checked:not(.review-answer-correct) {
-  background-color: #dc3838 !important;
-  border-color: #a03030 !important;
-  color: white !important;
-}
-
-.review-answer.checked.review-answer-correct {
-  background-color: #63ab67 !important;
-  border-color: #36823b !important;
-  color: white !important;
-}
 
 .transcript.collapsed .transcript-line:nth-child(n + 6) {
   display: none;
@@ -375,5 +340,42 @@ export default {
 }
 .show-translation .transcript-line-l1 {
   display: inherit;
+}
+
+.review {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  border-radius: 0.5rem;
+  &.show-answer {
+    background-color: #d6f5d8;
+  }
+}
+
+.review:not(.show-answer) {
+  .highlight {
+    background-color: #ccc;
+    border-radius: 0.2rem;
+  }
+  .highlight * {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.review-answer {
+  border: 1px solid #999;
+}
+
+.review-answer.checked:not(.review-answer-correct) {
+  background-color: #dc3838 !important;
+  border-color: #a03030 !important;
+  color: white !important;
+}
+
+.review-answer.checked.review-answer-correct {
+  background-color: #63ab67 !important;
+  border-color: #36823b !important;
+  color: white !important;
 }
 </style>
