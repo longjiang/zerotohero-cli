@@ -266,7 +266,7 @@ const Dictionary = {
         }
       }
     }
-    return words.sort((a,b) => b.score - a.score).slice(0, limit)
+    return this.uniqueByValue(words, 'id').sort((a,b) => b.score - a.score).slice(0, limit)
   },
   randomArrayItem(array, start = 0, length = false) {
     length = length || array.length

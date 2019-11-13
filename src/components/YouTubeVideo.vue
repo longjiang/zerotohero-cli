@@ -47,7 +47,9 @@ export default {
   },
   methods: {
     currentTime() {
-      this.paused = this.player.getPlayerState() !== 1
+      if (this.player) {
+        this.paused = this.player.getPlayerState() !== 1
+      }
       return this.player && this.player.getCurrentTime
         ? this.player.getCurrentTime()
         : 0
