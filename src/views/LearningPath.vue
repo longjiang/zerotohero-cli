@@ -1,12 +1,14 @@
 <template>
   <div class="container main pt-5 pb-5">
+    <h2>{{ $l2.name }} Learning Path</h2>
+    <p class="mb-5">From zero to mastery in <b>{{ (($l2.hours || 1100) * 4).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }} hours</b> </p>
     <div class="learning-path">
       <div class="level">
         <h4 class="level-title">Getting to know {{ $l2.name }}</h4>
         <div v-if="$l2.omniglot" class="level-activity">
           <Resource
             :resource="{
-            title: `Basic information about ${$l2.name} and quick phrases on Omniglot`,
+            title: `Basic information, useful phrases`,
             url: `/#/${$l1.code}/${
               $l2.code
             }/book/chapter/https%3A%2F%2Fwww.omniglot.com%2Fwriting%2F${encodeURIComponent(

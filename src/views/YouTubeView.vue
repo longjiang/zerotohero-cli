@@ -178,11 +178,6 @@ export default {
       this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
     }
   },
-  computed: {
-    paused() {
-      return this.$refs.youtube.paused
-    }
-  },
   data() {
     return {
       location,
@@ -194,6 +189,7 @@ export default {
       loading: true,
       l2Locale: undefined,
       saved: undefined,
+      paused: true,
       levels: Helper.levels(this.$l2),
       topics: Helper.topics
     }
@@ -373,6 +369,9 @@ export default {
         this.$refs.transcript.currentTime = this.$refs.youtube
           ? this.$refs.youtube.currentTime()
           : 0
+      }
+      if (this.$refs.youtube) {
+        this.paused = this.$refs.youtube.paused
       }
     }, 1000)
   },

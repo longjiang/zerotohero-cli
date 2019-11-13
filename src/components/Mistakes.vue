@@ -5,6 +5,7 @@
       <div v-if="mistakes && mistakes.length > 0">
         <ul class="collapsed pl-0" data-collapse-target>
           <li class="list-unstyled mistake-item mt-4 mb-4" v-for="mistake in mistakes">
+            <i class="fas fa-times mistake-item-icon"></i>
             <span class="mistake-context collapsed" data-collapse-target>
               <Annotate :showTranslate="true"><span>{{ mistake.leftContext }}</span></Annotate>
             </span>
@@ -147,9 +148,7 @@ export default {
   position: relative;
 }
 
-.mistake-item:before {
-  content: '\e014';
-  font-family: 'Glyphicons Halflings';
+.mistake-item-icon {
   position: absolute;
   left: 0;
   top: 0.2rem;
