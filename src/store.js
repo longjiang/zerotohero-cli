@@ -77,7 +77,7 @@ export default new Vuex.Store({
           )
         } else {
           yes = state.savedWords[options.l2].find(
-            item => item.forms.map(form => form.toLowerCase()).includes(options.text.toLowerCase())
+            item => item.forms.map(form => form ? form.toLowerCase() : '').includes(options.text.toLowerCase())
           ) 
         }
         return yes
