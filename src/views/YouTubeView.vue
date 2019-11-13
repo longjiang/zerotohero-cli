@@ -343,17 +343,19 @@ export default {
     },
     bindKeys() {
       window.onkeydown = e => {
-        if (e.keyCode == 32) { // Spacebar
-          this.togglePaused()
-          return false
-        }
-        if (e.keyCode == 38) { // Up arrow
-          this.$refs.transcript.previousLine()
-          return false
-        }
-        if (e.keyCode == 40) { // Down arrow
-          this.$refs.transcript.nextLine()
-          return false
+        if (e.target.tagName.toUpperCase() !== 'INPUT') {
+          if (e.keyCode == 32) { // Spacebar
+            this.togglePaused()
+            return false
+          }
+          if (e.keyCode == 38) { // Up arrow
+            this.$refs.transcript.previousLine()
+            return false
+          }
+          if (e.keyCode == 40) { // Down arrow
+            this.$refs.transcript.nextLine()
+            return false
+          }
         }
       }
     },
