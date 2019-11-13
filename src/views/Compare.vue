@@ -241,6 +241,16 @@ export default {
           this.a = resultsA[0]
           let resultsB = await (await this.$dictionary).lookupbare(bId)
           this.b = resultsB[0]
+        } else if (method === 'simplified') {
+          let resultsA = await (await this.$dictionary).lookupSimplified(args[0])
+          this.a = resultsA[0]
+          let resultsB = await (await this.$dictionary).lookupSimplified(args[1])
+          this.b = resultsB[0]
+        } else if (method === 'traditional') {
+          let resultsA = await (await this.$dictionary).lookupTraditional(args[0])
+          this.a = resultsA[0]
+          let resultsB = await (await this.$dictionary).lookupTraditional(args[1])
+          this.b = resultsB[0]
         } else {
           this.a = await (await this.$dictionary).get(aId)
           this.b = await (await this.$dictionary).get(bId)

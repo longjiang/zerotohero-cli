@@ -179,6 +179,20 @@ const Dictionary = {
       })
     return candidates
   },
+  lookupTraditional(traditional, pinyin = false) {
+    const candidates = this.words
+      .filter(row => {
+        let pinyinMatch = true
+        if (pinyin.length > 0) {
+          pinyinMatch = row.pinyin === pinyin
+        }
+        return pinyinMatch && row.traditional === traditional
+      })
+      .sort((a, b) => {
+        return b.weight - a.weight
+      })
+    return candidates
+  },
   lookupByPattern(pattern) {
     // pattern like '～体'
     var results = []
