@@ -31,6 +31,15 @@
         />
         <label for="show-translation">Show translation</label>
       </div>
+      <div class="form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="show-quiz"
+          v-model="showQuiz"
+        />
+        <label for="show-quiz">Show pop quiz</label>
+      </div>
       <div class="form-check" v-if="['zh', 'yue'].includes($l2.code)">
         <input
           type="radio"
@@ -96,7 +105,9 @@ export default {
         localStorage.getItem('zthHidePinyinExceptSaved') === 'false'
           ? true
           : false,
-      useTraditional: localStorage.getItem('zthUseTraditional') === 'true'
+      useTraditional: localStorage.getItem('zthUseTraditional') === 'true',
+      showQuiz:
+        localStorage.getItem('zthShowQuiz') === 'false' ? false : true
     }
   },
   watch: {
@@ -115,6 +126,10 @@ export default {
     showTranslation() {
       localStorage.setItem('zthShowTranslation', this.showTranslation)
       this.$parent.$parent.showTranslation = this.showTranslation
+    },
+    showQuiz() {
+      localStorage.setItem('zthShowQuiz', this.showQuiz)
+      this.$parent.$parent.showQuiz = this.showQuiz
     }
   }
 }
