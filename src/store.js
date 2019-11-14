@@ -70,17 +70,17 @@ export default new Vuex.Store({
   getters: {
     hasSavedWord: state => options => {
       if (state.savedWords[options.l2]) {
-        let yes = false
+        let savedWord = false
         if(options.id) {
-          yes = state.savedWords[options.l2].find(
+          savedWord = state.savedWords[options.l2].find(
             item => item.id && item.id === options.id
           )
         } else {
-          yes = state.savedWords[options.l2].find(
+          savedWord = state.savedWords[options.l2].find(
             item => item.forms.map(form => form ? form.toLowerCase() : '').includes(options.text.toLowerCase())
           ) 
         }
-        return yes
+        return savedWord
       }
     },
     savedWordCount: state => options => {

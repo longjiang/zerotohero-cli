@@ -23,7 +23,7 @@
         <span
           class="word-block-pinyin"
           v-if="transliteration && transliteration !== token.candidates[0].head"
-        >{{ transliteration }}</span>
+        >{{ savedTransliteration || transliteration }}</span>
         <span v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)" class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
         <span v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)" class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
         <span v-else class="word-block-text">{{ token.candidates[0].head }}</span>
@@ -32,7 +32,7 @@
         <span
           class="word-block-pinyin"
           v-if="transliteration && transliteration !== text"
-        >{{ transliteration }}</span>
+        >{{ savedTransliteration || transliteration }}</span>
         <span class="word-block-text">
           <template v-if="$l2.code === 'ru' && text.length > 9">{{ segment(text) }}</template>
           <slot v-else></slot>
@@ -130,6 +130,7 @@ export default {
   data() {
     return {
       transliteration: undefined,
+      savedTransliteration: undefined,
       id: `wordblock-${Helper.uniqueId()}`,
       hover: false,
       loading: true,
@@ -145,8 +146,7 @@ export default {
   },
   computed: mapState(['savedWords']),
   mounted() {
-    this.update()
-    if (this.$hasFeature('transliteration')) {
+    if (!this.transliteration && this.$hasFeature('transliteration')) {
       if (this.token && this.token.candidates && this.token.candidates.length > 0) {
         if (this.$l2.code === 'ja' && this.token.candidates[0].kana) {
           this.transliteration = this.token.candidates[0].kana
@@ -158,10 +158,11 @@ export default {
           this.transliteration = tr(this.token.candidates[0].head)
         }
       }
-      if (!this.transliteration) {
+      if (!this.transliteration && !['ja', 'zh', 'nan', 'hak'].includes(this.$l2.code)) {
         this.transliteration = tr(this.text)
       }
     }
+    this.update()
   },
   watch: {
     savedWords() {
@@ -176,25 +177,34 @@ export default {
       return text.replace(/([́ёеуюйыаоэяицкнгшщзхъфвпрлджчсмтьб])([цкнгшщзхъфвпрлджчсмтб])/gi, '$1·$2').replace(/·([цкнгшщзхъфвпрлджчсмтб])([цкнгшщзхъфвпрлджчсмтб])/gi, '$1·$2').replace(/·([цкнгшщзхъфвпрлджчсмтб])ь/gi, '$1ь').replace(/·([цкнгшщзхъфвпрлджчсмтб])·/gi, '·$1').replace(/^(.)·/, '$1').replace(/·(.)$/, '$1')
       //([ёеуюйыаоэяи])
     },
-    update() {
+    async update() {
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
+      let savedWord = false
       if (this.token) {
         for(let word of this.token.candidates) {
-          if (this.$store.getters.hasSavedWord({
+          savedWord = this.$store.getters.hasSavedWord({
             l2: this.$l2.code,
             text: word.bare
-          })) {
-            this.saved = true
-          }
+          })
         }
       } else {
-        this.saved = this.$slots.default
-          ? this.$store.getters.hasSavedWord({
+        if (this.$slots.default) {
+          savedWord = this.$store.getters.hasSavedWord({
             l2: this.$l2.code,
             text: this.$slots.default[0].text.toLowerCase()
           })
-          : false
+        }
+      }
+      if (savedWord && savedWord.id && ['ja', 'zh', 'nan', 'hak'].includes(this.$l2.code)) {
+        let word = await (await this.$dictionary).get(savedWord.id)
+        let text = this.text || (this.token && this.token.candidates.length > 0 ? this.token.candidates[0].head : undefined)
+        if (word && word.head && word.head === text) {
+          this.savedTransliteration = word.jyutping || word.pinyin || word.kana || this.transliteration
+        }
+        this.saved = word ? word : false
+      } else {
+        this.saved = savedWord ? savedWord : false
       }
     },
     matchCase(text) {
@@ -262,11 +272,6 @@ export default {
           }
         }
         this.words = words
-        if (this.$l2.code === 'ja') {
-          if (this.words && this.words.length > 0 && this.words[0].kana && this.words[0].bare === this.text && this.words[0].kana !== this.text) {
-            this.transliteration = this.words[0].kana
-          }
-        }
       }
       this.loading = false
     },

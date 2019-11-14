@@ -142,7 +142,7 @@ export default {
               html += `<WordBlock :token="tokenized[${batchId}][${index}]"/>`
             }
           } else {
-            html += `<span class="word-block-text">${item}</span>`
+            html += `<WordBlock>${item}</WordBlock>`
           }
         }
       } else {
