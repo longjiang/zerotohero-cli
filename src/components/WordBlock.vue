@@ -192,7 +192,7 @@ export default {
         if (this.$slots.default) {
           savedWord = this.$store.getters.hasSavedWord({
             l2: this.$l2.code,
-            text: this.$slots.default[0].text.toLowerCase()
+            text: this.$slots.default && this.$slots.default[0] && this.$slots.default[0].text ? this.$slots.default[0].text.toLowerCase() : ''
           })
         }
       }

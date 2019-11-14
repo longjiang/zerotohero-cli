@@ -73,14 +73,6 @@
 import Helper from '@/lib/helper'
 import Marked from 'marked'
 
-const Reader = {
-  get() {
-    return localStorage.getItem('fzhReaderText')
-  },
-  save(text) {
-    localStorage.setItem('fzhReaderText', text)
-  }
-}
 
 export default {
   template: '#reader-template',
@@ -110,7 +102,7 @@ export default {
     },
     text() {
       this.readerKey++
-      Reader.save(this.text)
+      this.save(this.text)
     }
   },
   mounted() {
@@ -120,6 +112,31 @@ export default {
     }
   },
   methods: {
+    getSaved() {
+      let json = localStorage.getItem('zthReaderText')
+      try {
+        if (json) {
+          let saved = JSON.parse(json)
+          return saved
+        }
+      } catch(e) {
+
+      }
+    },
+    get() {
+      let saved = this.getSaved()
+      if (saved) {
+        return saved[this.$l2.code] || localStorage.getItem('fzhReaderText')
+      } else {
+        return localStorage.getItem('fzhReaderText')
+      }
+    },
+    save(text) {
+      let saved = this.getSaved() || {}
+      saved[this.$l2.code] = text
+      localStorage.setItem('zthReaderText', JSON.stringify(saved))
+      localStorage.removeItem('fzhReaderText')
+    },
     togglePresentMode() {
       this.presentMode = !this.presentMode 
     },
@@ -137,7 +154,7 @@ export default {
     },
     startClick() {
       if (this.text) {
-        Reader.save(this.text)
+        this.save(this.text)
         this.readerKey++
       }
     },
@@ -177,7 +194,7 @@ export default {
         }
       } else {
         if (!this.text) {
-          const text = Reader.get()
+          const text = this.get()
           if (text) {
             this.text = text
             // this.show()
