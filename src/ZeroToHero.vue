@@ -106,7 +106,8 @@ export default {
         localStorage.getItem('zthHidePinyinExceptSaved') === 'false' ? false : true,
       useTraditional: localStorage.getItem('zthUseTraditional') === 'true',
       showTranslation:
-        localStorage.getItem('zthShowTranslation') === 'false' ? false : true
+        localStorage.getItem('zthShowTranslation') === 'false' ? false : true,
+      showQuiz: localStorage.getItem('zthShowQuiz') === 'false' ? false : true,
     }
   },
   methods: {
@@ -180,6 +181,9 @@ export default {
     showTranslation() {
       this.updateClasses()
     },
+    showQuiz() {
+      Vue.prototype.$showQuiz = this.showQuiz
+    },
     async $route() {
       this.$ga.page(this.$route.path)
       if (this.$route.params.l1 && this.$route.params.l2) {
@@ -204,6 +208,7 @@ export default {
               })
               .includes(feature)
           }
+          Vue.prototype.$showQuiz = this.showQuiz
           let dictionaries = this.$l1.dictionaries // ['freedict']
             ? this.$l1.dictionaries[this.$l2['iso639-3']]
             : undefined

@@ -151,11 +151,14 @@ export default {
     }
   },
   mounted() {
-    this.updateWords()
+    this.updateReview()
   },
   watch: {
+    $showQuiz() {
+      this.updateReview()
+    },
     savedWords() {
-      this.updateWords()
+      this.updateReview()
     },
     currentTime() {
       for (let lineIndex = this.lines.length - 1; lineIndex >= 0; lineIndex--) {
@@ -199,10 +202,11 @@ export default {
             Math.abs(a.length - text.length) - Math.abs(b.length - text.length)
         )
     },
-    async updateWords() {
+    async updateReview() {
       let review = {}
       let lineOffset = 10 // Show review this number of lines after the first appearance of the word
       if (
+        this.$showQuiz &&
         this.$store.state.savedWords &&
         this.$store.state.savedWords[this.$l2.code]
       ) {
