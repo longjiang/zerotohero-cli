@@ -52,7 +52,7 @@
         <p>{{ $t('Search for more sentences at') }}</p>
         <a
           :href="
-            `https://tatoeba.org/eng/sentences/search?from=rus&to=eng&query=${term}`
+            `https://tatoeba.org/eng/sentences/search?from=${$l2['iso639-3']}&to=${$l1['iso639-3']}&query=${term}`
           "
           target="_blank"
         >
