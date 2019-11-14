@@ -211,14 +211,14 @@ export default {
           if (word) {
             let seenLines = []
             for (let form of savedWord.forms
-              .filter(form => form !== '-')
+              .filter(form => form && form !== '-')
               .sort((a, b) => b.length - a.length)) {
               for (let lineIndex in this.lines) {
                 if (!seenLines.includes(lineIndex)) {
                   let line = this.lines[lineIndex]
                   if (
-                    (this.$l1.continua && line.line.includes(form)) ||
-                    (!this.$l1.continua &&
+                    (this.$l2.continua && line.line.includes(form)) ||
+                    (!this.$l2.continua &&
                       (new RegExp(`[ .,:!?]${form}[ .,:!?]`, 'gi').test(
                         line.line
                       ) ||
