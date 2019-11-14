@@ -68,7 +68,7 @@
             <span style="color: #999" v-else-if="word.kana && word.kana !== word.bare">{{ word.kana }}</span>
             <span style="color: #999" v-else-if="$hasFeature('transliteration')">{{ tr(word.bare) }}</span>
             <span style="color: #999" v-if="word.jyutping && word.pinyin"> / {{ word.pinyin }}</span>
-            <Speak :text="word.bare" :mp3="word.audio" :wiktionary="word.wiktionary" class="ml-1" />
+            <Speak :text="word.kana || word.bare" :mp3="word.audio" :wiktionary="word.wiktionary" class="ml-1" />
           </div>
           <Star :word="word" :text="text" class="mr-1" style="position: relative; bottom: 0.1rem"></Star>
           <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ $l2.code === 'ru' && text.length > 9 ? segment(word.accented) : word.accented }}</b>
