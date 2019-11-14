@@ -96,30 +96,72 @@ export default {
   data() {
     return {
       Config,
+      updateSettings: 0,
       classes: undefined,
       languages: [],
       langsLoaded: false,
       focus: false,
       loaded: false,
-      showDefinition: localStorage.getItem('zthShowDefinition') === 'true',
-      hidePinyinExceptSaved:
-        localStorage.getItem('zthHidePinyinExceptSaved') === 'false' ? false : true,
-      useTraditional: localStorage.getItem('zthUseTraditional') === 'true',
-      showTranslation:
-        localStorage.getItem('zthShowTranslation') === 'false' ? false : true,
-      showQuiz: localStorage.getItem('zthShowQuiz') === 'false' ? false : true,
     }
   },
   methods: {
+    loadSettings() {
+      Vue.prototype.$settings = Object.assign({
+        showDefinition: false,
+        showTranslation: true,
+        showPinyin: true,
+        useTraditional: false,
+        showQuiz: true,
+      }, JSON.parse(localStorage.getItem('zthSettings')))
+    },
+    async loadLanguages() {
+      Vue.prototype.$hasFeature = feature => {
+        return this.$languages
+          .getFeatures({
+            l1: this.$l1,
+            l2: this.$l2
+          })
+          .includes(feature)
+      }
+      let dictionaries = this.$l1.dictionaries // ['freedict']
+        ? this.$l1.dictionaries[this.$l2['iso639-3']]
+        : undefined
+      if (!Vue.prototype.$dictionary && dictionaries) {
+        Vue.prototype.$dictionaryName = dictionaries[0] // 'freedict'
+        Vue.prototype.$dictionary = Dict.load({
+          dict: Vue.prototype.$dictionaryName,
+          l1: this.$l1['iso639-3'],
+          l2: this.$l2['iso639-3']
+        })
+      }
+      if (
+        !Vue.prototype.$hanzi &&
+        ['zh', 'ko', 'ja'].includes(this.$l2.code)
+      ) {
+        Vue.prototype.$hanzi = (await import(
+          `@/lib/hanzi.js`
+        )).default.load()
+        Vue.prototype.$unihan = (await import(
+          `@/lib/unihan.js`
+        )).default.load()
+      }
+      if (!Vue.prototype.$grammar && ['zh'].includes(this.$l2.code)) {
+        Vue.prototype.$grammar = (await import(
+          `@/lib/grammar.js`
+        )).default.load()
+      }
+      this.langsLoaded = true
+    },
     updateClasses() {
+      console.log('updating classes')
       this.classes = {
         'hide-except-focus': this.focus,
-        'show-pinyin': !this.hidePinyinExceptSaved,
-        'show-pinyin-for-saved': this.hidePinyinExceptSaved,
-        'show-simplified': !this.useTraditional,
-        'show-traditional': this.useTraditional,
-        'show-definition': this.showDefinition,
-        'show-translation': this.showTranslation
+        'show-pinyin': this.$settings.showPinyin,
+        'show-pinyin-for-saved': !this.$settings.showPinyin && this.$l2.han,
+        'show-simplified': !this.$settings.useTraditional,
+        'show-traditional': this.$settings.useTraditional,
+        'show-definition': this.$settings.showDefinition,
+        'show-translation': this.$settings.showTranslation
       }
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
@@ -169,20 +211,8 @@ export default {
     }
   },
   watch: {
-    showDefinition() {
+    updateSettings() {
       this.updateClasses()
-    },
-    hidePinyinExceptSaved() {
-      this.updateClasses()
-    },
-    useTraditional() {
-      this.updateClasses()
-    },
-    showTranslation() {
-      this.updateClasses()
-    },
-    showQuiz() {
-      Vue.prototype.$showQuiz = this.showQuiz
     },
     async $route() {
       this.$ga.page(this.$route.path)
@@ -197,46 +227,11 @@ export default {
           // first time loading, set the language
           await this.setL1()
           await this.setL2()
-          this.updateClasses()
+          this.loadLanguages()
           this.updateFavicon()
           this.updateTitle()
-          Vue.prototype.$hasFeature = feature => {
-            return this.$languages
-              .getFeatures({
-                l1: this.$l1,
-                l2: this.$l2
-              })
-              .includes(feature)
-          }
-          Vue.prototype.$showQuiz = this.showQuiz
-          let dictionaries = this.$l1.dictionaries // ['freedict']
-            ? this.$l1.dictionaries[this.$l2['iso639-3']]
-            : undefined
-          if (!Vue.prototype.$dictionary && dictionaries) {
-            Vue.prototype.$dictionaryName = dictionaries[0] // 'freedict'
-            Vue.prototype.$dictionary = Dict.load({
-              dict: Vue.prototype.$dictionaryName,
-              l1: this.$l1['iso639-3'],
-              l2: this.$l2['iso639-3']
-            })
-          }
-          if (
-            !Vue.prototype.$hanzi &&
-            ['zh', 'ko', 'ja'].includes(this.$l2.code)
-          ) {
-            Vue.prototype.$hanzi = (await import(
-              `@/lib/hanzi.js`
-            )).default.load()
-            Vue.prototype.$unihan = (await import(
-              `@/lib/unihan.js`
-            )).default.load()
-          }
-          if (!Vue.prototype.$grammar && ['zh'].includes(this.$l2.code)) {
-            Vue.prototype.$grammar = (await import(
-              `@/lib/grammar.js`
-            )).default.load()
-          }
-          this.langsLoaded = true
+          this.loadSettings()
+          this.updateClasses()
         }
       }
     }

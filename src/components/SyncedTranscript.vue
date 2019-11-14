@@ -154,7 +154,7 @@ export default {
     this.updateReview()
   },
   watch: {
-    $showQuiz() {
+    $settings() {
       this.updateReview()
     },
     savedWords() {

@@ -3,6 +3,16 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
+          <div class="jumbotron mt-5 p-4 bg-warning text-dark">
+            Settings are <b>automatically saved</b> as soon as you make the
+            change.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
           <h1 class="page-title mb-4">
             {{ $t('Settings') }}
           </h1>
@@ -35,16 +45,6 @@
     </div>
     <div class="container-fluid">
       <CorpusSelect />
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="jumbotron mt-5 p-4 bg-warning text-dark">
-            Settings are <b>automatically saved</b> as soon as you make the
-            change.
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>

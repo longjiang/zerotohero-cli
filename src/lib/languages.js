@@ -433,6 +433,7 @@ export default {
     for (let l1 of l1s) {
       l1.apostrophe = ['tlh', 'cy', 'uz', 'br'].includes(l1.code)
       l1.continua = ['zh', 'yue', 'nan', 'hak', 'th', 'lo', 'ja', 'km', 'ryu', 'bo', 'my'].includes(l1.code)
+      l1.han = ['zh', 'yue', 'nan', 'hak', 'ja'].includes(l1.code)
       l1.scripts = this.scripts.filter(script => script.lang === l1.code && script.ms !== 'N' && script.p !== 'N' && script.ml !== 'O')
       let omniglot = this.omniglot.find(item => item['iso639-3'] === l1['iso639-3'])
       if (omniglot) {

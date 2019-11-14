@@ -7,7 +7,7 @@
           <label for="show-pinyin">
             Show
             <span v-if="$l2.code === 'zh'">pinyin</span>
-            <span v-if="$l2.code === 'ja'">furigana</span>
+            <span v-else-if="$l2.code === 'ja'">furigana</span>
             <span v-else>romanization</span>
             above words
           </label>
@@ -68,7 +68,7 @@
           <p>《标准教程 HSK 6》第18课课文</p>
           <p>春天，孩子们在楼旁空地上开出一个小小的花园，随即种上了一棵树、几株花和几粒丝瓜种子。土壤不是很肥沃，但有水的滋润，阳光的照耀，没几天，丝瓜就从土里冒了出来，接着我惊讶地发现，它好像每时每刻都在长大。看着丝瓜，我心中难免不解:古人是怎么想的，愣是编出个拔苗助长的故事来？要是我，宁愿用别的比喻。</p>
         </div>
-        <div v-if="$l2.code === 'yue'">
+        <div v-else-if="$l2.code === 'yue'">
           <h4>隨想</h4>
           <p>大家有玩開social media、例如FB同Telegram之類嗰啲，最近有冇發現，多咗好多新朋友？</p>
           <p>某個早上，我起身後，繼續做碌FB之類嘅老人家morning ritual，然後我見到篇呢期好常見嘅陰毛論post，詳細講乜我都唔記得（應該同彥霖老母有關），但當我望一望究竟係邊個些牙嗰陣，咦？條茂利我都唔撚識佢嘅！？名又唔識樣又冇得睇，你點樣鼠入我個newsfeed度㗎？！</p>
@@ -95,41 +95,45 @@
 </template>
 
 <script>
+import Vue from 'vue'
 export default {
   data() {
     return {
-      showDefinition: localStorage.getItem('zthShowDefinition') === 'true',
-      showTranslation:
-        localStorage.getItem('zthShowTranslation') === 'false' ? false : true,
-      showPinyin:
-        localStorage.getItem('zthHidePinyinExceptSaved') === 'false'
-          ? true
-          : false,
-      useTraditional: localStorage.getItem('zthUseTraditional') === 'true',
-      showQuiz:
-        localStorage.getItem('zthShowQuiz') === 'false' ? false : true
+      showDefinition: this.$settings.showDefinition,
+      showTranslation: this.$settings.showTranslation,
+      showPinyin: this.$settings.showPinyin,
+      useTraditional: this.$settings.useTraditional,
+      showQuiz: this.$settings.showQuiz,
+    }
+  },
+  methods: {
+    saveSettings() {
+      this.$settings = Object.assign(this.$settings, {
+        showDefinition: this.showDefinition,
+        showPinyin: this.showPinyin,
+        useTraditional: this.useTraditional,
+        showTranslation: this.showTranslation,
+        showQuiz: this.showQuiz
+      }, this.$settings)
+      localStorage.setItem('zthSettings', JSON.stringify(this.$settings))
+      this.$parent.$parent.updateSettings++
     }
   },
   watch: {
     showDefinition() {
-      localStorage.setItem('zthShowDefinition', this.showDefinition)
-      this.$parent.$parent.showDefinition = this.showDefinition
+      this.saveSettings()
     },
     showPinyin() {
-      localStorage.setItem('zthHidePinyinExceptSaved', !this.showPinyin)
-      this.$parent.$parent.hidePinyinExceptSaved = !this.showPinyin
+      this.saveSettings()
     },
     useTraditional() {
-      localStorage.setItem('zthUseTraditional', this.useTraditional === 'true')
-      this.$parent.$parent.useTraditional = this.useTraditional === 'true'
+      this.saveSettings()
     },
     showTranslation() {
-      localStorage.setItem('zthShowTranslation', this.showTranslation)
-      this.$parent.$parent.showTranslation = this.showTranslation
+      this.saveSettings()
     },
     showQuiz() {
-      localStorage.setItem('zthShowQuiz', this.showQuiz)
-      this.$parent.$parent.showQuiz = this.showQuiz
+      this.saveSettings()
     }
   }
 }

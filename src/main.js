@@ -113,6 +113,13 @@ if (location.hash === '#/test') {
 } else {
   Languages.load().then(languages => {
     Vue.prototype.$languages = languages
+    Vue.prototype.$settings = Object.assign({
+      showDefinition: false,
+      showTranslation: true,
+      showPinyin: true,
+      useTraditional: false,
+      showQuiz: true,
+    }, JSON.parse(localStorage.getItem('zthSettings')))
     new Vue({
       router,
       store,
