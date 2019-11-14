@@ -16,6 +16,8 @@
           <div v-if="video.hasSubs" class="btn btn-small bg-success text-white mt-2">{{ $l2.name }} CC</div>
           <div v-if="(video.checkingSubs === false) && (video.hasSubs === false)" class="btn btn-small text-white bg-dark mt-2">No {{ $l2.name }} CC</div>
           <div v-if="video.youtube_id && !video.topic" class="btn btn-small text-white bg-danger mt-2">Uncategorized</div>
+          <div v-if="video.youtube_id && video.topic" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.topics[video.topic] }}</div>
+          <div v-if="video.youtube_id && video.level" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.level(video.level, $l2) }}</div>
         </div>
       </a>
     </div>
@@ -23,7 +25,13 @@
 </template>
 
 <script>
+import Helper from '@/lib/helper'
 export default {
+  data() {
+    return {
+      Helper
+    }
+  },
   props: {
     videos: {
       type: Array
