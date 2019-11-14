@@ -24,7 +24,6 @@ export default {
 .channel {
   display: flex;
   align-items: top;
-  overflow: hidden;
 }
 .channel-body {
   flex: 1;

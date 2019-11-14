@@ -61,7 +61,7 @@
             ></b-button>
           </template>
           <hr class="mt-3" />
-          <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-4" />
+          <YouTubeChannelCard v-if="channel" :channel="channel" class="mb-4 d-inline-block" />
         </div>
       </div>
     </div>
