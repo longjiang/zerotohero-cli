@@ -118,9 +118,15 @@
         </div>
       </div>
     </div>
-    <div class="container" id="comments">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-6 p-5">
+          <h4 class="mt-5 mb-4">
+            {{ $t('Related')}}
+          </h4>
+          <YouTubeSearchResults :term="channel ? channel.title : title" :start="0" />
+        </div>
+        <div class="col-md-6 p-5" id="comments">
           <h4 class="mt-5 mb-4">
             {{ $t('Comments') }}
           </h4>
@@ -139,12 +145,14 @@ import YouTubeVideo from '@/components/YouTubeVideo'
 import SyncedTranscript from '@/components/SyncedTranscript'
 import YouTubeChannelCard from '@/components/YouTubeChannelCard'
 import SimpleSearch from '@/components/SimpleSearch'
+import YouTubeSearchResults from '@/components/YouTubeSearchResults'
 import YouTube from '@/lib/youtube'
 import Helper from '@/lib/helper'
 import Config from '@/lib/config'
 
 export default {
   components: {
+    YouTubeSearchResults,
     SimpleSearch,
     YouTubeVideo,
     YouTubeChannelCard,
