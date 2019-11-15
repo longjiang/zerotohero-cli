@@ -76,6 +76,13 @@
               </div>
               <Annotate tag="div" class="transcript-line-chinese">
                 <span
+                  v-if="$l2.han"
+                  v-html="
+                    Helper.highlightMultiple(reviewItem.line.line, Helper.unique([reviewItem.simplified, reviewItem.traditional]), hsk)
+                  "
+                />
+                <span
+                  v-else
                   v-html="
                     Helper.highlight(reviewItem.line.line, reviewItem.text, hsk)
                   "
@@ -95,7 +102,9 @@
                   }"
                   @click="answerClick"
                 >
-                  {{ answer.text }}
+                  <template v-if="$l2.han && $settings.useTraditional">{{ answer.traditional || answer.simplified }}</template>
+                  <template v-else-if="$l2.han && !$settings.useTraditional">{{ answer.simplified || answer.traditional }}</template>
+                  <template v-else>{{ answer.text }}</template>
                 </button>
               </div>
             </div>
@@ -191,15 +200,14 @@ export default {
           .addClass('show-answer')
       }
     },
-    async findSimilar(text) {
+    async findSimilarWords(text) {
       let words = await (await this.$dictionary).lookupFuzzy(text)
       words = words.filter(word => word.head !== text)
       words = Helper.uniqueByValue(words, 'head')
       return words
-        .map(word => word.head)
         .sort(
           (a, b) =>
-            Math.abs(a.length - text.length) - Math.abs(b.length - text.length)
+            Math.abs(a.head.length - text.length) - Math.abs(b.head.length - text.length)
         )
     },
     async updateReview() {
@@ -222,6 +230,7 @@ export default {
                   let line = this.lines[lineIndex]
                   if (
                     (this.$l2.continua && line.line.includes(form)) ||
+                    (this.$l2.han && (line.line.includes(word.simplified) || line.line.includes(word.traditional))) ||
                     (!this.$l2.continua &&
                       (new RegExp(`[ .,:!?]${form}[ .,:!?]`, 'gi').test(
                         line.line
@@ -234,23 +243,27 @@ export default {
                         Math.floor(form.length / 2),
                       this.lines.length - 1
                     )
-                    let answers = await this.findSimilar(form)
-                    if (answers.length < 2) {
+                    let similarWords = await this.findSimilarWords(form)
+                    if (similarWords.length < 2) {
                       for (let i of [1, 2]) {
                         let randomWord = await (await this.$dictionary).random()
-                        answers.push(randomWord.head)
+                        similarWords.push(randomWord)
                       }
                     }
-                    answers = answers
-                      .map(similarText => {
+                    let answers = similarWords
+                      .map(similarWord => {
                         return {
-                          text: similarText,
+                          text: similarWord.head,
+                          simplified: similarWord.simplified,
+                          traditional: similarWord.traditional,
                           correct: false
                         }
                       })
                       .slice(0, 2)
                     answers.push({
                       text: form,
+                      simplified: word.simplified,
+                      traditional: word.traditional,
                       correct: true
                     })
                     review[reviewIndex] = review[reviewIndex] || []
@@ -258,6 +271,8 @@ export default {
                       line: line,
                       text: form,
                       word: word,
+                      simplified: word.simplified,
+                      traditional: word.traditional,
                       answers: Helper.shuffle(answers)
                     })
                     seenLines.push(lineIndex)

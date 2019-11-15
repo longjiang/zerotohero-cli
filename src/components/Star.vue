@@ -37,9 +37,11 @@ export default {
       let wordForms =
         (await (await this.$dictionary).wordForms(this.word)) || []
       wordForms = wordForms.filter(form => form !== '')
-      wordForms = Helper.unique(
-        [this.word.bare.toLowerCase()].concat(wordForms.map(form => form.form.replace(/'/g, ''))).concat([this.text])
-      )
+      wordForms = [this.word.bare.toLowerCase()].concat(wordForms.map(form => form.form.replace(/'/g, '')))
+      if (this.text) {
+        wordForms.push(this.text)
+      }
+      wordForms = Helper.unique(wordForms).filter(form => form && form !== '' && form !== '-')
       return wordForms
     },
     saved() {
