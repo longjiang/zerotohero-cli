@@ -98,5 +98,7 @@ export default {
 </script>
 
 <style>
-
+.youtube-search .youtube-video.nosubs {
+  opacity: 0.2;
+}
 </style>
