@@ -14,7 +14,7 @@ import ShowMoreButton from '@/components/ShowMoreButton'
 import VueObserveVisibility from 'vue-observe-visibility'
 import Languages from '@/lib/languages'
 import VueAnalytics from 'vue-analytics'
-
+import VueDisqus from 'vue-disqus'
 
 Vue.config.productionTip = false
 
@@ -29,6 +29,7 @@ Vue.use(VueObserveVisibility)
 Vue.use(VueAnalytics, {
   id: 'UA-1846573-21'
 })
+Vue.use(VueDisqus)
 
 Vue.component('Annotate', Annotate)
 Vue.component('Loader', Loader)

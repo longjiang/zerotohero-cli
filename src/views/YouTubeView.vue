@@ -86,7 +86,7 @@
               
             />
             <div class="play-pause-wrapper">
-              <!-- <router-link :to="{name: 'settings'}" class="play-pause shadow btn-secondary d-inline-block mb-2 text-center"><i class="fas fa-cog"></i></router-link><br/> -->
+              <span class="play-pause shadow btn-secondary d-inline-block mb-2 text-center" @click="scrollToComments"><i class="fas fa-comment"></i></span><br/>
               <span class="play-pause shadow btn-primary d-inline-block text-center" @click="togglePaused"><i v-if="paused" class="fas fa-play"></i><i v-else class="fas fa-pause"></i></span>
             </div>
           </div>
@@ -118,34 +118,19 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" id="comments">
       <div class="row">
         <div class="col-sm-12">
           <h4 class="mt-5 mb-4">
-            {{ $t('Search for more videos on YouTube') }}
+            {{ $t('Comments') }}
           </h4>
-          <SimpleSearch
-            class="mb-3"
-            :placeholder="
-              $t('Search the entire YouTube for {l2} videos with CC', { l2: $l2.name })
-            "
-            buttonText="Search"
-            :action="
-              url => {
-                location.hash = `#/${$l1.code}/${
-                  $l2.code
-                }/youtube/search/${encodeURIComponent(url)}`
-              }
-            "
-            ref="search"
-          />
-          <p class="mb-5">
-            We will try our best to find YouTube videos with
-            {{ $l2.name }} subtitles.
-          </p>
+          <div class="comments">
+            <vue-disqus shortname="zero-to-hero" :identifier="`youtube-view-${args}`" :url="`https://www.zerotohero.ca/#/${$l1.code}/${$l2.code}/youtube/view/${args}`"></vue-disqus>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -334,6 +319,9 @@ export default {
         this.saved = undefined
       }
     },
+    scrollToComments() {
+      document.getElementById('comments').scrollIntoView()
+    },
     togglePaused() {
       this.$refs.youtube.togglePaused()
     },
@@ -386,7 +374,7 @@ export default {
 <style lang="scss">
   .play-pause-wrapper {
     position: sticky;
-    bottom: 1.3rem;
+    bottom: 2.3rem;
     left: 100%;
     width: 3.2rem;
   }
