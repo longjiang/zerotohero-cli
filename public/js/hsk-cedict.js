@@ -84,6 +84,9 @@ const Dictionary = {
     }
     return books
   },
+  lookupByLesson(level, lesson) {
+    return this.words.filter(row => row.hsk === level && row.lesson === lesson)
+  },
   isChinese(text) {
     if (this.matchChinese(text)) return true
   },

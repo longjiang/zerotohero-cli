@@ -794,6 +794,21 @@ export default new Router({
           }
         ]
       }
+    },
+    {
+      path: '/:l1/:l2/assign-lesson-videos/:level/:lesson',
+      name: 'assign-lesson-videos',
+      component: () => import('./views/AssignLessonVideos.vue'),
+      props: true,
+      meta: {
+        title: 'Lesson Videos | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Assign videos to enforce lesson vocabulary.'
+          }
+        ]
+      }
     }
   ]
 })
