@@ -153,7 +153,6 @@ export default {
       this.langsLoaded = true
     },
     updateClasses() {
-      console.log('updating classes')
       this.classes = {
         'hide-except-focus': this.focus,
         'show-pinyin': this.$settings.showPinyin,
