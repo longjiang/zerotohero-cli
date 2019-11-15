@@ -76,7 +76,7 @@
               </div>
               <Annotate tag="div" class="transcript-line-chinese">
                 <span
-                  v-if="$l2.han"
+                  v-if="$l2.han && $l2.code !== 'ja'"
                   v-html="
                     Helper.highlightMultiple(reviewItem.line.line, Helper.unique([reviewItem.simplified, reviewItem.traditional]), hsk)
                   "
@@ -102,9 +102,9 @@
                   }"
                   @click="answerClick"
                 >
-                  <template v-if="$l2.han && $settings.useTraditional">{{ answer.traditional || answer.simplified }}</template>
+                  <template v-if="$l2.code === 'ja' || !$l2.han">{{ answer.text }}</template>
+                  <template v-else-if="$l2.han && $settings.useTraditional">{{ answer.traditional || answer.simplified }}</template>
                   <template v-else-if="$l2.han && !$settings.useTraditional">{{ answer.simplified || answer.traditional }}</template>
-                  <template v-else>{{ answer.text }}</template>
                 </button>
               </div>
             </div>

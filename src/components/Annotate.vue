@@ -142,7 +142,13 @@ export default {
               html += `<WordBlock :token="tokenized[${batchId}][${index}]"/>`
             }
           } else {
-            html += `<WordBlock>${item}</WordBlock>`
+            item = item.trim().replace(/\s+/gi, ' ')
+            if (item !== '') {
+              for (let word of item.trim().split(/\s+/)) {
+                html += `<WordBlock>${word}</WordBlock> `
+              }
+              html = html.trim()
+            }
           }
         }
       } else {
