@@ -111,7 +111,7 @@ export default {
       this.$settings = Object.assign(this.$settings, {
         showDefinition: this.showDefinition,
         showPinyin: this.showPinyin,
-        useTraditional: this.useTraditional,
+        useTraditional: this.useTraditional === 'true',
         showTranslation: this.showTranslation,
         showQuiz: this.showQuiz
       }, this.$settings)
