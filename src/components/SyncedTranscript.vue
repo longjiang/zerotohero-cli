@@ -206,7 +206,7 @@ export default {
       let review = {}
       let lineOffset = 10 // Show review this number of lines after the first appearance of the word
       if (
-        this.$showQuiz &&
+        this.$settings.showQuiz &&
         this.$store.state.savedWords &&
         this.$store.state.savedWords[this.$l2.code]
       ) {
