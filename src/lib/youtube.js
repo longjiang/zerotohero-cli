@@ -100,10 +100,10 @@ export default {
       captions: true,
       start: 0
     }, options)
-    let $html = await Helper.scrape2(`https://www.google.com/search?q=${options.term.replace(
+    let $html = await Helper.scrape2(`https://www.google.com/search?q=${options.term ? options.term.replace(
       / /g,
       '+'
-    )}&start=${options.start}&lr=lang_${options.lang}&safe=active&tbs=srcf:H4sIAAAAAAAAANOuzC8tKU1K1UvOz1VLS0xOTcrPz4ZwMnNyy1OT9Apy1ErKM0tKUovAwpl5QFZmIki4ID-nOLEkL7W8GMQDAIqXaqNKAAAA${options.captions ? ',cc:1' : ''}&tbm=vid`)
+    ) : ''}&start=${options.start}&lr=lang_${options.lang}&safe=active&tbs=srcf:H4sIAAAAAAAAANOuzC8tKU1K1UvOz1VLS0xOTcrPz4ZwMnNyy1OT9Apy1ErKM0tKUovAwpl5QFZmIki4ID-nOLEkL7W8GMQDAIqXaqNKAAAA${options.captions ? ',cc:1' : ''}&tbm=vid`)
     let videos = []
     let main = $html.toArray().find(element => element.id === 'main')
     for (let a of $(main).find('a[href^="/url?q=https://www.youtube.com/watch"]')) {
