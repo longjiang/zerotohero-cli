@@ -1,6 +1,6 @@
 <template>
   <div>
-    <YouTubeVideoList :videos="videos" :key="videosKey" />
+    <YouTubeVideoList :videos="videos" :checkSubs="checkSubs" />
     <div class="mt-4 text-center">
       <a v-if="start > 9" :href="`#/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) - 10}`" class="btn btn-default mr-2">Previous</a>
       <a :href="`#/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) + 10}`" class="btn btn-default">Next</a>
@@ -23,12 +23,14 @@ export default {
     },
     start: {
       default: 0
+    },
+    checkSubs: {
+      default: false
     }
   },
   data() {
     return {
-      videos: [],
-      videosKey: 0
+      videos: []
     }
   },
   mounted() {
@@ -53,44 +55,10 @@ export default {
           captions: true
         }
       )
-      this.videos = videos
-      for(let video of this.videos) {
-        this.checkSubs(video)
-      }
-    },
-    async checkSubs(video) {
-      const promises = []
-      let locales = [this.$l2.code]
-      if (this.$l2.locales) {
-        locales = locales.concat(this.$l2.locales)
-      }
-      video.checkingSubs = true
-      video.hasSubs = false
-      for (let locale of locales) {
-        promises.push(
-          Helper.scrape2(
-            `https://www.youtube.com/api/timedtext?v=${video.id}&lang=${locale}&fmt=srv3`
-          ).then($html => {
-            if ($html) {
-              video.l2Lines = []
-              for (let p of $html.find('p')) {
-                if ($(p).text().length === 0) return
-                let line = {
-                  line: $(p).text(),
-                  starttime: parseInt($(p).attr('t')) / 1000
-                }
-                video.l2Lines.push(line)
-              }
-              if (video.l2Lines.length > 3 && video.l2Lines.join('').length > 20) {
-                video.hasSubs = true
-              }
-            }
-          })
-        )
-      }
-      await Promise.all(promises)
-      video.checkingSubs = false
-      this.videosKey++
+      this.videos = videos.map(video => {
+        video.youtube_id = video.id
+        return video
+      })
     },
   }
 

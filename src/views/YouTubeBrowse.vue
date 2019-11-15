@@ -22,7 +22,7 @@
         <template v-if="videos && videos.length > 0">
           <h3 class="mb-2 text-center">Library</h3>
           <p class="mb-4 text-center">{{ Math.min(videos.length, 100) }}{{ videos.length > 100 ? '+' : '' }} {{ topic === 'all' ? $t('New') : ''}} {{ $t('Videos') }}</p>
-          <YouTubeVideoList :videos="videos" />
+          <YouTubeVideoList :videos="videos" :checkSubs="true" />
         </template>
         <template v-if="channels && channels.length > 0">
           <h4 class="mt-5 mb-4 text-center">{{ channels.length }} {{ $t('Channels') }}</h4>
@@ -107,6 +107,9 @@ export default {
     },
     level: {
       default: 'all'
+    },
+    checkSubs: {
+      default: false
     }
   },
   data() {

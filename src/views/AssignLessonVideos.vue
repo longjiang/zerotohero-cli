@@ -2,11 +2,11 @@
   <div class="container-fluid main">
     <div class="row">
       <div class="col-md-4">
-        <h4 class="mb-4">Lesson Vocabulary</h4>
+        <h4 class="mt-5 mb-4">Lesson Vocabulary</h4>
         <WordList :words="words"></WordList>
       </div>
       <div class="col-md-8">
-        <h4 class="mb-4">Videos</h4>
+        <YouTubeBrowse :checkSubs="true" />
       </div>
     </div>
   </div>
@@ -14,6 +14,8 @@
 
 <script>
 import WordList from '@/components/WordList'
+import YouTubeBrowse from '@/views/YouTubeBrowse'
+
 export default {
   data() {
     return {
@@ -21,7 +23,8 @@ export default {
     }
   },
   components: {
-    WordList
+    WordList,
+    YouTubeBrowse
   },
   props: ['level', 'lesson'],
   async mounted() {
