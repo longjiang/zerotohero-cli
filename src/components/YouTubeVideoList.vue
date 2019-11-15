@@ -1,12 +1,12 @@
 <template>
-  <div class="youtube-videos" :key="videosKey" >
+  <div class="youtube-videos">
     <div v-for="video of videos" :class="{
       'youtube-video': true,
       'media': true,
       'rounded': true,
       'shadow': true,
       'nosubs': (!video.checkingSubs) && (!video.hasSubs)
-      }">
+      }" :key="`${video.youtube_id}-${videosKey}`">
       <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}`" class="youtube-link">
         <div class="youtube-thumbnail-wrapper aspect-wrapper">
           <img :src="video.thumbnail || `//img.youtube.com/vi/${video.youtube_id}/hqdefault.jpg`" class="youtube-thumbnail aspect" />
@@ -39,6 +39,9 @@ export default {
     },
     checkSubs: {
       default: false
+    },
+    words: {
+      default: undefined
     }
   },
   mounted() {
@@ -72,7 +75,7 @@ export default {
           Helper.scrape2(
             `https://www.youtube.com/api/timedtext?v=${video.youtube_id}&lang=${locale}&fmt=srv3`
           ).then($html => {
-            if ($html) {
+            if ($html && !video.hasSubs) {
               video.l2Lines = []
               for (let p of $html.find('p')) {
                 if ($(p).text().length === 0) return
@@ -84,7 +87,6 @@ export default {
               }
               if (video.l2Lines.length > 3 && video.l2Lines.join('').length > 20) {
                 video.hasSubs = true
-                console.log('foudn subs')
               }
             }
           })
