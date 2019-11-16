@@ -1,31 +1,34 @@
 <template>
-  <div class="youtube-videos">
+  <div class="youtube-videos" :key="videosKey">
     <div v-for="video of videos" :class="{
       'youtube-video': true,
       'media': true,
       'rounded': true,
       'shadow': true,
       'nosubs': (!video.checkingSubs) && (!video.hasSubs)
-      }" :key="`${video.youtube_id}-${videosKey}`">
-      <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}`" class="youtube-link">
-        <div class="youtube-thumbnail-wrapper aspect-wrapper">
+      }">
+      <div class="youtube-link">
+        <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}`" class="youtube-thumbnail-wrapper aspect-wrapper d-block">
           <img :src="video.thumbnail || `//img.youtube.com/vi/${video.youtube_id}/hqdefault.jpg`" class="youtube-thumbnail aspect" />
-        </div>
+        </a>
         <div class="media-body">
           <div class="youtube-title">{{ video.title }}</div>
+          <div v-if="words && video.matches && video.matches.length > 0" class="btn btn-small bg-warning text-white mt-2 ml-0">{{ video.matches.length }} matched words</div>
           <div v-if="video.hasSubs" class="btn btn-small bg-success text-white mt-2">{{ $l2.name }} CC</div>
           <div v-if="(video.checkingSubs === false) && (video.hasSubs === false)" class="btn btn-small text-white bg-dark mt-2">No {{ $l2.name }} CC</div>
           <div v-if="video.youtube_id && !video.topic" class="btn btn-small text-white bg-danger mt-2">Uncategorized</div>
           <div v-if="video.youtube_id && video.topic" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.topics[video.topic] }}</div>
           <div v-if="video.youtube_id && video.level" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.level(video.level, $l2) }}</div>
+          <b-button v-if="words && video.level !== level && video.lesson !== lesson" @click="add(video)"><i class="fas fa-plus mr-2"></i>Add to Lesson</b-button>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Helper from '@/lib/helper'
+import Config from '@/lib/config'
 export default {
   data() {
     return {
@@ -42,6 +45,15 @@ export default {
     },
     words: {
       default: undefined
+    },
+    level: {
+      default: undefined
+    },
+    lesson: {
+      default: undefined
+    },
+    updateVideos: {
+      default: 0
     }
   },
   mounted() {
@@ -50,16 +62,48 @@ export default {
     }
   },
   watch: {
-    videos() {
+    updateVideos() {
       if(this.checkSubs) {
         this.getAllSubs()
       }
     }
   },
   methods: {
+    async add(video) {
+      let response = await $.ajax({
+        url: `${Config.wiki}items/youtube_videos/${video.id}`,
+        data: JSON.stringify({ level: this.level, lesson: this.lesson }),
+        type: 'PATCH',
+        contentType: 'application/json',
+        xhr: function() {
+          return window.XMLHttpRequest == null ||
+            new window.XMLHttpRequest().addEventListener == null
+            ? new window.ActiveXObject('Microsoft.XMLHTTP')
+            : $.ajaxSettings.xhr()
+        }
+      })
+      if (response && response.data) {
+        video = Object.assign(video, response.data)
+      }
+    },
     getAllSubs() {
       for(let video of this.videos) {
         this.getSubs(video)
+      }
+    },
+    matchWords(video) {
+      let matches = []
+      video.text = video.l2Lines.map(line => line.line).join('\n')
+      if (this.words && this.words.length > 0) {
+        for (let word of this.words) {
+          if (video.text.includes(word.simplified) || video.text.includes(word.traditional) || video.text.includes(word.head)) {
+            matches.push(word)
+          }
+        }
+      }
+      video.matches = matches
+      if (this.$parent.updateMatches) {
+        this.$parent.updateMatches()
       }
     },
     async getSubs(video) {
@@ -87,6 +131,16 @@ export default {
               }
               if (video.l2Lines.length > 3 && video.l2Lines.join('').length > 20) {
                 video.hasSubs = true
+                if (this.words) {
+                  this.matchWords(video)
+                  console.log('sorting')
+                  this.videos = this.videos.sort((a,b) => {
+                    let aScore = a.matches ? a.matches.length || 0 : 0
+                    let bScore = b.matches ? b.matches.length || 0 : 0
+                    return bScore - aScore
+                  })
+                }
+                this.videosKey++
               }
             }
           })
@@ -94,7 +148,6 @@ export default {
       }
       await Promise.all(promises)
       video.checkingSubs = false
-      this.videosKey++
     },
   }
 }

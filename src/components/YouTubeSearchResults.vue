@@ -1,6 +1,6 @@
 <template>
   <div>
-    <YouTubeVideoList :videos="videos" :checkSubs="true" />
+    <YouTubeVideoList :videos="videos" :checkSubs="true" :updateVideos="updateVideos" />
     <div class="mt-4 text-center">
       <a v-if="start > 9" :href="`#/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) - 10}`" class="btn btn-default mr-2">Previous</a>
       <a :href="`#/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) + 10}`" class="btn btn-default">Next</a>
@@ -30,7 +30,10 @@ export default {
   },
   data() {
     return {
-      videos: []
+      videos: [],
+      updateVideos: {
+        default: 0
+      }
     }
   },
   mounted() {
@@ -59,6 +62,7 @@ export default {
         video.youtube_id = video.id
         return video
       })
+      this.updateVideos++
     },
   }
 

@@ -8,7 +8,10 @@
       }"
       data-collapse-target
     >
-      <li class="wordlist-item" v-for="word in words">
+      <li :class="{
+        'wordlist-item': true,
+        'matched': matchedWords && matchedWords.map(word => word.id).includes(word.id)
+        }" v-for="word in words">
         <Star v-if="word && star === true" :word="word" class="mr-1"></Star>
         <a
           v-if="compareWith"
@@ -60,6 +63,9 @@ export default {
     texts: {
       type: Array
     },
+    matchedWords: {
+      default: undefined
+    },
     compareWith: {
       default: false
     },
@@ -99,5 +105,9 @@ export default {
 .wordlist-item-l1 {
   font-style: italic;
   color: #aaa;
+}
+
+.wordlist-item.matched {
+  opacity: 0.2
 }
 </style>
