@@ -31,9 +31,7 @@ export default {
   data() {
     return {
       videos: [],
-      updateVideos: {
-        default: 0
-      }
+      updateVideos: 0
     }
   },
   mounted() {
@@ -60,6 +58,7 @@ export default {
       )
       this.videos = videos.map(video => {
         video.youtube_id = video.id
+        video.id = undefined
         return video
       })
       this.updateVideos++
@@ -68,9 +67,3 @@ export default {
 
 }
 </script>
-
-<style>
-.youtube-search .youtube-video.nosubs {
-  opacity: 0.2;
-}
-</style>
