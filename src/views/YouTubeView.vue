@@ -236,7 +236,8 @@ export default {
       let response = await $.post(`${Config.wiki}items/youtube_videos`, {
         youtube_id: this.args,
         title: this.title,
-        l2: this.$l2.id
+        l2: this.$l2.id,
+        subs_l2: JSON.stringify(this.l2Lines)
       })
       if (response) {
         this.saved = response.data

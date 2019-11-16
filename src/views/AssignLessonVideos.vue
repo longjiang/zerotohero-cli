@@ -7,9 +7,9 @@
       </div>
       <div class="col-md-8">
         <h4 class="mt-5 mb-4">Lesson Videos</h4>
-        <YouTubeVideoList :videos="lessonVideos" :noThumbs="true" :checkSubs="true" :words="words" :lesson="lesson" :level="level" :key="`lesson-videos-${lessonVideoKey}`" />
+        <YouTubeVideoList :updateVideos="updateLessonVideos" :videos="lessonVideos" :noThumbs="true" :checkSubs="true" :words="words" :lesson="lesson" :level="level" />
         <h4 class="mt-5 mb-4">More Videos</h4>
-        <YouTubeVideoList :videos="videos" :noThumbs="true" :checkSubs="true" :words="unmatchedWords" :lesson="lesson" :level="level" :key="`videos-${videoKey}`" />
+        <YouTubeVideoList :updateVideos="updateVideos" :videos="videos" :noThumbs="true" :checkSubs="true" :words="unmatchedWords" :lesson="lesson" :level="level" />
       </div>
     </div>
   </div>
@@ -28,10 +28,8 @@ export default {
       matchedWords: [],
       lessonVideos: [],
       videos: [],
-      updateVideos: 0,
-      lessonVideoKey: 0,
-      videoKey: 0,
-      matchedWordsKey: 0
+      updateLessonVideos: 0,
+      updateVideos: 0
     }
   },
   components: {
@@ -39,8 +37,15 @@ export default {
     YouTubeVideoList
   },
   props: ['level', 'lesson'],
-  async mounted() {
-    this.words = await (await this.$dictionary).lookupByLesson(this.level, this.lesson)
+  activated() {
+    this.route()
+  },
+  watch: {
+    $route() {
+      if (this.$route.name === 'assign-lesson-videos') {
+        this.route()
+      }
+    },
   },
   computed: {
     unmatchedWords() {
@@ -48,23 +53,10 @@ export default {
     },
   },
   methods: {
-    async getVideos() {
-      let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}`
-      )
-      let videos = response.data || []
-      if (videos.length > 0) {
-        videos = videos.map(video => {
-          video.subs_l2 = JSON.parse(video.subs_l2)
-          return video
-        })
-      }
-      this.videos = Helper.uniqueByValue(videos, 'youtube_id')
-      if(this.lessonVideos.length > 0) {
-        this.excludeLessonVideos()
-      } else {
-        this.videoKey++
-      }
+    async route() {
+      this.words = await (await this.$dictionary).lookupByLesson(this.level, this.lesson)
+      this.getLessonVideos()
+      // this.getVideos()
     },
     async getLessonVideos() {
       let response = await $.getJSON(
@@ -78,9 +70,24 @@ export default {
         })
       }
       this.lessonVideos = Helper.uniqueByValue(videos, 'youtube_id')
-      this.lessonVideoKey++
-      if(this.videos.length > 0) {
+      this.updateLessonVideos++
+    },
+    async getVideos() {
+      let response = await $.getJSON(
+        `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}&filter[lesson][null]`
+      )
+      let videos = response.data || []
+      if (videos.length > 0) {
+        videos = videos.map(video => {
+          video.subs_l2 = JSON.parse(video.subs_l2)
+          return video
+        })
+      }
+      this.videos = Helper.uniqueByValue(videos, 'youtube_id')
+      if(this.lessonVideos.length > 0) {
         this.excludeLessonVideos()
+      } else {
+        // this.videoKey++
       }
     },
     excludeLessonVideos() {
@@ -88,11 +95,7 @@ export default {
         let overlap = this.lessonVideos.filter(lessonVideo => video.id === lessonVideo.id)
         return overlap.length === 0
       })
-      this.videoKey++
-    },
-    route() {
-      this.getVideos()
-      this.getLessonVideos()
+      // this.videoKey++
     },
     updateMatches() {
       this.matchedWords = []
@@ -101,18 +104,8 @@ export default {
           this.matchedWords = Helper.uniqueByValue(this.matchedWords.concat(video.matches), 'id')
         }
       }
-      this.matchedWordsKey++
+      // this.matchedWordsKey++
     }
-  },
-  activated() {
-    this.route()
-  },
-  watch: {
-    $route() {
-      if (this.$route.name === 'assign-lesson-videos') {
-        this.route()
-      }
-    },
   }
 }
 </script>
