@@ -10,7 +10,7 @@
         <h4 class="mt-5 mb-4">Lesson Videos</h4>
         <YouTubeVideoList :updateVideos="updateLessonVideos" :videos="lessonVideos" :checkSubs="true" :assignLessonMode="true" :lesson="lesson" :level="level" />
         <h4 class="mt-5 mb-4">More Videos</h4>
-        <YouTubeVideoList :updateVideos="updateVideos" :videos="videos" :checkSubs="true" :assignLessonMode="true" :lesson="lesson" :level="level" />
+        <YouTubeVideoList :noThumbs="false" :updateVideos="updateVideos" :videos="videos" :checkSubs="true" :assignLessonMode="true" :lesson="lesson" :level="level" />
       </div>
     </div>
   </div>
@@ -85,32 +85,41 @@ export default {
       return true
     },
     async getVideos() {
-      let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}&filter[lesson][null]`
-      )
-      let videos = response.data || []
-      if (videos.length > 0) {
-        videos = videos.map(video => {
-          if(video.subs_l2) {
-            video.subs_l2 = JSON.parse(video.subs_l2)
-            video.matches = this.matchWords(video).filter(word => !this.matchedWords.map(w => w.id).includes(word.id))
+      let words = this.unmatchedWords
+      let videos = []
+      if (words.length > 0) {
+        for (let word of words) {
+          if (videos.length === 0) {
+            let firstWord = word.head
+            let response = await $.getJSON(
+              `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}&filter[lesson][null]&filter[subs_l2][contains]=${JSON.stringify(firstWord).replace(/"/gi, '')}&limit=2000`
+            )
+            videos = response.data || []
           }
-          return video
+        }
+        if (videos.length > 0) {
+          videos = videos.map(video => {
+            if(video.subs_l2) {
+              video.subs_l2 = JSON.parse(video.subs_l2)
+              video.matches = this.matchWords(video).filter(word => !this.matchedWords.map(w => w.id).includes(word.id))
+            }
+            return video
+          })
+        }
+        videos = videos.sort((a,b) => {
+          let aScore = a.matches ? a.matches.length || 0 : 0
+          let bScore = b.matches ? b.matches.length || 0 : 0
+          return bScore - aScore
         })
+        videos = Helper.uniqueByValue(videos, 'youtube_id')
+        if (this.lessonVideos.length > 0) {
+          videos = videos.filter(video => {
+            let overlap = this.lessonVideos.filter(lessonVideo => video.id === lessonVideo.id)
+            return overlap.length === 0
+          })
+        }
+        this.videos = videos
       }
-      videos = videos.sort((a,b) => {
-        let aScore = a.matches ? a.matches.length || 0 : 0
-        let bScore = b.matches ? b.matches.length || 0 : 0
-        return bScore - aScore
-      })
-      videos = Helper.uniqueByValue(videos, 'youtube_id')
-      if (this.lessonVideos.length > 0) {
-        videos = videos.filter(video => {
-          let overlap = this.lessonVideos.filter(lessonVideo => video.id === lessonVideo.id)
-          return overlap.length === 0
-        })
-      }
-      this.videos = videos
       return true
     },
     async removeVideo(video) {
@@ -157,6 +166,7 @@ export default {
           let bScore = b.matches ? b.matches.length || 0 : 0
           return bScore - aScore
         })
+        await this.getVideos()
         this.updateVideos++
       }
     },
