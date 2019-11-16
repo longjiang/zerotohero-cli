@@ -162,11 +162,13 @@ export default {
     },
     matchWords(video) {
       let matches = []
-      video.text = video.subs_l2.map(line => line.line).join('\n')
-      if (this.words && this.words.length > 0) {
-        for (let word of this.words) {
-          if (video.text.includes(word.simplified) || video.text.includes(word.traditional) || video.text.includes(word.head)) {
-            matches.push(word)
+      if (video.subs_l2) {
+        video.text = video.subs_l2.map(line => line.line).join('\n')
+        if (this.words && this.words.length > 0) {
+          for (let word of this.words) {
+            if (video.text.includes(word.simplified) || video.text.includes(word.traditional) || video.text.includes(word.head)) {
+              matches.push(word)
+            }
           }
         }
       }
