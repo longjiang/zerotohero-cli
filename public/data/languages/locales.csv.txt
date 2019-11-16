@@ -30,7 +30,6 @@ ru,ru-Latn
 sr,sr-Cyrl
 sr,sr-Latn
 zh,zh-Hans
-zh,zh-Hant
 zh,zh-CN
 zh,zh-TW
 ceb,fil

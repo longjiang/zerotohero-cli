@@ -113,6 +113,23 @@ export default {
       this.videos = videos
       return true
     },
+    async removeVideo(video) {
+      let response = await $.ajax({
+        url: `${Config.wiki}items/youtube_videos/${video.id}`,
+        type: 'DELETE',
+        contentType: 'application/json',
+        xhr: function() {
+          return window.XMLHttpRequest == null ||
+            new window.XMLHttpRequest().addEventListener == null
+            ? new window.ActiveXObject('Microsoft.XMLHTTP')
+            : $.ajaxSettings.xhr()
+        }
+      })
+      if (response) {
+        this.videos = this.videos.filter(v => v.id !== video.id)
+        this.updateVideos++
+      }
+    },
     async addVideoToLesson(video) {
       let response = await $.ajax({
         url: `${Config.wiki}items/youtube_videos/${video.id}`,

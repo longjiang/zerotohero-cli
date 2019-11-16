@@ -14,12 +14,15 @@
         <div class="media-body" :key="`video-${videoIndex}-${videosInfoKey}`">
           <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}`" class="youtube-title d-block">{{ video.title }}</a>
           <div v-if="assignLessonMode && video.matches && video.matches.length > 0" class="btn btn-small bg-warning text-white mt-2 ml-0">{{ video.matches.length }} matched words</div>
-          <div v-if="video.hasSubs" class="btn btn-small bg-success text-white mt-2">{{ $l2.name }} CC</div>
+          <div v-if="video.hasSubs" class="btn btn-small bg-success text-white mt-2">{{ $l2.name }} CC <span v-if="video.locale">({{ video.locale}})</span></div>
           <div v-if="(video.checkingSubs === false) && (video.hasSubs === false)" class="btn btn-small text-white bg-dark mt-2">No {{ $l2.name }} CC</div>
           <div v-if="video.id && !video.topic" class="btn btn-small text-white bg-danger mt-2">Uncategorized</div>
           <div v-if="video.id && video.topic" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.topics[video.topic] }}</div>
           <div v-if="video.id && video.level" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.level(video.level, $l2) }}</div>
-          <b-button class="d-block" v-if="assignLessonMode && !video.lesson" @click="add(video)"><i class="fas fa-plus mr-2"></i>Add to Lesson</b-button>
+          <b-button v-if="assignLessonMode && !video.lesson" @click="add(video)"><i class="fas fa-plus mr-2"></i>Add to Lesson</b-button>
+          <b-button v-if="assignLessonMode && !video.lesson" variant="danger" @click="remove(video)" class="ml-1"
+            ><i class="fas fa-trash-alt"></i
+          ></b-button><br v-if="assignLessonMode"/>
           <div v-if="assignLessonMode && video.matches && video.matches.length > 0">
             <span v-for="word in video.matches">{{ word.head }} </span>
           </div>
@@ -35,7 +38,8 @@ import Config from '@/lib/config'
 export default {
   data() {
     return {
-      Helper
+      Helper,
+      videosInfoKey: 0
     }
   },
   props: {
@@ -68,9 +72,7 @@ export default {
   },
   watch: {
     updateVideos() {
-      console.log('updated')
       if(this.checkSubs) {
-      console.log('checking subs')
         this.getAllSubs()
       }
     }
@@ -78,6 +80,9 @@ export default {
   methods: {
     add(video) {
       if (this.$parent.addVideoToLesson) this.$parent.addVideoToLesson(video)
+    },
+    remove(video) {
+      if (this.$parent.removeVideo) this.$parent.removeVideo(video)
     },
     getAllSubs() {
       for(let video of this.videos) {
@@ -150,9 +155,10 @@ export default {
       if (video.subs_l2 && video.subs_l2.length > 0) {
         video.hasSubs = true
         video.checkingSubs = false
+        this.videosInfoKey++
       } else {
         const promises = []
-        let locales = [this.$l2.code]
+        let locales = this.$l2.code === 'zh' ? [] : [this.$l2.code]
         if (this.$l2.locales) {
           locales = locales.concat(this.$l2.locales)
         }
@@ -166,6 +172,7 @@ export default {
                 if (video.subs_l2.length > 3 && video.subs_l2.join('').length > 20) {
                   video.hasSubs = true
                   video.checkingSubs = false
+                  video.locale = locale
                   this.saveVideoOrJustSubs(video)
                 }
               }
@@ -174,6 +181,7 @@ export default {
         }
         await Promise.all(promises)
         video.checkingSubs = false
+        this.videosInfoKey++
       }
     },
   }
