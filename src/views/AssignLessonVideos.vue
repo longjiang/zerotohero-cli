@@ -7,9 +7,9 @@
       </div>
       <div class="col-md-8">
         <h4 class="mt-5 mb-4">Lesson Videos</h4>
-        <YouTubeVideoList :videos="lessonVideos" :checkSubs="true" :words="words" :lesson="lesson" :level="level" :key="`lesson-videos-${lessonVideoKey}`" />
+        <YouTubeVideoList :videos="lessonVideos" :noThumbs="true" :checkSubs="true" :words="words" :lesson="lesson" :level="level" :key="`lesson-videos-${lessonVideoKey}`" />
         <h4 class="mt-5 mb-4">More Videos</h4>
-        <YouTubeVideoList :videos="videos.slice(0,10)" :checkSubs="true" :words="unmatchedWords" :lesson="lesson" :level="level" :key="`videos-${videoKey}`" />
+        <YouTubeVideoList :videos="videos" :noThumbs="true" :checkSubs="true" :words="unmatchedWords" :lesson="lesson" :level="level" :key="`videos-${videoKey}`" />
       </div>
     </div>
   </div>
@@ -53,6 +53,12 @@ export default {
         `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}`
       )
       let videos = response.data || []
+      if (videos.length > 0) {
+        videos = videos.map(video => {
+          video.subs_l2 = JSON.parse(video.subs_l2)
+          return video
+        })
+      }
       this.videos = Helper.uniqueByValue(videos, 'youtube_id')
       if(this.lessonVideos.length > 0) {
         this.excludeLessonVideos()
@@ -65,6 +71,12 @@ export default {
         `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}&filter[level][eq]=${this.level}&filter[lesson][eq]=${this.lesson}`
       )
       let videos = response.data || []
+      if (videos.length > 0) {
+        videos = videos.map(video => {
+          video.subs_l2 = JSON.parse(video.subs_l2)
+          return video
+        })
+      }
       this.lessonVideos = Helper.uniqueByValue(videos, 'youtube_id')
       this.lessonVideoKey++
       if(this.videos.length > 0) {
