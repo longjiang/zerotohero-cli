@@ -8,6 +8,7 @@
       </div>
       <div class="col-md-8">
         <h4 class="mt-5 mb-4">Lesson Videos</h4>
+        <p class="mb-4">{{ lessonVideos.length }} videos</p>
         <YouTubeVideoList :updateVideos="updateLessonVideos" :videos="lessonVideos" :checkSubs="true" :assignLessonMode="true" :lesson="lesson" :level="level" />
         <h4 class="mt-5 mb-4">More Videos</h4>
         <YouTubeVideoList :noThumbs="false" :updateVideos="updateVideos" :videos="videos" :checkSubs="true" :assignLessonMode="true" :lesson="lesson" :level="level" />
@@ -56,7 +57,12 @@ export default {
   },
   methods: {
     async route() {
-      this.words = await (await this.$dictionary).lookupByLesson(this.level, this.lesson)
+      let words = await (await this.$dictionary).lookupByLesson(this.level, this.lesson)
+      if (this.$l2.han && this.$l2.code !== 'ja') {
+        this.words = Helper.uniqueByValue(words, 'simplified')
+      } else {
+        this.words = Helper.uniqueByValue(words, 'head')
+      }
       await this.getLessonVideos()
       await this.getVideos()
       this.updateVideos++
@@ -88,15 +94,29 @@ export default {
       let words = this.unmatchedWords
       let videos = []
       if (words.length > 0) {
-        for (let word of words) {
-          if (videos.length === 0) {
-            let firstWord = word.head
-            let response = await $.getJSON(
-              `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}&filter[lesson][null]&filter[subs_l2][contains]=${JSON.stringify(firstWord).replace(/"/gi, '')}&limit=2000`
-            )
-            videos = response.data || []
+        if (videos.length === 0) {
+          let promises = []
+          for (let word of words.slice(0,4)) {
+            let wordForms = this.$l2.han && this.$l2.code !== 'ja' ? [word.simplified, word.traditional] : [word.head]
+            for (let wordForm of wordForms) {
+              promises.push(
+                new Promise((resolve, reject) => {
+                  $.getJSON(`${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}&filter[lesson][null]&filter[subs_l2][contains]=${JSON.stringify(wordForm).replace(/"/gi, '')}&limit=2000`)
+                    .then(response => {
+                      if (response.data) {
+                        videos = videos.concat(response.data)
+                        resolve()
+                      } else {
+                        reject()
+                      }
+                    })
+                })
+              )
+            }            
           }
+          await Promise.all(promises)
         }
+        console.log(videos)
         if (videos.length > 0) {
           videos = videos.map(video => {
             if(video.subs_l2) {
