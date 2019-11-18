@@ -1,9 +1,7 @@
 <template>
   <div id="loader" v-if="loading" class="d-inline-block text-center">
     <div class="heartbeat-loader mb-4"></div>
-    <div>
-      <slot>Loading</slot>
-    </div>
+    <div v-html="message"></div>
   </div>
 </template>
 
@@ -12,6 +10,9 @@ export default {
   props: {
     sticky: {
       default: false
+    },
+    message: {
+      default: 'Loading'
     }
   },
   data() {

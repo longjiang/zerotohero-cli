@@ -41,6 +41,7 @@
       </div>
       <div class="col-md-6 col-lg-4">
         <h5 class="mt-3">Vocabulary covered</h5>
+        <Loader message="Loading words...<br/>Don't wait. View the video now." />
         <WordList :words="video.matches" :key="`matched-words-${videoIndex}-${matchedWordsKey}`"></WordList>
       </div>
       <div class="col-lg-2"></div>
@@ -50,6 +51,7 @@
       <div class="col-md-12 col-lg-8">
         <div class="jumbotron pt-4 pb-4" v-if="unmatchedWords.length > 0">
           <h4 class="mt-3 mb-4 text-center text-danger">Lesson words <em>not</em> covered in the videos</h4>
+        <Loader message="Loading words..." />
           <WordList :words="unmatchedWords" :key="`unmatched-words-${matchedWordsKey}`"></WordList>
         </div>
         <div class="col-sm-12 text-center">
