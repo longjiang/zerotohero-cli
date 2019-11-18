@@ -133,7 +133,6 @@ export default {
     },
     async route() {
       let words = await (await this.$dictionary).lookupByLesson(this.level, this.lesson)
-      console.log(words)
       words = words.filter(word => !word.oofc || !word.oofc === '')
       if (this.$l2.han && this.$l2.code !== 'ja') {
         this.words = Helper.uniqueByValue(words, 'simplified')
