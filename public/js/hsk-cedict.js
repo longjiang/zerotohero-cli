@@ -85,6 +85,8 @@ const Dictionary = {
     return books
   },
   lookupByLesson(level, lesson) {
+    level = String(level)
+    lesson = String(lesson)
     return this.words.filter(row => row.hsk === level && row.lesson === lesson)
   },
   isChinese(text) {
