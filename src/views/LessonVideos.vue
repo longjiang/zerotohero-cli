@@ -28,7 +28,7 @@
             >
           </b-dropdown>
         </h3>
-        <p class="mt-3 mb-5">After finishing <b>HSK {{ level }} Lesson {{ lesson }}</b>, reinforce the vocabulary you learned in the lesson by watching these {{ lessonVideos.length }} videos:</p>
+        <p class="mt-3 mb-5">After finishing <a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank"><b>HSK {{ level }} Lesson {{ lesson }}</b></a>, reinforce the vocabulary you learned in the lesson by watching these {{ lessonVideos.length }} videos:</p>
       </div>
     </div>
     <div class="row mb-4" v-for="video of lessonVideos">
