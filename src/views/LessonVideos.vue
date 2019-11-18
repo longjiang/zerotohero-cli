@@ -31,6 +31,9 @@
         <p class="mt-3 mb-5">After finishing <a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank"><b>HSK {{ level }} Lesson {{ lesson }}</b></a>, reinforce the vocabulary you learned in the lesson by watching these {{ lessonVideos.length }} videos:</p>
       </div>
     </div>
+    <div v-if="loading" class="text-center">
+      <Loader :sticky="true" />
+    </div>
     <div class="row mb-4" v-for="video of lessonVideos">
       <div class="col-lg-2"></div>
       <div class="col-md-6 col-lg-4">
@@ -62,12 +65,14 @@
 <script>
 import WordList from '@/components/WordList'
 import YouTubeVideoList from '@/components/YouTubeVideoList'
+import Loader from '@/components/Loader'
 import Config from '@/lib/config'
 import Helper from '@/lib/helper'
 
 export default {
   data() {
     return {
+      loading: true,
       words: [],
       matchedWords: [],
       lessonVideos: [],
@@ -162,6 +167,7 @@ export default {
       this.matchedWordsKey++
     },
     async getLessonVideos() {
+      this.loading = true
       this.lessonVideos = []
       let response = await $.getJSON(
         `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}&filter[level][eq]=${this.level}&filter[lesson][eq]=${this.lesson}`
@@ -179,6 +185,7 @@ export default {
         let bScore = b.matches ? b.matches.length || 0 : 0
         return aScore - bScore
       })
+      this.loading = false
       this.lessonVideos = Helper.uniqueByValue(videos, 'youtube_id')
       this.updateLessonVideos++
       return true
