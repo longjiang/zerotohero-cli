@@ -33,7 +33,7 @@
           </template>
           <b-dropdown
             id="dropdown-1"
-            v-if="saved && !saved.lesson"
+            v-if="saved"
             :text="saved.topic ? topics[saved.topic] : 'Topic'"
             :variant="saved.topic ? 'success' : undefined"
             class="ml-1"
@@ -273,7 +273,7 @@ export default {
     async getSaved() {
       this.saved = undefined
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}`
+        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson`
       )
       if (response && response.data && response.data.length > 0) {
         this.saved = response.data[0]
