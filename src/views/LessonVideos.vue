@@ -34,14 +34,14 @@
     <div v-if="loading" class="text-center">
       <Loader :sticky="true" />
     </div>
-    <div class="row mb-4" v-for="video of lessonVideos">
+    <div class="row mb-4" v-for="(video, videoIndex) in lessonVideos">
       <div class="col-lg-2"></div>
       <div class="col-md-6 col-lg-4">
         <YouTubeVideoList :checkSubs="false" :updateVideos="updateLessonVideos" :videos="[video]" />
       </div>
       <div class="col-md-6 col-lg-4">
         <h5 class="mt-3">Vocabulary covered</h5>
-        <WordList :words="video.matches" :key="`matched-words-${matchedWordsKey}`"></WordList>
+        <WordList :words="video.matches" :key="`matched-words-${videoIndex}-${matchedWordsKey}`"></WordList>
       </div>
       <div class="col-lg-2"></div>
     </div>
@@ -50,7 +50,7 @@
       <div class="col-md-12 col-lg-8">
         <div class="jumbotron pt-4 pb-4" v-if="unmatchedWords.length > 0">
           <h4 class="mt-3 mb-4 text-center text-danger">Lesson words <em>not</em> covered in the videos</h4>
-          <WordList :words="unmatchedWords" :key="`matched-words-${matchedWordsKey}`"></WordList>
+          <WordList :words="unmatchedWords" :key="`unmatched-words-${matchedWordsKey}`"></WordList>
         </div>
         <div class="col-sm-12 text-center">
           <a v-if="lesson > 1" class="btn btn-gray mr-2" :href="`/#/${$l1.code}/${$l2.code}/lesson-videos/${level}/${Number(lesson) - 1}`">Previous Lesson</a>
@@ -118,7 +118,7 @@ export default {
       return this.words.filter(word => {
         let noMatch = true
         for (let video of this.lessonVideos) {
-          if (video.matches.includes(word)) noMatch = false
+          if (video.matches && video.matches.includes(word)) noMatch = false
         }
         return noMatch
       })
@@ -131,7 +131,21 @@ export default {
     changeLesson(lesson) {
       location.hash = `/${this.$l1.code}/${this.$l2.code}/lesson-videos/${this.level || 1}/${lesson}`
     },
+    updateMatches() {
+      for (let video of this.lessonVideos) {
+        video.matches = this.matchWords(video)
+      }
+      this.videos = this.videos.sort((a,b) => {
+        let aScore = a.matches ? a.matches.length || 0 : 0
+        let bScore = b.matches ? b.matches.length || 0 : 0
+        return aScore - bScore
+      })
+      this.matchedWordsKey++
+    },
     async route() {
+      await this.getLessonVideos()
+      this.updateVideos++
+      this.updateLessonVideos++
       let words = await (await this.$dictionary).lookupByLesson(this.level, this.lesson)
       words = words.filter(word => !word.oofc || !word.oofc === '')
       if (this.$l2.han && this.$l2.code !== 'ja') {
@@ -139,9 +153,7 @@ export default {
       } else {
         this.words = Helper.uniqueByValue(words, 'head')
       }
-      await this.getLessonVideos()
-      this.updateVideos++
-      this.updateLessonVideos++
+      this.updateMatches()
     },
     matchWords(video) {
       let matches = []
@@ -157,15 +169,6 @@ export default {
       }
       return matches
     },
-    updateMatches() { // called from child
-      this.matchedWords = []
-      for (let video of this.lessonVideos) {
-        if (video.matches) {
-          this.matchedWords = Helper.uniqueByValue(this.matchedWords.concat(video.matches), 'id')
-        }
-      }
-      this.matchedWordsKey++
-    },
     async getLessonVideos() {
       this.loading = true
       this.lessonVideos = []
@@ -176,15 +179,9 @@ export default {
       if (videos.length > 0) {
         videos = videos.map(video => {
           video.subs_l2 = JSON.parse(video.subs_l2)
-          video.matches = this.matchWords(video)
           return video
         })
       }
-      videos = videos.sort((a,b) => {
-        let aScore = a.matches ? a.matches.length || 0 : 0
-        let bScore = b.matches ? b.matches.length || 0 : 0
-        return aScore - bScore
-      })
       this.loading = false
       this.lessonVideos = Helper.uniqueByValue(videos, 'youtube_id')
       this.updateLessonVideos++
