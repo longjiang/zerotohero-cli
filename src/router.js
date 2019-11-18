@@ -441,6 +441,21 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/lesson-videos/:level?/:lesson?',
+      name: 'lesson-videos',
+      component: () => import('./views/LessonVideos.vue'),
+      props: true,
+      meta: {
+        title: 'Extra Lesson Videos | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Reinforce the vocabulary you learned in an HSK lesson by watching YouTube videos.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/music/:method?/:args?',
       name: 'music',
       component: () => import('./views/Music.vue'),
@@ -496,21 +511,6 @@ export default new Router({
           {
             name: 'description',
             content: 'Watch YouTube videos and study the subtitles.'
-          }
-        ]
-      }
-    },
-    {
-      path: '/:l1/:l2/lesson-videos/:level/:lesson',
-      name: 'lesson-videos',
-      component: () => import('./views/LessonVideos.vue'),
-      props: true,
-      meta: {
-        title: 'Extra Lesson Videos | Zero to Hero',
-        metaTags: [
-          {
-            name: 'description',
-            content: 'Reinforce the vocabulary you learned in an HSK lesson by watching YouTube videos.'
           }
         ]
       }

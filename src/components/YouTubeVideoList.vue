@@ -12,7 +12,7 @@
           <img :src="video.thumbnail || `//img.youtube.com/vi/${video.youtube_id}/hqdefault.jpg`" class="youtube-thumbnail aspect" />
         </a>
         <div class="media-body" :key="`video-${videoIndex}-${videosInfoKey}`">
-          <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}`" class="youtube-title d-block link-unstyled">{{ video.title }}</a>
+          <b><a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}`" class="youtube-title d-block link-unstyled">{{ video.title }}</a></b>
           <div v-if="assignLessonMode && video.matches && video.matches.length > 0" class="btn btn-small bg-warning text-white mt-2 ml-0">{{ video.matches.length }} matched words</div>
           <div v-if="assignLessonMode && video.text" class="btn btn-small btn-gray mt-2 ml-0">{{ video.text.length / 1000 }}k</div>
           <div v-if="video.hasSubs" class="btn btn-small bg-success text-white mt-2 ml-0">{{ $l2.name }} CC <span v-if="video.locale">({{ video.locale}})</span></div>

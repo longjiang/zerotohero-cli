@@ -5,7 +5,29 @@
         <div class="jumbotron pt-4 pb-4"><p class="lead">This feature works in conjunction with our <b><a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank">HSK {{ level }} online course</a></b>.</p>
           <a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank" class="btn btn-primary">Enroll Now</a>
         </div>
-        <h3 class="mt-5">Expansion videos for HSK {{ level }} Lesson {{ lesson }}</h3>
+        <h3 class="mt-5">Expansion videos for <b-dropdown
+            id="dropdown-1"
+            :text="levels[level]"
+            class="ml-1"
+          >
+            <b-dropdown-item
+              v-for="(title, slug) in levels"
+              @click="changeLevel(slug)"
+              >{{ title }}</b-dropdown-item
+            >
+          </b-dropdown>
+          <b-dropdown
+            id="dropdown-1"
+            :text="`Lesson ${lesson}`"
+            class="ml-1"
+          >
+            <b-dropdown-item
+              v-for="lesson in levelLessons[level]"
+              @click="changeLesson(lesson)"
+              >Lesson {{ lesson }}</b-dropdown-item
+            >
+          </b-dropdown>
+        </h3>
         <p class="mt-3 mb-5">After finishing <b>HSK {{ level }} Lesson {{ lesson }}</b>, reinforce the vocabulary you learned in the lesson by watching these {{ lessonVideos.length }} videos:</p>
       </div>
     </div>
@@ -50,6 +72,7 @@ export default {
       matchedWords: [],
       lessonVideos: [],
       videos: [],
+      levels: Helper.levels(this.$l2),
       levelLessons: {
         1: 15,
         2: 15,
@@ -67,7 +90,14 @@ export default {
     WordList,
     YouTubeVideoList
   },
-  props: ['level', 'lesson'],
+  props: {
+    level: {
+      default: 1
+    },
+    lesson: {
+      default: 1
+    }
+  },
   activated() {
     this.route()
   },
@@ -90,6 +120,12 @@ export default {
     },
   },
   methods: {
+    changeLevel(level) {
+      location.hash = `/${this.$l1.code}/${this.$l2.code}/lesson-videos/${level}/1`
+    },
+    changeLesson(lesson) {
+      location.hash = `/${this.$l1.code}/${this.$l2.code}/lesson-videos/${this.level || 1}/${lesson}`
+    },
     async route() {
       let words = await (await this.$dictionary).lookupByLesson(this.level, this.lesson)
       words = words.filter(word => !word.oofc || !word.oofc === '')

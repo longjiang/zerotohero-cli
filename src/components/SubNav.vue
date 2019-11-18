@@ -127,7 +127,7 @@
         <i class="fab fa-youtube" />
         {{ $t('YouTube Transcript') }}
       </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'lesson-videos' }">
+      <router-link class="secondary-menu-item" :to="{ name: 'lesson-videos' }"  v-if="$l2.code === 'zh'">
         <i class="fab fa-youtube" />
         {{ $t('Lesson Expansion Videos') }}
       </router-link>
