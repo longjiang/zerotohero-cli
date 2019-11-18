@@ -1,0 +1,158 @@
+<template>
+  <div class="container main mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="jumbotron pt-4 pb-4"><p class="lead">This page is for students taking our our <b><a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank">HSK {{ level }} online course</a></b>.</p>
+          <a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank" class="btn btn-primary">Enroll Now</a>
+        </div>
+        <h3 class="mt-5">Expansion videos for HSK {{ level }} Lesson {{ lesson }}</h3>
+        <p class="mt-3 mb-5">After finishing <b>HSK {{ level }} Lesson {{ lesson }}</b>, reinforce the vocabulary you learned in the lesson by watching these {{ lessonVideos.length }} videos:</p>
+      </div>
+    </div>
+    <div class="row mb-4" v-for="video of lessonVideos">
+      <div class="col-lg-2"></div>
+      <div class="col-md-6 col-lg-4">
+        <YouTubeVideoList :checkSubs="false" :updateVideos="updateLessonVideos" :videos="[video]" />
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <h5 class="mt-3">Vocabulary covered</h5>
+        <WordList :words="video.matches" :key="`matched-words-${matchedWordsKey}`"></WordList>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+    <div class="row mt-5 mb-5">
+      <div class="col-lg-2"></div>
+      <div class="col-md-12 col-lg-8">
+        <div class="jumbotron pt-4 pb-4">
+          <template v-if="unmatchedWords.length > 0">
+            <h4 class="mt-3 mb-4 text-center text-danger">Lesson words <em>not</em> covered in the videos</h4>
+            <WordList :words="unmatchedWords" :key="`matched-words-${matchedWordsKey}`"></WordList>
+          </template>
+        </div>
+        <div class="col-sm-12 text-center">
+          <a v-if="lesson > 1" class="btn btn-gray mr-2" :href="`/#/${$l1.code}/${$l2.code}/lesson-videos/${level}/${Number(lesson) - 1}`">Previous Lesson</a>
+          <a v-if="lesson < levelLessons[level]" class="btn btn-gray" :href="`/#/${$l1.code}/${$l2.code}/lesson-videos/${level}/${Number(lesson) + 1}`">Next Lesson</a>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+import WordList from '@/components/WordList'
+import YouTubeVideoList from '@/components/YouTubeVideoList'
+import Config from '@/lib/config'
+import Helper from '@/lib/helper'
+
+export default {
+  data() {
+    return {
+      words: [],
+      matchedWords: [],
+      lessonVideos: [],
+      videos: [],
+      levelLessons: {
+        1: 15,
+        2: 15,
+        3: 20,
+        4: 20,
+        5: 36,
+        6: 40
+      },
+      updateLessonVideos: 0,
+      updateVideos: 0,
+      matchedWordsKey: 0
+    }
+  },
+  components: {
+    WordList,
+    YouTubeVideoList
+  },
+  props: ['level', 'lesson'],
+  activated() {
+    this.route()
+  },
+  watch: {
+    $route() {
+      if (this.$route.name === 'lesson-videos') {
+        this.route()
+      }
+    },
+  },
+  computed: {
+    unmatchedWords() {
+      return this.words.filter(word => {
+        let noMatch = true
+        for (let video of this.lessonVideos) {
+          if (video.matches.includes(word)) noMatch = false
+        }
+        return noMatch
+      })
+    },
+  },
+  methods: {
+    async route() {
+      let words = await (await this.$dictionary).lookupByLesson(this.level, this.lesson)
+      words = words.filter(word => !word.oofc || !word.oofc === '')
+      if (this.$l2.han && this.$l2.code !== 'ja') {
+        this.words = Helper.uniqueByValue(words, 'simplified')
+      } else {
+        this.words = Helper.uniqueByValue(words, 'head')
+      }
+      await this.getLessonVideos()
+      this.updateVideos++
+      this.updateLessonVideos++
+    },
+    matchWords(video) {
+      let matches = []
+      if (video.subs_l2) {
+        video.text = video.subs_l2.map(line => line.line).join('\n')
+        if (this.words && this.words.length > 0) {
+          for (let word of this.words) {
+            if (video.text.includes(word.simplified) || video.text.includes(word.traditional) || video.text.includes(word.head)) {
+              matches.push(word)
+            }
+          }
+        }
+      }
+      return matches
+    },
+    updateMatches() { // called from child
+      this.matchedWords = []
+      for (let video of this.lessonVideos) {
+        if (video.matches) {
+          this.matchedWords = Helper.uniqueByValue(this.matchedWords.concat(video.matches), 'id')
+        }
+      }
+      this.matchedWordsKey++
+    },
+    async getLessonVideos() {
+      this.lessonVideos = []
+      let response = await $.getJSON(
+        `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}&filter[level][eq]=${this.level}&filter[lesson][eq]=${this.lesson}`
+      )
+      let videos = response.data || []
+      if (videos.length > 0) {
+        videos = videos.map(video => {
+          video.subs_l2 = JSON.parse(video.subs_l2)
+          video.matches = this.matchWords(video)
+          return video
+        })
+      }
+      videos = videos.sort((a,b) => {
+        let aScore = a.matches ? a.matches.length || 0 : 0
+        let bScore = b.matches ? b.matches.length || 0 : 0
+        return aScore - bScore
+      })
+      this.lessonVideos = Helper.uniqueByValue(videos, 'youtube_id')
+      this.updateLessonVideos++
+      return true
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>

@@ -501,6 +501,21 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/lesson-videos/:level/:lesson',
+      name: 'lesson-videos',
+      component: () => import('./views/LessonVideos.vue'),
+      props: true,
+      meta: {
+        title: 'Extra Lesson Videos | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Reinforce the vocabulary you learned in an HSK lesson by watching YouTube videos.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/youtube/channel/:args?',
       name: 'youtube-channel',
       component: () => import('./views/YouTubeChannel.vue'),

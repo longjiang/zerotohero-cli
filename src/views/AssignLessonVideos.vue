@@ -159,7 +159,7 @@ export default {
             return overlap.length === 0
           })
         }
-        this.videos = videos.filter(video => video.text.length < 1000)
+        this.videos = videos
       }
       return true
     },

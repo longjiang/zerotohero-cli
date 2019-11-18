@@ -119,12 +119,17 @@
         $route.name &&
           ($route.name.startsWith('youtube') ||
             $route.name === 'hero-academy' ||
+            $route.name === 'lesson-videos' ||
             $route.name === 'music')
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'youtube-browse' }">
         <i class="fab fa-youtube" />
         {{ $t('YouTube Transcript') }}
+      </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'lesson-videos' }">
+        <i class="fab fa-youtube" />
+        {{ $t('Lesson Expansion Videos') }}
       </router-link>
       <router-link
         v-if="$hasFeature('hero-academy')"

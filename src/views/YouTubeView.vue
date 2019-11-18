@@ -31,19 +31,20 @@
               <i class="fa fa-check mr-2"></i>Added
             </b-button>
           </template>
-          <template v-if="saved">
-            <b-dropdown
-              id="dropdown-1"
-              :text="saved.topic ? topics[saved.topic] : 'Topic'"
-              :variant="saved.topic ? 'success' : undefined"
-              class="ml-1"
+          <b-dropdown
+            id="dropdown-1"
+            v-if="saved && !saved.lesson"
+            :text="saved.topic ? topics[saved.topic] : 'Topic'"
+            :variant="saved.topic ? 'success' : undefined"
+            class="ml-1"
+          >
+            <b-dropdown-item
+              v-for="(title, slug) in topics"
+              @click="changeTopic(slug)"
+              >{{ title }}</b-dropdown-item
             >
-              <b-dropdown-item
-                v-for="(title, slug) in topics"
-                @click="changeTopic(slug)"
-                >{{ title }}</b-dropdown-item
-              >
-            </b-dropdown>
+          </b-dropdown>
+          <template v-if="saved && !saved.lesson">
             <b-dropdown
               id="dropdown-1"
               :text="saved.level ? levels[saved.level] : 'Level'"
