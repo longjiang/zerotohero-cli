@@ -8,18 +8,21 @@
       'nosubs': (!video.checkingSubs) && (!video.hasSubs)
       }">
       <div class="youtube-link">
-        <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}`" class="youtube-thumbnail-wrapper aspect-wrapper d-block">
-          <img v-if="!noThumbs" :src="video.thumbnail || `//img.youtube.com/vi/${video.youtube_id}/hqdefault.jpg`" class="youtube-thumbnail aspect" />
+        <a v-if="!noThumbs" :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}`" class="youtube-thumbnail-wrapper aspect-wrapper d-block">
+          <img :src="video.thumbnail || `//img.youtube.com/vi/${video.youtube_id}/hqdefault.jpg`" class="youtube-thumbnail aspect" />
         </a>
         <div class="media-body" :key="`video-${videoIndex}-${videosInfoKey}`">
           <a :href="`#/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}`" class="youtube-title d-block">{{ video.title }}</a>
           <div v-if="assignLessonMode && video.matches && video.matches.length > 0" class="btn btn-small bg-warning text-white mt-2 ml-0">{{ video.matches.length }} matched words</div>
-          <div v-if="video.hasSubs" class="btn btn-small bg-success text-white mt-2">{{ $l2.name }} CC <span v-if="video.locale">({{ video.locale}})</span></div>
-          <div v-if="(video.checkingSubs === false) && (video.hasSubs === false)" class="btn btn-small text-white bg-dark mt-2">No {{ $l2.name }} CC</div>
-          <div v-if="video.id && !video.topic" class="btn btn-small text-white bg-danger mt-2">Uncategorized</div>
+          <div v-if="assignLessonMode && video.text" class="btn btn-small btn-gray mt-2 ml-0">{{ video.text.length / 1000 }}k</div>
+          <div v-if="video.hasSubs" class="btn btn-small bg-success text-white mt-2 ml-0">{{ $l2.name }} CC <span v-if="video.locale">({{ video.locale}})</span></div>
+          <div v-if="(video.checkingSubs === false) && (video.hasSubs === false)" class="btn btn-small text-white bg-dark mt-2 ml-0">No {{ $l2.name }} CC</div>
+          <div v-if="video.id && !video.topic" class="btn btn-small text-white bg-danger mt-2 ml-0">Uncategorized</div>
           <div v-if="video.id && video.topic" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.topics[video.topic] }}</div>
           <div v-if="video.id && video.level" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.level(video.level, $l2) }}</div>
+          <br v-if="assignLessonMode"/>
           <b-button v-if="assignLessonMode && !video.lesson" @click="add(video)"><i class="fas fa-plus mr-2"></i>Add to Lesson</b-button>
+          <b-button v-if="assignLessonMode && video.lesson" @click="removeFromLesson(video)"><i class="fas fa-minus mr-2"></i>Remove from Lesson</b-button>
           <b-button v-if="assignLessonMode && !video.lesson" variant="danger" @click="remove(video)" class="ml-1"
             ><i class="fas fa-trash-alt"></i
           ></b-button><br v-if="assignLessonMode"/>
@@ -80,6 +83,9 @@ export default {
   methods: {
     add(video) {
       if (this.$parent.addVideoToLesson) this.$parent.addVideoToLesson(video)
+    },
+    removeFromLesson(video) {
+      if (this.$parent.addVideoToLesson) this.$parent.removeVideoFromLesson(video)
     },
     remove(video) {
       if (this.$parent.removeVideo) this.$parent.removeVideo(video)
@@ -195,6 +201,7 @@ export default {
 }
 .youtube-video {
   min-width: 15rem;
+  max-width: 20rem;
   flex: 1;
   margin: 1rem;
 }
