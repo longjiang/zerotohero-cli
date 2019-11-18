@@ -2,7 +2,7 @@
   <div class="container main mt-5 mb-5">
     <div class="row">
       <div class="col-md-12 text-center">
-        <div class="jumbotron pt-4 pb-4"><p class="lead">This page is for students taking our our <b><a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank">HSK {{ level }} online course</a></b>.</p>
+        <div class="jumbotron pt-4 pb-4"><p class="lead">This feature works in conjunction with our <b><a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank">HSK {{ level }} online course</a></b>.</p>
           <a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank" class="btn btn-primary">Enroll Now</a>
         </div>
         <h3 class="mt-5">Expansion videos for HSK {{ level }} Lesson {{ lesson }}</h3>
@@ -23,11 +23,9 @@
     <div class="row mt-5 mb-5">
       <div class="col-lg-2"></div>
       <div class="col-md-12 col-lg-8">
-        <div class="jumbotron pt-4 pb-4">
-          <template v-if="unmatchedWords.length > 0">
-            <h4 class="mt-3 mb-4 text-center text-danger">Lesson words <em>not</em> covered in the videos</h4>
-            <WordList :words="unmatchedWords" :key="`matched-words-${matchedWordsKey}`"></WordList>
-          </template>
+        <div class="jumbotron pt-4 pb-4" v-if="unmatchedWords.length > 0">
+          <h4 class="mt-3 mb-4 text-center text-danger">Lesson words <em>not</em> covered in the videos</h4>
+          <WordList :words="unmatchedWords" :key="`matched-words-${matchedWordsKey}`"></WordList>
         </div>
         <div class="col-sm-12 text-center">
           <a v-if="lesson > 1" class="btn btn-gray mr-2" :href="`/#/${$l1.code}/${$l2.code}/lesson-videos/${level}/${Number(lesson) - 1}`">Previous Lesson</a>
