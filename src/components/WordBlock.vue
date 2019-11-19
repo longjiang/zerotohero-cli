@@ -24,16 +24,16 @@
           class="word-block-pinyin"
           v-if="transliteration && transliteration !== token.candidates[0].head"
         >{{ savedTransliteration || transliteration }}</span>
-        <span v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)" class="word-block-simplified">{{ token.candidates[0].simplified }}</span>
-        <span v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)" class="word-block-traditional">{{ token.candidates[0].traditional }}</span>
-        <span v-else class="word-block-text">{{ token.candidates[0].head }}</span>
+        <span v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)" class="word-block-simplified" @click="wordBlockClick()">{{ token.candidates[0].simplified }}</span>
+        <span v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)" class="word-block-traditional" @click="wordBlockClick()">{{ token.candidates[0].traditional }}</span>
+        <span v-else class="word-block-text" @click="wordBlockClick()">{{ token.candidates[0].head }}</span>
       </template>
       <template v-else>
         <span
           class="word-block-pinyin"
           v-if="transliteration && transliteration !== text"
         >{{ savedTransliteration || transliteration }}</span>
-        <span class="word-block-text">
+        <span class="word-block-text" @click="wordBlockClick()">
           <template v-if="$l2.code === 'ru' && text.length > 9">{{ segment(text) }}</template>
           <slot v-else></slot>
         </span>
@@ -125,6 +125,9 @@ export default {
   props: {
     token: {
       type: Object
+    },
+    explore: {
+      default: false
     }
   },
   data() {
@@ -170,6 +173,11 @@ export default {
     }
   },
   methods: {
+    wordBlockClick() {
+      if (this.explore && this.token && this.token.candidates && this.token.candidates.length > 0) {
+        location.hash = `/${this.$l1.code}/${this.$l2.code}/explore/related/${this.token.candidates[0].id}`
+      }
+    },
     tr(text) {
       return tr(text)
     },

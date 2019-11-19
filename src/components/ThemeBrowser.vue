@@ -18,6 +18,7 @@
           <Annotate
             tag="span"
             class="dewey-l1-title"
+            :explore="true"
             :wordBlockTemplateFilter="wordBlockTemplateFilter"
              :showTranslate="true"
             ><span>{{ l1.title }}</span></Annotate
@@ -41,6 +42,7 @@
                 <Annotate
                   tag="span"
                   class="dewey-l2-title"
+                  :explore="true"
                   :wordBlockTemplateFilter="wordBlockTemplateFilter"
                    :showTranslate="true"
                   ><span>{{ l2.title }}</span></Annotate
@@ -54,6 +56,7 @@
                       <Annotate
                         tag="span"
                         class="dewey-l3-title"
+                        :explore="true"
                         :wordBlockTemplateFilter="wordBlockTemplateFilter"
                          :showTranslate="true"
                       >

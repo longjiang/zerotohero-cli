@@ -65,6 +65,9 @@ export default {
     },
     foreign: {
       default: true
+    },
+    explore: {
+      default: false
     }
   },
   data() {
@@ -140,13 +143,13 @@ export default {
           if (typeof item === 'object') {
             let token = this.tokenized[batchId]
             if (token && typeof token === 'object') {
-              html += `<WordBlock :token="tokenized[${batchId}][${index}]"/>`
+              html += `<WordBlock :explore="explore" :token="tokenized[${batchId}][${index}]"/>`
             }
           } else {
             item = item.trim().replace(/\s+/gi, ' ')
             if (item !== '') {
               for (let word of item.trim().split(/\s+/)) {
-                html += `<WordBlock>${word}</WordBlock> `
+                html += `<WordBlock :explore="explore">${word}</WordBlock> `
               }
               html = html.trim()
             }
