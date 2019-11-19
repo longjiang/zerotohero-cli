@@ -124,7 +124,7 @@ export default {
         $(block)
           .addClass('word-block-related')
           .click(function() {
-            location.hash = `#/${this.$l1.code}/${this.$l2.code}/explore/related/${candidates[0].identifier}`
+            location.hash = `#/${this.$l1.code}/${this.$l2.code}/explore/related/${candidates[0].id}`
           })
           .prepend('<i class="fas fa-expand-arrows-alt"></i>')
       }

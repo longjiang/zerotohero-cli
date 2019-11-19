@@ -68,7 +68,7 @@
       </a>
       <a
         v-if="compareWith"
-        :href="`#/${$l1.code}/${$l2.code}/explore/related/${word.identifier}`"
+        :href="`#/${$l1.code}/${$l2.code}/explore/related/${word.id}`"
         class="btn show-more word-list-ext-related-btn mt-3"
         :data-bg-level="word.hsk"
       >

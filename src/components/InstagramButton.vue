@@ -53,7 +53,7 @@ export default {
     if (this.entry.hsk !== 'outside') {
       this.filename = `${this.entry.hskId}-${this.entry.simplified}`
     } else {
-      this.filename = `${this.entry.identifier}`
+      this.filename = `${this.entry.id}`
     }
   },
   methods: {
