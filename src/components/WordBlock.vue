@@ -88,7 +88,7 @@
             class="pl-1 pr-1 ml-1 rounded d-inline-block"
             style="font-size: 0.8em; position: relative; bottom: 0.1rem"
           >{{ $l2.code === 'zh' ? 'HSK ' : ''}}{{ word.level }}</span>
-          <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${words[0].id}`" class="ml-1 link-unstyled" style="color: #999">
+          <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`" class="ml-1 link-unstyled" style="color: #999">
             <i class="fas fa-book"></i>
           </a>
         </div>
