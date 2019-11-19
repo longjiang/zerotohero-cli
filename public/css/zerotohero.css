@@ -503,6 +503,34 @@ ul.collapsed li:nth-child(n+5) {
   display: none;
 }
 
+ul.collapse-4.collapsed li:nth-child(-n+4) {
+  display: inherit;
+}
+
+ul.collapse-5.collapsed li:nth-child(-n+5) {
+  display: inherit;
+}
+
+ul.collapse-6.collapsed li:nth-child(-n+6) {
+  display: inherit;
+}
+
+ul.collapse-7.collapsed li:nth-child(-n+7) {
+  display: inherit;
+}
+
+ul.collapse-8.collapsed li:nth-child(-n+8) {
+  display: inherit;
+}
+
+ul.collapse-9.collapsed li:nth-child(-n+9) {
+  display: inherit;
+}
+
+ul.collapse-10.collapsed li:nth-child(-n+10) {
+  display: inherit !important;
+}
+
 .booklist {
   list-style: none;
   padding: 0;

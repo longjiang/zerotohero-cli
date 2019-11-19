@@ -126,6 +126,14 @@
         </div>
         <div class="row">
           <div class="col-sm-12">
+            <EntryRelated
+              :entry="entry"
+              class="mb-5"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
             <EntryYouTube
               :text="entry.bare"
               class="mb-5"
@@ -157,6 +165,7 @@ import Mistakes from '@/components/Mistakes'
 import EntryCourseAd from '@/components/EntryCourseAd'
 import EntryLyrics from '@/components/EntryLyrics'
 import InstagramButton from '@/components/InstagramButton'
+import EntryRelated from '@/components/EntryRelated'
 import { mapState } from 'vuex'
 
 export default {
@@ -177,7 +186,8 @@ export default {
     Mistakes,
     EntryCourseAd,
     EntryLyrics,
-    InstagramButton
+    InstagramButton,
+    EntryRelated
   },
   props: {
     method: {

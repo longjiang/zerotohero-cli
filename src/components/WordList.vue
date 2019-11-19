@@ -1,11 +1,7 @@
 <template>
   <div>
     <ul
-      :class="{
-        wordlist: true,
-        'list-unstyled': true,
-        collapsed: collapse > 0
-      }"
+      :class="classes()"
       data-collapse-target
     >
       <li :class="{
@@ -83,6 +79,17 @@ export default {
     },
     level: {
       default: false
+    }
+  },
+  methods: {
+    classes() {
+      let classes = {
+        wordlist: true,
+        'list-unstyled': true,
+        collapsed: this.collapse > 0
+      }
+      classes[`collapse-${this.collapse}`] = true
+      return classes
     }
   }
 }
