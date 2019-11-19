@@ -162,6 +162,9 @@ export default {
   props: {
     args: {
       type: String
+    },
+    lesson: {
+      default: false
     }
   },
   watch: {
@@ -189,6 +192,37 @@ export default {
     }
   },
   methods: {
+    wordSaved(word) {
+      let saved = false
+      if (word) {
+        saved = this.$store.getters.hasSavedWord({
+          id: word.id,
+          l2: this.$l2.code
+        })
+      }
+      return saved
+    },
+    async allForms(word) {
+      let wordForms =
+        (await (await this.$dictionary).wordForms(word)) || []
+      wordForms = wordForms.filter(form => form !== '')
+      wordForms = [word.bare.toLowerCase()].concat(wordForms.map(form => form.form.replace(/'/g, '')))
+      wordForms = Helper.unique(wordForms).filter(form => form && form !== '' && form !== '-')
+      return wordForms
+    },
+    async saveWords() {
+      let words = await (await this.$dictionary).lookupByLesson(this.saved.level, this.saved.lesson)
+      for (let word of words) {
+        if (word && !this.wordSaved(word)) {
+          let wordForms = await this.allForms(word)
+          this.$store.dispatch('addSavedWord', {
+            word: word,
+            wordForms: wordForms,
+            l2: this.$l2.code
+          })
+        }
+      }
+    },
     seekYouTube(starttime) {
       this.$refs.youtube.seek(starttime)
     },
@@ -277,6 +311,9 @@ export default {
       )
       if (response && response.data && response.data.length > 0) {
         this.saved = response.data[0]
+        if (this.lesson) {
+          this.saveWords()
+        }
       }
     },
     async changeLevel(slug) {

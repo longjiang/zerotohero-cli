@@ -37,7 +37,7 @@
     <div class="row mb-4" v-for="(video, videoIndex) in lessonVideos">
       <div class="col-lg-2"></div>
       <div class="col-md-6 col-lg-4">
-        <YouTubeVideoList :checkSubs="false" :updateVideos="updateLessonVideos" :videos="[video]" />
+        <YouTubeVideoList :checkSubs="false" :lesson="true" :updateVideos="updateLessonVideos" :videos="[video]" />
       </div>
       <div class="col-md-6 col-lg-4">
         <h5 class="mt-3">Vocabulary covered</h5>

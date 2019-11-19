@@ -486,7 +486,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/youtube/view/:args?',
+      path: '/:l1/:l2/youtube/view/:args?/:lesson?',
       name: 'youtube-view',
       component: () => import('./views/YouTubeView.vue'),
       props: true,
