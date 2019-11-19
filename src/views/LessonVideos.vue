@@ -137,11 +137,7 @@ export default {
       for (let video of this.lessonVideos) {
         video.matches = this.matchWords(video)
       }
-      this.videos = this.videos.sort((a,b) => {
-        let aScore = a.matches ? a.matches.length || 0 : 0
-        let bScore = b.matches ? b.matches.length || 0 : 0
-        return aScore - bScore
-      })
+      this.lessonVideos = this.lessonVideos.sort((a, b) => a.text.length - b.text.length)
       this.matchedWordsKey++
     },
     async route() {
