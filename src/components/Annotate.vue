@@ -43,6 +43,7 @@
 import wordblock from '@/components/WordBlock'
 import VRuntimeTemplate from 'v-runtime-template'
 import TinySegmenter from 'tiny-segmenter'
+import MyanmarTools from 'myanmar-tools'
 
 export default {
   components: {
@@ -161,11 +162,25 @@ export default {
       // html = text.replace(/([\S]+)/gi, '<WordBlock>$1</WordBlock>')
       return html
     },
+    convertBurmese(text) {
+      console.log('converting burmese ' + text)
+      const detector = new MyanmarTools.ZawgyiDetector()
+      const score = detector.getZawgyiProbability(text)
+      if (score > 0.5) {
+        const converter = new MyanmarTools.ZawgyiConverter()
+        console.log('Zawgyi detected')
+        return converter.zawgyiToUnicode(text)
+      } else {
+        return text
+      }
+    },
     async recursive(node) {
       if (node.nodeType === 3) {
         // textNode
         // break setnences
-        let sentences = this.breakSentences(node.nodeValue)
+        let text = node.nodeValue
+        if (this.$l2.code === 'my') text = this.convertBurmese(text)
+        let sentences = this.breakSentences(text)
         for (let sentence of sentences) {
           let sentenceSpan = $(
             `<span class="sentence">${await this.tokenize(
