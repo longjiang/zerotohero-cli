@@ -3,22 +3,12 @@
     <div class="widget-title">Compare with</div>
     <div class="jumbotron-fluid bg-light p-4">
       <WordList
-        collapse="10"
+        collapse="5"
         :words="similarWords"
         :compareWith="entry"
         :key="wordsKey"
         :traditional="entry.simplified.length === 1"
       ></WordList>
-      <hr />
-      <div class="text-center">
-        <a
-          class="btn show-more focus-exclude"
-          :href="`#/${$l1.code}/${$l2.code}/explore/related/${entry.identifier}`"
-          :data-bg-level="entry.hsk"
-        >
-          <i class="glyphicon glyphicon-fullscreen"></i> Explore Related Words
-        </a>
-      </div>
     </div>
   </div>
 </template>
@@ -38,7 +28,7 @@ export default {
     } else {
       this.getOtherPronunciations()
     }
-    this.getSimilarWords()
+    // this.getSimilarWords()
   },
   watch: {
     similarWords() {
@@ -55,7 +45,7 @@ export default {
     async getOtherPronunciations() {
       let words = await (await this.$dictionary).lookupSimplified(this.entry.simplified)
       for (let word of words) {
-        if (word.identifier !== this.entry.identifier) {
+        if (word.id !== this.entry.id) {
           this.similarWords.push(word)
         }
       }
@@ -72,9 +62,9 @@ export default {
     },
     async getSimilarWords() {
       for (let definition of this.entry.definitions) {
-        let words = await (await this.$dictionary).lookupByDefinition(definition.text)
+        let words = await (await this.$dictionary).lookupByDef(definition)
         for (let word of words) {
-          if (word.identifier !== this.entry.identifier) {
+          if (word.id !== this.entry.id) {
             this.similarWords.push(word)
           }
         }
@@ -83,7 +73,7 @@ export default {
     async getHomonyms() {
       let words = await (await this.$dictionary).lookupPinyinFuzzy(this.entry.pinyin)
       for (let word of words) {
-        if (word.identifier !== this.entry.identifier) {
+        if (word.id !== this.entry.id) {
           this.similarWords.push(word)
         }
       }

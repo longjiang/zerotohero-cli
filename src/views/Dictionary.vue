@@ -53,6 +53,23 @@
         </div>
       </div>
 
+
+      <div v-if="$l2.code === 'zh'" class="jumbotron-fluid p-0 bg-light mt-4 mb-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <EntryExample class="mt5" :entry="entry"></EntryExample>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="$l2.code === 'zh'" class="container">
+        <div class="row mt-5 d-flex" style="flex-wrap: wrap">
+          <EntryDifficulty :entry="entry" style="flex: 1" class="m-3" />
+          <EntryDisambiguation :entry="entry" class="m-3" style="flex: 1; min-width: 20rem;"></EntryDisambiguation>
+        </div>
+      </div>
+
       <!-- <EntryDisambiguation> already finds some pretty good suggestions. -->
       <!-- <EntryRelated class="mb-5" :entry="entry"></EntryRelated> -->
 
@@ -166,10 +183,16 @@ import EntryCourseAd from '@/components/EntryCourseAd'
 import EntryLyrics from '@/components/EntryLyrics'
 import InstagramButton from '@/components/InstagramButton'
 import EntryRelated from '@/components/EntryRelated'
+import EntryExample from '@/components/EntryExample'
+import EntryDifficulty from '@/components/EntryDifficulty'
+import EntryDisambiguation from '@/components/EntryDisambiguation'
 import { mapState } from 'vuex'
 
 export default {
   components: {
+    EntryExample,
+    EntryDifficulty,
+    EntryDisambiguation,
     Chinese,
     Japanese,
     Korean,

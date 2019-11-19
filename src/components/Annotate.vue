@@ -212,6 +212,15 @@ export default {
 .sentence {
   margin-right: 0.3em;
 }
+.sentence + .highlight {
+  margin-left: 0.3em;
+}
+.highlight + .sentence {
+  margin-left: 0.3em;
+}
+.sentence + .sentence {
+  margin-left: 0.3em;
+}
 .annotated {
   min-height: 2rem;
 }

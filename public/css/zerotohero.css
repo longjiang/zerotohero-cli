@@ -487,18 +487,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   background: #989898;
 }
 
-.sentence + .highlight {
-  margin-left: 0.3em;
-}
-
-.highlight + .sentence {
-  margin-left: 0.3em;
-}
-
-.sentence + .sentence {
-  margin-left: 0.3em;
-}
-
 ul.collapsed li:nth-child(n+5) {
   display: none;
 }

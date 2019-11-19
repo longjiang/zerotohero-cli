@@ -37,7 +37,6 @@ const Dictionary = {
     return text
   },
   lookupByDef(text, limit = 30) {
-    text = text.toLowerCase()
     let preferred = this.words
       .filter(row => row.search && row.search.startsWith(text)).sort((a, b) => b.weight - a.weight) // row.search is already in lower case
     let others = this.words
