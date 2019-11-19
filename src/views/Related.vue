@@ -62,7 +62,7 @@ export default {
       word: undefined,
       arg: undefined,
       related: [],
-      hrefFunc: entry => `#/${this.$l1.code}/${this.$l2.code}/explore/related/${entry.identifier}`
+      hrefFunc: entry => `#/${this.$l1.code}/${this.$l2.code}/explore/related/${entry.id}`
     }
   },
   methods: {
@@ -71,13 +71,16 @@ export default {
         this.word = undefined
         this.related = []
         this.arg = this.$route.params.arg
-        let word = await (await this.$dictionary).getByIdentifier(this.arg)
+        let word = await (await this.$dictionary).get(this.arg)
         document.title = `Words Related to ${word.simplified} (${word.pinyin}) ${word.definitions[0].text}`
         this.word = word
         this.$refs.search.dEntry = word
         this.$refs.search.text = word.simplified
         this.related = [this.word]
-        let response = await SketchEngine.thesaurus(this.word.simplified)
+        let response = await SketchEngine.thesaurus({
+          l2: this.$l2,
+          term: this.word.simplified
+        })
         this.words = []
         if (response) {
           for (let Word of response.Words) {

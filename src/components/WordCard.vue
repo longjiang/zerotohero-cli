@@ -16,7 +16,7 @@
           <i class="fa fa-times" />
         </button>
       </div>
-      <a :href="`#/${$l1.code}/${$l2.code}/view/cedict/${word.identifier}`">
+      <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`">
         <img
           v-if="srcs && srcs.length > 0"
           :src="srcs[0]"
@@ -35,7 +35,7 @@
         {{ word.pinyin }}
         <Speak :text="word.simplified" />
       </div>
-      <a v-if="word" :href="`#/${$l1.code}/${$l2.code}/view/cedict/${word.identifier}`">
+      <a v-if="word" :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`">
         <div :data-level="word.hsk" class="word-list-ext-item-word simplified">
           {{ word.simplified }}
         </div>
@@ -60,7 +60,7 @@
       </div>
       <a
         v-if="compareWith"
-        :href="`#/${$l1.code}/${$l2.code}/compare/cedict/${compareWith.identifier},${word.identifier}`"
+        :href="`#/${$l1.code}/${$l2.code}/compare/${$dictionaryName}/${compareWith.id},${word.id}`"
         class="btn show-more word-list-ext-compare-btn mt-3"
         :data-bg-level="word.hsk"
       >

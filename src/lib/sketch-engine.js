@@ -215,7 +215,7 @@ export default {
       $.post(
         `${
           Config.sketchEngineProxy
-        }?https://app.sketchengine.eu/bonito/run.cgi/thes?corpname=${this.corpname(options.l1)}`,
+        }?https://app.sketchengine.eu/bonito/run.cgi/thes?corpname=${this.corpname(options.l2)}`,
         {
           lemma: options.term,
           lpos: '',
