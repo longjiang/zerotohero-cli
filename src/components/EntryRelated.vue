@@ -1,6 +1,6 @@
 <template>
   <div :key="'related-' + relatedKey">
-    <div class="widget-title mb-2">
+    <div class="widget-title">
       Words related to “<span v-if="!$l2.han || $l2.code === 'ja'">{{
         entry.head
       }}</span
@@ -10,7 +10,7 @@
     </div>
     <div class="jumbotron-fluid bg-light p-4">
       <WordList
-        v-if="words"
+        v-if="words && words.length > 0"
         :words="words"
         class="related"
         :compareWith="entry"
@@ -58,8 +58,8 @@ export default {
         let words =
           this.$l2.han && this.$l2.code !== 'ja'
             ? await (await this.$dictionary).lookupSimplified(Word.word)
-            : await (await this.$dictionary).lookup(Word.word)
-        if (words.length > 0) {
+            : [await (await this.$dictionary).lookup(Word.word)]
+        if (words.length > 0 && words[0]) {
           let word = words[0]
           this.words.push(word)
         }

@@ -272,6 +272,26 @@ const Dictionary = {
   lookupByCharacter(char) {
     return this.words.filter(row => row.traditional && row.traditional.includes(char))
   },
+  lookupSimplified(simplified, pinyin = false) {
+    const candidates = this.words
+      .filter(row => {
+        let pinyinMatch = true
+        if (pinyin.length > 0) {
+          pinyinMatch = row.pinyin === pinyin
+        }
+        return pinyinMatch && row.simplified === simplified
+      })
+    return candidates
+  },
+  lookupTraditional(traditional, pinyin = false) {
+    const candidates = this.words
+      .filter(row => row.traditional === traditional)
+    return candidates
+  },
+  lookup(text) {
+    let word = this.words.find(word => word && (word.simplified === text || word.traditional === text))
+    return word
+  },
   lookupKana(kana) {
     const candidates = this.words.filter(row => {
       return row.jyutping === kana

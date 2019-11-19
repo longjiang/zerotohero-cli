@@ -70,6 +70,10 @@ const Dictionary = {
   stylize(name) {
     return name
   },
+  lookup(text) {
+    let word = this.words.find(word => word && word.bare === text)
+    return word
+  },
   lookupByDef(text, limit = 30) {
     text = text.toLowerCase()
     let results = this.words.filter(row => row.english && row.english.toLowerCase().includes(text)).slice(0, limit)

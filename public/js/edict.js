@@ -53,6 +53,10 @@ const Dictionary = {
     let results = this.words.filter(row => row.english && row.english.toLowerCase().includes(text)).slice(0, limit)
     return results
   },
+  lookup(text) {
+    let word = this.words.find(word => word && word.bare === text)
+    return word
+  },
   unique(array) {
     var uniqueArray = []
     for (let i in array) {
