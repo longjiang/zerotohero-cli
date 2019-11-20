@@ -97,6 +97,10 @@
             {{ word.verbs ? abbreviate(word.verbs.aspect) : '' }}
             {{ abbreviate(word.type) }}
           </span>
+          <span class="word-type" v-if="word.pos" style="color: #999">
+            {{ word.pos }}
+            {{ word.heads && word.heads[0] && word.heads[0][1] ? word.heads[0][1] : '' }}
+          </span>
           <span class="word-translation" v-if="word.definitions">
             <em v-html="word.definitions.map(definition => definition.replace(/\[.*\] /g, '')).join(', ')"></em>
           </span>
@@ -246,7 +250,7 @@ export default {
             this.hover = true
           }
         }, 300) // Allow user to interact with previous popover
-        // this.loadImages()
+        this.loadImages()
       }
     },
     mouseout() {
