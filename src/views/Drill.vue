@@ -3,7 +3,7 @@
     <audio id="drill-audio">
       <source :src="drill.file" type="audio/mpeg">
     </audio>
-    <div v-for="pattern in drill.patterns">
+    <div v-for="(pattern, patternIndex) in drill.patterns">
       <div class="audio-media">
         <b-button @click="playAudio(pattern.model.starttime, pattern.model.endtime)"><i class="fas fa-play"></i></b-button>
         <div class="audio-media-body">
@@ -21,15 +21,10 @@
       >
         <div v-for="(item, itemIndex) in part" class="mt-4 mb-4">
           <div class="audio-media mb-2">
-            <b-button @click="playAudio(item.starttime, parseTime(item.starttime) + 2)"><i class="fas fa-play"></i></b-button>
+            <b-button @click="playItem(patternIndex, partIndex, itemIndex)"><i class="fas fa-play"></i></b-button>
             <div class="audio-media-body">
               <Annotate tag="div"><strong>{{ item.prompt }}</strong></Annotate>
-            </div>
-          </div>
-          <div class="audio-media">
-            <b-button @click="playAudio(parseTime(item.starttime) + 2, itemIndex < part.length - 1 ? part[itemIndex + 1].starttime : partIndex < pattern.parts.length - 1 ? pattern.parts[partIndex + 1][0].starttime : item.endtime)"><i class="fas fa-play"></i></b-button>
-            <div class="audio-media-body">
-              <Annotate><span>{{ item.answer }}</span></Annotate>
+              <Annotate :id="`drill-answer-${patternIndex}-${partIndex}-${itemIndex}`" class="drill-answer drill-answer-hidden"><span>{{ item.answer }}</span></Annotate>
             </div>
           </div>
         </div>
@@ -39,11 +34,24 @@
 </template>
 
 <script>
+//:key="`item-${patternIndex}-${partIndex}-${itemIndex}-${itemKey}`"
+import Vue from 'vue'
 export default {
   mounted() {
     this.audio = document.getElementById('drill-audio');
   },
   methods: {
+    playItem(patternIndex, partIndex, itemIndex) {
+      let pattern = this.drill.patterns[patternIndex]
+      let part = pattern.parts[partIndex]
+      let item = part[itemIndex]
+      item.show = false
+      this.playAudio(item.starttime, itemIndex < part.length - 1 ? part[itemIndex + 1].starttime : partIndex < pattern.parts.length - 1 ? pattern.parts[partIndex + 1][0].starttime : item.endtime)
+
+      setTimeout(() => {
+        $(`#drill-answer-${patternIndex}-${partIndex}-${itemIndex}`).removeClass('drill-answer-hidden')
+      }, 4000)
+    },
     // https://stackoverflow.com/questions/9640266/convert-hhmmss-string-to-seconds-only-in-javascript
     parseTime(hms) {
       if (hms && hms.length > 0) {
@@ -75,6 +83,7 @@ export default {
   },
   data() {
     return {
+      itemKey: 0,
       audio: undefined,
       drill: {
         file: 'https://www.livelingua.com/fsi/German/Basic/Volume%201/FSI%20-%20German%20Basic%20Course%20-%20Volume%201%20-%20Unit%2001%201.2.mp3',
@@ -259,5 +268,13 @@ export default {
     margin-left: 1rem;
     flex: 1;
   }
+}
+.drill-answer {
+  transition: all 1s ease-out;
+  opacity: 1;
+}
+.drill-answer-hidden {
+  transition: all 1s ease-out;
+  opacity: 0;
 }
 </style>
