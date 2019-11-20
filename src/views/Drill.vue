@@ -68,7 +68,7 @@ export default {
       let pattern = this.drill.patterns[patternIndex]
       let item = pattern.items[itemIndex]
       if (this.drill.file) {
-        this.playAudio(item.starttime, item.endTime)
+        this.playAudio(item.starttime, item.endtime)
       } else {
         this.speak(item.prompt)
       }
@@ -103,6 +103,7 @@ export default {
           this.audio.removeEventListener('timeupdate', timeUpdateEventListener)
         }
       }
+      this.audio.removeEventListener('timeupdate', timeUpdateEventListener)
       this.audio.addEventListener('timeupdate', timeUpdateEventListener, false)
       segmentEnd = endTime
       this.audio.currentTime = startTime
@@ -127,12 +128,6 @@ export default {
             },
             items: [
               {
-                starttime: '0:00',
-                endtime: '0:06',
-                prompt: '这',
-                answer: '这是什么?'
-              },
-              {
                 starttime: '0:06',
                 endtime: '0:13',
                 prompt: '名字',
@@ -140,19 +135,19 @@ export default {
               },
               {
                 starttime: '0:13',
-                endtime: '0:18',
+                endtime: '0:19',
                 prompt: '美国',
                 answer: '美国是什么?'
               },
               {
-                starttime: '0:18',
+                starttime: '0:19',
                 endtime: '0:24',
                 prompt: '中国',
                 answer: '中国是什么?'
               },
               {
-                starttime: '0:24',
-                endtime: '0:30',
+                starttime: '0:26',
+                endtime: '0:32',
                 prompt: '老师',
                 answer: '老师是什么?'
               }
