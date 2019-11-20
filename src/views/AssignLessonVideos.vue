@@ -141,6 +141,12 @@ export default {
             return video
           })
         }
+        videos = videos.filter(video => {
+          for (let line of video.subs_l2) {
+            if (line.line.length > 50) return false
+          }
+          return true
+        })
         videos = videos
           .sort((a,b) => {
             let aScore = a.text ? a.text.length || 0 : 0

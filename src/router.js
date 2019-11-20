@@ -290,6 +290,21 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/drill',
+      name: 'drill',
+      component: () => import('./views/Drill.vue'),
+      meta: {
+        title: 'Grammar Drill | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'Learn grammar with interactive drills.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/grammar/view/:id',
       name: 'grammar',
       props: true,
