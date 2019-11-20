@@ -1,7 +1,7 @@
 <template>
   <div class="container main mt-5 mb-5">
     <audio v-if="drill.file" id="drill-audio">
-      <source :src="drill.file" type="audio/mpeg" />
+      <source :src="drill.file.data.full_url" type="audio/mpeg" />
     </audio>
     <div v-for="(pattern, patternIndex) of this.drill.patterns">
       <h5>Example:</h5>
@@ -13,7 +13,9 @@
         <div class="audio-media-body">
           <Annotate
             ><p class="lead mb-0">
-              <b>{{ pattern.model.prompt }}</b><span class="ml-2 mr-2">→</span><span>{{ pattern.model.answer }}</span>
+              <b>{{ pattern.model.prompt }}</b
+              ><span class="ml-2 mr-2">→</span
+              ><span>{{ pattern.model.answer }}</span>
             </p></Annotate
           >
           <p class="translation">
@@ -21,22 +23,23 @@
           </p>
         </div>
       </div>
-      <div
-        class="jumbotron p-4 mb-3"
-      >
+      <div class="jumbotron pt-2 pb-2 mb-3">
         <div v-for="(item, itemIndex) in pattern.items" class="mt-4 mb-4">
           <div class="audio-media mb-2">
             <b-button @click="playItem(patternIndex, itemIndex)"
               ><i class="fas fa-play"></i
             ></b-button>
             <div class="audio-media-body">
-              <Annotate tag="div"
+              <Annotate
                 ><strong>{{ item.prompt }}</strong></Annotate
               >
-              <Annotate
+              <span
                 :id="`drill-answer-${patternIndex}-${itemIndex}`"
                 class="drill-answer drill-answer-hidden"
-                ><span>{{ item.answer }}</span></Annotate
+                ><span class="ml-2 mr-2">→</span
+                ><Annotate
+                  ><span>{{ item.answer }}</span></Annotate
+                ></span
               >
             </div>
           </div>
@@ -51,6 +54,7 @@ import Vue from 'vue'
 import Speak from '@/components/Speak'
 
 export default {
+  props: ['drill'],
   components: {
     Speak
   },
@@ -74,7 +78,9 @@ export default {
       }
       setTimeout(() => {
         if (!this.drill.file) this.speak(item.answer)
-        $(`#drill-answer-${patternIndex}-${itemIndex}`).removeClass('drill-answer-hidden')
+        $(`#drill-answer-${patternIndex}-${itemIndex}`).removeClass(
+          'drill-answer-hidden'
+        )
       }, 4000)
     },
     // https://stackoverflow.com/questions/9640266/convert-hhmmss-string-to-seconds-only-in-javascript
@@ -113,48 +119,7 @@ export default {
   data() {
     return {
       itemKey: 0,
-      audio: undefined,
-      drill: {
-        file:
-          'http://directus.chinesezerotohero.com/uploads/_/originals/0890bf8d-0837-598a-bc40-bd6db3a8b04f.m4a',
-        patterns: [
-          {
-            model: {
-              starttime: '0:00',
-              endtime: '0:06',
-              prompt: '这',
-              answer: '这是什么?',
-              en: 'What is this?'
-            },
-            items: [
-              {
-                starttime: '0:06',
-                endtime: '0:13',
-                prompt: '名字',
-                answer: '名字是什么?'
-              },
-              {
-                starttime: '0:13',
-                endtime: '0:19',
-                prompt: '美国',
-                answer: '美国是什么?'
-              },
-              {
-                starttime: '0:19',
-                endtime: '0:24',
-                prompt: '中国',
-                answer: '中国是什么?'
-              },
-              {
-                starttime: '0:26',
-                endtime: '0:32',
-                prompt: '老师',
-                answer: '老师是什么?'
-              }
-            ]
-          }
-        ]
-      }
+      audio: undefined
     }
   }
 }

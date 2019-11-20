@@ -165,7 +165,7 @@
       class="secondary-menu text-center"
       v-if="
         $route.name &&
-          ($route.name === 'grammar' || $route.name === 'noun-cases' || $route.name === 'analyzer' || $route.name === 'endings')"
+          (['grammar-view', 'grammar',  'noun-cases', 'analyzer', 'endings'].includes($route.name))"
     >
       <router-link
         v-if="$hasFeature('grammar')"

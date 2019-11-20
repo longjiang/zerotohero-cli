@@ -10,7 +10,7 @@ export default {
     structure: 'Structure',
     english: 'English Equivalent',
     example: 'Example',
-    exampleTranslation: 'Example Translation'
+    exampleTranslation: 'Example Translation',
   },
 
   isChinese(text) {
