@@ -3,7 +3,7 @@
     <audio v-if="drill.file" id="drill-audio">
       <source :src="drill.file.data.full_url" type="audio/mpeg" />
     </audio>
-    <div v-for="(pattern, patternIndex) of this.drill.patterns">
+    <div v-for="(pattern, patternIndex) of this.drill.patterns" class="mb-5">
       <h5>Example:</h5>
       <div class="audio-media">
         <b-button
