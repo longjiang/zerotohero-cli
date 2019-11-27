@@ -9,7 +9,7 @@
         <button @click="nextClick" class="btn btn-medium bg-light">
           <i class="fa fa-chevron-right" title="next" />
         </button>
-        <div class="shadow rounded p-5 mt-4 mb-5">
+        <div class="shadow rounded p-4 mt-4 mb-5">
           <GrammarPoint :grammar="grammar" :key="id" />
           <hr />
           <div class="text-left mt-5" v-if="drills && drills.length > 0">

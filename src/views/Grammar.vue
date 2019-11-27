@@ -22,7 +22,7 @@
             </p>
             <p class="mb-5">
               <b>Download</b> the list as a
-              <a href="/data/grammar.csv.txt">CSV</a>,
+              <a href="/data/zh-grammar/zh-grammar.csv.txt">CSV</a>,
               <a href="/files/grammar.numbers">Apple Numbers file</a> (recommended),
               or <a href="/files/grammar.xlsx">Microsoft Excel file</a> 🤦‍♂️.
             </p>
