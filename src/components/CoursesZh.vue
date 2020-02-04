@@ -34,29 +34,7 @@
       style="position: relative"
     >
       <div class="container text-center foreground">
-        <h3 class="mb-4">Online Chinese Courses at All Levels</h3>
-        <p>
-          We provide online Chinese courses at all levels, from
-          <a
-            href="http://chinesezerotohero.teachable.com"
-            style="color: white; font-weight: bold;"
-            >HSK 1 to HSK 6</a
-          >.
-        </p>
-        <p>
-          If you don't know what HSK is, check this
-          <a
-            href="https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi"
-            target="_blank"
-            style="color: white; font-weight: bold;"
-            >Wikipedia article</a
-          >.
-        </p>
-        <a
-          href="https://chinesezerotohero.teachable.com/"
-          class="btn btn-primary mt-3 mb-2"
-          >Browse All Courses</a
-        >
+        <h2 class="mb-5">Mandarin Chinese Online Courses for HSK 1 to HSK 6</h2>
       </div>
       <img
         src="/img/ultimate-bundle.jpg"
@@ -65,8 +43,172 @@
         style="opacity: 0.15"
       />
     </div>
-    <div class="jumbotron-fluid mb-0 pb-0 pt-0">
+    <div class="jumbotron-fluid mb-0 pb-0 pt-0" style="margin-top: -3rem">
       <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="jumbotron text-center courses pt-4 shadow bg-white">
+              <div class="container mb-3">
+                <h3>Course Bundles</h3>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <a
+                      target="_blank"
+                      :href="
+                        `https://chinesezerotohero.teachable.com/p/ultimate-bundle`
+                      "
+                    >
+                      <img
+                        :src="`/img/courses/bundle-ultimate.jpg`"
+                        alt="Ultimate Bundle"
+                        class="img-fluid shadow rounded"
+                      />
+                      <h5 class="mt-2">
+                        Ultimate HSK 1 - 6 Bundle
+                        <i class="fa fa-external-link-alt small ml-1" />
+                      </h5>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <a
+                      target="_blank"
+                      :href="
+                        `https://chinesezerotohero.teachable.com/p/hsk-1-4-bundle`
+                      "
+                    >
+                      <img
+                        :src="`/img/courses/bundle-hsk-1-4.jpg`"
+                        alt="HSK 1 - 4 Bundle"
+                        class="img-fluid shadow rounded"
+                      />
+                      <h5 class="mt-2">
+                        HSK 1 - 4 Bundle
+                        <i class="fa fa-external-link-alt small ml-1" />
+                      </h5>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <a
+                      target="_blank"
+                      :href="
+                        `https://chinesezerotohero.teachable.com/p/hsk-5-6-bundle`
+                      "
+                    >
+                      <img
+                        :src="`/img/courses/bundle-hsk-5-6.jpg`"
+                        alt="HSK 5 - 6 Bundle"
+                        class="img-fluid shadow rounded"
+                      />
+                      <h5 class="mt-2">
+                        HSK 5 - 6 Bundle
+                        <i class="fa fa-external-link-alt small ml-1" />
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+                <h3>Individual Courses</h3>
+                <hr />
+                <div class="row">
+                  <div
+                    class="col-sm-6 col-md-4 mb-3"
+                    v-for="hsk in [1, 2, 3, 4, 5, 6]"
+                  >
+                    <a
+                      target="_blank"
+                      :href="
+                        `https://courses.chinesezerotohero.com/p/hsk-${hsk}-course`
+                      "
+                    >
+                      <img
+                        :src="`/img/courses/hsk${hsk}.jpg`"
+                        :alt="`HSK ${hsk} Course`"
+                        class="img-fluid shadow rounded"
+                      />
+                      <h5 class="mt-2">
+                        HSK {{ hsk }} Course
+                        <i class="fa fa-external-link-alt small ml-1" />
+                      </h5>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <a
+                      target="_blank"
+                      :href="
+                        `https://chinesezerotohero.teachable.com/p/path-to-fluency`
+                      "
+                    >
+                      <img
+                        :src="`/img/courses/fluency.jpg`"
+                        alt="Path to Fluency Course"
+                        class="img-fluid shadow rounded"
+                      />
+                      <h5 class="mt-2">
+                        Path to Fluency
+                        <i class="fa fa-external-link-alt small ml-1" />
+                      </h5>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <a
+                      target="_blank"
+                      :href="
+                        `https://chinesezerotohero.teachable.com/p/ci-shifu`
+                      "
+                    >
+                      <img
+                        :src="`/img/courses/cishifu.jpg`"
+                        alt="Ci Shifu Vocabulary Master"
+                        class="img-fluid shadow rounded"
+                      />
+                      <h5 class="mt-2">
+                        Word Builder: Ci Shifu
+                        <i class="fa fa-external-link-alt small ml-1" />
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+                <h3>Free Courses</h3>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-6 col-md-4 mb-3">
+                    <a
+                      target="_blank"
+                      :href="
+                        `https://chinesezerotohero.teachable.com/p/phonetics-with-chinese-characteristics`
+                      "
+                    >
+                      <img
+                        :src="`/img/courses/phonetics.jpg`"
+                        alt="Phonetics with Chinese Characteristics"
+                        class="img-fluid shadow rounded"
+                      />
+                      <h5 class="mt-2">
+                        Phonetics with Chinese Characteristics
+                        <i class="fa fa-external-link-alt small ml-1" />
+                      </h5>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://chinesezerotohero.teachable.com/"
+                class="btn btn-success view-courses pb-1 bigger"
+                target="_blank"
+              >
+                View all of our courses and bundles on
+                <img
+                  src="/img/teachable_light.png"
+                  alt="Teachable"
+                  class="logo-small mb-1"
+                />
+              </a>
+              <p class="mt-3">
+                <b>Teachable</b> is an online platform that hosts video courses.
+              </p>
+            </div>
+          </div>
+        </div>
         <h3 class="pb-5 pt-5 text-center">Get Our Latest Content</h3>
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-5">
@@ -159,170 +301,6 @@
           <h1 class="mb-5 text-center">
             Courses that take your Chinese to the next level.
           </h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="jumbotron text-center courses">
-            <div class="container mb-3">
-              <h3>Course Bundles</h3>
-              <hr />
-              <div class="row">
-                <div class="col-sm-6 col-md-4 mb-3">
-                  <a
-                    target="_blank"
-                    :href="
-                      `https://chinesezerotohero.teachable.com/p/ultimate-bundle`
-                    "
-                  >
-                    <img
-                      :src="`/img/courses/bundle-ultimate.jpg`"
-                      alt="Ultimate Bundle"
-                      class="img-fluid shadow rounded"
-                    />
-                    <h5 class="mt-2">
-                      Ultimate HSK 1 - 6 Bundle
-                      <i class="fa fa-external-link-alt small ml-1" />
-                    </h5>
-                  </a>
-                </div>
-                <div class="col-sm-6 col-md-4 mb-3">
-                  <a
-                    target="_blank"
-                    :href="
-                      `https://chinesezerotohero.teachable.com/p/hsk-1-4-bundle`
-                    "
-                  >
-                    <img
-                      :src="`/img/courses/bundle-hsk-1-4.jpg`"
-                      alt="HSK 1 - 4 Bundle"
-                      class="img-fluid shadow rounded"
-                    />
-                    <h5 class="mt-2">
-                      HSK 1 - 4 Bundle
-                      <i class="fa fa-external-link-alt small ml-1" />
-                    </h5>
-                  </a>
-                </div>
-                <div class="col-sm-6 col-md-4 mb-3">
-                  <a
-                    target="_blank"
-                    :href="
-                      `https://chinesezerotohero.teachable.com/p/hsk-5-6-bundle`
-                    "
-                  >
-                    <img
-                      :src="`/img/courses/bundle-hsk-5-6.jpg`"
-                      alt="HSK 5 - 6 Bundle"
-                      class="img-fluid shadow rounded"
-                    />
-                    <h5 class="mt-2">
-                      HSK 5 - 6 Bundle
-                      <i class="fa fa-external-link-alt small ml-1" />
-                    </h5>
-                  </a>
-                </div>
-              </div>
-              <h3>Individual Courses</h3>
-              <hr />
-              <div class="row">
-                <div
-                  class="col-sm-6 col-md-4 mb-3"
-                  v-for="hsk in [1, 2, 3, 4, 5, 6]"
-                >
-                  <a
-                    target="_blank"
-                    :href="
-                      `https://courses.chinesezerotohero.com/p/hsk-${hsk}-course`
-                    "
-                  >
-                    <img
-                      :src="`/img/courses/hsk${hsk}.jpg`"
-                      :alt="`HSK ${hsk} Course`"
-                      class="img-fluid shadow rounded"
-                    />
-                    <h5 class="mt-2">
-                      HSK {{ hsk }} Course
-                      <i class="fa fa-external-link-alt small ml-1" />
-                    </h5>
-                  </a>
-                </div>
-                <div class="col-sm-6 col-md-4 mb-3">
-                  <a
-                    target="_blank"
-                    :href="
-                      `https://chinesezerotohero.teachable.com/p/path-to-fluency`
-                    "
-                  >
-                    <img
-                      :src="`/img/courses/fluency.jpg`"
-                      alt="Path to Fluency Course"
-                      class="img-fluid shadow rounded"
-                    />
-                    <h5 class="mt-2">
-                      Path to Fluency
-                      <i class="fa fa-external-link-alt small ml-1" />
-                    </h5>
-                  </a>
-                </div>
-                <div class="col-sm-6 col-md-4 mb-3">
-                  <a
-                    target="_blank"
-                    :href="
-                      `https://chinesezerotohero.teachable.com/p/ci-shifu`
-                    "
-                  >
-                    <img
-                      :src="`/img/courses/cishifu.jpg`"
-                      alt="Ci Shifu Vocabulary Master"
-                      class="img-fluid shadow rounded"
-                    />
-                    <h5 class="mt-2">
-                      Word Builder: Ci Shifu
-                      <i class="fa fa-external-link-alt small ml-1" />
-                    </h5>
-                  </a>
-                </div>
-              </div>
-              <h3>Free Courses</h3>
-              <hr />
-              <div class="row">
-                <div class="col-sm-6 col-md-4 mb-3">
-                  <a
-                    target="_blank"
-                    :href="
-                      `https://chinesezerotohero.teachable.com/p/phonetics-with-chinese-characteristics`
-                    "
-                  >
-                    <img
-                      :src="`/img/courses/phonetics.jpg`"
-                      alt="Phonetics with Chinese Characteristics"
-                      class="img-fluid shadow rounded"
-                    />
-                    <h5 class="mt-2">
-                      Phonetics with Chinese Characteristics
-                      <i class="fa fa-external-link-alt small ml-1" />
-                    </h5>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <a
-              href="https://chinesezerotohero.teachable.com/"
-              class="btn btn-success view-courses pb-1 bigger"
-              target="_blank"
-            >
-              View all of our courses and bundles on
-              <img
-                src="/img/teachable_light.png"
-                alt="Teachable"
-                class="logo-small mb-1"
-              />
-            </a>
-            <p class="mt-3">
-              <b>Teachable</b> is an online platform that hosts video courses.
-            </p>
-          </div>
         </div>
       </div>
       <div class="row">
