@@ -4,8 +4,7 @@
       <div class="col-sm-12">
         <h1 class="mb-4">Latest Video Count</h1>
         <p class="mb-5">
-          A lot of students ask us, how many videos are there in your courses.
-          So here's the answer:
+          Each video averages to about <b>5 minutes</b> long.
         </p>
         <table class="table">
           <div>
@@ -68,8 +67,8 @@
                 >
                   HSK 5
                 </td>
-                <td class="text-left">111</td>
-                <td class="text-left">9h</td>
+                <td class="text-left">183</td>
+                <td class="text-left">25h 25m</td>
               </tr>
               <tr>
                 <td
@@ -88,8 +87,8 @@
                 >
                   Path To Fluency
                 </td>
-                <td class="text-left">65</td>
-                <td class="text-left">4h 55m</td>
+                <td class="text-left">46</td>
+                <td class="text-left">3h 35m</td>
               </tr>
               <tr>
                 <td
@@ -105,12 +104,23 @@
               <tr>
                 <td
                   class="text-left text-white"
+                  style="background-color:#FD4F1C;"
+                >
+                  Word Builder: Ci Shifu
+                </td>
+                <td class="text-left">100</td>
+                <td class="text-left">10h 28m</td>
+              </tr>
+
+              <tr>
+                <td
+                  class="text-left text-white"
                   style="background-color:#635e5e;"
                 >
                   <strong>Total</strong>
                 </td>
-                <td class="text-left"><strong>889</strong></td>
-                <td class="text-left"><strong>62h 19m</strong></td>
+                <td class="text-left"><strong>1042</strong></td>
+                <td class="text-left"><strong>84h 17m</strong></td>
               </tr>
             </tbody>
             <p class="mt-5">
