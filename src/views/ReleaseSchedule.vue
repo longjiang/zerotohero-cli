@@ -2,7 +2,9 @@
   <div class="container mt-5 mb-5">
     <div v-if="$l1.code === 'en' && $l2.code === 'zh'">
       <h1 class="mb-5">Course Release Schedule</h1>
-      <p class="mb-3">We regularly update our courses. Here’s what we are planning on.</p>
+      <p class="mb-3">
+        We regularly update our courses. Here’s what we are planning on.
+      </p>
       <div class="row">
         <div class="col-sm-12">
           <table class="table table-bordered">
@@ -141,7 +143,9 @@
                 </td>
               </tr>
               <tr>
-                <td style="background-color: #d53232;">Mandarin Pronunciation</td>
+                <td style="background-color: #d53232;">
+                  Phonetics with Chinese Characteristics
+                </td>
                 <td>Mar 11, 2019</td>
                 <td>
                   <i class="fa fa-check" />
@@ -155,24 +159,22 @@
                 </td>
               </tr>
               <tr>
-                <td style="background-color: #1a386d;">HSK 5 Upgrade*</td>
-                <td>Late 2019</td>
-                <td></td>
+                <td style="background-color: #1a386d;">HSK 5 Upgrade</td>
+                <td>Jan 27, 2020</td>
+                <td><i class="fa fa-check" /></td>
               </tr>
               <tr>
                 <td style="background-color: #6a3368;">HSK 6 Upgrade*</td>
-                <td>Late 2019</td>
+                <td>Planned</td>
                 <td></td>
               </tr>
             </tbody>
           </table>
           <p>
-            * We are planning to upgrade and improve HSK 5 and 6 this year. All
-            students will get the updates as they become available. At Zero to
-            Hero, you will always get the latest and greatest content without
-            paying anything additional.
+            * We are planning to upgrade and improve 6 this year. All enrolled
+            students will get the updates as they become available.
           </p>
-          <p>Updated Aug 2019</p>
+          <p>Updated Feb 2020</p>
         </div>
       </div>
     </div>
@@ -191,32 +193,48 @@
           <tbody>
             <tr>
               <td>
-                <a href="https://wazuc.duanshu.com/#/course/02eaa75857d749048504c0f9a3d89a87">
-                  <img src="https://www.filepicker.io/api/file/LsVQWf7SQ6dnSrI7Gq91" alt="美式英语发音课程" />
+                <a
+                  href="https://wazuc.duanshu.com/#/course/02eaa75857d749048504c0f9a3d89a87"
+                >
+                  <img
+                    src="https://www.filepicker.io/api/file/LsVQWf7SQ6dnSrI7Gq91"
+                    alt="美式英语发音课程"
+                  />
                 </a>
                 <br />
               </td>
               <td>美式英语发音课程</td>
               <td>
-                <a href="https://wazuc.duanshu.com/#/course/02eaa75857d749048504c0f9a3d89a87">查看详情</a>
+                <a
+                  href="https://wazuc.duanshu.com/#/course/02eaa75857d749048504c0f9a3d89a87"
+                  >查看详情</a
+                >
               </td>
             </tr>
             <tr>
               <td>
-                <a href="https://wazuc.duanshu.com/#/brief/course/82ada0a7cd424e568c14d399207df96d">
-                  <img src="https://www.filepicker.io/api/file/F3WTIyfFSbe2ZWZEgb05" alt="C2词汇" />
+                <a
+                  href="https://wazuc.duanshu.com/#/brief/course/82ada0a7cd424e568c14d399207df96d"
+                >
+                  <img
+                    src="https://www.filepicker.io/api/file/F3WTIyfFSbe2ZWZEgb05"
+                    alt="C2词汇"
+                  />
                 </a>
               </td>
               <td>欧标C2词汇</td>
               <td>
                 <a
                   href="https://wazuc.duanshu.com/#/brief/course/82ada0a7cd424e568c14d399207df96d"
-                >查看详情</a>
+                  >查看详情</a
+                >
               </td>
             </tr>
             <tr>
               <td>
-                <img src="https://www.filepicker.io/api/file/cmg48f1qTBSIEbQ9LFlo" />
+                <img
+                  src="https://www.filepicker.io/api/file/cmg48f1qTBSIEbQ9LFlo"
+                />
               </td>
               <td>
                 <strong>英语英雄7级（欧标C2）</strong>
@@ -227,7 +245,9 @@
             </tr>
             <tr>
               <td>
-                <a href="https://wazuc.duanshu.com/#/course/af26c83d32c843afa13cb915cbf1ab43">
+                <a
+                  href="https://wazuc.duanshu.com/#/course/af26c83d32c843afa13cb915cbf1ab43"
+                >
                   <img
                     src="https://www.filepicker.io/api/file/4u2DBV8TpO1ZIVuIFuRQ"
                     alt="英语英雄6级（欧标C1）"
@@ -239,13 +259,18 @@
                 <br />达到雅思8分，适合英语专业学生。
               </td>
               <td>
-                <a href="https://wazuc.duanshu.com/#/course/af26c83d32c843afa13cb915cbf1ab43">查看详情</a>
+                <a
+                  href="https://wazuc.duanshu.com/#/course/af26c83d32c843afa13cb915cbf1ab43"
+                  >查看详情</a
+                >
                 <br />
               </td>
             </tr>
             <tr>
               <td>
-                <a href="https://wazuc.duanshu.com/#/course/cb3011a438c14b979eda82c8de1ed6f0">
+                <a
+                  href="https://wazuc.duanshu.com/#/course/cb3011a438c14b979eda82c8de1ed6f0"
+                >
                   <img
                     src="https://www.filepicker.io/api/file/9zFnb5hnSmy0mVQEEr5i"
                     alt="英语英雄5级（欧标B2）"
@@ -258,13 +283,18 @@
                 <br />
               </td>
               <td>
-                <a href="https://wazuc.duanshu.com/#/course/cb3011a438c14b979eda82c8de1ed6f0">查看详情</a>
+                <a
+                  href="https://wazuc.duanshu.com/#/course/cb3011a438c14b979eda82c8de1ed6f0"
+                  >查看详情</a
+                >
                 <br />
               </td>
             </tr>
             <tr>
               <td>
-                <img src="https://www.filepicker.io/api/file/80g42inKToSUdpsrwiQz" />
+                <img
+                  src="https://www.filepicker.io/api/file/80g42inKToSUdpsrwiQz"
+                />
               </td>
               <td>
                 <strong>英语英雄4级（欧标B1）</strong>
@@ -275,7 +305,9 @@
             </tr>
             <tr>
               <td>
-                <img src="https://www.filepicker.io/api/file/kkOOwZpBTTCBx9vSjT7P" />
+                <img
+                  src="https://www.filepicker.io/api/file/kkOOwZpBTTCBx9vSjT7P"
+                />
               </td>
               <td>
                 <strong>英语英雄3级（欧标A2）</strong>
@@ -288,7 +320,9 @@
             </tr>
             <tr>
               <td>
-                <img src="https://www.filepicker.io/api/file/225unJUHS2eEbYcEaRAP" />
+                <img
+                  src="https://www.filepicker.io/api/file/225unJUHS2eEbYcEaRAP"
+                />
               </td>
               <td>
                 <strong>英语英雄2级（欧标A1）</strong>
@@ -299,7 +333,9 @@
             </tr>
             <tr>
               <td>
-                <img src="https://www.filepicker.io/api/file/Em3Dm8P0QxW2bW1y0CnW" />
+                <img
+                  src="https://www.filepicker.io/api/file/Em3Dm8P0QxW2bW1y0CnW"
+                />
               </td>
               <td>
                 <strong>英语英雄1级（欧标Pre-A1）</strong>
