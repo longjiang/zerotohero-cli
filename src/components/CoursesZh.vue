@@ -34,7 +34,7 @@
       style="position: relative"
     >
       <div class="container text-center foreground">
-        <h2 class="mb-5">Mandarin Chinese Online Courses for HSK 1 to HSK 6</h2>
+        <h2 class="mb-5">Online Chinese Courses from HSK 1 to HSK 6</h2>
       </div>
       <img
         src="/img/ultimate-bundle.jpg"
@@ -209,7 +209,7 @@
             </div>
           </div>
         </div>
-        <h3 class="pb-5 pt-5 text-center">Get Our Latest Content</h3>
+        <h3 class="pb-5 pt-5 text-center">Follow Us</h3>
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-5">
             <h5 class="mb-4 text-center">Instagram</h5>
@@ -218,7 +218,7 @@
               class="text-center"
             >
               <span class="media">
-                <img src="img/logo-zh-zth-circle.png" style="width: 4rem" />
+                <img src="img/instagram.png" style="width: 4rem" />
                 <div class="media-body">
                   instagram.com/
                   <b>chinesezerotohero</b>
@@ -239,7 +239,7 @@
               class="text-center"
             >
               <span class="media">
-                <img src="img/logo-zh-zth-circle.png" style="width: 4rem" />
+                <img src="img/reddit.png" style="width: 4rem" />
                 <div class="media-body">
                   reddit.com/u/
                   <b>ChineseZeroToHero</b>
@@ -273,7 +273,7 @@
               class="text-center"
             >
               <span class="media">
-                <img src="img/logo-zh-zth-circle.png" style="width: 4rem" />
+                <img src="img/youtube.png" style="width: 4rem" />
                 <div class="media-body">
                   youtube.com/
                   <b>chinesezerotohero</b>
