@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Sale class="mb-5 mt-5 rounded" />
+    <!-- <Sale class="mb-5 mt-5 rounded" /> -->
     <div
       class="jumbotron-fluid p-5 bg-white mb-0"
       style="overflow: hidden; position: relative"
