@@ -265,6 +265,24 @@
                     </h5>
                   </a>
                 </div>
+                <div class="col-sm-6 col-md-4 mb-3">
+                  <a
+                    target="_blank"
+                    :href="
+                      `https://chinesezerotohero.teachable.com/p/ci-shifu`
+                    "
+                  >
+                    <img
+                      :src="`/img/courses/cishifu.jpg`"
+                      alt="Ci Shifu Vocabulary Master"
+                      class="img-fluid shadow rounded"
+                    />
+                    <h5 class="mt-2">
+                      Word Builder: Ci Shifu
+                      <i class="fa fa-external-link-alt small ml-1" />
+                    </h5>
+                  </a>
+                </div>
               </div>
               <h3>Free Courses</h3>
               <hr />
@@ -283,24 +301,6 @@
                     />
                     <h5 class="mt-2">
                       Phonetics with Chinese Characteristics
-                      <i class="fa fa-external-link-alt small ml-1" />
-                    </h5>
-                  </a>
-                </div>
-                <div class="col-sm-6 col-md-4 mb-3">
-                  <a
-                    target="_blank"
-                    :href="
-                      `https://chinesezerotohero.teachable.com/p/ci-shifu-vocabulary-course`
-                    "
-                  >
-                    <img
-                      :src="`/img/courses/cishifu.jpg`"
-                      alt="Ci Shifu Vocabulary Master"
-                      class="img-fluid shadow rounded"
-                    />
-                    <h5 class="mt-2">
-                      Ci Shifu Vocabulary Master
                       <i class="fa fa-external-link-alt small ml-1" />
                     </h5>
                   </a>

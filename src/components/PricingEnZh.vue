@@ -109,11 +109,20 @@
               <span v-html="price(29, {sale: false})"></span>
             </td>
           </tr>
+
+          <tr>
+            <td class="text-left text-light" data-bg-level="3">
+              <a href="https://courses.chinesezerotohero.com/p/ci-shifu">Word Builder: Ci Shifu</a>
+            </td>
+            <td class="text-center" colspan="3">
+              <span v-html="price(19, {sale: false})"></span>
+            </td>
+          </tr>
           <tr>
             <td class="text-left text-light" style="background-color: #c92706;">
               <a
                 href="https://chinesezerotohero.teachable.com/p/phonetics-with-chinese-characteristics"
-              >Pronunciation</a>
+              >Phonetics with Chinese Characteristics</a>
             </td>
             <td class="text-center" colspan="3">
               <b>FREE</b>
