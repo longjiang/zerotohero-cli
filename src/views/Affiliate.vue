@@ -19,7 +19,7 @@
       </div>
       <div class="col-sm-4">
         <h5>Graphics / Media</h5>
-        <p>We provide clean, professionally-designed banners and text links to add to your site. You can also embed our promo and lecture <a href="https://space.bilibili.com/253569339" target="_blank">Bilibili videos</a> into your site.</p>
+        <p>We provide clean, professionally-designed banners and text links to add to your site. You can also embed our promo and lecture <a href="https://www.youtube.com/chinesezerotohero" target="_blank">YouTube videos</a> into your site.</p>
       </div>
     </div>
     <h3 class="mt-4">How Does It Work?</h3>

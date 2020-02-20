@@ -456,6 +456,21 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/assign-lesson-videos/:level/:lesson',
+      name: 'assign-lesson-videos',
+      component: () => import('./views/AssignLessonVideos.vue'),
+      props: true,
+      meta: {
+        title: 'Lesson Videos | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Assign videos to enforce lesson vocabulary.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/music/:method?/:args?',
       name: 'music',
       component: () => import('./views/Music.vue'),
@@ -806,21 +821,6 @@ export default new Router({
           {
             name: 'description',
             content: 'Change preferences: choose a different text corpus.'
-          }
-        ]
-      }
-    },
-    {
-      path: '/:l1/:l2/assign-lesson-videos/:level/:lesson',
-      name: 'assign-lesson-videos',
-      component: () => import('./views/AssignLessonVideos.vue'),
-      props: true,
-      meta: {
-        title: 'Lesson Videos | Zero to Hero',
-        metaTags: [
-          {
-            name: 'description',
-            content: 'Assign videos to enforce lesson vocabulary.'
           }
         ]
       }

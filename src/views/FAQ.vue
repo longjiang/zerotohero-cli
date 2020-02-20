@@ -14,10 +14,7 @@
           <h5>How many videos do you have?</h5>
           <div>
             <p>
-              We have a total of 805 videos in the
-              <a
-                href="https://chinesezerotohero.teachable.com/p/ultimate-bundle"
-              >Ultimate Bundle</a>, which include all courses from HSK 1 to 6. The videos are 5 to 20 minutes long. The breakdown by course can be viewed
+              The latest video count is available 
               <a
                 href="#/en/zh/video-count"
               >here</a>.
@@ -83,9 +80,9 @@
           <div>Yes, you can download our videos and view them offline! Below every video lesson, on the bottom left of the video player, there&rsquo;s a &ldquo;download&rdquo; button.</div>
         </div>
         <div>
-          <h5>Can I pay with Wechat or Alipay?</h5>
+          <h5>Can I pay with WeChat or Alipay?</h5>
           <div>
-            <p>Sure.</p>
+            <p>Yes, details can be found on <a href="https://chinesezerotohero.teachable.com/" target="_blank">course sale pages</a>, or you can contact Ken by WeChat (ID: kendai9).</p>
           </div>
         </div>
         <div>
