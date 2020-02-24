@@ -16,13 +16,28 @@ const Dictionary = {
         download: true,
         header: true,
         complete: results => {
-          let words = []
           for (let index in results.data) {
             let row = results.data[index]
-            words.push(this.augment(row, index))
+            this.words.push(this.augment(row))
           }
-          this.words = words
           console.log('Words loaded.')
+          resolve()
+        }
+      })
+    })
+  },
+  loadTouchstone() {
+    console.log('Loading Touchtone...')
+    return new Promise(resolve => {
+      Papa.parse(this.touchstoneFile, {
+        download: true,
+        header: true,
+        complete: results => {
+          for (let index in results.data) {
+            let row = results.data[index]
+            this.words.push(this.augment(row))
+          }
+          console.log('Touchtone loaded.')
           resolve()
         }
       })
@@ -39,7 +54,13 @@ const Dictionary = {
       pos: row.pos,
       extra: row
     }
-    return word
+    return Object.assign(row, word)
+  },
+  addIdToWords() {
+    for (let index in this.words) {
+      let word = this.words[index]
+      word.id = index
+    }
   },
   load(lang) {
     console.log('Loading ECDICT...')
@@ -48,9 +69,11 @@ const Dictionary = {
     // let server = 'https://server.chinesezerotohero.com/'
     let server = '/'
     this.file = `${server}data/ecdict/ecdict-simplified.csv.txt`
+    this.touchstoneFile = `${server}data/ecdict/touchstone.csv.txt`
     return new Promise(async resolve => {
-      let promises = [this.loadWords()]
+      let promises = [this.loadWords(), this.loadTouchstone()]
       await Promise.all(promises)
+      this.addIdToWords()
       resolve(this)
     })
   },
