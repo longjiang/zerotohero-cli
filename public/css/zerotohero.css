@@ -241,9 +241,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .levelPreA1,
-[data-level='PreA1'],
-[data-hover-level='PreA1']:hover,
-[data-hover-level='PreA1'].saved {
+[data-level='Pre-A1'],
+[data-hover-level='Pre-A1']:hover,
+[data-hover-level='Pre-A1'].saved {
   color: #B51700 !important;
 }
 

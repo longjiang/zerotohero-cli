@@ -83,7 +83,7 @@ const Dictionary = {
     this.file = `${server}data/ecdict/ecdict-simplified.csv.txt`
     this.touchstoneFile = `${server}data/ecdict/touchstone.csv.txt`
     return new Promise(async resolve => {
-      let promises = [this.loadWords(), this.loadTouchstone()]
+      let promises = [this.loadTouchstone(), this.loadWords()]
       await Promise.all(promises)
       this.addIdToWords()
       resolve(this)
