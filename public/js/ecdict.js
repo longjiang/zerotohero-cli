@@ -64,6 +64,7 @@ const Dictionary = {
       extra: row
     }
     if (row.level) {
+      word.book = parseInt(row.level)
       word.level = this.levels[parseInt(row.level)]
     }
     return Object.assign(row, word)
@@ -129,18 +130,72 @@ const Dictionary = {
       .slice(0, limit)
     return words
   },
-  lookupFuzzy(text, limit = 30) {
+  // lookupFuzzy(text, limit = 30) {
+  //   text = text.toLowerCase()
+  //   let words = this.words
+  //     .filter(word => word.head && word.head.startsWith(text) || (word.level && (word.head.includes(text) || text.includes(word.head))))
+  //     .sort((a, b) => a.head.length - b.head.length)
+  //     .sort((a, b) => a.level || 8 - b.level || 8)
+  //     .slice(0, limit)
+  //   if (words.length === 0) {
+  //     words = this.words
+  //       .filter(word => text.includes(word.head))
+  //       .sort((a, b) => b.head.length - a.head.length)
+  //       .slice(0, limit)
+  //   }
+  //   return words
+  // },
+  lookupFuzzy(text, limit = 30) { // text = 'abcde'
     text = text.toLowerCase()
-    let words = this.words
-      .filter(word => word.head && word.head.startsWith(text))
-      .slice(0, limit)
-    if (words.length === 0) {
-      words = this.words
-        .filter(word => text.includes(word.head))
-        .sort((a, b) => b.head.length - a.head.length)
-        .slice(0, limit)
+    let words = []
+    let subtexts = []
+    for (let i = 1; text.length - i > 3; i++) {
+      subtexts.push(text.substring(0, text.length - i))
     }
-    return words
+    for (let word of this.words) {
+      let head = word.head ? word.head.toLowerCase() : undefined
+      if (head && head.startsWith(text)) {
+        words.push(
+          Object.assign(
+            { score: text.length - (head.length - text.length)},
+            word
+          )
+        ) // matches 'abcde', 'abcde...'
+      }
+      if (head && text.includes(head)) {
+        words.push(Object.assign({ score: head.length - text.length - 4}, word)) // matches 'cde', 'abc'
+      }
+      if (head && head.includes(text)) {
+        words.push(Object.assign({ score: text.length - (head.length - text.length) - 4 }, word)) // matches 'XXXabcdeWWW'
+      }
+      for (let subtext of subtexts) {
+        if (head && head.includes(subtext)) {
+          words.push(
+            Object.assign(
+              { score: subtext.length - (head.length - subtext.length) },
+              word
+            )
+          ) // matches 'abcxyz...'
+        }
+      }
+    }
+    for (let word of words) {
+      if (word.book) {
+        word.score = word.score + 7 - word.book
+      }
+    }
+    return this.uniqueByValue(words, 'id').sort((a,b) => b.score - a.score).slice(0, limit)
+  },
+  uniqueByValue(array, key) {
+    let flags = []
+    let unique = []
+    let l = array.length
+    for(let i = 0; i<l; i++) {
+      if( flags[array[i][key]]) continue
+      flags[array[i][key]] = true
+      unique.push(array[i])
+    }
+    return unique
   },
   randomArrayItem(array, start = 0, length = false) {
     length = length || array.length
