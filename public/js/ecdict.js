@@ -6,6 +6,15 @@ const Dictionary = {
   index: {},
   cache: {},
   tables: [],
+  levels: {
+    1: 'Pre-A1',
+    2: 'A1',
+    3: 'A2',
+    4: 'B1',
+    5: 'B2',
+    6: 'C1',
+    7: 'C2'
+  },
   credit() {
     return '英汉词典由<a href="https://github.com/skywind3000/ECDICT">ECDICT</a>提供, 开源并以<a href="https://github.com/skywind3000/ECDICT/blob/master/LICENSE">MIT License</a>发行。'
   },
@@ -53,6 +62,9 @@ const Dictionary = {
       definitions: row.translation.split('\\n'),
       pos: row.pos,
       extra: row
+    }
+    if (row.level) {
+      word.level = this.levels[parseInt(row.level)]
     }
     return Object.assign(row, word)
   },
