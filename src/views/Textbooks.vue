@@ -53,49 +53,91 @@
         </div>
       </div>
       <div class="row mt-5">
-        <Annotate tag="div" class="col-sm-6">
-          <h3>In China?</h3>
-          <p>
-            There are many physical bookstores in China that sell these textbooks
-            and workbooks, but it may be more convenient to just order them online
-            and have them delivered to your door. Here are some options to
-            purchase online.
-          </p>
-          <!-- .et_pb_text -->
-          <div>
-            <a
-              href="https://search.jd.com/Search?keyword=hsk%E6%A0%87%E5%87%86%E6%95%99%E7%A8%8B&amp;enc=utf-8&amp;wq=hsk%E6%A0%87%E5%87%86%E6%95%99%E7%A8%8B&amp;pvid=878ba2b798bb45e581cedb1334e7147e"
-            >JINGDONG 京东</a>
-          </div>
-          <div>
-            <a
-              href="https://s.taobao.com/search?q=hsk标准教程&amp;imgfile=&amp;js=1&amp;stats_click=search_radio_all%3A1&amp;initiative_id=staobaoz_20180316&amp;ie=utf8"
-            >Taobao 淘宝</a>
-          </div>
-          <div>
-            <a
-              href="http://search.dangdang.com/?key=HSK%B1%EA%D7%BC%BD%CC%B3%CC&amp;act=input"
-            >DANGDANG 当当</a>
-          </div>
-        </Annotate>
-        <Annotate tag="div" class="col-sm-6">
-          <h3>Ouside of China?</h3>
-          <p>
-            The best option would be purchasing them
-            online.&nbsp;PurpleCulture.net is a Hong Kong based online business
-            dedicated in providing Chinese cultural and educational products. They
-            stock all of the HSK Standard Course textbooks and workbooks, and
-            provide worldwide shipping. Alternatively, you may also purchase them
-            from Amazon.com.&nbsp;
-          </p>
-          <!-- .et_pb_text -->
-          <div>
-            <a href="https://www.purpleculture.net/hsk-standard-course-bs-719/">Purple Culture</a>
-          </div>
-          <div>
-            <a href="http://amzn.to/2pgZu4l">Amazon</a>
-          </div>
-        </Annotate>
+        <div class="col-12 col-md-4">
+          <img class="w-100" src="/img/workbooks-1.png" alt="HSK textbooks 1 through 6">
+        </div>
+        <div class="col-12 col-md-7 offset-0 offset-md-1">
+          <Annotate tag="div" class="col-12 mb-4">
+            <h3>In China?</h3>
+            <p>
+              There are many physical bookstores in China that sell these textbooks
+              and workbooks, but it may be more convenient to just order them online
+              and have them delivered to your door. Here are some options to
+              purchase online.
+            </p>
+            <!-- .et_pb_text -->
+            <div>
+              <a
+                data-bg-level="3"
+                class="btn mb-3"
+                href="https://search.jd.com/Search?keyword=hsk%E6%A0%87%E5%87%86%E6%95%99%E7%A8%8B&amp;enc=utf-8&amp;wq=hsk%E6%A0%87%E5%87%86%E6%95%99%E7%A8%8B&amp;pvid=878ba2b798bb45e581cedb1334e7147e"
+              >JINGDONG 京东</a>
+            </div>
+            <div>
+              <a
+                data-bg-level="3"
+                class="btn mb-3"
+                href="https://s.taobao.com/search?q=hsk标准教程&amp;imgfile=&amp;js=1&amp;stats_click=search_radio_all%3A1&amp;initiative_id=staobaoz_20180316&amp;ie=utf8"
+              >Taobao 淘宝</a>
+            </div>
+            <div>
+              <a
+                data-bg-level="3"
+                class="btn mb-3"
+                href="http://search.dangdang.com/?key=HSK%B1%EA%D7%BC%BD%CC%B3%CC&amp;act=input"
+              >DANGDANG 当当</a>
+            </div>
+          </Annotate>
+          <Annotate tag="div" class="col-12 mb-4">
+            <h3>Outside of China?</h3>
+            <p>
+              The best option would be purchasing them
+              online.&nbsp;PurpleCulture.net is a Hong Kong based online business
+              dedicated in providing Chinese cultural and educational products. They
+              stock all of the HSK Standard Course textbooks and workbooks, and
+              provide worldwide shipping. Alternatively, you may also purchase them
+              from Amazon.com.&nbsp;
+            </p>
+            <!-- .et_pb_text -->
+            <div>
+              <a
+                data-bg-level="3"
+                class="btn mb-3"
+                href="https://www.purpleculture.net/hsk-standard-course-bs-719/">Purple Culture
+              </a>
+            </div>
+            <div>
+              <a
+                data-bg-level="3"
+                class="btn"
+                href="http://amzn.to/2pgZu4l">Amazon
+              </a>
+            </div>
+          </Annotate>
+          <Annotate tag="div" class="col-12">
+            <h3>eBooks available?</h3>
+            <p>
+              As of early 2020, the official textbook publisher <a href="https://www.blcup.com">(BLCUP)</a> finally released the textbooks/workbooks in eBook format (flipviewer only for Windows PC as of now).
+
+              We still recommend buying physical copies of the book as many of our students also prefer learning with the paper-versions. But if buying the book is an issue for you, as an alternatively -  you can purchase the ebook version. Click on the "eBook: view" above the "Buy" button.
+            </p>
+            <!-- .et_pb_text -->
+            <div>
+              <a
+                data-bg-level="3"
+                class="btn mb-3"
+                href="https://www.purpleculture.net/hsk-standard-course-bs-719/">Purple Culture
+              </a>
+            </div>
+            <div>
+              <a
+                data-bg-level="3"
+                class="btn"
+                href="http://amzn.to/2pgZu4l">Amazon
+              </a>
+            </div>
+          </Annotate>
+        </div>
       </div>
     </div>
     <div v-if="$l1.code === 'zh' && $l2.code === 'en'">

@@ -115,7 +115,7 @@
               <a href="https://courses.chinesezerotohero.com/p/ci-shifu">Word Builder: Ci Shifu</a>
             </td>
             <td class="text-center" colspan="3">
-              <span v-html="price(19, {sale: false})"></span>
+              <span v-html="price(9, {sale: false})"></span>
             </td>
           </tr>
           <tr>
