@@ -145,6 +145,7 @@
             $route.name === 'faq' ||
             $route.name === 'affiliate-program')
       }"
+      v-if="['en', 'zh'].includes($l2.code)"
       :to="{ name: 'contact' }"
       title="Contact Us"
     >
