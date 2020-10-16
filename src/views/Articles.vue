@@ -27,7 +27,7 @@
           <h5>We don’t have any articles in the {{$l2.name}} Learning Wiki yet.</h5>
           <p class="lead mb-3">To add the first article in the Wiki, please contact us so we can create an account for you.</p>
           <div class="text-center">
-            <a :href="`#/${$l1.code}/${$l2.code}/contact-us`" class="btn btn-success">Contact Us</a>
+            <a :href="`/${$l1.code}/${$l2.code}/contact-us`" class="btn btn-success">Contact Us</a>
           </div>
         </div>
       </template>
@@ -77,7 +77,7 @@ export default {
           this.articles = []
           $.getJSON(`${Config.wiki}items/articles?filter[l2][eq]=${this.$l2.id}`, response => {
             this.articles = response.data.map(article => {
-              article.url = `#/${this.$l1.code}/${this.$l2.code}/articles/wiki/view/${
+              article.url = `/${this.$l1.code}/${this.$l2.code}/articles/wiki/view/${
                 article.id
               },${encodeURIComponent(article.title)}`
               return article
@@ -94,7 +94,7 @@ export default {
           )
         }
       } else {
-        location.hash = `#/${this.$l1.code}/${this.$l2.code}/articles/wiki/list`
+        location.hash = `/${this.$l1.code}/${this.$l2.code}/articles/wiki/list`
       }
     }
   },

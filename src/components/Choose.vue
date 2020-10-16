@@ -142,10 +142,10 @@
       </p>
       <p>
         Although our focus is
-        <a href="#/en/zh/" class="text-light">
+        <a href="/en/zh/" class="text-light">
           <b>teaching Mandarin Chinese to English speakers</b> </a
         >, and
-        <a href="#/zh/en/" class="text-light">
+        <a href="/zh/en/" class="text-light">
           <b>teaching English to Mandarin Chinese speakers</b> </a
         >, we've also created free, open-source learning resources that work
         with hundres of other language pairs.

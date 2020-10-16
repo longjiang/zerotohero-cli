@@ -8,7 +8,7 @@
           buttonText="Search"
           :action="
             url => {
-              location.hash = `#/${$l1.code}/${
+              location.hash = `/${$l1.code}/${
                 $l2.code
               }/youtube/search/${encodeURIComponent(url)}`
             }
@@ -43,7 +43,7 @@
                 'list-group-item-action': topic === 'all',
                 active: topic === 'all'
               }"
-            :href="`#/${$l1.code}/${$l2.code}/youtube/browse/all/${level}`"
+            :href="`/${$l1.code}/${$l2.code}/youtube/browse/all/${level}`"
           >All</a>
           <a
             v-for="(topicName, topicValue) in topics"
@@ -53,7 +53,7 @@
                 'list-group-item-action': topicValue === topic,
                 active: topicValue === topic
               }"
-            :href="`#/${$l1.code}/${$l2.code}/youtube/browse/${topicValue}/all`"
+            :href="`/${$l1.code}/${$l2.code}/youtube/browse/${topicValue}/all`"
           >{{ topicName }}</a>
         </div>
         <h6 class="mt-4 mb-4 text-center">Filter by Level</h6>
@@ -65,7 +65,7 @@
                 'list-group-item-action':  level === 'all',
                 active: level === 'all'
               }"
-            :href="`#/${$l1.code}/${$l2.code}/youtube/browse/${topic}/all`"
+            :href="`/${$l1.code}/${$l2.code}/youtube/browse/${topic}/all`"
           >All</a>
           <a
             v-for="(levelName, levelValue) in levels"
@@ -75,7 +75,7 @@
                 'list-group-item-action': levelValue === level,
                 active: levelValue === level
               }"
-            :href="`#/${$l1.code}/${$l2.code}/youtube/browse/all/${levelValue}`"
+            :href="`/${$l1.code}/${$l2.code}/youtube/browse/all/${levelValue}`"
           >{{ levelName }}</a>
         </div>
       </div>

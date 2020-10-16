@@ -16,7 +16,7 @@
             <p>
               The latest video count is available
               <a
-                href="#/en/zh/video-count"
+                href="/en/zh/video-count"
               >here</a>.
             </p>
           </div>
@@ -33,7 +33,7 @@
             <p>
               If you&rsquo;ve passed one or more HSK exams, you can enter our
               <a
-                href="#/en/zh/hall-of-heroes"
+                href="/en/zh/hall-of-heroes"
               >Hall of Heroes</a> and get 15% off on any of our courses.
             </p>
           </div>
@@ -44,7 +44,7 @@
             <p>
               Yes, you will need textbooks. Our course follows the HSK curriculum using the &ldquo;HSK Standard Course by Jiang Liping&rdquo;. You can find links to purchase these books in
               <a
-                href="#/en/zh/textbooks-workbooks"
+                href="/en/zh/textbooks-workbooks"
               >this page.</a>
             </p>
           </div>

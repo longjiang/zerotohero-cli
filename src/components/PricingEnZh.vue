@@ -130,7 +130,7 @@
           </tr>
           <tr>
             <td class="text-left text-light" data-bg-level="outside">
-              <a :href="`#/${$l1.code}/${$l2.code}/youtube/channel/UCMoxI3OhLuyItB8__6iuJhg`">Hero Academy</a>
+              <a :href="`/${$l1.code}/${$l2.code}/youtube/channel/UCMoxI3OhLuyItB8__6iuJhg`">Hero Academy</a>
             </td>
             <td class="text-center" colspan="3">
               <b>FREE</b>
@@ -138,10 +138,10 @@
           </tr>
           <tr>
             <td class="text-left text-light" data-bg-level="outside">
-              <a :href="`#/${$l1.code}/${$l2.code}/view`">Dictionary</a>,
-              <a :href="`#/${$l1.code}/${$l2.code}/grammar`">Grammar</a>,
-              <a :href="`#/${$l1.code}/${$l2.code}/youtube/browse`">Theater</a>,
-              <a :href="`#/${$l1.code}/${$l2.code}/reader`">Reader</a> and other learning tools offered on this website.
+              <a :href="`/${$l1.code}/${$l2.code}/view`">Dictionary</a>,
+              <a :href="`/${$l1.code}/${$l2.code}/grammar`">Grammar</a>,
+              <a :href="`/${$l1.code}/${$l2.code}/youtube/browse`">Theater</a>,
+              <a :href="`/${$l1.code}/${$l2.code}/reader`">Reader</a> and other learning tools offered on this website.
             </td>
             <td class="text-center align-middle" colspan="3">
               <b>FREE</b>
@@ -216,7 +216,7 @@ export default {
       this.currency = this.args
     },
     currency() {
-      location.hash = `#/${this.$l1.code}/${this.$l2.code}/pricing/${this.currency}`
+      location.hash = `/${this.$l1.code}/${this.$l2.code}/pricing/${this.currency}`
     }
   },
   created() {

@@ -126,7 +126,7 @@ export default {
   },
   methods: {
     grammarRowClick(row) {
-      location.hash = `#/${this.$l1.code}/${this.$l2.code}/grammar/view/${row.id}`
+      location.hash = `/${this.$l1.code}/${this.$l2.code}/grammar/view/${row.id}`
     }
   },
   async mounted() {

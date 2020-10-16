@@ -28,11 +28,11 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="tabs text-center">
-            <a :href="`#/${$l1.code}/${$l2.code}/tutoring/`" class="link-unstyled tab bg-dark">All</a>
+            <a :href="`/${$l1.code}/${$l2.code}/tutoring/`" class="link-unstyled tab bg-dark">All</a>
             <template v-if="$l2.code === 'zh'">
               <a
                 v-for="n in 7"
-                :href="`#/${$l1.code}/${$l2.code}/tutoring/${n}`"
+                :href="`/${$l1.code}/${$l2.code}/tutoring/${n}`"
                 class="tab link-unstyled"
                 :data-bg-level="n < 7 ? n : 'outside' "
               >{{ Helper.level(n, $l2) }}</a>
@@ -40,7 +40,7 @@
             <template v-else>
               <a
                 v-for="n in 7"
-                :href="`#/${$l1.code}/${$l2.code}/tutoring/${n}`"
+                :href="`/${$l1.code}/${$l2.code}/tutoring/${n}`"
                 class="tab link-unstyled"
                 :data-bg-level="Helper.level(n).replace('-', '')"
               >{{ Helper.level(n, $l2) }}</a>

@@ -3,7 +3,7 @@
     <div class="jumbotron shadow rounded bg-white">
       <h4 class="text-center mb-3">Adopt <em>{{ $l2.name }} Zero to Hero{{ $l2.code === 'en' ? ` (for ${$l1.name} speakers)` : ''  }}</em> today.</h4>
       <p class="lead text-center mb-4">And help the world learn <a :href="`https://en.wikipedia.org/wiki/${$l2.name.replace(/ /g, '_')}`">{{ $l2.name }}</a>{{ $l2.code === 'en' ? ` through ${$l1.name}` : ''  }}.</p>
-      <div class="text-center"><a :href="`#/${$l1.code}/${$l2.code}/contact-us`" class="btn btn-success">Contact Us</a></div>
+      <div class="text-center"><a :href="`/${$l1.code}/${$l2.code}/contact-us`" class="btn btn-success">Contact Us</a></div>
     </div>
     <h6>What can I do once I adopt <em>{{ $l2.name }} Zero to Hero</em>?</h6>
     <ul>
@@ -20,7 +20,7 @@
     </ul>
     <h6>How do you make money?</h6>
     <ul>
-      <li>We make money by selling online courses at <a href="#/en/zh">Chinese Zero to Hero</a> and <a href="#/zh/en">English Zero to Hero</a>.</li>
+      <li>We make money by selling online courses at <a href="/en/zh">Chinese Zero to Hero</a> and <a href="/zh/en">English Zero to Hero</a>.</li>
       <li>You also have the potential to generate income by developing {{ $l2.name }} Zero to Hero.</li>
     </ul>
   </div>

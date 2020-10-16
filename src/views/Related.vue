@@ -62,7 +62,7 @@ export default {
       word: undefined,
       arg: undefined,
       related: [],
-      hrefFunc: entry => `#/${this.$l1.code}/${this.$l2.code}/explore/related/${entry.id}`
+      hrefFunc: entry => `/${this.$l1.code}/${this.$l2.code}/explore/related/${entry.id}`
     }
   },
   methods: {

@@ -4,7 +4,7 @@
       <a
         class="link-unstyled"
         :href="
-          `#/${$l1.code}/${$l2.code}/articles/reddit/view/${article.id},${encodeURIComponent(
+          `/${$l1.code}/${$l2.code}/articles/reddit/view/${article.id},${encodeURIComponent(
             article.title
           )}`
         "

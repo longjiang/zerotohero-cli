@@ -13,7 +13,7 @@
       <a
         v-if="random"
         class="btn btn-secondary btn-random ml-2"
-        :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/random`"
+        :href="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/random`"
       >
         <i class="fas fa-random mr-1"></i>
         <span>{{ $t('Random') }}</span>
@@ -99,7 +99,7 @@ export default {
       type: Function,
       default: function(entry) {
         if (entry) {
-          return `#/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${entry.id}`
+          return `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${entry.id}`
         }
       }
     },

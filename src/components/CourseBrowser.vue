@@ -52,7 +52,7 @@
                     class="btn btn-small ml-2 learn-all-button"
                     :data-bg-level="bookIndex"
                     :href="
-                      `#/${$l1.code}/${$l2.code}/learn/hsk/${bookIndex},${lessonIndex},${dialogIndex}`
+                      `/${$l1.code}/${$l2.code}/learn/hsk/${bookIndex},${lessonIndex},${dialogIndex}`
                     "
                   >
                     <i class="glyphicon glyphicon-blackboard"></i> Learn These

@@ -106,7 +106,7 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
-if (location.hash === '#/test') {
+if (location.hash === '/test') {
   new Vue({
     store,
     render: h => h(Test)

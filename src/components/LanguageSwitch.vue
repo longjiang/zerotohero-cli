@@ -6,7 +6,7 @@
       :button="false"
       :suggestionsFunc="suggestionsFunc"
       type="generic"
-      :defaultURL="text => `#/en/${text}/`"
+      :defaultURL="text => `/en/${text}/`"
       ref="l1"
     />
   </div>
@@ -77,7 +77,7 @@ export default {
     },
     hrefFunc(suggestion) {
       if (suggestion && suggestion.l1 && suggestion.l2) {
-        return `#/${suggestion.l1.code}/${suggestion.l2.code}/`
+        return `/${suggestion.l1.code}/${suggestion.l2.code}/`
       }
     }
   }

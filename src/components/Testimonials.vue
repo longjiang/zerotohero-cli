@@ -3,7 +3,7 @@
     <h3 class="title text-center">What our students say about us?</h3>
     <p class="text-center">Read experiences from over 80 students who took our courses and passed the HSK exams.</p>
     <div class="button-container d-flex justify-content-center mt-2">
-      <a href="#/en/zh/hall-of-heroes">
+      <a href="/en/zh/hall-of-heroes">
         <button data-bg-level="3" class="btn">Read All Submissions</button>
       </a>
     </div>
@@ -45,7 +45,7 @@ export default {
       $.getJSON(`${Config.wiki}items/heroes?fields=*,avatar.*`, response => {
         this.heroes = response.data
           .map(hero => {
-            hero.url = `#/${this.$l1.code}/${this.$l2.code}/hall-of-heroes/view/${hero.id},${encodeURIComponent(
+            hero.url = `/${this.$l1.code}/${this.$l2.code}/hall-of-heroes/view/${hero.id},${encodeURIComponent(
               hero.name
             )}`
             return hero

@@ -21,7 +21,7 @@
               <h5>We don’t know about a subreddit for learning {{$l2.name}} yet.</h5>
               <p class="lead mb-3">If you know of a subreddit related to learning {{$l2.name}}, pleaes let us know so we can add it.</p>
               <div class="text-center">
-                <a :href="`#/${$l1.code}/${$l2.code}/contact-us`" class="btn btn-success">Contact Us</a>
+                <a :href="`/${$l1.code}/${$l2.code}/contact-us`" class="btn btn-success">Contact Us</a>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default {
           }
         }
       } else {
-        location.hash = `#/${this.$l1.code}/${this.$l2.code}/articles/reddit/list`
+        location.hash = `/${this.$l1.code}/${this.$l2.code}/articles/reddit/list`
       }
     }
   },

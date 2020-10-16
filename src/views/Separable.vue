@@ -25,8 +25,8 @@
               <th>V 了 O</th>
               <th>V 了 一 M O</th>
               <th>V 没 V O?</th>
-              <th><a :href="`#/${$l1.code}/${$l2.code}/grammar/view/259`">V V O</a></th>
-              <th><a :href="`#/${$l1.code}/${$l2.code}/grammar/view/260`">V 了 V O</a></th>
+              <th><a :href="`/${$l1.code}/${$l2.code}/grammar/view/259`">V V O</a></th>
+              <th><a :href="`/${$l1.code}/${$l2.code}/grammar/view/260`">V 了 V O</a></th>
               <th>V Complement O</th>
               <th>V 得 Complement O</th>
               <th>V 不 Complement O</th>

@@ -12,7 +12,7 @@
           </div>
         </div>
         <div>
-          <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${entry.bare}`">
+          <a :href="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${entry.bare}`">
             <template v-if="['zh', 'yue'].includes($l2.code)">
               <span
                 class="entry-word simplified"

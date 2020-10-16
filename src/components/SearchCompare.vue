@@ -45,7 +45,7 @@ export default {
       dCompare: this.compare,
       compareHrefFunc: compareEntry => {
         const entry = this.$refs.search.entry || this.entry
-        return `#/${this.$l1.code}/${this.$l2.code}/compare/${this.$dictionaryName}/${entry.id},${compareEntry.id}`
+        return `/${this.$l1.code}/${this.$l2.code}/compare/${this.$dictionaryName}/${entry.id},${compareEntry.id}`
       }
     }
   },

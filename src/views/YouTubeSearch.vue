@@ -5,7 +5,7 @@
       :placeholder="$t('Enter a search term in {l2}...', {l2: $l2.name})"
       :action="
         url => {
-          location.hash = `#/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(url)}/0`
+          location.hash = `/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(url)}/0`
         }
       "
       ref="search"

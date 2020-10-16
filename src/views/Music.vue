@@ -9,7 +9,7 @@
               placeholder="Lookup a song or artist (in Chinese characters)"
               type="generic"
               :term="args"
-              :defaultURL="text => `#/${$l1.code}/${$l2.code}/music/search/${text}`"
+              :defaultURL="text => `/${$l1.code}/${$l2.code}/music/search/${text}`"
             />
           </div>
           <Song

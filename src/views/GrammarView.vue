@@ -57,12 +57,12 @@ export default {
     },
     prevClick() {
       location.hash =
-        `#/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
+        `/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
         Math.max(0, parseInt(this.id) - 1)
     },
     nextClick() {
       location.hash =
-        `#/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
+        `/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
         Math.min(Grammar._grammarData.length - 1, parseInt(this.id) + 1)
     }
   },

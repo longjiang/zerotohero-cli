@@ -17,7 +17,7 @@
               <tbody>
                 <tr v-for="root in rootsAugmented">
                   <td class="character-example">
-                    <a :href="`#/${$l1.code}/${$l2.code}/explore/roots/${root.pattern}`">
+                    <a :href="`/${$l1.code}/${$l2.code}/explore/roots/${root.pattern}`">
                       <span
                         class="character-example-word"
                         v-if="root.word"
@@ -84,13 +84,13 @@ export default {
     previousClick() {
       const i = this.currentIndex()
       if (i > 0) {
-        location.hash = `#/${this.$l1.code}/${this.$l2.code}/explore/roots/` + this.roots[i - 1].pattern
+        location.hash = `/${this.$l1.code}/${this.$l2.code}/explore/roots/` + this.roots[i - 1].pattern
       }
     },
     nextClick() {
       const i = this.currentIndex()
       if (i < this.roots.length - 1) {
-        location.hash = `#/${this.$l1.code}/${this.$l2.code}/explore/roots/` + this.roots[i + 1].pattern
+        location.hash = `/${this.$l1.code}/${this.$l2.code}/explore/roots/` + this.roots[i + 1].pattern
       }
     },
     async route() {

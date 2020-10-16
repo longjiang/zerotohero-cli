@@ -10,7 +10,7 @@
         <a
           v-if="compareWith"
           :href="
-            `#/${$l1.code}/${$l2.code}/compare/cedict/${compareWith.id},${character.id}`
+            `/${$l1.code}/${$l2.code}/compare/cedict/${compareWith.id},${character.id}`
           "
           class="btn btn-small mr-2"
           >Compare</a
@@ -19,8 +19,8 @@
           v-if="character"
           :href="
             hsk
-              ? `#/${$l1.code}/${$l2.code}/view/hsk/${character.hskId}`
-              : `#/${$l1.code}/${$l2.code}/view/cedict/${character.id}`
+              ? `/${$l1.code}/${$l2.code}/view/hsk/${character.hskId}`
+              : `/${$l1.code}/${$l2.code}/view/cedict/${character.id}`
           "
         >
           <span class="character-example-word" v-if="!highlight">{{

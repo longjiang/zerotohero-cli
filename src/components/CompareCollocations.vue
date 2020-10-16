@@ -49,7 +49,7 @@
       >
         Sorry, we could not find matching collocations for both words in this
         corpus (dataset). You can set a different corpus in
-        <a :href="`#/${$l1.code}/${$l2.code}/settings`">Settings</a>.
+        <a :href="`/${$l1.code}/${$l2.code}/settings`">Settings</a>.
       </div>
       <hr />
       <div class="mt-2">
@@ -70,7 +70,7 @@
         </a>
         <br />
         Don't like the collocations? Choose a different corpus (dataset) in
-        <a :href="`#/${$l1.code}/${$l2.code}/settings`">Settings</a>.
+        <a :href="`/${$l1.code}/${$l2.code}/settings`">Settings</a>.
       </div>
     </div>
   </div>

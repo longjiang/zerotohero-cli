@@ -9,7 +9,7 @@
             buttonText="Search"
             :action="
               url => {
-                location.hash = `#/${$l1.code}/${
+                location.hash = `/${$l1.code}/${
                   $l2.code
                 }/youtube/search/${encodeURIComponent(url)}`
               }
@@ -132,7 +132,7 @@
             {{ $t('Comments') }}
           </h4>
           <div class="comments">
-            <vue-disqus shortname="zero-to-hero" :identifier="`youtube-view-${args}`" :url="`https://www.zerotohero.ca/#/${$l1.code}/${$l2.code}/youtube/view/${args}`"></vue-disqus>
+            <vue-disqus shortname="zero-to-hero" :identifier="`youtube-view-${args}`" :url="`https://www.zerotohero.ca//${$l1.code}/${$l2.code}/youtube/view/${args}`"></vue-disqus>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@
       <div v-if="examples && examples.length === 0">
         Sorry, we could not find any “{{ term }}” examples. You can set a
         different corpus in
-        <a :href="`#/${$l1.code}/${$l2.code}/settings`">Settings</a>.
+        <a :href="`/${$l1.code}/${$l2.code}/settings`">Settings</a>.
       </div>
       <hr v-if="examples && examples.length === 0" />
       <div class="mt-4">

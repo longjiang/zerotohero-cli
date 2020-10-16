@@ -1,5 +1,5 @@
 <template>
-  <a :href="`#/${l1.code}/${l2.code}/`" class="mr-4 mb-4 d-inline-block link-unstyled">
+  <a :href="`/${l1.code}/${l2.code}/`" class="mr-4 mb-4 d-inline-block link-unstyled">
     <div class="logo-constructed">
       <div class="logo-circle-wrapper">
         <div :class="`${randomBlendClass()} logo-circle`">

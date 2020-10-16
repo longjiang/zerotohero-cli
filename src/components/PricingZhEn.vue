@@ -103,9 +103,9 @@
           </tr>
           <tr>
             <td class="text-left text-light" data-bg-level="outside">
-              <a :href="`#/${$l1.code}/${$l2.code}/dictionary`">词典</a>,
-              <a :href="`#/${$l1.code}/${$l2.code}/youtube/browse`">视听资源</a>,
-              <a :href="`#/${$l1.code}/${$l2.code}/reader`">阅读资源</a>以及这个网站上的其它资源
+              <a :href="`/${$l1.code}/${$l2.code}/dictionary`">词典</a>,
+              <a :href="`/${$l1.code}/${$l2.code}/youtube/browse`">视听资源</a>,
+              <a :href="`/${$l1.code}/${$l2.code}/reader`">阅读资源</a>以及这个网站上的其它资源
             </td>
             <td class="text-center align-middle" colspan="3">
               <b>免费</b>
@@ -169,7 +169,7 @@ export default {
       this.currency = this.args
     },
     currency() {
-      location.hash = `#/${this.$l1.code}/${this.$l2.code}/pricing/${this.currency}`
+      location.hash = `/${this.$l1.code}/${this.$l2.code}/pricing/${this.currency}`
     }
   },
   created() {

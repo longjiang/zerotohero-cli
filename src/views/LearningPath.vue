@@ -9,7 +9,7 @@
           <Resource
             :resource="{
             title: `Basic information, useful phrases`,
-            url: `/#/${$l1.code}/${
+            url: `//${$l1.code}/${
               $l2.code
             }/book/chapter/https%3A%2F%2Fwww.omniglot.com%2Fwriting%2F${encodeURIComponent(
               $l2.omniglot
@@ -57,7 +57,7 @@
           <Resource
             :resource="{
             title: `${$l2.name} YouTube Study Tool`,
-            url: `/#/${$l1.code}/${$l2.code}/youtube/browse`,
+            url: `//${$l1.code}/${$l2.code}/youtube/browse`,
             thumbnail: '/img/youtube-banner.jpg'
           }"
             :internal="true"
@@ -72,7 +72,7 @@
           <Resource
             :resource="{
             title: `${$l2.name} reading with popup dictionary`,
-            url: `/#/${$l1.code}/${$l2.code}/library`,
+            url: `//${$l1.code}/${$l2.code}/library`,
             thumbnail: '/img/library-banner.jpg'
           }"
             :internal="true"
@@ -85,7 +85,7 @@
           <Resource
             :resource="{
             title: `Online tutoring lesson plans (${level.cefr} level)`,
-            url: `/#/${$l1.code}/${$l2.code}/tutoring/${level.number}`,
+            url: `//${$l1.code}/${$l2.code}/tutoring/${level.number}`,
             thumbnail: '/img/online-tutoring.jpg'
           }"
             :internal="true"

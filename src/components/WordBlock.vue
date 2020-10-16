@@ -89,7 +89,7 @@
             style="font-size: 0.8em; position: relative; bottom: 0.1rem"
           >{{ $l2.code === 'zh' ? 'HSK ' : ''}}{{ word.level }}</span>
           <span v-if="word.unit" style="font-size: 0.8em" class="ml-1">Unit {{ word.unit }}</span>
-          <a :href="`#/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`" class="ml-1 link-unstyled" style="color: #999">
+          <a :href="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`" class="ml-1 link-unstyled" style="color: #999">
             <i class="fas fa-book"></i>
           </a>
         </div>

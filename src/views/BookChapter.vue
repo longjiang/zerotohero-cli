@@ -6,7 +6,7 @@
           placeholder="Enter the URL of a book chapter from a variety of eBook websites"
           :action="
             url => {
-              location.hash = `#/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(url)}`
+              location.hash = `/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(url)}`
             }
           "
           ref="search"
@@ -47,7 +47,7 @@
       <div class="col-md-4 text-center" :key="'book-' + bookTitle">
         <a
           :href="
-            bookURL ? `#/${$l1.code}/${$l2.code}/book/index/${encodeURIComponent(bookURL)}` : false
+            bookURL ? `/${$l1.code}/${$l2.code}/book/index/${encodeURIComponent(bookURL)}` : false
           "
           class="link-unstyled"
         >
@@ -94,10 +94,10 @@
               'link-unstyled': true,
               active:
                 location.hash ===
-                `#/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`
+                `/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`
             }"
             :foreign="foreign"
-            :href="`#/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`"
+            :href="`/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`"
             ><span>{{ chapter.title }}</span></Annotate
           >
         </div>
@@ -201,7 +201,7 @@ export default {
         for (let a of $chapterContent.find('a')) {
           if (!$(a).attr('target')) {
             let url = $(a).attr('href')
-            $(a).attr('href', `#/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(url)}`)
+            $(a).attr('href', `/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(url)}`)
           }
         }
         this.chapterContent = $chapterContent.html()
@@ -222,10 +222,10 @@ export default {
       this.loaded = true
     },
     previousClick() {
-      location.hash = `#/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.previous)}`
+      location.hash = `/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.previous)}`
     },
     nextClick() {
-      location.hash = `#/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.next)}`
+      location.hash = `/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.next)}`
     }
   },
   async mounted() {

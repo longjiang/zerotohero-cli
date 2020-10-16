@@ -16,7 +16,7 @@
                 'list-group-item-action': topic === 'all',
                 active: topic === 'all'
               }"
-              :href="`#/${$l1.code}/${$l2.code}/resource/list/all/${type}`"
+              :href="`/${$l1.code}/${$l2.code}/resource/list/all/${type}`"
             >All</a>
             <a
               v-for="(topicName, topicValue) in topics"
@@ -26,7 +26,7 @@
                 'list-group-item-action': topicValue === topic,
                 active: topicValue === topic
               }"
-              :href="`#/${$l1.code}/${$l2.code}/resource/list/${topicValue}/all`"
+              :href="`/${$l1.code}/${$l2.code}/resource/list/${topicValue}/all`"
             >{{ topicName }}</a>
           </div>
           <h6 class="mt-4 mb-4 text-center">Type</h6>
@@ -38,7 +38,7 @@
                 'list-group-item-action': type === 'all',
                 active: type === 'all'
               }"
-              :href="`#/${$l1.code}/${$l2.code}/resource/list/${topic}/all`"
+              :href="`/${$l1.code}/${$l2.code}/resource/list/${topic}/all`"
             >All</a>
             <a
               v-for="(typeName, typeValue) in types"
@@ -48,7 +48,7 @@
                 'list-group-item-action': typeValue === type,
                 active: typeValue === type
               }"
-              :href="`#/${$l1.code}/${$l2.code}/resource/list/all/${typeValue}`"
+              :href="`/${$l1.code}/${$l2.code}/resource/list/all/${typeValue}`"
             >{{ typeName }}</a>
           </div>
         </div>
