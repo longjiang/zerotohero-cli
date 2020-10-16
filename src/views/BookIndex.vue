@@ -38,7 +38,7 @@
               'list-group-item': true,
               'link-unstyled': true,
               active:
-                location.hash ===
+                location.pathname ===
                 `/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`
             }"
             :href="`/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`"

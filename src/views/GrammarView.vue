@@ -56,12 +56,12 @@ export default {
       this.getDrill(this.grammar.id)
     },
     prevClick() {
-      location.hash =
+      location.href =
         `/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
         Math.max(0, parseInt(this.id) - 1)
     },
     nextClick() {
-      location.hash =
+      location.href =
         `/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
         Math.min(Grammar._grammarData.length - 1, parseInt(this.id) + 1)
     }
