@@ -55,6 +55,16 @@ Vue.filter('truncate', function(text, length, clamp){
   return content.length > length ? content.slice(0, length) + clamp : content
 })
 
+router.beforeEach((to, from, next) => {
+  // Redirect if fullPath begins with a hash (ignore hashes later in path)
+  if (to.fullPath.substr(0,2) === "/#") {
+    const path = to.fullPath.substr(2)
+    next(path)
+    return
+  }
+  next()
+})
+
 // https://alligator.io/vuejs/vue-router-modify-head/
 // This callback runs before every route change, including on page load.
 router.beforeEach((to, from, next) => {
