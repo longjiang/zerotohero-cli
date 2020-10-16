@@ -19,7 +19,7 @@
           :style="`background-image: url(${Config.imageProxy}?${entry.images[0].src})`"
           class="instagram-image"
         />
-        <img src="img/instagram-badge.png" class="instagram-badge" />
+        <img src="/img/instagram-badge.png" class="instagram-badge" />
         <div class="instagram-logo-wrapper">
           <LanguageLogo class="instagram-logo" :l1="$l1" :l2="$l2" />
         </div>

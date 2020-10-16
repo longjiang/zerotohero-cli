@@ -17,7 +17,7 @@
               "
             >
               <img
-                :src="`img/courses/hsk${entry.hsk}.jpg`"
+                :src="`/img/courses/hsk${entry.hsk}.jpg`"
                 class="course-cover"
               />
             </a>
@@ -48,7 +48,7 @@
         <div class="row">
           <div class="col-sm-12 text-center">
             <a href="https://chinesezerotohero.teachable.com/p/path-to-fluency">
-              <img src="img/courses/fluency.jpg" class="course-cover" />
+              <img src="/img/courses/fluency.jpg" class="course-cover" />
             </a>
             <br />Learn how to progress <em>beyond the HSK</em> toward fluency
             with our

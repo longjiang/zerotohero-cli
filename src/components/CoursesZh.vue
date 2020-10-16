@@ -18,12 +18,12 @@
         </div>
       </div>
       <img
-        src="img/ken-standing.png"
+        src="/img/ken-standing.png"
         alt="Ken"
         class="photo-ken d-none d-md-block"
       />
       <img
-        src="img/jon-sitting.png"
+        src="/img/jon-sitting.png"
         alt="Jon"
         class="photo-jon d-none d-md-block"
       />
@@ -217,7 +217,7 @@
               class="text-center"
             >
               <span class="media">
-                <img src="img/instagram.png" style="width: 4rem" />
+                <img src="/img/instagram.png" style="width: 4rem" />
                 <div class="media-body">
                   instagram.com/
                   <b>chinesezerotohero</b>
@@ -238,7 +238,7 @@
               class="text-center"
             >
               <span class="media">
-                <img src="img/telegram.png" style="width: 4rem" />
+                <img src="/img/telegram.png" style="width: 4rem" />
                 <div class="media-body">t.me/zerotohero_zh</div>
               </span>
             </a>
@@ -251,7 +251,7 @@
               class="text-center"
             >
               <span class="media">
-                <img src="img/youtube.png" style="width: 4rem" />
+                <img src="/img/youtube.png" style="width: 4rem" />
                 <div class="media-body">
                   youtube.com/
                   <b>chinesezerotohero</b>

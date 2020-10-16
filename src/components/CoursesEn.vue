@@ -27,12 +27,12 @@
         </div>
       </div>
       <img
-        src="img/ken-standing.png"
+        src="/img/ken-standing.png"
         alt="Ken"
         class="photo-ken d-none d-lg-block"
       />
       <img
-        src="img/jon-sitting.png"
+        src="/img/jon-sitting.png"
         alt="Jon"
         class="photo-jon d-none d-lg-block"
       />

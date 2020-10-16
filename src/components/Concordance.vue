@@ -44,7 +44,7 @@
           "
           target="_blank"
         >
-          <img src="img/logo-sketch-engine.png" alt="Sketch Engine" class="ml-2 logo-small" />
+          <img src="/img/logo-sketch-engine.png" alt="Sketch Engine" class="ml-2 logo-small" />
         </a>
       </div>
       <hr />

@@ -41,10 +41,10 @@
           <div v-if="arg" class="focus">
             <div class="paginate-buttons">
               <button class="paginate-button previous focus-hover" v-on:click="previousClick">
-                <img src="img/angle-left.svg" alt />
+                <img src="/img/angle-left.svg" alt />
               </button>
               <button class="paginate-button next focus-hover" v-on:click="nextClick">
-                <img src="img/angle-right.svg" alt />
+                <img src="/img/angle-right.svg" alt />
               </button>
             </div>
             <div :key="rootsKey">

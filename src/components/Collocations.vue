@@ -43,7 +43,7 @@
             )}&tab=basic&lemma=${term}&showresults=1`
           "
         >
-          <img src="img/logo-sketch-engine.png" alt="Sketch Engine" class="ml-2 logo-small" />
+          <img src="/img/logo-sketch-engine.png" alt="Sketch Engine" class="ml-2 logo-small" />
         </a>
       </div>
     </div>

@@ -11,7 +11,7 @@
       v-on:click="instagram"
       title="Make an instagram poster"
     >
-      <img src="img/instagram.svg" alt="Instagram" />
+      <img src="/img/instagram.svg" alt="Instagram" />
     </button>
     <div :class="{ hidden: !show, 'mt-4': true }">
       <Instagram v-if="!dataURL" :entry="entry" />

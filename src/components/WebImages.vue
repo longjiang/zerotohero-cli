@@ -25,7 +25,7 @@
             `https://www.google.com/search?q=${text.replace(/ /g, '+')}&tbm=isch&sout=1#spf=1567955197854`
           "
         >
-          <img src="img/logo-google-images.png" alt="Google Images" class="logo-small ml-2" />
+          <img src="/img/logo-google-images.png" alt="Google Images" class="logo-small ml-2" />
         </a>
       </div>
     </div>

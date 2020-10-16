@@ -73,13 +73,13 @@
               `https://app.sketchengine.eu/#concordance?corpname=preloaded%2Fguangwai&tab=basic&keyword=${text}&structs=s%2Cg&refs=%3Ddoc.website&showresults=1&operations=%5B%7B%22name%22%3A%22iquery%22%2C%22arg%22%3A%22${text}%22%2C%22active%22%3Atrue%2C%22query%22%3A%7B%22queryselector%22%3A%22iqueryrow%22%2C%22iquery%22%3A%22${text}%22%7D%2C%22id%22%3A3859%7D%5D`
             "
           >
-            <img src="img/logo-sketch-engine.png" alt="Sketch Engine" class="ml-2 logo-small" />
+            <img src="/img/logo-sketch-engine.png" alt="Sketch Engine" class="ml-2 logo-small" />
           </a>
           <a
             target="_blank"
             href="https://www.sketchengine.eu/guangwai-lancaster-chinese-learner-corpus/"
           >
-            <img src="img/logo-guangwai.png" alt="Sketch Engine" class="ml-4 mb-3 logo-small" />
+            <img src="/img/logo-guangwai.png" alt="Sketch Engine" class="ml-4 mb-3 logo-small" />
           </a>
         </div>
         <small>

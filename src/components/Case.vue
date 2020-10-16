@@ -14,13 +14,13 @@
               v-if="type.includes('animate')"
               alt=""
               class="example-image"
-              :src="`img/russian-grammar-examples/${row['example (animate)']} ${type}.jpg`"
+              :src="`/img/russian-grammar-examples/${row['example (animate)']} ${type}.jpg`"
             />
             <img
               v-else
               alt=""
               class="example-image"
-              :src="`img/russian-grammar-examples/${row['example']} ${type}.jpg`"
+              :src="`/img/russian-grammar-examples/${row['example']} ${type}.jpg`"
             />
           </div>
           <div class="example-wrapper">

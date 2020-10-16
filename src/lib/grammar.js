@@ -2,7 +2,7 @@ import Helper from './helper'
 
 export default {
   _grammarData: [],
-  _grammarCSV: 'data/zh-grammar/zh-grammar.csv.txt',
+  _grammarCSV: '/data/zh-grammar/zh-grammar.csv.txt',
   _grammarCSVFields: {
     id: 'ID',
     code: 'Code',

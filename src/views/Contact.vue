@@ -10,7 +10,7 @@
         <div class="rounded shadow bg-light p-4 container">
           <div class="row">
             <div class="col-sm-4">
-              <img src="img/ken-standing.png" alt="" style="height: 10rem" />
+              <img src="/img/ken-standing.png" alt="" style="height: 10rem" />
             </div>
             <div class="col-sm-8">
               <h3 class="mb-3">
@@ -31,7 +31,7 @@
         <div class="rounded shadow bg-light p-4  mt-4  mb-4 container">
           <div class="row">
             <div class="col-sm-4">
-              <img src="img/jon-sitting.png" alt="" style="height: 8rem" />
+              <img src="/img/jon-sitting.png" alt="" style="height: 8rem" />
             </div>
             <div class="col-sm-8">
               <h3 class="mb-3">

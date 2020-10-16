@@ -62,7 +62,7 @@
       </div>
       <div class="questions-prompt">
         <div class="prompt">
-          <img src="img/trophy.svg" class="trophy" />
+          <img src="/img/trophy.svg" class="trophy" />
           <p class="mt-4 mb-4">The End!</p>
         </div>
         <button

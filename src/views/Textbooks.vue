@@ -13,7 +13,7 @@
             <strong>《HSK 标准教程》 （作者：姜丽萍）</strong>
           </Annotate>
           <img
-            src="img/textbooks-hsk.png"
+            src="/img/textbooks-hsk.png"
             class="img-fluid w-50"
             alt="HSK Standard Course Textbooks"
             style="float: right"
