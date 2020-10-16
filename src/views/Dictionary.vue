@@ -274,7 +274,7 @@ export default {
     },
     async random() {
       let randomId = (await (await this.$dictionary).random()).id
-      location.hash = `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${randomId}`
+      location.href = `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${randomId}`
     }
   },
   watch: {

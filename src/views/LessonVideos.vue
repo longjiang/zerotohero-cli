@@ -128,10 +128,10 @@ export default {
   },
   methods: {
     changeLevel(level) {
-      location.hash = `/${this.$l1.code}/${this.$l2.code}/lesson-videos/${level}/1`
+      location.href = `/${this.$l1.code}/${this.$l2.code}/lesson-videos/${level}/1`
     },
     changeLesson(lesson) {
-      location.hash = `/${this.$l1.code}/${this.$l2.code}/lesson-videos/${this.level || 1}/${lesson}`
+      location.href = `/${this.$l1.code}/${this.$l2.code}/lesson-videos/${this.level || 1}/${lesson}`
     },
     updateMatches() {
       for (let video of this.lessonVideos) {

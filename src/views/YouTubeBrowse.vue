@@ -8,7 +8,7 @@
           buttonText="Search"
           :action="
             url => {
-              location.hash = `/${$l1.code}/${
+              location.href = `/${$l1.code}/${
                 $l2.code
               }/youtube/search/${encodeURIComponent(url)}`
             }

@@ -84,13 +84,13 @@ export default {
     previousClick() {
       const i = this.currentIndex()
       if (i > 0) {
-        location.hash = `/${this.$l1.code}/${this.$l2.code}/explore/roots/` + this.roots[i - 1].pattern
+        location.href = `/${this.$l1.code}/${this.$l2.code}/explore/roots/` + this.roots[i - 1].pattern
       }
     },
     nextClick() {
       const i = this.currentIndex()
       if (i < this.roots.length - 1) {
-        location.hash = `/${this.$l1.code}/${this.$l2.code}/explore/roots/` + this.roots[i + 1].pattern
+        location.href = `/${this.$l1.code}/${this.$l2.code}/explore/roots/` + this.roots[i + 1].pattern
       }
     },
     async route() {

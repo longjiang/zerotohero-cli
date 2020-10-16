@@ -51,7 +51,7 @@ export default {
       if (this.args) {
         this.type = this.args.replace('_', ' ')
       } else {
-        location.hash = `/${this.$l1.code}/${this.$l2.code}/cases/nouns/${this.types[0].replace(' ', '_')}`
+        location.href = `/${this.$l1.code}/${this.$l2.code}/cases/nouns/${this.types[0].replace(' ', '_')}`
       }
     }
   },

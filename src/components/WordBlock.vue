@@ -180,7 +180,7 @@ export default {
   methods: {
     wordBlockClick() {
       if (this.explore && this.token && this.token.candidates && this.token.candidates.length > 0) {
-        location.hash = `/${this.$l1.code}/${this.$l2.code}/explore/related/${this.token.candidates[0].id}`
+        location.href = `/${this.$l1.code}/${this.$l2.code}/explore/related/${this.token.candidates[0].id}`
       }
     },
     tr(text) {

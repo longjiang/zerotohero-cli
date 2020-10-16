@@ -6,7 +6,7 @@
           placeholder="Enter the URL of a book chapter from a variety of eBook websites"
           :action="
             url => {
-              location.hash = `/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(url)}`
+              location.href = `/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(url)}`
             }
           "
           ref="search"
@@ -222,10 +222,10 @@ export default {
       this.loaded = true
     },
     previousClick() {
-      location.hash = `/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.previous)}`
+      location.href = `/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.previous)}`
     },
     nextClick() {
-      location.hash = `/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.next)}`
+      location.href = `/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.next)}`
     }
   },
   async mounted() {

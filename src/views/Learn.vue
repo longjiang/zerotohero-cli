@@ -104,7 +104,7 @@ export default {
         }
       } else {
         if (this.method) return
-        location.hash = `/${this.$l1.code}/${this.$l2.code}/learn/saved`
+        location.href = `/${this.$l1.code}/${this.$l2.code}/learn/saved`
       }
     }
   }

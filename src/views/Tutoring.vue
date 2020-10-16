@@ -107,7 +107,7 @@ export default {
   },
   methods: {
     goto(id) {
-      location.hash = `/${this.$l1.code}/${this.$l2.code}/tutoring/lesson/${id}`
+      location.href = `/${this.$l1.code}/${this.$l2.code}/tutoring/lesson/${id}`
     }
   }
 }

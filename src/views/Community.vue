@@ -67,7 +67,7 @@ export default {
           this.articleId = this.args.split(',')[0]
         }
       } else {
-        location.hash = `/${this.$l1.code}/${this.$l2.code}/community/list`
+        location.href = `/${this.$l1.code}/${this.$l2.code}/community/list`
       }
     }
   },

@@ -94,7 +94,7 @@ export default {
           )
         }
       } else {
-        location.hash = `/${this.$l1.code}/${this.$l2.code}/articles/wiki/list`
+        location.href = `/${this.$l1.code}/${this.$l2.code}/articles/wiki/list`
       }
     }
   },
