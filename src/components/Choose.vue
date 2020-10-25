@@ -160,11 +160,6 @@
           >https://github.com/longjiang/zerotohero-cli</a
         >.
       </p>
-      <p>
-        <b>How to contribute:</b> If you wish to participate in this project,
-        please join our Telegram group at
-        <a href="https://t.me/zerotoherodevs">https://t.me/zerotoherodevs</a>.
-      </p>
     </div>
     <div class="mt-5">
       <h4 class="mb-4">Credits</h4>
