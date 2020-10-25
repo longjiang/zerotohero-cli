@@ -11,7 +11,7 @@
             title: `Basic information, useful phrases`,
             url: `//${$l1.code}/${
               $l2.code
-            }/book/chapter/https%3A%2F%2Fwww.omniglot.com%2Fwriting%2F${encodeURIComponent(
+            }/book/chapter?url=https%3A%2F%2Fwww.omniglot.com%2Fwriting%2F${encodeURIComponent(
               $l2.omniglot
             )}`,
             thumbnail: '/img/omniglot-banner.jpg'

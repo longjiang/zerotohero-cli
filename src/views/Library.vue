@@ -12,7 +12,7 @@
           <li v-for="booklist in booklists" class="text-center mb-5">
             <a
               class="link-unstyled"
-              :href="`/${$l1.code}/${$l2.code}/book/list/${encodeURIComponent(booklist.url)}`"
+              :href="`/${$l1.code}/${$l2.code}/book/list?url=${encodeURIComponent(booklist.url)}`"
             >
               <img
                 :src="`/img/books-${Math.floor(Math.random() * 10)}.png`"
@@ -39,7 +39,7 @@
             placeholder="Enter the URL of a book from one of the sites below."
             :action="
               url => {
-                location.href = `/${$l1.code}/${$l2.code}/book/index/${encodeURIComponent(url)}`
+                location.href = `/${$l1.code}/${$l2.code}/book/index?url=${encodeURIComponent(url)}`
               }
             "
             class="mb-3"

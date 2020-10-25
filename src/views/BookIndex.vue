@@ -6,7 +6,7 @@
           placeholder="Enter the URL of a book from a variety of eBook websites"
           :action="
             url => {
-              location.href = `/${$l1.code}/${$l2.code}/book/index/${encodeURIComponent(url)}`
+              location.href = `/${$l1.code}/${$l2.code}/book/index?url=${encodeURIComponent(url)}`
             }
           "
           ref="search"
@@ -39,9 +39,9 @@
               'link-unstyled': true,
               active:
                 location.pathname ===
-                `/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`
+                `/${$l1.code}/${$l2.code}/book/chapter?url=${encodeURIComponent(chapter.url)}`
             }"
-            :href="`/${$l1.code}/${$l2.code}/book/chapter/${encodeURIComponent(chapter.url)}`"
+            :href="`/${$l1.code}/${$l2.code}/book/chapter?url=${encodeURIComponent(chapter.url)}`"
           >
             <span>{{ chapter.title }}</span>
           </Annotate>
@@ -115,7 +115,7 @@ export default {
                 }
               ]
       } else {
-        location.href = `/${this.$l1.code}/${this.$l2.code}/book/chapter/${encodeURIComponent(this.args)}`
+        location.href = `/${this.$l1.code}/${this.$l2.code}/book/chapter?url=${encodeURIComponent(this.args)}`
       }
     }
   },

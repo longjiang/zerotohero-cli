@@ -379,10 +379,10 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/book/chapter/:args?',
+      path: '/:l1/:l2/book/chapter',
       name: 'book-chapter',
       component: () => import('./views/BookChapter.vue'),
-      props: true,
+      props: route => ({ args: route.query.url }),
       meta: {
         title: 'Book Chapter | Zero to Hero',
         metaTags: [
@@ -395,10 +395,10 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/book/index/:args?',
+      path: '/:l1/:l2/book/index',
       name: 'book-index',
       component: () => import('./views/BookIndex.vue'),
-      props: true,
+      props: route => ({ args: route.query.url }),
       meta: {
         title: 'Book | Zero to Hero',
         metaTags: [
@@ -411,10 +411,10 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/book/list/:args?',
+      path: '/:l1/:l2/book/list',
       name: 'book-list',
       component: () => import('./views/BookList.vue'),
-      props: true,
+      props: route => ({ args: route.query.url }),
       meta: {
         title: 'Books | Zero to Hero',
         metaTags: [
