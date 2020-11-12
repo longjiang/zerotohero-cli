@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     load() {
-      $.getJSON(`${Config.wiki}items/pages/${this.id}?`, response => {
+      $.getJSON(`${Config.wiki}items/pages/${this.id}?${Date.now()}`, response => {
         this.title = response.data.title
         this.body = response.data.body
       })
