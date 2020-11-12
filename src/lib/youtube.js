@@ -121,15 +121,6 @@ export default {
     }
     return videos
   },
-  mapChannelPlaylistsData(item) {
-    return {
-      id: item.id,
-      title: item.snippet.title,
-      thumbnail: item.snippet.thumbnails.standard.url,
-      count: item.contentDetails.itemCount,
-      data: item
-    }
-  },
   videoByApi(id, cacheLife = -1) {
     return new Promise(resolve => {
       $.getJSON(
@@ -152,13 +143,21 @@ export default {
       })
     })
   },
+  mapChannelPlaylistsData(item) {
+    return {
+      id: item.id,
+      title: item.snippet ? item.snippet.title : false,
+      thumbnail: item.snippet && item.snippet.thumbnails && item.snippet.thumbnails.standard ? item.snippet.thumbnails.standard.url : false,
+      count: item.contentDetails ? item.contentDetails.itemCount : false,
+      data: item
+    }
+  },
   channelPlayListsByAPI(channelID, cacheLife = -1) {
-
+    
     return new Promise(resolve => {
       $.getJSON(
         `${Config.youtubePlaylist}?channel=${channelID}&cache_life=${cacheLife}`
       ).then(response => {
-
         let playlists = []
         if (response.data.items) {
           playlists = response.data.items.map(this.mapChannelPlaylistsData)

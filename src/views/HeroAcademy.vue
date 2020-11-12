@@ -43,16 +43,19 @@ export default {
 
       this.title = undefined
       this.videos = []
+
+      /*
       YouTube.channel(
-        this.args,
+        this.channelId,
         channel => {
           this.title = channel.title
           this.videos = channel.videos
         },
         3600
       )
+      */
       let playlists = await YouTube.channelPlayListsByAPI(this.channelId, 3600)
-
+      console.log(playlists)
       if (playlists) {
         this.playlists = playlists.sort((a, b) => (a.title < b.title ? -1 : 1))
       }
