@@ -110,7 +110,7 @@ export default {
         `${Config.wiki}items/youtube_videos?filter[l2][eq]=${this.$l2.id}&filter[lesson][eq]=${this.id}`
       )).data.map(video => {
         return {
-          id: video.youtube_id,
+          youtube_id: video.youtube_id,
           title: video.title
         }
       })
