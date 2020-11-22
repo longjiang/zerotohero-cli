@@ -2,8 +2,8 @@
   <div class="container-fluid main mb-5">
     <div class="row">
       <div class="col-md-12">
-        <a class="btn btn-gray mr-2" :href="`//${$l1.code}/${$l2.code}/assign-lesson-videos/${level}/${Number(lesson)-1}`">Previous Lesson</a>
-        <a class="btn btn-gray" :href="`//${$l1.code}/${$l2.code}/assign-lesson-videos/${level}/${Number(lesson)+1}`">Next Lesson</a>
+        <a class="btn btn-gray mr-2" :href="`/${$l1.code}/${$l2.code}/assign-lesson-videos/${level}/${Number(lesson)-1}`">Previous Lesson</a>
+        <a class="btn btn-gray" :href="`/${$l1.code}/${$l2.code}/assign-lesson-videos/${level}/${Number(lesson)+1}`">Next Lesson</a>
       </div>
     </div>
     <div class="row">

@@ -55,8 +55,8 @@
           <WordList :words="unmatchedWords" :key="`unmatched-words-${matchedWordsKey}`"></WordList>
         </div>
         <div class="col-sm-12 text-center">
-          <a v-if="lesson > 1" class="btn btn-gray mr-2" :href="`//${$l1.code}/${$l2.code}/lesson-videos/${level}/${Number(lesson) - 1}`">Previous Lesson</a>
-          <a v-if="lesson < levelLessons[level]" class="btn btn-gray" :href="`//${$l1.code}/${$l2.code}/lesson-videos/${level}/${Number(lesson) + 1}`">Next Lesson</a>
+          <a v-if="lesson > 1" class="btn btn-gray mr-2" :href="`/${$l1.code}/${$l2.code}/lesson-videos/${level}/${Number(lesson) - 1}`">Previous Lesson</a>
+          <a v-if="lesson < levelLessons[level]" class="btn btn-gray" :href="`/${$l1.code}/${$l2.code}/lesson-videos/${level}/${Number(lesson) + 1}`">Next Lesson</a>
         </div>
       </div>
       <div class="col-lg-2"></div>

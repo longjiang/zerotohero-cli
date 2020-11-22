@@ -25,7 +25,7 @@
           </div>
           <div class="lesson-section">
             <h4>Activity 1: Read Together</h4>
-            <p>Read any one of the following articles with the help of your tutor. Use the <a target="_blank" :href="`//${$l1.code}/${$l2.code}/reader`">Text Reader</a> for word lookup.</p>
+            <p>Read any one of the following articles with the help of your tutor. Use the <a target="_blank" :href="`/${$l1.code}/${$l2.code}/reader`">Text Reader</a> for word lookup.</p>
             <div v-if="!lesson.readings" v-html="lesson.reading"></div>
             <div v-else>
               <div v-for="reading in lesson.readings" class="reading-card rounded shadow p-3 mb-4">
