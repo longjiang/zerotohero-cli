@@ -164,33 +164,29 @@ export default {
         $('#reader-annotated').html(marked)
       }
     },
-    route() {
+    async route() {
       let method = this.$route.params.method
       let arg = this.$route.params.arg
       if (method) {
         if (method === 'md-url') {
-          Helper.proxy(arg, md => {
-            this.text = md
-            // this.show()
+          Helper.proxy(arg).then(response => {
+            console.log(response)
+            this.text = response || ''
           })
         }
         if (method === 'html-url') {
           Helper.scrape(arg, (html, response, text) => {
             this.text = text
-            // this.show()
           })
         }
         if (method === 'md') {
           this.text = arg
-          // this.show()
         }
         if (method === 'html') {
           this.text = arg
-          // this.show()
         }
         if (method === 'txt') {
           this.text = arg.replace(/\n/g, '<br>')
-          // this.show()
         }
       } else {
         if (!this.text) {

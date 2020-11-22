@@ -98,9 +98,19 @@ export default {
     return unique
   },
   // json or plain text only, and returns object
-  proxy(url, callback) {
-    $.ajax(Config.proxy + '?' + url).done(function(response) {
-      callback(response.data)
+  async proxy(url, cacheLife = -1, encoding = false) {
+    return new Promise((resolve, reject) => {
+      $.ajax(
+        `${Config.scrape2}?url=${encodeURIComponent(
+          url
+        )}&cache_life=${cacheLife}` + (encoding ? `&encoding=${encoding}` : '')
+      ).done(response => {
+        if (response) {
+          resolve(response)
+        } else {
+          resolve(false)
+        }
+      })
     })
   },
   // html only, and returns html
