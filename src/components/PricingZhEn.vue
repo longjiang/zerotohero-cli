@@ -32,23 +32,17 @@
         </thead>
         <tbody class="table-hover">
           <tr>
-            <td class="text-left text-light" data-bg-level="PreA1">英语英雄1级（欧标Pre-A1）</td>
-            <td class="text-center">待定</td>
-          </tr>
-
-          <tr>
-            <td class="text-left text-light" data-bg-level="A1">英语英雄2级（欧标A1）</td>
-            <td class="text-center">待定</td>
-          </tr>
-
-          <tr>
             <td class="text-left text-light" data-bg-level="A2">英语英雄3级（欧标A2）</td>
-            <td class="text-center">待定</td>
+            <td class="text-center">
+              <span v-html="price(69, {sale: false})"></span>
+            </td>
           </tr>
 
           <tr>
             <td class="text-left text-light" data-bg-level="B1">英语英雄4级（欧标B1）</td>
-            <td class="text-center">待定</td>
+            <td class="text-center">
+              <span v-html="price(149, {sale: false})"></span>
+            </td>
           </tr>
 
           <tr>
@@ -76,7 +70,7 @@
               <a href="https://wazuc.duanshu.com/#/course/278543abd13b4dbcb5dfa6458803fd1c">流利之路</a>
             </td>
             <td class="text-center">
-              <b>免费</b>
+              <span v-html="price(69, {sale: false})"></span>
             </td>
           </tr>
           <tr>
@@ -84,7 +78,7 @@
               <a href="https://wazuc.duanshu.com/#/course/02eaa75857d749048504c0f9a3d89a87">美式英语发音</a>
             </td>
             <td class="text-center" colspan="3">
-              <span v-html="price(99, {sale: false})"></span>
+              <b>免费</b>
             </td>
           </tr>
           <tr>
@@ -95,20 +89,6 @@
             </td>
             <td class="text-center" colspan="3">
               <span v-html="price(69, {sale: false})"></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-left text-light" data-bg-level="outside">英雄学院</td>
-            <td class="text-center" colspan="3">待定</td>
-          </tr>
-          <tr>
-            <td class="text-left text-light" data-bg-level="outside">
-              <a :href="`/${$l1.code}/${$l2.code}/dictionary`">词典</a>,
-              <a :href="`/${$l1.code}/${$l2.code}/youtube/browse`">视听资源</a>,
-              <a :href="`/${$l1.code}/${$l2.code}/reader`">阅读资源</a>以及这个网站上的其它资源
-            </td>
-            <td class="text-center align-middle" colspan="3">
-              <b>免费</b>
             </td>
           </tr>
         </tbody>
