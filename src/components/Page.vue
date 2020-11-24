@@ -6,11 +6,15 @@
 import Config from '@/lib/config'
 import VRuntimeTemplate from 'v-runtime-template'
 import YouTubeVideo from '@/components/YouTubeVideo'
+import TelegramPrompt from '@/components/TelegramPrompt'
+import Testimonials from '@/components/Testimonials'
 import Sale from '@/components/Sale'
 
 export default {
   components: {
+    TelegramPrompt,
     YouTubeVideo,
+    Testimonials,
     Sale,
     VRuntimeTemplate
   },
