@@ -88,7 +88,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/pricing/:args?',
+      path: '/:l1/:l2/pricing/:currency?',
       name: 'pricing',
       component: () => import('./views/Pricing.vue'),
       props: true,

@@ -174,14 +174,13 @@ export default {
     Sale
   },
   props: {
-    args: {
+    currency: {
       default: 'USD'
     }
   },
   data() {
     return {
       accounting,
-      currency: this.args,
       key: 'USD',
       rates: undefined
     }
@@ -212,9 +211,6 @@ export default {
     }
   },
   watch: {
-    args() {
-      this.currency = this.args
-    },
     currency() {
       location.href = `/${this.$l1.code}/${this.$l2.code}/pricing/${this.currency}`
     }

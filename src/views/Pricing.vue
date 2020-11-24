@@ -1,10 +1,10 @@
 <template>
   <div class="container mt-5 mb-5">
     <div v-if="$l1.code === 'en' && $l2.code === 'zh'">
-      <PricingEnZh />
+      <PricingEnZh :currency="currency" />
     </div>
     <div v-if="$l1.code === 'zh' && $l2.code === 'en'">
-      <PricingZhEn />
+      <PricingZhEn :currency="currency" />
     </div>
   </div>
 </template>
@@ -16,6 +16,11 @@ export default {
   components: {
     PricingZhEn,
     PricingEnZh
+  },
+  props: {
+    currency: {
+      default: 'USD'
+    }
   }
 }
 </script>
