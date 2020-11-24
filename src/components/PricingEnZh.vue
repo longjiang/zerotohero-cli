@@ -46,7 +46,7 @@
               <br />
               <span style="color:rgb(26,148,6); font-size:12px;">Save {{ money(24) }}</span>
             </td>
-            <td class="text-center align-middle" rowspan="7">
+            <td class="text-center align-middle" rowspan="8">
               <span v-html="price(219, {sale: false})"></span>
               <br />
               <span style="color:rgb(26,148,6); font-size:12px;">Save {{ money(67) }}</span>
@@ -82,12 +82,12 @@
 
           <tr>
             <td class="text-left text-light" data-bg-level="5">
-              <a href="https://courses.chinesezerotohero.com/p/hsk-5-course">HSK 5 + Path to Fluency</a>
+              <a href="https://courses.chinesezerotohero.com/p/hsk-5-course">HSK 5</a>
             </td>
             <td class="text-center">
               <span v-html="price(64, {sale: false})"></span>
             </td>
-            <td class="text-center align-middle" rowspan="3">
+            <td class="text-center align-middle" rowspan="4">
               <span v-html="price(109, {sale: false})"></span>
               <br />
               <span style="color:rgb(26,148,6); font-size:12px;">Save {{ money(48) }}</span>
@@ -95,23 +95,33 @@
           </tr>
           <tr>
             <td class="text-left text-light" data-bg-level="6">
-              <a href="https://courses.chinesezerotohero.com/p/hsk-6-course">HSK 6 + Path to Fluency</a>
+              <a href="https://courses.chinesezerotohero.com/p/hsk-6-course">HSK 6</a>
             </td>
             <td class="text-center">
               <span v-html="price(64, {sale: false})"></span>
             </td>
           </tr>
           <tr>
-            <td class="text-left text-light" style="background-color: #004d81">
+            <td class="text-left text-light" style="background-color: #0076BA;">
               <a href="https://chinesezerotohero.teachable.com/p/path-to-fluency">Path To Fluency</a>
             </td>
             <td class="text-center">
-              <span v-html="price(29, {sale: false})"></span>
+              <span v-html="price(29, {sale: false})"></span><br>
+              <span><b>FREE</b> with HSK 5 or HSK 6</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-left text-light" style="background-color: #0076BA;">
+              <a href="https://chinesezerotohero.teachable.com/p/learn-chinese-with-tv-news">Learn Chinese with TV News</a>
+            </td>
+            <td class="text-center">
+              <span v-html="price(29, {sale: false})"></span><br>
+              <span><b>FREE</b> with HSK 5 or HSK 6</span>
             </td>
           </tr>
 
           <tr>
-            <td class="text-left text-light" data-bg-level="3">
+            <td class="text-left text-light" style="background-color: #666;">
               <a href="https://courses.chinesezerotohero.com/p/ci-shifu">Word Builder: Ci Shifu</a>
             </td>
             <td class="text-center" colspan="3">
@@ -119,7 +129,7 @@
             </td>
           </tr>
           <tr>
-            <td class="text-left text-light" style="background-color: #c92706;">
+            <td class="text-left text-light" style="background-color: #666;">
               <a
                 href="https://chinesezerotohero.teachable.com/p/phonetics-with-chinese-characteristics"
               >Phonetics with Chinese Characteristics</a>
@@ -129,21 +139,18 @@
             </td>
           </tr>
           <tr>
-            <td class="text-left text-light" data-bg-level="outside">
-              <a :href="`/${$l1.code}/${$l2.code}/youtube/channel/UCMoxI3OhLuyItB8__6iuJhg`">Hero Academy</a>
+            <td class="text-left text-light" style="background-color: #666;">
+              <a href="https://chinesezerotohero.teachable.com/p/chinese-short-poems">Learn Chinese with Poems</a>
             </td>
             <td class="text-center" colspan="3">
               <b>FREE</b>
             </td>
           </tr>
           <tr>
-            <td class="text-left text-light" data-bg-level="outside">
-              <a :href="`/${$l1.code}/${$l2.code}/view`">Dictionary</a>,
-              <a :href="`/${$l1.code}/${$l2.code}/grammar`">Grammar</a>,
-              <a :href="`/${$l1.code}/${$l2.code}/youtube/browse`">Theater</a>,
-              <a :href="`/${$l1.code}/${$l2.code}/reader`">Reader</a> and other learning tools offered on this website.
+            <td class="text-left text-light" style="background-color: #666;">
+              <a href="https://chinesezerotohero.teachable.com/p/learn-chinese-with-songs">Learn Chinese with Songs</a>
             </td>
-            <td class="text-center align-middle" colspan="3">
+            <td class="text-center" colspan="3">
               <b>FREE</b>
             </td>
           </tr>
@@ -154,11 +161,6 @@
         (including digital products like an online course) to a customer based
         in Europe. So if you're based in Europe, we are required to charge VAT
         on top of these prices.
-      </p>
-
-      <p>
-        If you're enrolled in either HSK 5, 6, or the Ultimate Bundle, you'll
-        <b>get the Path To Fluency course for free</b>.
       </p>
     </div>
   </div>
