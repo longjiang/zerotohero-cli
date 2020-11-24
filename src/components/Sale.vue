@@ -10,7 +10,7 @@
       <div data-bg-level="5" class="p-4 d-inline-block">
         <div style="font-size: 1.5rem; font-weight: 100;">ALL COURSES</div>
         <div style="font-weight: 700; font-size: 3rem">30% OFF</div>
-        <div>Ends: Mon December 2, 2019</div>
+        <div>Ends: November 30, 2020</div>
         <div class="mt-3">
           <span class="mr-2">Coupon Code</span>
           <code class="coupon-code">BF30</code>

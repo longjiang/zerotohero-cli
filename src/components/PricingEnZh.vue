@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-12">
       <h1 class="mb-5">Pricing Chart</h1>
-      <!-- <Sale class="mb-5 rounded" /> -->
+      <Sale class="mb-5 rounded" />
       <div class="bg-success text-light p-3 text-center mb-5 rounded">
         <h4 class="mb-0">No subscriptions! 😊 Pay once, enjoy forever!</h4>
       </div>
@@ -39,15 +39,15 @@
               <a href="https://courses.chinesezerotohero.com/p/hsk-1-course">HSK 1</a>
             </td>
             <td class="text-center">
-              <span v-html="price(29, {sale: false})"></span>
+              <span v-html="price(29, {sale: true})"></span>
             </td>
             <td class="text-center align-middle" rowspan="4">
-              <span v-html="price(134, {sale: false})"></span>
+              <span v-html="price(134, {sale: true})"></span>
               <br />
               <span style="color:rgb(26,148,6); font-size:12px;">Save {{ money(24) }}</span>
             </td>
             <td class="text-center align-middle" rowspan="8">
-              <span v-html="price(219, {sale: false})"></span>
+              <span v-html="price(219, {sale: true})"></span>
               <br />
               <span style="color:rgb(26,148,6); font-size:12px;">Save {{ money(67) }}</span>
             </td>
@@ -58,7 +58,7 @@
               <a href="https://courses.chinesezerotohero.com/p/hsk-2-course">HSK 2</a>
             </td>
             <td class="text-center">
-              <span v-html="price(29, {sale: false})"></span>
+              <span v-html="price(29, {sale: true})"></span>
             </td>
           </tr>
 
@@ -67,7 +67,7 @@
               <a href="https://courses.chinesezerotohero.com/p/hsk-3-course">HSK 3</a>
             </td>
             <td class="text-center">
-              <span v-html="price(36, {sale: false})"></span>
+              <span v-html="price(36, {sale: true})"></span>
             </td>
           </tr>
 
@@ -76,7 +76,7 @@
               <a href="https://courses.chinesezerotohero.com/p/hsk-4-course">HSK 4</a>
             </td>
             <td class="text-center">
-              <span v-html="price(64, {sale: false})"></span>
+              <span v-html="price(64, {sale: true})"></span>
             </td>
           </tr>
 
@@ -85,10 +85,10 @@
               <a href="https://courses.chinesezerotohero.com/p/hsk-5-course">HSK 5</a>
             </td>
             <td class="text-center">
-              <span v-html="price(64, {sale: false})"></span>
+              <span v-html="price(64, {sale: true})"></span>
             </td>
             <td class="text-center align-middle" rowspan="4">
-              <span v-html="price(109, {sale: false})"></span>
+              <span v-html="price(109, {sale: true})"></span>
               <br />
               <span style="color:rgb(26,148,6); font-size:12px;">Save {{ money(48) }}</span>
             </td>
@@ -98,7 +98,7 @@
               <a href="https://courses.chinesezerotohero.com/p/hsk-6-course">HSK 6</a>
             </td>
             <td class="text-center">
-              <span v-html="price(64, {sale: false})"></span>
+              <span v-html="price(64, {sale: true})"></span>
             </td>
           </tr>
           <tr>
@@ -106,7 +106,7 @@
               <a href="https://chinesezerotohero.teachable.com/p/path-to-fluency">Path To Fluency</a>
             </td>
             <td class="text-center">
-              <span v-html="price(29, {sale: false})"></span><br>
+              <span v-html="price(29, {sale: true})"></span><br>
               <span><b>FREE</b> with HSK 5 or HSK 6</span>
             </td>
           </tr>
@@ -115,7 +115,7 @@
               <a href="https://chinesezerotohero.teachable.com/p/learn-chinese-with-tv-news">Learn Chinese with TV News</a>
             </td>
             <td class="text-center">
-              <span v-html="price(29, {sale: false})"></span><br>
+              <span v-html="price(9, {sale: true})"></span><br>
               <span><b>FREE</b> with HSK 5 or HSK 6</span>
             </td>
           </tr>
@@ -125,7 +125,7 @@
               <a href="https://courses.chinesezerotohero.com/p/ci-shifu">Word Builder: Ci Shifu</a>
             </td>
             <td class="text-center" colspan="3">
-              <span v-html="price(9, {sale: false})"></span>
+              <span v-html="price(9, {sale: true})"></span>
             </td>
           </tr>
           <tr>
