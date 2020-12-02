@@ -11,11 +11,6 @@ import Page from '@/components/Page'
 export default {
   components: {
     Page
-  },
-  computed: {
-    isZh() {
-      return this.$l2.code === 'zh'
-    }
   }
 }
 </script>

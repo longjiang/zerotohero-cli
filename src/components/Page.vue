@@ -41,6 +41,11 @@ export default {
         this.body = response.data.body
       })
     }
+  },
+  computed: {
+    isZh() {
+      return this.$l2.code === 'zh'
+    }
   }
 }
 </script>

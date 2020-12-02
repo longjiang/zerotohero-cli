@@ -15,21 +15,16 @@ import Page from '@/components/Page'
 export default {
   components: {
     Page
-  },
-  computed: {
-    isZh() {
-      return this.$l2.code === 'zh'
-    }
   }
 }
 </script>
 
 <style scoped>
-h5 {
+* >>> h5 {
   margin-top: 2rem;
 }
 
-h5 + div {
+* >>> h5 + div {
   padding-left: 2rem;
 }
 </style>
