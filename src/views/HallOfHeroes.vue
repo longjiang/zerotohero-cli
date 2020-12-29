@@ -2,16 +2,7 @@
   <div class="container mb-5">
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="text-center mt-5 mb-5">Hall of Heroes</h1>
-        <p class="lead text-center">
-          <b>Every “hero” was a “zero” at some point.</b>
-        </p>
-        <p>
-          With hard work and continuous effort learning the Mandarin language,
-          many have improved tremendously. In this page we showcase some of our
-          students that have successfully passed the HSK exams after taking
-          courses from us!
-        </p>
+        <Page id="16" />
         <div class="text-center mt-5 mb-5 filter">
           <button
             @click="filter = hero => hero"
@@ -37,10 +28,12 @@
 
 <script>
 import HeroesList from '@/components/HeroesList'
+import Page from '@/components/Page'
 
 export default {
   components: {
-    HeroesList
+    HeroesList,
+    Page
   },
   data() {
     return {
