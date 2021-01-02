@@ -40,7 +40,7 @@
             <template v-if="line.trim().length > 0">
               <v-runtime-template
                 v-if="annotated"
-                :template="`<span>${annotatedLines[index]}</span>`"
+                :template="`<span>${dictionaryLines[index]}</span>`"
               />
             </template>
           </td>
@@ -52,13 +52,14 @@
 
 <script>
 import WordBlock from '@/components/WordBlock'
+import WordBlockDictionary from '@/components/WordBlockDictionary'
 import VRuntimeTemplate from 'v-runtime-template'
 import TinySegmenter from 'tiny-segmenter'
-import MyanmarTools from 'myanmar-tools'
 
 export default {
   components: {
     WordBlock,
+    WordBlockDictionary,
     VRuntimeTemplate
   },
   props: {
@@ -79,6 +80,7 @@ export default {
     return {
       annotated: false,
       annotatedLines: [],
+      dictionaryLines: [],
       batchId: 0,
       tokenized: [],
       seen: []
@@ -127,7 +129,10 @@ export default {
     async annotate() {
       if (this.text) {
         for (let line of this.textLines) {
-          this.annotatedLines.push(await this.tokenize(line, this.batchId++))
+          let annotatedLine = await this.tokenize(line, this.batchId++)
+          let dictionaryLine = annotatedLine.replace(/WordBlock/g, 'WordBlockDictionary')
+          this.annotatedLines.push(annotatedLine)
+          this.dictionaryLines.push(dictionaryLine)
         }
       }
     },
@@ -142,7 +147,7 @@ export default {
           if (typeof item === 'object') {
             let seen = this.seen.includes(item.text)
             if (!seen) this.seen.push(item.text)
-            html += `<WordBlock sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}" />`
+            html += `<WordBlock :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}" />`
           } else {
             item = item.trim().replace(/\s+/gi, ' ')
             if (item !== '') {
