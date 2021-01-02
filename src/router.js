@@ -379,6 +379,21 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/studysheet/',
+      name: 'studysheet',
+      component: () => import('./views/StudySheet.vue'),
+      meta: {
+        title: 'Language Study Sheet Creator | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'Generate guided readers for language learning.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/book/chapter',
       name: 'book-chapter',
       component: () => import('./views/BookChapter.vue'),

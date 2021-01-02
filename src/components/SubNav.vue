@@ -155,6 +155,10 @@
         <i class="fas fa-file-alt"></i>
         {{$t('Text Reader')}}
       </router-link>
+      <router-link class="secondary-menu-item" :to="{ name: 'studysheet' }">
+        <i class="fas fa-print"></i>
+        {{$t('Make Study Sheet')}}
+      </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'library' }">
         <i class="fas fa-book-open"></i>
         {{$t('Library')}}
