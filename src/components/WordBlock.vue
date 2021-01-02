@@ -11,6 +11,7 @@
       :class="{
         'word-block': true,
         sticky: sticky,
+        seen: seen,
         saved: saved
       }"
       v-bind="level"
@@ -215,6 +216,9 @@ export default {
     },
     sticky: {
       default: false // whether or not to show each word's level color by default (without hovering)
+    },
+    seen: {
+      default: false // whether this word has already been annotated ('seen') before
     }
   },
   data() {

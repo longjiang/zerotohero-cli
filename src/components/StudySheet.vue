@@ -37,7 +37,12 @@
             </template>
           </td>
           <td>
-            dictionary
+            <template v-if="line.trim().length > 0">
+              <v-runtime-template
+                v-if="annotated"
+                :template="`<span>${annotatedLines[index]}</span>`"
+              />
+            </template>
           </td>
         </tr>
       </tbody>
@@ -75,7 +80,8 @@ export default {
       annotated: false,
       annotatedLines: [],
       batchId: 0,
-      tokenized: []
+      tokenized: [],
+      seen: []
     }
   },
   async mounted() {
@@ -134,10 +140,9 @@ export default {
         for (let index = 0; index < this.tokenized[batchId].length; index++) {
           let item = this.tokenized[batchId][index]
           if (typeof item === 'object') {
-            let token = this.tokenized[batchId]
-            if (token && typeof token === 'object') {
-              html += `<WordBlock sticky="true" :token="tokenized[${batchId}][${index}]"/>`
-            }
+            let seen = this.seen.includes(item.text)
+            if (!seen) this.seen.push(item.text)
+            html += `<WordBlock sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}" />`
           } else {
             item = item.trim().replace(/\s+/gi, ' ')
             if (item !== '') {
