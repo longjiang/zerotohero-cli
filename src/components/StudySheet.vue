@@ -10,6 +10,7 @@
     "
     :class="{
       annotated: true,
+      'add-pinyin': true,
       'text-right':
         foreign &&
         $l2.scripts &&
