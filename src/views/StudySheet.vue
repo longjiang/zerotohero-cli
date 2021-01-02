@@ -38,14 +38,21 @@
           <table class="table">
             <tbody>
               <tr
-                v-for="line of marked
+                v-for="(line, index) in marked
                   .trim()
                   .replace(/<(div|p|li|h1|h2|h3|h4|h5|h6)/g, '\n<$1')
+                  .replace(/^\n/, '')
                   .split('\n')"
                 v-bind:key="line"
               >
                 <td>
-                  translation
+                  <span
+                    v-html="
+                      translation
+                        .trim()
+                        .split('\n')[index]
+                    "
+                  />
                 </td>
                 <td>
                   <Annotate v-if="line.trim().length > 0" tag="div">
@@ -72,16 +79,57 @@ import Marked from 'marked'
 export default {
   data() {
     return {
-      text: ''
+      text: '',
+      translation: ''
+    }
+  },
+  watch: {
+    text() {
+      this.save(this.text, 'zthStudySheetText')
+    },
+    translation() {
+      this.save(this.translation, 'zthStudySheetTranslation')
     }
   },
   methods: {
+    getSaved(key) {
+      let textJSON = localStorage.getItem(key)
+      try {
+        if (textJSON) {
+          let saved = JSON.parse(textJSON)
+          return saved
+        }
+      } catch (e) {}
+    },
+    get(key) {
+      let saved = this.getSaved(key)
+      if (saved) {
+        return saved[this.$l2.code] || localStorage.getItem(key)
+      } else {
+        return localStorage.getItem(key)
+      }
+    },
+    save(text, key) {
+      let saved = this.getSaved(key) || {}
+      saved[this.$l2.code] = text
+      localStorage.setItem(key, JSON.stringify(saved))
+    },
     breakIntoLines() {
       this.text = this.text
         .replace(/([。，？！：；、])/g, '$1\n')
         .replace(/\n”/g, '”\n')
         .replace(/\n\n+/g, '\n\n')
         .replace(/[　\t]+/g, '')
+    }
+  },
+  mounted() {
+    const text = this.get('zthStudySheetText')
+    if (text) {
+      this.text = text
+    }
+    const translation = this.get('zthStudySheetTranslation')
+    if (translation) {
+      this.translation = translation
     }
   },
   computed: {
