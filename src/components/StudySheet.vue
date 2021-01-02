@@ -18,7 +18,7 @@
         $l2.scripts[0].direction === 'rtl'
     }"
   >
-    <table class="table" :class="targetLevelClasses">
+    <table class="table">
       <tbody>
         <tr
           v-for="(line, index) in textLines"
@@ -95,18 +95,6 @@ export default {
     }
   },
   computed: {
-    targetLevelClasses() {
-      let classes = {
-        'show-level-1': this.targetLevel <= 1,
-        'show-level-2': this.targetLevel <= 2,
-        'show-level-3': this.targetLevel <= 3,
-        'show-level-4': this.targetLevel <= 4,
-        'show-level-5': this.targetLevel <= 5,
-        'show-level-6': this.targetLevel <= 6,
-        'show-level-outside': this.targetLevel <= 7
-      }
-      return classes
-    },
     textLines() {
       return this.text
         .trim()
