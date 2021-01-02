@@ -39,36 +39,7 @@
       </div>
       <div class="row mt-5">
         <div class="col-sm-12">
-          <table class="table" :class=targetLevelClasses>
-            <tbody>
-              <tr
-                v-for="(line, index) in marked
-                  .trim()
-                  .replace(/<(div|p|li|h1|h2|h3|h4|h5|h6)/g, '\n<$1')
-                  .replace(/^\n/, '')
-                  .split('\n')"
-                v-bind:key="line"
-              >
-                <td>
-                  <span
-                    v-html="
-                      translation
-                        .trim()
-                        .split('\n')[index]
-                    "
-                  />
-                </td>
-                <td>
-                  <StudySheet v-if="line.trim().length > 0" tag="div" :sticky="true">
-                    <span v-html="line.trim()" />
-                  </StudySheet>
-                </td>
-                <td>
-                  dictionary
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <StudySheet :text="text" :translation="translation" :target-level="targetLevel" v-bind:key="text" />
         </div>
       </div>
     </div>
@@ -77,8 +48,6 @@
 </template>
 
 <script>
-import Helper from '@/lib/helper'
-import Marked from 'marked'
 import StudySheet from '@/components/StudySheet'
 
 export default {
@@ -149,25 +118,6 @@ export default {
     const targetLevel = this.get('zthStudySheetTargetLevel')
     if (targetLevel) {
       this.targetLevel = targetLevel
-    }
-  },
-  computed: {
-    targetLevelClasses() {
-      let classes = {
-        'show-level-1': this.targetLevel <= 1,
-        'show-level-2': this.targetLevel <= 2,
-        'show-level-3': this.targetLevel <= 3,
-        'show-level-4': this.targetLevel <= 4,
-        'show-level-5': this.targetLevel <= 5,
-        'show-level-6': this.targetLevel <= 6,
-        'show-level-outside': this.targetLevel <= 7,
-      }
-      return classes
-    },
-    marked() {
-      return (
-        Marked(this.text.replace(/^ {4,}/gm, '')) || this.text // 4 spaces in a row would emit <code>!
-      )
     }
   }
 }
