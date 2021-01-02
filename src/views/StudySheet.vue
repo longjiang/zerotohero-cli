@@ -28,6 +28,10 @@
             v-model="text"
           ></textarea
           ><br />
+          <b-dropdown id="targetHSK" text="Target Level" class="mr-1">
+            <b-dropdown-item v-for="level of [1,2,3,4,5,6]" :value="level" @click="setLevel(level)" v-bind:key="number">HSK {{ level }}</b-dropdown-item>
+            <b-dropdown-item @click="setLevel(7)">Outside HSK</b-dropdown-item>
+          </b-dropdown>
           <button class="btn btn-secondary" @click="breakIntoLines">
             Break into Lines
           </button>
@@ -35,7 +39,7 @@
       </div>
       <div class="row mt-5">
         <div class="col-sm-12">
-          <table class="table">
+          <table class="table" :class=targetLevelClasses>
             <tbody>
               <tr
                 v-for="(line, index) in marked
@@ -80,7 +84,8 @@ export default {
   data() {
     return {
       text: '',
-      translation: ''
+      translation: '',
+      targetLevel: 1,
     }
   },
   watch: {
@@ -92,6 +97,9 @@ export default {
     }
   },
   methods: {
+    setLevel(level) {
+      this.targetLevel = level
+    },
     getSaved(key) {
       let textJSON = localStorage.getItem(key)
       try {
@@ -133,6 +141,18 @@ export default {
     }
   },
   computed: {
+    targetLevelClasses() {
+      let classes = {
+        'show-level-1': this.targetLevel <= 1,
+        'show-level-2': this.targetLevel <= 2,
+        'show-level-3': this.targetLevel <= 3,
+        'show-level-4': this.targetLevel <= 4,
+        'show-level-5': this.targetLevel <= 5,
+        'show-level-6': this.targetLevel <= 6,
+        'show-level-outside': this.targetLevel <= 7,
+      }
+      return classes
+    },
     marked() {
       return (
         Marked(this.text.replace(/^ {4,}/gm, '')) || this.text // 4 spaces in a row would emit <code>!

@@ -345,53 +345,69 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: white !important;
 }
 
+.l2-zh .show-level-1 [data-hover-level='1'].sticky,
+.l2-zh .show-level-2 [data-hover-level='2'].sticky,
+.l2-zh .show-level-3 [data-hover-level='3'].sticky,
+.l2-zh .show-level-4 [data-hover-level='4'].sticky,
+.l2-zh .show-level-5 [data-hover-level='5'].sticky,
+.l2-zh .show-level-6 [data-hover-level='6'].sticky,
+.l2-zh .show-level-outside [data-hover-level='outside'].sticky {
+  font-weight: bold
+}
 
 .l2-zh .level1,
 .l2-zh [data-level='1'],
 .l2-zh [data-hover-level='1']:hover,
-.l2-zh [data-hover-level='1'].saved {
+.l2-zh [data-hover-level='1'].saved,
+.l2-zh .show-level-1 [data-hover-level='1'].sticky {
   color: #f8b51e !important;
 }
 
 .l2-zh .level2,
 .l2-zh [data-level='2'],
 .l2-zh [data-hover-level='2']:hover,
-.l2-zh [data-hover-level='2'].saved {
+.l2-zh [data-hover-level='2'].saved,
+.l2-zh .show-level-2 [data-hover-level='2'].sticky {
   color: #267f94 !important;
 }
 
 .l2-zh .level3,
 .l2-zh [data-level='3'],
 .l2-zh [data-hover-level='3']:hover,
-.l2-zh [data-hover-level='3'].saved {
+.l2-zh [data-hover-level='3'].saved,
+.l2-zh .show-level-3 [data-hover-level='3'].sticky {
   color: #fd4f1c !important;
 }
 
 .l2-zh .level4,
 .l2-zh [data-level='4'],
 .l2-zh [data-hover-level='4']:hover,
-.l2-zh [data-hover-level='4'].saved {
+.l2-zh [data-hover-level='4'].saved,
+.l2-zh .show-level-4 [data-hover-level='4'].sticky {
   color: #bb1718 !important;
 }
 
 .l2-zh .level5,
 .l2-zh [data-level='5'],
 .l2-zh [data-hover-level='5']:hover,
-.l2-zh [data-hover-level='5'].saved {
+.l2-zh [data-hover-level='5'].saved,
+.l2-zh .show-level-5 [data-hover-level='5'].sticky {
   color: #1b3e76 !important;
 }
 
 .l2-zh .level6,
 .l2-zh [data-level='6'],
 .l2-zh [data-hover-level='6']:hover,
-.l2-zh [data-hover-level='6'].saved {
+.l2-zh [data-hover-level='6'].saved,
+.l2-zh .show-level-6 [data-hover-level='6'].sticky {
   color: #6a3669 !important;
 }
 
 .l2-zh .leveloutside,
 .l2-zh [data-level='outside'],
 .l2-zh [data-hover-level='outside']:hover,
-.l2-zh [data-hover-level='outside'].saved {
+.l2-zh [data-hover-level='outside'].saved,
+.l2-zh .show-level-outside [data-hover-level='outside'].sticky {
   color: #c59f94 !important;
 }
 

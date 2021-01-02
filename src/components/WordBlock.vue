@@ -10,6 +10,7 @@
     <span
       :class="{
         'word-block': true,
+        sticky: sticky,
         saved: saved
       }"
       v-bind="level"
@@ -235,9 +236,8 @@ export default {
   },
   computed: {
     level() {
-      let attr = this.sticky ? 'data-level' : 'data-hover-level'
       return {
-        [`${attr}`]:
+        ['data-hover-level']:
           this.words && this.words.length > 0 ? this.words[0].level || 'outside' : 'outside'
       }
     },
