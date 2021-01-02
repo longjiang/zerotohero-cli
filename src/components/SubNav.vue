@@ -157,7 +157,7 @@
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'studysheet' }">
         <i class="fas fa-print"></i>
-        {{$t('Make Study Sheet')}}
+        {{$t('Study Sheet Creator')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'library' }">
         <i class="fas fa-book-open"></i>

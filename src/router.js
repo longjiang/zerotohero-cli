@@ -381,7 +381,7 @@ export default new Router({
     {
       path: '/:l1/:l2/studysheet/',
       name: 'studysheet',
-      component: () => import('./views/StudySheet.vue'),
+      component: () => import('./views/StudySheetCreator.vue'),
       meta: {
         title: 'Language Study Sheet Creator | Zero to Hero',
         metaTags: [

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h1>Study Sheet Generator</h1>
+          <h1>Study Sheet Creator</h1>
           <Loader class="mb-5" />
         </div>
       </div>
@@ -28,8 +28,8 @@
             v-model="text"
           ></textarea
           ><br />
-          <b-dropdown id="targetHSK" text="Target Level" class="mr-1">
-            <b-dropdown-item v-for="level of [1,2,3,4,5,6]" :value="level" @click="setLevel(level)" v-bind:key="number">HSK {{ level }}</b-dropdown-item>
+          <b-dropdown id="targetHSK" :text="targetLevel ? targetLevel === 7 ? 'Outside HSK' : `HSK ${targetLevel}` : 'Target Level'" class="mr-1">
+            <b-dropdown-item v-for="level of [1,2,3,4,5,6]" :value="level" @click="setLevel(level)" v-bind:key="level">HSK {{ level }}</b-dropdown-item>
             <b-dropdown-item @click="setLevel(7)">Outside HSK</b-dropdown-item>
           </b-dropdown>
           <button class="btn btn-secondary" @click="breakIntoLines">
@@ -59,9 +59,9 @@
                   />
                 </td>
                 <td>
-                  <Annotate v-if="line.trim().length > 0" tag="div" :sticky="true">
+                  <StudySheet v-if="line.trim().length > 0" tag="div" :sticky="true">
                     <span v-html="line.trim()" />
-                  </Annotate>
+                  </StudySheet>
                 </td>
                 <td>
                   dictionary
@@ -79,8 +79,12 @@
 <script>
 import Helper from '@/lib/helper'
 import Marked from 'marked'
+import StudySheet from '@/components/StudySheet'
 
 export default {
+  components: {
+    StudySheet
+  },
   data() {
     return {
       text: '',
@@ -94,6 +98,9 @@ export default {
     },
     translation() {
       this.save(this.translation, 'zthStudySheetTranslation')
+    },
+    targetLevel() {
+      this.save(this.targetLevel, 'zthStudySheetTargetLevel')
     }
   },
   methods: {
@@ -138,6 +145,10 @@ export default {
     const translation = this.get('zthStudySheetTranslation')
     if (translation) {
       this.translation = translation
+    }
+    const targetLevel = this.get('zthStudySheetTargetLevel')
+    if (targetLevel) {
+      this.targetLevel = targetLevel
     }
   },
   computed: {
