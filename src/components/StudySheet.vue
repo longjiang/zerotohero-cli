@@ -18,16 +18,16 @@
         $l2.scripts[0].direction === 'rtl'
     }"
   >
-    <table class="table">
+    <table class="table study-sheet-table">
       <tbody>
         <tr
           v-for="(line, index) in textLines"
           v-bind:key="line"
         >
-          <td>
+          <td class="study-sheet-td-translation">
             <span v-html="translationLines[index]" />
           </td>
-          <td>
+          <td class="study-sheet-td-text">
             <template v-if="line.trim().length > 0">
               <span v-if="!annotated" v-html="line.trim()"></span>
               <v-runtime-template
@@ -36,7 +36,7 @@
               />
             </template>
           </td>
-          <td>
+          <td class="study-sheet-td-definition">
             <template v-if="line.trim().length > 0">
               <v-runtime-template
                 v-if="annotated"
@@ -165,4 +165,12 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.study-sheet-table {
+  position: relative;
+}
+.study-sheet-td-translation,
+.study-sheet-td-text {
+  min-width: 20vw;
+}
+</style>

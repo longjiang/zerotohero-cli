@@ -16,11 +16,17 @@
     <span
       class="word-block-dictionary-pinyin"
       :data-level="token.candidates[0].level"
-      > ({{ token.candidates[candidateIndex].pinyin }}) </span
     >
-    <span
-      class="word-block-dictionary-definition"
-    >{{ token.candidates[candidateIndex].definitions.join(', ') }}. </span>
+      ({{ token.candidates[candidateIndex].pinyin }})
+    </span>
+    <span class="word-block-dictionary-definition"
+      >{{
+        token.candidates[candidateIndex].definitions.filter(definition => !definition.startsWith('CL'))
+          .join('; ')
+          .replace(/\[(.*?)\]/g, ' ($1)')          
+          .replace(/[一-龥]+\|([一-龥]+)/g, '$1')
+      }}.
+    </span>
   </span>
 </template>
 
@@ -45,9 +51,14 @@ export default {
   },
   methods: {
     cycleCandidate() {
-      if (this.token && this.token.candidates && this.token.candidates.length > 0) {
+      if (
+        this.token &&
+        this.token.candidates &&
+        this.token.candidates.length > 0
+      ) {
         let newCandidateIndex = this.candidateIndex + 1
-        if (newCandidateIndex > this.token.candidates.length - 1) newCandidateIndex = 0
+        if (newCandidateIndex > this.token.candidates.length - 1)
+          newCandidateIndex = 0
         this.candidateIndex = newCandidateIndex
       }
     }
@@ -57,6 +68,6 @@ export default {
 
 <style lang="scss">
 .word-block-dictionary-simplified {
-  font-weight: bold
+  font-weight: bold;
 }
 </style>

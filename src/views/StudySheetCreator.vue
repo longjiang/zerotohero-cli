@@ -1,6 +1,6 @@
 <template>
   <div class="main pt-3 pb-5">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
           <h1>Study Sheet Creator</h1>
