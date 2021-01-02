@@ -55,7 +55,7 @@
                   />
                 </td>
                 <td>
-                  <Annotate v-if="line.trim().length > 0" tag="div">
+                  <Annotate v-if="line.trim().length > 0" tag="div" :sticky="true">
                     <span v-html="line.trim()" />
                   </Annotate>
                 </td>

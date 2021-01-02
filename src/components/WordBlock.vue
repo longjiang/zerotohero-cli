@@ -12,29 +12,46 @@
         'word-block': true,
         saved: saved
       }"
-      :data-hover-level="
-        words && words.length > 0 ? words[0].level || 'outside' : 'outside'
-      "
+      v-bind="level"
       @mouseover="mouseover"
       @mouseout="mouseout"
     >
       <template v-if="token && token.candidates && token.candidates.length > 0">
-        <span class="word-block-definition" v-html="token.candidates[0].definitions[0]"></span>
+        <span
+          class="word-block-definition"
+          v-html="token.candidates[0].definitions[0]"
+        ></span>
         <span
           class="word-block-pinyin"
           v-if="transliteration && transliteration !== token.candidates[0].head"
-        >{{ savedTransliteration || transliteration }}</span>
-        <span v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)" class="word-block-simplified" @click="wordBlockClick()">{{ token.candidates[0].simplified }}</span>
-        <span v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)" class="word-block-traditional" @click="wordBlockClick()">{{ token.candidates[0].traditional }}</span>
-        <span v-else class="word-block-text" @click="wordBlockClick()">{{ token.candidates[0].head }}</span>
+          >{{ savedTransliteration || transliteration }}</span
+        >
+        <span
+          v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)"
+          class="word-block-simplified"
+          @click="wordBlockClick()"
+          >{{ token.candidates[0].simplified }}</span
+        >
+        <span
+          v-if="['zh', 'yue', 'nan', 'hak'].includes($l2.code)"
+          class="word-block-traditional"
+          @click="wordBlockClick()"
+          >{{ token.candidates[0].traditional }}</span
+        >
+        <span v-else class="word-block-text" @click="wordBlockClick()">{{
+          token.candidates[0].head
+        }}</span>
       </template>
       <template v-else>
         <span
           class="word-block-pinyin"
           v-if="transliteration && transliteration !== text"
-        >{{ savedTransliteration || transliteration }}</span>
+          >{{ savedTransliteration || transliteration }}</span
+        >
         <span class="word-block-text" @click="wordBlockClick()">
-          <template v-if="$l2.code === 'ru' && text.length > 9">{{ segment(text) }}</template>
+          <template v-if="$l2.code === 'ru' && text.length > 9">{{
+            segment(text)
+          }}</template>
           <slot v-else></slot>
         </span>
       </template>
@@ -62,48 +79,103 @@
             of
           </div>
           <div>
-            <span style="color: #999" v-if="word.pronunciation">/{{ word.pronunciation }}/</span>
-            <span style="color: #999" v-else-if="word.jyutping">{{ word.jyutping }}</span>
-            <span style="color: #999" v-else-if="word.pinyin">{{ word.pinyin }}</span>
-            <span style="color: #999" v-else-if="word.kana && word.kana !== word.bare">{{ word.kana }}</span>
-            <span style="color: #999" v-else-if="$hasFeature('transliteration')">{{ tr(word.bare) }}</span>
-            <span style="color: #999" v-if="word.jyutping && word.pinyin"> / {{ word.pinyin }}</span>
-            <Speak :text="word.kana || word.bare" :mp3="word.audio" :wiktionary="word.wiktionary" class="ml-1" />
+            <span style="color: #999" v-if="word.pronunciation"
+              >/{{ word.pronunciation }}/</span
+            >
+            <span style="color: #999" v-else-if="word.jyutping">{{
+              word.jyutping
+            }}</span>
+            <span style="color: #999" v-else-if="word.pinyin">{{
+              word.pinyin
+            }}</span>
+            <span
+              style="color: #999"
+              v-else-if="word.kana && word.kana !== word.bare"
+              >{{ word.kana }}</span
+            >
+            <span
+              style="color: #999"
+              v-else-if="$hasFeature('transliteration')"
+              >{{ tr(word.bare) }}</span
+            >
+            <span style="color: #999" v-if="word.jyutping && word.pinyin">
+              / {{ word.pinyin }}</span
+            >
+            <Speak
+              :text="word.kana || word.bare"
+              :mp3="word.audio"
+              :wiktionary="word.wiktionary"
+              class="ml-1"
+            />
           </div>
-          <Star :word="word" :text="text" class="mr-1" style="position: relative; bottom: 0.1rem"></Star>
-          <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{ $l2.code === 'ru' && text.length > 9 ? segment(word.accented) : word.accented }}</b>
+          <Star
+            :word="word"
+            :text="text"
+            class="mr-1"
+            style="position: relative; bottom: 0.1rem"
+          ></Star>
+          <b :data-level="word.level || 'outside'" style="font-size: 1.5rem">{{
+            $l2.code === 'ru' && text.length > 9
+              ? segment(word.accented)
+              : word.accented
+          }}</b>
           <span
             v-if="word.traditional && word.traditional !== word.simplified"
             class="ml-1"
             style="font-size: 1.2em; color: #999"
-          >{{ word.traditional }}</span>
+            >{{ word.traditional }}</span
+          >
           <span
             v-if="$l2.code === 'ko' && word.cjk && word.cjk.canonical"
             class="ml-1"
             style="font-size: 1.2em; color: #999"
-          >[{{ word.cjk.canonical }}]</span>
+            >[{{ word.cjk.canonical }}]</span
+          >
           <span
             v-if="word.level && word.level !== 'outside'"
             :data-bg-level="word.level"
             class="pl-1 pr-1 ml-1 rounded d-inline-block"
             style="font-size: 0.8em; position: relative; bottom: 0.1rem"
-          >{{ $l2.code === 'zh' ? 'HSK ' : ''}}{{ word.level }}</span>
-          <span v-if="word.unit" style="font-size: 0.8em" class="ml-1">Unit {{ word.unit }}</span>
-          <a :href="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`" class="ml-1 link-unstyled" style="color: #999">
+            >{{ $l2.code === 'zh' ? 'HSK ' : '' }}{{ word.level }}</span
+          >
+          <span v-if="word.unit" style="font-size: 0.8em" class="ml-1"
+            >Unit {{ word.unit }}</span
+          >
+          <a
+            :href="
+              `/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`
+            "
+            class="ml-1 link-unstyled"
+            style="color: #999"
+          >
             <i class="fas fa-book"></i>
           </a>
         </div>
         <div>
-          <span class="word-type" v-if="word.type !== 'other'" style="color: #999">
+          <span
+            class="word-type"
+            v-if="word.type !== 'other'"
+            style="color: #999"
+          >
             {{ word.verbs ? abbreviate(word.verbs.aspect) : '' }}
             {{ abbreviate(word.type) }}
           </span>
           <span class="word-type" v-if="word.pos" style="color: #999">
             {{ word.pos }}
-            {{ word.heads && word.heads[0] && word.heads[0][1] ? word.heads[0][1] : '' }}
+            {{
+              word.heads && word.heads[0] && word.heads[0][1]
+                ? word.heads[0][1]
+                : ''
+            }}
           </span>
           <span class="word-translation" v-if="word.definitions">
-            <em v-html="word.definitions.map(definition => definition.replace(/\[.*\] /g, '')).join(', ')"></em>
+            <em
+              v-html="
+                word.definitions
+                  .map(definition => definition.replace(/\[.*\] /g, ''))
+                  .join(', ')
+              "
+            ></em>
           </span>
         </div>
       </div>
@@ -111,9 +183,15 @@
       <div v-if="words && words.length === 0 && loading === false">
         🤷‍ No clue.
         <br />
-        <a :href="`https://www.google.com/search?q=${this.text}`" target="_blank">Google</a>
+        <a
+          :href="`https://www.google.com/search?q=${this.text}`"
+          target="_blank"
+          >Google</a
+        >
         |
-        <a :href="`https://en.wiktionary.org/wiki/${this.text}`" target="_blank">Wiktionary</a>
+        <a :href="`https://en.wiktionary.org/wiki/${this.text}`" target="_blank"
+          >Wiktionary</a
+        >
       </div>
     </template>
   </v-popover>
@@ -133,6 +211,9 @@ export default {
     },
     explore: {
       default: false
+    },
+    sticky: {
+      default: false // whether or not to show each word's level color by default (without hovering)
     }
   },
   data() {
@@ -152,25 +233,50 @@ export default {
       Config
     }
   },
-  computed: mapState(['savedWords']),
+  computed: {
+    level() {
+      let attr = this.sticky ? 'data-level' : 'data-hover-level'
+      return {
+        [`${attr}`]:
+          this.words && this.words.length > 0 ? this.words[0].level || 'outside' : 'outside'
+      }
+    },
+    ...mapState(['savedWords'])
+  },
   mounted() {
     if (!this.transliteration && this.$hasFeature('transliteration')) {
-      if (this.token && this.token.candidates && this.token.candidates.length > 0) {
+      if (
+        this.token &&
+        this.token.candidates &&
+        this.token.candidates.length > 0
+      ) {
         if (this.$l2.code === 'ja' && this.token.candidates[0].kana) {
           this.transliteration = this.token.candidates[0].kana
-        } else if (['zh', 'nan', 'hak'].includes(this.$l2.code) && this.token.candidates[0].pinyin) {
+        } else if (
+          ['zh', 'nan', 'hak'].includes(this.$l2.code) &&
+          this.token.candidates[0].pinyin
+        ) {
           this.transliteration = this.token.candidates[0].pinyin
-        } else if (this.$l2.code === 'yue' && this.token.candidates[0].jyutping) {
+        } else if (
+          this.$l2.code === 'yue' &&
+          this.token.candidates[0].jyutping
+        ) {
           this.transliteration = this.token.candidates[0].jyutping
         } else {
           this.transliteration = tr(this.token.candidates[0].head)
         }
       }
-      if (!this.transliteration && !['ja', 'zh', 'nan', 'hak'].includes(this.$l2.code)) {
+      if (
+        !this.transliteration &&
+        !['ja', 'zh', 'nan', 'hak'].includes(this.$l2.code)
+      ) {
         this.transliteration = tr(this.text)
       }
     }
     this.update()
+    if (this.sticky) {
+      this.lookup()
+    }
   },
   watch: {
     savedWords() {
@@ -179,7 +285,12 @@ export default {
   },
   methods: {
     wordBlockClick() {
-      if (this.explore && this.token && this.token.candidates && this.token.candidates.length > 0) {
+      if (
+        this.explore &&
+        this.token &&
+        this.token.candidates &&
+        this.token.candidates.length > 0
+      ) {
         location.href = `/${this.$l1.code}/${this.$l2.code}/explore/related/${this.token.candidates[0].id}`
       }
     },
@@ -187,7 +298,19 @@ export default {
       return tr(text)
     },
     segment(text) {
-      return text.replace(/([́ёеуюйыаоэяицкнгшщзхъфвпрлджчсмтьб])([цкнгшщзхъфвпрлджчсмтб])/gi, '$1·$2').replace(/·([цкнгшщзхъфвпрлджчсмтб])([цкнгшщзхъфвпрлджчсмтб])/gi, '$1·$2').replace(/·([цкнгшщзхъфвпрлджчсмтб])ь/gi, '$1ь').replace(/·([цкнгшщзхъфвпрлджчсмтб])·/gi, '·$1').replace(/^(.)·/, '$1').replace(/·(.)$/, '$1')
+      return text
+        .replace(
+          /([́ёеуюйыаоэяицкнгшщзхъфвпрлджчсмтьб])([цкнгшщзхъфвпрлджчсмтб])/gi,
+          '$1·$2'
+        )
+        .replace(
+          /·([цкнгшщзхъфвпрлджчсмтб])([цкнгшщзхъфвпрлджчсмтб])/gi,
+          '$1·$2'
+        )
+        .replace(/·([цкнгшщзхъфвпрлджчсмтб])ь/gi, '$1ь')
+        .replace(/·([цкнгшщзхъфвпрлджчсмтб])·/gi, '·$1')
+        .replace(/^(.)·/, '$1')
+        .replace(/·(.)$/, '$1')
       //([ёеуюйыаоэяи])
     },
     async update() {
@@ -195,7 +318,7 @@ export default {
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
       let savedWord = false
       if (this.token) {
-        for(let word of this.token.candidates) {
+        for (let word of this.token.candidates) {
           savedWord = this.$store.getters.hasSavedWord({
             l2: this.$l2.code,
             text: word.bare
@@ -205,15 +328,29 @@ export default {
         if (this.$slots.default) {
           savedWord = this.$store.getters.hasSavedWord({
             l2: this.$l2.code,
-            text: this.$slots.default && this.$slots.default[0] && this.$slots.default[0].text ? this.$slots.default[0].text.toLowerCase() : ''
+            text:
+              this.$slots.default &&
+              this.$slots.default[0] &&
+              this.$slots.default[0].text
+                ? this.$slots.default[0].text.toLowerCase()
+                : ''
           })
         }
       }
-      if (savedWord && savedWord.id && ['ja', 'zh', 'nan', 'hak'].includes(this.$l2.code)) {
+      if (
+        savedWord &&
+        savedWord.id &&
+        ['ja', 'zh', 'nan', 'hak'].includes(this.$l2.code)
+      ) {
         let word = await (await this.$dictionary).get(savedWord.id)
-        let text = this.text || (this.token && this.token.candidates.length > 0 ? this.token.candidates[0].head : undefined)
+        let text =
+          this.text ||
+          (this.token && this.token.candidates.length > 0
+            ? this.token.candidates[0].head
+            : undefined)
         if (word && word.head && word.head === text) {
-          this.savedTransliteration = word.jyutping || word.pinyin || word.kana || this.transliteration
+          this.savedTransliteration =
+            word.jyutping || word.pinyin || word.kana || this.transliteration
         }
         this.saved = word ? word : false
       } else {

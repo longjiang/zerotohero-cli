@@ -51,6 +51,9 @@ export default {
     VRuntimeTemplate
   },
   props: {
+    sticky: {
+      default: false // whether or not to show each word's level color by default (without hovering)
+    },
     speak: {
       default: false
     },
@@ -143,13 +146,13 @@ export default {
           if (typeof item === 'object') {
             let token = this.tokenized[batchId]
             if (token && typeof token === 'object') {
-              html += `<WordBlock :explore="explore" :token="tokenized[${batchId}][${index}]"/>`
+              html += `<WordBlock :sticky="${this.sticky}" :explore="explore" :token="tokenized[${batchId}][${index}]"/>`
             }
           } else {
             item = item.trim().replace(/\s+/gi, ' ')
             if (item !== '') {
               for (let word of item.trim().split(/\s+/)) {
-                html += `<WordBlock :explore="explore">${word}</WordBlock> `
+                html += `<WordBlock :sticky="${this.sticky}" :explore="explore">${word}</WordBlock> `
               }
               html = html.trim()
             }
