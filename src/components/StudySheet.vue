@@ -18,15 +18,13 @@
         $l2.scripts[0].direction === 'rtl'
     }"
   >
-    <table class="table study-sheet-table">
+    <table class="study-sheet-table">
       <tbody>
-        <tr
-          v-for="(line, index) in textLines"
-          v-bind:key="line"
-        >
+        <tr v-for="(line, index) in textLines" v-bind:key="line">
           <td class="study-sheet-td-translation">
             <span v-html="translationLines[index]" />
           </td>
+          <td></td>
           <td class="study-sheet-td-text">
             <template v-if="line.trim().length > 0">
               <span v-if="!annotated" v-html="line.trim()"></span>
@@ -118,7 +116,10 @@ export default {
       if (this.text) {
         for (let line of this.textLines) {
           let annotatedLine = await this.tokenize(line, this.batchId++)
-          let dictionaryLine = annotatedLine.replace(/WordBlock/g, 'WordBlockDictionary')
+          let dictionaryLine = annotatedLine.replace(
+            /WordBlock/g,
+            'WordBlockDictionary'
+          )
           this.annotatedLines.push(annotatedLine)
           this.dictionaryLines.push(dictionaryLine)
         }
@@ -173,4 +174,46 @@ export default {
 .study-sheet-td-text {
   min-width: 20vw;
 }
+
+ 
+.show-pinyin .study-sheet-table .word-block .word-block-pinyin,
+.show-simplified .study-sheet-table .word-block .word-block-simplified,
+.show-traditional .study-sheet-table .word-block .word-block-traditional,
+.show-definition .study-sheet-table .word-block .word-block-definition {
+  display: inline;
+}
+
+.add-pinyin .study-sheet-table .word-block .word-block-text {
+  display: inline;
+}
+
+.study-sheet-td-translation {
+  font-family: "Adobe Text Pro", serif;
+  line-height: 12px;
+  font-size: 8px;
+  color: #8FA9C1;
+  padding: 6px;
+  vertical-align: top;
+  padding-right: 21px;
+}
+
+.study-sheet-td-text {
+  font-family: "Source Han Serif SC", serif;
+  line-height: 16px;
+  font-size: 11px;
+  padding: 3px;
+  color: black;
+  vertical-align: top;
+  padding-right: 21px;
+}
+
+.study-sheet-td-definition {
+  font-family: "Adobe Text Pro", serif;
+  color: #929292;
+  font-size: 8px;
+  line-height: 12px;
+  padding: 5px;
+  vertical-align: top;
+}
+
 </style>
