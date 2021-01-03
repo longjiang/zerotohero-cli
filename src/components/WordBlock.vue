@@ -278,9 +278,6 @@ export default {
       }
     }
     this.update()
-    if (this.sticky) {
-      this.lookup()
-    }
   },
   watch: {
     savedWords() {
