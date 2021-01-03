@@ -149,27 +149,25 @@ export default {
 </script>
 
 <style lang="scss">
-.show-level-1 .study-sheet-table [data-hover-level='1'],
-.show-level-2 .study-sheet-table [data-hover-level='2'],
-.show-level-3 .study-sheet-table [data-hover-level='3'],
-.show-level-4 .study-sheet-table [data-hover-level='4'],
-.show-level-5 .study-sheet-table [data-hover-level='5'],
-.show-level-6 .study-sheet-table [data-hover-level='6'],
-.show-level-outside .study-sheet-table [data-hover-level='outside'] {
-  &.sticky:not(.seen) {
-    color: #B74900 !important;
-  }
+/* for the text column */
+.show-level-1 .study-sheet-table [data-hover-level='1'].sticky:not(.seen),
+.show-level-2 .study-sheet-table [data-hover-level='2'].sticky:not(.seen),
+.show-level-3 .study-sheet-table [data-hover-level='3'].sticky:not(.seen),
+.show-level-4 .study-sheet-table [data-hover-level='4'].sticky:not(.seen),
+.show-level-5 .study-sheet-table [data-hover-level='5'].sticky:not(.seen),
+.show-level-6 .study-sheet-table [data-hover-level='6'].sticky:not(.seen),
+.show-level-outside .study-sheet-table [data-hover-level='outside'].sticky:not(.seen):not(.common) {
+  color: #B74900 !important;
 }
 
-.show-level-1 .study-sheet-table [data-level='1'],
-.show-level-2 .study-sheet-table [data-level='2'],
-.show-level-3 .study-sheet-table [data-level='3'],
-.show-level-4 .study-sheet-table [data-level='4'],
-.show-level-5 .study-sheet-table [data-level='5'],
-.show-level-6 .study-sheet-table [data-level='6'],
-.show-level-outside .study-sheet-table [data-level='outside'] {
-  &:not(.seen) {
-    color: #B74900 !important;
-  }
+/* for the definition column */
+.show-level-1 .study-sheet-table [data-level='1']:not(.seen),
+.show-level-2 .study-sheet-table [data-level='2']:not(.seen),
+.show-level-3 .study-sheet-table [data-level='3']:not(.seen),
+.show-level-4 .study-sheet-table [data-level='4']:not(.seen),
+.show-level-5 .study-sheet-table [data-level='5']:not(.seen),
+.show-level-6 .study-sheet-table [data-level='6']:not(.seen),
+.show-level-outside .study-sheet-table [data-level='outside']:not(.seen):not(.common) {
+  color: #B74900 !important;
 }
 </style>

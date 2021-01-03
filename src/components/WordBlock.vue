@@ -11,10 +11,11 @@
       :class="{
         'word-block': true,
         sticky: sticky,
+        common: this.words && this.words.length > 0 && this.words[0].weight && this.words[0].weight > 750,
         seen: seen,
         saved: saved
       }"
-      v-bind="level"
+      v-bind="attributes"
       @mouseover="mouseover"
       @mouseout="mouseout"
     >
@@ -239,11 +240,14 @@ export default {
     }
   },
   computed: {
-    level() {
-      return {
-        ['data-hover-level']:
-          this.words && this.words.length > 0 ? this.words[0].level || 'outside' : 'outside'
+    attributes() {
+      let attributes = {}
+      if (this.words && this.words.length > 0) {
+        attributes['data-hover-level'] = this.words[0].level || 'outside'
+        if (this.words[0].rank) attributes['data-rank'] = this.words[0].rank
+        if (this.words[0].weight) attributes['data-weight'] = this.words[0].weight
       }
+      return attributes
     },
     ...mapState(['savedWords'])
   },

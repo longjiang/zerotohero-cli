@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .l2-zh .show-level-4 .word-block-dictionary[data-level='4']:not(.seen),
 .l2-zh .show-level-5 .word-block-dictionary[data-level='5']:not(.seen),
 .l2-zh .show-level-6 .word-block-dictionary[data-level='6']:not(.seen),
-.l2-zh .show-level-outside .word-block-dictionary[data-level='outside']:not(.seen) {
+.l2-zh .show-level-outside .word-block-dictionary[data-level='outside']:not(.seen):not(.common) {
   display: inline;
   color: inherit !important;
 }
@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .l2-zh .show-level-4 [data-hover-level='4'].sticky:not(.seen),
 .l2-zh .show-level-5 [data-hover-level='5'].sticky:not(.seen),
 .l2-zh .show-level-6 [data-hover-level='6'].sticky:not(.seen),
-.l2-zh .show-level-outside [data-hover-level='outside'].sticky:not(.seen) {
+.l2-zh .show-level-outside [data-hover-level='outside'].sticky:not(.seen):not(.common) {
   font-weight: bold
 }
 
@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .l2-zh [data-level='outside'],
 .l2-zh [data-hover-level='outside']:hover,
 .l2-zh [data-hover-level='outside'].saved,
-.l2-zh .show-level-outside [data-hover-level='outside'].sticky:not(.seen) {
+.l2-zh .show-level-outside [data-hover-level='outside'].sticky:not(.seen):not(.common) {
   color: #c59f94 !important;
 }
 
