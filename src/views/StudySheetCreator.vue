@@ -52,6 +52,7 @@
 
 <script>
 import StudySheet from '@/components/StudySheet'
+import SmartQuotes from 'smartquotes'
 
 export default {
   components: {
@@ -95,7 +96,7 @@ export default {
   methods: {
     generate() {
       this.genText = this.text
-      this.genTranslation = this.translation
+      this.genTranslation = SmartQuotes.string(this.translation)
       this.genKey++
     },
     setLevel(level) {
@@ -125,7 +126,7 @@ export default {
     },
     breakIntoLines() {
       this.text = this.text
-        .replace(/([。，？！：；、])/g, '$1\n')
+        .replace(/([。，？！：；、…—]+)/g, '$1\n')
         .replace(/\n”/g, '”\n')
         .replace(/\n\n+/g, '\n\n')
         .replace(/[　\t]+/g, '')

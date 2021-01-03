@@ -18,7 +18,7 @@
         $l2.scripts[0].direction === 'rtl'
     }"
   >
-    <table class="study-sheet-table">
+    <table class="study-sheet-table" id="description">
       <tbody>
         <tr v-for="(line, index) in textLines" v-bind:key="line">
           <td class="study-sheet-td-translation">
@@ -34,6 +34,7 @@
               />
             </template>
           </td>
+          <td></td>
           <td class="study-sheet-td-definition">
             <template v-if="line.trim().length > 0">
               <v-runtime-template
@@ -188,32 +189,45 @@ export default {
 }
 
 .study-sheet-td-translation {
-  font-family: "Adobe Text Pro", serif;
-  line-height: 12px;
-  font-size: 8px;
-  color: #8FA9C1;
   padding: 6px;
   vertical-align: top;
   padding-right: 21px;
+  color: #8FA9C1;
+  line-height: 1;
 }
 
 .study-sheet-td-text {
-  font-family: "Source Han Serif SC", serif;
-  line-height: 16px;
-  font-size: 11px;
   padding: 3px;
-  color: black;
   vertical-align: top;
   padding-right: 21px;
+  color: black;
+  line-height: 1.2;
 }
 
 .study-sheet-td-definition {
-  font-family: "Adobe Text Pro", serif;
-  color: #929292;
-  font-size: 8px;
-  line-height: 12px;
   padding: 5px;
   vertical-align: top;
+  color: #929292;
+  line-height: 1.75;
+}
+
+.study-sheet-td-translation span {
+  font-size: 8px;
+  font-family: "Adobe Text Pro", serif;
+}
+
+.study-sheet-td-text span {
+  font-family: "Source Han Serif SC", serif;
+  font-size: 11px;
+}
+
+.study-sheet-td-definition span {
+  font-family: "Adobe Text Pro", serif;
+  font-size: 8px;
+}
+
+.study-sheet-td-definition span .word-block-dictionary-simplified {
+  font-family: "Source Han Serif SC", serif;
 }
 
 </style>

@@ -8,14 +8,15 @@
     v-if="token && token.candidates && token.candidates.length > 0 && !seen"
     :data-level="token.candidates[0].level"
   >
-    <span
+    <a
       class="word-block-dictionary-simplified"
-      @click="cycleCandidate"
+      :href="`plecoapi://x-callback-url/s?q=${token.candidates[0].simplified}`"
       :data-level="token.candidates[0].level"
-      >{{ token.candidates[0].simplified }}</span
+      >{{ token.candidates[0].simplified }}</a
     >
     <span
       class="word-block-dictionary-pinyin"
+      @click="cycleCandidate"
       :data-level="token.candidates[0].level"
     >
       ({{ token.candidates[candidateIndex].pinyin }})
