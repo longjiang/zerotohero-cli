@@ -277,6 +277,9 @@ export default {
         this.transliteration = tr(this.text)
       }
     }
+    if (this.sticky) {
+      this.lookup()
+    }
     this.update()
   },
   watch: {

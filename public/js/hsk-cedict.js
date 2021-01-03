@@ -1,23 +1,38 @@
 const Dictionary = {
   file: '../data/hsk-cedict/hsk_cedict.csv.txt',
+  characterFile: '../data/hsk-cedict/hsk_characters.csv.txt',
   words: [],
+  characters: [],
   _maxWeight: 0,
   credit() {
     return 'The Chinese dictionary is provided by <a href="https://www.mdbg.net/chinese/dictionary?page=cedict">CC-CEDICT</a>, open-source and distribtued under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. We also added HSK information on top.'
   },
   load() {
     return new Promise(resolve => {
-      Papa.parse(this.file, {
-        download: true,
-        header: true,
-        complete: results => {
-          this.words = results.data.map(row => this.augment(row))
-          for (let row of this.words) {
-            row.rank = row.weight / this._maxWeight
+      let wordsPromise = new Promise(resolve => {
+        Papa.parse(this.file, {
+          download: true,
+          header: true,
+          complete: results => {
+            this.words = results.data.map(row => this.augment(row))
+            for (let row of this.words) {
+              row.rank = row.weight / this._maxWeight
+            }
+            resolve()
           }
-          resolve()
-        }
+        })
       })
+      let characterPromise = new Promise(resolve => {
+        Papa.parse(this.characterFile, {
+          download: true,
+          header: true,
+          complete: results => {
+            this.characters = results.data
+            resolve()
+          }
+        })
+      })
+      Promise.all([wordsPromise, characterPromise]).then(() => resolve())
     })
   },
   wordForms(word) {
@@ -38,9 +53,11 @@ const Dictionary = {
   },
   lookupByDef(text, limit = 30) {
     let preferred = this.words
-      .filter(row => row.search && row.search.startsWith(text)).sort((a, b) => b.weight - a.weight) // row.search is already in lower case
+      .filter(row => row.search && row.search.startsWith(text))
+      .sort((a, b) => b.weight - a.weight) // row.search is already in lower case
     let others = this.words
-      .filter(row => row.search && row.search.includes('/' + text)).sort((a, b) => b.weight - a.weight) // definitions are separated by '/'
+      .filter(row => row.search && row.search.includes('/' + text))
+      .sort((a, b) => b.weight - a.weight) // definitions are separated by '/'
     return preferred.concat(others).slice(0, limit)
   },
   unique(array) {
@@ -278,7 +295,7 @@ const Dictionary = {
     }
     const longest = subdict.longest(text, traditional)
     if (longest.matches.length > 0) {
-      let result = [] 
+      let result = []
       /* 
       result = [
         '我', 
@@ -312,10 +329,18 @@ const Dictionary = {
           tokens.push(item)
         }
       }
+      if (tokens[0] && tokens[0].candidates && tokens[0].candidates[0].simplified.length === 1) {
+        let character = tokens[0].candidates[0].simplified
+        let hskChar = this.lookupHSKChar(character)
+        if (hskChar) tokens[0].candidates[0].level = hskChar.hsk
+      }
       return tokens
     } else {
       return [text]
     }
+  },
+  lookupHSKChar(simplified) {
+    return this.characters.find(row => row.word === simplified)
   },
   // text = 涎[xian2]
   // text = 協|协[xie2]

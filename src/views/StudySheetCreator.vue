@@ -113,9 +113,9 @@ export default {
     get(key) {
       let saved = this.getSaved(key)
       if (saved) {
-        return saved[this.$l2.code] || localStorage.getItem(key)
+        return saved[this.$l2.code] || ''
       } else {
-        return localStorage.getItem(key)
+        return ''
       }
     },
     save(text, key) {
