@@ -237,6 +237,9 @@ const Dictionary = {
     return results
   },
   augment(row) {
+    if (row.definitions.includes('surname ') || row.definitions.startsWith('variant')) {
+      row.weight = row.weight -1
+    }
     let augmented = Object.assign(row, {
       id: `${row.traditional},${row.pinyin.replace(/ /g, '_')},${row.index}`,
       bare: row.simplified,
