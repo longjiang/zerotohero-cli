@@ -28,10 +28,7 @@
           <td class="study-sheet-td-text">
             <template v-if="line.trim().length > 0">
               <span v-if="!annotated" v-html="line.trim()"></span>
-              <v-runtime-template
-                v-else
-                :template="`<span>${annotatedLines[index]}</span>`"
-              />
+              <span v-html="annotatedLines[index]" />
             </template>
           </td>
           <td></td>
@@ -116,11 +113,9 @@ export default {
     async annotate() {
       if (this.text) {
         for (let line of this.textLines) {
-          let annotatedLine = await this.tokenize(line, this.batchId++)
-          let dictionaryLine = annotatedLine.replace(
-            /WordBlock/g,
-            'WordBlockDictionary'
-          )
+          let tokenized = await this.tokenize(line, this.batchId++)
+          let annotatedLine = tokenized.html
+          let dictionaryLine = tokenized.dictionaryHtml
           this.annotatedLines.push(annotatedLine)
           this.dictionaryLines.push(dictionaryLine)
         }
@@ -128,8 +123,10 @@ export default {
     },
     async tokenize(text, batchId) {
       let html = text
+      let dictionaryHtml = text
       if (this.$l2.continua) {
         html = ''
+        dictionaryHtml = ''
         let tokenized = await (await this.$dictionary).tokenize(text)
         this.tokenized[batchId] = tokenized
         for (let index = 0; index < this.tokenized[batchId].length; index++) {
@@ -137,12 +134,13 @@ export default {
           if (typeof item === 'object') {
             let seen = this.seen.includes(item.text)
             if (!seen) this.seen.push(item.text)
-            html += `<WordBlock :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}" />`
+            html += `<span sticky="true" :seen="${seen}" class="word-block sticky" data-hover-level="${item.candidates[0].level}" ><span class="word-block-simplified">${item.text}</span></span>`
+            dictionaryHtml += `<WordBlockDictionary :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}" />`
           } else {
             item = item.trim().replace(/\s+/gi, ' ')
             if (item !== '') {
               for (let word of item.trim().split(/\s+/)) {
-                html += `<WordBlock>${word}</WordBlock> `
+                html += `<span class="word-block"><span class="word-block-text">${word}</span></span>`
               }
               html = html.trim()
             }
@@ -161,7 +159,10 @@ export default {
           )
         }
       }
-      return html
+      return {
+        html,
+        dictionaryHtml
+      }
     }
   }
 }
