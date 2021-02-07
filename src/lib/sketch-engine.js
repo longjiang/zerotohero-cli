@@ -79,16 +79,18 @@ export default {
         )}&gramrels=1`,
         function (response) {
           let results = []
-          for (let gramrel of response.data.gramrels) {
-            if (!Array.isArray(gramrel)) {
-              results.push(gramrel)
-            } else {
-              for (let g of gramrel) {
-                results.push(g)
+          if (response.data.Gramrels) {
+            for (let gramrel of response.data.Gramrels) {
+              if (!Array.isArray(gramrel)) {
+                results.push(gramrel)
+              } else {
+                for (let g of gramrel) {
+                  results.push(g)
+                }
               }
             }
+            resolve(results)
           }
-          resolve(results)
         }
       )
     })

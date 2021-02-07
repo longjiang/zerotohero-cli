@@ -89,12 +89,14 @@ export default {
       error: false
     }
   },
-  beforeMount() {
+  async beforeMount() {
     if (this.word) {
-      SketchEngine.wsketch(this.word.simplified, response => {
+      let sketch = await SketchEngine.wsketch(
+        { term: this.word.simplified, l2: this.$l2 })
+      if (sketch) {
         this.loading = false
-        if (response.Gramrels && response.Gramrels.length > 0) {
-          this.word.sketch = response
+        if (sketch.Gramrels && sketch.Gramrels.length > 0) {
+          this.word.sketch = sketch
           this.word.sketch.Gramrels = this.word.sketch.Gramrels.sort(
             (a, b) => b.count - a.count
           )
@@ -105,7 +107,7 @@ export default {
         } else {
           this.error = true
         }
-      })
+      }
     }
   },
   updated() {
