@@ -110,11 +110,6 @@ export default {
       }
     }
   },
-  updated() {
-    $(this.$refs.pinyinButton.$el)
-      .find('.add-pinyin')
-      .click()
-  },
   methods: {
     choosePhrase() {
       this.gramrel = Helper.randomArrayItem(this.word.sketch.Gramrels)

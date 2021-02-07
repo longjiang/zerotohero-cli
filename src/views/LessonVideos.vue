@@ -2,9 +2,6 @@
   <div class="container main mt-5 mb-5">
     <div class="row">
       <div class="col-md-12 text-center">
-        <div class="jumbotron pt-4 pb-4"><p class="lead">This feature works in conjunction with our <b><a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank">HSK {{ level }} online course</a></b>.</p>
-          <a :href="`https://courses.chinesezerotohero.com/p/hsk-${level}-course`" target="_blank" class="btn btn-primary">Enroll Now</a>
-        </div>
         <h3 class="mt-5">Expansion videos for <b-dropdown
             id="dropdown-1"
             :text="levels[level]"
