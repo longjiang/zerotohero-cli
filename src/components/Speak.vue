@@ -23,8 +23,9 @@ export default {
       } else if (this.text) {
         if (this.$hasFeature('speech')) {
           var utterance = new SpeechSynthesisUtterance(this.text)
-          let speechCode = this.$l2.code === 'yue' ? 'zh-HK' : this.$l2.code
+          let speechCode = this.$l2.code === 'yue' ? 'zh-HK' : this.$l2.code === 'zh' ? 'zh-TW' : this.$l2.locales.length > 0 ? this.$l2.locales[0] : 'en'
           utterance.lang = speechCode
+          utterance.rate = 0.7
           speechSynthesis.speak(utterance)
         } else {
           window.open(`https://forvo.com/search/${this.text}/${this.$l2.code}`)
