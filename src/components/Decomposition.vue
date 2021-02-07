@@ -107,7 +107,9 @@ export default {
           } else {
             node.selector = `${selector}`
           }
-          $(node.selector).append($template)
+          if (node) {
+            $(node.selector).append($template)
+          }
         }
       })
       if (this.quiz) {
