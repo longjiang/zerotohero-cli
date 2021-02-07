@@ -84,15 +84,12 @@ export default {
         `https://www.google.com/search?q=${options.term.replace(/ /g, '+')}&lr=lang_${options.lang}&safe=active&sout=1&tbas=0&tbm=isch`
       )
       let images = []
-      for (let td of $html.find('.images_table td')) {
+      for (let img of $html.find('img').slice(1)) {
+        let url = $(img).parent().parent().attr('href')
         images.push({
-          src: $(td)
-            .find('img')
+          src: $(img)
             .attr('src'),
-          url: $(td)
-            .find('a')
-            .attr('href')
-            .replace(/^\/url\?q=/, '')
+          url: url ? url.replace('/url?q=', '') : undefined
         })
       }
       resolve(images)
