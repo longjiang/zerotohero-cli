@@ -45,7 +45,6 @@ import wordblock from '@/components/WordBlock'
 import VRuntimeTemplate from 'v-runtime-template'
 import TinySegmenter from 'tiny-segmenter'
 import MyanmarTools from 'myanmar-tools'
-import translate from 'translate'
 
 export default {
   components: {
@@ -96,8 +95,7 @@ export default {
   },
   methods: {
     async translateClick() {
-      // window.open(`https://translate.google.com/#view=home&op=translate&sl=${this.$l2.code === 'zh' ? 'zh-CN' : this.$l2.code}&tl=${this.$l1.code}&text=${encodeURIComponent(this.text)}`)
-      this.translation = await translate(this.text, {from: this.$l2.code, to: this.$l1.code, engine: 'libre'} )
+      window.open(`https://translate.google.com/#view=home&op=translate&sl=${this.$l2.code === 'zh' ? 'zh-CN' : this.$l2.code}&tl=${this.$l1.code}&text=${encodeURIComponent(this.text)}`)
     },
     // https://stackoverflow.com/questions/2550951/what-regular-expression-do-i-need-to-check-for-some-non-latin-characters
     nonLatin() {
@@ -106,11 +104,7 @@ export default {
       return nonLatin
     },
     empty() {
-      return (
-        $(this.$el)
-          .text()
-          .trim() === ''
-      )
+      return this.text.trim() === ''
     },
     fullscreenClick() {
       this.fullscreenMode = !this.fullscreenMode
