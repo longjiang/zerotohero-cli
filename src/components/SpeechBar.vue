@@ -74,7 +74,7 @@ export default {
     getVoices() {
       let voices = speechSynthesis
         .getVoices()
-        .filter(voice => voice.lang.startsWith(this.lang || this.$l2.code))
+        .filter(voice => voice.lang.startsWith(this.lang || this.$l2.code) && ! voice.name.includes('Siri'))
       this.voices = voices
     },
     setvoice(index) {
@@ -106,9 +106,9 @@ export default {
     speak(text) {
       if (this.voices.length === 0) this.getVoices()
       this.utterance = new SpeechSynthesisUtterance(text)
-      this.utterance.lang = this.lang || this.$l2.code
+      // this.utterance.lang = this.lang || this.$l2.code
       if (this.voices[this.voice]) {
-        this.utterance.voice
+        this.utterance.voice = this.voices[this.voice]
       }
       speechSynthesis.speak(this.utterance)
     },
