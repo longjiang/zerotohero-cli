@@ -22,15 +22,20 @@
               />
             </a>
             <br />
-            Learn how to use “{{ entry.simplified }}” in
+            Learn how to use <b :data-level="entry.level">“{{ entry.simplified }}”</b> in
             <b>
-              Lesson {{ entry.lesson }}
+              Unit {{ entry.lesson }}
               <span v-if="entry.hsk < 5">, Text {{ entry.dialog }}</span>
             </b>
             of our
             <a
-              href="https://courses.chinesezerotohero.com/"
+              :href="
+                `https://courses.chinesezerotohero.com/p/hsk-${
+                  entry.hsk
+                }-course`
+              "
               class="video-course"
+              :data-level="entry.level"
               >HSK {{ entry.hsk }} Video Course</a
             >
           </div>
@@ -83,15 +88,15 @@ export default {
 
 .learn-this-bar {
   padding: 1.5rem 1rem;
-  color: white !important;
   font-size: 1.2rem;
-  background: #4a4a4a;
+  background: #ccc;
   margin-top: 10rem;
   margin-bottom: 0;
 }
 
 .learn-this-bar a {
-  color: white !important;
+  font-weight: bold;
+  color: #004d81;
 }
 
 .course-cover {
@@ -99,7 +104,7 @@ export default {
   margin-bottom: 2rem;
   border-radius: 1rem;
   margin-top: -8rem;
-  max-width: 80%;
+  max-width: 20rem;
 }
 
 </style>

@@ -96,6 +96,43 @@
             ></EntryCharacters>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <WebImages
+              class="mt-5"
+              :text="entry.bare"
+              :entry="entry"
+              limit="10"
+            />
+            <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
+            <Collocations
+              class="mt-5 mb-5"
+              :word="entry"
+              :level="entry.level"
+            />
+          </div>
+        </div>
+      </div>
+      <EntryCourseAd v-if="$l2.code === 'zh'" :entry="entry" class="focus-exclude"></EntryCourseAd>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <Concordance
+              class="mt-5 mb-5"
+              :word="entry"
+              :level="entry.level"
+            />
+            <Mistakes class="mt-5 mb-5" v-if="$l2.code === 'zh'" :text="entry.simplified"></Mistakes>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <EntryRelated
+              :entry="entry"
+              class="mb-5"
+            />
+          </div>
+        </div>
         <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
           <div class="col-sm-6" v-if="$l2.code !== 'zh'">
             <Chinese
@@ -119,36 +156,8 @@
             />
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <WebImages
-              class="mt-5"
-              :text="entry.bare"
-              :entry="entry"
-              limit="10"
-            />
-            <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
-            <Collocations
-              class="mt-5 mb-5"
-              :word="entry"
-              :level="entry.level"
-            />
-            <Concordance
-              class="mt-5 mb-5"
-              :word="entry"
-              :level="entry.level"
-            />
-            <Mistakes class="mt-5 mb-5" v-if="$l2.code === 'zh'" :text="entry.simplified"></Mistakes>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <EntryRelated
-              :entry="entry"
-              class="mb-5"
-            />
-          </div>
-        </div>
+      </div>
+      <div class="container">
         <div class="row">
           <div class="col-sm-12">
             <EntryYouTube
@@ -158,8 +167,6 @@
           </div>
         </div>
       </div>
-      <EntryCourseAd v-if="$l2.code === 'zh'" :entry="entry" class="focus-exclude"></EntryCourseAd>
-      <EntryLyrics v-if="$hasFeature('music')" :entry="entry" class="focus-exclude"></EntryLyrics>
     </div>
   </div>
 </template>
