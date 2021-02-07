@@ -97,7 +97,7 @@ export default {
     async getExamples() {
       this.examples = (await (await this.$dictionary).lookupByCharacter(
         this.character.character
-      )).filter(example => example.english && example.english !== 'NULL')
+      )).filter(example => example.hsk !== 'outside' && !example.definitions[0].startsWith('surname') && !example.definitions[0].startsWith('variant') ).sort((a, b) => b.weight - a.weight)
     },
     async getPartExamples(part) {
       part.getting = true
