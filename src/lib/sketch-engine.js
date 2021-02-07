@@ -78,9 +78,10 @@ export default {
           options.l2
         )}&gramrels=1`,
         function (response) {
+          console.log(response)
           let results = []
-          if (response.data.Gramrels) {
-            for (let gramrel of response.data.Gramrels) {
+          if (response.data.gramrels) {
+            for (let gramrel of response.data.gramrels) {
               if (!Array.isArray(gramrel)) {
                 results.push(gramrel)
               } else {
@@ -96,7 +97,9 @@ export default {
     })
   },
   async collocationDescription(options) {
+    console.log('looking')
     let gramrels = await this.gramrels({ l2: options.l2 })
+    console.log(gramrels)
     let descriptions = {}
     for (let gramrel of gramrels) {
       descriptions[gramrel] = gramrel.replace('%w', '{word}')
