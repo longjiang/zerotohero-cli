@@ -12,7 +12,7 @@
             class="decomposition-before"
             v-html="Helper.highlight(rc.before, rc.before, hsk)"
           ></span>
-          <decomposition :char="rc.char"></decomposition>
+          <decomposition :char="rc.char" :quiz="true"></decomposition>
           <span
             class="decomposition-after"
             v-if="rc.after !== ''"
@@ -48,12 +48,6 @@ export default {
     $(this.$el)
       .find('.decomposition')
       .each(function() {
-        let $characters = $(this).find('.part-character')
-        let character =
-          $characters[Math.floor(Math.random() * $characters.length)]
-        $(character)
-          .parent()
-          .addClass('hide')
         $(this).click(function() {
           if ($(this).is('.decomposition')) {
             $(this).toggleClass('show-answer')

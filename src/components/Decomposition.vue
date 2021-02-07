@@ -1,5 +1,5 @@
 <template>
-  <div class="decomposition" :id="id"></div>
+  <div class="decomposition" :id="id" @click="showAnswer"></div>
 </template>
 
 <script>
@@ -59,7 +59,7 @@ const decompositionTemplate = {
 import Helper from '@/lib/helper'
 
 export default {
-  props: ['char'],
+  props: ['char', 'quiz'],
   data() {
     return {
       id: 'decomposition-' + Helper.uniqueId()
@@ -69,10 +69,15 @@ export default {
     this.drawDecomposition(this.char, '#' + this.id)
   },
   methods: {
+    showAnswer() {
+      if (this.quiz) {
+        $(`#${this.id}`).toggleClass('show-answer')
+      } 
+    },
     async drawDecomposition(char, selector) {
       const character = (await this.$hanzi).lookup(char)
       if (!character) return
-      character.walkDecompositionTree(async node => {
+      await character.walkDecompositionTree(async node => {
         if (character.isIdeographicDescCharacter(node.character)) {
           if (node.parent) {
             node.selector = `${node.parent.selector} > .description-${
@@ -105,6 +110,14 @@ export default {
           $(node.selector).append($template)
         }
       })
+      if (this.quiz) {
+        let $characters = $(selector).find('.part-character')
+        let character =
+          $characters[Math.floor(Math.random() * $characters.length)]
+        $(character)
+          .parent()
+          .addClass('hide')
+      }
     }
   }
 }
