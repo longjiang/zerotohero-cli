@@ -95,7 +95,8 @@ export default {
   },
   methods: {
     async translateClick() {
-      window.open(`https://translate.google.com/#view=home&op=translate&sl=${this.$l2.code === 'zh' ? 'zh-CN' : this.$l2.code}&tl=${this.$l1.code}&text=${encodeURIComponent(this.text)}`)
+      let text = this.$l2.continua ? this.text.replace(/ /g, '') : this.text
+      window.open(`https://translate.google.com/#view=home&op=translate&sl=${this.$l2.code === 'zh' ? 'zh-CN' : this.$l2.code}&tl=${this.$l1.code}&text=${encodeURIComponent(text)}`)
     },
     // https://stackoverflow.com/questions/2550951/what-regular-expression-do-i-need-to-check-for-some-non-latin-characters
     nonLatin() {
