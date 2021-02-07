@@ -46,7 +46,7 @@
               <br />
               <span style="color:rgb(26,148,6); font-size:12px;">Save {{ money(24) }}</span>
             </td>
-            <td class="text-center align-middle" rowspan="8">
+            <td class="text-center align-middle" rowspan="9">
               <span v-html="price(219, {sale: false})"></span>
               <br />
               <span style="color:rgb(26,148,6); font-size:12px;">Save {{ money(67) }}</span>
@@ -82,17 +82,29 @@
 
           <tr>
             <td class="text-left text-light" data-bg-level="5">
-              <a href="https://courses.chinesezerotohero.com/p/hsk-5-course">HSK 5</a>
+              <a href="https://courses.chinesezerotohero.com/p/hsk-5-course">HSK 5</a><br/>
             </td>
             <td class="text-center">
               <span v-html="price(64, {sale: false})"></span>
             </td>
-            <td class="text-center align-middle" rowspan="4">
+            <td class="text-center align-middle" rowspan="5">
               <span v-html="price(109, {sale: false})"></span>
               <br />
               <span style="color:rgb(26,148,6); font-size:12px;">Save {{ money(48) }}</span>
             </td>
           </tr>
+
+          <tr>
+            <td class="text-left text-light" data-bg-level="5">
+              <a href="https://chinesezerotohero.teachable.com/p/expansion-courses">HSK 5 Expansion Courses</a><br/>
+              <div style="font-weight: normal; margin-left: 1rem">6 comprehensible input courses for HSK 5</div>
+            </td>
+            <td class="text-center align-middle">
+              <span v-html="price(9, {sale: false})"></span> ea.<br/>
+              <span><b>FREE</b> with HSK 5</span>
+            </td>
+          </tr>
+          
           <tr>
             <td class="text-left text-light" data-bg-level="6">
               <a href="https://courses.chinesezerotohero.com/p/hsk-6-course">HSK 6</a>
@@ -101,21 +113,23 @@
               <span v-html="price(64, {sale: false})"></span>
             </td>
           </tr>
+
           <tr>
-            <td class="text-left text-light" style="background-color: #0076BA;">
-              <a href="https://chinesezerotohero.teachable.com/p/path-to-fluency">Path To Fluency</a>
+            <td class="text-left text-light" data-bg-level="6">
+              <a href="https://chinesezerotohero.teachable.com/p/expansion-courses">HSK 6 Expansion Courses</a><br/>
+              <div style="font-weight: normal; margin-left: 1rem">8 comprehensible input courses for HSK 6</div>
             </td>
-            <td class="text-center">
-              <span v-html="price(29, {sale: false})"></span><br>
-              <span><b>FREE</b> with HSK 5 or HSK 6</span>
+            <td class="text-center align-middle">
+              <span v-html="price(9, {sale: false})"></span> ea.<br/>
+              <span><b>FREE</b> with HSK 6</span>
             </td>
           </tr>
           <tr>
             <td class="text-left text-light" style="background-color: #0076BA;">
-              <a href="https://chinesezerotohero.teachable.com/p/learn-chinese-with-tv-news">Learn Chinese with TV News</a>
+              <a href="https://chinesezerotohero.teachable.com/p/path-to-fluency">Path To Fluency</a> <div style="font-weight: normal;  margin-left: 1rem">learning strategy course</div>
             </td>
             <td class="text-center">
-              <span v-html="price(9, {sale: false})"></span><br>
+              <span v-html="price(29, {sale: false})"></span><br>
               <span><b>FREE</b> with HSK 5 or HSK 6</span>
             </td>
           </tr>
