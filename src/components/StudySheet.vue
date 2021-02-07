@@ -134,14 +134,12 @@ export default {
           if (typeof item === 'object') {
             let seen = this.seen.includes(item.text)
             if (!seen) this.seen.push(item.text)
-            html += `<span sticky="true" :seen="${seen}" class="word-block sticky" data-hover-level="${item.candidates[0].level}" ><span class="word-block-simplified">${item.text}</span></span>`
+            let common = item && item.candidates && item.candidates.length > 0 && item.candidates[0].weight && item.candidates[0].weight > 750
+            html += `<span sticky="true" class="word-block sticky${seen ? ' seen' : ''}${common ? ' common' : ''}" data-hover-level="${item.candidates[0].level}" ><span class="word-block-simplified">${item.candidates[0].simplified}</span></span>`
             dictionaryHtml += `<WordBlockDictionary :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}" />`
           } else {
-            item = item.trim().replace(/\s+/gi, ' ')
             if (item !== '') {
-              for (let word of item.trim().split(/\s+/)) {
-                html += `<span class="word-block"><span class="word-block-text">${word}</span></span>`
-              }
+              html += `<span class="word-block"><span class="word-block-text">${item.replace(/ /g, '&nbsp;')}</span></span>`
               html = html.trim()
             }
           }
@@ -190,7 +188,7 @@ export default {
 }
 
 .study-sheet-td-translation {
-  padding: 6px;
+  padding: 5px;
   vertical-align: top;
   padding-right: 21px;
   color: #8FA9C1;
@@ -198,7 +196,7 @@ export default {
 }
 
 .study-sheet-td-text {
-  padding: 3px;
+  padding: 5px;
   vertical-align: top;
   padding-right: 21px;
   color: black;

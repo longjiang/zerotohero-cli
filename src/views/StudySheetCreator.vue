@@ -126,7 +126,7 @@ export default {
     },
     breakIntoLines() {
       this.text = this.text
-        .replace(/([。，？！：；、…—]+)/g, '$1\n')
+        .replace(/([。，？！：；、…]+)/g, '$1\n')
         .replace(/\n”/g, '”\n')
         .replace(/\n\n+/g, '\n\n')
         .replace(/[　\t]+/g, '')
