@@ -55,7 +55,6 @@ export default {
       )
       */
       let playlists = await YouTube.channelPlayListsByAPI(this.channelId, 3600)
-      console.log(playlists)
       if (playlists) {
         this.playlists = playlists.sort((a, b) => (a.title < b.title ? -1 : 1))
       }

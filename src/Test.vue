@@ -15,6 +15,7 @@ import YouTube from '@/lib/youtube'
 import Annotate from '@/components/Annotate'
 import SimplifyECDICT from '@/lib/simplify-ecdict'
 import SketchEngine from '@/lib/sketch-engine'
+import translate from 'translate'
 
 export default {
   components: {
@@ -34,9 +35,11 @@ export default {
       console.log(descriptions)
     }
   },
-  mounted() {
+  async mounted() {
     // this.simplifyECDICT()
-    this.testCorpInfo()
+    // this.testCorpInfo()
+    let text = await translate('Hello world', { to: 'zh', engine: 'libre'})
+    console.log(text)
   }
 }
 </script>

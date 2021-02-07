@@ -36,6 +36,7 @@
     </span>
     <slot v-if="!this.annotated"></slot>
     <v-runtime-template v-else v-for="template of annotatedSlots" :template="template" />
+    <div>{{ translation }}</div>
   </component>
 </template>
 
@@ -44,6 +45,7 @@ import wordblock from '@/components/WordBlock'
 import VRuntimeTemplate from 'v-runtime-template'
 import TinySegmenter from 'tiny-segmenter'
 import MyanmarTools from 'myanmar-tools'
+import translate from 'translate'
 
 export default {
   components: {
@@ -78,6 +80,7 @@ export default {
       annotatedSlots: [],
       annotated: false,
       translate: false,
+      translation: undefined,
       fullscreenMode: false,
       batchId: 0,
       text: '',
@@ -92,8 +95,9 @@ export default {
     }
   },
   methods: {
-    translateClick() {
-      window.open(`https://translate.google.com/#view=home&op=translate&sl=${this.$l2.code === 'zh' ? 'zh-CN' : this.$l2.code}&tl=${this.$l1.code}&text=${encodeURIComponent(this.text)}`)
+    async translateClick() {
+      // window.open(`https://translate.google.com/#view=home&op=translate&sl=${this.$l2.code === 'zh' ? 'zh-CN' : this.$l2.code}&tl=${this.$l1.code}&text=${encodeURIComponent(this.text)}`)
+      this.translation = await translate(this.text, {from: this.$l2.code, to: this.$l1.code, engine: 'libre'} )
     },
     // https://stackoverflow.com/questions/2550951/what-regular-expression-do-i-need-to-check-for-some-non-latin-characters
     nonLatin() {

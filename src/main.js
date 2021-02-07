@@ -116,7 +116,7 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
-if (location.href === '/test') {
+if (location.pathname === '/test') {
   new Vue({
     store,
     render: h => h(Test)
