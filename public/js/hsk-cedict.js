@@ -381,5 +381,8 @@ const Dictionary = {
         return text.includes(row.simplified) || text.includes(row.traditional)
       })
     )
+  },
+  listCharacters() {
+    return this.characters
   }
 }

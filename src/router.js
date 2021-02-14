@@ -233,6 +233,36 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/characters',
+      name: 'characters',
+      component: () => import('./views/Characters.vue'),
+      meta: {
+        title: 'Characters | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'Chinese characters by HSK level.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/radicals',
+      name: 'radicals',
+      component: () => import('./views/Radicals.vue'),
+      meta: {
+        title: 'Radicals | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content:
+              'Chinese character radicals.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/explore/related/:arg?',
       name: 'explore-related',
       component: () => import('./views/Related.vue'),
