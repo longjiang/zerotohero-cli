@@ -528,7 +528,7 @@ export default {
     var rows = []
     var hanzi = this
     // Filter out description characters and "？ - other elements"
-    if (hanzi.chineseOnly(radical)) {
+    if (!'⿰⿱⿲⿳⿴⿵⿶⿷⿸⿹⿺⿻？'.includes(radical)) {
       rows = hanzi._hanziData.filter(function(row) {
         return (
           row.decomposition.includes(radical) || row.character.includes(radical)

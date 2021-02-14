@@ -13,15 +13,17 @@
                   <th>Level</th>
                   <th>Character</th>
                   <th>Components</th>
+                  <th>Stroke Count</th>
                   <th>Words</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="character in characters">
                   <td>{{ character.hsk }}</td>
-                  <td>{{ character.character }}</td>
-                  <td>{{ character.decomposition ? character.decomposition.replace(/[⿰⿱⿲⿳⿴⿵⿶⿷⿸⿹⿺⿻？]/g, '') : '' }}</td>
-                  <td>{{ character.examples.join(', ') }}</td>
+                  <td>{{ character.word }}</td>
+                  <td>{{ character.radicals }}</td>
+                  <td>{{ character.strokeCount }}</td>
+                  <td>{{ character.examples.replace(/ /g, ', ') }}</td>
                 </tr>
               </tbody>
             </table>
@@ -37,16 +39,22 @@ import Helper from '@/lib/helper'
 
 export default {
   async mounted() {
-    let characters = await (await this.$dictionary).listCharacters()
-    for (let character of characters) {
-      let h = await (await this.$hanzi).lookupShallow(character.word)
-      character = Object.assign(character, h)
-      let examples = (await (await this.$dictionary).lookupByCharacter(
-        character.character
-      )).filter(example => example.hsk !== 'outside').sort((a, b) => a.hsk - b.hsk)
-      character.examples = [...new Set(examples.map(item => item.simplified))]
-    }
-    this.characters = characters
+    this.characters = await (await this.$dictionary).listCharacters()
+  },
+  methods: {
+    async buildCharactersTable() {
+      let characters = await (await this.$dictionary).listCharacters()
+      for (let character of characters) {
+        let h = await (await this.$hanzi).lookupShallow(character.word)
+        character = Object.assign(character, h)
+        let examples = (await (await this.$dictionary).lookupByCharacter(
+          character.character
+        )).filter(example => example.hsk !== 'outside').sort((a, b) => a.hsk - b.hsk)
+        character.examples = [...new Set(examples.map(item => item.simplified))]
+        character.radicals = character.decomposition ? character.decomposition.replace(/[⿰⿱⿲⿳⿴⿵⿶⿷⿸⿹⿺⿻？]/g, '') : ''
+      }
+      return characters
+    },
   },
   data() {
     return {
