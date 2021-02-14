@@ -54,6 +54,8 @@
             $route.name === 'phrase' ||
             $route.name === 'levels' ||
             $route.name === 'idioms' ||
+            $route.name === 'radicals' ||
+            $route.name === 'characters' ||
             $route.name === 'separable' ||
             $route.name === 'learn' ||
             $route.name === 'saved-words' ||
@@ -63,18 +65,32 @@
     >
       <router-link class="secondary-menu-item" :to="{ name: 'dictionary' }">
         <i class="fas fa-font"></i>
-        {{$t('Look Up Words')}}
+        {{$t('Look Up')}}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'phrase' }">
         <i class="fas fa-quote-left" />
-        {{$t('Look Up Phrases')}}
+        {{$t('Phrases')}}
       </router-link>
       <router-link
         v-if="$hasFeature('levels')"
         class="secondary-menu-item"
         :to="{ name: 'levels' }"
       >
-        <i class="fa fa-signal" />Words by Level
+        <i class="fa fa-signal" />By Level
+      </router-link>
+      <router-link
+        v-if="$hasFeature('radicals')"
+        class="secondary-menu-item"
+        :to="{ name: 'radicals' }"
+      >
+        <i class="fa fa-code-branch" />Radicals
+      </router-link>
+      <router-link
+        v-if="$hasFeature('characters')"
+        class="secondary-menu-item"
+        :to="{ name: 'characters' }"
+      >
+        <i class="fa fa-pen-alt" />Characters
       </router-link>
       <router-link v-if="$l2.code === 'zh'" class="secondary-menu-item" :to="{ name: 'idioms' }">
         <i class="fa fa-border-all" />Idioms
@@ -87,7 +103,7 @@
         class="secondary-menu-item"
         :to="{ name: 'explore-roots' }"
       >
-        <i class="fab fa-pagelines" />Roots
+        <i class="fa fa-wrench" />Builder
       </router-link>
       <router-link
         v-if="$hasFeature('explore-topics')"

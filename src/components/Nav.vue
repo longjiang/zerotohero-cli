@@ -49,6 +49,8 @@
             $route.name === 'compare' ||
             $route.name === 'phrase' ||
             $route.name === 'levels' ||
+            $route.name === 'radicals' ||
+            $route.name === 'characters' ||
             $route.name.startsWith('explore') ||
             $route.name === 'learn' ||
             $route.name === 'saved-words')
