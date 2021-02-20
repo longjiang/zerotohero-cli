@@ -12,14 +12,14 @@
       class="word-block-dictionary-simplified"
       :href="`plecoapi://x-callback-url/s?q=${token.candidates[0].simplified}`"
       :data-level="token.candidates[0].level"
-      >{{ token.candidates[0].simplified }}</a
+      >{{ token.candidates[0].head }}</a
     >
     <span
       class="word-block-dictionary-pinyin"
       @click="cycleCandidate"
       :data-level="token.candidates[0].level"
     >
-      ({{ token.candidates[candidateIndex].pinyin }})
+      /{{ token.candidates[candidateIndex].phonetic }}/
     </span>
     <span class="word-block-dictionary-definition"
       >{{
@@ -27,7 +27,7 @@
           .join('; ')
           .replace(/\[(.*?)\]/g, ' ($1)')          
           .replace(/[一-龥]+\|([一-龥]+)/g, '$1')
-      }}.
+      }}.&nbsp;
     </span>
   </span>
 </template>

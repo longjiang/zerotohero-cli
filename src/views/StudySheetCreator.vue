@@ -32,7 +32,7 @@
             Break into Lines
           </button>
           <b-dropdown id="targetHSK" :text="targetLevel ? this.levels[targetLevel] : 'Target Level'" class="mr-1">
-            <b-dropdown-item v-for="level of [1,2,3,4,5,6,7]" :value="level" @click="setLevel(level)" v-bind:key="level">{{ levels[7] }}</b-dropdown-item>
+            <b-dropdown-item v-for="level of [1,2,3,4,5,6,7]" :value="level" @click="setLevel(level)" v-bind:key="level">{{ levels[level] }}</b-dropdown-item>
           </b-dropdown>
           <button class="btn btn-primary" @click="generate">
             Generate

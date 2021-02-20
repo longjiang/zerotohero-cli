@@ -78,8 +78,6 @@ const Dictionary = {
   load(lang) {
     console.log('Loading ECDICT...')
     this.lang = lang
-    // let server = 'http://hsk-server.local:8888/'
-    // let server = 'https://server.chinesezerotohero.com/'
     let server = '/'
     this.file = `${server}data/ecdict/ecdict-simplified.csv.txt`
     this.touchstoneFile = `${server}data/ecdict/touchstone.csv.txt`
@@ -95,6 +93,10 @@ const Dictionary = {
   },
   lookup(text) {
     let word = this.words.find(word => word && word.bare.toLowerCase() === text.toLowerCase())
+    return word
+  },
+  lookupMultiple(text) {
+    let word = this.words.filter(word => word && word.bare.toLowerCase() === text.toLowerCase())
     return word
   },
   formTable() {
@@ -130,21 +132,6 @@ const Dictionary = {
       .slice(0, limit)
     return words
   },
-  // lookupFuzzy(text, limit = 30) {
-  //   text = text.toLowerCase()
-  //   let words = this.words
-  //     .filter(word => word.head && word.head.startsWith(text) || (word.level && (word.head.includes(text) || text.includes(word.head))))
-  //     .sort((a, b) => a.head.length - b.head.length)
-  //     .sort((a, b) => a.level || 8 - b.level || 8)
-  //     .slice(0, limit)
-  //   if (words.length === 0) {
-  //     words = this.words
-  //       .filter(word => text.includes(word.head))
-  //       .sort((a, b) => b.head.length - a.head.length)
-  //       .slice(0, limit)
-  //   }
-  //   return words
-  // },
   lookupFuzzy(text, limit = 30) { // text = 'abcde'
     text = text.toLowerCase()
     let words = []

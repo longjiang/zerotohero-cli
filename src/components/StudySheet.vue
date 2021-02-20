@@ -50,6 +50,7 @@
 import WordBlock from '@/components/WordBlock'
 import WordBlockDictionary from '@/components/WordBlockDictionary'
 import VRuntimeTemplate from 'v-runtime-template'
+import Helper from '@/lib/helper'
 
 export default {
   components: {
@@ -143,11 +144,44 @@ export default {
         }
       } else {
         annotatedHtml = ''
-        let words = this.splitByReg(text, /([a-zA-Z0-9]+)/gi)
+        dictionaryTemplate = ''
+        let dictionary = []
+        let segs = this.splitByReg(text, /([a-zA-Z0-9]+)/gi)
         var lemmatizer = new Lemmatizer()
-        for (let word of words) {
-          let lemmas = lemmatizer.lemmas(word)
-          annotatedHtml += `<span>${word}${lemmas.length > 0 && lemmas[0][0] !== word ? ' (' + lemmas[0][0] + ')' : '' }</span>`
+        let lemmatized = ''
+        for (let seg of segs) {
+          let word = seg.toLowerCase()
+          if (/.*([a-zA-Z0-9]+).*/.test(word)) {
+            let lemmas = lemmatizer.lemmas(word)
+            lemmas = [[word, 'inflected']].concat(lemmas)
+            dictionary.push(Helper.uniqueByValue(lemmas, 0))
+            annotatedHtml += `<span>${seg}</span>`
+            lemmatized += word
+          } else {
+            annotatedHtml += seg
+            lemmatized += seg
+          }
+        }
+        dictionary = Helper.uniqueByValue(dictionary, 0)
+        console.log(dictionary)
+        this.tokenized[batchId] = []
+        for(let entry of dictionary) {
+          for (let lemma of entry) {
+            console.log(lemma[0])
+            let candidates = await (await this.$dictionary).lookupMultiple(lemma[0])
+            if (candidates.length > 0) {
+              let token = {text: lemma[0], candidates}
+              console.log(token)
+              this.tokenized[batchId].push(token)
+              break
+            }
+          }
+        }
+        for (let index = 0; index < this.tokenized[batchId].length; index++) {
+          let token = this.tokenized[batchId][index]
+          let seen = this.seen.includes(token.text)
+          if (!seen) this.seen.push(token.text)
+          dictionaryTemplate += `<WordBlockDictionary :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}"/>`
         }
       }
       return {
