@@ -31,9 +31,8 @@
           <button class="btn btn-secondary mr-1" @click="breakIntoLines">
             Break into Lines
           </button>
-          <b-dropdown id="targetHSK" :text="targetLevel ? targetLevel === 7 ? 'Outside HSK' : `HSK ${targetLevel}` : 'Target Level'" class="mr-1">
-            <b-dropdown-item v-for="level of [1,2,3,4,5,6]" :value="level" @click="setLevel(level)" v-bind:key="level">HSK {{ level }}</b-dropdown-item>
-            <b-dropdown-item @click="setLevel(7)">Outside HSK</b-dropdown-item>
+          <b-dropdown id="targetHSK" :text="targetLevel ? this.levels[targetLevel] : 'Target Level'" class="mr-1">
+            <b-dropdown-item v-for="level of [1,2,3,4,5,6,7]" :value="level" @click="setLevel(level)" v-bind:key="level">{{ levels[7] }}</b-dropdown-item>
           </b-dropdown>
           <button class="btn btn-primary" @click="generate">
             Generate
@@ -53,6 +52,7 @@
 <script>
 import StudySheet from '@/components/StudySheet'
 import SmartQuotes from 'smartquotes'
+import Helper from '@/lib/helper'
 
 export default {
   components: {
@@ -65,7 +65,8 @@ export default {
       targetLevel: 1,
       genText: '',
       genTranslation: '',
-      genKey: 0
+      genKey: 0,
+      levels: Helper.levels(this.$l2)
     }
   },
   watch: {
