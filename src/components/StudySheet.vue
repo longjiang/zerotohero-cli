@@ -142,12 +142,13 @@ export default {
           }
         }
       } else {
+        annotatedHtml = ''
         let words = this.splitByReg(text, /([a-zA-Z0-9]+)/gi)
         var lemmatizer = new Lemmatizer()
         for (let word of words) {
-          console.log(lemmatizer.lemmas(word))
+          let lemmas = lemmatizer.lemmas(word)
+          annotatedHtml += `<span>${word}${lemmas.length > 0 && lemmas[0][0] !== word ? ' (' + lemmas[0][0] + ')' : '' }</span>`
         }
-        annotatedHtml = words.join(' | ')
       }
       return {
         annotatedHtml,
