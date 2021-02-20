@@ -96,7 +96,7 @@ export default {
   },
   methods: {
     generate() {
-      this.genText = this.text
+      this.genText = SmartQuotes.string(this.text)
       this.genTranslation = SmartQuotes.string(this.translation)
       this.genKey++
     },
