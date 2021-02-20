@@ -50,7 +50,8 @@
     "vue-observe-visibility": "^0.4.4",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1",
-    "wikimedia-commons-file-path": "^1.2.0"
+    "wikimedia-commons-file-path": "^1.2.0",
+    "wordlevel": "^1.0.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.10.0",
