@@ -79,6 +79,7 @@ export default {
       dictionaryTemplateLines: [],
       batchId: 0,
       tokenized: [],
+      phrases: [],
       seen: [],
       reject: ['m', 's', 't', 'll', 'd']
     }
@@ -187,7 +188,16 @@ export default {
             annotatedHtml += `<span>${item}</span>`
           }
         }
-        this.tokenized[batchId]
+        let phrases = await (await this.$dictionary).findPhrases(text)
+        this.phrases[batchId] = phrases
+        for (let index = 0; index < this.phrases[batchId].length; index++) {
+          let phrase = this.phrases[batchId][index]
+          console.log(phrase)
+          let seen = this.seen.includes(phrase.word)
+          if (!seen) this.seen.push(phrase.word)
+          dictionaryTemplate += `<WordBlockDictionary :sticky="true" :token="{text: phrases[${batchId}][${index}].word, candidates: [phrases[${batchId}][${index}]]}" :seen="${seen}"/>`
+        }
+        console.log(dictionaryTemplate)
       }
       return {
         annotatedHtml: annotatedHtml.replace(/<span> <\/span>/g, ' '),

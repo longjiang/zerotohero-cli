@@ -27,6 +27,7 @@ const Dictionary = {
         download: true,
         header: true,
         complete: results => {
+          // this.f(results)
           for (let index in results.data) {
             let row = results.data[index]
             this.words.push(this.augment(row))
@@ -36,6 +37,28 @@ const Dictionary = {
         }
       })
     })
+  },
+  f(results) {
+    let words = results.data.filter(row => {
+      return (row.phonetic.length > 0 && row.frq > 0)
+    }).sort((a, b) => b.word.length - a.word.length)
+    let csv = Papa.unparse(words)
+    console.log(csv)
+  },
+  /* Returns the longest word in the dictionary that is inside `text` */
+  longest(text) {
+    text = text.toLowerCase()
+    return this.words.find(row => text.includes(row.word.toLowerCase()))
+  },
+  findPhrases(text) {
+    text = text.toLowerCase()
+    let phrases = []
+    for (let row of this.words.filter(row => row.word.includes(' '))) {
+      if (text.includes(row.word.toLowerCase())) {
+        phrases.push(row)
+      }
+    }
+    return phrases
   },
   loadTouchstone() {
     console.log('Loading Touchtone...')
@@ -74,7 +97,7 @@ const Dictionary = {
       accented: row.word,
       head: row.word,
       pronunciation: row.phonetic,
-      definitions: row.translation.split('\\n'),
+      definitions: row.translation ? row.translation.split('\\n') : [],
       pos: row.pos,
       extra: row
     }
@@ -90,9 +113,27 @@ const Dictionary = {
       word.id = index
     }
   },
+  findRank(word) {
+    return this.frequency.indexOf(word.toLowerCase())
+  },
   addFrequencyToWords() {
     for (let word of this.words) {
-      let rank = this.frequency.indexOf(word.word.toLowerCase())
+      let rank = -1
+      if (word.word.includes(' ')) {
+        let ranks = []
+        for (let part of word.word.split(' ')) {
+          let partRank = this.findRank(part)
+          if (partRank === -1) {
+            rank = -1
+            break
+          } else {
+            ranks.push(partRank)
+          }
+        }
+        rank = Math.max(...ranks)
+      } else {
+        rank = this.findRank(word.word)
+      }
       word.rank = rank !== -1 ? rank : this.frequency.length
       word.level = this.levels[7]
       if (word.rank < 8000) {
@@ -119,7 +160,7 @@ const Dictionary = {
     console.log('Loading ECDICT...')
     this.lang = lang
     let server = '/'
-    this.file = `${server}data/ecdict/ecdict-simplified.csv.txt`
+    this.file = `${server}data/ecdict/ecdict-longer.csv.txt`
     this.touchstoneFile = `${server}data/ecdict/touchstone.csv.txt`
     this.frequencyFile = `${server}data/ecdict/frequency.csv.txt`
     return new Promise(async resolve => {
