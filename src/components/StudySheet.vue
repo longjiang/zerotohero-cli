@@ -79,7 +79,8 @@ export default {
       dictionaryTemplateLines: [],
       batchId: 0,
       tokenized: [],
-      seen: []
+      seen: [],
+      reject: ['m', 's', 't', 'll', 'd']
     }
   },
   computed: {
@@ -150,8 +151,8 @@ export default {
         let segs = this.splitByReg(text, /([a-zA-Z0-9]+)/gi)
         var lemmatizer = new Lemmatizer()
         for (let seg of segs) {
-          if (/.*([a-zA-Z0-9]+).*/.test(seg)) {
-            let word = seg.toLowerCase()
+          let word = seg.toLowerCase()
+          if (/.*([a-z0-9]+).*/.test(word) && !this.reject.includes(word)) {
             let lemmas = lemmatizer.lemmas(word)
             lemmas = [[word, 'inflected']].concat(lemmas)
             let found = false
@@ -177,9 +178,10 @@ export default {
         for (let index = 0; index < this.tokenized[batchId].length; index++) {
           let item = this.tokenized[batchId][index]
           if (typeof item === 'object') {
-            let seen = this.seen.includes(item.text)
-            if (!seen) this.seen.push(item.text)
-            annotatedHtml += `<span data-level="${this.tokenized[batchId][index].candidates[0].level}">${this.tokenized[batchId][index].text}</span>`
+            let text = item.text.toLowerCase()
+            let seen = this.seen.includes(text)
+            if (!seen) this.seen.push(text)
+            annotatedHtml += `<span data-level="${this.tokenized[batchId][index].candidates[0].level}" class="word-block sticky${seen ? ' seen' : ''}">${this.tokenized[batchId][index].text}</span>`
             dictionaryTemplate += `<WordBlockDictionary :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}"/>`
           } else {
             annotatedHtml += `<span>${item}</span>`
@@ -188,12 +190,12 @@ export default {
         this.tokenized[batchId]
       }
       return {
-        annotatedHtml,
+        annotatedHtml: annotatedHtml.replace(/<span> <\/span>/g, ' '),
         dictionaryTemplate
       }
     },
     splitByReg(text, reg) {
-      let words = text.replace(reg, `!!!BREAKWORKD!!!$1!!!BREAKWORKD!!!`).replace(/^!!!BREAKWORKD!!!/, '').replace(/!!!BREAKWORKD!!!$/, '')
+      let words = text.replace(reg, '!!!BREAKWORKD!!!$1!!!BREAKWORKD!!!').replace(/^!!!BREAKWORKD!!!/, '').replace(/!!!BREAKWORKD!!!$/, '')
       return words.split('!!!BREAKWORKD!!!')
     }
   }
@@ -201,66 +203,5 @@ export default {
 </script>
 
 <style lang="scss">
-.study-sheet-table {
-  position: relative;
-}
-.study-sheet-td-translation,
-.study-sheet-td-text {
-  min-width: 20vw;
-}
-
- 
-.show-pinyin .study-sheet-table .word-block .word-block-pinyin,
-.show-simplified .study-sheet-table .word-block .word-block-simplified,
-.show-traditional .study-sheet-table .word-block .word-block-traditional,
-.show-definition .study-sheet-table .word-block .word-block-definition {
-  display: inline;
-}
-
-.add-pinyin .study-sheet-table .word-block .word-block-text {
-  display: inline;
-}
-
-.study-sheet-td-translation {
-  padding: 5px;
-  vertical-align: top;
-  padding-right: 21px;
-  color: #8FA9C1;
-  line-height: 1;
-}
-
-.study-sheet-td-text {
-  padding: 5px;
-  vertical-align: top;
-  padding-right: 21px;
-  color: black;
-  line-height: 1.2;
-}
-
-.study-sheet-td-definition {
-  padding: 5px;
-  vertical-align: top;
-  color: #929292;
-  line-height: 1.75;
-}
-
-.study-sheet-td-translation span {
-  font-size: 8px;
-  font-family: "Adobe Text Pro", serif;
-}
-
-.study-sheet-td-text span {
-  font-family: "Source Han Serif SC", serif;
-  font-size: 11px;
-}
-
-.study-sheet-td-definition span {
-  font-family: "Adobe Text Pro", serif;
-  font-size: 8px;
-}
-
-.study-sheet-td-definition span .word-block-dictionary-simplified {
-  font-family: "Source Han Serif SC", serif;
-}
 
 </style>

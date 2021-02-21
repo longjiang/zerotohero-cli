@@ -10,12 +10,12 @@
   >
     <a
       class="word-block-dictionary-simplified"
-      :href="`plecoapi://x-callback-url/s?q=${token.candidates[0].simplified}`"
+      :href="this.$l2.code === 'zh' ? `plecoapi://x-callback-url/s?q=${token.candidates[0].simplified}` : undefined"
       :data-level="token.candidates[0].level"
       >{{ token.candidates[0].head }}</a
     >
     <span
-      class="word-block-dictionary-pinyin"
+      class="word-block-dictionary-phonetic"
       @click="cycleCandidate"
       :data-level="token.candidates[0].level"
       v-if="token.candidates[candidateIndex].phonetic"
