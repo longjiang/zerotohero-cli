@@ -146,6 +146,7 @@ export default {
         annotatedHtml = ''
         dictionaryTemplate = ''
         let dictionary = []
+        text = text.normalize('NFD').replace(/[\u0300-\u036f]/g, '') // strip accents e.g. résumé -> resume
         let segs = this.splitByReg(text, /([a-zA-Z0-9]+)/gi)
         var lemmatizer = new Lemmatizer()
         let lemmatized = ''

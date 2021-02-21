@@ -59,9 +59,9 @@ const Dictionary = {
     return new Promise(resolve => {
       Papa.parse(this.frequencyFile, {
         download: true,
-        header: false,
+        header: true,
         complete: results => {
-          this.frequency = results.data.map(row => row[0])
+          this.frequency = results.data.map(row => row.word)
           resolve()
         }
       })
@@ -92,8 +92,8 @@ const Dictionary = {
   },
   addFrequencyToWords() {
     for (let word of this.words) {
-      let rank = this.frequency.indexOf(word.word)
-      word.rank = rank ? rank : this.frequency.length
+      let rank = this.frequency.indexOf(word.word.toLowerCase())
+      word.rank = rank !== -1 ? rank : this.frequency.length
       word.level = this.levels[7]
       if (word.rank < 8000) {
         word.level = this.levels[6]
