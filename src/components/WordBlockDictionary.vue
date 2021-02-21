@@ -18,11 +18,12 @@
       class="word-block-dictionary-pinyin"
       @click="cycleCandidate"
       :data-level="token.candidates[0].level"
+      v-if="token.candidates[candidateIndex].phonetic"
     >
       /{{ token.candidates[candidateIndex].phonetic }}/
     </span>
     <span class="word-block-dictionary-definition"
-      >{{
+      > {{
         token.candidates[candidateIndex].definitions.filter(definition => !definition.startsWith('CL'))
           .join('; ')
           .replace(/\[(.*?)\]/g, ' ($1)')          

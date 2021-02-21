@@ -2,7 +2,9 @@ const Dictionary = {
   name: 'ecdict',
   lang: undefined,
   file: undefined,
+  frequencyFile: undefined,
   words: [],
+  frequency: [],
   index: {},
   cache: {},
   tables: [],
@@ -52,6 +54,19 @@ const Dictionary = {
       })
     })
   },
+  loadFrequency() {
+    console.log('Loading word frequency list...')
+    return new Promise(resolve => {
+      Papa.parse(this.frequencyFile, {
+        download: true,
+        header: false,
+        complete: results => {
+          this.frequency = results.data.map(row => row[0])
+          resolve()
+        }
+      })
+    })
+  },
   augment(row, id) {
     let word = {
       id: id,
@@ -75,16 +90,43 @@ const Dictionary = {
       word.id = index
     }
   },
+  addFrequencyToWords() {
+    for (let word of this.words) {
+      let rank = this.frequency.indexOf(word.word)
+      word.rank = rank ? rank : this.frequency.length
+      word.level = this.levels[7]
+      if (word.rank < 8000) {
+        word.level = this.levels[6]
+      }
+      if (word.rank < 4000) {
+        word.level = this.levels[5]
+      }
+      if (word.rank < 2000) {
+        word.level = this.levels[4]
+      }
+      if (word.rank < 1000) {
+        word.level = this.levels[3]
+      }
+      if (word.rank < 500) {
+        word.level = this.levels[2]
+      }
+      if (word.rank < 250) {
+        word.level = this.levels[1]
+      }
+    }
+  },
   load(lang) {
     console.log('Loading ECDICT...')
     this.lang = lang
     let server = '/'
     this.file = `${server}data/ecdict/ecdict-simplified.csv.txt`
     this.touchstoneFile = `${server}data/ecdict/touchstone.csv.txt`
+    this.frequencyFile = `${server}data/ecdict/frequency.csv.txt`
     return new Promise(async resolve => {
-      let promises = [this.loadTouchstone(), this.loadWords()]
+      let promises = [this.loadWords(), this.loadFrequency()]
       await Promise.all(promises)
       this.addIdToWords()
+      this.addFrequencyToWords()
       resolve(this)
     })
   },
