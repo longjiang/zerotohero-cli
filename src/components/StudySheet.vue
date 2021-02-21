@@ -145,45 +145,47 @@ export default {
       } else {
         annotatedHtml = ''
         dictionaryTemplate = ''
-        let dictionary = []
         text = text.normalize('NFD').replace(/[\u0300-\u036f]/g, '') // strip accents e.g. résumé -> resume
+        this.tokenized[batchId] = []
         let segs = this.splitByReg(text, /([a-zA-Z0-9]+)/gi)
         var lemmatizer = new Lemmatizer()
-        let lemmatized = ''
         for (let seg of segs) {
-          let word = seg.toLowerCase()
-          if (/.*([a-zA-Z0-9]+).*/.test(word)) {
+          if (/.*([a-zA-Z0-9]+).*/.test(seg)) {
+            let word = seg.toLowerCase()
             let lemmas = lemmatizer.lemmas(word)
             lemmas = [[word, 'inflected']].concat(lemmas)
-            dictionary.push(Helper.uniqueByValue(lemmas, 0))
-            annotatedHtml += `<span>${seg}</span>`
-            lemmatized += word
-          } else {
-            annotatedHtml += seg
-            lemmatized += seg
-          }
-        }
-        dictionary = Helper.uniqueByValue(dictionary, 0)
-        console.log(dictionary)
-        this.tokenized[batchId] = []
-        for(let entry of dictionary) {
-          for (let lemma of entry) {
-            console.log(lemma[0])
-            let candidates = await (await this.$dictionary).lookupMultiple(lemma[0])
-            if (candidates.length > 0) {
-              let token = {text: lemma[0], candidates}
-              console.log(token)
-              this.tokenized[batchId].push(token)
-              break
+            let found = false
+            for (let lemma of lemmas) {
+              let candidates = await (await this.$dictionary).lookupMultiple(lemma[0])
+              if (candidates.length > 0) {
+                let token = {
+                  text: seg,
+                  candidates
+                }
+                this.tokenized[batchId].push(token)
+                found = true
+                break
+              }
             }
+            if (!found) {
+              this.tokenized[batchId].push(seg)
+            }
+          } else {
+            this.tokenized[batchId].push(seg)
           }
         }
         for (let index = 0; index < this.tokenized[batchId].length; index++) {
-          let token = this.tokenized[batchId][index]
-          let seen = this.seen.includes(token.text)
-          if (!seen) this.seen.push(token.text)
-          dictionaryTemplate += `<WordBlockDictionary :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}"/>`
+          let item = this.tokenized[batchId][index]
+          if (typeof item === 'object') {
+            let seen = this.seen.includes(item.text)
+            if (!seen) this.seen.push(item.text)
+            annotatedHtml += `<span data-level="${this.tokenized[batchId][index].candidates[0].level}">${this.tokenized[batchId][index].text}</span>`
+            dictionaryTemplate += `<WordBlockDictionary :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}"/>`
+          } else {
+            annotatedHtml += `<span>${item}</span>`
+          }
         }
+        this.tokenized[batchId]
       }
       return {
         annotatedHtml,
