@@ -7,10 +7,11 @@
     }"
     v-if="token && token.candidates && token.candidates.length > 0 && !seen"
     :data-level="token.candidates[0].level"
+    :data-rank="token.candidates[0].rank"
   >
     <a
       class="word-block-dictionary-simplified"
-      :href="this.$l2.code === 'zh' ? `plecoapi://x-callback-url/s?q=${token.candidates[0].simplified}` : undefined"
+      :href="this.$l2.code === 'zh' ? `plecoapi://x-callback-url/s?q=${token.candidates[0].simplified}` : this.$l2.code === 'en' ? `eudic://dict/${token.candidates[0].head}?jumpback=launch:` : undefined"
       :data-level="token.candidates[0].level"
       >{{ token.candidates[0].head }}</a
     >
@@ -25,10 +26,10 @@
     <span class="word-block-dictionary-definition"
       > {{
         token.candidates[candidateIndex].definitions.filter(definition => !definition.startsWith('CL'))
-          .join('; ')
-          .replace(/\[(.*?)\]/g, ' ($1)')          
+          .join(this.$l1.code === 'zh'? '；' : '; ')
+          .replace(/\[(.*?)\]/g, ' ($1)')
           .replace(/[一-龥]+\|([一-龥]+)/g, '$1')
-      }}.&nbsp;
+      }}{{ this.$l1.code === 'zh'? '。' : '. '}}
     </span>
   </span>
 </template>

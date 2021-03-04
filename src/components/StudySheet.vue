@@ -81,7 +81,7 @@ export default {
       tokenized: [],
       phrases: [],
       seen: [],
-      reject: ['m', 's', 't', 'll', 'd']
+      reject: ['m', 's', 't', 'll', 'd', 're', 'ain', 'don']
     }
   },
   computed: {
@@ -139,7 +139,7 @@ export default {
             dictionaryTemplate += `<WordBlockDictionary :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}" />`
           } else {
             if (item !== '') {
-              annotatedHtml += `<span class="word-block"><span class="word-block-text">${item.replace(/ /g, '&nbsp;')}</span></span>`
+              annotatedHtml += `<span class="word-block"><span class="word-block-text">${item}</span></span>`
               annotatedHtml = annotatedHtml.trim()
             }
           }
@@ -192,12 +192,10 @@ export default {
         this.phrases[batchId] = phrases
         for (let index = 0; index < this.phrases[batchId].length; index++) {
           let phrase = this.phrases[batchId][index]
-          console.log(phrase)
           let seen = this.seen.includes(phrase.word)
           if (!seen) this.seen.push(phrase.word)
           dictionaryTemplate += `<WordBlockDictionary :sticky="true" :token="{text: phrases[${batchId}][${index}].word, candidates: [phrases[${batchId}][${index}]]}" :seen="${seen}"/>`
         }
-        console.log(dictionaryTemplate)
       }
       return {
         annotatedHtml: annotatedHtml.replace(/<span> <\/span>/g, ' '),

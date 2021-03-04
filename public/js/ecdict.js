@@ -17,8 +17,23 @@ const Dictionary = {
     6: 'C1',
     7: 'C2'
   },
-  credit() {
-    return '英汉词典由<a href="https://github.com/skywind3000/ECDICT">ECDICT</a>提供, 开源并以<a href="https://github.com/skywind3000/ECDICT/blob/master/LICENSE">MIT License</a>发行。'
+  load(lang) {
+    console.log('Loading ECDICT...')
+    this.lang = lang
+    let server = '/'
+    this.file = `${server}data/ecdict/ecdict-longer-ranked.csv.txt`
+    this.touchstoneFile = `${server}data/ecdict/touchstone.csv.txt`
+    this.frequencyFile = `${server}data/ecdict/frequency.csv.txt`
+    return new Promise(async resolve => {
+      let promises = [this.loadWords(), this.loadFrequency()]
+      await Promise.all(promises)
+      this.addIdToWords()
+      // this.addFrequencyToWords()
+      this.addFrequencyToPhrases()
+      this.assignLevels()
+      // console.log(Papa.unparse(this.words))
+      resolve(this)
+    })
   },
   loadWords() {
     console.log('Loading words...')
@@ -30,13 +45,94 @@ const Dictionary = {
           // this.f(results)
           for (let index in results.data) {
             let row = results.data[index]
-            this.words.push(this.augment(row))
+            let word = row
+            word = this.augment(row)
+            this.words.push(word)
           }
           console.log('Words loaded.')
           resolve()
         }
       })
     })
+  },
+  loadFrequency() {
+    console.log('Loading word frequency list...')
+    return new Promise(resolve => {
+      Papa.parse(this.frequencyFile, {
+        download: true,
+        header: true,
+        complete: results => {
+          this.frequency = results.data.map(row => row.word)
+          resolve()
+        }
+      })
+    })
+  },
+  addIdToWords() {
+    for (let index in this.words) {
+      let word = this.words[index]
+      word.id = index
+    }
+  },
+  addFrequencyToWords() {
+    console.log('Adding frequency to words')
+    for (let word of this.words) {
+      if (!word.word.includes(' ')) {
+        let rank = -1
+        rank = this.findRank(word.word)
+        word.rank = rank !== -1 ? rank : this.frequency.length
+      }
+    }
+  },
+  addFrequencyToPhrases() {
+    console.log('adding frequency to phrases')
+    for (let word of this.words.filter(word => word.word.includes(' ') || word.word.includes('-'))) {
+      if (word.word.includes(' ') || word.word.includes('-')) {
+        let ranks = []
+        for (let part of word.word.split(/[ -]/g)) {
+          let partRank = this.findRank(part)
+          if (partRank === -1) {
+            ranks.push(this.frequency.length)
+            break
+          } else {
+            ranks.push(partRank)
+          }
+        }
+        word.rank = Math.pow(Math.max(...ranks), 1.5)
+      }
+    }
+  },
+  assignLevels() {
+    let c1 = 10000
+    let b2 = c1 / 2
+    let b1 = c1 / 2 / 2
+    let a2 = c1 / 2 / 2 / 2
+    let a1 = c1 / 2 / 2 / 2 / 2
+    let zero = c1 / 2 / 2 / 2 / 2 / 2
+    for (let word of this.words) {
+      word.level = this.levels[7]
+      if (word.rank < c1) {
+        word.level = this.levels[6]
+      }
+      if (word.rank < b2) {
+        word.level = this.levels[5]
+      }
+      if (word.rank < b1) {
+        word.level = this.levels[4]
+      }
+      if (word.rank < a2) {
+        word.level = this.levels[3]
+      }
+      if (word.rank < a1) {
+        word.level = this.levels[2]
+      }
+      if (word.rank < zero) {
+        word.level = this.levels[1]
+      }
+    }
+  },
+  credit() {
+    return '英汉词典由<a href="https://github.com/skywind3000/ECDICT">ECDICT</a>提供, 开源并以<a href="https://github.com/skywind3000/ECDICT/blob/master/LICENSE">MIT License</a>发行。'
   },
   f(results) {
     let words = results.data.filter(row => {
@@ -77,19 +173,6 @@ const Dictionary = {
       })
     })
   },
-  loadFrequency() {
-    console.log('Loading word frequency list...')
-    return new Promise(resolve => {
-      Papa.parse(this.frequencyFile, {
-        download: true,
-        header: true,
-        complete: results => {
-          this.frequency = results.data.map(row => row.word)
-          resolve()
-        }
-      })
-    })
-  },
   augment(row, id) {
     let word = {
       id: id,
@@ -107,69 +190,8 @@ const Dictionary = {
     }
     return Object.assign(row, word)
   },
-  addIdToWords() {
-    for (let index in this.words) {
-      let word = this.words[index]
-      word.id = index
-    }
-  },
   findRank(word) {
     return this.frequency.indexOf(word.toLowerCase())
-  },
-  addFrequencyToWords() {
-    for (let word of this.words) {
-      let rank = -1
-      if (word.word.includes(' ')) {
-        let ranks = []
-        for (let part of word.word.split(' ')) {
-          let partRank = this.findRank(part)
-          if (partRank === -1) {
-            rank = -1
-            break
-          } else {
-            ranks.push(partRank)
-          }
-        }
-        rank = Math.max(...ranks)
-      } else {
-        rank = this.findRank(word.word)
-      }
-      word.rank = rank !== -1 ? rank : this.frequency.length
-      word.level = this.levels[7]
-      if (word.rank < 8000) {
-        word.level = this.levels[6]
-      }
-      if (word.rank < 4000) {
-        word.level = this.levels[5]
-      }
-      if (word.rank < 2000) {
-        word.level = this.levels[4]
-      }
-      if (word.rank < 1000) {
-        word.level = this.levels[3]
-      }
-      if (word.rank < 500) {
-        word.level = this.levels[2]
-      }
-      if (word.rank < 250) {
-        word.level = this.levels[1]
-      }
-    }
-  },
-  load(lang) {
-    console.log('Loading ECDICT...')
-    this.lang = lang
-    let server = '/'
-    this.file = `${server}data/ecdict/ecdict-longer.csv.txt`
-    this.touchstoneFile = `${server}data/ecdict/touchstone.csv.txt`
-    this.frequencyFile = `${server}data/ecdict/frequency.csv.txt`
-    return new Promise(async resolve => {
-      let promises = [this.loadWords(), this.loadFrequency()]
-      await Promise.all(promises)
-      this.addIdToWords()
-      this.addFrequencyToWords()
-      resolve(this)
-    })
   },
   get(id) {
     return this.words[id]

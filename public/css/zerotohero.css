@@ -716,18 +716,18 @@ ul.collapse-10.collapsed li:nth-child(-n+10) {
 }
 
 .study-sheet-td-translation {
-  padding: 5px;
+  padding: 4px;
   vertical-align: top;
   padding-right: 21px;
   color: #8FA9C1;
-  line-height: 1;
+  line-height: 14px;
 }
 
 .study-sheet-table .study-sheet-td-text {
-  padding: 5px;
+  padding: 8px;
   vertical-align: top;
   padding-right: 21px;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 .study-sheet-table .study-sheet-td-text span {
@@ -735,9 +735,9 @@ ul.collapse-10.collapsed li:nth-child(-n+10) {
 }
 
 .study-sheet-td-definition {
-  padding: 5px;
+  padding: 4px;
   vertical-align: top;
-  line-height: 1.75;
+  line-height: 14px;
 }
 
 
