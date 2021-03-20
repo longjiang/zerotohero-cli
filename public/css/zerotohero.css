@@ -825,6 +825,6 @@ ul.collapse-10.collapsed li:nth-child(-n+10) {
 .show-level-4 .study-sheet-table [data-level='B1']:not(.seen),
 .show-level-5 .study-sheet-table [data-level='B2']:not(.seen),
 .show-level-6 .study-sheet-table [data-level='C1']:not(.seen),
-.show-level-outside .study-sheet-table [data-level='C2']:not(.seen):not(.common) {
+.show-level-outside .study-sheet-table [data-level='C2']:not(.seen):not(.common):not(.low-rank) {
   color: #B74900 !important;
 }

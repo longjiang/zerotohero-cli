@@ -28,12 +28,10 @@
             :placeholder="$t('Paste {l2} text here', { l2: $l2.name })"
           ></textarea
           ><br />
-          <button class="btn btn-secondary mr-1" @click="breakIntoLines">
-            Break into Lines
-          </button>
           <b-dropdown id="targetHSK" :text="targetLevel ? this.levels[targetLevel] : 'Target Level'" class="mr-1">
             <b-dropdown-item v-for="level of [1,2,3,4,5,6,7]" :value="level" @click="setLevel(level)" v-bind:key="level">{{ levels[level] }}</b-dropdown-item>
           </b-dropdown>
+          <b-form-input v-if="targetLevel === 7" id="minRankPercentage" v-model="minRankPercentage" type="range" min="0" max="1" step="0.01" class="rank-slider mr-2"></b-form-input>
           <button class="btn btn-primary" @click="generate">
             Generate
           </button>
@@ -66,6 +64,7 @@ export default {
       genText: '',
       genTranslation: '',
       genKey: 0,
+      minRankPercentage: 0,
       levels: Helper.levels(this.$l2)
     }
   },
@@ -78,6 +77,18 @@ export default {
     },
     targetLevel() {
       this.save(this.targetLevel, 'zthStudySheetTargetLevel')
+    },
+    async minRankPercentage() {
+      let maxRank = await (await this.$dictionary).maxRank()
+      let minRankPercentage = this.minRankPercentage
+      $('.word-block-dictionary, .word-block').each(function() {
+        // console.log($(this).attr('data-rank'))
+        if ($(this).attr('data-rank') < minRankPercentage * maxRank) {
+          $(this).addClass('low-rank')
+        } else {
+          $(this).removeClass('low-rank')
+        }
+      })
     }
   },
   computed: {
@@ -151,4 +162,11 @@ export default {
 </script>
 
 <style lang="scss">
+.rank-slider {
+  display: inline-block;
+  width: 10rem;
+}
+.word-block-dictionary.low-rank {
+  display: none !important;
+}
 </style>

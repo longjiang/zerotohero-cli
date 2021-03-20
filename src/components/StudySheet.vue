@@ -139,7 +139,7 @@ export default {
             dictionaryTemplate += `<WordBlockDictionary :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}" />`
           } else {
             if (item !== '') {
-              annotatedHtml += `<span class="word-block"><span class="word-block-text">${item}</span></span>`
+              annotatedHtml += `<span class="word-block""><span class="word-block-text">${item}</span></span>`
               annotatedHtml = annotatedHtml.trim()
             }
           }
@@ -182,7 +182,7 @@ export default {
             let text = item.text.toLowerCase()
             let seen = this.seen.includes(text)
             if (!seen) this.seen.push(text)
-            annotatedHtml += `<span data-level="${this.tokenized[batchId][index].candidates[0].level}" class="word-block sticky${seen ? ' seen' : ''}">${this.tokenized[batchId][index].text}</span>`
+            annotatedHtml += `<span data-level="${this.tokenized[batchId][index].candidates[0].level}" data-rank="${this.tokenized[batchId][index].candidates[0].rank}" class="word-block sticky${seen ? ' seen' : ''}">${this.tokenized[batchId][index].text}</span>`
             dictionaryTemplate += `<WordBlockDictionary :sticky="true" :token="tokenized[${batchId}][${index}]" :seen="${seen}"/>`
           } else {
             annotatedHtml += `<span>${item}</span>`

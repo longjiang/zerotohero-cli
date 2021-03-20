@@ -98,9 +98,12 @@ const Dictionary = {
             ranks.push(partRank)
           }
         }
-        word.rank = Math.pow(Math.max(...ranks), 1.5)
+        word.rank = Math.pow(Math.max(...ranks), 1.3)
       }
     }
+  },
+  maxRank() {
+    return this.frequency.length
   },
   assignLevels() {
     let c1 = 10000
