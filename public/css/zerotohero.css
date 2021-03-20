@@ -371,7 +371,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .l2-zh .show-level-4 .word-block-dictionary[data-level='4']:not(.seen),
 .l2-zh .show-level-5 .word-block-dictionary[data-level='5']:not(.seen),
 .l2-zh .show-level-6 .word-block-dictionary[data-level='6']:not(.seen),
-.l2-zh .show-level-7 .word-block-dictionary[data-level='outside']:not(.seen):not(.common) {
+.l2-zh .show-level-outside .word-block-dictionary[data-level='outside']:not(.seen):not(.common) {
   display: inline;
   color: inherit !important;
 }

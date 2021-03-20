@@ -15,6 +15,9 @@
       :data-level="token.candidates[0].level"
       >{{ token.candidates[0].head }}</a
     >
+    <span v-if="this.$l2.code === 'zh'">
+      ({{ token.candidates[candidateIndex].pinyin }})
+    </span>
     <span
       class="word-block-dictionary-phonetic"
       @click="cycleCandidate"

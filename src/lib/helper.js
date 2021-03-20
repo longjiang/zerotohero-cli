@@ -49,7 +49,7 @@ export default {
         4: 'HSK 4',
         5: 'HSK 5',
         6: 'HSK 6',
-        7: 'C2'
+        7: 'Outside HSK'
       }
     } else if (l2 && l2.code === 'ja') {
       return {
