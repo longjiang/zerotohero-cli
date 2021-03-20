@@ -1,0 +1,26 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-zerotohero-dev-55027-authRole",
+            "UnauthRoleArn": "arn:aws:iam::063218389660:role/amplify-zerotohero-dev-55027-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::063218389660:role/amplify-zerotohero-dev-55027-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-zerotohero-dev-55027-deployment",
+            "UnauthRoleName": "amplify-zerotohero-dev-55027-unauthRole",
+            "StackName": "amplify-zerotohero-dev-55027",
+            "StackId": "arn:aws:cloudformation:us-west-2:063218389660:stack/amplify-zerotohero-dev-55027/3f7f9d70-89c6-11eb-9338-0a5b109659bd",
+            "AmplifyAppId": "dqehh7c6ay19j"
+        },
+        "categories": {
+            "auth": {
+                "zerotohero83f9a10e": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "dqehh7c6ay19j",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
