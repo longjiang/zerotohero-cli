@@ -2,7 +2,22 @@
   <div class="container mb-5">
     <div class="row">
       <div class="col-sm-12">
-        <Page id="16" />
+        <h1 class="text-center mt-5 mb-5">Hall of Heroes</h1>
+        <p class="lead text-center">
+          <b>Every “hero” was a “zero” at some point.</b>
+        </p>
+        <p>
+          With hard work and continuous effort learning the Mandarin language,
+          many have improved tremendously. In this page we showcase some of our
+          students that have successfully passed the HSK exams after taking
+          courses from us!
+        </p>
+        <p>
+          If you have taken our courses and have passed an HSK test (either an
+          official test or a self-test), you can add your name to the scoreboard
+          by filling out
+          <a href="https://www.chinesezerotohero.com/hoh-submit/">this form</a>.
+        </p>
         <div class="text-center mt-5 mb-5 filter">
           <button
             @click="filter = hero => hero"

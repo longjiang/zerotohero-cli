@@ -1,22 +1,22 @@
 <template>
   <div class="container mt-5 mb-5">
-    <Page id="12" v-if="$l1.code === 'en' && $l2.code === 'zh'" />
-    <Page id="13" v-if="$l1.code === 'zh' && $l2.code === 'en'" />
+    <ReleaseScheduleEnZh v-if="$l1.code === 'en' && $l2.code === 'zh'" />
+    <ReleaseScheduleZhEn v-if="$l1.code === 'zh' && $l2.code === 'en'" />
   </div>
 </template>
 
 <script>
-import Page from '@/components/Page'
+import ReleaseScheduleEnZh from '@/components/ReleaseScheduleEnZh'
+import ReleaseScheduleZhEn from '@/components/ReleaseScheduleZhEn'
+
 export default {
   components: {
-    Page
+    ReleaseScheduleEnZh,
+    ReleaseScheduleZhEn
   }
 }
 </script>
 
 
-<style scoped>
-  div >>> td:first-child {
-    color: white;
-  }
+<style>
 </style>

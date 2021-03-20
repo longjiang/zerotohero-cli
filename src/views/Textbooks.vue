@@ -1,15 +1,18 @@
 <template>
   <div class="container mt-5 mb-5">
-    <Page id="7" v-if="$l1.code === 'en' && $l2.code === 'zh'" />
-    <Page id="8" v-if="$l1.code === 'zh' && $l2.code === 'en'" />
+    <TextbooksEnZh id="7" v-if="$l1.code === 'en' && $l2.code === 'zh'" />
+    <TextbooksZhEn id="8" v-if="$l1.code === 'zh' && $l2.code === 'en'" />
   </div>
 </template>
 
 <script>
-import Page from '@/components/Page'
+import TextbooksEnZh from '@/components/TextbooksEnZh'
+import TextbooksZhEn from '@/components/TextbooksZhEn'
+
 export default {
   components: {
-    Page
+    TextbooksEnZh,
+    TextbooksZhEn
   }
 }
 </script>
