@@ -69,6 +69,7 @@ export default {
     'Pronunciation': '发音',
     'Definitions': '释义',
     'Text Reader': '文本阅读器',
+    'Generate': '生成',
     'Study Sheet Creator': '生词提取器',
     'textReaderIntro': '在一些英文文本中书写或粘贴，带注释的文本将显示在文本框下方。您也可以使用<b>Markdown</b>或<b>HTML</b>标签。所有内容都会自动保存到浏览器的 <code>localstorage</code> 里，因此即使刷新浏览器，输入的所有内容仍会保留在此。',
     'Not sure what to read?': '不知道该读什么吗？',

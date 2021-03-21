@@ -1,14 +1,8 @@
 <template>
   <div class="main pt-3 pb-5">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12">
-          <h1>Study Sheet Creator</h1>
-          <Loader class="mb-5" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-sm-12 col-md-6 mb-4">
           <textarea
             id="reader-textarea"
             class="form-control"
@@ -18,7 +12,7 @@
             :placeholder="$t('Paste {l1} translation here', { l1: $l1.name })"
           ></textarea>
         </div>
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6 mb-4">
           <textarea
             id="reader-textarea"
             class="form-control"
@@ -27,13 +21,17 @@
             v-model="text"
             :placeholder="$t('Paste {l2} text here', { l2: $l2.name })"
           ></textarea
-          ><br />
+          >
+        </div>
+      </div>
+      <div class="row text-center mb-4">
+        <div class="col-sm-12">
           <b-dropdown id="targetHSK" :text="targetLevel ? this.levels[targetLevel] : 'Target Level'" class="mr-1">
             <b-dropdown-item v-for="level of [1,2,3,4,5,6,7]" :value="level" @click="setLevel(level)" v-bind:key="level">{{ levels[level] }}</b-dropdown-item>
           </b-dropdown>
           <b-form-input v-if="targetLevel === 7 && this.$l2.code === 'en'" id="minRankPercentage" v-model="minRankPercentage" type="range" min="0" max="1" step="0.01" class="rank-slider mr-2"></b-form-input>
           <button class="btn btn-primary" @click="generate">
-            Generate
+            {{$t('Generate')}}
           </button>
         </div>
       </div>
@@ -64,8 +62,46 @@ export default {
       genText: '',
       genTranslation: '',
       genKey: 0,
-      minRankPercentage: 0,
-      levels: Helper.levels(this.$l2)
+      minRankPercentage: 0
+    }
+  },
+  computed: {
+    levels() {
+      if (this.$l2.code === 'zh') {
+        return {
+          1: 'HSK 1',
+          2: 'HSK 2',
+          3: 'HSK 3',
+          4: 'HSK 4',
+          5: 'HSK 5',
+          6: 'HSK 6',
+          7: 'Outside HSK',
+        }
+      } else if (this.$l2.code === 'en') {
+        return {
+          1: '零基础',
+          2: 'A1（初级）',
+          3: 'A2（雅思3.5分以下）',
+          4: 'B1（雅思4～5分）',
+          5: 'B2（雅思5.5～6.5分）',
+          6: 'C1（雅思7～8分）',
+          7: 'C2（雅思8.5～9分）',
+        }
+      } else {
+        return Helper.levels(this.$l2)
+      }
+    },
+    targetLevelClasses() {
+      let classes = {
+        'show-level-1': this.targetLevel <= 1,
+        'show-level-2': this.targetLevel <= 2,
+        'show-level-3': this.targetLevel <= 3,
+        'show-level-4': this.targetLevel <= 4,
+        'show-level-5': this.targetLevel <= 5,
+        'show-level-6': this.targetLevel <= 6,
+        'show-level-outside': this.targetLevel <= 7
+      }
+      return classes
     }
   },
   watch: {
@@ -91,20 +127,6 @@ export default {
           }
         })
       }
-    }
-  },
-  computed: {
-    targetLevelClasses() {
-      let classes = {
-        'show-level-1': this.targetLevel <= 1,
-        'show-level-2': this.targetLevel <= 2,
-        'show-level-3': this.targetLevel <= 3,
-        'show-level-4': this.targetLevel <= 4,
-        'show-level-5': this.targetLevel <= 5,
-        'show-level-6': this.targetLevel <= 6,
-        'show-level-outside': this.targetLevel <= 7
-      }
-      return classes
     }
   },
   methods: {
