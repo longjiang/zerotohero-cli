@@ -8,15 +8,15 @@
       </div>
       <div class="row" style="max-width: 840px; margin: 0 auto">
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/courses/ezh-zhibo.jpeg" class="img-fluid course-cover" />
+          <a href="https://www.cctalk.com/m/group/89524662" target="_blank"><img src="/img/courses/ezh-zhibo.jpeg" class="img-fluid course-cover" /></a>
           <div>看课程视频和直播回顾</div>
         </div>
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/courses/ezh-daka.jpeg" class="img-fluid course-cover" />
+          <a href="https://www.cctalk.com/m/group/89528079" target="_blank"><img src="/img/courses/ezh-daka.jpeg" class="img-fluid course-cover" /></a>
           <div>上传7次录音，得到老师反馈</div>
         </div>
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/courses/ezh-pdf.jpeg" class="img-fluid course-cover" />
+          <a href="https://www.cctalk.com/m/group/89446421" target="_blank"><img src="/img/courses/ezh-pdf.jpeg" class="img-fluid course-cover" /></a>
           <div>通过看影评学字幕自然习得英语</div>
         </div>
       </div>
@@ -25,31 +25,31 @@
       </div>
       <div class="row" style="max-width: 840px; margin: 0 auto">
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/courses/ezh-3.jpeg" class="img-fluid course-cover" />
+          <a href="https://www.cctalk.com/m/group/89440415" target="_blank"><img src="/img/courses/ezh-3.jpeg" class="img-fluid course-cover" /></a>
           <div>将初学者升至雅思3.5分</div>
         </div>
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/courses/ezh-4.jpeg" class="img-fluid course-cover" />
+          <a href="https://www.cctalk.com/m/group/89442560" target="_blank"><img src="/img/courses/ezh-4.jpeg" class="img-fluid course-cover" /></a>
           <div>将雅思3.5分升至5分</div>
         </div>
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/courses/ezh-5.jpeg" class="img-fluid course-cover" />
+          <a href="https://www.cctalk.com/m/group/89442561" target="_blank"><img src="/img/courses/ezh-5.jpeg" class="img-fluid course-cover" /></a>
           <div>将雅思5分升至6.5分</div>
         </div>
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/courses/ezh-6.jpeg" class="img-fluid course-cover" />
+          <a href="https://www.cctalk.com/m/group/89442562" target="_blank"><img src="/img/courses/ezh-6.jpeg" class="img-fluid course-cover" /></a>
           <div>将雅思6.5分升至8分</div>
         </div>
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/courses/ezh-c2.jpeg" class="img-fluid course-cover" />
+          <a href="https://www.cctalk.com/m/group/89442564" target="_blank"><img src="/img/courses/ezh-c2.jpeg" class="img-fluid course-cover" /></a>
           <div>骨灰级GRE/C2词汇</div>
         </div>
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/courses/ezh-pronunciation.jpeg" class="img-fluid course-cover" />
+          <a href="https://www.cctalk.com/m/group/89442563" target="_blank"><img src="/img/courses/ezh-pronunciation.jpeg" class="img-fluid course-cover" /></a>
           <div>美式英语发音教程</div>
         </div>
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/courses/ezh-shuocuo.jpeg" class="img-fluid course-cover" />
+          <a href="https://www.cctalk.com/m/group/89494648" target="_blank"><img src="/img/courses/ezh-shuocuo.jpeg" class="img-fluid course-cover" /></a>
           <div>人人说错的英文词</div>
         </div>
       </div>
@@ -63,25 +63,25 @@
       </div>
       <div class="row mb-5" style="max-width: 840px; margin: 0 auto">
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/bilibili.png" class="social-image" />
+          <a href="https://space.bilibili.com/253569339" target="_blank"><img src="/img/bilibili.png" class="social-image" /></a>
           <div>9.3w 粉丝</div>
         </div>
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/douyin.png" class="social-image" />
+          <a href="https://v.douyin.com/eNJCcD8/" target="_blank"><img src="/img/douyin.png" class="social-image" /></a>
           <div>2.9w 粉丝</div>
         </div>
         <div class="col-sm-6 col-md-4 text-center">
-          <img src="/img/xiaohongshu.png" class="social-image" />
+          <a href="https://www.xiaohongshu.com/user/profile/5fad77c0000000000100696e" target="_blank"><img src="/img/xiaohongshu.png" class="social-image" /></a>
           <div>1w 粉丝</div>
         </div>
       </div>
       <div class="row mb-5" style="max-width: 640px; margin: 0 auto">
         <div class="col-sm-6 text-center">
-          <img src="/img/weixin.png" class="social-image" />
+          <a href="/zh/en/contact-us" target="_blank"><img src="/img/weixin.png" class="social-image" /></a>
           <div>请加入微信粉丝群</div>
         </div>
         <div class="col-sm-6 text-center">
-          <img src="/img/cctalk.png" class="social-image" />
+          <a href="https://m.cctalk.com/inst/stevmab3" target="_blank"><img src="/img/cctalk.png" class="social-image" /></a>
           <div>看课程视频和直播回顾</div>
         </div>
       </div>
