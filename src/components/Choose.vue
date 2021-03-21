@@ -11,33 +11,11 @@
           </ul>
         </div>
       </div>
-    </div>
-    <div class="container-fluid bg-dark text-light">
-      <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="mt-5">
-            <h4 class="mb-4">About Us</h4>
             <p>
-              <b style="font-weight: 900">Zero to Hero Education, Canada</b>
-              is dedicated to help you learn the world’s languages, from the
-              very beginning (“zero”) to a very very advanced level (“hero”).
-            </p>
-            <p>
-              Although our focus is
-              <a href="/en/zh/" class="text-light">
-                <b>teaching Mandarin Chinese to English speakers</b> </a
-              >, and
-              <a href="/zh/en/" class="text-light">
-                <b>teaching English to Mandarin Chinese speakers</b> </a
-              >, we've also created free, open-source learning resources that
-              work with hundres of other language pairs.
-            </p>
-          </div>
-          <div class="mt-5">
-            <h4 class="mb-4">This is an open-source project</h4>
-            <p>
-              <b>Project info:</b> This website is built on
+              <strong>This is an open-source project.</strong> This website is built on
               <code>Vue.js</code> and is fully open source. Check out the code
               on GitHub at
               <a href="https://github.com/longjiang/zerotohero-cli"
@@ -46,9 +24,7 @@
             </p>
           </div>
           <div class="mt-5">
-            <h4 class="mb-4">Credits</h4>
-            <p v-html="dictionaryCredit"></p>
-            <p>
+            <p class="mb-4"><strong>Credits: </strong> <span v-html="dictionaryCredit"></span>
               The collocations and example sentences are provided by
               <a target="_blank" href="https://www.sketchengine.eu/"
                 >SketchEngine</a
@@ -56,8 +32,6 @@
             </p>
           </div>
         </div>
-      </div>
-
       </div>
     </div>
   </div>
