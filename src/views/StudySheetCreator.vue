@@ -29,10 +29,10 @@
           <b-dropdown id="targetHSK" :text="targetLevel ? this.levels[targetLevel] : 'Target Level'" class="mr-1">
             <b-dropdown-item v-for="level of [1,2,3,4,5,6,7]" :value="level" @click="setLevel(level)" v-bind:key="level">{{ levels[level] }}</b-dropdown-item>
           </b-dropdown>
-          <b-form-input v-if="targetLevel === 7 && this.$l2.code === 'en'" id="minRankPercentage" v-model="minRankPercentage" type="range" min="0" max="1" step="0.01" class="rank-slider mr-2"></b-form-input>
           <button class="btn btn-primary" @click="generate">
             {{$t('Generate')}}
-          </button>
+          </button><br/><br/>
+          <span class="rank-slider-label mr-2">{{$t('More words')}}</span><b-form-input v-if="targetLevel === 7 && this.$l2.code === 'en'" id="minRankPercentage" v-model="minRankPercentage" type="range" min="0" max="1" step="0.01" class="rank-slider"></b-form-input><span class="ml-2 rank-slider-label">{{$t('Less words')}}</span>
         </div>
       </div>
       <div class="row mt-5">
@@ -192,5 +192,10 @@ export default {
 }
 .word-block-dictionary.low-rank {
   display: none !important;
+}
+
+.rank-slider-label {
+  display: inline-block;
+  overflow: hidden;
 }
 </style>
