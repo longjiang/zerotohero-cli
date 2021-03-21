@@ -7,12 +7,13 @@
         </div>
         <a
           v-if="$l1.code === 'zh' && $l2.code === 'en'"
-          class="btn btn-primary btn-sign-in text-white ml-1"
-          href="https://wazuc.duanshu.com/#/"
+          class="btn btn-sign-in text-white ml-1"
+          style="background-color: #2C5AFF"
+          href="https://m.cctalk.com/inst/stevmab3"
           target="_blank"
         >
           登陆
-          <img src="/img/logo-duanshu-light.png" class="logo-small ml-1" />
+          <img src="/img/logo-cctalk-white.png" class="logo-small ml-1" />
         </a>
         <a
           v-if="$l1.code === 'en' && $l2.code === 'zh'"
@@ -324,6 +325,7 @@ export default {
   column-count: 2;
   column-gap: 1rem;
   padding: 0;
+  list-style: none;
 }
 
 .czh-links a, .ezh-links a {
