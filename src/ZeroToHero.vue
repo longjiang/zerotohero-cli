@@ -1,8 +1,10 @@
 <template>
   <div id="zerotohero" :class="classes">
     <template v-if="langsLoaded && this.$route.path !== '/'">
-      <div class="container-fluid pl-0 pr-0 p-2 site-top-bar">
-        <LanguageSwitch style="flex: 1" />
+      <div class="container-fluid p-2 pl-3 site-top-bar">
+        <div>
+          <a href="/" style="color: #ccc; line-height: 2.3rem;"><i class="fa fa-chevron-left mr-2"></i>Zero to Hero Education</a>
+        </div>
         <a
           v-if="$l1.code === 'zh' && $l2.code === 'en'"
           class="btn btn-primary btn-sign-in text-white ml-1"
@@ -25,7 +27,9 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12 text-center">
-              <LanguageLogo :l1="$l1" :l2="$l2" style="margin-top: 1.5rem" />
+              <a v-if="this.$l1.code === 'en' && this.$l2.code === 'zh'" href="/en/zh"><img src="/img/czh-logo-light.png" alt="Chinese Zero to Hero" style="max-width: 11rem; margin: 1.5rem 0" /></a>
+              <a v-else-if="this.$l1.code === 'zh' && this.$l2.code === 'en'" href="/zh/en"><img src="/img/ezh-logo-light.png" alt="Chinese Zero to Hero" style="max-width: 11rem; margin: 1.5rem 0" /></a>
+              <LanguageLogo v-else :l1="$l1" :l2="$l2" style="margin-top: 1.5rem" />
             </div>
           </div>
         </div>
