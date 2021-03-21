@@ -11,35 +11,27 @@
           $route.name === 'transfer'
       "
     >
-      <router-link class="secondary-menu-item" :to="{ name: 'courses' }">
+      <router-link class="secondary-menu-item" :to="{ name: 'courses' }" v-if="this.$l2.code === 'zh'">
         <i class="fas fa-chalkboard-teacher"></i>
         {{ $t('Language Courses')}}
       </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'textbooks-workbooks' }">
+      <router-link class="secondary-menu-item" :to="{ name: 'textbooks-workbooks' }" v-if="this.$l2.code === 'zh'">
         <i class="fas fa-book"></i>
         {{$t('Textbooks')}}
       </router-link>
       <router-link
-        v-if="$l1.code === 'en' && $l2.code === 'zh'"
+        v-if="this.$l2.code === 'zh'"
         class="secondary-menu-item"
         :to="{ name: 'video-count' }"
       >
         <i class="fas fa-list-ol"></i>
         {{$t('Video Count')}}
       </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'pricing' }">
+      <router-link class="secondary-menu-item" :to="{ name: 'pricing' }" v-if="this.$l2.code === 'zh'">
         <i class="fas fa-tag"></i>
         {{$t('Pricing')}}
       </router-link>
-      <router-link
-        v-if="$l1.code === 'zh' && $l2.code === 'en'"
-        class="secondary-menu-item"
-        :to="{ name: 'transfer' }"
-      >
-        <i class="fas fa-exchange-alt"></i>
-        {{ $t('Transfer Purchases')}}
-      </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'course-release-schedule' }">
+      <router-link class="secondary-menu-item" :to="{ name: 'course-release-schedule' }" v-if="this.$l2.code === 'zh'">
         <i class="fas fa-clock"></i>
         {{$t('Schedule')}}
       </router-link>
@@ -164,7 +156,8 @@
       v-if="
         ($route.name &&
           ($route.name.startsWith('book-') || $route.name === 'library')) ||
-          $route.name === 'reader'
+          $route.name === 'reader' ||
+          $route.name === 'studysheet'
       "
     >
       <router-link class="secondary-menu-item" :to="{ name: 'reader' }">
@@ -221,18 +214,18 @@
           $route.name === 'affiliate-program'
       "
     >
-      <router-link class="secondary-menu-item" :to="{ name: 'contact' }">
+      <router-link class="secondary-menu-item" :to="{ name: 'contact' }" v-if="this.$l2.code === 'zh'">
         <i class="fas fa-id-card"></i>
         {{$t('Contact Us')}}
       </router-link>
-      <router-link class="secondary-menu-item" :to="{ name: 'faq' }" v-if="$hasFeature('courses')">
+      <router-link class="secondary-menu-item" :to="{ name: 'faq' }" v-if="this.$l2.code === 'zh'">
         <i class="fas fa-question"></i>
         {{$t('FAQ')}}
       </router-link>
       <router-link
         class="secondary-menu-item"
         :to="{ name: 'affiliate-program' }"
-        v-if="$hasFeature('courses')"
+         v-if="this.$l2.code === 'zh'"
       >
         <i class="fas fa-share-alt"></i>
         {{$t('Affiliate Program')}}
