@@ -43,9 +43,9 @@
 
       <footer class="container-fluid bg-dark text-light pt-4 pb-4">
         <div class="container">
-          <div class="row">
+          <div class="row mb-5">
             <div class="col-sm-12">
-              <Choose :compact="true" />
+              <Choose :compact="true"/>
             </div>
           </div>
         </div>
@@ -53,23 +53,72 @@
     </template>
     <template v-else>
       <div
-        class="container-fluid bg-dark text-light pt-4 pb-4"
-        style="min-height: 100vh"
+        class="container-fluid pt-4"
       >
+        <div class="bg-stars" />
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <h1
-                class="text-light mt-5 mb-5 text-center"
-                style="font-weight: 500"
-              >
-                Zero to Hero Education
-              </h1>
-              <Choose :compact="true" class="mt-5" />
+          <div class="row pt-5">
+            <div class="col-sm-6">
+              <img src="/img/logo-z2h.png" class="z2h-logo" />
+            </div>
+            <div class="col-sm-6">
+              <img src="/img/language-education-done-right.png" class="z2h-slogan img-fluid d-none d-sm-block" />
+            </div>
+          </div>
+          <div class="row pt-5">
+            <div class="col-sm-6">
+              <div class="home-card">
+                <a href="/en/zh"><img src="/img/czh-logo-dark.png" class="czh-logo" /></a>
+                <hr/>
+                <ul class="czh-links">
+                  <li><a href="/en/zh/online-courses" style="color: #FD4F1C; font-weight: bold">HSK courses</a></li>
+                  <li><a href="/en/zh/dictionary">Dictionary</a></li>
+                  <li><a href="/en/zh/grammar">Grammar reference</a></li>
+                  <li><a href="/en/zh/youtube/browse">Audio-visual tools</a></li>
+                  <li><a href="/en/zh/reader">Reading tools</a></li>
+                  <li><a href="/en/zh/resource/list/all/all">Resources</a></li>
+                </ul>
+                <hr/>
+                <div class="home-card-logos text-center" style="line-height: 2rem;">
+                  <a href="https://www.youtube.com/channel/UCQ3IlLg5VGeydxtswBoyt6A"><img src="/img/logo-youtube.png" style="height: 1.2rem; padding: 0 0.5rem" /></a>
+                  <a href="https://www.instagram.com/chinesezerotohero/"><img src="/img/logo-instagram.png" style="height: 1.4rem; padding: 0 0.5rem" /></a>
+                  <a href="http://chinesezerotohero.teachable.com/"><img src="/img/logo-teachable.png" style="height: 1.4rem; padding: 0 0.5rem" /></a>
+                  <a href="http://t.me/zerotohero_zh"><img src="/img/logo-telegram.png" style="height: 1.4rem; padding: 0 0.5rem" /></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="home-card">
+                <a href="/zh/en"><img src="/img/ezh-logo-dark.png" class="ezh-logo" /></a>
+                <hr/>
+                <ul class="czh-links">
+                  <li><a href="/zh/en/online-courses" style="color: #1B3E76; font-weight: bold">剑桥英语视频教程</a></li>
+                  <li><a href="/zh/en/online-courses" style="color: #1B3E76; font-weight: bold">美式口语课程</a></li>
+                  <li><a href="/zh/en/dictionary">词典工具</a></li>
+                  <li><a href="/zh/en/youtube/browse">视听工具</a></li>
+                  <li><a href="/zh/en/reader">阅读工具</a></li>
+                  <li><a href="/zh/en/resource/list/all/all">其它资源</a></li>
+                </ul>
+                <hr/>
+                <div class="home-card-logos text-center" style="line-height: 2rem;">
+                  <a href="https://m.cctalk.com/inst/stevmab3"><img src="/img/logo-cctalk.png" style="height: 1.2rem" /></a>&nbsp;&nbsp;
+                  <a href="https://space.bilibili.com/253569339"><img src="/img/logo-bilibili.png" style="height: 1.2rem" /></a>&nbsp;&nbsp;
+                  <a href="https://v.douyin.com/eNJCcD8/"><img src="/img/logo-douyin.png" style="height: 1.4rem" /></a>&nbsp;&nbsp;
+                  <a href="https://www.xiaohongshu.com/user/profile/5fad77c0000000000100696e"><img src="/img/logo-xiaohongshu.png" style="height: 1.4rem" /></a>&nbsp;&nbsp;
+                  <a href="/zh/en/contact-us"><img src="/img/logo-wechat.png" style="height: 1.4rem" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5 mb-4 text-dark">
+            <div class="col-sm-12 text-center">
+              <p style="font-size: 1.5rem">Resources for learning <strong><em>hundreds</em></strong> of languages</p>
+              <p>学习<strong>数百种</strong>语言的资源</p>
             </div>
           </div>
         </div>
       </div>
+      <Choose :compact="true" />
     </template>
   </div>
 </template>
@@ -239,6 +288,24 @@ export default {
 </script>
 
 <style lang="scss">
+.home-card {
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.bg-stars {
+  background-image: url(/img/background-stars.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  min-width: 100%;
+  min-height: 30rem;
+  left: 0;
+  top: 0;
+}
 .site-top-bar {
   background-color: rgb(29, 29, 29);
   display: flex;
@@ -247,6 +314,34 @@ export default {
 
 .logo {
   height: 6rem;
+}
+
+.czh-links, .ezh-links {
+  column-count: 2;
+  column-gap: 1rem;
+  padding: 0;
+}
+
+.czh-links a, .ezh-links a {
+  color: #666;
+  font-size: 0.8em;
+}
+
+.z2h-logo {
+  height: 10rem;
+  display: block;
+}
+
+.z2h-slogan {
+  max-height: 10rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.czh-logo, .ezh-logo {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
 }
 
 .zerotohero {
