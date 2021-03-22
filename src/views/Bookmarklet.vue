@@ -64,13 +64,13 @@
           </p>
           <h5>Before:</h5>
           <img
-            src="/img/hindi-annotation-bookmarklet-before.png"
+            src="/img/hindi-annotation-bookmarklet-before.jpg"
             class="img-fluid shadow rounded mt-2 mb-4"
             alt="Screenshot before"
           />
           <h5>After:</h5>
           <img
-            src="/img/hindi-annotation-bookmarklet-after.png"
+            src="/img/hindi-annotation-bookmarklet-after.jpg"
             class="img-fluid shadow rounded mt-2 mb-2"
             alt="Screenshot after"
           />
