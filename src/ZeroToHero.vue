@@ -310,7 +310,13 @@ export default {
         document.createElement('link')
       link.type = 'image/x-icon'
       link.rel = 'shortcut icon'
-      link.href = `/img/logo-square/${this.$l2.code}.jpeg`
+      if (this.$l2.code === 'en') {
+        link.href = `/img/ezh-icon.png`
+      } else if (this.$l2.code === 'zh') {
+        link.href = `/img/czh-icon.png`
+      } else {
+        link.href = `/img/logo-square/${this.$l2.code}.jpeg`
+      }
       document.getElementsByTagName('head')[0].appendChild(link)
     },
     updateTitle() {
