@@ -789,13 +789,13 @@ ul.collapse-10.collapsed li:nth-child(-n+10) {
 
 
 /* for the text column */
-.show-level-1 .study-sheet-table [data-hover-level='1'].sticky:not(.seen),
-.show-level-2 .study-sheet-table [data-hover-level='2'].sticky:not(.seen),
-.show-level-3 .study-sheet-table [data-hover-level='3'].sticky:not(.seen),
-.show-level-4 .study-sheet-table [data-hover-level='4'].sticky:not(.seen),
-.show-level-5 .study-sheet-table [data-hover-level='5'].sticky:not(.seen),
-.show-level-6 .study-sheet-table [data-hover-level='6'].sticky:not(.seen),
-.show-level-outside .study-sheet-table [data-hover-level='outside'].sticky:not(.seen):not(.common) {
+.show-level-1 .study-sheet-table [data-hover-level='1'].sticky:not(.seen) span,
+.show-level-2 .study-sheet-table [data-hover-level='2'].sticky:not(.seen) span,
+.show-level-3 .study-sheet-table [data-hover-level='3'].sticky:not(.seen) span,
+.show-level-4 .study-sheet-table [data-hover-level='4'].sticky:not(.seen) span,
+.show-level-5 .study-sheet-table [data-hover-level='5'].sticky:not(.seen) span,
+.show-level-6 .study-sheet-table [data-hover-level='6'].sticky:not(.seen) span,
+.show-level-outside .study-sheet-table [data-hover-level='outside'].sticky:not(.seen):not(.common) span {
   color: #B74900 !important;
 }
 

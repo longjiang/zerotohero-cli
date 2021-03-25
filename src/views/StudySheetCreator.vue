@@ -32,7 +32,7 @@
           <button class="btn btn-primary" @click="generate">
             {{$t('Generate')}}
           </button><br/><br/>
-          <span class="rank-slider-label mr-2">{{$t('More words')}}</span><b-form-input v-if="targetLevel === 7 && this.$l2.code === 'en'" id="minRankPercentage" v-model="minRankPercentage" type="range" min="0" max="1" step="0.01" class="rank-slider"></b-form-input><span class="ml-2 rank-slider-label">{{$t('Less words')}}</span>
+          <div v-if="targetLevel === 7 && this.$l2.code === 'en'"><span class="rank-slider-label mr-2">{{$t('More words')}}</span><b-form-input id="minRankPercentage" v-model="minRankPercentage" type="range" min="0" max="1" step="0.01" class="rank-slider"></b-form-input><span class="ml-2 rank-slider-label">{{$t('Less words')}}</span></div>
         </div>
       </div>
       <div class="row mt-5">

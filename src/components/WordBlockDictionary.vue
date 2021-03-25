@@ -11,11 +11,15 @@
   >
     <a
       class="word-block-dictionary-simplified"
-      :href="this.$l2.code === 'zh' ? `plecoapi://x-callback-url/s?q=${token.candidates[0].simplified}` : this.$l2.code === 'en' ? `eudic://dict/${token.candidates[0].head}?jumpback=launch:` : undefined"
+      target="_blank"
+      :href="this.$l2.code === 'zh' ? `plecoapi://x-callback-url/s?q=${token.candidates[0].simplified}` : this.$l2.code === 'en' ? `https://dictionary.cambridge.org/dictionary/english-chinese-simplified/${token.candidates[0].head}` : undefined"
       :data-level="token.candidates[0].level"
       >{{ token.candidates[0].head }}</a
     >
-    <span v-if="this.$l2.code === 'zh'">
+    <span v-if="this.$l2.code === 'zh'"
+      class="word-block-dictionary-phonetic"
+      @click="cycleCandidate"
+      :data-level="token.candidates[0].level">
       ({{ token.candidates[candidateIndex].pinyin }})
     </span>
     <span
