@@ -459,7 +459,15 @@
 </template>
 
 <script>
-export default {}
+import Testimonials from '@/components/Testimonials'
+import TelegramPrompt from '@/components/Testimonials'
+
+export default {
+  components: {
+    Testimonials,
+    TelegramPrompt
+  }
+}
 </script>
 
 <style>

@@ -24,42 +24,52 @@
             href="https://sso.teachable.com/secure/133035/users/sign_in"
           >
             Login to
-            <img src="/img/teachable_light.png" class="logo-small" />
+            <img src="/img/teachable_light.png" class="logosp-small" />
           </a>
         </div>
-        <div class="container-fluid bg-dark pl-0 pr-0">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 text-center">
-                <a
-                  v-if="this.$l1.code === 'en' && this.$l2.code === 'zh'"
-                  href="/en/zh"
-                  ><img
-                    src="/img/czh-logo-light.png"
-                    alt="Chinese Zero to Hero"
-                    style="max-width: 11rem; margin: 1.5rem 0"
-                /></a>
-                <a
-                  v-else-if="this.$l1.code === 'zh' && this.$l2.code === 'en'"
-                  href="/zh/en"
-                  ><img
-                    src="/img/ezh-logo-light.png"
-                    alt="Chinese Zero to Hero"
-                    style="max-width: 11rem; margin: 1.5rem 0"
-                /></a>
-                <LanguageLogo
-                  v-else
-                  :l1="$l1"
-                  :l2="$l2"
-                  style="margin-top: 1.5rem"
-                />
+        <div class="zth-header">
+          <div class="container-fluid pl-0 pr-0">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 text-center">
+                  <a
+                    v-if="this.$l1.code === 'en' && this.$l2.code === 'zh'"
+                    href="/en/zh"
+                    ><img
+                      src="/img/czh-logo-light.png"
+                      alt="Chinese Zero to Hero"
+                      style="max-width: 11rem; margin: 1.5rem 0"
+                  /></a>
+                  <a
+                    v-else-if="this.$l1.code === 'zh' && this.$l2.code === 'en'"
+                    href="/zh/en"
+                    ><img
+                      src="/img/ezh-logo-light.png"
+                      alt="Chinese Zero to Hero"
+                      style="max-width: 11rem; margin: 1.5rem 0"
+                  /></a>
+                  <LanguageLogo
+                    v-else
+                    :l1="$l1"
+                    :l2="$l2"
+                    style="margin-top: 1.5rem"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="sale-card" style="padding: 1.5rem; padding-bottom: 0.7rem; margin-bottom: 1rem">
+                    <h4 style="color: white">SPRING SALE</h4>
+                    <p style="font-weight: 300">All courses <strong style="color: white; font-weight: 700">30% off</strong> until Mar 31. Use coupon code <code>SP30</code></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="container-fluid bg-dark sticky" style="z-index: 3">
-          <div class="row">
-            <Nav />
+          <div class="container-fluid sticky" style="z-index: 3">
+            <div class="row">
+              <Nav />
+            </div>
           </div>
         </div>
         <SubNav class="pt-4" />
@@ -81,7 +91,7 @@
     </template>
     <template v-else>
       <div class="container-fluid pt-4">
-        <div class="bg-stars" />
+        <img src="/img/background-cherry-blossom.jpg" class="bg-stars" />
         <div class="container">
           <div class="row pt-5">
             <div class="col-sm-6">
@@ -92,6 +102,14 @@
                 src="/img/language-education-done-right.png"
                 class="z2h-slogan img-fluid d-none d-sm-block"
               />
+            </div>
+          </div>
+          <div class="row pt-5">
+            <div class="col-sm-12">
+              <div class="sale-card">
+                <h1 style="color: white">SPRING SALE</h1>
+                <p style="font-weight: 300; font-size: 1.5em">All courses <strong style="color: white; font-weight: 700">30% off</strong> until Mar 31. Use coupon code <code>SP30</code></p>
+              </div>
             </div>
           </div>
           <div class="row pt-5">
@@ -384,6 +402,13 @@ export default {
 </script>
 
 <style lang="scss">
+
+.zth-header {
+  background-image: url(/img/background-cherry-blossom.jpg);
+  background-size: cover;
+}
+
+
 .home-card {
   border-radius: 1rem;
   background-color: white;
@@ -391,17 +416,33 @@ export default {
   padding: 2rem;
   margin-bottom: 2rem;
 }
-.bg-stars {
-  background-image: url(/img/background-stars.jpg);
+
+.sale-card {
+  border-radius: 1rem;
+  background-image: url(/img/background-spring-sale.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  padding: 3rem;
+  text-align: center;
+  color: #fcddc1;
+}
+
+.sale-card code {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: #004A5C;
+  background-color: #fcddc1;
+  font-weight: bold;
+}
+
+.bg-stars {
   z-index: -1;
   position: absolute;
-  min-width: 100%;
+  width: 100%;
   min-height: 30rem;
   left: 0;
   top: 0;
 }
+
 .site-top-bar {
   background-color: rgb(29, 29, 29);
   display: flex;
