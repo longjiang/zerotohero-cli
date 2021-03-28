@@ -460,7 +460,7 @@
 
 <script>
 import Testimonials from '@/components/Testimonials'
-import TelegramPrompt from '@/components/Testimonials'
+import TelegramPrompt from '@/components/TelegramPrompt'
 
 export default {
   components: {
