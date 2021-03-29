@@ -24,9 +24,8 @@ export default {
     category: {
       type: String
     },
-    filter: {
-      type: Function,
-      default: () => true
+    hsk: {
+      type: String
     }
   },
   data() {
@@ -38,6 +37,15 @@ export default {
     this.get()
   },
   methods: {
+    filter(hero) {
+      if (this.category === 'featured') {
+        return hero.featured === true
+      } else if (this.category === 'hsk') {
+        return this.hsk === 'all' || hero.hsk === this.hsk
+      } else {
+        return true
+      }
+    },
     get() {
       $.getJSON(`${Config.wiki}items/heroes?fields=*,avatar.*`, response => {
         this.heroes = response.data

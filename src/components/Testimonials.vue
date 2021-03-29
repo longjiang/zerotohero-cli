@@ -9,19 +9,7 @@
     </div>
 
     <div class="testimonial-container mt-5 pt-2">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 my-4">
-          <Hero :hero="getByName('Michael C.')" />
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4 my-4">
-          <Hero :hero="getByName('MUHAMMAD N. A.')" />
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4 my-4">
-          <Hero :hero="getByName('Kasper J.')" />
-        </div>
-      </div>
+      <HeroesList category="featured" class="mt-5" />
     </div>
 
   </div>
@@ -29,7 +17,7 @@
 
 <script>
 import Config from '@/lib/config'
-import Hero from '@/components/Hero'
+import HeroesList from '@/components/HeroesList'
 
 export default {
   data() {
@@ -38,7 +26,7 @@ export default {
     }
   },
   components: {
-    Hero
+    HeroesList
   },
   methods: {
     get() {

@@ -20,22 +20,22 @@
         </p>
         <div class="text-center mt-5 mb-5 filter">
           <button
-            @click="filter = hero => hero"
+            @click="hsk = 'all'"
             class="btn mr-2"
             data-bg-level="outside"
           >
             All
           </button>
           <button
-            v-for="hsk in ['1', '2', '3', '4', '5']"
-            @click="filter = hero => hero.hsk === hsk"
+            v-for="level in ['6', '5', '4', '3', '2', '1']"
+            @click="hsk = level"
             class="btn mr-2"
-            :data-bg-level="hsk"
+            :data-bg-level="level"
           >
-            HSK {{ hsk }}
+            HSK {{ level }}
           </button>
         </div>
-        <HeroesList category="featured" class="mt-5" :filter="filter" />
+        <HeroesList category="hsk" :hsk="hsk" class="mt-5" />
       </div>
     </div>
   </div>
@@ -43,17 +43,15 @@
 
 <script>
 import HeroesList from '@/components/HeroesList'
-import Page from '@/components/Page'
 
 export default {
-  components: {
-    HeroesList,
-    Page
-  },
   data() {
     return {
-      filter: hero => hero
+      hsk: 'all'
     }
+  },
+  components: {
+    HeroesList
   }
 }
 </script>
