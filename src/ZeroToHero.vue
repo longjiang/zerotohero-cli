@@ -56,14 +56,6 @@
                   />
                 </div>
               </div>
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="sale-card" style="padding: 1.5rem; padding-bottom: 0.7rem; margin-bottom: 1rem">
-                    <h4 style="color: white">SPRING SALE</h4>
-                    <p style="font-weight: 300">All courses <strong style="color: white; font-weight: 700">30% off</strong> until Mar 31. Use coupon code <code>SP30</code></p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="container-fluid sticky" style="z-index: 3">
@@ -91,7 +83,7 @@
     </template>
     <template v-else>
       <div class="container-fluid pt-4">
-        <img src="/img/background-cherry-blossom.jpg" class="bg-stars" />
+        <img src="/img/background-stars.jpg" class="bg-stars" />
         <div class="container">
           <div class="row pt-5">
             <div class="col-sm-6">
@@ -102,14 +94,6 @@
                 src="/img/language-education-done-right.png"
                 class="z2h-slogan img-fluid d-none d-sm-block"
               />
-            </div>
-          </div>
-          <div class="row pt-5">
-            <div class="col-sm-12">
-              <div class="sale-card">
-                <h1 style="color: white">SPRING SALE</h1>
-                <p style="font-weight: 300; font-size: 1.5em">All courses <strong style="color: white; font-weight: 700">30% off</strong> until Mar 31. Use coupon code <code>SP30</code></p>
-              </div>
             </div>
           </div>
           <div class="row pt-5">
@@ -404,7 +388,7 @@ export default {
 <style lang="scss">
 
 .zth-header {
-  background-image: url(/img/background-cherry-blossom.jpg);
+  background-image: url(/img/background-stars.jpg);
   background-size: cover;
 }
 
