@@ -1,8 +1,10 @@
 const Dictionary = {
   file: '../data/hsk-cedict/hsk_cedict.csv.txt',
   characterFile: '../data/hsk-cedict/hsk_characters.csv.txt',
+  newHSKFile: '../data/hsk-cedict/new_hsk.csv.txt',
   words: [],
   characters: [],
+  newHSK: [],
   _maxWeight: 0,
   credit() {
     return 'The Chinese dictionary is provided by <a href="https://www.mdbg.net/chinese/dictionary?page=cedict">CC-CEDICT</a>, open-source and distribtued under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. We also added HSK information on top.'
@@ -32,7 +34,17 @@ const Dictionary = {
           }
         })
       })
-      Promise.all([wordsPromise, characterPromise]).then(() => resolve())
+      let newHSKPromise = new Promise(resolve => {
+        Papa.parse(this.newHSKFile, {
+          download: true,
+          header: true,
+          complete: results => {
+            this.newHSK = results.data
+            resolve()
+          }
+        })
+      })
+      Promise.all([wordsPromise, characterPromise, newHSKPromise]).then(() => resolve())
     })
   },
   wordForms(word) {
@@ -50,6 +62,9 @@ const Dictionary = {
   },
   accent(text) {
     return text
+  },
+  getNewHSK() {
+    return this.newHSK
   },
   lookupByDef(text, limit = 30) {
     let preferred = this.words

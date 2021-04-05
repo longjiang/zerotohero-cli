@@ -350,6 +350,20 @@ export default new Router({
       }
     },
     {
+      path: '/:l1/:l2/explore/newlevels',
+      name: 'levels',
+      component: () => import('./views/NewLevels.vue'),
+      meta: {
+        title: 'Words in the New HSK 3.0 | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'List words in the New HSK 3.0 (starting 2021–2025?) levels.'
+          }
+        ]
+      }
+    },
+    {
       path: '/:l1/:l2/compare/:method/:args',
       name: 'compare',
       component: () => import('./views/Compare.vue'),
