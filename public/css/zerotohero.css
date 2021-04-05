@@ -832,3 +832,19 @@ ul.collapse-10.collapsed li:nth-child(-n+10) {
 .show-level-outside .study-sheet-table [data-level='C2']:not(.seen):not(.common):not(.low-rank) {
   color: #B74900 !important;
 }
+
+.word-square {
+  padding: 4px;
+  font-size: 10px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  line-height: 10px;
+  text-align: center;
+  display: flex;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  font-weight: bold;
+}
