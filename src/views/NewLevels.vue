@@ -16,10 +16,11 @@
                 <th>POS</th>
                 <th>Example</th>
                 <th>Alternative</th>
+                <th>Multiple</th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="word in newHSK.filter(word => !word.pinyin)">
+              <tr v-for="word in newHSK">
                 <td>{{ word.level }}</td>
                 <td>{{ word.num }}</td>
                 <td :data-level="word.hsk">{{ word.simplified }}</td>
@@ -28,6 +29,7 @@
                 <td>{{ word.pos }}</td>
                 <td>{{ word.example }}</td>
                 <td>{{ word.alternative }}</td>
+                <td>{{ word.multiple }}</td>
               </tr>
             </tbody>
           </table>
@@ -48,13 +50,18 @@ export default {
   async mounted() {
     let newHSK = await (await this.$dictionary).getNewHSK()
     for (let word of newHSK) {
-      let w = await (await this.$dictionary).lookup(word.simplified)
-      if (w) {
+      let ws = await (await this.$dictionary).lookupSimplified(word.simplified)
+      if (ws && ws[0]) {
+        let w = ws[0]
         word.hsk = w.hsk
         word.pinyin = w.pinyin
         word.definitions = w.definitions
           .filter((def) => !def.startsWith('CL'))
           .join('; ')
+      }
+      if (ws.length > 1) {
+        ws.shift()
+        word.multiple = ws.map(w => `【${w.pinyin}】 ${w.definitions.filter((def) => !def.startsWith('CL')).join('; ')}`).join('. ')
       }
     }
     this.newHSK = newHSK
