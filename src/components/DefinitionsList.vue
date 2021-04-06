@@ -5,7 +5,7 @@
         <li v-for="definition in definitions" class="definition-list-item" v-html="definition.text ? definition.text : definition"></li>
       </ul>
       <ShowMoreButton
-        :length="definitions.length"
+        :length="definitions.length - 1"
         :min="3"
         class="focus-exclude"
       />

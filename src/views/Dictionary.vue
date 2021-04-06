@@ -5,7 +5,9 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="text-center">
-              <h2 class="mb-4">{{ $t('For the love of {l2} words.', {l2: $t($l2.name)}) }}</h2>
+              <h2 class="mb-4">
+                {{ $t('For the love of {l2} words.', { l2: $t($l2.name) }) }}
+              </h2>
               <Loader ref="loader" class="mb-5" />
             </div>
             <SearchCompare
@@ -25,9 +27,9 @@
         <Paginator
           :key="`paginator-${args}`"
           :items="sW"
-          :findCurrent="item => item.id === entry.id"
+          :findCurrent="(item) => item.id === entry.id"
           :url="
-            item =>
+            (item) =>
               `/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${item.id}`
           "
           title="Saved Words"
@@ -41,7 +43,6 @@
       <div class="container mb-4">
         <div class="row">
           <div class="col-sm-12 text-center">
-            <InstagramButton :entry="entry" class="mb-5"></InstagramButton>
             <EntryHeader :entry="entry" :key="`header-${args}`"></EntryHeader>
             <DefinitionsList
               :key="`def-list-${args}`"
@@ -53,8 +54,10 @@
         </div>
       </div>
 
-
-      <div v-if="$l2.code === 'zh'" class="jumbotron-fluid p-0 bg-light mt-4 mb-4">
+      <div
+        v-if="$l2.code === 'zh'"
+        class="jumbotron-fluid p-0 bg-light mt-4 mb-4"
+      >
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -63,39 +66,11 @@
           </div>
         </div>
       </div>
-      <div v-if="$l2.code === 'zh'" class="container">
-        <div class="row mt-5 d-flex" style="flex-wrap: wrap">
-          <EntryDifficulty :entry="entry" style="flex: 1" class="m-3" />
-          <EntryDisambiguation :entry="entry" class="m-3" style="flex: 1; min-width: 20rem;"></EntryDisambiguation>
-        </div>
-      </div>
 
       <!-- <EntryDisambiguation> already finds some pretty good suggestions. -->
       <!-- <EntryRelated class="mb-5" :entry="entry"></EntryRelated> -->
 
       <div class="container">
-        <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
-          <div class="col-sm-12" v-if="$l2.code !== 'zh'">
-            <EntryCharacters
-              v-if="entry.cjk && entry.cjk.canonical"
-              class="mb-4"
-              :text="entry.cjk.canonical"
-              :pinyin="entry.cjk.phonetics ? entry.cjk.phonetics : undefined"
-            ></EntryCharacters>
-          </div>
-          <div class="col-sm-12" v-else>
-            <EntryCharacters
-              class="mb-4 simplified"
-              :text="entry.simplified"
-              :pinyin="entry.pinyin"
-            ></EntryCharacters>
-            <EntryCharacters
-              class="mb-4 traditional"
-              :text="entry.traditional"
-              :pinyin="entry.pinyin"
-            ></EntryCharacters>
-          </div>
-        </div>
         <div class="row">
           <div class="col-sm-12">
             <WebImages
@@ -113,60 +88,100 @@
           </div>
         </div>
       </div>
-      <EntryCourseAd v-if="$l2.code === 'zh'" :entry="entry" class="focus-exclude"></EntryCourseAd>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <EntryYouTube :text="entry.bare" class="mb-5" />
+            </div>
+          </div>
+        </div>
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <Concordance
-              class="mt-5 mb-5"
-              :word="entry"
-              :level="entry.level"
-            />
-            <Mistakes class="mt-5 mb-5" v-if="$l2.code === 'zh'" :text="entry.simplified"></Mistakes>
+            <Concordance class="mt-5 mb-5" :word="entry" :level="entry.level" />
           </div>
         </div>
+
+        <div class="row mt-5 d-flex" style="flex-wrap: wrap">
+          <EntryDifficulty :entry="entry" style="flex: 1" class="m-3" />
+          <EntryDisambiguation
+            :entry="entry"
+            class="m-3"
+            style="flex: 1; min-width: 20rem"
+          ></EntryDisambiguation>
+        </div>
+
+
         <div class="row">
           <div class="col-sm-12">
-            <EntryRelated
-              :entry="entry"
-              class="mb-5"
-            />
+            <EntryRelated :entry="entry" class="mb-5" />
+
+            <Mistakes
+              class="mt-5 mb-5"
+              v-if="$l2.code === 'zh'"
+              :text="entry.simplified"
+            ></Mistakes>
           </div>
         </div>
         <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
+          <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
+            <div class="col-sm-12" v-if="$l2.code !== 'zh'">
+              <EntryCharacters
+                v-if="entry.cjk && entry.cjk.canonical"
+                class="mb-4"
+                :text="entry.cjk.canonical"
+                :pinyin="entry.cjk.phonetics ? entry.cjk.phonetics : undefined"
+              ></EntryCharacters>
+            </div>
+            <div class="col-sm-12" v-else>
+              <EntryCharacters
+                class="mb-4 simplified"
+                :text="entry.simplified"
+                :pinyin="entry.pinyin"
+              ></EntryCharacters>
+              <EntryCharacters
+                class="mb-4 traditional"
+                :text="entry.traditional"
+                :pinyin="entry.pinyin"
+              ></EntryCharacters>
+            </div>
+          </div>
           <div class="col-sm-6" v-if="$l2.code !== 'zh'">
             <Chinese
-              v-if="entry.cjk && entry.cjk.canonical && entry.cjk.canonical !== 'NULL'"
+              v-if="
+                entry.cjk &&
+                entry.cjk.canonical &&
+                entry.cjk.canonical !== 'NULL'
+              "
               class="mt-5 mb-5"
               :text="entry.cjk.canonical"
             />
           </div>
           <div class="col-sm-6" v-if="$l2.code !== 'ja'">
             <Japanese
-              v-if="entry.cjk && entry.cjk.canonical && entry.cjk.canonical !== 'NULL'"
+              v-if="
+                entry.cjk &&
+                entry.cjk.canonical &&
+                entry.cjk.canonical !== 'NULL'
+              "
               class="mt-5 mb-5"
               :text="entry.cjk.canonical"
             />
           </div>
           <div class="col-sm-6" v-if="$l2.code !== 'ko'">
             <Korean
-              v-if="entry.cjk && entry.cjk.canonical && entry.cjk.canonical !== 'NULL'"
+              v-if="
+                entry.cjk &&
+                entry.cjk.canonical &&
+                entry.cjk.canonical !== 'NULL'
+              "
               class="mt-5 mb-5"
               :text="entry.cjk.canonical"
             />
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <EntryYouTube
-              :text="entry.bare"
-              class="mb-5"
-            />
-          </div>
-        </div>
-      </div>
+      <EntryCourseAd v-if="$l2.code === 'zh'" :entry="entry" class="focus-exclude"></EntryCourseAd>
     </div>
   </div>
 </template>
@@ -217,15 +232,15 @@ export default {
     EntryCourseAd,
     EntryLyrics,
     InstagramButton,
-    EntryRelated
+    EntryRelated,
   },
   props: {
     method: {
-      type: String
+      type: String,
     },
     args: {
-      type: String
-    }
+      type: String,
+    },
   },
   data() {
     return {
@@ -235,7 +250,7 @@ export default {
       character: {},
       unsplashSrcs: [],
       unsplashSearchTerm: '',
-      entryKey: 0
+      entryKey: 0,
     }
   },
   computed: mapState(['savedWords']),
@@ -243,7 +258,10 @@ export default {
     async updateWords() {
       this.sW = []
       this.savedTexts = []
-      if(this.$store.state.savedWords && this.$store.state.savedWords[this.$l2.code]) {
+      if (
+        this.$store.state.savedWords &&
+        this.$store.state.savedWords[this.$l2.code]
+      ) {
         for (let savedWord of this.$store.state.savedWords[this.$l2.code]) {
           let word = await (await this.$dictionary).get(savedWord.id)
           if (word) {
@@ -253,16 +271,23 @@ export default {
       }
     },
     saved() {
-      return this.entry && this.$store.getters.hasSavedWord({
-        text: this.entry.bare.toLowerCase(),
-        l2: this.$l2.code
-      })
+      return (
+        this.entry &&
+        this.$store.getters.hasSavedWord({
+          text: this.entry.bare.toLowerCase(),
+          l2: this.$l2.code,
+        })
+      )
     },
     show(entry) {
       this.entryKey += 1
-      entry.definitions = entry.definitions.map(definition => definition.replace(/\[.*\] /g, ''))
+      entry.definitions = entry.definitions.map((definition) =>
+        definition.replace(/\[.*\] /g, '')
+      )
       this.entry = entry
-      document.title = `${entry.bare} (${entry.definitions[0]}) | ${this.$l2 ? this.$l2.name : ''} Zero to Hero`
+      document.title = `${entry.bare} (${entry.definitions[0]}) | ${
+        this.$l2 ? this.$l2.name : ''
+      } Zero to Hero`
     },
     async route() {
       if (this.method && this.args) {
@@ -282,7 +307,7 @@ export default {
     async random() {
       let randomId = (await (await this.$dictionary).random()).id
       location.href = `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${randomId}`
-    }
+    },
   },
   watch: {
     $route() {
@@ -292,14 +317,14 @@ export default {
     },
     savedWords() {
       this.updateWords()
-    }
+    },
   },
   mounted() {
     if (this.$route.name === 'dictionary') {
       this.route()
       this.updateWords()
     }
-  }
+  },
 }
 </script>
 
