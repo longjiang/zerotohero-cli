@@ -25,7 +25,7 @@
     >
       <div class="container focus-exclude text-center text-light">
         <Paginator
-          :key="`paginator-${args}`"
+          :key="`paginator-${args}-${paginatorKey}`"
           :items="sW"
           :findCurrent="(item) => item.id === entry.id"
           :url="
@@ -251,6 +251,7 @@ export default {
       unsplashSrcs: [],
       unsplashSearchTerm: '',
       entryKey: 0,
+      paginatorKey: 0
     }
   },
   computed: mapState(['savedWords']),
@@ -269,6 +270,7 @@ export default {
           }
         }
       }
+      this.paginatorKey++
     },
     saved() {
       return (
