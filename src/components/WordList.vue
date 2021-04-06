@@ -9,13 +9,13 @@
         'matched': matchedWords && matchedWords.map(word => word.id).includes(word.id)
         }" v-for="word in words">
         <Star v-if="word && star === true" :word="word" class="mr-1"></Star>
-        <a
+        <router-link
           v-if="compareWith"
-          :href="`/${$l1.code}/${$l2.code}/compare/${$dictionaryName}/${compareWith.id},${word.id}`"
+          :to="`/${$l1.code}/${$l2.code}/compare/${$dictionaryName}/${compareWith.id},${word.id}`"
           class="btn btn-small mr-2"
-          >Compare</a
+          >Compare</router-link
         >
-        <a v-if="word" :href="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`">
+        <router-link v-if="word" :to="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`">
           <span
             class="wordlist-item-word ml-1"
             :data-level="word.level || 'outside'"
@@ -27,7 +27,7 @@
           <span v-if="word.definitions" class="wordlist-item-l1">
             {{ word.definitions.filter(def => !def.startsWith('CL')).join(', ') }}
           </span>
-        </a>
+        </router-link>
       </li>
       <li class="wordlist-item" v-for="text in texts">
         <Star v-if="text && star === true" :text="text" class="mr-1"></Star>

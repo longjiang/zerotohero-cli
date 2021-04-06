@@ -30,8 +30,8 @@
           </div>
         </div>
         <div>
-          <a
-            :href="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${entry.bare}`"
+          <router-link
+            :to="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${entry.id}`"
           >
             <template v-if="['zh', 'yue'].includes($l2.code)">
               <span
@@ -61,7 +61,7 @@
               :data-bg-level="entry.level"
               >{{ entry.level }}</span
             >
-          </a>
+          </router-link>
         </div>
         <div
           v-if="$l2.code === 'ko' && entry.cjk && entry.cjk.canonical"
