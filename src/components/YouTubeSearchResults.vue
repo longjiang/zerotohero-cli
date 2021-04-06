@@ -2,8 +2,8 @@
   <div>
     <YouTubeVideoList :videos="videos" :checkSubs="true" :updateVideos="updateVideos" />
     <div class="mt-4 text-center">
-      <a v-if="start > 9" :href="`/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) - 10}`" class="btn btn-default mr-2">Previous</a>
-      <a :href="`/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) + 10}`" class="btn btn-default">Next</a>
+      <router-link v-if="start > 9" :to="`/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) - 10}`" class="btn btn-default mr-2">Previous</router-link>
+      <router-link :to="`/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) + 10}`" class="btn btn-default">Next</router-link>
     </div>
   </div>
 </template>

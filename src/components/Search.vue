@@ -10,14 +10,14 @@
         class="form-control lookup"
         :placeholder="placeholder || $t('Look up words here...')"
       />
-      <a
+      <router-link
         v-if="random"
         class="btn btn-secondary btn-random ml-2"
-        :href="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/random`"
+        :to="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/random`"
       >
         <i class="fas fa-random mr-1"></i>
         <span>{{ $t('Random') }}</span>
-      </a>
+      </router-link>
       <div v-if="button" class="input-group-append">
         <button
           class="btn btn-primary lookup-button"
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="suggestions" :key="suggestionsKey" v-cloak v-if="active && text && text.length > 0">
-      <a class="suggestion" v-for="suggestion in suggestions" :href="hrefFunc(suggestion)">
+      <router-link class="suggestion" v-for="suggestion in suggestions" :to="hrefFunc(suggestion)">
         <span v-if="suggestion">
           <span
             class="suggestion-word font-weight-bold mr-1"
@@ -46,18 +46,18 @@
             v-html="Helper.highlight(suggestion.definitions.join(', '), text)"
           ></span>
         </span>
-      </a>
+      </router-link>
       <div class="suggestion" v-if="suggestions.length === 0 && type === 'dictionary'">
         <span class="suggestion-not-found">
           <b>&ldquo;{{ text }}&rdquo;</b> is not in
-          <a href="https://en.freedict.org/dictionary">FreeDict.org</a>.
+          <a href="https://en.freedict.org/dictionary" target="_blank">FreeDict.org</a>.
           Try looking it up in
           <a
             :href="`https://en.wiktionary.org/w/index.php?search=${text}`"
-            target="blank"
+            target="_blank"
           >Wiktionary</a>,
           <a :href="`https://en.wikipedia.org/w/index.php?search=${text}`" target="blank">Wikipedia</a>, or
-          <a :href="`https://www.google.com/search?q=${text}`" target="blank">Google.</a>
+          <a :href="`https://www.google.com/search?q=${text}`" target="_blank">Google.</a>
         </span>
       </div>
       <div class="suggestion" v-if="suggestions.length === 0 && type === 'generic'">
@@ -156,7 +156,7 @@ export default {
       const url = $('.suggestion:first-child').attr('href') || this.defaultURL(this.text)
       if (url) {
         this.suggestions = []
-        window.location = url
+        this.$router.push({ path: url })
       }
     },
     cancel() {

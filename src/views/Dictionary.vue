@@ -316,7 +316,7 @@ export default {
     },
     async random() {
       let randomId = (await (await this.$dictionary).random()).id
-      location.href = `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${randomId}`
+      this.$router.push({path: `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${randomId}`})
     },
   },
   watch: {

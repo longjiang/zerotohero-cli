@@ -144,15 +144,15 @@
           <span v-if="word.unit" style="font-size: 0.8em" class="ml-1"
             >Unit {{ word.unit }}</span
           >
-          <a
-            :href="
+          <router-link
+            :to="
               `/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`
             "
             class="ml-1 link-unstyled"
             style="color: #999"
           >
             <i class="fas fa-book"></i>
-          </a>
+          </router-link>
         </div>
         <div>
           <span
