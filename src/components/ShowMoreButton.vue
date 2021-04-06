@@ -43,7 +43,7 @@ export default {
     },
     visible() {
       if (!this.length) {
-        return true
+        return false
       } else if (this.min < this.length) {
         return true
       } else {

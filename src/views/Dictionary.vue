@@ -283,9 +283,25 @@ export default {
     },
     show(entry) {
       this.entryKey += 1
-      entry.definitions = entry.definitions.map((definition) =>
-        definition.replace(/\[.*\] /g, '')
-      )
+      for (let definition of entry.definitions) {
+        definition = definition.replace(/\[.*\] /g, '')
+        if (definition.startsWith('CL')) {
+          
+          let counters = definition.replace('CL:', '').split(',')
+          let cs = []
+          for (let counter of counters) {
+            let c = {
+              pinyin: counter.replace(/.*\[(.*)\]/, '$1')
+            }
+            let t = counter.replace(/\[(.*)\]/, '').split('|')
+            c.simplified = t[t.length - 1]
+            c.traditional = t[0]
+            cs.push(c)
+          }
+          entry.counters = cs
+        }
+      }
+      entry.definitions = entry.definitions.filter((def) => !def.startsWith('CL'))
       this.entry = entry
       document.title = `${entry.bare} (${entry.definitions[0]}) | ${
         this.$l2 ? this.$l2.name : ''

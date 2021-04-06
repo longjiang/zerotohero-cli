@@ -2,17 +2,37 @@
   <!-- ANCHOR img/anchors/entry.png  -->
   <div class="entry-head-wrapper" v-if="entry">
     <div>
-      <div class="entry-word-wrapper" style="display:inline-block">
+      <Annotate tag="div" class="mb-4" v-if="entry.counters"
+        ><span>一{{
+          entry.counters
+            .map((counter) => counter.simplified)
+            .join('、一')
+        }} </span></Annotate
+      >
+      <div class="entry-word-wrapper" style="display: inline-block">
         <div class="mb-2">
           <div class="entry-pinyin">
             <Star :word="entry"></Star>
-            <span v-if="entry.pronunciation" class='ml-2 mr-1'>/{{ entry.pronunciation }}/</span>
-            <span v-if="['zh', 'ja', 'yue'].includes($l2.code)" class="ml-2 mr-1">{{ entry.cjk.phonetics }}</span>
-            <Speak class="ml-1" :text="entry.bare" :mp3="entry.audio" :wiktionary="entry.wiktionary" />
+            <span v-if="entry.pronunciation" class="ml-2 mr-1"
+              >/{{ entry.pronunciation }}/</span
+            >
+            <span
+              v-if="['zh', 'ja', 'yue'].includes($l2.code)"
+              class="ml-2 mr-1"
+              >{{ entry.cjk.phonetics }}</span
+            >
+            <Speak
+              class="ml-1"
+              :text="entry.bare"
+              :mp3="entry.audio"
+              :wiktionary="entry.wiktionary"
+            />
           </div>
         </div>
         <div>
-          <a :href="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${entry.bare}`">
+          <a
+            :href="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${entry.bare}`"
+          >
             <template v-if="['zh', 'yue'].includes($l2.code)">
               <span
                 class="entry-word simplified"
@@ -33,7 +53,9 @@
               ></span>
             </template>
             <span
-              v-if="entry.level && entry.level !== 'outside' && $l2.code !== 'zh'"
+              v-if="
+                entry.level && entry.level !== 'outside' && $l2.code !== 'zh'
+              "
               class="entry-level p-1 rounded ml-2"
               style="position: relative; bottom: 0.5em"
               :data-bg-level="entry.level"
@@ -41,10 +63,19 @@
             >
           </a>
         </div>
-        <div v-if="$l2.code === 'ko' && entry.cjk && entry.cjk.canonical" class="mt-1">
+        <div
+          v-if="$l2.code === 'ko' && entry.cjk && entry.cjk.canonical"
+          class="mt-1"
+        >
           <span class="ml-2 entry-cjk">{{ entry.cjk.canonical }}</span>
         </div>
-        <div v-if="['zh', 'yue'].includes($l2.code) && entry.simplified !== entry.traditional" class="mt-1">
+        <div
+          v-if="
+            ['zh', 'yue'].includes($l2.code) &&
+            entry.simplified !== entry.traditional
+          "
+          class="mt-1"
+        >
           <span class="ml-2 entry-cjk simplified">{{ entry.traditional }}</span>
           <span class="ml-2 entry-cjk traditional">{{ entry.simplified }}</span>
         </div>
@@ -59,18 +90,18 @@ import Helper from '@/lib/helper'
 export default {
   props: {
     entry: {
-      type: Object
+      type: Object,
     },
     minimal: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
   data() {
     return {
-      Helper
+      Helper,
     }
-  }
+  },
 }
 </script>
 
@@ -110,7 +141,7 @@ export default {
   position: relative;
 }
 
-.entry-cjk{
+.entry-cjk {
   font-size: 1.5rem;
 }
 </style>
