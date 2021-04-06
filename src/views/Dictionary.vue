@@ -80,13 +80,13 @@
           </div>
         </div>
       </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <EntryYouTube :text="entry.bare" class="mb-5" />
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <EntryYouTube :text="entry.bare" class="mb-5" />
           </div>
         </div>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
