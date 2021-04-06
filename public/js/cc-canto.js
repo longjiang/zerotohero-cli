@@ -176,7 +176,7 @@ var pinyinify = function(str) {
 }
 
 const Dictionary = {
-  file: '../data/cc-canto/cccanto-webdist.tsv.txt',
+  file: 'https://server.chinesezerotohero.com/data/cc-canto/cccanto-webdist.tsv.txt',
   words: [],
   name: 'cc-canto',
   credit() {

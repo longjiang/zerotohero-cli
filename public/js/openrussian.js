@@ -54,7 +54,7 @@ const Dictionary = {
     return 'The Russian dictionary is provided by <a href="https://en.openrussian.org/about">OpenRussian.org</a>, which is freely distribtued.'
   },
   dictionaryFile(table) {
-    let filename = `/data/openrussian/${table}.csv.txt`
+    let filename = `https://server.chinesezerotohero.com/data/openrussian/${table}.csv.txt`
     return filename
   },
   loadDeclensions() {

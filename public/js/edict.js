@@ -1,5 +1,5 @@
 const Dictionary = {
-  file: '../data/edict/edict.tsv.txt',
+  file: 'https://server.chinesezerotohero.com/data/edict/edict.tsv.txt',
   words: [],
   name: 'edict',
   credit() {

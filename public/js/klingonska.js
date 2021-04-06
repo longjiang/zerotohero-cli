@@ -69,7 +69,7 @@ const Dictionary = {
     return words
   },
   dictionaryFile(options) {
-    let filename = '/data/klingonska/dict.zdb.txt'
+    let filename = 'https://server.chinesezerotohero.com/data/klingonska/dict.zdb.txt'
     return filename
   },
   load(options) {

@@ -333,7 +333,7 @@ function addBlankEventHandlers() {
 function loadAllCsvsThen(callback) {
   var loaded = 0
   files.forEach(function(file) {
-    Papa.parse('data/russian-grammar/' + file.name, {
+    Papa.parse('https://server.chinesezerotohero.com/data/russian-grammar/' + file.name, {
       download: true,
       header: true,
       complete: function(results) {

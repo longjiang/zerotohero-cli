@@ -81,7 +81,8 @@ const Dictionary = {
     return words
   },
   dictionaryFile(options) {
-    let filename = `/data/freedict/${options.l2}-${options.l1}.dict.txt`
+    const server = 'https://server.chinesezerotohero.com/'
+    let filename = `${server}data/freedict/${options.l2}-${options.l1}.dict.txt`
     return filename
   },
   load(options) {
