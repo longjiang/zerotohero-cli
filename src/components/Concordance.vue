@@ -13,9 +13,8 @@
           <li v-for="example in examples">
             <Annotate tag="div" class="pt-2 pb-2" :showTranslate="true">
               <span
-                v-for="sentence of example.sentences"
                 v-html="
-                  Helper.highlightMultiple(sentence, words, level || 'outside')
+                  Helper.highlightMultiple(example.sentences[0], words, level || 'outside')
                 "
               />
             </Annotate>
@@ -120,7 +119,8 @@ export default {
       })
       for (let example of examples) {
         if (this.$l2.code === 'zh') {
-          let sentences = example.l2.split(/(?<=[。！？：]+”?)/)
+          let t = example.l2.replace(/([。！？：]+”?)/g, '$1!!!DELIMITER!!!')
+          let sentences = t.split('!!!DELIMITER!!!')
           example.sentences = []
           for (let sentence of sentences) {
             let found = this.words.some((word) => sentence.includes(word))
