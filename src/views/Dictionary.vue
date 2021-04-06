@@ -43,25 +43,17 @@
       <div class="container mb-4">
         <div class="row">
           <div class="col-sm-12 text-center">
-            <EntryHeader :entry="entry" :key="`header-${args}`"></EntryHeader>
-            <DefinitionsList
-              :key="`def-list-${args}`"
-              v-if="entry.definitions"
-              class="mt-4"
-              :definitions="entry.definitions"
-            ></DefinitionsList>
-          </div>
-        </div>
-      </div>
-
-      <div
-        v-if="$l2.code === 'zh'"
-        class="jumbotron-fluid p-0 bg-light mt-4 mb-4"
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <EntryExample class="mt5" :entry="entry"></EntryExample>
+            <div class="widget">
+              <div class="p-4">
+              <EntryHeader :entry="entry" :key="`header-${args}`"></EntryHeader>
+              <DefinitionsList
+                :key="`def-list-${args}`"
+                v-if="entry.definitions"
+                class="mt-4"
+                :definitions="entry.definitions"
+              ></DefinitionsList>
+              </div>
+              <EntryExample :entry="entry"></EntryExample>
             </div>
           </div>
         </div>
@@ -124,7 +116,7 @@
           </div>
         </div>
         <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
-          <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
+
             <div class="col-sm-12" v-if="$l2.code !== 'zh'">
               <EntryCharacters
                 v-if="entry.cjk && entry.cjk.canonical"
@@ -144,7 +136,7 @@
                 :text="entry.traditional"
                 :pinyin="entry.pinyin"
               ></EntryCharacters>
-            </div>
+
           </div>
           <div class="col-sm-6" v-if="$l2.code !== 'zh'">
             <Chinese

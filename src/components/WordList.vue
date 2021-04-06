@@ -25,7 +25,7 @@
             /{{ word.pronunciation }}/
           </span>
           <span v-if="word.definitions" class="wordlist-item-l1">
-            {{ word.definitions.join(', ') }}
+            {{ word.definitions.filter(def => !def.startsWith('CL')).join(', ') }}
           </span>
         </a>
       </li>

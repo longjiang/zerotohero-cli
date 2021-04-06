@@ -23,7 +23,7 @@
             />
           </div>
         </div>
-        <div :class="`col-lg-${6 / scale} example-wrapper pt-3 pb-5`">
+        <div :class="`col-lg-${6 / scale} example-wrapper pt-3 pb-5 text-left`">
           <div class="example-sentence mt-4">
             <!-- <p class="example-sentence-pinyin">{{ entry.examplePinyin }} <i class="speak glyphicon glyphicon-volume-up" v-bind:data-speak="entry.example"></i></p> -->
 
@@ -31,9 +31,6 @@
               tag="p"
               class="example-sentence-word"
               :speak="true"
-              :copy="true"
-              :showTranslate="true"
-              :fullscreen="true"
             >
               <span
                 v-html="
@@ -167,6 +164,8 @@ export default {
   padding-bottom: 56%;
   height: 0;
   position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .example-image {

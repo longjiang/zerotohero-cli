@@ -1,7 +1,7 @@
 <template>
-  <div id="entry-morphology">
+  <div id="entry-morphology" class="widget">
     <div class="widget-title">Word forms of “{{ word.bare }}”</div>
-    <div class="jumbotron-fluid bg-light p-4">
+    <div class="widget-body jumbotron-fluid p-4">
       <div class="row">
         <div
           v-if="Helper.isEmpty(tables) || tables.length === 0"

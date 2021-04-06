@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="widget">
     <div class="widget-title">{{ $t('Collocations with “{text}”', {text: term}) }}</div>
-    <div class="jumbotron-fluid bg-light p-4">
+    <div class="widget-body jumbotron-fluid p-4">
       <div class="row">
         <div
           class="col-sm-12 col-md-6 col-lg-4"

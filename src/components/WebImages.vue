@@ -1,7 +1,7 @@
 <template>
-  <div class="web-images">
+  <div class="web-images widget">
     <div class="widget-title">{{ $t('Images of “{text}” on the Web', {text: text}) }}</div>
-    <div class="jumbotron-fluid bg-light p-4">
+    <div class="widget-body jumbotron-fluid p-4">
       <div
         class="image-wall"
         :key="`web-images-${text}`"

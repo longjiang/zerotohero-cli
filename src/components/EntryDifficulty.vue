@@ -1,7 +1,7 @@
 <template>
-  <div class="entry-difficulty">
+  <div class="entry-difficulty widget">
     <div class="widget-title">Frequency</div>
-    <div class="jumbotron-fluid bg-light p-4">
+    <div class="widget-body jumbotron-fluid p-4">
       <div class="frequency mt-1">
         <div
           class="frequency-fill"

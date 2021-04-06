@@ -1,7 +1,7 @@
 <template>
-  <div class="entry-youtube">
+  <div class="entry-youtube widget">
     <div class="widget-title">{{ $t('“{text}” videos on YouTube', {text: text})}}</div>
-    <div class="jumbotron-fluid bg-light p-4">
+    <div class="widget-body jumbotron-fluid p-4">
       <YouTubeSearchResults :term="text" :start="0" />
     </div>
   </div>

@@ -5,11 +5,11 @@
     <div class="row character-row" v-if="characters">
       <!-- ANCHOR img/anchors/character.png -->
       <div
-        class="character-column"
+        class="character-column widget"
         v-for="(character, index) in characters"
       >
         <div class="widget-title">Character</div>
-        <div class="jumbotron-fluid bg-light p-4">
+        <div class="widget-body jumbotron-fluid p-4">
           <Character
             :character="character"
             :pinyin="pinyinArr.length > 0 ? pinyinArr[index] : ''"

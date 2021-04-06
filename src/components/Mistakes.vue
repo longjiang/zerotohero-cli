@@ -1,7 +1,7 @@
 <template>
-  <div class="mistakes">
+  <div class="widget mistakes">
     <div class="widget-title mistakes-label">Common mistakes containing “{{ text }}”</div>
-    <div class="jumbotron-fluid bg-light p-4">
+    <div class="widget-body jumbotron-fluid p-4">
       <div v-if="mistakes && mistakes.length > 0">
         <ul class="collapsed pl-0" data-collapse-target>
           <li class="list-unstyled mistake-item mt-4 mb-4" v-for="mistake in mistakes">

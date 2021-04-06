@@ -1,9 +1,9 @@
 <template>
-  <div :key="'concordance-' + concordanceKey">
+  <div :key="'concordance-' + concordanceKey" class="widget">
     <div class="widget-title">
       {{ $t('Sentences with “{text}”', { text: term }) }}
     </div>
-    <div class="jumbotron-fluid bg-light p-4">
+    <div class="widget-body jumbotron-fluid p-4">
       <div v-if="examples && examples.length > 0">
         <ul
           v-if="examples"

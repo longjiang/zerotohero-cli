@@ -1,5 +1,5 @@
 <template>
-  <div :key="'related-' + relatedKey">
+  <div :key="'related-' + relatedKey" class="widget">
     <div class="widget-title">
       Words related to “<span v-if="!$l2.han || $l2.code === 'ja'">{{
         entry.head
@@ -8,7 +8,7 @@
       ><span class="simplified">{{ entry.simplified }}</span
       >”
     </div>
-    <div class="jumbotron-fluid bg-light p-4">
+    <div class="jumbotron-fluid widget-body p-4">
       <WordList
         v-if="words && words.length > 0"
         :words="words"
