@@ -32,9 +32,8 @@
           :href="`/${$l1.code}/${$l2.code}/settings`"
         >Settings</a>.
       </div>
-      <hr />
       <div class="mt-2">
-        <p>{{ $t('Collocations provided by') }}</p>
+        {{ $t('Collocations provided by') }}
         <a
           target="_blank"
           :href="

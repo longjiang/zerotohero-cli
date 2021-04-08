@@ -35,7 +35,7 @@
       </div>
       <hr v-if="examples && examples.length === 0" />
       <div class="mt-4">
-        <p>{{ $t('Sentences provided by') }}</p>
+        {{ $t('Sentences provided by') }}
         <a
           :href="`https://app.sketchengine.eu/#concordance?corpname=${encodeURIComponent(
             SketchEngine.corpname
@@ -51,16 +51,11 @@
       </div>
       <hr />
       <div>
-        <p>{{ $t('Search for more sentences at') }}</p>
+        {{ $t('Search for more sentences at') }}
         <a
           :href="`https://tatoeba.org/eng/sentences/search?from=${$l2['iso639-3']}&to=${$l1['iso639-3']}&query=${term}`"
           target="_blank"
         >
-          <img
-            src="/img/logo-tatoeba.png"
-            alt="Tatoeba"
-            class="logo-small mr-3"
-          />
           Tatoeba
         </a>
       </div>

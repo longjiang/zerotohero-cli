@@ -23,7 +23,7 @@
       </div>
       <hr v-if="words && words.length === 0" />
       <div class="mt-4">
-        <p>{{ $t('Related words provided by') }}</p>
+        {{ $t('Related words provided by') }}
         <a
           href="https://www.sketchengine.eu/"
           target="_blank"
