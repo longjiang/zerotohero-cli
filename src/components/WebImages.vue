@@ -17,9 +17,8 @@
           @click="goto(image.url)"
         />
       </div>
-      <hr />
-      <div class="mt-2">
-        {{ $t('Image search by') }}
+      <p class="mt-4">
+        See more images of of “{{ text }}” on
         <a
           :href="
             `https://www.google.com/search?q=${text.replace(/ /g, '+')}&tbm=isch&sout=1#spf=1567955197854`
@@ -27,7 +26,7 @@
         >
           <img src="/img/logo-google-images.png" alt="Google Images" class="logo-small ml-2" />
         </a>
-      </div>
+      </p>
     </div>
   </div>
 </template>

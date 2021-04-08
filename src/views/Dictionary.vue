@@ -45,13 +45,16 @@
           <div class="col-sm-12 text-center">
             <div class="widget">
               <div class="p-4">
-              <EntryHeader :entry="entry" :key="`header-${args}`"></EntryHeader>
-              <DefinitionsList
-                :key="`def-list-${args}`"
-                v-if="entry.definitions"
-                class="mt-4"
-                :definitions="entry.definitions"
-              ></DefinitionsList>
+                <EntryHeader
+                  :entry="entry"
+                  :key="`header-${args}`"
+                ></EntryHeader>
+                <DefinitionsList
+                  :key="`def-list-${args}`"
+                  v-if="entry.definitions"
+                  class="mt-4"
+                  :definitions="entry.definitions"
+                ></DefinitionsList>
               </div>
               <EntryExample :entry="entry"></EntryExample>
             </div>
@@ -71,12 +74,30 @@
               :entry="entry"
               limit="10"
             />
+            <div class="widget mt-5" v-if="youglishLang[$l2.code]">
+              <div class="widget-title">YouGlish</div>
+              <div class="widget-body">
+                <p class="mt-4 text-center">
+                  See examples of “{{ entry.bare }}” on
+                  <a
+                    :href="`https://youglish.com/pronounce/${entry.bare}/${
+                      youglishLang[$l2.code]
+                    }`"
+                    target="youglish"
+                    ><img
+                      style="margin-bottom: 1em"
+                      src="/img/logo-youglish-cn.png"
+                  /></a>
+                </p>
+              </div>
+            </div>
             <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
             <Collocations
               class="mt-5 mb-5"
               :word="entry"
               :level="entry.level"
             />
+            <EntryRelated :entry="entry" class="mb-5" />
           </div>
         </div>
       </div>
@@ -103,10 +124,8 @@
           ></EntryDisambiguation>
         </div>
 
-
         <div class="row">
           <div class="col-sm-12">
-            <EntryRelated :entry="entry" class="mb-5" />
 
             <Mistakes
               class="mt-5 mb-5"
@@ -116,27 +135,25 @@
           </div>
         </div>
         <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
-
-            <div class="col-sm-12" v-if="$l2.code !== 'zh'">
-              <EntryCharacters
-                v-if="entry.cjk && entry.cjk.canonical"
-                class="mb-4"
-                :text="entry.cjk.canonical"
-                :pinyin="entry.cjk.phonetics ? entry.cjk.phonetics : undefined"
-              ></EntryCharacters>
-            </div>
-            <div class="col-sm-12" v-else>
-              <EntryCharacters
-                class="mb-4 simplified"
-                :text="entry.simplified"
-                :pinyin="entry.pinyin"
-              ></EntryCharacters>
-              <EntryCharacters
-                class="mb-4 traditional"
-                :text="entry.traditional"
-                :pinyin="entry.pinyin"
-              ></EntryCharacters>
-
+          <div class="col-sm-12" v-if="$l2.code !== 'zh'">
+            <EntryCharacters
+              v-if="entry.cjk && entry.cjk.canonical"
+              class="mb-4"
+              :text="entry.cjk.canonical"
+              :pinyin="entry.cjk.phonetics ? entry.cjk.phonetics : undefined"
+            ></EntryCharacters>
+          </div>
+          <div class="col-sm-12" v-else>
+            <EntryCharacters
+              class="mb-4 simplified"
+              :text="entry.simplified"
+              :pinyin="entry.pinyin"
+            ></EntryCharacters>
+            <EntryCharacters
+              class="mb-4 traditional"
+              :text="entry.traditional"
+              :pinyin="entry.pinyin"
+            ></EntryCharacters>
           </div>
           <div class="col-sm-6" v-if="$l2.code !== 'zh'">
             <Chinese
@@ -173,7 +190,11 @@
           </div>
         </div>
       </div>
-      <EntryCourseAd v-if="$l2.code === 'zh'" :entry="entry" class="focus-exclude"></EntryCourseAd>
+      <EntryCourseAd
+        v-if="$l2.code === 'zh'"
+        :entry="entry"
+        class="focus-exclude"
+      ></EntryCourseAd>
     </div>
   </div>
 </template>
@@ -243,7 +264,24 @@ export default {
       unsplashSrcs: [],
       unsplashSearchTerm: '',
       entryKey: 0,
-      paginatorKey: 0
+      paginatorKey: 0,
+      youglishLang: {
+        zh: 'chinese',
+        en: 'english',
+        ar: 'arabic',
+        nl: 'dutch',
+        fr: 'french',
+        de: 'german',
+        he: 'hebrew',
+        it: 'italian',
+        ja: 'japanese',
+        ko: 'korean',
+        pl: 'polish',
+        pt: 'portuguese',
+        ru: 'russian',
+        es: 'spanish',
+        tr: 'turkish',
+      },
     }
   },
   computed: mapState(['savedWords']),
@@ -278,12 +316,11 @@ export default {
       for (let definition of entry.definitions) {
         definition = definition.replace(/\[.*\] /g, '')
         if (definition.startsWith('CL')) {
-          
           let counters = definition.replace('CL:', '').split(',')
           let cs = []
           for (let counter of counters) {
             let c = {
-              pinyin: counter.replace(/.*\[(.*)\]/, '$1')
+              pinyin: counter.replace(/.*\[(.*)\]/, '$1'),
             }
             let t = counter.replace(/\[(.*)\]/, '').split('|')
             c.simplified = t[t.length - 1]
@@ -293,7 +330,9 @@ export default {
           entry.counters = cs
         }
       }
-      entry.definitions = entry.definitions.filter((def) => !def.startsWith('CL'))
+      entry.definitions = entry.definitions.filter(
+        (def) => !def.startsWith('CL')
+      )
       this.entry = entry
       document.title = `${entry.bare} (${entry.definitions[0]}) | ${
         this.$l2 ? this.$l2.name : ''
@@ -316,7 +355,9 @@ export default {
     },
     async random() {
       let randomId = (await (await this.$dictionary).random()).id
-      this.$router.push({path: `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${randomId}`})
+      this.$router.push({
+        path: `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${randomId}`,
+      })
     },
   },
   watch: {
