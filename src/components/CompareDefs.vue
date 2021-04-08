@@ -42,14 +42,15 @@ export default {
   },
   methods: {
     defListIncludes(defList, def) {
-      return defList.find(d => def.text.includes(d.text))
+      return defList.find(d => def.includes(d))
     },
     common(a, b) {
+      console.log(a.definitions, b.definitions)
       for (let adef of a.definitions) {
         for (let bdef of b.definitions) {
-          if (bdef.text && bdef.text.includes(adef.text)) {
+          if (bdef && bdef.includes(adef)) {
             this.defCommon.push(bdef)
-          } else if (adef.text && adef.text.includes(bdef.text)) {
+          } else if (adef && adef.includes(bdef)) {
             this.defCommon.push(adef)
           }
         }

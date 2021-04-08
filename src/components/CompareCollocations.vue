@@ -1,9 +1,9 @@
 <template>
-  <div class="container" :key="'collocations-' + collocationsKey">
+  <div class="widget" :key="'collocations-' + collocationsKey">
     <div class="widget-title">
       Collocations with “{{ a.bare }}” and “{{ b.bare }}”
     </div>
-    <div class="jumbotron-fluid bg-light p-4">
+    <div class="jumbotron-fluid p-4">
       <div
         class="row"
         v-for="(description, name) in colDesc"

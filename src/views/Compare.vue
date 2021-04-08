@@ -90,14 +90,29 @@
       </div>
     </div>
 
-    <!-- <EntryRelated :entry="entry"></EntryRelated> -->
-
-    <CompareCollocations
-      class="mt-5 focus"
-      v-if="a && b"
-      :a="a"
-      :b="b"
-    ></CompareCollocations>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <CompareCollocations
+            class="mt-5 focus"
+            v-if="a && b"
+            :a="a"
+            :b="b"
+          ></CompareCollocations>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 mt-5">
+          <EntryRelated :key="aKey" :entry="a"></EntryRelated>
+        </div>
+        <div class="col-sm-12 mt-5">
+          <EntryRelated :key="bKey" :entry="b"></EntryRelated>
+        </div>
+      </div>
+    </div>
 
     <!-- <EntryCharacters :entry="entry"></EntryCharacters> -->
     <div class="container mt-5 focus">
@@ -132,7 +147,7 @@
       </div>
     </div>
 
-    <div class="container mt-5 focus">
+    <div class="container focus">
       <!--
       <div class="row">
         <div class="col-sm-6">
@@ -146,18 +161,18 @@
 
       <div class="row" v-if="['ja', 'ko'].includes($l2.code)">
         <div class="col-sm-6">
-          <Chinese v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'" class="mb-5" :text="a.cjk.canonical" />
+          <Chinese v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'" :text="a.cjk.canonical" />
         </div>
         <div class="col-sm-6">
-          <Chinese v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'" class="mb-5" :text="b.cjk.canonical" />
+          <Chinese v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'" :text="b.cjk.canonical" />
         </div>
       </div>
       <div class="row" v-if="['zh', 'ja'].includes($l2.code)">
         <div class="col-sm-6">
-          <Korean v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'" class="mt-5 mb-5" :text="a.cjk.canonical" />
+          <Korean v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'" class="mb-5" :text="a.cjk.canonical" />
         </div>
         <div class="col-sm-6">
-          <Korean v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'" class="mt-5 mb-5" :text="b.cjk.canonical" />
+          <Korean v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'" class="mb-5" :text="b.cjk.canonical" />
         </div>
       </div>
       <div class="row">
@@ -175,9 +190,6 @@
       :entry="b.hsk > a.hsk ? b : a"
       :key="aKey + bKey"
     ></EntryCourseAd>
-
-    <EntryLyrics v-if="a" :entry="a" limit="1" :key="aKey"></EntryLyrics>
-    <EntryLyrics v-if="b" :entry="b" limit="1" :key="bKey"></EntryLyrics>
   </div>
 </template>
 
@@ -196,6 +208,7 @@ import SearchCompare from '@/components/SearchCompare.vue'
 import Korean from '@/components/Korean'
 import Japanese from '@/components/Japanese'
 import Chinese from '@/components/Chinese'
+import EntryRelated from '@/components/EntryRelated'
 
 export default {
   components: {
@@ -212,7 +225,8 @@ export default {
     Korean,
     Japanese,
     Chinese,
-    CompareDefs
+    CompareDefs,
+    EntryRelated
   },
   data() {
     return {
