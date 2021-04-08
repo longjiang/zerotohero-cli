@@ -86,7 +86,7 @@
                     target="youglish"
                     ><img
                       style="margin-bottom: 1em"
-                      src="/img/logo-youglish-cn.png"
+                      src="/img/logo-youglish.png"
                   /></a>
                 </p>
               </div>
