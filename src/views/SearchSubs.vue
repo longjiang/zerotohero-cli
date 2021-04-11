@@ -22,13 +22,10 @@
         <div class="col-sm-12">
           <div v-for="video in results.slice(0, 1)">
             <h4>{{ video.title }}</h4>
-            <YouTubeVideo ref="youtube" :youtube="video.youtube_id" />
-            <SyncedTranscript
-              ref="transcript"
-              :onSeek="seekYouTube"
-              :onPause="pauseYouTube"
-              :lines="JSON.parse(video.subs_l2)"
-              
+            <YouTubeWithTranscript
+              :youtube="video.youtube_id"
+              ref="youtube"
+              :l2Lines="JSON.parse(video.subs_l2)"
             />
           </div>
         </div>
@@ -38,7 +35,7 @@
 </template>
 
 <script>
-import YouTubeVideo from '@/components/YouTubeVideo'
+import YouTubeWithTranscript from '@/components/YouTubeWithTranscript'
 import SyncedTranscript from '@/components/SyncedTranscript'
 import YouTubeChannelCard from '@/components/YouTubeChannelCard'
 import SimpleSearch from '@/components/SimpleSearch'
@@ -51,7 +48,7 @@ export default {
   components: {
     YouTubeSearchResults,
     SimpleSearch,
-    YouTubeVideo,
+    YouTubeWithTranscript,
     YouTubeChannelCard,
     SyncedTranscript,
   },
