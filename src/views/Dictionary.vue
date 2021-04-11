@@ -182,6 +182,11 @@
               :text="entry.cjk.canonical"
             />
           </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <EntryYouTube :text="entry.bare" class="mb-5" />
+            </div>
+          </div>
         </div>
       </div>
       <EntryCourseAd
