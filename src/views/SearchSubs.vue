@@ -20,14 +20,19 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <div v-for="video in results.slice(0, 1)">
-            <h4>{{ video.title }}</h4>
+          <div class="mb-4 text-center">
+            <button @click="prevHit" class="btn btn-default">Previous</button>
+            <button @click="nextHit" class="btn btn-default ml-2">Next</button>
+          </div>
+          <div v-if="hits.length > 0" :set="hit = hits[hitIndex]">
             <YouTubeWithTranscript
-              :youtube="video.youtube_id"
+              :youtube="hit.video.youtube_id"
               ref="youtube"
-              :l2Lines="JSON.parse(video.subs_l2)"
+              :l2Lines="JSON.parse(hit.video.subs_l2)"
               layout="vertical"
               :highlight="term"
+              :startLineIndex="hit.lineIndex"
+              :autoload="hitIndex > 0"
             />
           </div>
         </div>
@@ -64,7 +69,9 @@ export default {
   },
   data() {
     return {
-      results: []
+      videos: [],
+      hits: [],
+      hitIndex: 0
     }
   },
   watch: {
@@ -74,9 +81,14 @@ export default {
   },
   mounted() {
     this.updateSearchText()
-    console.log(this.$refs.search.text)
   },
   methods: {
+    prevHit() {
+      this.hitIndex = Math.max(this.hitIndex - 1, 0)
+    },
+    nextHit() {
+      this.hitIndex = Math.min(this.hitIndex + 1, this.hits.length - 1)
+    },
     seekYouTube(starttime) {
       this.$refs.youtube.seek(starttime)
     },
@@ -85,6 +97,7 @@ export default {
     },
     updateSearchText() {
       let termDecoded = decodeURIComponent(this.term)
+      this.$refs.search.text = termDecoded
       this.searchSubs(this.term)
     },
     async searchSubs(term) {
@@ -92,7 +105,18 @@ export default {
         `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${this.term}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
       )
       if (response && response.data && response.data.length > 0) {
-        this.results = response.data
+        this.videos = response.data
+        for (let video of this.videos) {
+          let l2Lines = JSON.parse(video.subs_l2)
+          for (let index in l2Lines) {
+            if (l2Lines[index].line.includes(this.term)) {
+              this.hits.push({
+                video: video,
+                lineIndex: index,
+              })
+            }
+          }
+        }
       }
     },
   }

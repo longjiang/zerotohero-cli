@@ -21,7 +21,7 @@
     </div>
     <div v-if="layout === 'vertical'" class="row">
       <div class="col-sm-12">
-        <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="highlight ? getHighlightStartTime(highlight) : 0" />
+        <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="this.l2Lines.length > 0 ? this.l2Lines[startLineIndex].starttime : 0" :autoload="autoload" />
         <div :key="'transcript-' + youtube">
           <div v-if="this.l2Lines.length > 0" class="text-center">
             <SyncedTranscript
@@ -33,7 +33,7 @@
               :single="true"
               :quiz="false"
               :highlight="highlight"
-              :startLineIndex="getHighlightLineIndex(highlight)"
+              :startLineIndex="startLineIndex"
             />
           </div>
         </div>
@@ -63,6 +63,12 @@ export default {
     },
     highlight: {
       type: String
+    },
+    autoload: {
+      default: false
+    },
+    startLineIndex: {
+      default: 0
     }
   },
   data() {
@@ -95,6 +101,11 @@ export default {
     togglePaused() {
       this.$refs.youtube.togglePaused()
     },
+  },
+  watch: {
+    startLineIndex() {
+      this.$refs.youtube.seek(this.l2Lines[this.startLineIndex].starttime)
+    }
   },
   mounted() {
     setInterval(() => {

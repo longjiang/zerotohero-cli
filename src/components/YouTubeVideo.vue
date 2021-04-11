@@ -31,6 +31,9 @@ export default {
     },
     starttime: {
       default: 0
+    },
+    autoload: {
+      default: false
     }
   },
   mounted() {
@@ -43,6 +46,11 @@ export default {
     // eslint-disable-next-line no-unused-vars
     window.onPlayerReady = function(evt) {
       // Required by YouTube API
+    }
+  },
+  updated() {
+    if (this.autoload) {
+      this.loadYouTubeiFrame()
     }
   },
   methods: {
