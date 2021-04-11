@@ -4,6 +4,9 @@
       <button v-if="hitIndex > 0" @click="prevHit" class="btn btn-default">Previous</button>
       <span class="ml-2 mr-2">{{ hitIndex + 1 }} of {{ hits.length }}</span>
       <button v-if="hitIndex < hits.length - 1" @click="nextHit" class="btn btn-default">Next</button>
+      <b-button variant="danger" @click="remove" class="ml-1"
+        ><i class="fas fa-trash-alt"></i
+      ></b-button>
     </div>
     <div v-if="hits.length > 0" :set="(hit = hits[hitIndex])">
       <YouTubeWithTranscript
@@ -47,6 +50,23 @@ export default {
     this.searchSubs(this.term)
   },
   methods: {
+    async remove() {
+      let id = this.hits[this.hitIndex].video.id
+      let response = await $.ajax({
+        url: `${Config.wiki}items/youtube_videos/${id}`,
+        type: 'DELETE',
+        contentType: 'application/json',
+        xhr: function () {
+          return window.XMLHttpRequest == null ||
+            new window.XMLHttpRequest().addEventListener == null
+            ? new window.ActiveXObject('Microsoft.XMLHTTP')
+            : $.ajaxSettings.xhr()
+        },
+      })
+      if (response) {
+        this.hits = this.hits.filter(hit => hit.video.id !== id)
+      }
+    },
     prevHit() {
       this.hitIndex = Math.max(this.hitIndex - 1, 0)
     },

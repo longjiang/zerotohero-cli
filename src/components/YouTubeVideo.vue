@@ -89,36 +89,42 @@ export default {
               }
             },
             'onError': async (event) => {
+              /*
               if ([100, 150].includes(event.data)) {
+                window.removedIDs = window.removedIDs || []
                 let videoId = event.target.playerInfo.videoData.video_id
-                console.log(`deleting ${videoId}`)
-                let response = await $.ajax({
-                  url: `https://directus.chinesezerotohero.com/_/items/youtube_videos?filter[youtube_id][eq]=${videoId}&fields=id`,
-                  type: 'GET',
-                  contentType: 'application/json',
-                  xhr: function () {
-                    return window.XMLHttpRequest == null ||
-                      new window.XMLHttpRequest().addEventListener == null
-                      ? new window.ActiveXObject('Microsoft.XMLHTTP')
-                      : $.ajaxSettings.xhr()
-                  },
-                })
-                if (response) {
-                  for (let video of response.data) {
-                    $.ajax({
-                      url: `https://directus.chinesezerotohero.com/_/items/youtube_videos/${video.id}`,
-                      type: 'DELETE',
-                      contentType: 'application/json',
-                      xhr: function () {
-                        return window.XMLHttpRequest == null ||
-                          new window.XMLHttpRequest().addEventListener == null
-                          ? new window.ActiveXObject('Microsoft.XMLHTTP')
-                          : $.ajaxSettings.xhr()
-                      },
-                    })
+                if (!window.removedIDs.includes(videoId)) {
+                  console.log(`deleting ${videoId}`)
+                  let response = await $.ajax({
+                    url: `https://directus.chinesezerotohero.com/_/items/youtube_videos?filter[youtube_id][eq]=${videoId}&fields=id`,
+                    type: 'GET',
+                    contentType: 'application/json',
+                    xhr: function () {
+                      return window.XMLHttpRequest == null ||
+                        new window.XMLHttpRequest().addEventListener == null
+                        ? new window.ActiveXObject('Microsoft.XMLHTTP')
+                        : $.ajaxSettings.xhr()
+                    },
+                  })
+                  if (response) {
+                    for (let video of response.data) {
+                      $.ajax({
+                        url: `https://directus.chinesezerotohero.com/_/items/youtube_videos/${video.id}`,
+                        type: 'DELETE',
+                        contentType: 'application/json',
+                        xhr: function () {
+                          return window.XMLHttpRequest == null ||
+                            new window.XMLHttpRequest().addEventListener == null
+                            ? new window.ActiveXObject('Microsoft.XMLHTTP')
+                            : $.ajaxSettings.xhr()
+                        },
+                      })
+                    }
                   }
+                  window.removedIDs.push(videoId)
                 }
               }
+              */
             },
           }
         })
