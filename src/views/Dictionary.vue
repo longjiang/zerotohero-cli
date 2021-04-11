@@ -104,13 +104,6 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <EntryYouTube :text="entry.bare" class="mb-5" />
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
             <Concordance class="mt-5 mb-5" :word="entry" :level="entry.level" />
           </div>
         </div>
@@ -132,6 +125,11 @@
               v-if="$l2.code === 'zh'"
               :text="entry.simplified"
             ></Mistakes>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <EntryYouTube :text="entry.bare" class="mb-5" />
           </div>
         </div>
         <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
