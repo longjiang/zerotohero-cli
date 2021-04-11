@@ -165,26 +165,22 @@ export default {
         if (this.$l2.locales) {
           locales = locales.concat(this.$l2.locales)
         }
-        for (let locale of locales) {
-          promises.push(
-            Helper.scrape2(
-              `https://www.youtube.com/api/timedtext?v=${video.youtube_id}&lang=${locale}&fmt=srv3`
-            ).then($html => {
-              if ($html && !video.hasSubs) {
-                video.subs_l2 = this.parseSubs($html)
-                if (video.subs_l2.length > 3 && video.subs_l2.join('').length > 20) {
-                  video.hasSubs = true
-                  video.checkingSubs = false
-                  video.locale = locale
-                  // this.saveVideoOrJustSubs(video)
-                }
-              }
-            })
-          )
-        }
+        Helper.scrape2(
+          `https://www.youtube.com/api/timedtext?v=${video.youtube_id}&type=list`
+        ).then($html => {
+          for (let track of $html.find('track')) {
+            let locale = $(track).attr('lang_code')
+            if (locales.includes(locale)) {
+              console.log('found', locale)
+              video.hasSubs = true
+              video.checkingSubs = false
+              video.locale = locale
+              this.videosInfoKey++
+            }
+          }
+        })
         await Promise.all(promises)
         video.checkingSubs = false
-        this.videosInfoKey++
       }
     },
   }
