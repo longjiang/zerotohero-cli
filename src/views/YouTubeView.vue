@@ -9,9 +9,9 @@
             buttonText="Search"
             :action="
               url => {
-                location.href = `/${$l1.code}/${
+                this.$router.push({path: `/${$l1.code}/${
                   $l2.code
-                }/youtube/search/${encodeURIComponent(url)}`
+                }/youtube/search/${encodeURIComponent(url)}`})
               }
             "
             ref="search"

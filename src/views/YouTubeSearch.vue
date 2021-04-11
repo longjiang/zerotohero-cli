@@ -5,7 +5,7 @@
       :placeholder="$t('Enter a search term in {l2}...', {l2: $l2.name})"
       :action="
         url => {
-          location.href = `/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(url)}/0`
+          this.$router.push({path: `/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(url)}/0`})
         }
       "
       ref="search"
@@ -30,11 +30,6 @@ export default {
     },
     start: {
       default: 0
-    }
-  },
-  data() {
-    return {
-      location,
     }
   },
   watch: {

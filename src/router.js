@@ -514,7 +514,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/youtube/search-subs',
+      path: '/:l1/:l2/youtube/search-subs/:keyword',
       name: 'subs-search',
       component: () => import('./views/SearchSubs.vue'),
       props: true,

@@ -1,5 +1,6 @@
 export default {
   translations: {
+    'Enter a search term in {l2}...': 'Enter a search term in {l2}...',
     'Contact {l2} Zero to Hero': 'Contact {l2} Zero to Hero',
     'For the love of {l2} words.': 'For the love of {l2} words.',
     'Search the entire YouTube for {l2} videos with CC': 'Search the entire YouTube for {l2} videos with CC',
