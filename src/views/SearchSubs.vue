@@ -27,6 +27,7 @@
               ref="youtube"
               :l2Lines="JSON.parse(video.subs_l2)"
               layout="vertical"
+              :highlight="term"
             />
           </div>
         </div>

@@ -151,6 +151,9 @@ export default {
     },
     hsk: {
       default: 'outside'
+    },
+    startLineIndex: {
+      default: 0
     }
   },
   computed: mapState(['savedWords']),
@@ -160,7 +163,7 @@ export default {
       id: Helper.uniqueId(),
       Helper,
       currentTime: 0,
-      currentLine: this.lines ? this.lines[0] : undefined,
+      currentLine: this.lines ? this.lines[this.startLineIndex] : undefined,
       review: {},
       paused: {},
       reviewKey: 0
