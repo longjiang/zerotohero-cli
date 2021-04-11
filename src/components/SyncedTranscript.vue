@@ -356,6 +356,10 @@ export default {
   border-radius: 0.25rem;
 }
 
+.single-line .transcript-line-current {
+  box-shadow: none;
+}
+
 .transcript-line.matched {
   color: #616161;
   font-weight: bold;

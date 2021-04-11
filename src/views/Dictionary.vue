@@ -74,10 +74,11 @@
               :entry="entry"
               limit="10"
             />
-            <div class="widget mt-5" v-if="youglishLang[$l2.code]">
-              <div class="widget-title">YouGlish</div>
+            <div class="widget mt-5" >
+              <div class="widget-title">Mentions of “{{ entry.bare }}” on YouTube</div>
               <div class="widget-body">
-                <p class="mt-4 text-center">
+                <SearchSubsComp :term="entry.bare"  class="mt-4" />
+                <p class="mt-1 text-center" v-if="youglishLang[$l2.code]">
                   See examples of “{{ entry.bare }}” on
                   <a
                     :href="`https://youglish.com/pronounce/${entry.bare}/${
@@ -85,7 +86,7 @@
                     }`"
                     target="youglish"
                     ><img
-                      style="margin-bottom: 1em"
+                      style="margin-bottom: 1em; height: 2rem"
                       src="/img/logo-youglish.png"
                   /></a>
                 </p>
@@ -125,11 +126,6 @@
               v-if="$l2.code === 'zh'"
               :text="entry.simplified"
             ></Mistakes>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <EntryYouTube :text="entry.bare" class="mb-5" />
           </div>
         </div>
         <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
@@ -219,10 +215,12 @@ import EntryRelated from '@/components/EntryRelated'
 import EntryExample from '@/components/EntryExample'
 import EntryDifficulty from '@/components/EntryDifficulty'
 import EntryDisambiguation from '@/components/EntryDisambiguation'
+import SearchSubsComp from '@/components/SearchSubsComp'
 import { mapState } from 'vuex'
 
 export default {
   components: {
+    SearchSubsComp,
     EntryExample,
     EntryDifficulty,
     EntryDisambiguation,

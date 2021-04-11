@@ -21,8 +21,10 @@
     </div>
     <div v-if="layout === 'vertical'" class="row">
       <div class="col-sm-12">
-        <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="this.l2Lines.length > 0 ? this.l2Lines[startLineIndex].starttime : 0" :autoload="autoload" />
-        <div :key="'transcript-' + youtube">
+        <div style="max-width: calc(50vh * 16 / 9); margin: 0 auto">
+          <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="this.l2Lines.length > 0 ? this.l2Lines[startLineIndex].starttime : 0" :autoload="autoload" />  
+        </div>
+        <div :key="'transcript-' + youtube" class="mt-2">
           <div v-if="this.l2Lines.length > 0" class="text-center">
             <SyncedTranscript
               ref="transcript"
