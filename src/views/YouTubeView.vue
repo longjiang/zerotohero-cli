@@ -141,11 +141,11 @@ export default {
     },
   },
   watch: {
-    args() {
-      this.getSaved()
-      this.getVideoDetails()
-      this.getTranscript()
+    async args() {
       this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
+      await this.getSaved()
+      await this.getVideoDetails()
+      await this.getTranscript()
     },
   },
   data() {
@@ -267,19 +267,23 @@ export default {
     },
     async getTranscript() {
       this.l1Lines = []
-      this.l2Lines = []
+      let l2Subs = this.saved ? this.l2Lines = JSON.parse(this.saved.subs_l2) : false
+      this.l2Lines = l2Subs ? l2Subs : []
       this.hasSubtitles = false
       this.loading = true
-      await this.getL2Transcript()
+      if (this.l2Lines.length === 0) {
+        await this.getL2Transcript()
+      }
       if (this.l2Lines.length > 0) {
         await this.getL1Transcript()
+        this.hasSubtitles = true
       }
       this.loading = false
     },
     async getSaved() {
       this.saved = undefined
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson`
+        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
       )
       if (response && response.data && response.data.length > 0) {
         this.saved = response.data[0]
@@ -369,11 +373,11 @@ export default {
       window.onkeydown = null
     },
   },
-  mounted() {
-    this.getSaved()
-    this.getVideoDetails()
-    this.getTranscript()
+  async mounted() {
     this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
+    await this.getSaved()
+    await this.getVideoDetails()
+    await this.getTranscript()
   },
   activated() {
     this.bindKeys()

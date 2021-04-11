@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     currentTime() {
-      if (this.player) {
+      if (this.player && this.player.getPlayerState) {
         this.paused = this.player.getPlayerState() !== 1
       }
       return this.player && this.player.getCurrentTime
@@ -67,6 +67,7 @@ export default {
       // $('.youtube iframe').remove();
       this.removeYouTubeAPIVars()
       window.onYouTubePlayerAPIReady = () => {
+        
         // eslint-disable-next-line no-undef
         that.player = new YT.Player(this.youtubeIframeID, {
           height: '390',
@@ -83,8 +84,42 @@ export default {
           onReady() {},
           events: {
             'onStageChange': () => {
-              this.paused = this.player.getPlayerState() !== 1
-            }
+              if (this.playsr && this.player.getPlayerState) {
+                this.paused = this.player.getPlayerState() !== 1
+              }
+            },
+            'onError': async (event) => {
+              if ([100, 150].includes(event.data)) {
+                let videoId = event.target.playerInfo.videoData.video_id
+                console.log(`deleting ${videoId}`)
+                let response = await $.ajax({
+                  url: `https://directus.chinesezerotohero.com/_/items/youtube_videos?filter[youtube_id][eq]=${videoId}&fields=id`,
+                  type: 'GET',
+                  contentType: 'application/json',
+                  xhr: function () {
+                    return window.XMLHttpRequest == null ||
+                      new window.XMLHttpRequest().addEventListener == null
+                      ? new window.ActiveXObject('Microsoft.XMLHTTP')
+                      : $.ajaxSettings.xhr()
+                  },
+                })
+                if (response) {
+                  for (let video of response.data) {
+                    $.ajax({
+                      url: `https://directus.chinesezerotohero.com/_/items/youtube_videos/${video.id}`,
+                      type: 'DELETE',
+                      contentType: 'application/json',
+                      xhr: function () {
+                        return window.XMLHttpRequest == null ||
+                          new window.XMLHttpRequest().addEventListener == null
+                          ? new window.ActiveXObject('Microsoft.XMLHTTP')
+                          : $.ajaxSettings.xhr()
+                      },
+                    })
+                  }
+                }
+              }
+            },
           }
         })
       }
