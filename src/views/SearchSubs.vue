@@ -26,6 +26,7 @@
               :youtube="video.youtube_id"
               ref="youtube"
               :l2Lines="JSON.parse(video.subs_l2)"
+              layout="vertical"
             />
           </div>
         </div>
@@ -76,7 +77,6 @@ export default {
   },
   methods: {
     seekYouTube(starttime) {
-      console.log(this.$refs.youtube)
       this.$refs.youtube.seek(starttime)
     },
     pauseYouTube() {
@@ -92,7 +92,6 @@ export default {
       )
       if (response && response.data && response.data.length > 0) {
         this.results = response.data
-        console.log(this.results)
       }
     },
   }

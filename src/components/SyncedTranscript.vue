@@ -4,7 +4,8 @@
       :class="{
         'transcript': true,
         'mb-4': true,
-        collapsed: collapse
+        collapsed: collapse,
+        'single-line': single
       }"
       data-collapse-target
       :key="reviewKey"
@@ -124,6 +125,12 @@ import { mapState } from 'vuex'
 
 export default {
   props: {
+    quiz: {
+      default: false,
+    },
+    single: {
+      default: false,
+    },
     lines: {
       type: Array
     },
@@ -214,6 +221,7 @@ export default {
       let review = {}
       let lineOffset = 10 // Show review this number of lines after the first appearance of the word
       if (
+        this.quiz &&
         this.$settings.showQuiz &&
         this.$store.state.savedWords &&
         this.$store.state.savedWords[this.$l2.code]
@@ -325,6 +333,10 @@ export default {
 <style lang="scss">
 
 .transcript.collapsed .transcript-line:nth-child(n + 6) {
+  display: none;
+}
+
+.transcript.single-line .transcript-line:not(.transcript-line-current) {
   display: none;
 }
 
