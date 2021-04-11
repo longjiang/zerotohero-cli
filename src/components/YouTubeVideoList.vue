@@ -171,7 +171,6 @@ export default {
           for (let track of $html.find('track')) {
             let locale = $(track).attr('lang_code')
             if (locales.includes(locale)) {
-              console.log('found', locale)
               video.hasSubs = true
               video.checkingSubs = false
               video.locale = locale

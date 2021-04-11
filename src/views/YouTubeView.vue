@@ -178,7 +178,7 @@ export default {
         await this.getVideoDetails()
       }
       await this.getTranscript()
-      if (this.saved && ! this.saved.channel_id) {
+      if (this.saved && !this.saved.channel_id) {
         this.addChannelID()
       }
     },
@@ -235,27 +235,35 @@ export default {
       if (this.$l2.locales) {
         locales = locales.concat(this.$l2.locales)
       }
-      for (let locale of locales) {
-        promises.push(
-          Helper.scrape2(
-            `https://www.youtube.com/api/timedtext?v=${this.args}&lang=${locale}&fmt=srv3`
-          ).then(($html) => {
-            if ($html) {
-              this.l2Locale = locale
-              let lines = []
-              for (let p of $html.find('p')) {
-                let line = {
-                  line: $(p).text(),
-                  starttime: parseInt($(p).attr('t')) / 1000,
-                }
-                lines.push(line)
+      
+      await Helper.scrape2(
+        `https://www.youtube.com/api/timedtext?v=${this.args}&type=list`
+      ).then(($html) => {
+        for (let track of $html.find('track')) {
+          let locale = $(track).attr('lang_code')
+          if (locales.includes(locale)) {
+            this.l2Locale = locale
+          }
+        }
+      })
+
+      if (this.l2Locale) {
+        await Helper.scrape2(
+          `https://www.youtube.com/api/timedtext?v=${this.args}&lang=${this.l2Locale}&fmt=srv3`
+        ).then(($html) => {
+          if ($html) {
+            let lines = []
+            for (let p of $html.find('p')) {
+              let line = {
+                line: $(p).text(),
+                starttime: parseInt($(p).attr('t')) / 1000,
               }
-              this.l2Lines = lines.filter((line) => line.line.trim() !== '')
+              lines.push(line)
             }
-          })
-        )
+            this.l2Lines = lines.filter((line) => line.line.trim() !== '')
+          }
+        })
       }
-      let values = await Promise.all(promises)
     },
     async save() {
       let response = await $.post(`${Config.wiki}items/youtube_videos`, {
