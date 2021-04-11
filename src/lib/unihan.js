@@ -4,7 +4,7 @@ export default {
   _data: [],
   load() {
     return new Promise(resolve => {
-      $.get('/data/unihan/Unihan_Variants.txt', response => {
+      $.get('https://server.chinesezerotohero.com/data/unihan/Unihan_Variants.txt', response => {
         this._data = response
           .split('\n')
           .filter(row => !row.startsWith('#'))

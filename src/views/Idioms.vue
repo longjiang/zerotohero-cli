@@ -64,7 +64,7 @@ export default {
     }
   },
   mounted() {
-    Papa.parse('/data/zh-4char/4char.csv.txt', {
+    Papa.parse('https://server.chinesezerotohero.com/data/zh-4char/4char.csv.txt', {
       download: true,
       header: true,
       complete: results => {
