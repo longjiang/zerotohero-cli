@@ -329,6 +329,7 @@ export default {
     async setL1() {
       Vue.prototype.$l1 = this.$languages.getSmart(this.$route.params.l1)
       this.$i18n.locale = this.$l1.code
+      this.$i18n.silentTranslationWarn = true
       try {
         this.$i18n.setLocaleMessage(
           this.$l1.code,

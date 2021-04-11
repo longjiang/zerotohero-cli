@@ -137,22 +137,6 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/faq',
-      name: 'faq',
-      component: () => import('./views/FAQ.vue'),
-      props: true,
-      meta: {
-        title: 'Frequently Asked Questions | Zero To Hero',
-        metaTags: [
-          {
-            name: 'description',
-            content:
-              'We often hear these questions. Hopefully this page can answer yours.'
-          }
-        ]
-      }
-    },
-    {
       path: '/:l1/:l2/dictionary/:method?/:args?',
       name: 'dictionary',
       props: true,
@@ -351,7 +335,7 @@ export default new Router({
     },
     {
       path: '/:l1/:l2/explore/new-levels',
-      name: 'levels',
+      name: 'new-levels',
       component: () => import('./views/NewLevels.vue'),
       meta: {
         title: 'Words in the New HSK 3.0 | Zero to Hero',
@@ -365,7 +349,7 @@ export default new Router({
     },
     {
       path: '/:l1/:l2/explore/new-levels-graphic',
-      name: 'levels',
+      name: 'new-levels-graphic',
       component: () => import('./views/NewLevelsGraphic.vue'),
       meta: {
         title: 'Words in the New HSK 3.0 Visualized | Zero to Hero',
@@ -525,6 +509,21 @@ export default new Router({
           {
             name: 'description',
             content: 'Reinforce the vocabulary you learned in an HSK lesson by watching YouTube videos.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/youtube/search-subs',
+      name: 'subs-search',
+      component: () => import('./views/SearchSubs.vue'),
+      props: true,
+      meta: {
+        title: 'Search Subtitles | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Search subtitles across the saved YouTube videos (like YouGlish).'
           }
         ]
       }
