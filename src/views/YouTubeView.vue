@@ -61,6 +61,7 @@
                 >{{ title }}</b-dropdown-item
               >
             </b-dropdown>
+
             <b-button variant="danger" @click="remove" class="ml-1"
               ><i class="fas fa-trash-alt"></i
             ></b-button>
@@ -85,8 +86,17 @@
       :l1Lines="this.l1Lines"
     />
     <div class="play-pause-wrapper">
-      <span class="play-pause shadow btn-secondary d-inline-block mb-2 text-center" @click="scrollToComments"><i class="fas fa-comment"></i></span><br/>
-      <span class="play-pause shadow btn-primary d-inline-block text-center" @click="togglePaused"><i v-if="paused" class="fas fa-play"></i><i v-else class="fas fa-pause"></i></span>
+      <span
+        class="play-pause shadow btn-secondary d-inline-block mb-2 text-center"
+        @click="scrollToComments"
+        ><i class="fas fa-comment"></i></span
+      ><br />
+      <span
+        class="play-pause shadow btn-primary d-inline-block text-center"
+        @click="togglePaused"
+        ><i v-if="paused" class="fas fa-play"></i
+        ><i v-else class="fas fa-pause"></i
+      ></span>
     </div>
     <div class="container-fluid">
       <div class="row">
@@ -142,10 +152,7 @@ export default {
   },
   watch: {
     async args() {
-      this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
-      await this.getSaved()
-      await this.getVideoDetails()
-      await this.getTranscript()
+      this.mountOrUpdate()
     },
   },
   data() {
@@ -164,6 +171,17 @@ export default {
     }
   },
   methods: {
+    async mountOrUpdate() {
+      this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
+      await this.getSaved()
+      if (!this.saved || !this.saved.channel_id) {
+        await this.getVideoDetails()
+      }
+      await this.getTranscript()
+      if (this.saved && ! this.saved.channel_id) {
+        this.addChannelID()
+      }
+    },
     wordSaved(word) {
       let saved = false
       if (word) {
@@ -242,6 +260,7 @@ export default {
     async save() {
       let response = await $.post(`${Config.wiki}items/youtube_videos`, {
         youtube_id: this.args,
+        channel_id: this.channel ? this.channel.id : '',
         title: this.title,
         l2: this.$l2.id,
         subs_l2: JSON.stringify(this.l2Lines),
@@ -267,7 +286,9 @@ export default {
     },
     async getTranscript() {
       this.l1Lines = []
-      let l2Subs = this.saved ? this.l2Lines = JSON.parse(this.saved.subs_l2) : false
+      let l2Subs = this.saved
+        ? (this.l2Lines = JSON.parse(this.saved.subs_l2))
+        : false
       this.l2Lines = l2Subs ? l2Subs : []
       this.hasSubtitles = false
       this.loading = true
@@ -280,10 +301,30 @@ export default {
       }
       this.loading = false
     },
+    async addChannelID() {
+      if (this.channel && this.channel.id) {
+        let channelId = this.channel.id
+        let response = await $.ajax({
+          url: `${Config.wiki}items/youtube_videos/${this.saved.id}`,
+          data: JSON.stringify({ channel_id: channelId }),
+          type: 'PATCH',
+          contentType: 'application/json',
+          xhr: function () {
+            return window.XMLHttpRequest == null ||
+              new window.XMLHttpRequest().addEventListener == null
+              ? new window.ActiveXObject('Microsoft.XMLHTTP')
+              : $.ajaxSettings.xhr()
+          },
+        })
+        if (response && response.data) {
+          this.saved = response.data
+        }
+      }
+    },
     async getSaved() {
       this.saved = undefined
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
+        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2`
       )
       if (response && response.data && response.data.length > 0) {
         this.saved = response.data[0]
@@ -374,10 +415,7 @@ export default {
     },
   },
   async mounted() {
-    this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
-    await this.getSaved()
-    await this.getVideoDetails()
-    await this.getTranscript()
+    this.mountOrUpdate()
   },
   activated() {
     this.bindKeys()
