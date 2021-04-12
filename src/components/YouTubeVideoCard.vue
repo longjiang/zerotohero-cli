@@ -7,7 +7,7 @@
       media: true,
       rounded: true,
       shadow: true,
-      nosubs: checkSubs && !video.checkingSubs && !video.hasSubs,
+      nosubs: checkSubs && !video.checkingSubs && !video.hasSubs && !video.id,
       drop: checkSubs && !video.checkingSubs && !video.hasSubs,
     }"
     @dragover="over = true"
@@ -15,7 +15,6 @@
   >
     <div class="youtube-link">
       <router-link
-        v-if="video.thumbnail"
         :to="`/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}/${
           video.lesson ? 'lesson' : ''
         }`"
@@ -39,12 +38,12 @@
             >{{ video.title }}</router-link
           ></b
         >
-        <div v-if="video.hasSubs" class="btn btn-small mt-2 ml-0">
+        <div v-if="video.hasSubs || video.id" class="btn btn-small mt-2 ml-0">
           {{ $l2.name }} CC
           <span v-if="video.locale">({{ video.locale }})</span>
         </div>
         <div
-          v-if="video.checkingSubs === false && video.hasSubs === false"
+          v-if="video.checkingSubs === false && video.hasSubs === false && !video.id"
           class="btn btn-small mt-2 ml-0"
         >
           <span v-if="!over">No {{ $l2.name }} CC</span>
@@ -83,6 +82,7 @@
 import Helper from '@/lib/helper'
 import Config from '@/lib/config'
 import { Drag, Drop } from 'vue-drag-drop'
+import { parseSync } from 'subtitle'
 
 export default {
   components: {
@@ -119,11 +119,19 @@ export default {
       let reader = new FileReader()
       reader.readAsText(file)
       reader.onload = (event) => {
-        this.video.srt = event.target.result
+        let srt = event.target.result
+        this.video.subs_l2 = parseSync(srt).map(cue => {
+          return {
+            starttime: cue.data.start/1000,
+            line: cue.data.text
+          }
+        })
+        this.video.hasSubs = true
+        this.videoInfoKey++
       }
     },
     async getSubsAndSave(video) {
-      await this.getL2Transcript(video)
+      if (!video.subs_l2) await this.getL2Transcript(video)
       await this.save(video)
     },
     async getL2Transcript(video) {

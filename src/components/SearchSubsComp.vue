@@ -100,7 +100,9 @@ export default {
           'UCUhpu5MJQ_bjPkXO00jyxsw', // iQiyi
           'UCYQPTeY3HOk0BprrGuCWCaA', // YouKu
           'UCiu3bj4rR8KOYcUA4KNkOAA', // WeTV
+          'UCQatgKoA7lylp_UzvsLCgcw', // QQ Video
           'UCmalSiRq25rjrpycAsS5ocA', // MangoTV
+          'UCTulSfEm1c14WWRbSN-CNAQ', // MGTV Drama
           'UCW22wyIZecX1xgY4BkdRcbQ', // VSO Movie Channel
           'UCLsMbqJe_Oeqm6r9tvP1Nkg', // Clip Box
           'UCcLK3j-XWdGBnt5bR9NJHaQ', // CCTV

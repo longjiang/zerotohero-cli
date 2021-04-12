@@ -74,6 +74,12 @@
               :entry="entry"
               limit="10"
             />
+            <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
+            <Collocations
+              class="mt-5 mb-5"
+              :word="entry"
+              :level="entry.level"
+            />
             <div class="widget mt-5" >
               <div class="widget-title">Mentions of “{{ entry.bare }}” on YouTube</div>
               <div class="widget-body">
@@ -92,13 +98,7 @@
                 </p>
               </div>
             </div>
-            <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
-            <Collocations
-              class="mt-5 mb-5"
-              :word="entry"
-              :level="entry.level"
-            />
-            <EntryRelated :entry="entry" class="mb-5" />
+            <EntryRelated :entry="entry" class="mt-5" />
           </div>
         </div>
       </div>
