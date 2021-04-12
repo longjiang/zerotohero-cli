@@ -80,8 +80,20 @@ export default {
       this.$refs.youtube.pause()
     },
     async searchSubs(term) {
+      let channelFilter = ''
+      if (this.$l2.code === 'zh') {
+        let approvedChannels = [
+          'UCUhpu5MJQ_bjPkXO00jyxsw', // iQiyi
+          'UCYQPTeY3HOk0BprrGuCWCaA', // YouKu
+          'UCiu3bj4rR8KOYcUA4KNkOAA', // WeTV
+          'UCmalSiRq25rjrpycAsS5ocA', // MangoTV
+          'UCW22wyIZecX1xgY4BkdRcbQ', // VSO Movie Channel
+          'UCLsMbqJe_Oeqm6r9tvP1Nkg', // Clip Box
+        ]
+        channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
+      }
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${this.term}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
+        `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${this.term}${channelFilter}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
       )
       if (response && response.data && response.data.length > 0) {
         this.videos = response.data

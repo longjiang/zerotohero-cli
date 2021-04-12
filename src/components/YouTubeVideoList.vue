@@ -15,9 +15,10 @@
           <b><router-link :to="`/${$l1.code}/${$l2.code}/youtube/view/${video.youtube_id}/${lesson ? 'lesson' : ''}`" class="youtube-title d-block link-unstyled">{{ video.title }}</router-link></b>
           <div v-if="assignLessonMode && video.matches && video.matches.length > 0" class="btn btn-small bg-warning text-white mt-2 ml-0">{{ video.matches.length }} matched words</div>
           <div v-if="assignLessonMode && video.text" class="btn btn-small btn-gray mt-2 ml-0">{{ video.text.length / 1000 }}k</div>
-          <div v-if="video.hasSubs" class="btn btn-small bg-success text-white mt-2 ml-0">{{ $l2.name }} CC <span v-if="video.locale">({{ video.locale}})</span></div>
-          <div v-if="(video.checkingSubs === false) && (video.hasSubs === false)" class="btn btn-small text-white bg-dark mt-2 ml-0">No {{ $l2.name }} CC</div>
-          <div v-if="video.id && !video.topic" class="btn btn-small text-white bg-danger mt-2 ml-0">Uncategorized</div>
+          <div v-if="video.hasSubs" class="btn btn-small mt-2 ml-0">{{ $l2.name }} CC <span v-if="video.locale">({{ video.locale}})</span></div>
+          <div v-if="(video.checkingSubs === false) && (video.hasSubs === false)" class="btn btn-small mt-2 ml-0">No {{ $l2.name }} CC</div>
+          <div v-if="video.id" class="btn btn-small bg-success text-white mt-2 ml-0"><i class="fa fa-check mr-2"></i>Added</div>
+          <b-button v-if="!video.id && video.hasSubs" class="btn btn-small mt-2 ml-0" @click="getSubsAndSave(video)"><i class="fas fa-plus mr-2"></i>Add</b-button>
           <div v-if="video.id && video.topic" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.topics[video.topic] }}</div>
           <div v-if="video.id && video.level" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.level(video.level, $l2) }}</div>
           <br v-if="assignLessonMode"/>
@@ -67,13 +68,13 @@ export default {
   },
   mounted() {
     if(this.checkSubs) {
-      this.getAllSubs()
+      this.checkAllSubs()
     }
   },
   watch: {
     updateVideos() {
       if(this.checkSubs) {
-        this.getAllSubs()
+        this.checkAllSubs()
       }
     }
   },
@@ -87,9 +88,9 @@ export default {
     remove(video) {
       if (this.$parent.removeVideo) this.$parent.removeVideo(video)
     },
-    getAllSubs() {
+    checkAllSubs() {
       for(let video of this.videos) {
-        this.getSubs(video)
+        this.checkSubsFunc(video)
       }
     },
     async saveSubs(video) {
@@ -129,6 +130,30 @@ export default {
       }
       return lines
     },
+    async getSubsAndSave(video) {
+      await this.getL2Transcript(video)
+      await this.save(video)
+    },
+    async getL2Transcript(video) {
+      if (video.locale) {
+        await Helper.scrape2(
+          `https://www.youtube.com/api/timedtext?v=${video.youtube_id}&lang=${video.locale}&fmt=srv3`
+        ).then(($html) => {
+          if ($html) {
+            let lines = []
+            for (let p of $html.find('p')) {
+              let line = {
+                line: $(p).text(),
+                starttime: parseInt($(p).attr('t')) / 1000,
+              }
+              lines.push(line)
+            }
+            video.subs_l2 = lines.filter((line) => line.line.trim() !== '')
+          }
+        })
+        return true
+      }
+    },
     async save(video) {
       let response = await $.post(`${Config.wiki}items/youtube_videos`, {
         youtube_id: video.youtube_id,
@@ -138,6 +163,7 @@ export default {
       })
       if (response && response.data) {
         video.id = response.data.id
+        return true
       }
     },
     async saveVideoOrJustSubs(video) {
@@ -152,7 +178,15 @@ export default {
       }
       this.videosInfoKey++
     },
-    async getSubs(video) {
+    async checkSaved(video) {
+      let response = await $.getJSON(
+        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${video.youtube_id}&filter[l2][eq]=${this.$l2.id}`
+      )
+      if (response && response.data.length > 0) {
+        video.id = response.data[0].id
+      }
+    },
+    async checkSubsFunc(video) {
       video.checkingSubs = true
       video.hasSubs = false
       if (video.subs_l2 && video.subs_l2.length > 0) {
@@ -160,7 +194,6 @@ export default {
         video.checkingSubs = false
         this.videosInfoKey++
       } else {
-        const promises = []
         let locales = this.$l2.code === 'zh' ? [] : [this.$l2.code]
         if (this.$l2.locales) {
           locales = locales.concat(this.$l2.locales)
@@ -174,12 +207,12 @@ export default {
               video.hasSubs = true
               video.checkingSubs = false
               video.locale = locale
-              this.videosInfoKey++
             }
           }
+          this.videosInfoKey++
         })
-        await Promise.all(promises)
         video.checkingSubs = false
+        await this.checkSaved(video)
       }
     },
   }

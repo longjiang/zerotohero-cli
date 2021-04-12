@@ -64,6 +64,5 @@ export default {
       this.updateVideos++
     },
   }
-
 }
 </script>
