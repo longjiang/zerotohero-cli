@@ -61,12 +61,14 @@
           @click="getSubsAndSave(video)"
           ><i class="fas fa-plus mr-2"></i>Add</b-button
         >
+        <!--
         <b-button
           v-if="video.id && !video.channel_id"
           class="btn btn-small mt-2 ml-0"
           @click="addChannelID(video)"
           ><i class="fas fa-plus mr-2"></i>Add Channel ID</b-button
         >
+        -->
         <div
           v-if="video.id && video.topic"
           class="btn btn-small btn-gray mt-2 ml-0"

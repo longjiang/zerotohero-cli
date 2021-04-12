@@ -177,10 +177,12 @@ export default {
       if (!this.saved || !this.saved.channel_id) {
         await this.getVideoDetails()
       }
+      this.title = this.saved.title
       await this.getTranscript()
       if (this.saved && !this.saved.channel_id) {
         this.addChannelID()
       }
+      document.title = `${this.title}`
     },
     wordSaved(word) {
       let saved = false
@@ -223,7 +225,6 @@ export default {
       let video = await YouTube.videoByApi(this.args)
       if (video) {
         this.channel = video.channel
-        document.title = `${this.title} | ${this.channel.title}`
       }
     },
     async getL2Transcript() {
