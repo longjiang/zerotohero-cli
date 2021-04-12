@@ -205,7 +205,7 @@ export default {
       let response = await $.getJSON(
         `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${
           video.youtube_id
-        }&filter[l2][eq]=${this.$l2.id}&timestamp=${Date.now()}`
+        }&filter[l2][eq]=${this.$l2.id}`
       )
       if (response && response.data.length > 0) {
         video.id = response.data[0].id

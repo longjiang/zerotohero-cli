@@ -16,9 +16,6 @@
       >
         Next
       </button>
-      <b-button variant="danger" @click="remove" class="ml-1"
-        ><i class="fas fa-trash-alt"></i
-      ></b-button>
     </div>
     <div v-if="hits.length > 0" :set="(hit = hits[hitIndex])">
       <YouTubeWithTranscript
@@ -118,7 +115,7 @@ export default {
             Config.wiki
           }items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${
             this.$l2.id
-          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${Date.now()}`
+          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
         )
         if (response && response.data && response.data.length > 0) {
           let videos = response.data
