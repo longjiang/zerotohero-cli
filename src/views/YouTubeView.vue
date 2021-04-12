@@ -65,6 +65,15 @@
             <b-button variant="danger" @click="remove" class="ml-1"
               ><i class="fas fa-trash-alt"></i
             ></b-button>
+            Shift subs <input v-model.lazy="subsShift" type="text" placeholder="0" class="d-inline-block ml-1" style="width: 4rem" /> seconds
+            <template v-if="saved">
+              <b-button v-if="!subsUpdated" @click="updateSubs" class="ml-2"
+                ><i class="fa fa-save mr-2"></i>Update Subs</b-button
+              >
+              <b-button v-else variant="success">
+                <i class="fa fa-check mr-2"></i>Updated
+              </b-button>
+            </template>
           </template>
           <hr class="mt-3" />
           <YouTubeChannelCard
@@ -84,6 +93,7 @@
       ref="youtube"
       :l2Lines="this.l2Lines"
       :l1Lines="this.l1Lines"
+      :key="transcriptKey"
     />
     <div class="play-pause-wrapper">
       <span
@@ -154,6 +164,14 @@ export default {
     async args() {
       this.mountOrUpdate()
     },
+    subsShift() {
+      if (this.l2LinesUnshifted.length === 0) this.l2LinesUnshifted = Object.assign([], this.l2Lines)
+      this.l2Lines = Object.assign([], this.l2LinesUnshifted)
+      for (let line of this.l2Lines) {
+        line.starttime = Number(line.starttime) + Number(this.subsShift)
+      }
+      this.transcriptKey++
+    }
   },
   data() {
     return {
@@ -168,10 +186,18 @@ export default {
       topics: Helper.topics,
       l1Lines: [],
       l2Lines: [],
+      l2LinesUnshifted: [],
+      transcriptKey: 0,
+      subsShift: 0,
+      subsUpdated: false
     }
   },
   methods: {
     async mountOrUpdate() {
+      this.l2LinesUnshifted = []
+      this.l2Lines = []
+      this.subsShift = 0
+      this.subsUpdated = false
       this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
       await this.getSaved()
       if (!this.saved || !this.saved.channel_id) {
@@ -327,10 +353,27 @@ export default {
         }
       }
     },
+    async updateSubs() {
+      let response = await $.ajax({
+        url: `${Config.wiki}items/youtube_videos/${this.saved.id}`,
+        data: JSON.stringify({ subs_l2: JSON.stringify(this.l2Lines) }),
+        type: 'PATCH',
+        contentType: 'application/json',
+        xhr: function () {
+          return window.XMLHttpRequest == null ||
+            new window.XMLHttpRequest().addEventListener == null
+            ? new window.ActiveXObject('Microsoft.XMLHTTP')
+            : $.ajaxSettings.xhr()
+        },
+      })
+      if (response && response.data) {
+        this.subsUpdated = true
+      }
+    },
     async getSaved() {
       this.saved = undefined
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2`
+        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2&timestamp=${Date.now()}`
       )
       if (response && response.data && response.data.length > 0) {
         this.saved = response.data[0]
