@@ -2,7 +2,7 @@
   <drop
     @drop="handleDrop"
     :class="{
-      over: video.over,
+      over: over,
       'youtube-video': true,
       media: true,
       rounded: true,
@@ -10,8 +10,8 @@
       nosubs: checkSubs && !video.checkingSubs && !video.hasSubs,
       drop: checkSubs && !video.checkingSubs && !video.hasSubs,
     }"
-    @dragover="video.over = true"
-    @dragleave="video.over = false"
+    @dragover="over = true"
+    @dragleave="over = false"
   >
     <div class="youtube-link">
       <router-link
@@ -47,7 +47,8 @@
           v-if="video.checkingSubs === false && video.hasSubs === false"
           class="btn btn-small mt-2 ml-0"
         >
-          No {{ $l2.name }} CC
+          <span v-if="!over">No {{ $l2.name }} CC</span>
+          <span v-else>Drop SRT to Add Subs</span>
         </div>
         <div
           v-if="checkSaved && video.id"
@@ -91,7 +92,8 @@ export default {
   data() {
     return {
       Helper,
-      videoInfoKey: 0
+      videoInfoKey: 0,
+      over: false
     }
   },
   props: {
@@ -113,12 +115,12 @@ export default {
   methods: {
     handleDrop(data, event) {
       event.preventDefault()
-      const files = event.dataTransfer.files
-      const filenames = []
-      for (let i = 0; i < files.length; i++) {
-        filenames.push(files.item(i).name)
+      let file = event.dataTransfer.files[0]
+      let reader = new FileReader()
+      reader.readAsText(file)
+      reader.onload = (event) => {
+        this.video.srt = event.target.result
       }
-      alert(`You dropped files: ${JSON.stringify(filenames)}`)
     },
     async getSubsAndSave(video) {
       await this.getL2Transcript(video)
@@ -203,8 +205,7 @@ export default {
 
 <style lang="scss">
 .youtube-video.drop.over {
-  border-color: #aaa;
-  background: #ccc;
+  border: 2px dashed #ccc;
 }
 .youtube-video {
   min-width: 15rem;
@@ -213,7 +214,7 @@ export default {
   margin: 1rem;
 }
 
-.youtube-video.nosubs {
+.youtube-video.nosubs:not(.over) {
   opacity: 0.2;
 }
 
