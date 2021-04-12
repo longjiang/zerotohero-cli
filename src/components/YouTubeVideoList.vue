@@ -17,8 +17,8 @@
           <div v-if="assignLessonMode && video.text" class="btn btn-small btn-gray mt-2 ml-0">{{ video.text.length / 1000 }}k</div>
           <div v-if="video.hasSubs" class="btn btn-small mt-2 ml-0">{{ $l2.name }} CC <span v-if="video.locale">({{ video.locale}})</span></div>
           <div v-if="(video.checkingSubs === false) && (video.hasSubs === false)" class="btn btn-small mt-2 ml-0">No {{ $l2.name }} CC</div>
-          <div v-if="video.id" class="btn btn-small bg-success text-white mt-2 ml-0"><i class="fa fa-check mr-2"></i>Added</div>
-          <b-button v-if="!video.id && video.hasSubs" class="btn btn-small mt-2 ml-0" @click="getSubsAndSave(video)"><i class="fas fa-plus mr-2"></i>Add</b-button>
+          <div v-if="checkSaved && video.id" class="btn btn-small bg-success text-white mt-2 ml-0"><i class="fa fa-check mr-2"></i>Added</div>
+          <b-button v-if="checkSaved && !video.id && video.hasSubs" class="btn btn-small mt-2 ml-0" @click="getSubsAndSave(video)"><i class="fas fa-plus mr-2"></i>Add</b-button>
           <div v-if="video.id && video.topic" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.topics[video.topic] }}</div>
           <div v-if="video.id && video.level" class="btn btn-small btn-gray mt-2 ml-0">{{ Helper.level(video.level, $l2) }}</div>
           <br v-if="assignLessonMode"/>
@@ -47,6 +47,9 @@ export default {
     }
   },
   props: {
+    checkSaved: {
+      default: false
+    },
     videos: {
       type: Array
     },
@@ -178,9 +181,9 @@ export default {
       }
       this.videosInfoKey++
     },
-    async checkSaved(video) {
+    async checkSavedFunc(video) {
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${video.youtube_id}&filter[l2][eq]=${this.$l2.id}`
+        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${video.youtube_id}&filter[l2][eq]=${this.$l2.id}&timestamp=${Date.now()}`
       )
       if (response && response.data.length > 0) {
         video.id = response.data[0].id
@@ -212,7 +215,9 @@ export default {
           this.videosInfoKey++
         })
         video.checkingSubs = false
-        await this.checkSaved(video)
+        if (this.checkSaved) {
+          await this.checkSavedFunc(video)
+        }
       }
     },
   }

@@ -3,7 +3,6 @@
     <div
       :class="{
         'transcript': true,
-        'mb-4': true,
         collapsed: collapse,
         'single-line': single
       }"
@@ -15,7 +14,7 @@
           :key="lineIndex"
           :class="{
             'transcript-line': true,
-            matched: highlight && line & line.line.includes(highlight),
+            matched: highlight && line && (new RegExp(highlight.join('|')).test(line.line)),
             'transcript-line-current': currentLine === line
           }"
           @click="seekVideoTo(line.starttime)"
@@ -25,7 +24,7 @@
             <span
               v-html="
                 highlight
-                  ? Helper.highlight(
+                  ? Helper.highlightMultiple(
                       line.line,
                       highlight,
                       hsk || 'outside'
@@ -147,7 +146,7 @@ export default {
       default: false
     },
     highlight: {
-      default: false
+      type: Array
     },
     hsk: {
       default: 'outside'

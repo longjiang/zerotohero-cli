@@ -37,6 +37,7 @@
               :highlight="highlight"
               :startLineIndex="startLineIndex"
             />
+            <b-button v-if="startLineIndex" @click="rewind" class="btn btn-small"><i class="fa fa-undo mr-2" />Rewind</b-button>
           </div>
         </div>
       </div>
@@ -64,7 +65,7 @@ export default {
       default: 'horizontal' // or 'vertical'
     },
     highlight: {
-      type: String
+      type: Array
     },
     autoload: {
       default: false
@@ -82,6 +83,9 @@ export default {
     SyncedTranscript
   },
   methods: {
+    rewind() {
+      this.seekYouTube(this.l2Lines[this.startLineIndex].starttime)
+    },
     getHighlightStartTime(term) {
       let matchedLines = this.l2Lines.filter(line => line.line.includes(term))
       if (matchedLines.length > 0) {
@@ -106,7 +110,7 @@ export default {
   },
   watch: {
     startLineIndex() {
-      this.$refs.youtube.seek(this.l2Lines[this.startLineIndex].starttime)
+      this.rewind()
     }
   },
   mounted() {

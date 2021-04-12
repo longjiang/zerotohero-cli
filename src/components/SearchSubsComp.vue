@@ -1,9 +1,21 @@
 <template>
   <div>
+    <div class="text-center" v-if="checking">Checking content...</div>
+    <div class="text-center" v-if="!checking && videos.length === 0">
+      No hits.
+    </div>
     <div class="mb-4 text-center" v-if="hits.length > 0">
-      <button v-if="hitIndex > 0" @click="prevHit" class="btn btn-default">Previous</button>
+      <button v-if="hitIndex > 0" @click="prevHit" class="btn btn-default">
+        Previous
+      </button>
       <span class="ml-2 mr-2">{{ hitIndex + 1 }} of {{ hits.length }}</span>
-      <button v-if="hitIndex < hits.length - 1" @click="nextHit" class="btn btn-default">Next</button>
+      <button
+        v-if="hitIndex < hits.length - 1"
+        @click="nextHit"
+        class="btn btn-default"
+      >
+        Next
+      </button>
       <b-button variant="danger" @click="remove" class="ml-1"
         ><i class="fas fa-trash-alt"></i
       ></b-button>
@@ -14,7 +26,7 @@
         ref="youtube"
         :l2Lines="JSON.parse(hit.video.subs_l2)"
         layout="vertical"
-        :highlight="term"
+        :highlight="terms"
         :startLineIndex="hit.lineIndex"
         :autoload="hitIndex > 0"
       />
@@ -35,8 +47,8 @@ export default {
     SyncedTranscript,
   },
   props: {
-    term: {
-      type: String,
+    terms: {
+      type: Array,
     },
   },
   data() {
@@ -44,10 +56,11 @@ export default {
       videos: [],
       hits: [],
       hitIndex: 0,
+      checking: true,
     }
   },
   mounted() {
-    this.searchSubs(this.term)
+    this.searchSubs(this.terms[0])
   },
   methods: {
     async remove() {
@@ -64,7 +77,7 @@ export default {
         },
       })
       if (response) {
-        this.hits = this.hits.filter(hit => hit.video.id !== id)
+        this.hits = this.hits.filter((hit) => hit.video.id !== id)
       }
     },
     prevHit() {
@@ -79,7 +92,8 @@ export default {
     pauseYouTube() {
       this.$refs.youtube.pause()
     },
-    async searchSubs(term) {
+    async searchSubs() {
+      this.checking = true
       let channelFilter = ''
       if (this.$l2.code === 'zh') {
         let approvedChannels = [
@@ -89,26 +103,38 @@ export default {
           'UCmalSiRq25rjrpycAsS5ocA', // MangoTV
           'UCW22wyIZecX1xgY4BkdRcbQ', // VSO Movie Channel
           'UCLsMbqJe_Oeqm6r9tvP1Nkg', // Clip Box
+          'UCcLK3j-XWdGBnt5bR9NJHaQ', // CCTV
+          'UCjnJ4buqbnpRVaT3IDUQPZQ', // CCTV chun wan
+          'UCLsrDKheyHv7GYsTkMaw2bw', // YoYo fun station
+          'UCU5qmd5NvJljDBeM1sD-D1A', // Q1Q2
         ]
         channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
       }
-      let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${this.term}${channelFilter}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
-      )
-      if (response && response.data && response.data.length > 0) {
-        this.videos = response.data
-        for (let video of this.videos) {
-          let l2Lines = JSON.parse(video.subs_l2)
-          for (let index in l2Lines) {
-            if (l2Lines[index].line.includes(this.term)) {
-              this.hits.push({
-                video: video,
-                lineIndex: index,
-              })
+      for (let term of this.terms) {
+        let response = await $.getJSON(
+          `${
+            Config.wiki
+          }items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${
+            this.$l2.id
+          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${Date.now()}`
+        )
+        if (response && response.data && response.data.length > 0) {
+          let videos = response.data
+          for (let video of videos) {
+            let l2Lines = JSON.parse(video.subs_l2)
+            for (let index in l2Lines) {
+              if (l2Lines[index].line.includes(term)) {
+                this.hits.push({
+                  video: video,
+                  lineIndex: index,
+                })
+              }
             }
           }
+          this.videos = this.videos.concat(response.data)
         }
       }
+      this.checking = false
     },
   },
 }

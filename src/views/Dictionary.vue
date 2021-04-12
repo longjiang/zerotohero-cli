@@ -77,7 +77,7 @@
             <div class="widget mt-5" >
               <div class="widget-title">Mentions of “{{ entry.bare }}” on YouTube</div>
               <div class="widget-body">
-                <SearchSubsComp :term="entry.bare"  class="mt-4" />
+                <SearchSubsComp :terms="entry.simplified === entry.traditional ? [entry.simplified] : [entry.simplified, entry.traditional]"  class="mt-4 mb-4" />
                 <p class="mt-1 text-center" v-if="youglishLang[$l2.code]">
                   See examples of “{{ entry.bare }}” on
                   <a
