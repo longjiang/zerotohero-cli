@@ -220,11 +220,8 @@ export default {
       }
     },
     async getVideoDetails() {
-      this.title = undefined
-      this.channel = undefined
       let video = await YouTube.videoByApi(this.args)
       if (video) {
-        this.title = video.title
         this.channel = video.channel
         document.title = `${this.title} | ${this.channel.title}`
       }

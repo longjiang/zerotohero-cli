@@ -61,6 +61,12 @@
           @click="getSubsAndSave(video)"
           ><i class="fas fa-plus mr-2"></i>Add</b-button
         >
+        <b-button
+          v-if="video.id && !video.channel_id"
+          class="btn btn-small mt-2 ml-0"
+          @click="addChannelID(video)"
+          ><i class="fas fa-plus mr-2"></i>Add Channel ID</b-button
+        >
         <div
           v-if="video.id && video.topic"
           class="btn btn-small btn-gray mt-2 ml-0"
@@ -81,6 +87,7 @@
 <script>
 import Helper from '@/lib/helper'
 import Config from '@/lib/config'
+import YouTube from '@/lib/youtube'
 import { Drag, Drop } from 'vue-drag-drop'
 import { parseSync } from 'subtitle'
 
@@ -130,9 +137,34 @@ export default {
         this.videoInfoKey++
       }
     },
+    async addChannelID(video) {
+      let channelId = await this.getChannelID(video)
+      console.log(channelId)
+      let response = await $.ajax({
+        url: `${Config.wiki}items/youtube_videos/${video.id}`,
+        data: JSON.stringify({ channel_id: channelId }),
+        type: 'PATCH',
+        contentType: 'application/json',
+        xhr: function () {
+          return window.XMLHttpRequest == null ||
+            new window.XMLHttpRequest().addEventListener == null
+            ? new window.ActiveXObject('Microsoft.XMLHTTP')
+            : $.ajaxSettings.xhr()
+        },
+      })
+      if (response && response.data) {
+        video.channel_id = response.data.channel_id
+        this.videoInfoKey++
+      }
+    },
     async getSubsAndSave(video) {
       if (!video.subs_l2) await this.getL2Transcript(video)
+      if (!video.channel_id) await this.getChannelID(video)
       await this.save(video)
+    },
+    async getChannelID(video) {
+      let details = await YouTube.videoByApi(video.youtube_id)
+      return details.channel.id
     },
     async getL2Transcript(video) {
       if (video.locale) {
@@ -160,6 +192,7 @@ export default {
         title: video.title,
         l2: this.$l2.id,
         subs_l2: JSON.stringify(video.subs_l2),
+        channel_id: video.channel_id
       })
       if (response && response.data) {
         video.id = response.data.id
