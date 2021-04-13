@@ -97,7 +97,7 @@ export default {
           'UCUhpu5MJQ_bjPkXO00jyxsw', // iQiyi
           'UCYQPTeY3HOk0BprrGuCWCaA', // YouKu
           'UCiu3bj4rR8KOYcUA4KNkOAA', // WeTV
-          'UCQatgKoA7lylp_UzvsLCgcw', // QQ Video
+          'UCQatgKoA7lylp_UzvsLCgcw', // Tencent Video
           'UCmalSiRq25rjrpycAsS5ocA', // MangoTV
           'UCTulSfEm1c14WWRbSN-CNAQ', // MGTV Drama
           'UCW22wyIZecX1xgY4BkdRcbQ', // VSO Movie Channel
@@ -106,6 +106,8 @@ export default {
           'UCjnJ4buqbnpRVaT3IDUQPZQ', // CCTV chun wan
           'UCLsrDKheyHv7GYsTkMaw2bw', // YoYo fun station
           'UCU5qmd5NvJljDBeM1sD-D1A', // Q1Q2
+          'UC7ACqIQiy1SkjglQQ6bWDRg', // Idol & Romance
+          'UCKn4SloJmZYNYNq6RgzgrHw', // NewTV
         ]
         channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
       }

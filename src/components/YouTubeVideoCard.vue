@@ -69,6 +69,12 @@
           ><i class="fas fa-plus mr-2"></i>Add Channel ID</b-button
         >
         -->
+        <b-button
+          v-if="video.id"
+          class="btn btn-small bg-danger text-white mt-2 ml-0"
+          @click="remove(video)"
+          ><i class="fa fa-trash"></i></b-button
+        >
         <div
           v-if="video.id && video.topic"
           class="btn btn-small btn-gray mt-2 ml-0"
@@ -122,6 +128,23 @@ export default {
     }
   },
   methods: {
+    async remove(video) {
+      let response = await $.ajax({
+        url: `${Config.wiki}items/youtube_videos/${video.id}`,
+        type: 'DELETE',
+        contentType: 'application/json',
+        xhr: function () {
+          return window.XMLHttpRequest == null ||
+            new window.XMLHttpRequest().addEventListener == null
+            ? new window.ActiveXObject('Microsoft.XMLHTTP')
+            : $.ajaxSettings.xhr()
+        },
+      })
+      if (response) {
+        video.id = undefined
+        this.videoInfoKey++
+      }
+    },
     handleDrop(data, event) {
       event.preventDefault()
       let file = event.dataTransfer.files[0]
@@ -141,7 +164,6 @@ export default {
     },
     async addChannelID(video) {
       let channelId = await this.getChannelID(video)
-      console.log(channelId)
       let response = await $.ajax({
         url: `${Config.wiki}items/youtube_videos/${video.id}`,
         data: JSON.stringify({ channel_id: channelId }),
@@ -166,6 +188,7 @@ export default {
     },
     async getChannelID(video) {
       let details = await YouTube.videoByApi(video.youtube_id)
+      video.channel_id = details.channel.id
       return details.channel.id
     },
     async getL2Transcript(video) {
@@ -205,7 +228,7 @@ export default {
       let response = await $.getJSON(
         `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${
           video.youtube_id
-        }&filter[l2][eq]=${this.$l2.id}`
+        }&filter[l2][eq]=${this.$l2.id}&timestamp=${Date.now()}`
       )
       if (response && response.data.length > 0) {
         video.id = response.data[0].id

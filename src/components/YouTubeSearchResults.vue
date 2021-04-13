@@ -52,7 +52,7 @@ export default {
         {
           term: this.term,
           start: this.start || 0,
-          lang: this.$l2.code,
+          lang: this.$l2.code
         }
       )
       this.videos = videos.map(video => {

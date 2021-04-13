@@ -65,7 +65,7 @@
             <b-button variant="danger" @click="remove" class="ml-1"
               ><i class="fas fa-trash-alt"></i
             ></b-button>
-            Shift subs <input v-model.lazy="subsShift" type="text" placeholder="0" class="d-inline-block ml-1" style="width: 4rem" /> seconds
+            First line starts at <input v-model.lazy="firstLineTime" type="text" placeholder="0" class="d-inline-block ml-1" style="width: 4rem" />
             <template v-if="saved">
               <b-button v-if="!subsUpdated" @click="updateSubs" class="ml-2"
                 ><i class="fa fa-save mr-2"></i>Update Subs</b-button
@@ -164,13 +164,16 @@ export default {
     async args() {
       this.mountOrUpdate()
     },
-    subsShift() {
-      if (this.l2LinesUnshifted.length === 0) this.l2LinesUnshifted = Object.assign([], this.l2Lines)
-      this.l2Lines = Object.assign([], this.l2LinesUnshifted)
-      for (let line of this.l2Lines) {
-        line.starttime = Number(line.starttime) + Number(this.subsShift)
+    firstLineTime() {
+      if (this.l2Lines.length > 0) {
+        let subsShift = Number(this.firstLineTime) - Number(this.l2Lines[0].starttime)
+        if (subsShift !== 0) {
+          for (let line of this.l2Lines) {
+            line.starttime = Number(line.starttime) + subsShift
+          }
+        }
+        this.transcriptKey++
       }
-      this.transcriptKey++
     }
   },
   data() {
@@ -186,9 +189,8 @@ export default {
       topics: Helper.topics,
       l1Lines: [],
       l2Lines: [],
-      l2LinesUnshifted: [],
       transcriptKey: 0,
-      subsShift: 0,
+      firstLineTime: 0,
       subsUpdated: false
     }
   },
@@ -196,15 +198,19 @@ export default {
     async mountOrUpdate() {
       this.l2LinesUnshifted = []
       this.l2Lines = []
-      this.subsShift = 0
+      this.firstLineTime = 0
       this.subsUpdated = false
       this.$refs.search.url = `https://www.youtube.com/watch?v=${this.args}`
       await this.getSaved()
       if (!this.saved || !this.saved.channel_id) {
         await this.getVideoDetails()
+      } else {
+        this.title = this.saved.title
       }
-      this.title = this.saved.title
       await this.getTranscript()
+      if (this.l2Lines.length > 0) {
+        this.firstLineTime = this.l2Lines[0].starttime
+      }
       if (this.saved && !this.saved.channel_id) {
         this.addChannelID()
       }
@@ -251,6 +257,7 @@ export default {
       let video = await YouTube.videoByApi(this.args)
       if (video) {
         this.channel = video.channel
+        this.title = video.title
       }
     },
     async getL2Transcript() {
@@ -373,7 +380,7 @@ export default {
     async getSaved() {
       this.saved = undefined
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2`
+        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2&timestamp=${Date.now()}`
       )
       if (response && response.data && response.data.length > 0) {
         this.saved = response.data[0]
@@ -477,8 +484,8 @@ export default {
 <style lang="scss">
 .play-pause-wrapper {
   position: sticky;
-  bottom: 2.3rem;
-  left: 100%;
+  bottom: 1rem;
+  left: calc(100% - 4rem);
   width: 3.2rem;
 }
 .play-pause {
