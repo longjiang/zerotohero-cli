@@ -396,7 +396,7 @@ export default {
           this.args
         }&filter[l2][eq]=${
           this.$l2.id
-        }&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2&timestamp=${Date.now()}`
+        }&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2`
       )
       if (response && response.data && response.data.length > 0) {
         this.saved = response.data[0]
