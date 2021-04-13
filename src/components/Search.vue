@@ -80,6 +80,7 @@ export default {
       default: ''
     },
     defaultURL: {
+      type: Function,
       default: () => {}
     },
     type: {

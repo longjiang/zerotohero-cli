@@ -73,6 +73,16 @@ export default {
       }
     }
   },
+  iOS() {
+    return [
+      'iPad Simulator',
+      'iPhone Simulator',
+      'iPod Simulator',
+      'iPad',
+      'iPhone',
+      'iPod'
+    ].includes(navigator.platform)
+  },
   level(level, l2 = undefined) {
     let levels = this.levels(l2)
     return levels[level]

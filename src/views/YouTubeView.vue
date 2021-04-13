@@ -81,7 +81,7 @@
             <b-button v-if="!subsUpdated" @click="updateSubs" class="ml-2"
               ><i class="fa fa-save mr-2"></i>Update Subs</b-button
             >
-            <b-button v-else variant="success">
+            <b-button v-else variant="success" class="ml-2">
               <i class="fa fa-check mr-2"></i>Updated
             </b-button>
           </div>

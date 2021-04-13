@@ -95,7 +95,8 @@ export default {
               if (this.player && this.player.getPlayerState) {
                 this.paused = this.player.getPlayerState() !== 1
               }
-              if (!this.autoplay && this.neverPlayed) {
+              
+              if (!Helper.iOS() && !this.autoplay && this.neverPlayed) {
                 this.pause()
                 this.neverPlayed = false
               }
