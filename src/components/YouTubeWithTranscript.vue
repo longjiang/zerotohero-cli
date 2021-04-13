@@ -14,7 +14,6 @@
             :onPause="pauseYouTube"
             :lines="this.l2Lines"
             :parallellines="this.l1Lines"
-            
           />
         </div>
       </div>
@@ -22,7 +21,7 @@
     <div v-if="layout === 'vertical'" class="row">
       <div class="col-sm-12">
         <div style="max-width: calc(50vh * 16 / 9); margin: 0 auto">
-          <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="this.l2Lines.length > 0 ? this.l2Lines[startLineIndex].starttime : 0" :autoload="autoload" />  
+          <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="this.l2Lines.length > 0 ? this.l2Lines[startLineIndex].starttime : 0" :autoload="autoload" :autoplay="autoplay" />  
         </div>
         <div :key="'transcript-' + youtube" class="mt-2">
           <div v-if="this.l2Lines.length > 0" class="text-center">
@@ -35,6 +34,7 @@
               :single="true"
               :quiz="false"
               :highlight="highlight"
+              :highlight-saved-words="false"
               :startLineIndex="startLineIndex"
             />
             <b-button v-if="startLineIndex" @click="rewind" class="btn btn-small"><i class="fa fa-undo mr-2" />Rewind</b-button>
@@ -68,6 +68,9 @@ export default {
       type: Array
     },
     autoload: {
+      default: false
+    },
+    autoplay: {
       default: false
     },
     startLineIndex: {

@@ -22,6 +22,7 @@ export default {
       youtubeIframeID: 'youtube-' + Helper.uniqueId(),
       time: this.starttime,
       paused: true,
+      neverPlayed: true,
       player: undefined
     }
   },
@@ -33,6 +34,9 @@ export default {
       default: 0
     },
     autoload: {
+      default: false
+    },
+    autoplay: {
       default: false
     }
   },
@@ -46,6 +50,9 @@ export default {
     // eslint-disable-next-line no-unused-vars
     window.onPlayerReady = function(evt) {
       // Required by YouTube API
+    }
+    if (this.autoload) {
+      this.loadYouTubeiFrame()
     }
   },
   updated() {
@@ -81,11 +88,16 @@ export default {
             playsinline: 1,
             rel: 0
           },
-          onReady() {},
+          onReady: () => {
+          },
           events: {
-            'onStageChange': () => {
-              if (this.playsr && this.player.getPlayerState) {
+            'onStateChange': () => {
+              if (this.player && this.player.getPlayerState) {
                 this.paused = this.player.getPlayerState() !== 1
+              }
+              if (!this.autoplay && this.neverPlayed) {
+                this.pause()
+                this.neverPlayed = false
               }
             },
             'onError': async (event) => {
@@ -150,6 +162,12 @@ export default {
     seek(starttime) {
       if (this.player && this.player.seekTo) {
         this.player.seekTo(starttime)
+        this.paused = this.player.getPlayerState() !== 1
+      }
+    },
+    play() {
+      if (this.player && this.player.playVideo) {
+        this.player.playVideo()
         this.paused = this.player.getPlayerState() !== 1
       }
     },

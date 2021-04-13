@@ -19,6 +19,7 @@
           }"
           @click="seekVideoTo(line.starttime)"
           :id="`transcript-line-${id}-${lineIndex}`"
+          v-if="!single || currentLine === line"
         >
           <Annotate tag="div" class="transcript-line-chinese">
             <span
@@ -151,6 +152,9 @@ export default {
     hsk: {
       default: 'outside'
     },
+    highlightSavedWords: {
+      default: true
+    },
     startLineIndex: {
       default: 0
     }
@@ -169,14 +173,14 @@ export default {
     }
   },
   mounted() {
-    this.updateReview()
+    if(this.highlightSavedWords) this.updateReview()
   },
   watch: {
     $settings() {
-      this.updateReview()
+      if(this.highlightSavedWords) this.updateReview()
     },
     savedWords() {
-      this.updateReview()
+      if(this.highlightSavedWords) this.updateReview()
     },
     currentTime() {
       for (let lineIndex = this.lines.length - 1; lineIndex >= 0; lineIndex--) {

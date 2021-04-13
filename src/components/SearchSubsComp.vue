@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-center" v-if="checking">Checking content...</div>
-    <div class="text-center" v-if="!checking && videos.length === 0">
+    <div class="text-center" v-if="!checking && hits.length === 0">
       No hits.
     </div>
     <div class="mb-4 text-center" v-if="hits.length > 0">
@@ -21,11 +21,12 @@
       <YouTubeWithTranscript
         :youtube="hit.video.youtube_id"
         ref="youtube"
-        :l2Lines="JSON.parse(hit.video.subs_l2)"
+        :l2Lines="hit.video.subs_l2"
         layout="vertical"
         :highlight="terms"
         :startLineIndex="hit.lineIndex"
-        :autoload="hitIndex > 0"
+        :autoload="true"
+        :autoplay="navigated"
       />
     </div>
   </div>
@@ -36,6 +37,7 @@ import YouTubeWithTranscript from '@/components/YouTubeWithTranscript'
 import SyncedTranscript from '@/components/SyncedTranscript'
 import SimpleSearch from '@/components/SimpleSearch'
 import Config from '@/lib/config'
+import shuffle from 'shuffle-array'
 
 export default {
   components: {
@@ -50,9 +52,9 @@ export default {
   },
   data() {
     return {
-      videos: [],
       hits: [],
       hitIndex: 0,
+      navigated: false,
       checking: true,
     }
   },
@@ -79,9 +81,11 @@ export default {
     },
     prevHit() {
       this.hitIndex = Math.max(this.hitIndex - 1, 0)
+      this.navigated = true
     },
     nextHit() {
       this.hitIndex = Math.min(this.hitIndex + 1, this.hits.length - 1)
+      this.navigated = true
     },
     seekYouTube(starttime) {
       this.$refs.youtube.seek(starttime)
@@ -111,6 +115,7 @@ export default {
         ]
         channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
       }
+      let videos = []
       for (let term of this.terms) {
         let response = await $.getJSON(
           `${
@@ -120,19 +125,22 @@ export default {
           }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
         )
         if (response && response.data && response.data.length > 0) {
-          let videos = response.data
-          for (let video of videos) {
-            let l2Lines = JSON.parse(video.subs_l2)
-            for (let index in l2Lines) {
-              if (l2Lines[index].line.includes(term)) {
-                this.hits.push({
-                  video: video,
-                  lineIndex: index,
-                })
-              }
+          videos = videos.concat(response.data)
+        }
+      }
+      let seenYouTubeIds = []
+      for (let video of shuffle(videos)) {
+        if (!seenYouTubeIds.includes(video.youtube_id)) {
+          seenYouTubeIds.push(video.youtube_id)
+          video.subs_l2 = JSON.parse(video.subs_l2)
+          for (let index in video.subs_l2) {
+            if (new RegExp(this.terms.join('|')).test(video.subs_l2[index].line)) {
+              this.hits.push({
+                video: video,
+                lineIndex: index,
+              })
             }
           }
-          this.videos = this.videos.concat(response.data)
         }
       }
       this.checking = false
