@@ -81,9 +81,9 @@
               :level="entry.level"
             />
             <div class="widget mt-5" >
-              <div class="widget-title">Mentions of “{{ entry.bare }}” on YouTube</div>
+              <div class="widget-title">Mentions of “{{ entry.bare }}” on TV</div>
               <div class="widget-body">
-                <SearchSubsComp :terms="entry.simplified === entry.traditional ? [entry.simplified] : [entry.simplified, entry.traditional]"  class="mt-4 mb-4" />
+                <SearchSubsComp :level="entry.hsk" :terms="entry.simplified === entry.traditional ? [entry.simplified] : [entry.simplified, entry.traditional]"  class="mt-4 mb-4" />
                 <p class="mt-1 text-center" v-if="youglishLang[$l2.code]">
                   See examples of “{{ entry.bare }}” on
                   <a
@@ -91,10 +91,7 @@
                       youglishLang[$l2.code]
                     }`"
                     target="youglish"
-                    ><img
-                      style="margin-bottom: 1em; height: 2rem"
-                      src="/img/logo-youglish.png"
-                  /></a>
+                    >YouGlish</a>
                 </p>
               </div>
             </div>

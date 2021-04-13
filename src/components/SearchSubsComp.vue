@@ -5,14 +5,17 @@
       No hits.
     </div>
     <div class="mb-4 text-center" v-if="hits.length > 0">
-      <button v-if="hitIndex > 0" @click="prevHit" class="btn btn-default">
+      <b-button @click="rewind" class="btn btn-small"><i class="fa fa-undo mr-2" />Rewind</b-button>
+      <router-link :to="`/${$l1.code}/${$l2.code}/youtube/view/${hits[hitIndex].video.youtube_id}/`" class="btn btn-small"><i class="fa fa-play mr-2" />Watch Full</router-link>
+      <button v-if="hitIndex > 0" @click="prevHit" class="btn btn-small" :data-bg-level="level">
         Previous
       </button>
-      <span class="ml-2 mr-2">{{ hitIndex + 1 }} of {{ hits.length }}</span>
+      <span class="ml-2 btn btn-small mr-2">{{ hitIndex + 1 }} of {{ hits.length }}</span>
       <button
         v-if="hitIndex < hits.length - 1"
         @click="nextHit"
-        class="btn btn-default"
+        :data-bg-level="level"
+        class="btn btn-small"
       >
         Next
       </button>
@@ -49,6 +52,9 @@ export default {
     terms: {
       type: Array,
     },
+    level: {
+      type: String
+    }
   },
   data() {
     return {
@@ -62,6 +68,9 @@ export default {
     this.searchSubs(this.terms[0])
   },
   methods: {
+    rewind() {
+      this.$refs.youtube.rewind()
+    },
     async remove() {
       let id = this.hits[this.hitIndex].video.id
       let response = await $.ajax({

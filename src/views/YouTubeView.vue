@@ -27,54 +27,64 @@
               <span>{{ title }}</span>
             </Annotate>
           </h3>
-          <template v-if="!loading && hasSubtitles">
-            <b-button v-if="!saved" @click="save"
-              ><i class="fas fa-plus mr-2"></i>Add to Library</b-button
-            >
-            <b-button v-else variant="success">
-              <i class="fa fa-check mr-2"></i>Added
-            </b-button>
-          </template>
-          <b-dropdown
-            id="dropdown-1"
-            v-if="saved"
-            :text="saved.topic ? topics[saved.topic] : 'Topic'"
-            :variant="saved.topic ? 'success' : undefined"
-            class="ml-1"
-          >
-            <b-dropdown-item
-              v-for="(title, slug) in topics"
-              @click="changeTopic(slug)"
-              >{{ title }}</b-dropdown-item
-            >
-          </b-dropdown>
-          <template v-if="saved && !saved.lesson">
+          <div>
+            <template v-if="!loading && hasSubtitles">
+              <b-button v-if="!saved" @click="save"
+                ><i class="fas fa-plus mr-2"></i>Add to Library</b-button
+              >
+              <b-button v-else variant="success">
+                <i class="fa fa-check mr-2"></i>Added
+              </b-button>
+            </template>
             <b-dropdown
               id="dropdown-1"
-              :text="saved.level ? levels[saved.level] : 'Level'"
-              :variant="saved.level ? 'success' : undefined"
+              v-if="saved"
+              :text="saved.topic ? topics[saved.topic] : 'Topic'"
+              :variant="saved.topic ? 'success' : undefined"
               class="ml-1"
             >
               <b-dropdown-item
-                v-for="(title, slug) in levels"
-                @click="changeLevel(slug)"
+                v-for="(title, slug) in topics"
+                @click="changeTopic(slug)"
                 >{{ title }}</b-dropdown-item
               >
             </b-dropdown>
-
-            <b-button variant="danger" @click="remove" class="ml-1"
-              ><i class="fas fa-trash-alt"></i
-            ></b-button>
-            First line starts at <input v-model.lazy="firstLineTime" type="text" placeholder="0" class="d-inline-block ml-1" style="width: 4rem" />
-            <template v-if="saved">
-              <b-button v-if="!subsUpdated" @click="updateSubs" class="ml-2"
-                ><i class="fa fa-save mr-2"></i>Update Subs</b-button
+            <template v-if="saved && !saved.lesson">
+              <b-dropdown
+                id="dropdown-1"
+                :text="saved.level ? levels[saved.level] : 'Level'"
+                :variant="saved.level ? 'success' : undefined"
+                class="ml-1"
               >
-              <b-button v-else variant="success">
-                <i class="fa fa-check mr-2"></i>Updated
-              </b-button>
+                <b-dropdown-item
+                  v-for="(title, slug) in levels"
+                  @click="changeLevel(slug)"
+                  >{{ title }}</b-dropdown-item
+                >
+              </b-dropdown>
+
+              <b-button variant="danger" @click="remove" class="ml-1"
+                ><i class="fas fa-trash-alt"></i
+              ></b-button>
             </template>
-          </template>
+          </div>
+
+          <div v-if="saved" class="mt-2">
+            First line starts at
+            <input
+              v-model.lazy="firstLineTime"
+              type="text"
+              placeholder="0"
+              class="d-inline-block ml-1"
+              style="width: 4rem"
+            />
+            <b-button v-if="!subsUpdated" @click="updateSubs" class="ml-2"
+              ><i class="fa fa-save mr-2"></i>Update Subs</b-button
+            >
+            <b-button v-else variant="success">
+              <i class="fa fa-check mr-2"></i>Updated
+            </b-button>
+          </div>
           <hr class="mt-3" />
           <YouTubeChannelCard
             v-if="channel"
@@ -166,7 +176,8 @@ export default {
     },
     firstLineTime() {
       if (this.l2Lines.length > 0) {
-        let subsShift = Number(this.firstLineTime) - Number(this.l2Lines[0].starttime)
+        let subsShift =
+          Number(this.firstLineTime) - Number(this.l2Lines[0].starttime)
         if (subsShift !== 0) {
           for (let line of this.l2Lines) {
             line.starttime = Number(line.starttime) + subsShift
@@ -174,7 +185,7 @@ export default {
         }
         this.transcriptKey++
       }
-    }
+    },
   },
   data() {
     return {
@@ -191,7 +202,7 @@ export default {
       l2Lines: [],
       transcriptKey: 0,
       firstLineTime: 0,
-      subsUpdated: false
+      subsUpdated: false,
     }
   },
   methods: {
@@ -266,7 +277,7 @@ export default {
       if (this.$l2.locales) {
         locales = locales.concat(this.$l2.locales)
       }
-      
+
       await Helper.scrape2(
         `https://www.youtube.com/api/timedtext?v=${this.args}&type=list`
       ).then(($html) => {
@@ -380,7 +391,11 @@ export default {
     async getSaved() {
       this.saved = undefined
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${this.args}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2&timestamp=${Date.now()}`
+        `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${
+          this.args
+        }&filter[l2][eq]=${
+          this.$l2.id
+        }&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2&timestamp=${Date.now()}`
       )
       if (response && response.data && response.data.length > 0) {
         this.saved = response.data[0]

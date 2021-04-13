@@ -37,7 +37,6 @@
               :highlight-saved-words="false"
               :startLineIndex="startLineIndex"
             />
-            <b-button v-if="startLineIndex" @click="rewind" class="btn btn-small"><i class="fa fa-undo mr-2" />Rewind</b-button>
           </div>
         </div>
       </div>
