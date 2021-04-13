@@ -3,34 +3,13 @@
   <div :id="id" v-cloak v-if="entry.example && entry.example !== ''">
     <div class="container-fluid">
       <div class="row">
-        <div :class="`col-lg-${6 / scale}`">
-          <div class="example-image-wrapper">
-            <img
-              v-bind:src="
-                `${Config.imageUrl}${entry.hskId}-${entry.simplified}.jpg`
-              "
-              class="example-image"
-              v-if="hasImage && !admin"
-            />
-            <img
-              v-bind:src="
-                `${Config.imageUrl}${entry.hskId}-${
-                  entry.simplified
-                }.jpg?v=${Date.now()}`
-              "
-              class="example-image"
-              v-if="hasImage && admin"
-            />
-          </div>
-        </div>
-        <div :class="`col-lg-${6 / scale} example-wrapper pt-3 pb-5 text-left`">
-          <div class="example-sentence mt-4">
+        <div class="col-sm-12 example-wrapper pb-5 text-center">
+          <div class="example-sentence">
             <!-- <p class="example-sentence-pinyin">{{ entry.examplePinyin }} <i class="speak glyphicon glyphicon-volume-up" v-bind:data-speak="entry.example"></i></p> -->
 
             <Annotate
               tag="p"
               class="example-sentence-word"
-              :speak="true"
             >
               <span
                 v-html="
