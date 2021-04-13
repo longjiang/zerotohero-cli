@@ -92,6 +92,7 @@
         >
           {{ Helper.level(video.level, $l2) }}
         </div>
+        <!--
         <div v-if="video.subs_l1 && video.subs_l1.length > 0">
           <div v-for="index in [0,1,2,3,4]"><b>{{ video.l1Locale }} </b><span @click="matchSubsAndUpdate(index)" :class="{'btn': true, 'btn-small': true, 'text-danger': video.subs_l2 && video.subs_l2.length > 0 && video.subs_l1[index].starttime !== video.subs_l2[0].starttime }">{{ video.subs_l1[index].starttime }}</span> {{ video.subs_l1[index].line }}</div>
         </div>
@@ -105,6 +106,7 @@
             <i class="fa fa-check mr-2"></i>Updated
           </b-button>
         </div>
+        -->
       </div>
     </div>
   </drop>
@@ -312,7 +314,8 @@ export default {
         video.checkingSubs = false
       }
       if(video.id) {
-        this.video.subs_l1 = await this.getTranscript(video, video.l1Locale)
+        let subs_l1 = await this.getTranscript(video, video.l1Locale)
+        this.video.subs_l1 = subs_l1.filter(line => !/^[♫♪]/.test(line.line))
       }
       this.videoInfoKey++
     },

@@ -68,7 +68,7 @@
               ></b-button>
             </template>
           </div>
-
+          <!--
           <div v-if="saved" class="mt-2">
             First line starts at
             <input
@@ -85,6 +85,7 @@
               <i class="fa fa-check mr-2"></i>Updated
             </b-button>
           </div>
+          -->
           <hr class="mt-3" />
           <YouTubeChannelCard
             v-if="channel"
