@@ -94,6 +94,9 @@ export default {
     rewind() {
       this.seekYouTube(this.l2Lines[this.startLineIndex].starttime)
     },
+    pause() {
+      this.$refs.youtube.pause()
+    },
     getHighlightStartTime(term) {
       let matchedLines = this.l2Lines.filter(line => line.line.includes(term))
       if (matchedLines.length > 0) {
@@ -119,7 +122,7 @@ export default {
   watch: {
     startLineIndex() {
       this.rewind()
-    }
+    },
   },
   mounted() {
     setInterval(() => {

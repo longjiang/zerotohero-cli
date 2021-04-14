@@ -17,7 +17,7 @@
       <button
         :disabled="hitIndex === 0"
         @click="prevHit"
-        :class="{btn: true, 'btn-small': true, invisible: hitIndex === 0}"
+        :class="{ btn: true, 'btn-small': true, invisible: hitIndex === 0 }"
         :data-bg-level="level"
       >
         <i class="fa fa-chevron-left" />
@@ -29,7 +29,11 @@
         :disabled="hitIndex >= hits.length - 1"
         @click="nextHit"
         :data-bg-level="level"
-        :class="{btn: true, 'btn-small': true, invisible: hitIndex >= hits.length - 1}"
+        :class="{
+          btn: true,
+          'btn-small': true,
+          invisible: hitIndex >= hits.length - 1,
+        }"
       >
         <i class="fa fa-chevron-right" />
       </button>
@@ -85,6 +89,11 @@ export default {
   },
   mounted() {
     this.searchSubs(this.terms[0])
+  },
+  activated() {
+    setTimeout(() => {
+      this.$refs.youtube.pause()
+    }, 800)
   },
   methods: {
     previousLine() {
