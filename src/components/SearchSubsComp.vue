@@ -4,21 +4,40 @@
     <div class="text-center" v-if="!checking && hits.length === 0">
       No hits.
     </div>
-    <div class="mb-4 text-center" v-if="hits.length > 0">
-      <b-button @click="rewind" class="btn btn-small"><i class="fa fa-undo mr-2" />Rewind</b-button>
-      <router-link :to="`/${$l1.code}/${$l2.code}/youtube/view/${hits[hitIndex].video.youtube_id}/`" class="btn btn-small"><i class="fa fa-play mr-2" />Watch Full</router-link>
-      <button v-if="hitIndex > 0" @click="prevHit" class="btn btn-small" :data-bg-level="level">
-        Previous
-      </button>
-      <span class="ml-2 btn btn-small mr-2">{{ hitIndex + 1 }} of {{ hits.length }}</span>
+    <div class="mb-1 text-center" v-if="hits.length > 0">
+      <b-button @click="previousLine" class="btn btn-small"
+        ><i class="fa fa-backward"
+      /></b-button>
+      <b-button @click="rewind" class="btn btn-small"
+        ><i class="fa fa-undo"
+      /></b-button>
+      <b-button @click="nextLine" class="btn btn-small"
+        ><i class="fa fa-forward"
+      /></b-button>
       <button
-        v-if="hitIndex < hits.length - 1"
+        :disabled="hitIndex === 0"
+        @click="prevHit"
+        :class="{btn: true, 'btn-small': true, invisible: hitIndex === 0}"
+        :data-bg-level="level"
+      >
+        <i class="fa fa-chevron-left" />
+      </button>
+      <span class="ml-2 btn-small mr-2" style="background: none"
+        >{{ hitIndex + 1 }} of {{ hits.length }}</span
+      >
+      <button
+        :disabled="hitIndex >= hits.length - 1"
         @click="nextHit"
         :data-bg-level="level"
-        class="btn btn-small"
+        :class="{btn: true, 'btn-small': true, invisible: hitIndex >= hits.length - 1}"
       >
-        Next
+        <i class="fa fa-chevron-right" />
       </button>
+      <router-link
+        :to="`/${$l1.code}/${$l2.code}/youtube/view/${hits[hitIndex].video.youtube_id}/`"
+        class="btn btn-small"
+        ><i class="fa fa-window-maximize mr-2" />Open Full</router-link
+      >
     </div>
     <div v-if="hits.length > 0" :set="(hit = hits[hitIndex])">
       <YouTubeWithTranscript
@@ -53,8 +72,8 @@ export default {
       type: Array,
     },
     level: {
-      type: String
-    }
+      type: String,
+    },
   },
   data() {
     return {
@@ -68,6 +87,12 @@ export default {
     this.searchSubs(this.terms[0])
   },
   methods: {
+    previousLine() {
+      this.$refs.youtube.previousLine()
+    },
+    nextLine() {
+      this.$refs.youtube.nextLine()
+    },
     rewind() {
       this.$refs.youtube.rewind()
     },
@@ -127,11 +152,7 @@ export default {
       let videos = []
       for (let term of this.terms) {
         let response = await $.getJSON(
-          `${
-            Config.wiki
-          }items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${
-            this.$l2.id
-          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
+          `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
         )
         if (response && response.data && response.data.length > 0) {
           videos = videos.concat(response.data)
@@ -143,7 +164,9 @@ export default {
           seenYouTubeIds.push(video.youtube_id)
           video.subs_l2 = JSON.parse(video.subs_l2)
           for (let index in video.subs_l2) {
-            if (new RegExp(this.terms.join('|')).test(video.subs_l2[index].line)) {
+            if (
+              new RegExp(this.terms.join('|')).test(video.subs_l2[index].line)
+            ) {
               this.hits.push({
                 video: video,
                 lineIndex: index,

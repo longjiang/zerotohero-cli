@@ -20,7 +20,7 @@
     </div>
     <div v-if="layout === 'vertical'" class="row">
       <div class="col-sm-12">
-        <div style="max-width: calc(50vh * 16 / 9); margin: 0 auto">
+        <div>
           <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="this.l2Lines.length > 0 ? this.l2Lines[startLineIndex].starttime : 0" :autoload="autoload" :autoplay="autoplay" />  
         </div>
         <div :key="'transcript-' + youtube" class="mt-2">
@@ -85,6 +85,12 @@ export default {
     SyncedTranscript
   },
   methods: {
+    previousLine() {
+      this.$refs.transcript.previousLine()
+    },
+    nextLine() {
+      this.$refs.transcript.nextLine()
+    },
     rewind() {
       this.seekYouTube(this.l2Lines[this.startLineIndex].starttime)
     },
