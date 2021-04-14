@@ -102,13 +102,34 @@
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 mt-5">
+          <div class="widget" v-if="a">
+            <div class="widget-title">Mentions of “{{ a.bare }}” on TV</div>
+            <div class="widget-body">
+              <SearchSubsComp :level="a.hsk" :terms="a.simplified === a.traditional ? [a.simplified] : [a.simplified, a.traditional]"  class="mt-4 mb-4" />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 mt-5">
+          <div class="widget" v-if="b">
+            <div class="widget-title">Mentions of “{{ b.bare }}” on TV</div>
+            <div class="widget-body">
+              <SearchSubsComp :level="b.hsk" :terms="b.simplified === b.traditional ? [b.simplified] : [b.simplified, b.traditional]"  class="mt-4 mb-4" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 mt-5">
+        <div class="col-sm-12 mt-5" v-if="a">
           <EntryRelated :key="aKey" :entry="a"></EntryRelated>
         </div>
-        <div class="col-sm-12 mt-5">
+        <div class="col-sm-12 mt-5" v-if="b">
           <EntryRelated :key="bKey" :entry="b"></EntryRelated>
         </div>
       </div>
@@ -209,6 +230,7 @@ import Korean from '@/components/Korean'
 import Japanese from '@/components/Japanese'
 import Chinese from '@/components/Chinese'
 import EntryRelated from '@/components/EntryRelated'
+import SearchSubsComp from '@/components/SearchSubsComp'
 
 export default {
   components: {
@@ -226,7 +248,8 @@ export default {
     Japanese,
     Chinese,
     CompareDefs,
-    EntryRelated
+    EntryRelated,
+    SearchSubsComp
   },
   data() {
     return {

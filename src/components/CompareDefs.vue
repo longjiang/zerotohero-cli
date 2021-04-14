@@ -45,7 +45,6 @@ export default {
       return defList.find(d => def.includes(d))
     },
     common(a, b) {
-      console.log(a.definitions, b.definitions)
       for (let adef of a.definitions) {
         for (let bdef of b.definitions) {
           if (bdef && bdef.includes(adef)) {

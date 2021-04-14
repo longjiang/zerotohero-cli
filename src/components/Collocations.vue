@@ -4,7 +4,7 @@
     <div class="widget-body jumbotron-fluid p-4">
       <div class="row">
         <div
-          class="col-sm-12 col-md-6 col-lg-4"
+          class="col-sm-6 col-md-4 col-lg-3"
           v-for="(description, name) in colDesc"
           v-if="
             sketch &&
