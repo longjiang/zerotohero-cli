@@ -12,7 +12,7 @@
       </ul>
       <ShowMoreButton :data-bg-level="level" :length="collocation.Words.length" :min="4" />
     </div>
-    <div v-else>No collocation.</div>
+    <div v-else>(No data)</div>
   </div>
 </template>
 

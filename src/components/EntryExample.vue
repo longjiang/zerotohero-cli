@@ -3,7 +3,7 @@
   <div :id="id" v-cloak v-if="entry.example && entry.example !== ''">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12 example-wrapper pb-5 text-center">
+        <div class="col-sm-12 example-wrapper text-center">
           <div class="example-sentence">
             <!-- <p class="example-sentence-pinyin">{{ entry.examplePinyin }} <i class="speak glyphicon glyphicon-volume-up" v-bind:data-speak="entry.example"></i></p> -->
 

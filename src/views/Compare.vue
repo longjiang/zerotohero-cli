@@ -48,21 +48,17 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-6 mt-5 mb-5">
             <EntryExample
-              class="mini"
               :key="aKey"
               :entry="a"
-              scale="0.5"
               id="compare-example-a"
             ></EntryExample>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6 mt-5 mb-5">
             <EntryExample
-              class="mini"
               :key="bKey"
               :entry="b"
-              scale="0.5"
               id="compare-example-b"
             ></EntryExample>
           </div>
@@ -106,7 +102,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6 mt-5">
-          <div class="widget" v-if="a">
+          <div class="widget" v-if="a" :key="aKey">
             <div class="widget-title">Mentions of “{{ a.bare }}” on TV</div>
             <div class="widget-body">
               <SearchSubsComp :level="a.hsk" :terms="a.simplified === a.traditional ? [a.simplified] : [a.simplified, a.traditional]"  class="mt-4 mb-4" />
@@ -114,7 +110,7 @@
           </div>
         </div>
         <div class="col-sm-6 mt-5">
-          <div class="widget" v-if="b">
+          <div class="widget" v-if="b" :key="bKey">
             <div class="widget-title">Mentions of “{{ b.bare }}” on TV</div>
             <div class="widget-body">
               <SearchSubsComp :level="b.hsk" :terms="b.simplified === b.traditional ? [b.simplified] : [b.simplified, b.traditional]"  class="mt-4 mb-4" />
