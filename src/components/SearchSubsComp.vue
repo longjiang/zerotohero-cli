@@ -162,6 +162,7 @@ export default {
           'UCEWBSXNFMVBc7p79dtIh3HA', // 刘罗锅
           'UC8a4CRn6S5Yq2wEJ07B70OA', // 刘罗锅
           'UC7Vl0YiY0rDlovqcCFN4yTA', // CCTV 电视剧
+          'UCdpiId0eJGnnIvfhpbJIM1w', // 腾讯动漫
         ]
         channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
       }
