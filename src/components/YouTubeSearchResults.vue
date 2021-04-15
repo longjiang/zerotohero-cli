@@ -24,6 +24,10 @@ export default {
     start: {
       default: 0
     },
+    captions: {
+      type: String,
+      default: 'all' // or 'nocaptions' or 'all'
+    },
     checkSubs: {
       default: false
     }
@@ -48,14 +52,14 @@ export default {
   methods: {
     async updateURL() {
       this.videos = []
-      let videos = await YouTube.searchByGoogle(
-        {
-          term: this.term,
-          start: this.start || 0,
-          lang: this.$l2.code,
-          // captions: false
-        }
-      )
+      let options = {
+        term: this.term,
+        start: this.start || 0,
+        lang: this.$l2.code,
+      }
+      if (this.captions === 'nocaptions') options.captions = false
+      if (this.captions === 'captions') options.captions = true
+      let videos = await YouTube.searchByGoogle(options)
       this.videos = videos.map(video => {
         video.youtube_id = video.id
         video.id = undefined

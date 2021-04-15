@@ -5,13 +5,19 @@
       :placeholder="$t('Enter a search term in {l2}...', {l2: $l2.name})"
       :action="
         url => {
-          this.$router.push({path: `/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(url)}/0`})
+          let path = `/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(url)}/0`
+          if (this.$router.currentRoute.path === path) this.searchResultKey++
+          else this.$router.push({path: path})
         }
       "
       ref="search"
-      class="mb-5"
     />
-    <YouTubeSearchResults :term="term" :start="start" />
+    <b-form-group class="mt-3">
+      <b-form-radio v-model="captions" class="d-inline-block mr-3" value="captions">With Captions</b-form-radio>
+      <b-form-radio v-model="captions" class="d-inline-block mr-3" value="nocaptions">No Captions</b-form-radio>
+      <b-form-radio v-model="captions" class="d-inline-block" value="all">All</b-form-radio>
+    </b-form-group>
+    <YouTubeSearchResults :term="term" :start="start" :captions="captions" class="mt-5" :key="searchResultKey"/>
   </div>
 </template>
 
@@ -23,6 +29,12 @@ export default {
   components: {
     SimpleSearch,
     YouTubeSearchResults
+  },
+  data() {
+    return {
+      captions: 'all',
+      searchResultKey: 0
+    }
   },
   props: {
     term: {
