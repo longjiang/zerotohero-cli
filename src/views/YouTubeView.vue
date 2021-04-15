@@ -68,8 +68,7 @@
               ></b-button>
             </template>
           </div>
-          <!--
-          <div v-if="saved" class="mt-2">
+          <div v-if="$settings.adminMode && saved" class="mt-2">
             First line starts at
             <input
               v-model.lazy="firstLineTime"
@@ -85,7 +84,6 @@
               <i class="fa fa-check mr-2"></i>Updated
             </b-button>
           </div>
-          -->
           <hr class="mt-3" />
           <YouTubeChannelCard
             v-if="channel"
@@ -99,7 +97,7 @@
       <Loader :sticky="true" />
     </div>
     <YouTubeWithTranscript
-      v-if="!loading && hasSubtitles"
+      v-if="!loading"
       :youtube="args"
       ref="youtube"
       :l2Lines="this.l2Lines"
@@ -396,7 +394,7 @@ export default {
           this.args
         }&filter[l2][eq]=${
           this.$l2.id
-        }&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2`
+        }&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
       )
       if (response && response.data && response.data.length > 0) {
         this.saved = response.data[0]

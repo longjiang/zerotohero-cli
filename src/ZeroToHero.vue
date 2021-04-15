@@ -257,7 +257,8 @@ export default {
           showTranslation: true,
           showPinyin: true,
           useTraditional: false,
-          showQuiz: true
+          showQuiz: true,
+          adminMode: false
         },
         JSON.parse(localStorage.getItem('zthSettings'))
       )

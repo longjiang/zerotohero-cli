@@ -21,6 +21,13 @@
           :id="`transcript-line-${id}-${lineIndex}`"
           v-if="!single || currentLine === line"
         >
+          <b-button
+            v-if="$settings.adminMode"
+            class="btn btn-small bg-danger text-white"
+            @click="removeLine(lineIndex)"
+            style="float: right"
+            ><i class="fa fa-trash"></i></b-button
+          >
           <Annotate tag="div" class="transcript-line-chinese">
             <span
               v-html="
@@ -205,6 +212,11 @@ export default {
     }
   },
   methods: {
+    removeLine(lineIndex) {
+      this.lines.splice(lineIndex, 1)
+      this.reviewKey++
+      console.log('rem')
+    },
     answerClick(e) {
       $(e.target).addClass('checked')
       if ($(e.target).hasClass('review-answer-correct')) {

@@ -46,6 +46,17 @@
     <div class="container-fluid">
       <CorpusSelect />
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <b-form-checkbox
+            v-model="adminMode"
+          >
+            Enable administrative mode (no cache, more buttons)
+          </b-form-checkbox>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -60,6 +71,21 @@ export default {
   },
   data() {
     return {
+      adminMode: this.$settings.adminMode
+    }
+  },
+  methods: {
+    saveSettings() {
+      this.$settings = Object.assign(this.$settings, {
+        adminMode: this.adminMode
+      })
+      localStorage.setItem('zthSettings', JSON.stringify(this.$settings))
+      this.$parent.$parent.updateSettings++
+    }
+  },
+  watch: {
+    adminMode() {
+      this.saveSettings()
     }
   }
 }

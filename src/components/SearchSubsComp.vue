@@ -155,13 +155,20 @@ export default {
           'UCU5qmd5NvJljDBeM1sD-D1A', // Q1Q2
           'UC7ACqIQiy1SkjglQQ6bWDRg', // Idol & Romance
           'UCKn4SloJmZYNYNq6RgzgrHw', // NewTV
+          'UCPh1aKtroMioOCPHTGPwUBQ', // Classic
+          'UChqXUTNBOnIaBEU7K6Le6FA', // 邓小平
+          'UCShvs7P4CMTGzHTmEwZRcHQ', // 茶馆
+          'UCIZwFGOBwV1wOvCaRMIgNRQ', // 地道战
+          'UCEWBSXNFMVBc7p79dtIh3HA', // 刘罗锅
+          'UC8a4CRn6S5Yq2wEJ07B70OA', // 刘罗锅
+          'UC7Vl0YiY0rDlovqcCFN4yTA', // CCTV 电视剧
         ]
         channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
       }
       let videos = []
       for (let term of this.terms) {
         let response = await $.getJSON(
-          `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2`
+          `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
         )
         if (response && response.data && response.data.length > 0) {
           videos = videos.concat(response.data)

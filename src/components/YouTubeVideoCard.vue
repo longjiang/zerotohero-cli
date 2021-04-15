@@ -66,20 +66,18 @@
           @click="getSubsAndSave(video)"
           ><i class="fas fa-plus mr-2"></i>Add</b-button
         >
-        <!--
         <b-button
-          v-if="video.id && !video.channel_id"
+          v-if="$settings.adminMode && video.id && !video.channel_id"
           class="btn btn-small mt-2 ml-0"
           @click="addChannelID(video)"
           ><i class="fas fa-plus mr-2"></i>Add Channel ID</b-button
         >
         <b-button
-          v-if="video.id"
+          v-if="$settings.adminMode && video.id"
           class="btn btn-small bg-danger text-white mt-2 ml-0"
           @click="remove(video)"
           ><i class="fa fa-trash"></i></b-button
         >
-        -->
         <div
           v-if="video.id && video.topic"
           class="btn btn-small btn-gray mt-2 ml-0"
@@ -92,11 +90,10 @@
         >
           {{ Helper.level(video.level, $l2) }}
         </div>
-        <!--
-        <div v-if="video.subs_l1 && video.subs_l1.length > 0">
+        <div v-if="$settings.adminMode && video.subs_l1 && video.subs_l1.length > 0">
           <div v-for="index in [0,1,2,3,4]"><b>{{ video.l1Locale }} </b><span @click="matchSubsAndUpdate(index)" :class="{'btn': true, 'btn-small': true, 'text-danger': video.subs_l2 && video.subs_l2.length > 0 && video.subs_l1[index].starttime !== video.subs_l2[0].starttime }">{{ video.subs_l1[index].starttime }}</span> {{ video.subs_l1[index].line }}</div>
         </div>
-        <div v-if="video.subs_l2 && video.subs_l2.length > 0">
+        <div v-if="$settings.adminMode && video.subs_l2 && video.subs_l2.length > 0">
           <b>{{ video.l2Locale || $l2.code }}</b> <input type="text" v-model.lazy="firstLineTime" :style="`width: ${String(firstLineTime).length}em`" class="ml-1 mr-1 btn btn-small" /> {{ video.subs_l2[0].line }}
 
           <b-button v-if="!subsUpdated" @click="updateSubs" class="mt-2 btn btn-small"
@@ -106,7 +103,6 @@
             <i class="fa fa-check mr-2"></i>Updated
           </b-button>
         </div>
-        -->
       </div>
     </div>
   </drop>
@@ -290,7 +286,7 @@ export default {
       let response = await $.getJSON(
         `${Config.wiki}items/youtube_videos?filter[youtube_id][eq]=${
           video.youtube_id
-        }&filter[l2][eq]=${this.$l2.id}`
+        }&filter[l2][eq]=${this.$l2.id}&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
       )
       if (response && response.data.length > 0) {
         video = Object.assign(video, response.data[0])

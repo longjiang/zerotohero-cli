@@ -128,7 +128,7 @@ export default {
         filters += '&filter[level][eq]=' + this.level
       }
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}${filters}`
+        `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}${filters}&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
       )
       let videos = response.data || []
       this.videos = Helper.uniqueByValue(videos, 'youtube_id')
