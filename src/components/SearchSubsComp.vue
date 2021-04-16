@@ -174,7 +174,6 @@ export default {
         channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
       }
       let videos = []
-      console.log(this.terms)
       for (let term of this.terms) {
         let response = await $.getJSON(
           `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${this.$settings.adminMode ? Date.now() : 0}`

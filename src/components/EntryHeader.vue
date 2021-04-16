@@ -2,6 +2,25 @@
   <!-- ANCHOR img/anchors/entry.png  -->
   <div class="entry-head-wrapper" v-if="entry">
     <div>
+      <div>
+        <span
+          v-if="
+            entry.level && entry.level !== 'outside' && $l2.code === 'zh'
+          "
+          class="entry-level p-1 rounded font-weight-bold"
+          style="position: relative; bottom: 0.5em; font-size: 0.8em"
+          :data-level="entry.level"
+          >HSK {{ entry.level }}</span
+        >
+        <span
+          v-if="
+            entry.newHSK
+          "
+          class="entry-level p-1 rounded font-weight-bold"
+          :style="`position: relative; bottom: 0.5em; font-size: 0.8em; color: ${entry.newHSK === '7-9' ? '#00716B' : 'inherit'}`"
+          ><i class="fa fa-arrow-right mr-2" />New HSK {{ entry.newHSK }}</span
+        >
+      </div>
       <Annotate tag="div" class="mb-4" v-if="entry.counters"
         ><span>一{{
           entry.counters
@@ -11,6 +30,7 @@
       >
       <div class="entry-word-wrapper" style="display: inline-block">
         <div class="mb-2">
+          
           <div class="entry-pinyin">
             <Star :word="entry"></Star>
             <span v-if="entry.pronunciation" class="ml-2 mr-1"

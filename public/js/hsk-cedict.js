@@ -66,6 +66,9 @@ const Dictionary = {
   getNewHSK() {
     return this.newHSK
   },
+  getNewLevel(simplified) {
+    return this.newHSK.filter(word => word.simplified === simplified)
+  },
   lookupByDef(text, limit = 30) {
     let preferred = this.words
       .filter(row => row.search && row.search.startsWith(text))

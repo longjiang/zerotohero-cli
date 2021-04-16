@@ -309,7 +309,7 @@ export default {
         })
       )
     },
-    show(entry) {
+    async show(entry) {
       this.entryKey += 1
       for (let definition of entry.definitions) {
         definition = definition.replace(/\[.*\] /g, '')
@@ -331,6 +331,10 @@ export default {
       entry.definitions = entry.definitions.filter(
         (def) => !def.startsWith('CL')
       )
+      if (this.$l2.code === 'zh') {
+        entry.newHSKMatches = await (await this.$dictionary).getNewLevel(entry.simplified) || []
+        entry.newHSK = entry.newHSKMatches.map(word => word.level).join('/')
+      }
       this.entry = entry
       document.title = `${entry.bare} (${entry.definitions[0]}) | ${
         this.$l2 ? this.$l2.name : ''
