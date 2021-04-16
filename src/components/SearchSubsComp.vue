@@ -151,9 +151,8 @@ export default {
           'UCLsMbqJe_Oeqm6r9tvP1Nkg', // Clip Box
           'UCcLK3j-XWdGBnt5bR9NJHaQ', // CCTV
           'UCjnJ4buqbnpRVaT3IDUQPZQ', // CCTV chun wan
-          'UCLsrDKheyHv7GYsTkMaw2bw', // YoYo fun station
           'UCU5qmd5NvJljDBeM1sD-D1A', // Q1Q2
-          'UC7ACqIQiy1SkjglQQ6bWDRg', // Idol & Romance
+          'UC7ACqIQiy1SkjglQQ6bWDRg', // 捷成华视 Idol & Romance
           'UCKn4SloJmZYNYNq6RgzgrHw', // NewTV
           'UCPh1aKtroMioOCPHTGPwUBQ', // Classic
           'UChqXUTNBOnIaBEU7K6Le6FA', // 邓小平
@@ -163,10 +162,19 @@ export default {
           'UC8a4CRn6S5Yq2wEJ07B70OA', // 刘罗锅
           'UC7Vl0YiY0rDlovqcCFN4yTA', // CCTV 电视剧
           'UCdpiId0eJGnnIvfhpbJIM1w', // 腾讯动漫
+          'UC2B9maQhihZed6ovrnK1cBA', // MZTV Exclusive Chinese Drama
+          'UCNORTw_uosRNGgdEjwdHvuw', // 大劇獨播MZTV
+          'UC0jYsshDZfOBZC9nIJn94Cg', // China Zone
+          'UCteBLoijWzlVFSR5BBtS_2Q', // 优优独播剧场 YoYo Television Series Exclusive
+          'UCLsrDKheyHv7GYsTkMaw2bw', // 优优青春剧场 YoYo fun station
+          'UC5-YbNL-MUy1_tC9KSkEShw', // Caravan中文剧场
+          'UCPIRD4yr1hlAEovBCSNlAKg', // Croton MEGA HIT
+          'UC7VY0GWLswq_Z48nkETL-yA', // Chinese Drama
         ]
         channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
       }
       let videos = []
+      console.log(this.terms)
       for (let term of this.terms) {
         let response = await $.getJSON(
           `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
