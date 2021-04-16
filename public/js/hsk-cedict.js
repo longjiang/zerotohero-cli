@@ -270,10 +270,31 @@ const Dictionary = {
             : undefined,
         phonetics: row.pinyin
       },
+      pronunciation: row.pinyin,
       definitions: row.definitions.split('/'),
       search: row.definitions.toLowerCase(),
       level: row.hsk
     })
+    for (let definition of augmented.definitions) {
+      definition = definition.replace(/\[.*\] /g, '')
+      if (definition.startsWith('CL')) {
+        let counters = definition.replace('CL:', '').split(',')
+        let cs = []
+        for (let counter of counters) {
+          let c = {
+            pinyin: counter.replace(/.*\[(.*)\]/, '$1'),
+          }
+          let t = counter.replace(/\[(.*)\]/, '').split('|')
+          c.simplified = t[t.length - 1]
+          c.traditional = t[0]
+          cs.push(c)
+        }
+        augmented.counters = cs
+      }
+    }
+    augmented.definitions = augmented.definitions.filter(
+      (def) => !def.startsWith('CL')
+    )
     this._maxWeight = Math.max(augmented.weight, this._maxWeight)
     return augmented
   },

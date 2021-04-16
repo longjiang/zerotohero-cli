@@ -15,6 +15,7 @@ import VueObserveVisibility from 'vue-observe-visibility'
 import Languages from '@/lib/languages'
 import VueAnalytics from 'vue-analytics'
 import VueDisqus from 'vue-disqus'
+import Meta from 'vue-meta'
 
 Vue.config.productionTip = false
 
@@ -30,6 +31,7 @@ Vue.use(VueAnalytics, {
   id: 'UA-1846573-21'
 })
 Vue.use(VueDisqus)
+Vue.use(Meta)
 
 Vue.component('Annotate', Annotate)
 Vue.component('Loader', Loader)

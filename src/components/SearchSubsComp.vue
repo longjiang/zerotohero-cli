@@ -85,10 +85,11 @@ export default {
       hitIndex: 0,
       navigated: false,
       checking: true,
+      videos: []
     }
   },
   mounted() {
-    this.searchSubs(this.terms[0])
+    this.searchSubs()
   },
   activated() {
     setTimeout(() => {
@@ -137,6 +138,8 @@ export default {
       this.$refs.youtube.pause()
     },
     async searchSubs() {
+      this.hits = []
+      this.videos = []
       this.checking = true
       let channelFilter = ''
       if (this.$l2.code === 'zh') {
@@ -173,17 +176,16 @@ export default {
         ]
         channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
       }
-      let videos = []
       for (let term of this.terms) {
         let response = await $.getJSON(
           `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
         )
         if (response && response.data && response.data.length > 0) {
-          videos = videos.concat(response.data)
+          this.videos = this.videos.concat(response.data)
         }
       }
       let seenYouTubeIds = []
-      for (let video of shuffle(videos)) {
+      for (let video of shuffle(this.videos)) {
         if (!seenYouTubeIds.includes(video.youtube_id)) {
           seenYouTubeIds.push(video.youtube_id)
           video.subs_l2 = JSON.parse(video.subs_l2)
@@ -199,6 +201,7 @@ export default {
           }
         }
       }
+      this.$emit('loaded', this.hits)
       this.checking = false
     },
   },

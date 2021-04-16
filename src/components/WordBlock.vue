@@ -180,6 +180,12 @@
               "
             ></em>
           </span>
+          <span class="word-counters" v-if="word.counters"><em>:</em> {{
+                word.counters
+                  .map(counter => '一' + counter.simplified)
+                  .join(word.simplified + '、') + word.simplified
+              }}。
+          </span>
         </div>
       </div>
       <div v-if="loading === true">💭 Thinking...</div>

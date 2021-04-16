@@ -56,7 +56,7 @@
                   :definitions="entry.definitions"
                 ></DefinitionsList>
               </div>
-              <EntryExample :entry="entry"></EntryExample>
+              <EntryExample :entry="entry" class="mb-4"></EntryExample>
             </div>
           </div>
         </div>
@@ -73,6 +73,8 @@
               :text="entry.bare"
               :entry="entry"
               limit="10"
+              ref="images"
+              @loaded="webImagesLoaded"
             />
             <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
             <Collocations
@@ -80,10 +82,10 @@
               :word="entry"
               :level="entry.level"
             />
-            <div class="widget mt-5" >
+            <div class="widget mt-5" :key="entry.id">
               <div class="widget-title">Mentions of “{{ entry.bare }}” on TV</div>
               <div class="widget-body">
-                <SearchSubsComp :level="entry.hsk" :terms="entry.simplified === entry.traditional ? [entry.simplified] : [entry.simplified, entry.traditional]"  class="mt-4 mb-4" />
+                <SearchSubsComp v-if="entry" :level="entry.hsk" :terms="entry.simplified === entry.traditional ? [entry.simplified] : [entry.simplified, entry.traditional]"  class="mt-4 mb-4" @loaded="searchSubsLoaded" />
                 <p class="mt-1 text-center" v-if="youglishLang[$l2.code]">
                   See examples of “{{ entry.bare }}” on
                   <a
@@ -280,6 +282,11 @@ export default {
         es: 'spanish',
         tr: 'turkish',
       },
+      title: '',
+      description: '',
+      searchSubsImage: undefined,
+      webImage: undefined,
+      searchSubsExample: ''
     }
   },
   computed: mapState(['savedWords']),
@@ -310,35 +317,15 @@ export default {
       )
     },
     async show(entry) {
-      this.entryKey += 1
-      for (let definition of entry.definitions) {
-        definition = definition.replace(/\[.*\] /g, '')
-        if (definition.startsWith('CL')) {
-          let counters = definition.replace('CL:', '').split(',')
-          let cs = []
-          for (let counter of counters) {
-            let c = {
-              pinyin: counter.replace(/.*\[(.*)\]/, '$1'),
-            }
-            let t = counter.replace(/\[(.*)\]/, '').split('|')
-            c.simplified = t[t.length - 1]
-            c.traditional = t[0]
-            cs.push(c)
-          }
-          entry.counters = cs
-        }
-      }
-      entry.definitions = entry.definitions.filter(
-        (def) => !def.startsWith('CL')
-      )
       if (this.$l2.code === 'zh') {
         entry.newHSKMatches = await (await this.$dictionary).getNewLevel(entry.simplified) || []
         entry.newHSK = entry.newHSKMatches.map(word => word.level).join('/')
       }
       this.entry = entry
-      document.title = `${entry.bare} (${entry.definitions[0]}) | ${
+      this.title = `${entry.bare} ${entry.pronunciation ? '(' + entry.pronunciation + ')': ''} | ${
         this.$l2 ? this.$l2.name : ''
-      } Zero to Hero`
+      } Zero to Hero Dictionary`
+      this.description = `"${entry.bare}" means ${entry.definitions.join('; ')}:`
     },
     async route() {
       if (this.method && this.args) {
@@ -361,6 +348,30 @@ export default {
         path: `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${randomId}`,
       })
     },
+    searchSubsLoaded(hits) {
+      if (hits.length > 0) {
+        this.searchSubsImage = `https://img.youtube.com/vi/${hits[0].video.youtube_id}/hqdefault.jpg`
+        this.searchSubsExample = hits[0].video.subs_l2[hits[0].lineIndex - 1].line + ' ' + hits[0].video.subs_l2[hits[0].lineIndex].line
+      }
+    },
+    webImagesLoaded(images) {
+      if (images.length > 0) {
+        this.webImage = images[0].src
+      }
+
+    }
+  },
+  metaInfo() {
+    return {
+      meta: [
+          // Facebook OpenGraph
+          {property: 'og:title', content: this.title},
+          {property: 'og:site_name', content: this.$l2.name + ' Zero to Hero'},
+          {property: 'og:type', content: 'website'},
+          {property: 'og:image', content:  this.searchSubsImage || this.webImage || this.$languages.logo(this.$l2.code)},
+          {property: 'og:description', content: this.description + ' ' + this.searchSubsExample || this.entry.example || ''}
+      ]
+    }
   },
   watch: {
     $route() {

@@ -9,7 +9,7 @@ onmessage = function(e) {
   const args = e.data[2]
   if (method === 'load') {
     let options = args[0]
-    importScripts(`../js/${options.dict}.js`)
+    importScripts(`../js/${options.dict}.js?v=${Date.now()}`)
     Dictionary.load(options).then(() => {
       ready = true
       this.postMessage([1, 'load', 'ready'])

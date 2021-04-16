@@ -57,6 +57,7 @@ export default {
         lang: this.$l2.code
       })).slice(0, this.limit)
       this.images = images
+      this.$emit('loaded', this.images)
       if (this.entry) {
         Vue.set(this.entry, 'images', this.images)
       }

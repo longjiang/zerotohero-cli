@@ -491,6 +491,15 @@ export default {
     }
     return features
   },
+  logo(code) {
+    if (code === 'en') {
+      return `/img/ezh-icon.png`
+    } else if (code === 'zh') {
+      return `/img/czh-icon.png`
+    } else {
+      return `/img/logo-square/${code}.jpeg`
+    }
+  },
   async load() {
     console.log('Loading language data...')
     let promises = [

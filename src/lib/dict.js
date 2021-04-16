@@ -6,7 +6,7 @@ export default {
   load(options) {
     return new Promise(resolve => {
       // worker ready
-      this.worker = new Worker('/workers/dict-worker.js')
+      this.worker = new Worker(`/workers/dict-worker.js?v=${Date.now()}`)
       this.worker.postMessage([3, 'load', [options]])
       this.worker.addEventListener('message', e => {
         if (e.data[1] === 'load' && e.data[2] === 'ready') {

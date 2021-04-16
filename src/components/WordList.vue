@@ -1,13 +1,15 @@
 <template>
   <div>
-    <ul
-      :class="classes()"
-      data-collapse-target
-    >
-      <li :class="{
-        'wordlist-item': true,
-        'matched': matchedWords && matchedWords.map(word => word.id).includes(word.id)
-        }" v-for="word in words">
+    <ul :class="classes()" data-collapse-target>
+      <li
+        :class="{
+          'wordlist-item': true,
+          matched:
+            matchedWords &&
+            matchedWords.map((word) => word.id).includes(word.id),
+        }"
+        v-for="word in words"
+      >
         <Star v-if="word && star === true" :word="word" class="mr-1"></Star>
         <router-link
           v-if="compareWith"
@@ -15,17 +17,29 @@
           class="btn btn-small mr-2"
           >Compare</router-link
         >
-        <router-link v-if="word" :to="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`">
+        <router-link
+          v-if="word"
+          :to="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`"
+        >
           <span
             class="wordlist-item-word ml-1"
             :data-level="word.level || 'outside'"
             >{{ word.accented }}</span
           >&nbsp;
           <span v-if="word.pronunciation" class="wordlist-item-pinyin">
-            /{{ word.pronunciation }}/
+            <span v-if="$l2.code !== 'zh'">/</span>{{ word.pronunciation
+            }}<span v-if="$l2.code !== 'zh'">/</span>
           </span>
           <span v-if="word.definitions" class="wordlist-item-l1">
-            {{ word.definitions.filter(def => !def.startsWith('CL')).join(', ') }}
+            {{
+              word.definitions.filter((def) => !def.startsWith('CL')).join(', ')
+            }}</span><span class="wordlist-item-l1" v-if="word.counters"
+            >:<span style="font-style: normal">
+            {{
+              word.counters
+                .map((counter) => '一' + counter.simplified)
+                .join(word.simplified + '、') + word.simplified
+            }}。</span>
           </span>
         </router-link>
       </li>
@@ -49,49 +63,49 @@ import Helper from '@/lib/helper'
 export default {
   data() {
     return {
-      Helper
+      Helper,
     }
   },
   props: {
     words: {
-      type: Array
+      type: Array,
     },
     texts: {
-      type: Array
+      type: Array,
     },
     matchedWords: {
-      default: undefined
+      default: undefined,
     },
     compareWith: {
-      default: false
+      default: false,
     },
     traditional: {
-      default: false
+      default: false,
     },
     highlight: {
-      default: false
+      default: false,
     },
     collapse: {
-      default: 0
+      default: 0,
     },
     star: {
-      default: true
+      default: true,
     },
     level: {
-      default: false
-    }
+      default: false,
+    },
   },
   methods: {
     classes() {
       let classes = {
         wordlist: true,
         'list-unstyled': true,
-        collapsed: this.collapse > 0
+        collapsed: this.collapse > 0,
       }
       classes[`collapse-${this.collapse}`] = true
       return classes
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -115,6 +129,6 @@ export default {
 }
 
 .wordlist-item.matched {
-  opacity: 0.2
+  opacity: 0.2;
 }
 </style>
