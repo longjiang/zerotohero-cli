@@ -4,13 +4,19 @@
       <div class="col-sm-12">
         <SimpleSearch
           class="mb-3"
-          :placeholder="$t('Search the entire YouTube for {l2} videos with CC', { l2: $l2.name })"
+          :placeholder="
+            $t('Search the entire YouTube for {l2} videos with CC', {
+              l2: $l2.name,
+            })
+          "
           buttonText="Search"
           :action="
-            url => {
-              this.$router.push({path: `/${$l1.code}/${
-                $l2.code
-              }/youtube/search/${encodeURIComponent(url)}`})
+            (url) => {
+              this.$router.push({
+                path: `/${$l1.code}/${
+                  $l2.code
+                }/youtube/search/${encodeURIComponent(url)}`,
+              })
             }
           "
           ref="search"
@@ -21,62 +27,84 @@
       <div class="col-sm-12 col-md-8 col-lg-9 pr-4 mb-5">
         <template v-if="videos && videos.length > 0">
           <h3 class="mb-2 text-center">Library</h3>
-          <p class="mb-4 text-center">{{ Math.min(videos.length, 100) }}{{ videos.length > 100 ? '+' : '' }} {{ topic === 'all' ? $t('New') : ''}} {{ $t('Videos') }}</p>
-          <YouTubeVideoList :videos="videos" :checkSubs="false" :checkSaved="false" />
+          <YouTubeVideoList
+            :videos="videos"
+            :checkSubs="false"
+            :checkSaved="false"
+          />
         </template>
-        <template v-if="channels && channels.length > 0">
-          <h4 class="mt-5 mb-4 text-center">{{ channels.length }} {{ $t('Channels') }}</h4>
-          <ul class="list-unstyled p-0 mb-5 cards">
-            <li v-for="channel in channels" class="p-4 mb-4 card">
-              <YouTubeChannelCard :channel="channel" />
-            </li>
-          </ul>
-        </template>
+        <div class="mt-4 text-center">
+          <router-link
+            v-if="start > 9"
+            :to="`/${$l1.code}/${$l2.code}/youtube/browse/${topic}/${level}/${
+              Number(start) - 10
+            }`"
+            class="btn btn-default mr-2"
+          >
+            Previous
+          </router-link>
+          <router-link
+            :to="`/${$l1.code}/${$l2.code}/youtube/browse/${topic}/${level}/${
+              Number(start) + 10
+            }`"
+            class="btn btn-default"
+          >
+            Next
+          </router-link>
+        </div>
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3">
         <h4 class="text-center mb-4">Filter by Topic</h4>
         <div class="list-group">
           <a
             :class="{
-                'link-unstyled': true,
-                'list-group-item': true,
-                'list-group-item-action': topic === 'all',
-                active: topic === 'all'
-              }"
+              'link-unstyled': true,
+              'list-group-item': true,
+              'list-group-item-action': topic === 'all',
+              active: topic === 'all',
+            }"
             :href="`/${$l1.code}/${$l2.code}/youtube/browse/all/${level}`"
-          >All</a>
+          >
+            All
+          </a>
           <a
             v-for="(topicName, topicValue) in topics"
             :class="{
-                'link-unstyled': true,
-                'list-group-item': true,
-                'list-group-item-action': topicValue === topic,
-                active: topicValue === topic
-              }"
+              'link-unstyled': true,
+              'list-group-item': true,
+              'list-group-item-action': topicValue === topic,
+              active: topicValue === topic,
+            }"
             :href="`/${$l1.code}/${$l2.code}/youtube/browse/${topicValue}/all`"
-          >{{ topicName }}</a>
+          >
+            {{ topicName }}
+          </a>
         </div>
         <h6 class="mt-4 mb-4 text-center">Filter by Level</h6>
         <div class="list-group">
           <a
             :class="{
-                'link-unstyled': true,
-                'list-group-item': true,
-                'list-group-item-action':  level === 'all',
-                active: level === 'all'
-              }"
+              'link-unstyled': true,
+              'list-group-item': true,
+              'list-group-item-action': level === 'all',
+              active: level === 'all',
+            }"
             :href="`/${$l1.code}/${$l2.code}/youtube/browse/${topic}/all`"
-          >All</a>
+          >
+            All
+          </a>
           <a
             v-for="(levelName, levelValue) in levels"
             :class="{
-                'link-unstyled': true,
-                'list-group-item': true,
-                'list-group-item-action': levelValue === level,
-                active: levelValue === level
-              }"
+              'link-unstyled': true,
+              'list-group-item': true,
+              'list-group-item-action': levelValue === level,
+              active: levelValue === level,
+            }"
             :href="`/${$l1.code}/${$l2.code}/youtube/browse/all/${levelValue}`"
-          >{{ levelName }}</a>
+          >
+            {{ levelName }}
+          </a>
         </div>
       </div>
     </div>
@@ -96,18 +124,21 @@ export default {
     YouTubeNav,
     YouTubeVideoList,
     YouTubeChannelCard,
-    SimpleSearch
+    SimpleSearch,
   },
   props: {
     args: {
-      type: String
+      type: String,
     },
     topic: {
-      default: 'all'
+      default: 'all',
     },
     level: {
-      default: 'all'
-    }
+      default: 'all',
+    },
+    start: {
+      default: 0,
+    },
   },
   data() {
     return {
@@ -115,7 +146,7 @@ export default {
       channels: [],
       videos: [],
       levels: Helper.levels(this.$l2),
-      topics: Helper.topics
+      topics: Helper.topics,
     }
   },
   methods: {
@@ -128,7 +159,9 @@ export default {
         filters += '&filter[level][eq]=' + this.level
       }
       let response = await $.getJSON(
-        `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${this.$l2.id}${filters}&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
+        `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${
+          this.$l2.id
+        }${filters}&limit=10&offset=${this.start}&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
       )
       let videos = response.data || []
       this.videos = Helper.uniqueByValue(videos, 'youtube_id')
@@ -138,12 +171,15 @@ export default {
         `${Config.wiki}items/youtube_channels?filter[language][eq]=${this.$l2.id}&fields=*,avatar.*`
       )
       if (response.data && response.data.length > 0) {
-        let channels = response.data.map(channel => {
+        let channels = response.data.map((channel) => {
           return {
             id: channel.channel_id,
-            avatar: channel.avatar && channel.avatar !== null ? channel.avatar.data.full_url : undefined,
+            avatar:
+              channel.avatar && channel.avatar !== null
+                ? channel.avatar.data.full_url
+                : undefined,
             title: channel.name,
-            description: channel.description
+            description: channel.description,
           }
         })
         channels = Helper.uniqueByValue(channels, 'youtube_id')
@@ -151,9 +187,14 @@ export default {
       }
     },
     route() {
-      this.getVideos()
-      this.getChannels()
-    }
+      let canonical = `/${this.$l1.code}/${this.$l2.code}/youtube/browse/${this.topic}/${this.level}/${this.start}`
+      if (this.$router.currentRoute.path !== canonical) {
+        this.$router.push({ path: canonical })
+      } else {
+        this.getVideos()
+        this.getChannels()
+      }
+    },
   },
   created() {
     this.route()
@@ -163,7 +204,7 @@ export default {
       if (this.$route.name === 'youtube-browse') {
         this.route()
       }
-    }
-  }
+    },
+  },
 }
 </script>
