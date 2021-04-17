@@ -164,6 +164,9 @@ export default {
     },
     startLineIndex: {
       default: 0
+    },
+    stopLineIndex: {
+      default: -1
     }
   },
   computed: mapState(['savedWords']),
@@ -197,6 +200,11 @@ export default {
           this.currentTime + 0.5 // current time marker passed the start time of the line
         ) {
           if (this.currentLine !== line) {
+            // Pause video if passed stopLineIndex 
+            if (this.stopLineIndex > 0 && lineIndex === this.stopLineIndex + 1) {
+              this.pauseVideo()
+              return
+            }
             // Pause video if there's a pop quiz
             // if (this.review[lineIndex - 1] && this.review[lineIndex - 1].length > 0 && !this.paused[lineIndex - 1]) {
             //   this.pauseVideo()

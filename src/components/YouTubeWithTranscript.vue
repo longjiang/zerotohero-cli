@@ -3,7 +3,7 @@
     <div v-if="layout === 'horizontal'" class="row">
       <div class="youtube-video-column col-md-6 sticky">
         <div class="youtube-video-wrapper sticky pt-3 pb-3 bg-white" :key="'youtube-' + youtube">
-          <YouTubeVideo ref="youtube" :youtube="youtube" />
+          <YouTubeVideo ref="youtube" :youtube="youtube"/>
         </div>
       </div>
       <div class="col-md-6" :key="'transcript-' + youtube">
@@ -36,6 +36,7 @@
               :highlight="highlight"
               :highlight-saved-words="false"
               :startLineIndex="startLineIndex"
+              :stopLineIndex="stopLineIndex"
             />
           </div>
         </div>
@@ -74,6 +75,9 @@ export default {
     },
     startLineIndex: {
       default: 0
+    },
+    stopLineIndex: {
+      default: -1
     }
   },
   data() {

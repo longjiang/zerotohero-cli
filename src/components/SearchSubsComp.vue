@@ -50,7 +50,8 @@
         :l2Lines="hit.video.subs_l2"
         layout="vertical"
         :highlight="terms"
-        :startLineIndex="hit.lineIndex"
+        :startLineIndex="Math.max(hit.lineIndex - 1, 0)"
+        :stopLineIndex="Number(hit.lineIndex)"
         :autoload="true"
         :autoplay="navigated"
       />

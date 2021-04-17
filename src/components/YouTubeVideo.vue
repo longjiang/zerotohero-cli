@@ -31,7 +31,12 @@ export default {
       type: String
     },
     starttime: {
+      type: Number,
       default: 0
+    },
+    stoptime: {
+      type: Number,
+      default: -1
     },
     autoload: {
       default: false
