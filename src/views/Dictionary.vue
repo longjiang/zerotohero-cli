@@ -316,10 +316,6 @@ export default {
       )
     },
     async show(entry) {
-      if (this.$l2.code === 'zh') {
-        entry.newHSKMatches = await (await this.$dictionary).getNewLevel(entry.simplified) || []
-        entry.newHSK = entry.newHSKMatches.map(word => word.level).join('/')
-      }
       this.entry = entry
       this.title = `${entry.bare} ${entry.pronunciation ? '(' + entry.pronunciation + ')': ''} | ${
         this.$l2 ? this.$l2.name : ''

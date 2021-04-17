@@ -82,15 +82,15 @@
             of
           </div>
           <div>
-            <span style="color: #999" v-if="word.pronunciation"
-              >/{{ word.pronunciation }}/</span
-            >
-            <span style="color: #999" v-else-if="word.jyutping">{{
+            <span style="color: #999" v-if="word.jyutping">{{
               word.jyutping
             }}</span>
             <span style="color: #999" v-else-if="word.pinyin">{{
               word.pinyin
             }}</span>
+            <span style="color: #999" v-else-if="word.pronunciation"
+              >/{{ word.pronunciation }}/</span
+            >
             <span
               style="color: #999"
               v-else-if="word.kana && word.kana !== word.bare"
@@ -136,10 +136,17 @@
           >
           <span
             v-if="word.level && word.level !== 'outside'"
-            :data-bg-level="word.level"
+          :data-bg-level="word.level"
             class="pl-1 pr-1 ml-1 rounded d-inline-block"
             style="font-size: 0.8em; position: relative; bottom: 0.1rem"
             >{{ $l2.code === 'zh' ? 'HSK ' : '' }}{{ word.level }}</span
+          ><span
+            v-if="
+              word.newHSK
+            "
+            class="ml-1"
+            :style="`position: relative; bottom: 0.2em; font-size: 0.8em; color: ${word.newHSK === '7-9' ? '#00716B' : 'inherit'}`"
+            ><i class="fa fa-arrow-right mr-1" />新 HSK {{ word.newHSK }}</span
           >
           <span v-if="word.unit" style="font-size: 0.8em" class="ml-1"
             >Unit {{ word.unit }}</span
@@ -471,6 +478,9 @@ export default {
   cursor: pointer;
   &.saved {
     font-weight: bold;
+  }
+  &:hover {
+    background-color: rgba(250, 248, 195, 0.5);
   }
 }
 

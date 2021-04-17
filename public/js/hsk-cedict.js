@@ -69,6 +69,21 @@ const Dictionary = {
   getNewLevel(simplified) {
     return this.newHSK.filter(word => word.simplified === simplified)
   },
+  unique(names) {
+    var uniqueNames = []
+    $.each(names, function(i, el) {
+      if ($.inArray(el, uniqueNames) === -1) uniqueNames.push(el)
+    })
+    return uniqueNames
+  },
+  addNewHSK(word) {
+    let newHSKMatches = this.getNewLevel(word.simplified) || []
+    let newHSK = this.unique(newHSKMatches.map(word => word.level)).join('/')
+    return Object.assign(word, {
+      newHSKMatches,
+      newHSK
+    })
+  },
   lookupByDef(text, limit = 30) {
     let preferred = this.words
       .filter(row => row.search && row.search.startsWith(text))
@@ -86,10 +101,12 @@ const Dictionary = {
     return uniqueArray
   },
   getByHSKId(hskId) {
-    return this.words.find(row => row.hskId === hskId)
+    let word =  this.words.find(row => row.hskId === hskId)
+    return this.addNewHSK(word)
   },
   get(id) {
-    return this.words.find(row => row.id === id)
+    let word = this.words.find(row => row.id === id)
+    return this.addNewHSK(word)
   },
   getByBookLessonDialog(book, lesson, dialog) {
     return this.words.filter(
@@ -170,7 +187,7 @@ const Dictionary = {
       if (limit) {
         results = results.slice(0, limit)
       }
-      return results
+      return results.map(word => this.addNewHSK(word))
     }
   },
   lookup(text) {
@@ -319,7 +336,7 @@ const Dictionary = {
         return b.weight - a.weight
       })
     return {
-      matches: matches,
+      matches: matches.map(candidate => this.addNewHSK(candidate)),
       text: matches && matches.length > 0 ? matches[0][tradOrSimp] : ''
     }
   },
