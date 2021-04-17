@@ -54,6 +54,10 @@ export default {
     this.loading = false
   },
   methods: {
+    focusOnSearch() {
+      console.log('focus on seach')
+      this.$refs.search.focusOnInput()
+    },
     compareClick() {
       this.dCompare = this.dCompare ? false : true
     }

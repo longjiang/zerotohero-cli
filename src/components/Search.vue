@@ -3,11 +3,12 @@
     <div class="input-group" v-cloak>
       <input
         @keyup.enter="go"
-        @focus="active = true"
+        @focus="active = true; $event.target.select()"
         @blur="cancel"
         v-model="text"
         type="text"
         class="form-control lookup"
+        ref="lookup"
         :placeholder="placeholder || $t('Look up words here...')"
       />
       <router-link
@@ -153,6 +154,9 @@ export default {
     }
   },
   methods: {
+    focusOnInput() {
+      this.$refs.lookup.focus()
+    },
     go() {
       const url = $('.suggestion:first-child').attr('href') || this.defaultURL(this.text)
       if (url) {

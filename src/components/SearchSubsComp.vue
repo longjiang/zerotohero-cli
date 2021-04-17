@@ -52,7 +52,7 @@
         :highlight="terms"
         :startLineIndex="Math.max(hit.lineIndex - 1, 0)"
         :stopLineIndex="Number(hit.lineIndex)"
-        :autoload="true"
+        :autoload="Helper.iOS() || navigated"
         :autoplay="navigated"
       />
     </div>
@@ -65,6 +65,7 @@ import SyncedTranscript from '@/components/SyncedTranscript'
 import SimpleSearch from '@/components/SimpleSearch'
 import Config from '@/lib/config'
 import shuffle from 'shuffle-array'
+import Helper from '@/lib/helper'
 
 export default {
   components: {
@@ -86,7 +87,8 @@ export default {
       hitIndex: 0,
       navigated: false,
       checking: true,
-      videos: []
+      videos: [],
+      Helper
     }
   },
   mounted() {

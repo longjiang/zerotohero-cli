@@ -67,7 +67,7 @@
         <SubNav class="pt-4" />
 
         <keep-alive>
-          <router-view ref="routerView" />
+          <router-view ref="routerView" id="main" />
         </keep-alive>
 
         <footer class="container-fluid bg-dark text-light pt-4 pb-4">

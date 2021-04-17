@@ -9,7 +9,9 @@
             </div>
             <SearchCompare
               :searchEntry="entry"
+              ref="searchCompare"
               :key="`search-${args}`"
+              id="search-compare-bar"
             />
           </div>
         </div>
@@ -81,7 +83,7 @@
               :word="entry"
               :level="entry.level"
             />
-            <div class="widget mt-5" :key="`subs-search-${entry.id}`">
+            <div class="widget mt-5" id="search-subs" :key="`subs-search-${entry.id}`">
               <div class="widget-title">“{{ entry.bare }}” in TV Shows</div>
               <div class="widget-body">
                 <SearchSubsComp v-if="entry" :level="entry.hsk" :terms="entry.simplified === entry.traditional ? [entry.simplified] : [entry.simplified, entry.traditional]"  class="mt-4 mb-4" @loaded="searchSubsLoaded" />
@@ -315,6 +317,27 @@ export default {
         })
       )
     },
+    unbindKeys() {
+      window.onkeydown = null
+    },
+
+    bindKeys() {
+      window.onkeydown = (e) => {
+        if (e.target.tagName.toUpperCase() !== 'INPUT') {
+          if (e.keyCode == 36) {
+            // home
+            document.getElementById("main").scrollIntoView({behavior: "smooth"});
+            // this.$refs.searchCompare.focusOnSearch()
+            return false
+          }
+          if (e.keyCode == 35) {
+            // end
+            document.getElementById("search-subs").scrollIntoView({behavior: "smooth"});
+            return false
+          }
+        }
+      }
+    },
     async show(entry) {
       this.entry = entry
       this.title = `${entry.bare} ${entry.pronunciation ? '(' + entry.pronunciation + ')': ''} | ${
@@ -377,6 +400,12 @@ export default {
     savedWords() {
       this.updateWords()
     },
+  },
+  activated() {
+    this.bindKeys()
+  },
+  deactivated() {
+    this.unbindKeys()
   },
   mounted() {
     if (this.$route.name === 'dictionary') {
