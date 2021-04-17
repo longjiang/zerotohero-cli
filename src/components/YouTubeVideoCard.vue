@@ -103,6 +103,9 @@
             <i class="fa fa-check mr-2"></i>Updated
           </b-button>
         </div>
+        <div v-if="$settings.adminMode && video.channel_id && Config.approvedChannels[$l2.code] && !Config.approvedChannels[$l2.code].includes(video.channel_id)" class="small text-warning mt-1">
+          {{ video.channel_id}}
+        </div>
       </div>
     </div>
   </drop>
@@ -123,6 +126,7 @@ export default {
   data() {
     return {
       Helper,
+      Config,
       videoInfoKey: 0,
       over: false,
       firstLineTime: this.video.subs_l2 && this.video.subs_l2[0] ? this.video.subs_l2[0].starttime : 0,

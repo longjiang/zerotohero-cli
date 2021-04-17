@@ -1,22 +1,21 @@
 <template>
   <div class="main focus" :key="`entry-${entryKey}`">
-    <div class="jumbotron jumbotron-fluid bg-white pt-5 pb-3 mb-0">
+    <div class="jumbotron jumbotron-fluid bg-white pt-4 pb-0 mb-4">
       <div class="container focus-exclude">
         <div class="row">
           <div class="col-sm-12">
             <div class="text-center">
-              <h2 class="mb-4">
-                {{ $t('For the love of {l2} words.', { l2: $t($l2.name) }) }}
-              </h2>
               <Loader ref="loader" class="mb-5" />
             </div>
             <SearchCompare
               :searchEntry="entry"
-              class="mb-5"
               :key="`search-${args}`"
             />
           </div>
         </div>
+        <h2 class=" mt-5 mb-5 text-center" v-if="!entry">
+          {{ $t('For the love of {l2} words.', { l2: $t($l2.name) }) }}
+        </h2>
       </div>
     </div>
     <div
@@ -40,7 +39,7 @@
       <div class="text-center">
         <!-- <Loader class="mt-5" /> -->
       </div>
-      <div class="container mb-4">
+      <div class="container">
         <div class="row">
           <div class="col-sm-12 text-center">
             <div class="widget">
@@ -82,7 +81,7 @@
               :word="entry"
               :level="entry.level"
             />
-            <div class="widget mt-5" :key="entry.id">
+            <div class="widget mt-5" :key="`subs-search-${entry.id}`">
               <div class="widget-title">Mentions of “{{ entry.bare }}” on TV</div>
               <div class="widget-body">
                 <SearchSubsComp v-if="entry" :level="entry.hsk" :terms="entry.simplified === entry.traditional ? [entry.simplified] : [entry.simplified, entry.traditional]"  class="mt-4 mb-4" @loaded="searchSubsLoaded" />
@@ -97,7 +96,7 @@
                 </p>
               </div>
             </div>
-            <EntryRelated :entry="entry" class="mt-5" :key="entry.id" />
+            <EntryRelated :entry="entry" class="mt-5" :key="`related-${entry.id}`" />
           </div>
         </div>
       </div>

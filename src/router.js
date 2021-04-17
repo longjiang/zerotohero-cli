@@ -5,7 +5,20 @@ Vue.use(Router)
 
 export default new Router({
   scrollBehavior(to, from, savedPosition) {
-    return { x: 0, y: 0 }
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    }
+    if (from.name === to.name) {
+      if (to.name === 'dictionary') {
+        return {
+          selector: '.main'
+        }
+      }
+    } else {
+      return { x: 0, y: 0 }
+    }
   },
   mode: 'history',
   routes: [
