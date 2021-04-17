@@ -97,7 +97,7 @@
                 </p>
               </div>
             </div>
-            <EntryRelated :entry="entry" class="mt-5" />
+            <EntryRelated :entry="entry" class="mt-5" :key="entry.id" />
           </div>
         </div>
       </div>
