@@ -179,7 +179,8 @@ export default {
       currentLine: this.lines ? this.lines[this.startLineIndex] : undefined,
       review: {},
       paused: {},
-      reviewKey: 0
+      reviewKey: 0,
+      neverPlayed: true
     }
   },
   mounted() {
@@ -202,7 +203,8 @@ export default {
           if (this.currentLine !== line) {
             // Pause video if passed stopLineIndex 
             if (this.stopLineIndex > 0 && lineIndex === this.stopLineIndex + 1) {
-              this.pauseVideo()
+              if (this.neverPlayed) this.pauseVideo()
+              this.neverPlayed = false
               return
             }
             // Pause video if there's a pop quiz

@@ -138,7 +138,7 @@ export default {
       if (this.$refs.youtube) {
         this.paused = this.$refs.youtube.paused
       }
-    }, 1000)
+    }, 100)
   }
 
 }
