@@ -86,7 +86,7 @@
             <div class="widget mt-5" id="search-subs" :key="`subs-search-${entry.id}`">
               <div class="widget-title">“{{ entry.bare }}” in TV Shows</div>
               <div class="widget-body">
-                <SearchSubsComp v-if="entry" :level="entry.hsk" :terms="entry.simplified === entry.traditional ? [entry.simplified] : [entry.simplified, entry.traditional]"  class="mt-4 mb-4" @loaded="searchSubsLoaded" />
+                <SearchSubsComp v-if="entry" :level="entry.hsk" :terms="entry.simplified === entry.traditional ? [entry.simplified] : [entry.simplified, entry.traditional]" @loaded="searchSubsLoaded" />
                 <p class="mt-1 text-center" v-if="youglishLang[$l2.code]">
                   See examples of “{{ entry.bare }}” on
                   <a

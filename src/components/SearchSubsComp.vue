@@ -1,10 +1,24 @@
 <template>
-  <div>
+  <div :class="{'search-subs': true, fullscreen}">
     <div class="text-center" v-if="checking">Checking content...</div>
     <div class="text-center" v-if="!checking && hits.length === 0">
       No hits.
     </div>
-    <div class="mb-1 text-center" v-if="hits.length > 0">
+    <div class="mt-3 mb-2 text-center" v-if="hits.length > 0">
+      <b-button
+        class="btn btn-small search-subs-fullscreen"
+        @click="fullscreenClick"
+        v-if="!fullscreen"
+      >
+        <i class="fas fa-expand"></i>
+      </b-button>
+      <b-button
+        class="btn btn-small search-subs-close"
+        @click="fullscreenClick"
+        v-if="fullscreen"
+      >
+        <i class="fas fa-times" />
+      </b-button>
       <b-button @click="previousLine" class="btn btn-small"
         ><i class="fa fa-backward"
       /></b-button>
@@ -88,7 +102,8 @@ export default {
       navigated: false,
       checking: true,
       videos: [],
-      Helper
+      Helper,
+      fullscreen: false
     }
   },
   mounted() {
@@ -140,6 +155,9 @@ export default {
     pauseYouTube() {
       this.$refs.youtube.pause()
     },
+    fullscreenClick() {
+      this.fullscreen = !this.fullscreen
+    },
     async searchSubs() {
       this.hits = []
       this.videos = []
@@ -180,5 +198,18 @@ export default {
   },
 }
 </script>
-<style lang="scss">
+<style scoped lang="scss">
+.fullscreen >>> .video-area {
+  background: black;
+}
+.search-subs.fullscreen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 10;
+  overflow: scroll;
+}
 </style>

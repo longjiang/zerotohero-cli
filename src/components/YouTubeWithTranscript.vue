@@ -18,12 +18,16 @@
         </div>
       </div>
     </div>
-    <div v-if="layout === 'vertical'" class="row">
-      <div class="col-sm-12">
-        <div>
-          <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="this.l2Lines.length > 0 ? this.l2Lines[startLineIndex].starttime : 0" :autoload="autoload" :autoplay="autoplay" />  
+    <template v-if="layout === 'vertical'">
+      <div  class="row video-area">
+        <div class="col-sm-12">
+          <div class="youtube-video-wrapper">
+            <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="this.l2Lines.length > 0 ? this.l2Lines[startLineIndex].starttime : 0" :autoload="autoload" :autoplay="autoplay" />  
+          </div>
         </div>
-        <div :key="'transcript-' + youtube" class="mt-2">
+      </div>
+      <div class="row">
+        <div :key="'transcript-' + youtube" class="mt-2 col-sm-12">
           <div v-if="this.l2Lines.length > 0" class="text-center">
             <SyncedTranscript
               ref="transcript"
@@ -41,7 +45,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </template>
   </div>
 </template>
 
@@ -144,6 +148,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.youtube-video-wrapper {
+  max-width: calc((100vh - 10rem) * 16 / 9);
+  margin: 0 auto;
+}
 </style>
