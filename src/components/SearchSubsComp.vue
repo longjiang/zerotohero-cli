@@ -1,10 +1,13 @@
 <template>
   <div :class="{'search-subs': true, fullscreen}">
-    <div class="text-center" v-if="checking">Checking content...</div>
+    <div class="text-center mt-3" v-if="checking">Checking content...</div>
     <div class="text-center" v-if="!checking && hits.length === 0">
       No hits.
     </div>
     <div class="mt-3 mb-2 text-center" v-if="hits.length > 0">
+      <span v-if="fullscreen" class="mr-2 d-inline-block" style="position: relative; bottom: 3px">
+        <strong :data-level="level">“{{terms[0]}}”</strong> <small class="ml-2" style="color: #999">in TV Shows</small>
+      </span>
       <b-button
         class="btn btn-small search-subs-fullscreen"
         @click="fullscreenClick"
@@ -64,6 +67,7 @@
         :l2Lines="hit.video.subs_l2"
         layout="vertical"
         :highlight="terms"
+        :hsk="level"
         :startLineIndex="Math.max(hit.lineIndex - 1, 0)"
         :stopLineIndex="Number(hit.lineIndex)"
         :autoload="Helper.iOS() || navigated"

@@ -38,6 +38,7 @@
               :single="true"
               :quiz="false"
               :highlight="highlight"
+              :hsk="hsk"
               :highlight-saved-words="false"
               :startLineIndex="startLineIndex"
               :stopLineIndex="stopLineIndex"
@@ -70,6 +71,9 @@ export default {
     },
     highlight: {
       type: Array
+    },
+    hsk: {
+      default: 'outside'
     },
     autoload: {
       default: false
