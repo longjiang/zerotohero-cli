@@ -3,7 +3,7 @@
     <h6>{{ $t(title, {word: term}).replace(/{word}/g, term) }}</h6>
     <hr class="mt-0 mb-2" />
     <div v-if="collocation">
-      <ul class="collapsed gramrel pl-0" data-collapse-target>
+      <ul class="collapsed gramrel pl-0 mb-0" data-collapse-target>
         <li v-for="(line, index) in lines" class="gramrel-item list-unstyled" :key="`${term}-collocation-${type}-${index}`">
           <Annotate tag="div">
             <div v-html="Helper.highlight(line, word.bare, level)" />
@@ -12,7 +12,7 @@
       </ul>
       <ShowMoreButton :data-bg-level="level" :length="collocation.Words.length" :min="4" />
     </div>
-    <div v-else>(No data)</div>
+    <div v-else>–</div>
   </div>
 </template>
 

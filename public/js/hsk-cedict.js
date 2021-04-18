@@ -16,7 +16,7 @@ const Dictionary = {
           download: true,
           header: true,
           complete: results => {
-            this.words = results.data.map(row => this.augment(row))
+            this.words = results.data.map(row => this.augment(row)).sort((a, b) => b.simplified.length - a.simplified.length)
             for (let row of this.words) {
               row.rank = row.weight / this._maxWeight
             }

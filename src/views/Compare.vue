@@ -1,5 +1,5 @@
 <template>
-  <div class="main" v-cloak>
+  <div class="main" id="main" v-cloak>
     <div class="container mt-4 mb-4 focus">
       <div class="row">
         <div class="col-12">
@@ -15,7 +15,7 @@
             v-if="a"
             :entry="a"
             class="text-center"
-            :key="aKey"
+            :key="`${a.id}-header`"
           ></EntryHeader>
         </div>
         <div class="col-6">
@@ -26,7 +26,7 @@
             v-if="b"
             :entry="b"
             class="text-center"
-            :key="aKey"
+            :key="`${b.id}-header`"
           ></EntryHeader>
         </div>
       </div>
@@ -37,7 +37,7 @@
             v-if="a && b"
             :a="a"
             :b="b"
-            :key="aKey + bKey"
+            :key="`${a.id}-${b.id}-defs`"
           ></CompareDefs>
         </div>
       </div>
@@ -50,14 +50,14 @@
         <div class="row">
           <div class="col-sm-6 mt-5 mb-5">
             <EntryExample
-              :key="aKey"
+              :key="`${a.id}-example`"
               :entry="a"
               id="compare-example-a"
             ></EntryExample>
           </div>
           <div class="col-sm-6 mt-5 mb-5">
             <EntryExample
-              :key="bKey"
+              :key="`${b.id}-example`"
               :entry="b"
               id="compare-example-b"
             ></EntryExample>
@@ -72,7 +72,7 @@
             v-if="a"
             :text="a.bare"
             limit="10"
-            :key="aKey"
+            :key="`${a.id}-images`"
           ></WebImages>
         </div>
         <div class="col-sm-6">
@@ -80,7 +80,7 @@
             v-if="b"
             :text="b.bare"
             limit="10"
-            :key="bKey"
+            :key="`${b.id}-images`"
           ></WebImages>
         </div>
       </div>
@@ -101,32 +101,48 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 mt-5">
-          <div class="widget" v-if="a" :key="aKey">
-            <div class="widget-title">Mentions of “{{ a.bare }}” on TV</div>
+        <div class="col-md-12 col-lg-6 mt-5">
+          <div class="widget" v-if="a" :key="`${a.id}-subs`" id="search-subs">
+            <div class="widget-title">“{{ a.bare }}” in TV Shows</div>
             <div class="widget-body">
-              <SearchSubsComp :level="a.hsk" :terms="a.simplified === a.traditional ? [a.simplified] : [a.simplified, a.traditional]"  class="mt-4 mb-4" />
+              <SearchSubsComp
+                :level="a.hsk"
+                :terms="
+                  a.simplified === a.traditional
+                    ? [a.simplified]
+                    : [a.simplified, a.traditional]
+                "
+                class="mt-4 mb-4"
+              />
             </div>
           </div>
         </div>
-        <div class="col-sm-6 mt-5">
-          <div class="widget" v-if="b" :key="bKey">
-            <div class="widget-title">Mentions of “{{ b.bare }}” on TV</div>
+        <div class="col-md-12 col-lg-6 mt-5">
+          <div class="widget" v-if="b" :key="`${b.id}-subs`">
+            <div class="widget-title">“{{ b.bare }}” in TV Shows</div>
             <div class="widget-body">
-              <SearchSubsComp :level="b.hsk" :terms="b.simplified === b.traditional ? [b.simplified] : [b.simplified, b.traditional]"  class="mt-4 mb-4" />
+              <SearchSubsComp
+                :level="b.hsk"
+                :terms="
+                  b.simplified === b.traditional
+                    ? [b.simplified]
+                    : [b.simplified, b.traditional]
+                "
+                class="mt-4 mb-4"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="row">
         <div class="col-sm-12 mt-5" v-if="a">
-          <EntryRelated :key="aKey" :entry="a"></EntryRelated>
+          <EntryRelated :key="`${a.id}-related`" :entry="a"></EntryRelated>
         </div>
         <div class="col-sm-12 mt-5" v-if="b">
-          <EntryRelated :key="bKey" :entry="b"></EntryRelated>
+          <EntryRelated :key="`${a.id}-related`" :entry="b"></EntryRelated>
         </div>
       </div>
     </div>
@@ -139,7 +155,7 @@
             v-if="a"
             :text="a.bare"
             :level="a.hsk"
-            :key="aKey"
+            :key="`${a.id}-concordance`"
           ></Concordance>
         </div>
         <div class="col-sm-6">
@@ -147,7 +163,7 @@
             v-if="b"
             :text="b.bare"
             :level="b.hsk"
-            :key="bKey"
+            :key="`${b.id}-concordance`"
           ></Concordance>
         </div>
       </div>
@@ -156,10 +172,10 @@
     <div class="container focus mt-5">
       <div class="row">
         <div class="col-sm-6">
-          <Grammar v-if="a" :text="a.bare" :key="aKey"></Grammar>
+          <Grammar v-if="a" :text="a.bare" :key="`${a.id}-grammar`"></Grammar>
         </div>
         <div class="col-sm-6">
-          <Grammar v-if="b" text="b.bare" :key="bKey"></Grammar>
+          <Grammar v-if="b" text="b.bare" :key="`${b.id}-grammar`"></Grammar>
         </div>
       </div>
     </div>
@@ -178,26 +194,54 @@
 
       <div class="row" v-if="['ja', 'ko'].includes($l2.code)">
         <div class="col-sm-6">
-          <Chinese v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'" :text="a.cjk.canonical" />
+          <Chinese
+            v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'"
+            :text="a.cjk.canonical"
+            :key="`${a.id}-chinese`"
+          />
         </div>
         <div class="col-sm-6">
-          <Chinese v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'" :text="b.cjk.canonical" />
+          <Chinese
+            v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'"
+            :text="b.cjk.canonical"
+            :key="`${b.id}-chinese`"
+          />
         </div>
       </div>
       <div class="row" v-if="['zh', 'ja'].includes($l2.code)">
         <div class="col-sm-6">
-          <Korean v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'" class="mb-5" :text="a.cjk.canonical" />
+          <Korean
+            v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'"
+            class="mb-5"
+            :text="a.cjk.canonical"
+            :key="`${a.id}-korean`"
+          />
         </div>
         <div class="col-sm-6">
-          <Korean v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'" class="mb-5" :text="b.cjk.canonical" />
+          <Korean
+            v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'"
+            class="mb-5"
+            :text="b.cjk.canonical"
+            :key="`${b.id}-korean`"
+          />
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6" v-if="['zh', 'ko'].includes($l2.code)">
-          <Japanese v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'" class="mb-5" :text="a.cjk.canonical" />
+          <Japanese
+            v-if="a && a.cjk && a.cjk.canonical && a.cjk.canonical !== 'NULL'"
+            class="mb-5"
+            :text="a.cjk.canonical"
+            :key="`${a.id}-japanese`"
+          />
         </div>
         <div class="col-sm-6">
-          <Japanese v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'" class="mb-5" :text="b.cjk.canonical" />
+          <Japanese
+            v-if="b && b.cjk && b.cjk.canonical && b.cjk.canonical !== 'NULL'"
+            class="mb-5"
+            :text="b.cjk.canonical"
+            :key="`${b.id}-japanese`"
+          />
         </div>
       </div>
     </div>
@@ -205,7 +249,7 @@
     <EntryCourseAd
       v-if="$l2 === 'zh' && a && b"
       :entry="b.hsk > a.hsk ? b : a"
-      :key="aKey + bKey"
+      :key="`${a.id}-${b.id}-ad`"
     ></EntryCourseAd>
   </div>
 </template>
@@ -310,12 +354,39 @@ export default {
       if (this.$route.name === 'compare') {
         this.route()
       }
+    },
+    unbindKeys() {
+      window.onkeydown = null
+    },
+
+    bindKeys() {
+      window.onkeydown = (e) => {
+        if (e.target.tagName.toUpperCase() !== 'INPUT') {
+          if (e.keyCode == 36) {
+            // home
+            document.getElementById("main").scrollIntoView({behavior: "smooth"});
+            // this.$refs.searchCompare.focusOnSearch()
+            return false
+          }
+          if (e.keyCode == 35) {
+            // end
+            document.getElementById("search-subs").scrollIntoView({behavior: "smooth"});
+            return false
+          }
+        }
+      }
     }
   },
   mounted() {
     if (this.$route.name === 'compare') {
       this.route()
     }
-  }
+  },
+  activated() {
+    this.bindKeys()
+  },
+  deactivated() {
+    this.unbindKeys()
+  },
 }
 </script>

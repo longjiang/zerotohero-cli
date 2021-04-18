@@ -57,7 +57,7 @@
                   :definitions="entry.definitions"
                 ></DefinitionsList>
               </div>
-              <EntryExample :entry="entry" class="mb-4"></EntryExample>
+              <EntryExample :entry="entry" class="mb-4" :key="`${entry.id}-example`"></EntryExample>
             </div>
           </div>
         </div>
