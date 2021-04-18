@@ -10,7 +10,7 @@ export default new Router({
         selector: to.hash
       }
     }
-    if (from.name === to.name) {
+    if (from.name === to.name || (['dictionary', 'compare'].includes(from.name) && ['dictionary', 'compare'].includes(to.name)) ) {
       if (to.name === 'dictionary') {
         return {
           selector: '.main'
