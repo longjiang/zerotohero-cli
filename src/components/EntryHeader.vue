@@ -30,7 +30,6 @@
       >
       <div class="entry-word-wrapper" style="display: inline-block">
         <div class="mb-2">
-          
           <div class="entry-pinyin">
             <Star :word="entry"></Star>
             <span v-if="entry.pronunciation && !entry.pinyin" class="ml-2 mr-1"

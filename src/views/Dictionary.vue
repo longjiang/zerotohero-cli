@@ -394,11 +394,17 @@ export default {
           // n = 78
           if (e.keyCode == 78) {
             this.nextWord()
+            document
+              .getElementById('main')
+              .scrollIntoView({ behavior: 'smooth' })
             return false
           }
           // p = 80
           if (e.keyCode == 80) {
             this.prevWord()
+            document
+              .getElementById('main')
+              .scrollIntoView({ behavior: 'smooth' })
             return false
           }
         }
