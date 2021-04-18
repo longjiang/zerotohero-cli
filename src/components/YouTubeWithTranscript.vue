@@ -109,6 +109,9 @@ export default {
     pause() {
       this.$refs.youtube.pause()
     },
+    play() {
+      this.$refs.youtube.play()
+    },
     getHighlightStartTime(term) {
       let matchedLines = this.l2Lines.filter(line => line.line.includes(term))
       if (matchedLines.length > 0) {

@@ -159,6 +159,12 @@ export default {
     pauseYouTube() {
       this.$refs.youtube.pause()
     },
+    playYouTube() {
+      this.$refs.youtube.play()
+    },
+    togglePaused() {
+      this.$refs.youtube.togglePaused()
+    },
     fullscreenClick() {
       this.fullscreen = !this.fullscreen
     },

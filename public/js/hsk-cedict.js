@@ -66,6 +66,13 @@ const Dictionary = {
   getNewHSK() {
     return this.newHSK
   },
+  getByNewHSK(level, num) {
+    let match = this.newHSK.find(word => word.level === level && Number(word.num) === num)
+    let words = this.lookupSimplified(match.simplified)
+    if (words && words.length > 0) {
+      return words[0]
+    }
+  },
   getNewLevel(simplified) {
     return this.newHSK.filter(word => word.simplified === simplified)
   },
@@ -233,7 +240,7 @@ const Dictionary = {
       .sort((a, b) => {
         return b.weight - a.weight
       })
-    return candidates
+    return candidates.map(candidate => this.addNewHSK(candidate))
   },
   lookupTraditional(traditional, pinyin = false) {
     const candidates = this.words
@@ -247,7 +254,7 @@ const Dictionary = {
       .sort((a, b) => {
         return b.weight - a.weight
       })
-    return candidates
+    return candidates.map(candidate => this.addNewHSK(candidate))
   },
   lookupByPattern(pattern) {
     // pattern like '～体'

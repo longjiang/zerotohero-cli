@@ -15,7 +15,7 @@
             />
           </div>
         </div>
-        <h2 class=" mt-5 mb-5 text-center" v-if="!entry">
+        <h2 class="mt-5 mb-5 text-center" v-if="!entry">
           {{ $t('For the love of {l2} words.', { l2: $t($l2.name) }) }}
         </h2>
       </div>
@@ -57,7 +57,11 @@
                   :definitions="entry.definitions"
                 ></DefinitionsList>
               </div>
-              <EntryExample :entry="entry" class="mb-4" :key="`${entry.id}-example`"></EntryExample>
+              <EntryExample
+                :entry="entry"
+                class="mb-4"
+                :key="`${entry.id}-example`"
+              ></EntryExample>
             </div>
           </div>
         </div>
@@ -83,10 +87,24 @@
               :word="entry"
               :level="entry.level"
             />
-            <div class="widget mt-5" id="search-subs" :key="`subs-search-${entry.id}`">
+            <div
+              class="widget mt-5"
+              id="search-subs"
+              :key="`subs-search-${entry.id}`"
+            >
               <div class="widget-title">“{{ entry.bare }}” in TV Shows</div>
               <div class="widget-body">
-                <SearchSubsComp v-if="entry" :level="entry.hsk" :terms="entry.simplified === entry.traditional ? [entry.simplified] : [entry.simplified, entry.traditional]" @loaded="searchSubsLoaded" />
+                <SearchSubsComp
+                  v-if="entry"
+                  ref="searchSubs"
+                  :level="entry.hsk"
+                  :terms="
+                    entry.simplified === entry.traditional
+                      ? [entry.simplified]
+                      : [entry.simplified, entry.traditional]
+                  "
+                  @loaded="searchSubsLoaded"
+                />
                 <p class="mt-1 text-center" v-if="youglishLang[$l2.code]">
                   See examples of “{{ entry.bare }}” on
                   <a
@@ -94,11 +112,16 @@
                       youglishLang[$l2.code]
                     }`"
                     target="youglish"
-                    >YouGlish</a>
+                    >YouGlish</a
+                  >
                 </p>
               </div>
             </div>
-            <EntryRelated :entry="entry" class="mt-5" :key="`related-${entry.id}`" />
+            <EntryRelated
+              :entry="entry"
+              class="mt-5"
+              :key="`related-${entry.id}`"
+            />
           </div>
         </div>
       </div>
@@ -120,7 +143,6 @@
 
         <div class="row">
           <div class="col-sm-12">
-
             <Mistakes
               class="mt-5 mb-5"
               v-if="$l2.code === 'zh'"
@@ -287,7 +309,7 @@ export default {
       description: '',
       searchSubsImage: undefined,
       webImage: undefined,
-      searchSubsExample: ''
+      searchSubsExample: '',
     }
   },
   computed: mapState(['savedWords']),
@@ -324,15 +346,59 @@ export default {
     bindKeys() {
       window.onkeydown = (e) => {
         if (e.target.tagName.toUpperCase() !== 'INPUT') {
+          // home
           if (e.keyCode == 36) {
-            // home
-            document.getElementById("main").scrollIntoView({behavior: "smooth"});
+            document
+              .getElementById('main')
+              .scrollIntoView({ behavior: 'smooth' })
             // this.$refs.searchCompare.focusOnSearch()
             return false
           }
+          // end
           if (e.keyCode == 35) {
-            // end
-            document.getElementById("search-subs").scrollIntoView({behavior: "smooth"});
+            document
+              .getElementById('search-subs')
+              .scrollIntoView({ behavior: 'smooth' })
+            return false
+          }
+          // left = 37
+          if (e.keyCode == 37) {
+            this.$refs.searchSubs.prevHit()
+            return false
+          }
+          // right = 39
+          if (e.keyCode == 39) {
+            this.$refs.searchSubs.nextHit()
+            return false
+          }
+          // up = 38
+          if (e.keyCode == 38) {
+            this.$refs.searchSubs.previousLine()
+            return false
+          }
+          // down = 40
+          if (e.keyCode == 40) {
+            this.$refs.searchSubs.nextLine()
+            return false
+          }
+          // spacebar = 32
+          if (e.keyCode == 32) {
+            this.$refs.searchSubs.togglePaused()
+            return false
+          }
+          // f = 70
+          if (e.keyCode == 70) {
+            this.$refs.searchSubs.fullscreenClick()
+            return false
+          }
+          // n = 78
+          if (e.keyCode == 78) {
+            this.nextWord()
+            return false
+          }
+          // p = 80
+          if (e.keyCode == 80) {
+            this.prevWord()
             return false
           }
         }
@@ -340,10 +406,12 @@ export default {
     },
     async show(entry) {
       this.entry = entry
-      this.title = `${entry.bare} ${entry.pronunciation ? '(' + entry.pronunciation + ')': ''} | ${
-        this.$l2 ? this.$l2.name : ''
-      } Zero to Hero Dictionary`
-      this.description = `"${entry.bare}" means ${entry.definitions.join('; ')}:`
+      this.title = `${entry.bare} ${
+        entry.pronunciation ? '(' + entry.pronunciation + ')' : ''
+      } | ${this.$l2 ? this.$l2.name : ''} Zero to Hero Dictionary`
+      this.description = `"${entry.bare}" means ${entry.definitions.join(
+        '; '
+      )}:`
     },
     async route() {
       if (this.method && this.args) {
@@ -360,6 +428,31 @@ export default {
         }
       }
     },
+    async nextWord() {
+      if (this.entry.newHSK && this.entry.newHSK.includes('7-9')) {
+        let match = this.entry.newHSKMatches.find(
+          (match) => match.level === '7-9'
+        )
+        let newEntry = await (await this.$dictionary).getByNewHSK(
+          '7-9',
+          Math.min(Number(match.num) + 1),
+          5635
+        )
+        this.show(newEntry)
+      }
+    },
+    async prevWord() {
+      if (this.entry.newHSK && this.entry.newHSK.includes('7-9')) {
+        let match = this.entry.newHSKMatches.find(
+          (match) => match.level === '7-9'
+        )
+        let newEntry = await (await this.$dictionary).getByNewHSK(
+          '7-9',
+          Math.max(0, Number(match.num) - 1)
+        )
+        this.show(newEntry)
+      }
+    },
     async random() {
       let randomId = (await (await this.$dictionary).random()).id
       this.$router.push({
@@ -369,26 +462,40 @@ export default {
     searchSubsLoaded(hits) {
       if (hits.length > 0) {
         this.searchSubsImage = `https://img.youtube.com/vi/${hits[0].video.youtube_id}/hqdefault.jpg`
-        this.searchSubsExample = hits[0].video.subs_l2[hits[0].lineIndex - 1].line + ' ' + hits[0].video.subs_l2[hits[0].lineIndex].line
+        this.searchSubsExample =
+          hits[0].video.subs_l2[hits[0].lineIndex - 1].line +
+          ' ' +
+          hits[0].video.subs_l2[hits[0].lineIndex].line
       }
     },
     webImagesLoaded(images) {
       if (images.length > 0) {
         this.webImage = images[0].src
       }
-
-    }
+    },
   },
   metaInfo() {
     return {
       meta: [
-          // Facebook OpenGraph
-          {property: 'og:title', content: this.title},
-          {property: 'og:site_name', content: this.$l2.name + ' Zero to Hero'},
-          {property: 'og:type', content: 'website'},
-          {property: 'og:image', content:  this.searchSubsImage || this.webImage || this.$languages.logo(this.$l2.code)},
-          {property: 'og:description', content: this.description + ' ' + this.searchSubsExample || this.entry.example || ''}
-      ]
+        // Facebook OpenGraph
+        { property: 'og:title', content: this.title },
+        { property: 'og:site_name', content: this.$l2.name + ' Zero to Hero' },
+        { property: 'og:type', content: 'website' },
+        {
+          property: 'og:image',
+          content:
+            this.searchSubsImage ||
+            this.webImage ||
+            this.$languages.logo(this.$l2.code),
+        },
+        {
+          property: 'og:description',
+          content:
+            this.description + ' ' + this.searchSubsExample ||
+            this.entry.example ||
+            '',
+        },
+      ],
     }
   },
   watch: {

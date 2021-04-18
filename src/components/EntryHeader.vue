@@ -18,7 +18,7 @@
           "
           class="entry-level p-1 rounded font-weight-bold"
           :style="`position: relative; bottom: 0.5em; font-size: 0.8em; color: ${entry.newHSK === '7-9' ? '#00716B' : 'inherit'}`"
-          ><i class="fa fa-arrow-right mr-2" />New HSK {{ entry.newHSK }}</span
+          ><i class="fa fa-arrow-right mr-2" />New HSK {{ entry.newHSK }} <span v-if="entry.newHSKMatches.length === 1" style="color: #999; font-weight: normal">#{{ entry.newHSKMatches[0].num }}</span></span
         >
       </div>
       <Annotate tag="div" class="mb-4" v-if="entry.counters"
