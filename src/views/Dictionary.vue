@@ -384,6 +384,11 @@ export default {
             this.$refs.searchSubs.nextLine()
             return false
           }
+          // r = 82
+          if (e.keyCode == 82) {
+            this.$refs.searchSubs.rewind()
+            return false
+          }
           // spacebar = 32
           if (e.keyCode == 32) {
             this.$refs.searchSubs.togglePaused()

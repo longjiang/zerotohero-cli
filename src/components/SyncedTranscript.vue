@@ -198,7 +198,7 @@ export default {
         let line = this.lines[lineIndex]
         if (
           parseFloat(line.starttime) <
-          this.currentTime + 0.5 // current time marker passed the start time of the line
+          this.currentTime + 0.1 // current time marker passed the start time of the line
         ) {
           if (this.currentLine !== line) {
             // Pause video if passed stopLineIndex 
