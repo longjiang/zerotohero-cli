@@ -154,6 +154,7 @@
             ></Mistakes>
           </div>
         </div>
+        <!--
         <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
           <div class="col-sm-12" v-if="$l2.code !== 'zh'">
             <EntryCharacters
@@ -212,6 +213,7 @@
             />
           </div>
         </div>
+        -->
       </div>
       <EntryCourseAd
         v-if="$l2.code === 'zh'"

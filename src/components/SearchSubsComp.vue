@@ -1,12 +1,17 @@
 <template>
-  <div :class="{'search-subs': true, fullscreen}">
+  <div :class="{ 'search-subs': true, fullscreen }">
     <div class="text-center mt-3" v-if="checking">Checking content...</div>
     <div class="text-center" v-if="!checking && hits.length === 0">
       No hits.
     </div>
     <div class="mt-3 mb-2 text-center" v-if="hits.length > 0">
-      <span v-if="fullscreen" class="mr-2 d-inline-block" style="position: relative; bottom: 3px">
-        <strong :data-level="level">“{{terms[0]}}”</strong> <small class="ml-2" style="color: #999">in TV Shows</small>
+      <span
+        v-if="fullscreen"
+        class="mr-2 d-inline-block"
+        style="position: relative; bottom: 3px"
+      >
+        <strong :data-level="level">“{{ terms[0] }}”</strong>
+        <small class="ml-2" style="color: #999">in TV Shows</small>
       </span>
       <b-button
         class="btn btn-small search-subs-fullscreen"
@@ -107,7 +112,7 @@ export default {
       checking: true,
       videos: [],
       Helper,
-      fullscreen: false
+      fullscreen: false,
     }
   },
   mounted() {
@@ -177,16 +182,31 @@ export default {
       if (approvedChannels) {
         channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
       }
+      let promises = []
       for (let term of this.terms) {
-        let response = await $.getJSON(
-          `${Config.wiki}items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${this.$l2.id}&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
+        promises.push(
+          $.getJSON(
+            `${
+              Config.wiki
+            }items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${
+              this.$l2.id
+            }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
+              this.$settings.adminMode ? Date.now() : 0
+            }`
+          ).then((response) => {
+            if (response && response.data && response.data.length > 0) {
+              this.videos = this.videos.concat(response.data)
+            }
+          })
         )
-        if (response && response.data && response.data.length > 0) {
-          this.videos = this.videos.concat(response.data)
-        }
       }
+      await Promise.all(promises)
       let seenYouTubeIds = []
-      for (let video of shuffle(this.videos)) {
+      for (let video of shuffle(this.videos).sort((a, b) => {
+        let aa = a.title.includes('Untamed')
+        let bb = b.title.includes('Untamed')
+        return aa === bb ? 0 : aa ? -1 : 1
+      })) {
         if (!seenYouTubeIds.includes(video.youtube_id)) {
           seenYouTubeIds.push(video.youtube_id)
           video.subs_l2 = JSON.parse(video.subs_l2)
