@@ -15,7 +15,11 @@
             />
           </div>
         </div>
-        <h2 class="mt-5 mb-5 text-center" v-if="!entry">
+        <h2
+          class="mt-5 mb-5 text-center"
+          v-if="!entry"
+          style="min-height: 10rem"
+        >
           {{ $t('For the love of {l2} words.', { l2: $t($l2.name) }) }}
         </h2>
       </div>
@@ -95,7 +99,7 @@
               <div class="widget-title">“{{ entry.bare }}” in TV Shows</div>
               <div class="widget-body">
                 <SearchSubsComp
-                  v-if="entry"
+                  v-if="entry && delayed"
                   ref="searchSubs"
                   :level="entry.hsk"
                   :terms="
@@ -174,6 +178,7 @@
           <div class="col-sm-6" v-if="$l2.code !== 'zh'">
             <Chinese
               v-if="
+                delayed &&
                 entry.cjk &&
                 entry.cjk.canonical &&
                 entry.cjk.canonical !== 'NULL'
@@ -185,6 +190,7 @@
           <div class="col-sm-6" v-if="$l2.code !== 'ja'">
             <Japanese
               v-if="
+                delayed &&
                 entry.cjk &&
                 entry.cjk.canonical &&
                 entry.cjk.canonical !== 'NULL'
@@ -196,6 +202,7 @@
           <div class="col-sm-6" v-if="$l2.code !== 'ko'">
             <Korean
               v-if="
+                delayed &&
                 entry.cjk &&
                 entry.cjk.canonical &&
                 entry.cjk.canonical !== 'NULL'
@@ -203,11 +210,6 @@
               class="mt-5 mb-5"
               :text="entry.cjk.canonical"
             />
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <EntryYouTube :text="entry.bare" class="mb-5" />
-            </div>
           </div>
         </div>
       </div>
@@ -310,6 +312,7 @@ export default {
       searchSubsImage: undefined,
       webImage: undefined,
       searchSubsExample: '',
+      delayed: false,
     }
   },
   computed: mapState(['savedWords']),
@@ -411,6 +414,7 @@ export default {
       }
     },
     async show(entry) {
+      this.delayed = false
       this.entry = entry
       this.title = `${entry.bare} ${
         entry.pronunciation ? '(' + entry.pronunciation + ')' : ''
@@ -418,6 +422,9 @@ export default {
       this.description = `"${entry.bare}" means ${entry.definitions.join(
         '; '
       )}:`
+      setTimeout(() => {
+        if (entry.id === this.entry.id) this.delayed = true
+      }, 1000)
     },
     async route() {
       if (this.method && this.args) {
@@ -444,7 +451,9 @@ export default {
           Math.min(Number(match.num) + 1),
           5635
         )
-        this.show(newEntry)
+        this.$router.push({
+          path: `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${newEntry.id}`,
+        })
       }
     },
     async prevWord() {
@@ -456,7 +465,9 @@ export default {
           '7-9',
           Math.max(0, Number(match.num) - 1)
         )
-        this.show(newEntry)
+        this.$router.push({
+          path: `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${newEntry.id}`,
+        })
       }
     },
     async random() {
