@@ -1,5 +1,5 @@
 <template>
-  <div class="main" id="main" v-cloak>
+  <div class="main" v-cloak>
     <div class="container mt-4 mb-4 focus">
       <div class="row">
         <div class="col-12">
@@ -333,6 +333,26 @@ export default {
           this.b = await (await this.$dictionary).get(bId)
         }
       }
+    },
+    unbindKeys() {
+      window.onkeydown = null
+    },
+    bindKeys() {
+      window.onkeydown = (e) => {
+        if (e.target.tagName.toUpperCase() !== 'INPUT') {
+          if (e.keyCode == 36) {
+            // home
+            document.getElementById("main").scrollIntoView({behavior: "smooth"});
+            // this.$refs.searchCompare.focusOnSearch()
+            return false
+          }
+          if (e.keyCode == 35) {
+            // end
+            document.getElementById("search-subs").scrollIntoView({behavior: "smooth"});
+            return false
+          }
+        }
+      }
     }
   },
   watch: {
@@ -353,27 +373,6 @@ export default {
     $route() {
       if (this.$route.name === 'compare') {
         this.route()
-      }
-    },
-    unbindKeys() {
-      window.onkeydown = null
-    },
-
-    bindKeys() {
-      window.onkeydown = (e) => {
-        if (e.target.tagName.toUpperCase() !== 'INPUT') {
-          if (e.keyCode == 36) {
-            // home
-            document.getElementById("main").scrollIntoView({behavior: "smooth"});
-            // this.$refs.searchCompare.focusOnSearch()
-            return false
-          }
-          if (e.keyCode == 35) {
-            // end
-            document.getElementById("search-subs").scrollIntoView({behavior: "smooth"});
-            return false
-          }
-        }
       }
     }
   },
