@@ -5,6 +5,7 @@
       :video="video"
       :checkSaved="checkSaved"
       :checkSubs="checkSubs"
+      ref="youTubeVideoCard"
     />
   </div>
 </template>
@@ -33,6 +34,13 @@ export default {
     },
     checkSubs: {
       default: false,
+    }
+  },
+  methods: {
+    addAll() {
+      for(let videoIndex in this.videos) {
+        this.$refs.youTubeVideoCard[videoIndex].getSubsAndSave()
+      }
     }
   }
 }

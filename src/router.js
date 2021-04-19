@@ -11,10 +11,8 @@ export default new Router({
       }
     }
     if (from.name === to.name || (['dictionary', 'compare'].includes(from.name) && ['dictionary', 'compare'].includes(to.name)) ) {
-      if (to.name === 'dictionary') {
-        return {
-          selector: '.main'
-        }
+      return {
+        selector: '.main'
       }
     } else {
       return { x: 0, y: 0 }

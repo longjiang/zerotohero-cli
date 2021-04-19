@@ -2,22 +2,49 @@
   <div class="container pt-5 pb-5 main youtube-search">
     <h1 class="text-center mb-5">Study YouTube Subtitles</h1>
     <SimpleSearch
-      :placeholder="$t('Enter a search term in {l2}...', {l2: $l2.name})"
+      :placeholder="$t('Enter a search term in {l2}...', { l2: $l2.name })"
       :action="
-        url => {
-          let path = `/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(url)}/0`
+        (url) => {
+          let path = `/${$l1.code}/${
+            $l2.code
+          }/youtube/search/${encodeURIComponent(url)}/0`
           if (this.$router.currentRoute.path === path) this.searchResultKey++
-          else this.$router.push({path: path})
+          else this.$router.push({ path: path })
         }
       "
       ref="search"
     />
     <b-form-group class="mt-3">
-      <b-form-radio v-model="captions" class="d-inline-block mr-3" value="captions">With Captions</b-form-radio>
-      <b-form-radio v-model="captions" class="d-inline-block mr-3" value="nocaptions">No Captions</b-form-radio>
-      <b-form-radio v-model="captions" class="d-inline-block" value="all">All</b-form-radio>
+      <b-form-radio
+        v-model="captions"
+        class="d-inline-block mr-3"
+        value="captions"
+        >With Captions</b-form-radio
+      >
+      <b-form-radio
+        v-model="captions"
+        class="d-inline-block mr-3"
+        value="nocaptions"
+        >No Captions</b-form-radio
+      >
+      <b-form-radio v-model="captions" class="d-inline-block" value="all"
+        >All</b-form-radio
+      >
+      <b-button
+        v-if="$settings.adminMode"
+        class="btn btn-small mt-2 ml-3"
+        @click="addAll()"
+        ><i class="fas fa-plus mr-2"></i>Add All</b-button
+      >
     </b-form-group>
-    <YouTubeSearchResults :term="term" :start="start" :captions="captions" class="mt-5" :key="searchResultKey"/>
+    <YouTubeSearchResults
+      :term="term"
+      :start="start"
+      :captions="captions"
+      class="mt-5"
+      :key="searchResultKey"
+      ref="youtubeSearchResults"
+    />
   </div>
 </template>
 
@@ -28,26 +55,26 @@ import YouTubeSearchResults from '@/components/YouTubeSearchResults'
 export default {
   components: {
     SimpleSearch,
-    YouTubeSearchResults
+    YouTubeSearchResults,
   },
   data() {
     return {
       captions: 'all',
-      searchResultKey: 0
+      searchResultKey: 0,
     }
   },
   props: {
     term: {
-      type: String
+      type: String,
     },
     start: {
-      default: 0
-    }
+      default: 0,
+    },
   },
   watch: {
     term() {
       this.updateSearchText()
-    }
+    },
   },
   mounted() {
     this.updateSearchText()
@@ -56,8 +83,11 @@ export default {
     async updateSearchText() {
       let url = decodeURIComponent(this.term)
       this.$refs.search.text = url
+    },
+    addAll() {
+      this.$refs.youtubeSearchResults.addAll()
     }
-  }
+  },
 }
 </script>
 

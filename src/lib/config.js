@@ -56,7 +56,7 @@ export default {
       'UC3cbVxXQ-p-auBRVhGCmUmQ', // 华录百納熱播劇場
       'UCVm75cj78njo38Izz_suQQA',
       'UCWiS6QxFGFK-LKwwHzSsmHQ',
-      'UCAMrnDQlsPnrScHun5PgrXw',
+      'UCAMrnDQlsPnrScHun5PgrXw'
     ]
   }
 }

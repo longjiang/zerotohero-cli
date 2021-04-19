@@ -1,6 +1,6 @@
 <template>
   <div>
-    <YouTubeVideoList :videos="videos" :checkSubs="true" :updateVideos="updateVideos" :checkSaved="true" />
+    <YouTubeVideoList ref="youTubeVideoList" :videos="videos" :checkSubs="true" :updateVideos="updateVideos" :checkSaved="true" />
     <div class="mt-4 text-center">
       <router-link v-if="start > 9" :to="`/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) - 10}`" class="btn btn-default mr-2">Previous</router-link>
       <router-link :to="`/${$l1.code}/${$l2.code}/youtube/search/${encodeURIComponent(term)}/${Number(start) + 10}`" class="btn btn-default">Next</router-link>
@@ -67,6 +67,9 @@ export default {
       })
       this.updateVideos++
     },
+    addAll() {
+      this.$refs.youTubeVideoList.addAll()
+    }
   }
 }
 </script>

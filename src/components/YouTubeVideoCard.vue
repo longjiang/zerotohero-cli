@@ -90,6 +90,7 @@
         >
           {{ Helper.level(video.level, $l2) }}
         </div>
+        <!--
         <div v-if="$settings.adminMode && video.subs_l1 && video.subs_l1.length > 0">
           <div v-for="index in [0,1,2,3,4]"><b>{{ video.l1Locale }} </b><span @click="matchSubsAndUpdate(index)" :class="{'btn': true, 'btn-small': true, 'text-danger': video.subs_l2 && video.subs_l2.length > 0 && video.subs_l1[index].starttime !== video.subs_l2[0].starttime }">{{ video.subs_l1[index].starttime }}</span> {{ video.subs_l1[index].line }}</div>
         </div>
@@ -103,6 +104,7 @@
             <i class="fa fa-check mr-2"></i>Updated
           </b-button>
         </div>
+        -->
         <div v-if="$settings.adminMode && video.channel_id && Config.approvedChannels[$l2.code] && !Config.approvedChannels[$l2.code].includes(video.channel_id)" class="small text-warning mt-1">
           {{ video.channel_id}}
         </div>
@@ -243,13 +245,15 @@ export default {
         this.videoInfoKey++
       }
     },
-    async getSubsAndSave(video) {
-      if (!video.subs_l2 && video.l2Locale) {
-        video.subs_l2 = await this.getTranscript(video, video.l2Locale)
-        this.firstLineTime = video.subs_l2[0].starttime
+    async getSubsAndSave(video = this.video) {
+      if (this.checkSaved && !video.id && video.hasSubs) {
+        if (!video.subs_l2 && video.l2Locale) {
+          video.subs_l2 = await this.getTranscript(video, video.l2Locale)
+          this.firstLineTime = video.subs_l2[0].starttime
+        }
+        if (!video.channel_id) await this.getChannelID(video)
+        await this.save(video)
       }
-      if (!video.channel_id) await this.getChannelID(video)
-      await this.save(video)
     },
     async getChannelID(video) {
       let details = await YouTube.videoByApi(video.youtube_id)
