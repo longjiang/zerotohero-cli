@@ -487,7 +487,7 @@ export default {
       if (hits.length > 0) {
         this.searchSubsImage = `https://img.youtube.com/vi/${hits[0].video.youtube_id}/hqdefault.jpg`
         this.searchSubsExample =
-          hits[0].video.subs_l2[hits[0].lineIndex - 1].line +
+          hits[0].lineIndex > 0 ? hits[0].video.subs_l2[hits[0].lineIndex - 1].line : '' +
           ' ' +
           hits[0].video.subs_l2[hits[0].lineIndex].line
       }

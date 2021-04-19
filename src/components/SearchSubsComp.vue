@@ -1,7 +1,7 @@
 <template>
   <div :class="{ 'search-subs': true, fullscreen }">
     <div class="text-center mt-3" v-if="checking">Checking content...</div>
-    <div class="text-center" v-if="!checking && hits.length === 0">
+    <div class="text-center mt-3" v-if="!checking && hits.length === 0">
       No hits.
     </div>
     <div class="mt-3 mb-2 text-center" v-if="hits.length > 0">
@@ -107,6 +107,7 @@ export default {
   data() {
     return {
       hits: [],
+      excludeTerms: [],
       hitIndex: 0,
       navigated: false,
       checking: true,
@@ -177,6 +178,11 @@ export default {
       this.hits = []
       this.videos = []
       this.checking = true
+      if (this.$l2.code === 'zh' && this.terms[0].length === 1) {
+        let words = await (await this.$dictionary).lookupFuzzySimple(this.terms[0])
+        let excludedWords = words.filter(word => word.simplified.length > 1)
+        this.excludeTerms = Helper.unique(excludedWords.map(word => word.simplified).concat(excludedWords.map(word => word.traditional)))
+      }
       let channelFilter = ''
       let approvedChannels = Config.approvedChannels[this.$l2.code]
       if (approvedChannels) {
@@ -202,17 +208,19 @@ export default {
       }
       await Promise.all(promises)
       let seenYouTubeIds = []
-      for (let video of shuffle(this.videos).sort((a, b) => {
+      let videos = shuffle(this.videos).sort((a, b) => {
         let aa = a.title.includes('Untamed')
         let bb = b.title.includes('Untamed')
         return aa === bb ? 0 : aa ? -1 : 1
-      })) {
+      })
+      for (let video of videos) {
         if (!seenYouTubeIds.includes(video.youtube_id)) {
           seenYouTubeIds.push(video.youtube_id)
-          video.subs_l2 = JSON.parse(video.subs_l2)
+          video.subs_l2 = JSON.parse(video.subs_l2).filter(line => line.starttime)
           for (let index in video.subs_l2) {
             if (
               new RegExp(this.terms.join('|')).test(video.subs_l2[index].line)
+              && !new RegExp(this.excludeTerms.join('|')).test(video.subs_l2[index].line)
             ) {
               this.hits.push({
                 video: video,

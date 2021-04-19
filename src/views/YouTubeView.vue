@@ -336,7 +336,7 @@ export default {
     async getTranscript() {
       this.l1Lines = []
       let l2Subs = this.saved
-        ? (this.l2Lines = JSON.parse(this.saved.subs_l2))
+        ? (this.l2Lines = JSON.parse(this.saved.subs_l2)).filter(line => line.starttime)
         : false
       this.l2Lines = l2Subs ? l2Subs : []
       this.hasSubtitles = false

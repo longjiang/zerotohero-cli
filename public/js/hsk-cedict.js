@@ -159,6 +159,9 @@ const Dictionary = {
   removeTones(pinyin) {
     return pinyin.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
   },
+  lookupFuzzySimple(text) {
+    return this.words.filter(word => word.bare.includes(text))
+  },
   lookupFuzzy(text, limit = false) {
     let results = []
     if (this.isChinese(text)) {
