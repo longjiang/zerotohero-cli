@@ -66,6 +66,20 @@
                 class="mb-4"
                 :key="`${entry.id}-example`"
               ></EntryExample>
+              <div v-if="$l2.code==='zh'">
+                <div class="mb-2">
+                  <b-button @click="setExtDict('zdic')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'zdic' ? entry.level : false">汉典</b-button>
+                  <b-button @click="setExtDict('wiktionary')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'wiktionary' ? entry.level : false">Wiktionary</b-button>
+                  <b-button @click="setExtDict('moedict')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'moedict' ? entry.level : false">萌典</b-button>
+                  <b-button @click="setExtDict('baidu-baike')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'baidu-baike' ? entry.level : false">百度百科</b-button>
+                </div>
+                <div class="mb-4 pl-2 pr-2">
+                  <iframe v-if="extDict === 'zdic'" :src="`https://www.zdic.net/hans/${entry.simplified}`" class="ext-dictinoary-iframe"></iframe>
+                  <iframe v-if="extDict === 'wiktionary'" :src="`https://en.wiktionary.org/wiki/${entry.simplified}`" class="ext-dictinoary-iframe"></iframe>
+                  <iframe v-if="extDict === 'moedict'" :src="`https://www.moedict.tw/${entry.traditional}`" class="ext-dictinoary-iframe"></iframe>
+                  <iframe v-if="extDict === 'baidu-baike'" :src="`https://baike.baidu.com/item/${entry.simplified}`" class="ext-dictinoary-iframe"></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -292,6 +306,7 @@ export default {
       unsplashSearchTerm: '',
       entryKey: 0,
       paginatorKey: 0,
+      extDict: '',
       youglishLang: {
         zh: 'chinese',
         en: 'english',
@@ -448,6 +463,13 @@ export default {
         }
       }
     },
+    setExtDict(dict) {
+      if (this.extDict === dict) {
+        this.extDict = ''
+      } else {
+        this.extDict = dict
+      }
+    },
     async nextWord() {
       if (this.entry.newHSK && this.entry.newHSK.includes('7-9')) {
         let match = this.entry.newHSKMatches.find(
@@ -547,4 +569,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.ext-dictinoary-iframe {
+  width: 100%;
+  border: 0;
+  height: 50vh;
+  border-radius: 0.5rem;
+  background: #ccc;
+}
+</style>
