@@ -48,7 +48,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 text-center">
-            <div class="widget">
+            <div>
               <div class="p-4">
                 <EntryHeader
                   :entry="entry"
@@ -67,7 +67,7 @@
                 :key="`${entry.id}-example`"
               ></EntryExample>
               <div v-if="$l2.code==='zh'">
-                <div class="mb-2">
+                <div class="ext-dictionary-buttons p-2 bg-white">
                   <b-button @click="setExtDict('zdic')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'zdic' ? entry.level : false">汉典</b-button>
                   <b-button @click="setExtDict('wiktionary')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'wiktionary' ? entry.level : false">Wiktionary</b-button>
                   <b-button @click="setExtDict('moedict')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'moedict' ? entry.level : false">萌典</b-button>
@@ -572,10 +572,16 @@ export default {
 </script>
 
 <style>
+.ext-dictionary-buttons {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 .ext-dictinoary-iframe {
   width: 100%;
-  border: 0;
-  height: 50vh;
+  border: 1px solid #eee;
+  height: calc(100vh - 4rem);
   border-radius: 0.5rem;
   background: #ccc;
 }
