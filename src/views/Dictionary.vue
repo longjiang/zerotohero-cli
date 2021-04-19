@@ -152,7 +152,7 @@
           </div>
         </div>
 
-        <div class="row mt-5 d-flex" style="flex-wrap: wrap">
+        <div class="row d-flex" style="flex-wrap: wrap">
           <EntryDifficulty :entry="entry" style="flex: 1" class="m-3" />
           <EntryDisambiguation
             :entry="entry"
