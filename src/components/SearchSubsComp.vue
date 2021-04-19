@@ -220,7 +220,7 @@ export default {
           for (let index in video.subs_l2) {
             if (
               new RegExp(this.terms.join('|')).test(video.subs_l2[index].line)
-              && !new RegExp(this.excludeTerms.join('|')).test(video.subs_l2[index].line)
+              && (this.excludeTerms.length === 0 || !new RegExp(this.excludeTerms.join('|')).test(video.subs_l2[index].line))
             ) {
               this.hits.push({
                 video: video,
