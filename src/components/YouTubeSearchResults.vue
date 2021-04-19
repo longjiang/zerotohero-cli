@@ -39,7 +39,17 @@ export default {
     }
   },
   mounted() {
+    this.bindKeys()
     this.updateURL()
+  },
+  unmounted() {
+    this.unbindKeys()
+  },
+  activated() {
+    this.bindKeys()
+  },
+  deactivated() {
+    this.unbindKeys()
   },
   watch: {
     term() {
@@ -50,6 +60,31 @@ export default {
     }
   },
   methods: {
+    prevPage() {
+      this.$router.push({path: `/${this.$l1.code}/${this.$l2.code}/youtube/search/${encodeURIComponent(this.term)}/${Number(this.start) - 10}` })
+    },
+    nextPage() {
+      this.$router.push({path: `/${this.$l1.code}/${this.$l2.code}/youtube/search/${encodeURIComponent(this.term)}/${Number(this.start) + 10}`})
+    },
+    unbindKeys() {
+      window.onkeydown = null
+    },
+    bindKeys() {
+      window.onkeydown = (e) => {
+        if (e.target.tagName.toUpperCase() !== 'INPUT') {
+          // left = 37
+          if (e.keyCode == 37) {
+            this.prevPage()
+            return false
+          }
+          // right = 39
+          if (e.keyCode == 39) {
+            this.nextPage()
+            return false
+          }
+        }
+      }
+  },
     async updateURL() {
       this.videos = []
       let options = {

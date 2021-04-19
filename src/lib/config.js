@@ -35,6 +35,7 @@ export default {
       'UCcLK3j-XWdGBnt5bR9NJHaQ', // CCTV
       'UCjnJ4buqbnpRVaT3IDUQPZQ', // CCTV chun wan
       'UCU5qmd5NvJljDBeM1sD-D1A', // Q1Q2
+      'UCTF6rwqpN-QgtNK1ROAXu6g', // Q1Q2
       'UC7ACqIQiy1SkjglQQ6bWDRg', // 捷成华视 Idol & Romance
       'UCKn4SloJmZYNYNq6RgzgrHw', // NewTV
       'UCPh1aKtroMioOCPHTGPwUBQ', // Classic
@@ -56,7 +57,41 @@ export default {
       'UC3cbVxXQ-p-auBRVhGCmUmQ', // 华录百納熱播劇場
       'UCVm75cj78njo38Izz_suQQA',
       'UCWiS6QxFGFK-LKwwHzSsmHQ',
-      'UCAMrnDQlsPnrScHun5PgrXw'
+      'UCAMrnDQlsPnrScHun5PgrXw',
+      'UCCxMNXfmWlukwNRRxPO-P9A',
+      'UCR3JG231i5rbq8NnM9Gp02Q',
+      'UCRhpQlky8kT9ZtJ7WnH_3Wg',
+      'UCYRLiAiyyRc-fRqdm2MaXzg',
+      'UCfPmFrdqNLD-HFJpfjBs1Cg',
+      'UCFSdTm2FE4BDThV3omA4UIA',
+      'UC9M9sV3sGmutY26H4LNBTww',
+      'UCQFyMGc6h30NMCd6HCk0ZPA',
+      'UCE2UHXGOlqotRJgEWl_tiMw',
+      'UCm6MXIlUFRv9-CBBGMNVf5w',
+      'UCzc59v10qvwWRPrYoWUKEvQ',
+      'UC9z0EFa_NEPdxIFIsm7_qzQ',
+      'UC6KKrL5yrRBkUoHsFxVQlVg',
+      'UCnHYtTFmgGodIWiRlc-mIGQ',
+      'UCw1JmgFeYe9fDnjM05E2FQg',
+      'UCcaKuPzlS9MXgMjHqtlZlDA',
+      'UCUuZe7OB0yHSYAfu8annGKQ'
+    ]
+  },
+  talkChannels: {
+    zh: [
+      'UCKFB_rVEFEF3l-onQGvGx1A', // 一席
+      'UC1pGI-x2n70SuOIIykOlT9A', // 食谱
+      'UCQEF54z0aOwpV2EtRsh6t_Q', // 易学族
+      'UCulFhrW_YCwkq_BP16C82mA', // 一条
+      'UCXWW8rllT5OQwSmeqaLcKYg', // 装修攻略
+      'UCSs4A6HYKmHA2MG_0z-F0xw', // 李永乐老师
+      'UC2Zqo6npCEH079SjnZ84v4g', // 课程
+      'UCJsq4QYu9BaxXDk0qR8Ms3w', // 食谱
+      'UCENJEn-rZ9VUrXw4krJwFsQ', // 大山
+      'UCM33VtveeEmfA6LC7tH30Xw', // 袁腾飞
+      'UCbi-ZrTUyuReTqPpqVGJ8pg', // 锵锵三人行
+      'UCLROLAN8kmU7tGQDs6KH-bQ', // 妈咪说
+      'UCg0m_Ah8P_MQbnn77-vYnYw', // 厨师长
     ]
   }
 }

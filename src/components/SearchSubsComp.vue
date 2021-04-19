@@ -207,6 +207,28 @@ export default {
         )
       }
       await Promise.all(promises)
+      if (approvedChannels && this.videos.length < 3) {
+        promises = []
+        channelFilter = `&filter[channel_id][in]=${Config.talkChannels[this.$l2.code].join(',')}`
+        for (let term of this.terms) {
+          promises.push(
+            $.getJSON(
+              `${
+                Config.wiki
+              }items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${
+                this.$l2.id
+              }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
+                this.$settings.adminMode ? Date.now() : 0
+              }`
+            ).then((response) => {
+              if (response && response.data && response.data.length > 0) {
+                this.videos = this.videos.concat(response.data)
+              }
+            })
+          )
+        }
+        await Promise.all(promises)
+      }
       let seenYouTubeIds = []
       let videos = shuffle(this.videos).sort((a, b) => {
         let aa = a.title.includes('Untamed')
