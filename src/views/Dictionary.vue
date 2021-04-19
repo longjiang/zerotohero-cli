@@ -72,12 +72,14 @@
                   <b-button @click="setExtDict('wiktionary')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'wiktionary' ? entry.level : false">Wiktionary</b-button>
                   <b-button @click="setExtDict('moedict')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'moedict' ? entry.level : false">萌典</b-button>
                   <b-button @click="setExtDict('baidu-baike')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'baidu-baike' ? entry.level : false">百度百科</b-button>
+                  <b-button @click="setExtDict('naver')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'naver' ? entry.level : false">Naver</b-button>
                 </div>
                 <div class="mb-4 pl-2 pr-2">
                   <iframe v-if="extDict === 'zdic'" :src="`https://www.zdic.net/hans/${entry.simplified}`" class="ext-dictinoary-iframe"></iframe>
                   <iframe v-if="extDict === 'wiktionary'" :src="`https://en.wiktionary.org/wiki/${entry.simplified}`" class="ext-dictinoary-iframe"></iframe>
                   <iframe v-if="extDict === 'moedict'" :src="`https://www.moedict.tw/${entry.traditional}`" class="ext-dictinoary-iframe"></iframe>
                   <iframe v-if="extDict === 'baidu-baike'" :src="`https://baike.baidu.com/item/${entry.simplified}`" class="ext-dictinoary-iframe"></iframe>
+                  <iframe v-if="extDict === 'naver'" :src="`https://korean.dict.naver.com/kozhdict/chinese/#/search?query=${entry.simplified}`" class="ext-dictinoary-iframe"></iframe>
                 </div>
               </div>
             </div>

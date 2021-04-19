@@ -94,12 +94,12 @@ export default {
 .image-wall-image {
   object-fit: cover;
   flex: 1;
-  height: 5rem;
+  height: 7.5rem;
   width: auto;
   background-color: #f5f5f5;
   cursor: pointer;
   margin: 0.2rem;
-  max-width: 10rem;
+  max-width: 15rem;
 }
 .image-wall-image:last-child {
   flex: 0;
