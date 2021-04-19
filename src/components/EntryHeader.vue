@@ -21,7 +21,7 @@
           ><i class="fa fa-arrow-right mr-2" />New HSK {{ entry.newHSK }} <span v-if="entry.newHSKMatches.length === 1" style="color: #999; font-weight: normal">#{{ entry.newHSKMatches[0].num }}</span></span
         >
       </div>
-      <Annotate tag="div" class="mb-4" v-if="entry.counters"
+      <Annotate tag="div" class="mt-1 mb-2" v-if="entry.counters"
         ><span>一{{
           entry.counters
             .map((counter) => counter.simplified)
