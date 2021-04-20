@@ -57,7 +57,7 @@ export default {
           this.$l2.id
         }&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
       )
-      this.shows = response.data || []
+      this.shows = response.data.sort((x,y)=>x.title.localeCompare(y.title, 'zh-CN')) || []
     },
   },
 }
