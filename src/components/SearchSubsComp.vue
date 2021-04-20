@@ -59,11 +59,18 @@
       >
         <i class="fa fa-chevron-right" />
       </button>
+      <input
+        type="text"
+        v-model.lazy="excludeStr"
+        :style="`width: 6em`"
+        placeholder="Exclude..."
+        class="ml-1 mr-1 btn btn-small"
+      />
       <router-link
         :to="`/${$l1.code}/${$l2.code}/youtube/view/${hits[hitIndex].video.youtube_id}/`"
         class="btn btn-small"
-        ><i class="fa fa-window-maximize mr-2" />Open Full</router-link
-      >
+        ><i class="fa fa-window-restore"
+      /></router-link>
     </div>
     <div v-if="hits.length > 0" :set="(hit = hits[hitIndex])">
       <YouTubeWithTranscript
@@ -114,6 +121,8 @@ export default {
       videos: [],
       Helper,
       fullscreen: false,
+      excludeStr: '',
+      excludeArr: []
     }
   },
   mounted() {
@@ -123,6 +132,20 @@ export default {
     setTimeout(() => {
       this.$refs.youtube.pause()
     }, 800)
+  },
+
+  watch: {
+    excludeStr() {
+      this.excludeArr = this.excludeStr.split(',')
+      let hits = []
+      for (let hit of this.hits) {
+        let regex = new RegExp(this.excludeArr.join('|'))
+        if (!regex.test(hit.video.subs_l2[hit.lineIndex]) && !regex.test(hit.video.title)) {
+          hits.push(hit)
+        }
+      }
+      this.hits = hits
+    }
   },
   methods: {
     previousLine() {
