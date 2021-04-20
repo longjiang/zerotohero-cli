@@ -13,6 +13,7 @@
             :onSeek="seekYouTube"
             :onPause="pauseYouTube"
             :lines="this.l2Lines"
+            :quiz="quiz"
             :parallellines="this.l1Lines"
           />
         </div>
@@ -71,6 +72,9 @@ export default {
     },
     highlight: {
       type: Array
+    },
+    quiz: {
+      default: false
     },
     hsk: {
       default: 'outside'

@@ -63,7 +63,7 @@
                 >
               </b-dropdown>
 
-              <b-button variant="danger" @click="remove" class="ml-1"
+              <b-button v-if="$settings.adminMode" variant="danger" @click="remove" class="ml-1"
                 ><i class="fas fa-trash-alt"></i
               ></b-button>
             </template>
@@ -102,7 +102,8 @@
       ref="youtube"
       :l2Lines="this.l2Lines"
       :l1Lines="this.l1Lines"
-      :key="transcriptKey"
+      :quiz="true"
+      :key="`transcript-${args}-${transcriptKey}`"
     />
     <div class="play-pause-wrapper">
       <span
