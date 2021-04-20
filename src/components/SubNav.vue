@@ -126,28 +126,21 @@
       v-if="
         $route.name &&
           ($route.name.startsWith('youtube') ||
-            $route.name === 'hero-academy' ||
-            $route.name === 'lesson-videos' ||
-            $route.name === 'music')
+            $route.name === 'tv-shows' ||
+            $route.name === 'lesson-videos')
       "
     >
+      <router-link class="secondary-menu-item" :to="{ name: 'tv-shows' }" v-if="$l2.code === 'zh'">
+        <i class="fa fa-tv" />
+        {{ $t('TV Shows') }}
+      </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'youtube-browse' }">
         <i class="fab fa-youtube" />
-        {{ $t('YouTube Transcript') }}
+        {{ $t('YouTube') }}
       </router-link>
       <router-link class="secondary-menu-item" :to="{ name: 'lesson-videos' }"  v-if="$l2.code === 'zh'">
-        <i class="fab fa-youtube" />
-        {{ $t('Lesson Expansion Videos') }}
-      </router-link>
-      <router-link
-        v-if="$hasFeature('hero-academy')"
-        class="secondary-menu-item"
-        :to="{ name: 'hero-academy' }"
-      >
-        <i class="fas fa-school" />Hero Academy
-      </router-link>
-      <router-link v-if="$hasFeature('music')" class="secondary-menu-item" :to="{ name: 'music' }">
-        <i class="fas fa-music" />Music Video Lyrics
+        <i class="fa fa-chalkboard-teacher" />
+        {{ $t('Lesson Expansion') }}
       </router-link>
     </nav>
 

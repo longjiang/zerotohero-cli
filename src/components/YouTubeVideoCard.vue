@@ -74,6 +74,27 @@
         >
         <b-button
           v-if="$settings.adminMode && video.id"
+          class="btn btn-small mt-2 ml-0"
+          @click="toggleMakingShow()"
+          ><i class="fa fa-tv mr-2"></i>Make TV Show</b-button
+        >
+        <div v-if="makingShow">
+          <input type="text" v-model.lazy="showTitle" placeholder="Title" style="width: 70%; text-align: left;" class="btn btn-small ml-0" />
+          <input type="text" v-model.lazy="showYear" placeholder="Year" style="width: 20%; text-align: left;" class="btn btn-small ml-0" />
+          <b-button
+            class="btn btn-small mt-2 ml-0 bg-success text-white"
+            v-if="!tvShow"
+            @click="addShow()"
+            >Add Show</b-button
+          >
+          <span
+            class="btn btn-small mt-2 ml-0 bg-success text-white"
+            v-if="tvShow"
+            ><i class="fa fa-check mr-2" />Added</span
+          >
+        </div>
+        <b-button
+          v-if="$settings.adminMode && video.id"
           class="btn btn-small bg-danger text-white mt-2 ml-0"
           @click="remove(video)"
           ><i class="fa fa-trash"></i></b-button
@@ -132,7 +153,11 @@ export default {
       videoInfoKey: 0,
       over: false,
       firstLineTime: this.video.subs_l2 && this.video.subs_l2[0] ? this.video.subs_l2[0].starttime : 0,
-      subsUpdated: false
+      subsUpdated: false,
+      makingShow: false,
+      showTitle: this.video.title,
+      showYear: '',
+      tvShow: undefined
     }
   },
   props: {
@@ -157,6 +182,21 @@ export default {
     },
   },
   methods: {
+    toggleMakingShow() {
+      this.makingShow = !this.makingShow
+    },
+    async addShow() {
+      let response = await $.post(`${Config.wiki}items/tv_shows`, {
+        youtube_id: this.video.youtube_id,
+        title: this.showTitle,
+        year: this.showYear,
+        l2: this.$l2.id,
+        channel_id: this.video.channel_id,
+      })
+      if (response && response.data) {
+        this.tvShow = response.data
+      }
+    },
     matchSubsAndUpdate(index) {
       this.firstLineTime = this.video.subs_l1[index].starttime
       this.shiftSubs()

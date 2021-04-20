@@ -600,7 +600,22 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/youtube/browse/:topic?/:level?/:start?',
+      path: '/:l1/:l2/tv-shows',
+      name: 'tv-shows',
+      component: () => import('./views/TVShows.vue'),
+      props: true,
+      meta: {
+        title: 'Study with TV Shows | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'Learn language with TV shows.'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/youtube/browse/:topic?/:level?/:start?/:keyword?',
       name: 'youtube-browse',
       component: () => import('./views/YouTubeBrowse.vue'),
       props: true,

@@ -1,32 +1,11 @@
 <template>
   <div class="youtube-browse container mt-5 mb-5 main">
-    <div class="row">
-      <div class="col-sm-12">
-        <SimpleSearch
-          class="mb-3"
-          :placeholder="
-            $t('Search the entire YouTube for {l2} videos with CC', {
-              l2: $l2.name,
-            })
-          "
-          buttonText="Search"
-          :action="
-            (url) => {
-              this.$router.push({
-                path: `/${$l1.code}/${
-                  $l2.code
-                }/youtube/search/${encodeURIComponent(url)}`,
-              })
-            }
-          "
-          ref="search"
-        />
-      </div>
-    </div>
     <div class="row mt-5">
+      <div class="col-sm-12">
+        <h3 class="mb-5 text-center">YouTube Video Library</h3>
+      </div>
       <div class="col-sm-12 col-md-8 col-lg-9 pr-4 mb-5">
         <template v-if="videos && videos.length > 0">
-          <h3 class="mb-2 text-center">Library</h3>
           <YouTubeVideoList
             :videos="videos"
             :checkSubs="false"
@@ -38,7 +17,7 @@
             v-if="start > 9"
             :to="`/${$l1.code}/${$l2.code}/youtube/browse/${topic}/${level}/${
               Number(start) - 10
-            }`"
+            }${keyword ? '/' + keyword : ''}`"
             class="btn btn-default mr-2"
           >
             Previous
@@ -46,7 +25,7 @@
           <router-link
             :to="`/${$l1.code}/${$l2.code}/youtube/browse/${topic}/${level}/${
               Number(start) + 10
-            }`"
+            }${keyword ? '/' + keyword : ''}`"
             class="btn btn-default"
           >
             Next
@@ -54,7 +33,20 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-4 col-lg-3">
-        <h4 class="text-center mb-4">Filter by Topic</h4>
+        <SimpleSearch
+          class="mb-3"
+          :placeholder="keyword ? keyword : 'Keyword...'"
+          buttonText="Search"
+          :action="
+            (url) => {
+              this.$router.push({
+                path: `/${$l1.code}/${
+                  $l2.code
+                }/youtube/browse/${topic}/${level}/0/${encodeURIComponent(url)}`,
+              })
+            }
+          "
+        />
         <div class="list-group">
           <a
             :class="{
@@ -108,6 +100,31 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <hr />
+        <h3 class="mt-5 mb-5 text-center">Search for More Videos on YouTube</h3>
+        <SimpleSearch
+          class="mb-3"
+          :placeholder="
+            $t('Search the entire YouTube for {l2} videos with CC', {
+              l2: $l2.name,
+            })
+          "
+          buttonText="Search"
+          :action="
+            (url) => {
+              this.$router.push({
+                path: `/${$l1.code}/${
+                  $l2.code
+                }/youtube/search/${encodeURIComponent(url)}`,
+              })
+            }
+          "
+          ref="search"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -127,14 +144,14 @@ export default {
     SimpleSearch,
   },
   props: {
-    args: {
-      type: String,
-    },
     topic: {
       default: 'all',
     },
     level: {
       default: 'all',
+    },
+    keyword: {
+      default: ''
     },
     start: {
       default: 0,
@@ -157,6 +174,9 @@ export default {
       }
       if (this.level !== 'all') {
         filters += '&filter[level][eq]=' + this.level
+      }
+      if (this.keyword !== '') {
+        filters += '&filter[title][contains]=' + this.keyword + '&sort=title'
       }
       let response = await $.getJSON(
         `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${
@@ -188,6 +208,9 @@ export default {
     },
     route() {
       let canonical = `/${this.$l1.code}/${this.$l2.code}/youtube/browse/${this.topic}/${this.level}/${this.start}`
+      if (this.keyword) {
+        canonical = canonical +  '/' + this.keyword
+      }
       if (this.$router.currentRoute.path !== canonical) {
         this.$router.push({ path: canonical })
       } else {

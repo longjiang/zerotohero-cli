@@ -6,6 +6,7 @@
       :checkSaved="checkSaved"
       :checkSubs="checkSubs"
       ref="youTubeVideoCard"
+      :key="`youtube-video-${video.youtube_id}-${videoIndex}`"
     />
   </div>
 </template>
