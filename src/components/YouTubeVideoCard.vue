@@ -73,12 +73,17 @@
           ><i class="fas fa-plus mr-2"></i>Add Channel ID</b-button
         >
         <b-button
-          v-if="$settings.adminMode && video.id"
+          v-if="$settings.adminMode && video.id && !tvShow"
           class="btn btn-small mt-2 ml-0"
           @click="toggleMakingShow()"
           ><i class="fa fa-tv mr-2"></i>Make TV Show</b-button
         >
-        <div v-if="makingShow">
+        <span
+          class="btn btn-small mt-2 ml-0 bg-success text-white"
+          v-if="tvShow"
+          ><i class="fa fa-tv mr-2" />TV Show</span
+        >
+        <div v-if="makingShow && !tvShow">
           <input type="text" v-model.lazy="showTitle" placeholder="Title" style="width: 70%; text-align: left;" class="btn btn-small ml-0" />
           <input type="text" v-model.lazy="showYear" placeholder="Year" style="width: 20%; text-align: left;" class="btn btn-small ml-0" />
           <b-button
@@ -86,11 +91,6 @@
             v-if="!tvShow"
             @click="addShow()"
             >Add Show</b-button
-          >
-          <span
-            class="btn btn-small mt-2 ml-0 bg-success text-white"
-            v-if="tvShow"
-            ><i class="fa fa-check mr-2" />Added</span
           >
         </div>
         <b-button
@@ -157,7 +157,7 @@ export default {
       makingShow: false,
       showTitle: this.video.title,
       showYear: '',
-      tvShow: undefined
+      tvShow: this.video.show
     }
   },
   props: {

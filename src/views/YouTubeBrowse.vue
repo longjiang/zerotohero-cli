@@ -164,10 +164,19 @@ export default {
       videos: [],
       levels: Helper.levels(this.$l2),
       topics: Helper.topics,
+      shows: []
     }
   },
   methods: {
     async getVideos() {
+      if (this.$settings.adminMode) {
+        let response = await $.getJSON(
+          `${Config.wiki}items/tv_shows?sort=title&filter[l2][eq]=${
+            this.$l2.id
+          }&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
+        )
+        this.shows = response.data || []
+      }
       let filters = ''
       if (this.topic !== 'all') {
         filters += '&filter[topic][eq]=' + this.topic
@@ -184,6 +193,13 @@ export default {
         }${filters}&limit=10&offset=${this.start}&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
       )
       let videos = response.data || []
+      let showTitles = this.shows.map(show => show.title)
+      let regex = new RegExp(showTitles.join('|'))
+      for (let video of videos) {
+        if (regex.test(video.title)) {
+          video.show = this.shows.find(show => video.title.includes(show.title))
+        }
+      }
       this.videos = Helper.uniqueByValue(videos, 'youtube_id')
     },
     async getChannels() {

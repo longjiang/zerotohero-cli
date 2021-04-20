@@ -75,7 +75,9 @@ export default {
       'UCw1JmgFeYe9fDnjM05E2FQg',
       'UCcaKuPzlS9MXgMjHqtlZlDA',
       'UCUuZe7OB0yHSYAfu8annGKQ',
-      'UCstdo3fo9H04nFVyaj2Bkew'
+      'UCstdo3fo9H04nFVyaj2Bkew',
+      'UClpQ52tidfcwbFhwjuzrWLg',
+      'UCU1QlsCKFBmE_wf6CGU5tvg'
     ]
   },
   talkChannels: {
