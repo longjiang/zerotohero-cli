@@ -125,16 +125,6 @@
                   "
                   @loaded="searchSubsLoaded"
                 />
-                <p class="mt-1 text-center" v-if="youglishLang[$l2.code]">
-                  See examples of “{{ entry.bare }}” on
-                  <a
-                    :href="`https://youglish.com/pronounce/${entry.bare}/${
-                      youglishLang[$l2.code]
-                    }`"
-                    target="youglish"
-                    >YouGlish</a
-                  >
-                </p>
               </div>
             </div>
             <EntryRelated
@@ -170,7 +160,6 @@
             ></Mistakes>
           </div>
         </div>
-        <!--
         <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
           <div class="col-sm-12" v-if="$l2.code !== 'zh'">
             <EntryCharacters
@@ -229,7 +218,6 @@
             />
           </div>
         </div>
-        -->
       </div>
       <EntryCourseAd
         v-if="$l2.code === 'zh'"
@@ -309,23 +297,6 @@ export default {
       entryKey: 0,
       paginatorKey: 0,
       extDict: '',
-      youglishLang: {
-        zh: 'chinese',
-        en: 'english',
-        ar: 'arabic',
-        nl: 'dutch',
-        fr: 'french',
-        de: 'german',
-        he: 'hebrew',
-        it: 'italian',
-        ja: 'japanese',
-        ko: 'korean',
-        pl: 'polish',
-        pt: 'portuguese',
-        ru: 'russian',
-        es: 'spanish',
-        tr: 'turkish',
-      },
       title: '',
       description: '',
       searchSubsImage: undefined,

@@ -6,7 +6,7 @@
       <ul class="collapsed gramrel pl-0 mb-0" data-collapse-target>
         <li v-for="(line, index) in lines" class="gramrel-item list-unstyled" :key="`${term}-collocation-${type}-${index}`">
           <Annotate tag="div">
-            <div v-html="Helper.highlight(line, word.bare, level)" />
+            <div v-html="Helper.highlight(line, word ? word.bare : text, level)" />
           </Annotate>
         </li>
       </ul>

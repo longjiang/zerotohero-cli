@@ -86,6 +86,16 @@
         :autoplay="navigated"
       />
     </div>
+    <p class="mt-1 text-center" v-if="youglishLang[$l2.code]">
+      See examples of “{{ terms[0] }}” on
+      <a
+        :href="`https://youglish.com/pronounce/${terms[0]}/${
+          youglishLang[$l2.code]
+        }`"
+        target="youglish"
+        >YouGlish</a
+      >
+    </p>
   </div>
 </template>
 
@@ -122,7 +132,24 @@ export default {
       Helper,
       fullscreen: false,
       excludeStr: '',
-      excludeArr: []
+      excludeArr: [],
+      youglishLang: {
+        zh: 'chinese',
+        en: 'english',
+        ar: 'arabic',
+        nl: 'dutch',
+        fr: 'french',
+        de: 'german',
+        he: 'hebrew',
+        it: 'italian',
+        ja: 'japanese',
+        ko: 'korean',
+        pl: 'polish',
+        pt: 'portuguese',
+        ru: 'russian',
+        es: 'spanish',
+        tr: 'turkish',
+      }
     }
   },
   mounted() {

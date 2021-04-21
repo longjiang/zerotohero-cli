@@ -163,7 +163,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/phrase/:method?/:args?',
+      path: '/:l1/:l2/phrase/:method?/:term?',
       name: 'phrase',
       component: () => import('./views/Phrase.vue'),
       props: true,

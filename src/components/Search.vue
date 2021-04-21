@@ -48,19 +48,11 @@
           ></span>
         </span>
       </router-link>
-      <div class="suggestion" v-if="suggestions.length === 0 && type === 'dictionary'">
+      <router-link class="suggestion" v-if="suggestions.length === 0 && type === 'dictionary'" :to="`/${$l1.code}/${$l2.code}/phrase/search/${text}`">
         <span class="suggestion-not-found">
-          <b>&ldquo;{{ text }}&rdquo;</b> is not in
-          <a href="https://en.freedict.org/dictionary" target="_blank">FreeDict.org</a>.
-          Try looking it up in
-          <a
-            :href="`https://en.wiktionary.org/w/index.php?search=${text}`"
-            target="_blank"
-          >Wiktionary</a>,
-          <a :href="`https://en.wikipedia.org/w/index.php?search=${text}`" target="blank">Wikipedia</a>, or
-          <a :href="`https://www.google.com/search?q=${text}`" target="_blank">Google.</a>
+          <b>&ldquo;{{ text }}&rdquo;</b> is not in {{ $dictionaryName }}, press Return to look it up as a Phrase.
         </span>
-      </div>
+      </router-link>
       <div class="suggestion" v-if="suggestions.length === 0 && type === 'generic'">
         <span class="suggestion-not-found">
           Search for
@@ -78,39 +70,39 @@ import Helper from '@/lib/helper'
 export default {
   props: {
     term: {
-      default: ''
+      default: '',
     },
     defaultURL: {
       type: Function,
-      default: () => {}
+      default: () => {},
     },
     type: {
-      default: 'dictionary' // can also be 'generic'
+      default: 'dictionary', // can also be 'generic'
     },
     button: {
-      default: true
+      default: true,
     },
     entry: {
-      default: undefined
+      default: undefined,
     },
     suggestionsFunc: {
       type: Function,
-      default: undefined
+      default: undefined,
     },
     hrefFunc: {
       type: Function,
-      default: function(entry) {
+      default: function (entry) {
         if (entry) {
           return `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${entry.id}`
         }
-      }
+      },
     },
     placeholder: {
       type: String,
     },
     random: {
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
@@ -119,7 +111,7 @@ export default {
       dEntry: this.entry,
       text: this.entry ? this.entry.bare : this.term,
       active: false,
-      suggestionsKey: 0
+      suggestionsKey: 0,
     }
   },
   watch: {
@@ -135,30 +127,27 @@ export default {
     async text() {
       if (this.type === 'dictionary') {
         this.suggestions = []
-        this.suggestions = this.suggestions.concat(await (await this.$dictionary).lookupByDef(
-          this.text,
-          10
-        ))
-        this.suggestions = this.suggestions.concat(await (await this.$dictionary).lookupFuzzy(
-          this.text,
-          10
-        ))
-        this.suggestions = this.suggestions.sort((a, b) => 
-          b.bare.length - a.bare.length
-        ).sort((a, b) => 
-          a.bare.startsWith(this.text) ? -1 : 0
+        this.suggestions = this.suggestions.concat(
+          await (await this.$dictionary).lookupByDef(this.text, 10)
         )
+        this.suggestions = this.suggestions.concat(
+          await (await this.$dictionary).lookupFuzzy(this.text, 10)
+        )
+        this.suggestions = this.suggestions
+          .sort((a, b) => b.bare.length - a.bare.length)
+          .sort((a, b) => (a.bare.startsWith(this.text) ? -1 : 0))
       } else if (this.suggestionsFunc) {
         this.suggestions = this.suggestionsFunc(this.text)
       }
-    }
+    },
   },
   methods: {
     focusOnInput() {
       this.$refs.lookup.focus()
     },
     go() {
-      const url = $('.suggestion:first-child').attr('href') || this.defaultURL(this.text)
+      const url =
+        $('.suggestion:first-child').attr('href') || this.defaultURL(this.text)
       if (url) {
         this.suggestions = []
         this.$router.push({ path: url })
@@ -169,8 +158,8 @@ export default {
         if (this.suggestions[0]) this.dEntry = this.suggestions[0]
         this.active = false
       }, 300) // Set time out, otherwise before click event is fired the suggestions are already gone!
-    }
-  }
+    },
+  },
 }
 </script>
 
