@@ -45,6 +45,7 @@
             $route.name === 'compare' ||
             $route.name === 'phrase' ||
             $route.name === 'levels' ||
+            $route.name === 'new-levels' ||
             $route.name === 'idioms' ||
             $route.name === 'radicals' ||
             $route.name === 'characters' ||
@@ -68,7 +69,14 @@
         class="secondary-menu-item"
         :to="{ name: 'levels' }"
       >
-        <i class="fa fa-signal" />By Level
+        <i class="fa fa-signal" />HSK
+      </router-link>
+      <router-link
+        v-if="$hasFeature('levels')"
+        class="secondary-menu-item"
+        :to="{ name: 'new-levels' }"
+      >
+        <i class="fa fa-signal" />New HSK
       </router-link>
       <router-link
         v-if="$hasFeature('radicals')"
@@ -95,7 +103,7 @@
         class="secondary-menu-item"
         :to="{ name: 'explore-roots' }"
       >
-        <i class="fa fa-wrench" />Builder
+        <i class="fa fa-wrench" />Word Builder
       </router-link>
       <router-link
         v-if="$hasFeature('explore-topics')"

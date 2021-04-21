@@ -576,7 +576,7 @@ export default {
   display: block;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1;
 }
 .ext-dictinoary-iframe {
   width: 100%;

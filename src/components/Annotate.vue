@@ -7,6 +7,7 @@
       'annotated': true,
       'text-right': foreign && $l2.scripts && $l2.scripts.length > 0 && $l2.scripts[0].direction === 'rtl',
       'add-pinyin': $hasFeature('transliteration'),
+      phonetics,
       fullscreen: fullscreenMode
     }"
   >
@@ -52,6 +53,9 @@ export default {
     VRuntimeTemplate
   },
   props: {
+    phonetics: {
+      default: true
+    },
     sticky: {
       default: false // whether or not to show each word's level color by default (without hovering)
     },
@@ -145,13 +149,13 @@ export default {
           if (typeof item === 'object') {
             let token = this.tokenized[batchId]
             if (token && typeof token === 'object') {
-              html += `<WordBlock :sticky="${this.sticky}" :explore="explore" :token="tokenized[${batchId}][${index}]"/>`
+              html += `<WordBlock :phonetics="${this.phonetics}" :sticky="${this.sticky}" :explore="explore" :token="tokenized[${batchId}][${index}]"/>`
             }
           } else {
             item = item.trim().replace(/\s+/gi, ' ')
             if (item !== '') {
               for (let word of item.trim().split(/\s+/)) {
-                html += `<WordBlock :sticky="${this.sticky}" :explore="explore">${word}</WordBlock> `
+                html += `<WordBlock :phonetics="${this.phonetics}" :sticky="${this.sticky}" :explore="explore">${word}</WordBlock> `
               }
               html = html.trim()
             }

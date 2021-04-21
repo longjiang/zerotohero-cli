@@ -23,7 +23,7 @@
         </div>
       </div>
       <a
-        href="/data/zh-grammar/zh-grammar.csv.txt"
+        href="https://server.chinesezerotohero.com/data/zh-grammar/zh-grammar.csv.txt"
         class="ml-2 btn btn-primary"
         download="Chinese Zero to Hero Grammar Chart.csv"
         ><i class="fa fa-download mr-1" />Download CSV</a

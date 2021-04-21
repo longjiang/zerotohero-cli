@@ -26,7 +26,7 @@
         ></span>
         <span
           class="word-block-pinyin"
-          v-if="transliteration && transliteration !== token.candidates[0].head"
+          v-if="phonetics && transliteration && transliteration !== token.candidates[0].head"
           >{{ savedTransliteration || transliteration }}</span
         >
         <span
@@ -48,7 +48,7 @@
       <template v-else>
         <span
           class="word-block-pinyin"
-          v-if="transliteration && transliteration !== text"
+          v-if="phonetics && transliteration && transliteration !== text"
           >{{ savedTransliteration || transliteration }}</span
         >
         <span class="word-block-text" @click="wordBlockClick()">
@@ -227,6 +227,9 @@ export default {
     },
     explore: {
       default: false
+    },
+    phonetics: {
+      default: true
     },
     sticky: {
       default: false // whether or not to show each word's level color by default (without hovering)
@@ -485,7 +488,9 @@ export default {
 }
 
 .add-pinyin {
-  line-height: 2;
+  &.phonetics {
+    line-height: 2;
+  }
 
   .word-block {
     display: inline-block;
