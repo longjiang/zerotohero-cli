@@ -64,7 +64,7 @@
         v-model.lazy="excludeStr"
         :style="`width: 6em`"
         placeholder="Exclude..."
-        class="ml-1 mr-1 btn btn-small"
+        class="ml-1 mr-1 btn-small"
       />
       <router-link
         :to="`/${$l1.code}/${$l2.code}/youtube/view/${hits[hitIndex].video.youtube_id}/`"
@@ -140,7 +140,7 @@ export default {
       let hits = []
       for (let hit of this.hits) {
         let regex = new RegExp(this.excludeArr.join('|'))
-        if (!regex.test(hit.video.subs_l2[hit.lineIndex]) && !regex.test(hit.video.title)) {
+        if (!regex.test(hit.video.subs_l2[hit.lineIndex].line) && !regex.test(hit.video.title)) {
           hits.push(hit)
         }
       }

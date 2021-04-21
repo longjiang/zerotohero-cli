@@ -1,7 +1,7 @@
 <template>
-  <div class="definitions-list">
+  <div class="definitions-list" style="max-width: 50rem; margin: 0 auto">
     <template v-if="definitions && definitions.length > 0">
-      <ul class="definitions collapsed mb-2 list-unstyled" data-collapse-target>
+      <ul class="definitions mb-2 list-unstyled">
         <li
           v-for="(definition, index) in definitions"
           class="definition-list-item"
@@ -25,7 +25,7 @@ export default {
       type: String,
       default: '',
     },
-  },
+  }
 }
 </script>
 
