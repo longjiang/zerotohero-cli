@@ -86,7 +86,7 @@
         layout="vertical"
         :highlight="terms"
         :hsk="level"
-        :startLineIndex="Math.max(hit.lineIndex - 1, 0)"
+        :startLineIndex="startLineIndex(hit)"
         :stopLineIndex="Number(hit.lineIndex)"
         :autoload="Helper.iOS() || navigated"
         :autoplay="navigated"
@@ -185,6 +185,10 @@ export default {
     },
   },
   methods: {
+    startLineIndex(hit) {
+      let index = hit.video.subs_l2[hit.lineIndex].starttime - hit.video.subs_l2[hit.lineIndex - 1].starttime < 5 ? hit.lineIndex - 1 : hit.lineIndex
+      return Math.max(index, 0)
+    },
     previousLine() {
       this.$refs.youtube.previousLine()
     },
