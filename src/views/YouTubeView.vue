@@ -22,11 +22,11 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <h3 :key="title">
+          <h5 :key="title">
             <Annotate :showTranslate="true">
               <span>{{ title }}</span>
             </Annotate>
-          </h3>
+          </h5>
           <div>
             <template v-if="!loading && hasSubtitles">
               <b-button v-if="!saved" @click="save"

@@ -149,7 +149,7 @@ export default {
         ru: 'russian',
         es: 'spanish',
         tr: 'turkish',
-      }
+      },
     }
   },
   mounted() {
@@ -167,12 +167,15 @@ export default {
       let hits = []
       for (let hit of this.hits) {
         let regex = new RegExp(this.excludeArr.join('|'))
-        if (!regex.test(hit.video.subs_l2[hit.lineIndex].line) && !regex.test(hit.video.title)) {
+        if (
+          !regex.test(hit.video.subs_l2[hit.lineIndex].line) &&
+          !regex.test(hit.video.title)
+        ) {
           hits.push(hit)
         }
       }
       this.hits = hits
-    }
+    },
   },
   methods: {
     previousLine() {
@@ -219,7 +222,7 @@ export default {
       this.$refs.youtube.play()
     },
     togglePaused() {
-      this.$refs.youtube.togglePaused()
+      if (this.$refs.youtube) this.$refs.youtube.togglePaused()
     },
     fullscreenClick() {
       this.fullscreen = !this.fullscreen
@@ -229,9 +232,15 @@ export default {
       this.videos = []
       this.checking = true
       if (this.$l2.code === 'zh' && this.terms[0].length === 1) {
-        let words = await (await this.$dictionary).lookupFuzzySimple(this.terms[0])
-        let excludedWords = words.filter(word => word.simplified.length > 1)
-        this.excludeTerms = Helper.unique(excludedWords.map(word => word.simplified).concat(excludedWords.map(word => word.traditional)))
+        let words = await (await this.$dictionary).lookupFuzzySimple(
+          this.terms[0]
+        )
+        let excludedWords = words.filter((word) => word.simplified.length > 1)
+        this.excludeTerms = Helper.unique(
+          excludedWords
+            .map((word) => word.simplified)
+            .concat(excludedWords.map((word) => word.traditional))
+        )
       }
       let channelFilter = ''
       let approvedChannels = Config.approvedChannels[this.$l2.code]
@@ -259,7 +268,9 @@ export default {
       await Promise.all(promises)
       if (approvedChannels && this.videos.length < 3) {
         promises = []
-        channelFilter = `&filter[channel_id][in]=${Config.talkChannels[this.$l2.code].join(',')}`
+        channelFilter = `&filter[channel_id][in]=${Config.talkChannels[
+          this.$l2.code
+        ].join(',')}`
         for (let term of this.terms) {
           promises.push(
             $.getJSON(
@@ -288,11 +299,18 @@ export default {
       for (let video of videos) {
         if (!seenYouTubeIds.includes(video.youtube_id)) {
           seenYouTubeIds.push(video.youtube_id)
-          video.subs_l2 = JSON.parse(video.subs_l2).filter(line => line.starttime)
+          video.subs_l2 = JSON.parse(video.subs_l2).filter(
+            (line) => line.starttime
+          )
           for (let index in video.subs_l2) {
             if (
-              new RegExp(this.terms.join('|')).test(video.subs_l2[index].line)
-              && (this.excludeTerms.length === 0 || !new RegExp(this.excludeTerms.join('|')).test(video.subs_l2[index].line))
+              new RegExp(this.terms.join('|')).test(
+                video.subs_l2[index].line
+              ) &&
+              (this.excludeTerms.length === 0 ||
+                !new RegExp(this.excludeTerms.join('|')).test(
+                  video.subs_l2[index].line
+                ))
             ) {
               this.hits.push({
                 video: video,
