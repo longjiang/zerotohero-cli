@@ -161,7 +161,7 @@ export default {
 
 <style scoped>
 .youtube-video-wrapper {
-  max-width: calc((100vh - 10rem) * 16 / 9);
+  max-width: calc((100vh - 8rem) * 16 / 9);
   margin: 0 auto;
 }
 </style>

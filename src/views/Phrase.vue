@@ -36,6 +36,7 @@
           <div
             class="widget mt-5"
             id="search-subs"
+            v-if="term"
             :key="`subs-search-${term}`"
           >
             <div class="widget-title">“{{ term }}” in TV Shows</div>
