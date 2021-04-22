@@ -180,6 +180,7 @@ export default {
           hits.push(hit)
         }
       }
+      this.hitIndex = 0
       this.hits = hits
     },
   },
