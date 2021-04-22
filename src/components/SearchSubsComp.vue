@@ -11,12 +11,36 @@
         style="position: relative; bottom: 3px"
       >
         <strong :data-level="level">{{ terms[0] }}</strong>
-        <small class="ml-1 d-sm-hidden" style="color: #999">in TV shows</small>
+        <small class="ml-1 d-none" style="color: #999">in TV shows</small>
       </span>
-      <b-dropdown class="m-md-2 primary playlist-dropdown" toggle-class="playlist-dropdown-toggle" boundary="viewport" no-caret>
+      <b-dropdown
+        class="m-md-2 primary playlist-dropdown"
+        toggle-class="playlist-dropdown-toggle"
+        boundary="viewport"
+        no-caret
+      >
         <template #button-content><i class="fa fa-stream" /></template>
+        <b-dropdown-item
+          ><button class="btn btn-small" @click.stop="sortContextLeft">
+            Sort Left</button
+          ><button class="btn btn-small" @click.stop="sortContextRight">
+            Sort Right
+          </button></b-dropdown-item
+        >
         <template v-for="(hit, hitIndex) in hits">
-          <b-dropdown-item @click="goToHit(hitIndex)" ><span v-html="Helper.highlightMultiple(hit.video.subs_l2[Number(hit.lineIndex - 1)].line + ' ' + hit.video.subs_l2[Number(hit.lineIndex)].line, terms, level)"></span></b-dropdown-item>
+          <b-dropdown-item @click="goToHit(hitIndex)"
+            ><span
+              v-html="
+                Helper.highlightMultiple(
+                  hit.video.subs_l2[Number(hit.lineIndex - 1)].line +
+                    ' ' +
+                    hit.video.subs_l2[Number(hit.lineIndex)].line,
+                  terms,
+                  level
+                )
+              "
+            ></span
+          ></b-dropdown-item>
         </template>
       </b-dropdown>
       <b-button @click="previousLine" class="btn btn-small"
@@ -186,8 +210,40 @@ export default {
   },
   methods: {
     startLineIndex(hit) {
-      let index = hit.video.subs_l2[hit.lineIndex].starttime - hit.video.subs_l2[hit.lineIndex - 1].starttime < 5 ? hit.lineIndex - 1 : hit.lineIndex
+      let index =
+        hit.video.subs_l2[hit.lineIndex].starttime -
+          hit.video.subs_l2[hit.lineIndex - 1].starttime <
+        5
+          ? hit.lineIndex - 1
+          : hit.lineIndex
       return Math.max(index, 0)
+    },
+    sortContextLeft() {
+      for (let hit of this.hits) {
+        if (!hit.leftContext) {
+          let line =
+            (hit.lineIndex > 0
+              ? hit.video.subs_l2[hit.lineIndex - 1].line
+              : '') + hit.video.subs_l2[hit.lineIndex].line
+          let regex = new RegExp(`(${this.terms.join('|')}).*`)
+          hit.leftContext = line.replace(regex, '').split('').reverse().join('')
+        }
+      }
+      this.hits = this.hits.sort((a, b) =>
+        a.leftContext.localeCompare(b.leftContext, 'zh-CN')
+      )
+    },
+    sortContextRight() {
+      for (let hit of this.hits) {
+        if (!hit.rightContext) {
+          let line = hit.video.subs_l2[hit.lineIndex].line
+          let regex = new RegExp(`.*(${this.terms.join('|')})`)
+          hit.rightContext = line.replace(regex, '')
+        }
+      }
+      this.hits = this.hits.sort((a, b) =>
+        a.rightContext.localeCompare(b.rightContext, 'zh-CN')
+      )
     },
     previousLine() {
       this.$refs.youtube.previousLine()
@@ -224,7 +280,6 @@ export default {
       this.navigated = true
     },
     goToHit(hitIndex) {
-      console.log(hitIndex)
       this.hitIndex = hitIndex
       this.navigated = true
     },
@@ -378,7 +433,7 @@ export default {
     margin-top: 2.2rem;
     height: calc(100vh - 3rem);
     border: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: scroll;
     .dropdown-item {
       padding: 0.25rem 1rem;
