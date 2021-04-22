@@ -10,23 +10,15 @@
         class="mr-2 d-inline-block"
         style="position: relative; bottom: 3px"
       >
-        <strong :data-level="level">“{{ terms[0] }}”</strong>
-        <small class="ml-2" style="color: #999">in TV Shows</small>
+        <strong :data-level="level">{{ terms[0] }}</strong>
+        <small class="ml-1 d-sm-hidden" style="color: #999">in TV shows</small>
       </span>
-      <b-button
-        class="btn btn-small search-subs-fullscreen"
-        @click="fullscreenClick"
-        v-if="!fullscreen"
-      >
-        <i class="fas fa-expand"></i>
-      </b-button>
-      <b-button
-        class="btn btn-small search-subs-close"
-        @click="fullscreenClick"
-        v-if="fullscreen"
-      >
-        <i class="fas fa-times" />
-      </b-button>
+      <b-dropdown class="m-md-2 primary playlist-dropdown" toggle-class="playlist-dropdown-toggle" boundary="viewport" no-caret>
+        <template #button-content><i class="fa fa-stream" /></template>
+        <template v-for="(hit, hitIndex) in hits">
+          <b-dropdown-item @click="goToHit(hitIndex)" ><span v-html="Helper.highlightMultiple(hit.video.subs_l2[Number(hit.lineIndex - 1)].line + ' ' + hit.video.subs_l2[Number(hit.lineIndex)].line, terms, level)"></span></b-dropdown-item>
+        </template>
+      </b-dropdown>
       <b-button @click="previousLine" class="btn btn-small"
         ><i class="fa fa-backward"
       /></b-button>
@@ -44,7 +36,7 @@
       >
         <i class="fa fa-chevron-left" />
       </button>
-      <span class="ml-2 btn-small mr-2" style="background: none"
+      <span class="ml-0 btn-small mr-0" style="background: none"
         >{{ hitIndex + 1 }} of {{ hits.length }}</span
       >
       <button
@@ -71,6 +63,20 @@
         class="btn btn-small"
         ><i class="fa fa-window-restore"
       /></router-link>
+      <b-button
+        class="btn btn-small search-subs-fullscreen"
+        @click="fullscreenClick"
+        v-if="!fullscreen"
+      >
+        <i class="fas fa-expand"></i>
+      </b-button>
+      <b-button
+        class="btn btn-small search-subs-close"
+        @click="fullscreenClick"
+        v-if="fullscreen"
+      >
+        <i class="fas fa-times" />
+      </b-button>
     </div>
     <div v-if="hits.length > 0" :set="(hit = hits[hitIndex])">
       <YouTubeWithTranscript
@@ -212,6 +218,11 @@ export default {
       this.hitIndex = Math.min(this.hitIndex + 1, this.hits.length - 1)
       this.navigated = true
     },
+    goToHit(hitIndex) {
+      console.log(hitIndex)
+      this.hitIndex = hitIndex
+      this.navigated = true
+    },
     seekYouTube(starttime) {
       this.$refs.youtube.seek(starttime)
     },
@@ -339,5 +350,39 @@ export default {
   background: white;
   z-index: 10;
   overflow: scroll;
+}
+.search-subs >>> .playlist-dropdown {
+  .playlist-dropdown-toggle {
+    color: #a7a7a7;
+    font-size: 0.8rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.2rem;
+    background: #f3f3f3;
+    position: relative;
+    margin: 0.2rem;
+    display: inline-block;
+    bottom: 0.2rem;
+    border: none;
+    &:hover {
+      background-color: #b5b5b5;
+      text-decoration: none;
+      color: #868686;
+    }
+  }
+  .dropdown-menu {
+    margin-top: 2.2rem;
+    height: calc(100vh - 3rem);
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    overflow: scroll;
+    .dropdown-item {
+      padding: 0.25rem 1rem;
+      color: #666;
+      &:hover {
+        background-color: #f3f3f3;
+        cursor: pointer;
+      }
+    }
+  }
 }
 </style>
