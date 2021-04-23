@@ -386,10 +386,10 @@ export default {
           }
           // f = 70
           if (e.keyCode == 70) {
-            this.$refs.searchSubs.fullscreen = true
+            this.$refs.searchSubs.toggleFullscreen()
             return false
           }
-          // f = 27
+          // escape = 27
           if (e.keyCode == 27) {
             this.$refs.searchSubs.fullscreen = false
             return false

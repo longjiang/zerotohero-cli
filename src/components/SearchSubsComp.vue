@@ -32,9 +32,9 @@
             ><span
               v-html="
                 Helper.highlightMultiple(
-                  hit.video.subs_l2[Number(hit.lineIndex - 1)].line +
-                    ' ' +
-                    hit.video.subs_l2[Number(hit.lineIndex)].line,
+                  (hit.lineIndex > 0
+                    ? hit.video.subs_l2[Number(hit.lineIndex - 1)].line + ' '
+                    : '') + hit.video.subs_l2[Number(hit.lineIndex)].line,
                   terms,
                   level
                 )
@@ -89,14 +89,14 @@
       /></router-link>
       <b-button
         class="btn btn-small search-subs-fullscreen"
-        @click="fullscreenClick"
+        @click="toggleFullscreen"
         v-if="!fullscreen"
       >
         <i class="fas fa-expand"></i>
       </b-button>
       <b-button
         class="btn btn-small search-subs-close"
-        @click="fullscreenClick"
+        @click="toggleFullscreen"
         v-if="fullscreen"
       >
         <i class="fas fa-times" />
@@ -210,13 +210,18 @@ export default {
   },
   methods: {
     startLineIndex(hit) {
-      let index =
-        hit.video.subs_l2[hit.lineIndex].starttime -
-          hit.video.subs_l2[hit.lineIndex - 1].starttime <
-        5
-          ? hit.lineIndex - 1
-          : hit.lineIndex
-      return Math.max(index, 0)
+      if (hit.lineIndex === 0) return 0
+      if (hit.video.subs_l2[hit.lineIndex] && hit.video.subs_l2[hit.lineIndex - 1]) {
+        let index =
+          hit.video.subs_l2[hit.lineIndex].starttime -
+            hit.video.subs_l2[hit.lineIndex - 1].starttime <
+          5
+            ? hit.lineIndex - 1
+            : hit.lineIndex
+        return Math.max(index, 0)
+      } else {
+        return hit.lineIndex
+      }
     },
     sortContextLeft() {
       for (let hit of this.hits) {
@@ -295,7 +300,7 @@ export default {
     togglePaused() {
       if (this.$refs.youtube) this.$refs.youtube.togglePaused()
     },
-    fullscreenClick() {
+    toggleFullscreen() {
       this.fullscreen = !this.fullscreen
     },
     async searchSubs() {
@@ -436,6 +441,8 @@ export default {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: scroll;
     .dropdown-item {
+      max-width: 98vw;
+      white-space: normal;
       padding: 0.25rem 1rem;
       color: #666;
       &:hover {
