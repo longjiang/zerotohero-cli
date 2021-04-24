@@ -15,6 +15,7 @@
             :lines="this.l2Lines"
             :quiz="quiz"
             :parallellines="this.l1Lines"
+            :sticky="sticky"
           />
         </div>
       </div>
@@ -43,6 +44,7 @@
               :highlight-saved-words="false"
               :startLineIndex="startLineIndex"
               :stopLineIndex="stopLineIndex"
+              :sticky="sticky"
             />
           </div>
         </div>
@@ -65,6 +67,9 @@ export default {
     },
     l2Lines: {
       type: Array
+    },
+    sticky: {
+      default: false
     },
     layout: {
       type: String,

@@ -428,6 +428,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #6a3669 !important;
 }
 
+.l2-zh .level7-9,
+.l2-zh [data-level='7-9'],
+.l2-zh [data-hover-level='7-9']:hover,
+.l2-zh [data-hover-level='7-9'].saved,
+.l2-zh .show-level-7-9 [data-hover-level='7-9'].sticky:not(.seen) {
+  color: #005F58 !important;
+}
+
 .l2-zh .leveloutside,
 .l2-zh [data-level='outside'],
 .l2-zh [data-hover-level='outside']:hover,
@@ -469,6 +477,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .l2-zh .bg-level6,
 .l2-zh [data-bg-level='6'] {
   background-color: #6a3669 !important;
+  color: white !important;
+}
+
+
+.l2-zh .bg-level7-9,
+.l2-zh [data-bg-level='7-9'] {
+  background-color: #005F58 !important;
   color: white !important;
 }
 

@@ -26,7 +26,6 @@
         :disabled="hitIndex === 0"
         @click="prevHit"
         :class="{ btn: true, 'btn-small': true, invisible: hitIndex === 0 }"
-        :data-bg-level="level"
       >
         <i class="fa fa-chevron-left" />
       </button>
@@ -36,7 +35,6 @@
       <button
         :disabled="hitIndex >= hits.length - 1"
         @click="nextHit"
-        :data-bg-level="level"
         :class="{
           btn: true,
           'btn-small': true,
@@ -61,19 +59,25 @@
         >
         <template v-for="(hit, index) in hits">
           <b-dropdown-item
-            @click.stop="
-              goToHit(index)
-            "
+            @click.stop="goToHit(index)"
             :class="{ current: index === hitIndex }"
-            ><span
-              v-html="
-                Helper.highlightMultiple(
-                  hit.video.subs_l2[Number(hit.lineIndex)].line,
-                  terms,
-                  level
-                )
-              "
-            ></span
+            :key="`dropdown-line-${index}`"
+          >
+            <Annotate
+              :phonetics="false"
+              :popup="false"
+              :key="`dropdown-line-${index}-annotate-${
+                hit.video.subs_l2[Number(hit.lineIndex)].line
+              }`"
+              ><span
+                v-html="
+                  Helper.highlightMultiple(
+                    hit.video.subs_l2[Number(hit.lineIndex)].line,
+                    terms,
+                    level
+                  )
+                "
+              ></span></Annotate
           ></b-dropdown-item>
         </template>
       </b-dropdown>
@@ -376,7 +380,7 @@ export default {
           }
         }
       }
-      hits = this.mergeLines(hits) // merge previous line or next line if very short
+      // hits = this.mergeLines(hits) // merge previous line or next line if very short
       for (let hit of hits) {
         if (!hit.leftContext) {
           let line =
@@ -405,11 +409,15 @@ export default {
           if (
             hit.video.subs_l2[hit.lineIndex].starttime -
               hit.video.subs_l2[hit.lineIndex - 1].starttime <
-            5) {
-              hit.video.subs_l2[hit.lineIndex - 1].line = hit.video.subs_l2[hit.lineIndex - 1].line + ' ' + hit.video.subs_l2[hit.lineIndex].line
-              hit.video.subs_l2.splice(hit.lineIndex - 1, 1)
-              hit.lineIndex = hit.lineIndex - 1
-            }
+            5
+          ) {
+            hit.video.subs_l2[hit.lineIndex - 1].line =
+              hit.video.subs_l2[hit.lineIndex - 1].line +
+              ' ' +
+              hit.video.subs_l2[hit.lineIndex].line
+            hit.video.subs_l2.splice(hit.lineIndex - 1, 1)
+            hit.lineIndex = hit.lineIndex - 1
+          }
         }
         if (
           hit.video.subs_l2[hit.lineIndex] &&
@@ -418,16 +426,19 @@ export default {
           if (
             hit.video.subs_l2[hit.lineIndex + 1].starttime -
               hit.video.subs_l2[hit.lineIndex].starttime <
-            5) {
-              hit.video.subs_l2[hit.lineIndex].line = hit.video.subs_l2[hit.lineIndex].line + ' ' + hit.video.subs_l2[hit.lineIndex + 1].line
-              hit.video.subs_l2.splice(hit.lineIndex + 1, 1)
-            }
+            5
+          ) {
+            hit.video.subs_l2[hit.lineIndex].line =
+              hit.video.subs_l2[hit.lineIndex].line +
+              ' ' +
+              hit.video.subs_l2[hit.lineIndex + 1].line
+            hit.video.subs_l2.splice(hit.lineIndex + 1, 1)
+          }
         }
       }
       return hits
-    }
+    },
   },
-  
 }
 </script>
 <style scoped lang="scss">

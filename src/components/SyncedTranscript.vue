@@ -14,7 +14,7 @@
           :key="lineIndex"
           :class="{
             'transcript-line': true,
-            matched: highlight && line && (new RegExp(highlight.join('|')).test(line.line)),
+            matched: !single && highlight && line && (new RegExp(highlight.join('|')).test(line.line)),
             'transcript-line-current': currentLine === line
           }"
           @click="seekVideoTo(line.starttime)"
@@ -28,7 +28,7 @@
             style="float: right"
             ><i class="fa fa-trash"></i></b-button
           >
-          <Annotate tag="div" class="transcript-line-chinese">
+          <Annotate tag="div" :sticky="sticky" class="transcript-line-chinese">
             <span
               v-html="
                 highlight
@@ -133,6 +133,9 @@ import { mapState } from 'vuex'
 export default {
   props: {
     quiz: {
+      default: false,
+    },
+    sticky: {
       default: false,
     },
     single: {

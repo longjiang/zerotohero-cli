@@ -68,11 +68,11 @@
               ></EntryExample>
               <div v-if="$l2.code==='zh'">
                 <div class="ext-dictionary-buttons p-2 bg-white">
-                  <b-button @click="setExtDict('zdic')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'zdic' ? entry.level : false">汉典</b-button>
-                  <b-button @click="setExtDict('wiktionary')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'wiktionary' ? entry.level : false">Wiktionary</b-button>
-                  <b-button @click="setExtDict('moedict')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'moedict' ? entry.level : false">萌典</b-button>
-                  <b-button @click="setExtDict('baidu-baike')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'baidu-baike' ? entry.level : false">百度百科</b-button>
-                  <b-button @click="setExtDict('naver')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'naver' ? entry.level : false">Naver</b-button>
+                  <b-button @click="setExtDict('zdic')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'zdic' ? entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.hsk : false">汉典</b-button>
+                  <b-button @click="setExtDict('wiktionary')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'wiktionary' ? entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.hsk : false">Wiktionary</b-button>
+                  <b-button @click="setExtDict('moedict')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'moedict' ? entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.hsk : false">萌典</b-button>
+                  <b-button @click="setExtDict('baidu-baike')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'baidu-baike' ? entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.hsk : false">百度百科</b-button>
+                  <b-button @click="setExtDict('naver')" class="mr-2 btn btn-small" :data-bg-level="extDict === 'naver' ? entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.hsk : false">Naver</b-button>
                 </div>
                 <div class="mb-4 pl-2 pr-2">
                   <iframe v-if="extDict === 'zdic'" :src="`https://www.zdic.net/hans/${entry.simplified}`" class="ext-dictinoary-iframe"></iframe>
@@ -105,7 +105,7 @@
             <Collocations
               class="mt-5 mb-5"
               :word="entry"
-              :level="entry.level"
+              :level="entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.level"
             />
             <div
               class="widget mt-5"
@@ -117,7 +117,7 @@
                 <SearchSubsComp
                   v-if="entry && delayed"
                   ref="searchSubs"
-                  :level="entry.hsk"
+                  :level="entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.hsk"
                   :terms="
                     entry.simplified === entry.traditional
                       ? [entry.simplified]

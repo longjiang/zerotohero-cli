@@ -62,6 +62,9 @@ export default {
     speak: {
       default: false
     },
+    popup: {
+      default: true
+    },
     tag: {
       default: 'span'
     },
@@ -149,13 +152,13 @@ export default {
           if (typeof item === 'object') {
             let token = this.tokenized[batchId]
             if (token && typeof token === 'object') {
-              html += `<WordBlock :phonetics="${this.phonetics}" :sticky="${this.sticky}" :explore="explore" :token="tokenized[${batchId}][${index}]"/>`
+              html += `<WordBlock :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="explore" :token="tokenized[${batchId}][${index}]"/>`
             }
           } else {
             item = item.trim().replace(/\s+/gi, ' ')
             if (item !== '') {
               for (let word of item.trim().split(/\s+/)) {
-                html += `<WordBlock :phonetics="${this.phonetics}" :sticky="${this.sticky}" :explore="explore">${word}</WordBlock> `
+                html += `<WordBlock :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="explore">${word}</WordBlock> `
               }
               html = html.trim()
             }
@@ -229,6 +232,20 @@ export default {
 }
 .sentence + .sentence {
   margin-left: 0.3em;
+}
+.l2-zh {
+  .sentence {
+    margin-right: 0;
+  }
+  .sentence + .highlight {
+    margin-left: 0;
+  }
+  .highlight + .sentence {
+    margin-left: 0;
+  }
+  .sentence + .sentence {
+    margin-left: 0;
+  }
 }
 .annotated {
   min-height: 2rem;

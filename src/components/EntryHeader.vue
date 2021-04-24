@@ -55,7 +55,7 @@
             <template v-if="['zh', 'yue'].includes($l2.code)">
               <span
                 class="entry-word simplified"
-                :data-level="entry.level || 'outside'"
+                :data-level="entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.level || 'outside'"
                 v-html="entry.simplified"
               ></span>
               <span

@@ -1,7 +1,7 @@
 <template>
   <v-popover
     placement="top"
-    :open="hover"
+    :open="popup && hover"
     trigger="manual"
     :open-group="'id' + _uid"
     :id="id"
@@ -15,6 +15,7 @@
         seen: seen,
         saved: saved
       }"
+      :data-level="$l2.code === 'zh' && token && token.candidates && token.candidates.length > 0 && token.candidates[0].newHSK && token.candidates[0].newHSK === '7-9' ? '7-9' : token.candidates[0].hsk === 'outside' && token.candidates[0].weight < 750 ? 'outside' : false"
       v-bind="attributes"
       @mouseover="mouseover"
       @mouseout="mouseout"
@@ -236,6 +237,9 @@ export default {
     },
     seen: {
       default: false // whether this word has already been annotated ('seen') before
+    },
+    popup: {
+      default: true
     }
   },
   data() {
@@ -259,7 +263,7 @@ export default {
     attributes() {
       let attributes = {}
       if (this.words && this.words.length > 0) {
-        attributes['data-hover-level'] = this.words[0].level || 'outside'
+        attributes['data-hover-level'] = this.words[0].newHSK && this.words[0].newHSK === '7-9' ? '7-9' : false || this.words[0].level || 'outside'
         if (this.words[0].rank) attributes['data-rank'] = this.words[0].rank
         if (this.words[0].weight) attributes['data-weight'] = this.words[0].weight
       }
