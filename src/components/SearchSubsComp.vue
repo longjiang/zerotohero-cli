@@ -68,9 +68,7 @@
             ><span
               v-html="
                 Helper.highlightMultiple(
-                  (hit.lineIndex > 0
-                    ? hit.video.subs_l2[Number(hit.lineIndex - 1)].line + ' '
-                    : '') + hit.video.subs_l2[Number(hit.lineIndex)].line,
+                  hit.video.subs_l2[Number(hit.lineIndex)].line,
                   terms,
                   level
                 )
@@ -216,21 +214,7 @@ export default {
   },
   methods: {
     startLineIndex(hit) {
-      if (hit.lineIndex === 0) return 0
-      if (
-        hit.video.subs_l2[hit.lineIndex] &&
-        hit.video.subs_l2[hit.lineIndex - 1]
-      ) {
-        let index =
-          hit.video.subs_l2[hit.lineIndex].starttime -
-            hit.video.subs_l2[hit.lineIndex - 1].starttime <
-          5
-            ? hit.lineIndex - 1
-            : hit.lineIndex
-        return Math.max(index, 0)
-      } else {
-        return hit.lineIndex
-      }
+      return hit.lineIndex
     },
     sortContextLeft() {
       this.hits = this.hits.sort((a, b) =>
@@ -361,6 +345,11 @@ export default {
         }
         await Promise.all(promises)
       }
+      this.hits = this.getHits()
+      this.$emit('loaded', this.hits)
+      this.checking = false
+    },
+    getHits() {
       let seenYouTubeIds = []
       let hits = []
       for (let video of this.videos) {
@@ -387,6 +376,7 @@ export default {
           }
         }
       }
+      hits = this.mergeLines(hits) // merge previous line or next line if very short
       for (let hit of hits) {
         if (!hit.leftContext) {
           let line =
@@ -402,13 +392,42 @@ export default {
           hit.rightContext = line.replace(regex, '')
         }
       }
-      this.hits = hits.sort((a, b) =>
+      return hits.sort((a, b) =>
         a.rightContext.localeCompare(b.rightContext, 'zh-CN')
       )
-      this.$emit('loaded', this.hits)
-      this.checking = false
     },
+    mergeLines(hits) {
+      for (let hit of hits) {
+        if (
+          hit.video.subs_l2[hit.lineIndex] &&
+          hit.video.subs_l2[hit.lineIndex - 1]
+        ) {
+          if (
+            hit.video.subs_l2[hit.lineIndex].starttime -
+              hit.video.subs_l2[hit.lineIndex - 1].starttime <
+            5) {
+              hit.video.subs_l2[hit.lineIndex - 1].line = hit.video.subs_l2[hit.lineIndex - 1].line + ' ' + hit.video.subs_l2[hit.lineIndex].line
+              hit.video.subs_l2.splice(hit.lineIndex - 1, 1)
+              hit.lineIndex = hit.lineIndex - 1
+            }
+        }
+        if (
+          hit.video.subs_l2[hit.lineIndex] &&
+          hit.video.subs_l2[hit.lineIndex + 1]
+        ) {
+          if (
+            hit.video.subs_l2[hit.lineIndex + 1].starttime -
+              hit.video.subs_l2[hit.lineIndex].starttime <
+            5) {
+              hit.video.subs_l2[hit.lineIndex].line = hit.video.subs_l2[hit.lineIndex].line + ' ' + hit.video.subs_l2[hit.lineIndex + 1].line
+              hit.video.subs_l2.splice(hit.lineIndex + 1, 1)
+            }
+        }
+      }
+      return hits
+    }
   },
+  
 }
 </script>
 <style scoped lang="scss">
