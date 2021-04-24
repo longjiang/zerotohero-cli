@@ -1,10 +1,10 @@
 <template>
   <div :class="{ 'search-subs': true, fullscreen }">
-    <div class="text-center mt-3" v-if="checking">Checking content...</div>
-    <div class="text-center mt-3" v-if="!checking && hits.length === 0">
+    <div class="text-center mt-3 mb-3" v-if="checking">Checking content...</div>
+    <div class="text-center mt-3 mb-3" v-if="!checking && hits.length === 0">
       No hits.
     </div>
-    <div class="mt-3 mb-2 text-center" v-if="hits.length > 0">
+    <div class="mt-3 text-center" v-if="hits.length > 0">
       <span
         v-if="fullscreen"
         class="mr-2 d-inline-block"
@@ -13,36 +13,6 @@
         <strong :data-level="level">{{ terms[0] }}</strong>
         <small class="ml-1 d-none" style="color: #999">in TV shows</small>
       </span>
-      <b-dropdown
-        class="m-md-2 primary playlist-dropdown"
-        toggle-class="playlist-dropdown-toggle"
-        boundary="viewport"
-        no-caret
-      >
-        <template #button-content><i class="fa fa-stream" /></template>
-        <b-dropdown-item
-          ><button class="btn btn-small" @click.stop="sortContextLeft">
-            Sort Left</button
-          ><button class="btn btn-small" @click.stop="sortContextRight">
-            Sort Right
-          </button></b-dropdown-item
-        >
-        <template v-for="(hit, hitIndex) in hits">
-          <b-dropdown-item @click="goToHit(hitIndex)"
-            ><span
-              v-html="
-                Helper.highlightMultiple(
-                  (hit.lineIndex > 0
-                    ? hit.video.subs_l2[Number(hit.lineIndex - 1)].line + ' '
-                    : '') + hit.video.subs_l2[Number(hit.lineIndex)].line,
-                  terms,
-                  level
-                )
-              "
-            ></span
-          ></b-dropdown-item>
-        </template>
-      </b-dropdown>
       <b-button @click="previousLine" class="btn btn-small"
         ><i class="fa fa-backward"
       /></b-button>
@@ -75,6 +45,40 @@
       >
         <i class="fa fa-chevron-right" />
       </button>
+      <b-dropdown
+        class="m-md-2 primary playlist-dropdown"
+        toggle-class="playlist-dropdown-toggle"
+        boundary="viewport"
+        no-caret
+      >
+        <template #button-content><i class="fa fa-stream" /></template>
+        <b-dropdown-item
+          ><button class="btn btn-small" @click.stop="sortContextLeft">
+            Sort Left</button
+          ><button class="btn btn-small" @click.stop="sortContextRight">
+            Sort Right
+          </button></b-dropdown-item
+        >
+        <template v-for="(hit, index) in hits">
+          <b-dropdown-item
+            @click.stop="
+              goToHit(index)
+            "
+            :class="{ current: index === hitIndex }"
+            ><span
+              v-html="
+                Helper.highlightMultiple(
+                  (hit.lineIndex > 0
+                    ? hit.video.subs_l2[Number(hit.lineIndex - 1)].line + ' '
+                    : '') + hit.video.subs_l2[Number(hit.lineIndex)].line,
+                  terms,
+                  level
+                )
+              "
+            ></span
+          ></b-dropdown-item>
+        </template>
+      </b-dropdown>
       <input
         type="text"
         v-model.lazy="excludeStr"
@@ -102,7 +106,7 @@
         <i class="fas fa-times" />
       </b-button>
     </div>
-    <div v-if="hits.length > 0" :set="(hit = hits[hitIndex])">
+    <div v-if="hits.length > 0" :set="(hit = hits[hitIndex])" class="mb-4">
       <YouTubeWithTranscript
         :youtube="hit.video.youtube_id"
         ref="youtube"
@@ -116,6 +120,7 @@
         :autoplay="navigated"
       />
     </div>
+    <!--
     <p class="mt-1 text-center" v-if="youglishLang[$l2.code]">
       See examples of “{{ terms[0] }}” on
       <a
@@ -126,6 +131,7 @@
         >YouGlish</a
       >
     </p>
+    -->
   </div>
 </template>
 
@@ -211,7 +217,10 @@ export default {
   methods: {
     startLineIndex(hit) {
       if (hit.lineIndex === 0) return 0
-      if (hit.video.subs_l2[hit.lineIndex] && hit.video.subs_l2[hit.lineIndex - 1]) {
+      if (
+        hit.video.subs_l2[hit.lineIndex] &&
+        hit.video.subs_l2[hit.lineIndex - 1]
+      ) {
         let index =
           hit.video.subs_l2[hit.lineIndex].starttime -
             hit.video.subs_l2[hit.lineIndex - 1].starttime <
@@ -224,28 +233,11 @@ export default {
       }
     },
     sortContextLeft() {
-      for (let hit of this.hits) {
-        if (!hit.leftContext) {
-          let line =
-            (hit.lineIndex > 0
-              ? hit.video.subs_l2[hit.lineIndex - 1].line
-              : '') + hit.video.subs_l2[hit.lineIndex].line
-          let regex = new RegExp(`(${this.terms.join('|')}).*`)
-          hit.leftContext = line.replace(regex, '').split('').reverse().join('')
-        }
-      }
       this.hits = this.hits.sort((a, b) =>
         a.leftContext.localeCompare(b.leftContext, 'zh-CN')
       )
     },
     sortContextRight() {
-      for (let hit of this.hits) {
-        if (!hit.rightContext) {
-          let line = hit.video.subs_l2[hit.lineIndex].line
-          let regex = new RegExp(`.*(${this.terms.join('|')})`)
-          hit.rightContext = line.replace(regex, '')
-        }
-      }
       this.hits = this.hits.sort((a, b) =>
         a.rightContext.localeCompare(b.rightContext, 'zh-CN')
       )
@@ -287,6 +279,9 @@ export default {
     goToHit(hitIndex) {
       this.hitIndex = hitIndex
       this.navigated = true
+      setTimeout(() => {
+        document.activeElement.blur()
+      }, 100)
     },
     seekYouTube(starttime) {
       this.$refs.youtube.seek(starttime)
@@ -367,12 +362,8 @@ export default {
         await Promise.all(promises)
       }
       let seenYouTubeIds = []
-      let videos = shuffle(this.videos).sort((a, b) => {
-        let aa = a.title.includes('Untamed')
-        let bb = b.title.includes('Untamed')
-        return aa === bb ? 0 : aa ? -1 : 1
-      })
-      for (let video of videos) {
+      let hits = []
+      for (let video of this.videos) {
         if (!seenYouTubeIds.includes(video.youtube_id)) {
           seenYouTubeIds.push(video.youtube_id)
           video.subs_l2 = JSON.parse(video.subs_l2).filter(
@@ -388,7 +379,7 @@ export default {
                   video.subs_l2[index].line
                 ))
             ) {
-              this.hits.push({
+              hits.push({
                 video: video,
                 lineIndex: index,
               })
@@ -396,6 +387,24 @@ export default {
           }
         }
       }
+      for (let hit of hits) {
+        if (!hit.leftContext) {
+          let line =
+            (hit.lineIndex > 0
+              ? hit.video.subs_l2[hit.lineIndex - 1].line
+              : '') + hit.video.subs_l2[hit.lineIndex].line
+          let regex = new RegExp(`(${this.terms.join('|')}).*`)
+          hit.leftContext = line.replace(regex, '').split('').reverse().join('')
+        }
+        if (!hit.rightContext) {
+          let line = hit.video.subs_l2[hit.lineIndex].line
+          let regex = new RegExp(`.*(${this.terms.join('|')})`)
+          hit.rightContext = line.replace(regex, '')
+        }
+      }
+      this.hits = hits.sort((a, b) =>
+        a.rightContext.localeCompare(b.rightContext, 'zh-CN')
+      )
       this.$emit('loaded', this.hits)
       this.checking = false
     },
@@ -440,6 +449,11 @@ export default {
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: scroll;
+    .current {
+      .dropdown-item {
+        background: #f3f3f3;
+      }
+    }
     .dropdown-item {
       max-width: 98vw;
       white-space: normal;

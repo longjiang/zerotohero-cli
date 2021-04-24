@@ -376,8 +376,10 @@ export default {
           }
           // r = 82
           if (e.keyCode == 82) {
-            this.$refs.searchSubs.rewind()
-            return false
+            if (!e.metaKey) {
+              this.$refs.searchSubs.rewind()
+              return false
+            }
           }
           // spacebar = 32
           if (e.keyCode == 32) {
