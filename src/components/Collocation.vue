@@ -72,12 +72,10 @@ export default {
     update() {
       this.lines = []
       if (this.collocation && this.collocation.Words) {
-        this.collocation.Words = this.collocation.Words.filter(Word => Word.cm)
-          .sort((a, b) => {
-            return a.cm.length - b.cm.length
-          })
-          .filter(Word => !Word.cm.match(/(。|？)/))
-          .slice(0, 20)
+        let words = this.collocation.Words.filter(Word => Word.cm)
+          .filter(Word => !Word.cm.match(/[。？，→]/))
+        words = Helper.uniqueByValue(words, 'cm').sort((a,b) => a.cm.length - b.cm.length)
+        this.collocation.Words = words.slice(0, 20)
         let lines = []
         for (let Word of this.collocation.Words) {
           if (Word.cm) {
