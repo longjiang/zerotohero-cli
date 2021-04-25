@@ -206,9 +206,12 @@ export default {
           if (this.currentLine !== line) {
             // Pause video if passed stopLineIndex 
             if (this.stopLineIndex > 0 && lineIndex === this.stopLineIndex + 1) {
-              if (this.neverPlayed) this.pauseVideo()
-              this.neverPlayed = false
-              return
+              if (this.neverPlayed) {
+                this.pauseVideo()
+                this.neverPlayed = false
+                this.seekVideoTo(this.currentTime - 0.1)
+                return
+              }
             }
             // Pause video if there's a pop quiz
             // if (this.review[lineIndex - 1] && this.review[lineIndex - 1].length > 0 && !this.paused[lineIndex - 1]) {

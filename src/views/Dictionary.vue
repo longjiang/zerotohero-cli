@@ -53,6 +53,8 @@
                 <EntryHeader
                   :entry="entry"
                   :key="`header-${args}`"
+                  @prevWord="prevWord()"
+                  @nextWord="nextWord()"
                 ></EntryHeader>
                 <DefinitionsList
                   :key="`def-list-${args}`"
@@ -101,6 +103,11 @@
               ref="images"
               @loaded="webImagesLoaded"
             />
+            <EntryRelated
+              :entry="entry"
+              class="mt-5"
+              :key="`related-${entry.id}`"
+            />
             <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
             <Collocations
               class="mt-5 mb-5"
@@ -127,11 +134,6 @@
                 />
               </div>
             </div>
-            <EntryRelated
-              :entry="entry"
-              class="mt-5"
-              :key="`related-${entry.id}`"
-            />
           </div>
         </div>
       </div>

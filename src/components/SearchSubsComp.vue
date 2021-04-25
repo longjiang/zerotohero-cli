@@ -70,6 +70,10 @@
                 hit.video.subs_l2[Number(hit.lineIndex)].line
               }`"
               ><span
+                v-if="hit.lineIndex > 0"
+                v-html="hit.video.subs_l2[Number(hit.lineIndex) - 1].line"
+                style="margin-right: 0.5em; opacity: 0.5"
+              ></span><span
                 v-html="
                   Helper.highlightMultiple(
                     hit.video.subs_l2[Number(hit.lineIndex)].line,
@@ -77,6 +81,12 @@
                     level
                   )
                 "
+                class="font-weight-bold"
+              ></span
+              ><span
+                v-if="hit.lineIndex < hit.video.subs_l2.length - 1"
+                v-html="hit.video.subs_l2[Number(hit.lineIndex) + 1].line"
+                style="margin-left: 0.5em; opacity: 0.5"
               ></span></Annotate
           ></b-dropdown-item>
         </template>

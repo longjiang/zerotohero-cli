@@ -3,30 +3,39 @@
   <div class="entry-head-wrapper" v-if="entry">
     <div>
       <div>
+        <button class="btn btn-small" v-if="entry.newHSK" @click="$emit('prevWord')">
+          <i class="fa fa-caret-left" />
+        </button>
         <span
-          v-if="
-            entry.level && entry.level !== 'outside' && $l2.code === 'zh'
-          "
+          v-if="entry.level && entry.level !== 'outside' && $l2.code === 'zh'"
           class="entry-level p-1 rounded font-weight-bold"
           style="position: relative; bottom: 0.5em; font-size: 0.8em"
           :data-level="entry.level"
           >HSK {{ entry.level }}</span
         >
         <span
-          v-if="
-            entry.newHSK
-          "
+          v-if="entry.newHSK"
           class="entry-level p-1 rounded font-weight-bold"
-          :style="`position: relative; bottom: 0.5em; font-size: 0.8em; color: ${entry.newHSK === '7-9' ? '#00716B' : 'inherit'}`"
-          ><i class="fa fa-arrow-right mr-2" />New HSK {{ entry.newHSK }} <span v-if="entry.newHSKMatches.length === 1" style="color: #999; font-weight: normal">#{{ entry.newHSKMatches[0].num }}</span></span
+          :style="`position: relative; bottom: 0.5em; font-size: 0.8em; color: ${
+            entry.newHSK === '7-9' ? '#00716B' : 'inherit'
+          }`"
+          ><i class="fa fa-arrow-right mr-2" />New HSK {{ entry.newHSK }}
+          <span
+            v-if="entry.newHSKMatches.length === 1"
+            style="color: #999; font-weight: normal"
+            >#{{ entry.newHSKMatches[0].num }}</span
+          ></span
         >
+        <button class="btn btn-small" v-if="entry.newHSK" @click="$emit('nextWord')">
+          <i class="fa fa-caret-right" />
+        </button>
       </div>
       <Annotate tag="div" class="mt-1 mb-2" v-if="entry.counters"
-        ><span>一{{
-          entry.counters
-            .map((counter) => counter.simplified)
-            .join('、一')
-        }} </span></Annotate
+        ><span
+          >一{{
+            entry.counters.map((counter) => counter.simplified).join('、一')
+          }}
+        </span></Annotate
       >
       <div class="entry-word-wrapper" style="display: inline-block">
         <div class="mb-2">
@@ -55,7 +64,11 @@
             <template v-if="['zh', 'yue'].includes($l2.code)">
               <span
                 class="entry-word simplified"
-                :data-level="entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.level || 'outside'"
+                :data-level="
+                  entry.newHSK && entry.newHSK === '7-9'
+                    ? '7-9'
+                    : entry.level || 'outside'
+                "
                 v-html="entry.simplified"
               ></span>
               <span
