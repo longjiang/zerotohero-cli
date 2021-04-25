@@ -96,6 +96,9 @@ export default {
     this.lastId += 1
     return this.lastId
   },
+  delay(ms) {
+    return new Promise(res => setTimeout(res, ms))
+  },
   uniqueByValue(array, key) {
     let flags = []
     let unique = []

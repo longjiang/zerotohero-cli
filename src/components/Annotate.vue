@@ -11,7 +11,7 @@
         : 'ltr'
     "
     :class="{
-      annotated: true,
+      annotated: annotated,
       'text-right':
         foreign &&
         $l2.scripts &&
@@ -65,6 +65,7 @@ import wordblock from '@/components/WordBlock'
 import VRuntimeTemplate from 'v-runtime-template'
 import TinySegmenter from 'tiny-segmenter'
 import MyanmarTools from 'myanmar-tools'
+import Helper from '@/lib/helper'
 
 export default {
   components: {
@@ -154,13 +155,13 @@ export default {
                 $(await this.annotateRecursive($slotElems[0].cloneNode(true)))[0].outerHTML
               )
             }
+            // await Helper.delay(1000)
             this.annotated = true
           }
         }
       }
     },
     async annotateRecursive(node) {
-      const delay = ms => new Promise(res => setTimeout(res, ms))
       if (node.classList.contains('sentence')) {
         // .sentence node
         let sentence = node.innerText
@@ -273,6 +274,10 @@ export default {
 </script>
 
 <style lang="scss">
+.show-pinyin-for-saved  .add-pinyin.phonetics .sentence,
+.show-pinyin .add-pinyin.phonetics:not(.annotated) .sentence {
+  line-height: 3;
+}
 .sentence {
   margin-right: 0.3em;
 }
