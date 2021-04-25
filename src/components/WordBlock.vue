@@ -11,11 +11,15 @@
       :class="{
         'word-block': true,
         sticky: sticky,
-        common: this.words && this.words.length > 0 && this.words[0].weight && this.words[0].weight > 750,
+        common:
+          this.words &&
+          this.words.length > 0 &&
+          this.words[0].weight &&
+          this.words[0].weight > 750,
         seen: seen,
-        saved: saved
+        saved: saved,
       }"
-      :data-level="$l2.code === 'zh' && token && token.candidates && token.candidates.length > 0 && token.candidates[0].newHSK && token.candidates[0].newHSK === '7-9' ? '7-9' : token.candidates[0].hsk === 'outside' && token.candidates[0].weight < 750 ? 'outside' : false"
+      :data-level="getLevel()"
       v-bind="attributes"
       @mouseover="mouseover"
       @mouseout="mouseout"
@@ -27,7 +31,11 @@
         ></span>
         <span
           class="word-block-pinyin"
-          v-if="phonetics && transliteration && transliteration !== token.candidates[0].head"
+          v-if="
+            phonetics &&
+            transliteration &&
+            transliteration !== token.candidates[0].head
+          "
           >{{ savedTransliteration || transliteration }}</span
         >
         <span
@@ -137,25 +145,23 @@
           >
           <span
             v-if="word.level && word.level !== 'outside'"
-          :data-bg-level="word.level"
+            :data-bg-level="word.level"
             class="pl-1 pr-1 ml-1 rounded d-inline-block"
             style="font-size: 0.8em; position: relative; bottom: 0.1rem"
             >{{ $l2.code === 'zh' ? 'HSK ' : '' }}{{ word.level }}</span
           ><span
-            v-if="
-              word.newHSK
-            "
+            v-if="word.newHSK"
             class="ml-1"
-            :style="`position: relative; bottom: 0.2em; font-size: 0.8em; color: ${word.newHSK === '7-9' ? '#00716B' : 'inherit'}`"
+            :style="`position: relative; bottom: 0.2em; font-size: 0.8em; color: ${
+              word.newHSK === '7-9' ? '#00716B' : 'inherit'
+            }`"
             ><i class="fa fa-arrow-right mr-1" />新 HSK {{ word.newHSK }}</span
           >
           <span v-if="word.unit" style="font-size: 0.8em" class="ml-1"
             >Unit {{ word.unit }}</span
           >
           <router-link
-            :to="
-              `/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`
-            "
+            :to="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`"
             class="ml-1 link-unstyled"
             style="color: #999"
           >
@@ -183,16 +189,18 @@
             <em
               v-html="
                 word.definitions
-                  .map(definition => definition.replace(/\[.*\] /g, ''))
+                  .map((definition) => definition.replace(/\[.*\] /g, ''))
                   .join(', ')
               "
             ></em>
           </span>
-          <span class="word-counters" v-if="word.counters"><em>:</em> {{
-                word.counters
-                  .map(counter => '一' + counter.simplified)
-                  .join(word.simplified + '、') + word.simplified
-              }}。
+          <span class="word-counters" v-if="word.counters"
+            ><em>:</em>
+            {{
+              word.counters
+                .map((counter) => '一' + counter.simplified)
+                .join(word.simplified + '、') + word.simplified
+            }}。
           </span>
         </div>
       </div>
@@ -224,23 +232,23 @@ import { transliterate as tr } from 'transliteration'
 export default {
   props: {
     token: {
-      type: Object
+      type: Object,
     },
     explore: {
-      default: false
+      default: false,
     },
     phonetics: {
-      default: true
+      default: true,
     },
     sticky: {
-      default: false // whether or not to show each word's level color by default (without hovering)
+      default: false, // whether or not to show each word's level color by default (without hovering)
     },
     seen: {
-      default: false // whether this word has already been annotated ('seen') before
+      default: false, // whether this word has already been annotated ('seen') before
     },
     popup: {
-      default: true
-    }
+      default: true,
+    },
   },
   data() {
     return {
@@ -254,22 +262,26 @@ export default {
       images: [],
       words: [],
       classes: {
-        'tooltip-entry': true
+        'tooltip-entry': true,
       },
-      Config
+      Config,
     }
   },
   computed: {
     attributes() {
       let attributes = {}
       if (this.words && this.words.length > 0) {
-        attributes['data-hover-level'] = this.words[0].newHSK && this.words[0].newHSK === '7-9' ? '7-9' : false || this.words[0].level || 'outside'
+        attributes['data-hover-level'] =
+          this.words[0].newHSK && this.words[0].newHSK === '7-9'
+            ? '7-9'
+            : false || this.words[0].level || 'outside'
         if (this.words[0].rank) attributes['data-rank'] = this.words[0].rank
-        if (this.words[0].weight) attributes['data-weight'] = this.words[0].weight
+        if (this.words[0].weight)
+          attributes['data-weight'] = this.words[0].weight
       }
       return attributes
     },
-    ...mapState(['savedWords'])
+    ...mapState(['savedWords']),
   },
   mounted() {
     if (!this.transliteration && this.$hasFeature('transliteration')) {
@@ -309,9 +321,33 @@ export default {
   watch: {
     savedWords() {
       this.update()
-    }
+    },
   },
   methods: {
+    getLevel() {
+      if (
+        this.$l2.code === 'zh' &&
+        this.token &&
+        this.token.candidates &&
+        this.token.candidates.length > 0
+      ) {
+        if (
+          this.token.candidates[0].newHSK &&
+          this.token.candidates[0].newHSK === '7-9'
+        ) {
+          return '7-9'
+        } else if (
+          this.token.candidates[0].hsk === 'outside' &&
+          this.token.candidates[0].weight < 750
+        ) {
+          return 'outside'
+        } else {
+          return false
+        }
+      } else {
+        return this.token && this.token.candidates && this.token.candidates.length > 0 ? this.token.candidates[0].level : this.words && this.words.length > 0 ? this.words[0].level : false
+      }
+    },
     wordBlockClick() {
       if (
         this.explore &&
@@ -349,7 +385,7 @@ export default {
         for (let word of this.token.candidates) {
           savedWord = this.$store.getters.hasSavedWord({
             l2: this.$l2.code,
-            text: word.bare
+            text: word.bare,
           })
         }
       } else {
@@ -361,7 +397,7 @@ export default {
               this.$slots.default[0] &&
               this.$slots.default[0].text
                 ? this.$slots.default[0].text.toLowerCase()
-                : ''
+                : '',
           })
         }
       }
@@ -398,10 +434,12 @@ export default {
     },
     async loadImages() {
       if (this.images.length === 0) {
-        this.images = (await WordPhotos.getGoogleImages({
-          term: this.token ? this.token.text : this.text,
-          lang: this.$l2.code
-        })).slice(0, 5)
+        this.images = (
+          await WordPhotos.getGoogleImages({
+            term: this.token ? this.token.text : this.text,
+            lang: this.$l2.code,
+          })
+        ).slice(0, 5)
       }
     },
     async mouseover() {
@@ -463,7 +501,7 @@ export default {
         verb: 'v.',
         pronoun: 'pron.',
         perfective: 'perf.',
-        imperfective: 'imperf.'
+        imperfective: 'imperf.',
       }
       return abb[type] || type
     },
@@ -475,8 +513,8 @@ export default {
           speechSynthesis.speak(this.utterance)
         }
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

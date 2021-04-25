@@ -10,21 +10,20 @@
         }"
         v-for="word in words"
       >
-        <Star v-if="word && star === true" :word="word" class="mr-1"></Star>
+        <Star v-if="word && star === true" :word="word" class="mr-1" style="overflow: hidden; height: 1.2rem"></Star>
         <router-link
           v-if="compareWith"
           :to="`/${$l1.code}/${$l2.code}/compare/${$dictionaryName}/${compareWith.id},${word.id}`"
           class="btn btn-small mr-2"
-          >Compare</router-link
-        >
+          ><i class="fas fa-adjust"></i
+        ></router-link>
         <router-link
           v-if="word"
           :to="`/${$l1.code}/${$l2.code}/dictionary/${$dictionaryName}/${word.id}`"
         >
-          <span
-            class="wordlist-item-word ml-1"
-            :data-level="word.level || 'outside'"
-            >{{ word.accented }}</span
+          <span class="wordlist-item-word ml-1" :data-level="getLevel(word)">{{
+            word.accented
+          }}</span
           >&nbsp;
           <span v-if="word.pronunciation" class="wordlist-item-pinyin">
             <span v-if="$l2.code !== 'zh'">/</span>{{ word.pronunciation
@@ -33,13 +32,15 @@
           <span v-if="word.definitions" class="wordlist-item-l1">
             {{
               word.definitions.filter((def) => !def.startsWith('CL')).join(', ')
-            }}</span><span class="wordlist-item-l1" v-if="word.counters"
+            }}</span
+          ><span class="wordlist-item-l1" v-if="word.counters"
             >:<span style="font-style: normal">
-            {{
-              word.counters
-                .map((counter) => '一' + counter.simplified)
-                .join(word.simplified + '、') + word.simplified
-            }}。</span>
+              {{
+                word.counters
+                  .map((counter) => '一' + counter.simplified)
+                  .join(word.simplified + '、') + word.simplified
+              }}。</span
+            >
           </span>
         </router-link>
       </li>
@@ -96,6 +97,21 @@ export default {
     },
   },
   methods: {
+    getLevel(word) {
+      if (this.$l2.code === 'zh' && word) {
+        if (word.newHSK && word.newHSK === '7-9') {
+          return '7-9'
+        } else if (word.hsk !== 'outside') {
+          return word.hsk
+        } else if (word.hsk === 'outside' && word.weight < 750) {
+          return 'outside'
+        } else {
+          return false
+        }
+      } else {
+        return word.level
+      }
+    },
     classes() {
       let classes = {
         wordlist: true,
