@@ -338,6 +338,7 @@ export default {
           return '7-9'
         } else if (
           this.token.candidates[0].hsk === 'outside' &&
+          !this.token.candidates[0].newHSK &&
           this.token.candidates[0].weight < 750
         ) {
           return 'outside'
