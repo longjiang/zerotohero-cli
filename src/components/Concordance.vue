@@ -118,8 +118,9 @@ export default {
           let sentences = t.split('!!!DELIMITER!!!')
           example.sentences = []
           for (let sentence of sentences) {
-            let found = this.words.some((word) => sentence.includes(word))
+            let found = this.words.some((word) => new RegExp(word).test(sentence))
             if (found) {
+              if (this.$l2.continua) sentence = sentence.replace(/ /g, '')
               example.sentences.push(sentence)
             }
           }

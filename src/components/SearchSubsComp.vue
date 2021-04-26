@@ -77,7 +77,7 @@
                 v-html="
                   Helper.highlightMultiple(
                     hit.video.subs_l2[Number(hit.lineIndex)].line,
-                    terms,
+                    terms.map(term => term.replace(/\*/g, '.*')),
                     level
                   )
                 "
@@ -322,7 +322,7 @@ export default {
           $.getJSON(
             `${
               Config.wiki
-            }items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${
+            }items/youtube_videos?filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'}${channelFilter}&filter[l2][eq]=${
               this.$l2.id
             }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
               this.$settings.adminMode ? Date.now() : 0
@@ -345,7 +345,7 @@ export default {
             $.getJSON(
               `${
                 Config.wiki
-              }items/youtube_videos?filter[subs_l2][contains]=${term}${channelFilter}&filter[l2][eq]=${
+              }items/youtube_videos?filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'}${channelFilter}&filter[l2][eq]=${
                 this.$l2.id
               }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
                 this.$settings.adminMode ? Date.now() : 0
@@ -374,7 +374,7 @@ export default {
           )
           for (let index in video.subs_l2) {
             if (
-              new RegExp(this.terms.join('|')).test(
+              new RegExp(this.terms.join('|').replace(/\*/g, '.*')).test(
                 video.subs_l2[index].line
               ) &&
               (this.excludeTerms.length === 0 ||
@@ -397,12 +397,12 @@ export default {
             (hit.lineIndex > 0
               ? hit.video.subs_l2[hit.lineIndex - 1].line
               : '') + hit.video.subs_l2[hit.lineIndex].line
-          let regex = new RegExp(`(${this.terms.join('|')}).*`)
+          let regex = new RegExp(`(${this.terms.join('|').replace(/\*/g, '.*')}).*`)
           hit.leftContext = line.replace(regex, '').split('').reverse().join('')
         }
         if (!hit.rightContext) {
           let line = hit.video.subs_l2[hit.lineIndex].line
-          let regex = new RegExp(`.*(${this.terms.join('|')})`)
+          let regex = new RegExp(`.*(${this.terms.join('|').replace(/\*/g, '.*')})`)
           hit.rightContext = line.replace(regex, '')
         }
       }
