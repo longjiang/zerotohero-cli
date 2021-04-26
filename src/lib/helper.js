@@ -161,7 +161,7 @@ export default {
     if (text && word && word.trim() !== '') {
       return text
         .replace(
-          new RegExp('(' + word + ')', 'gi'),
+          new RegExp('(' + word.replace(/\*/g, '.*') + ')', 'gi'),
           `<span ${levelAttr} class="highlight">$1</span>`
         )
     } else {

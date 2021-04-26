@@ -77,7 +77,7 @@
                 v-html="
                   Helper.highlightMultiple(
                     hit.video.subs_l2[Number(hit.lineIndex)].line,
-                    terms.map(term => term.replace(/\*/g, '.*')),
+                    terms.map(term => term),
                     level
                   )
                 "
