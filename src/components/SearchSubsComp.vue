@@ -374,7 +374,7 @@ export default {
           )
           for (let index in video.subs_l2) {
             if (
-              new RegExp(this.terms.join('|').replace(/\*/g, '.*')).test(
+              new RegExp(this.terms.join('|').replace(/\*/g, '.+')).test(
                 video.subs_l2[index].line
               ) &&
               (this.excludeTerms.length === 0 ||
@@ -397,12 +397,12 @@ export default {
             (hit.lineIndex > 0
               ? hit.video.subs_l2[hit.lineIndex - 1].line
               : '') + hit.video.subs_l2[hit.lineIndex].line
-          let regex = new RegExp(`(${this.terms.join('|').replace(/\*/g, '.*')}).*`)
+          let regex = new RegExp(`(${this.terms.join('|').replace(/\*/g, '.+')}).*`)
           hit.leftContext = line.replace(regex, '').split('').reverse().join('')
         }
         if (!hit.rightContext) {
           let line = hit.video.subs_l2[hit.lineIndex].line
-          let regex = new RegExp(`.*(${this.terms.join('|').replace(/\*/g, '.*')})`)
+          let regex = new RegExp(`.*(${this.terms.join('|').replace(/\*/g, '.+')})`)
           hit.rightContext = line.replace(regex, '')
         }
       }
