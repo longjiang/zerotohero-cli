@@ -35,7 +35,7 @@ export default {
             for (var index in grammar._grammarCSVFields) {
               result[index] = row[grammar._grammarCSVFields[index]]
             }
-            result.book = parseInt(result.code.replace(/^(\d).*/, '$1'))
+            result.book = result.code.replace(/^([^.]+).*/, '$1')
             result.lesson = parseInt(
               result.code.replace(/^(\d)\.(\d+).*/, '$2')
             )

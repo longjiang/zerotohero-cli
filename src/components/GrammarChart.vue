@@ -41,6 +41,13 @@
       >
         HSK {{ n }}
       </button>
+      <button
+        class="tab text-dark"
+        data-bg-level="7-9"
+        @click="level = '7-9'"
+      >
+        新 HSK 7-9
+      </button>
       <div
         style="height: 0.5rem"
         :class="level ? `bg-hsk${level}` : `bg-dark`"
@@ -69,7 +76,7 @@
                 row.structure.includes(search) ||
                 row.english.includes(search)) &&
               (level === undefined ||
-                row.book === level)
+                row.book === String(level))
             )
           }"
           @click="grammarRowClick(row)"

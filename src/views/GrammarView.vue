@@ -3,7 +3,11 @@
     <div class="row">
       <div class="col-sm-12 text-center" v-if="grammar">
         <h3 class="mb-4">Grammar Note {{ grammar.code }}</h3>
-        <button @click="prevClick" v-if="id > 1" class="btn btn-medium bg-light mr-2">
+        <button
+          @click="prevClick"
+          v-if="id > 1"
+          class="btn btn-medium bg-light mr-2"
+        >
           <i class="fa fa-chevron-left" title="previous" />
         </button>
         <button @click="nextClick" class="btn btn-medium bg-light">
@@ -31,12 +35,12 @@ import Config from '@/lib/config'
 export default {
   components: {
     GrammarPoint,
-    Drill
+    Drill,
   },
   props: {
     id: {
-      type: String
-    }
+      type: String,
+    },
   },
   methods: {
     async getDrill(grammarID) {
@@ -51,25 +55,29 @@ export default {
     async loadGrammar() {
       this.drills = []
       this.grammar = (await this.$grammar)._grammarData.find(
-        row => row.id === this.id
+        (row) => row.id === this.id
       )
       this.getDrill(this.grammar.id)
     },
     prevClick() {
-      location.href =
-        `/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
-        Math.max(0, parseInt(this.id) - 1)
+      this.$router.push({
+        path:
+          `/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
+          Math.max(0, parseInt(this.id) - 1),
+      })
     },
     nextClick() {
-      location.href =
-        `/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
-        Math.min(Grammar._grammarData.length - 1, parseInt(this.id) + 1)
-    }
+      this.$router.push({
+        path:
+          `/${this.$l1.code}/${this.$l2.code}/grammar/view/` +
+          Math.min(Grammar._grammarData.length - 1, parseInt(this.id) + 1),
+      })
+    },
   },
   data() {
     return {
       grammar: undefined,
-      drills: []
+      drills: [],
     }
   },
   mounted() {
@@ -78,8 +86,8 @@ export default {
   watch: {
     id() {
       this.loadGrammar()
-    }
-  }
+    },
+  },
 }
 </script>
 
