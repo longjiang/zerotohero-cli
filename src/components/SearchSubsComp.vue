@@ -294,7 +294,7 @@ export default {
       if (this.$refs.youtube) this.$refs.youtube.togglePaused()
     },
     toggleFullscreen() {
-      this.fullscreen = !this.fullscreen
+      if(this.hits.length > 0) this.fullscreen = !this.fullscreen
     },
     async searchSubs() {
       this.hits = []
