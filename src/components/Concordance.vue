@@ -10,7 +10,7 @@
           class="collapsed list-unstyled"
           data-collapse-target
         >
-          <li v-for="example in examples">
+          <li v-for="example in examples.filter(example => example.sentences.length > 0)">
             <Annotate tag="div" class="pt-2 pb-2" :showTranslate="true">
               <span
                 v-html="
@@ -23,7 +23,7 @@
           </li>
         </ul>
         <ShowMoreButton
-          :length="examples.length"
+          :length="examples.filter(example => example.sentences.length > 0).length"
           :min="7"
           :data-bg-level="level"
         />
@@ -118,7 +118,7 @@ export default {
           let sentences = t.split('!!!DELIMITER!!!')
           example.sentences = []
           for (let sentence of sentences) {
-            let found = this.words.some((word) => new RegExp(word).test(sentence))
+            let found = this.words.some((word) => new RegExp(word.replace(/\*/g, '[^，。！？,!.?]+?')).test(sentence))
             if (found) {
               if (this.$l2.continua) sentence = sentence.replace(/ /g, '')
               example.sentences.push(sentence)
