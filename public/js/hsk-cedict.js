@@ -70,13 +70,13 @@ const Dictionary = {
   },
   getByNewHSK(level, num) {
     let match = this.newHSK.find(word => word.level === level && Number(word.num) === num)
-    let words = this.lookupSimplified(match.simplified)
+    let words = this.lookupSimplified(match.simplified, match.pinyin, match.definitions)
     if (words && words.length > 0) {
       return words[0]
     }
   },
-  getNewLevel(simplified) {
-    return this.newHSK.filter(word => word.simplified === simplified)
+  getNewLevel(word) {
+    return this.newHSK.filter(row => row.simplified === word.simplified && row.pinyin == word.pinyin && row.definitions.includes(word.definitions[0]))
   },
   unique(names) {
     var uniqueNames = []
@@ -86,7 +86,7 @@ const Dictionary = {
     return uniqueNames
   },
   addNewHSK(word) {
-    let newHSKMatches = this.getNewLevel(word.simplified) || []
+    let newHSKMatches = this.getNewLevel(word) || []
     let newHSK = this.unique(newHSKMatches.map(word => word.level)).join('/')
     return Object.assign(word, {
       newHSKMatches,
@@ -233,14 +233,12 @@ const Dictionary = {
     let rand = this.randomProperty(this.words)
     return rand
   },
-  lookupSimplified(simplified, pinyin = false) {
+  lookupSimplified(simplified, pinyin = false, definitions = false) {
     const candidates = this.words
       .filter(row => {
-        let pinyinMatch = true
-        if (pinyin.length > 0) {
-          pinyinMatch = row.pinyin === pinyin
-        }
-        return pinyinMatch && row.simplified === simplified
+        let pinyinMatch = pinyin ? row.pinyin === pinyin : true
+        let defMatch = definitions ? definitions.includes(row.definitions[0]) : true
+        return pinyinMatch && defMatch && row.simplified === simplified
       })
       .sort((a, b) => {
         return b.weight - a.weight

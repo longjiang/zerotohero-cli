@@ -276,7 +276,7 @@ export default {
 <style lang="scss">
 .show-pinyin-for-saved  .add-pinyin.phonetics .sentence,
 .show-pinyin .add-pinyin.phonetics:not(.annotated) .sentence {
-  line-height: 3;
+  line-height: 2.6;
 }
 .sentence {
   margin-right: 0.3em;

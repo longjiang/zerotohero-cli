@@ -162,7 +162,7 @@
             ></Mistakes>
           </div>
         </div>
-        <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
+        <div class="row" v-if="['zh', 'ja', 'ko'].includes($l2.code)" :key="`${entry.id}-characters`">
           <div class="col-sm-12" v-if="$l2.code !== 'zh'">
             <EntryCharacters
               v-if="entry.cjk && entry.cjk.canonical"
@@ -340,7 +340,7 @@ export default {
 
     bindKeys() {
       window.onkeydown = (e) => {
-        if (e.target.tagName.toUpperCase() !== 'INPUT') {
+        if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
           // home
           if (e.keyCode == 36) {
             document
@@ -378,10 +378,8 @@ export default {
           }
           // r = 82
           if (e.keyCode == 82) {
-            if (!e.metaKey) {
-              this.$refs.searchSubs.rewind()
-              return false
-            }
+            this.$refs.searchSubs.rewind()
+            return false
           }
           // spacebar = 32
           if (e.keyCode == 32) {
