@@ -337,7 +337,6 @@ export default {
     unbindKeys() {
       window.onkeydown = null
     },
-
     bindKeys() {
       window.onkeydown = (e) => {
         if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
@@ -354,46 +353,6 @@ export default {
             document
               .getElementById('search-subs')
               .scrollIntoView({ behavior: 'smooth' })
-            return false
-          }
-          // left = 37
-          if (e.keyCode == 37) {
-            this.$refs.searchSubs.prevHit()
-            return false
-          }
-          // right = 39
-          if (e.keyCode == 39) {
-            this.$refs.searchSubs.nextHit()
-            return false
-          }
-          // up = 38
-          if (e.keyCode == 38) {
-            this.$refs.searchSubs.previousLine()
-            return false
-          }
-          // down = 40
-          if (e.keyCode == 40) {
-            this.$refs.searchSubs.nextLine()
-            return false
-          }
-          // r = 82
-          if (e.keyCode == 82) {
-            this.$refs.searchSubs.rewind()
-            return false
-          }
-          // spacebar = 32
-          if (e.keyCode == 32) {
-            this.$refs.searchSubs.togglePaused()
-            return false
-          }
-          // f = 70
-          if (e.keyCode == 70) {
-            this.$refs.searchSubs.toggleFullscreen()
-            return false
-          }
-          // escape = 27
-          if (e.keyCode == 27) {
-            this.$refs.searchSubs.fullscreen = false
             return false
           }
           // n = 78

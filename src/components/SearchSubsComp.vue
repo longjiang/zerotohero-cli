@@ -73,11 +73,12 @@
                 v-if="hit.lineIndex > 0"
                 v-html="hit.video.subs_l2[Number(hit.lineIndex) - 1].line"
                 style="margin-right: 0.5em; opacity: 0.5"
-              ></span><span
+              ></span
+              ><span
                 v-html="
                   Helper.highlightMultiple(
                     hit.video.subs_l2[Number(hit.lineIndex)].line,
-                    terms.map(term => term),
+                    terms.map((term) => term),
                     level
                   )
                 "
@@ -202,13 +203,16 @@ export default {
   },
   mounted() {
     this.searchSubs()
+    this.bindKeys()
   },
   activated() {
     setTimeout(() => {
       this.$refs.youtube.pause()
     }, 800)
   },
-
+  unmounted() {
+    this.unbindKeys()
+  },
   watch: {
     excludeStr() {
       this.excludeArr = this.excludeStr.split(',')
@@ -294,7 +298,7 @@ export default {
       if (this.$refs.youtube) this.$refs.youtube.togglePaused()
     },
     toggleFullscreen() {
-      if(this.hits.length > 0) this.fullscreen = !this.fullscreen
+      if (this.hits.length > 0) this.fullscreen = !this.fullscreen
     },
     async searchSubs() {
       this.hits = []
@@ -320,9 +324,9 @@ export default {
       for (let term of this.terms) {
         promises.push(
           $.getJSON(
-            `${
-              Config.wiki
-            }items/youtube_videos?filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'}${channelFilter}&filter[l2][eq]=${
+            `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${
+              '%' + term.replace(/\*/g, '%') + '%'
+            }${channelFilter}&filter[l2][eq]=${
               this.$l2.id
             }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
               this.$settings.adminMode ? Date.now() : 0
@@ -343,9 +347,9 @@ export default {
         for (let term of this.terms) {
           promises.push(
             $.getJSON(
-              `${
-                Config.wiki
-              }items/youtube_videos?filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'}${channelFilter}&filter[l2][eq]=${
+              `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${
+                '%' + term.replace(/\*/g, '%') + '%'
+              }${channelFilter}&filter[l2][eq]=${
                 this.$l2.id
               }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
                 this.$settings.adminMode ? Date.now() : 0
@@ -375,7 +379,11 @@ export default {
           for (let index in video.subs_l2) {
             if (
               new RegExp(this.terms.join('|').replace(/\*/g, '.+')).test(
-                video.subs_l2[index].line
+                video.subs_l2[index].line +
+                  (this.terms[0].includes('*') &&
+                  video.subs_l2[Number(index) + 1]
+                    ? ' ' + video.subs_l2[Number(index) + 1].line
+                    : '')
               ) &&
               (this.excludeTerms.length === 0 ||
                 !new RegExp(this.excludeTerms.join('|')).test(
@@ -397,12 +405,16 @@ export default {
             (hit.lineIndex > 0
               ? hit.video.subs_l2[hit.lineIndex - 1].line
               : '') + hit.video.subs_l2[hit.lineIndex].line
-          let regex = new RegExp(`(${this.terms.join('|').replace(/\*/g, '.+')}).*`)
+          let regex = new RegExp(
+            `(${this.terms.join('|').replace(/\*/g, '.+')}).*`
+          )
           hit.leftContext = line.replace(regex, '').split('').reverse().join('')
         }
         if (!hit.rightContext) {
           let line = hit.video.subs_l2[hit.lineIndex].line
-          let regex = new RegExp(`.*(${this.terms.join('|').replace(/\*/g, '.+')})`)
+          let regex = new RegExp(
+            `.*(${this.terms.join('|').replace(/\*/g, '.+')})`
+          )
           hit.rightContext = line.replace(regex, '')
         }
       }
@@ -447,6 +459,55 @@ export default {
         }
       }
       return hits
+    },
+    unbindKeys() {
+      window.onkeydown = null
+    },
+    bindKeys() {
+      window.onkeydown = (e) => {
+        if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
+          // left = 37
+          if (e.keyCode == 37) {
+            this.prevHit()
+            return false
+          }
+          // right = 39
+          if (e.keyCode == 39) {
+            this.nextHit()
+            return false
+          }
+          // up = 38
+          if (e.keyCode == 38) {
+            this.previousLine()
+            return false
+          }
+          // down = 40
+          if (e.keyCode == 40) {
+            this.nextLine()
+            return false
+          }
+          // r = 82
+          if (e.keyCode == 82) {
+            this.rewind()
+            return false
+          }
+          // spacebar = 32
+          if (e.keyCode == 32) {
+            this.togglePaused()
+            return false
+          }
+          // f = 70
+          if (e.keyCode == 70) {
+            this.toggleFullscreen()
+            return false
+          }
+          // escape = 27
+          if (e.keyCode == 27) {
+            this.fullscreen = false
+            return false
+          }
+        }
+      }
     },
   },
 }
