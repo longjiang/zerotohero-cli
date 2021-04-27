@@ -25,6 +25,7 @@ export default {
           for (let row of results.data) {
             var result = row
             result.book = result.code.replace(/^([^.]+).*/, '$1')
+            result.level = result.level || result.book
             result.lesson = parseInt(
               result.code.replace(/^(\d)\.(\d+).*/, '$2')
             )

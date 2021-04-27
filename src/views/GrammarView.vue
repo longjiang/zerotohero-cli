@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5 mb-5 main" id="main">
+  <div class="container mt-5 mb-5 pt-4 main" id="main">
     <div class="row">
       <div class="col-sm-12 text-center" v-if="grammar">
         <h5 class="mb-4">
@@ -15,7 +15,7 @@
           </button>
         </h5>
 
-        <GrammarPoint :grammar="grammar" :key="id" />
+        <GrammarPoint :grammar="grammar" :key="id" style="min-height: 20rem" />
 
         <div
           class="widget mt-5"

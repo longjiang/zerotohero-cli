@@ -378,7 +378,9 @@ export default {
           )
           for (let index in video.subs_l2) {
             if (
-              new RegExp(this.terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')).test(
+              new RegExp(
+                this.terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')
+              ).test(
                 video.subs_l2[index].line +
                   (this.terms[0].replace('*', '').includes('*') &&
                   video.subs_l2[Number(index) + 1]
@@ -406,14 +408,20 @@ export default {
               ? hit.video.subs_l2[hit.lineIndex - 1].line
               : '') + hit.video.subs_l2[hit.lineIndex].line
           let regex = new RegExp(
-            `(${this.terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')}).*`
+            `(${this.terms
+              .join('|')
+              .replace(/[*]/g, '.+')
+              .replace(/[_]/g, '.')}).*`
           )
           hit.leftContext = line.replace(regex, '').split('').reverse().join('')
         }
         if (!hit.rightContext) {
           let line = hit.video.subs_l2[hit.lineIndex].line
           let regex = new RegExp(
-            `.*(${this.terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')})`
+            `.*(${this.terms
+              .join('|')
+              .replace(/[*]/g, '.+')
+              .replace(/[_]/g, '.')})`
           )
           hit.rightContext = line.replace(regex, '')
         }
@@ -460,52 +468,53 @@ export default {
       }
       return hits
     },
-    unbindKeys() {
-      window.onkeydown = null
-    },
     bindKeys() {
-      window.onkeydown = (e) => {
-        if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
-          // left = 37
-          if (e.keyCode == 37) {
-            this.prevHit()
-            return false
-          }
-          // right = 39
-          if (e.keyCode == 39) {
-            this.nextHit()
-            return false
-          }
-          // up = 38
-          if (e.keyCode == 38) {
-            this.previousLine()
-            return false
-          }
-          // down = 40
-          if (e.keyCode == 40) {
-            this.nextLine()
-            return false
-          }
-          // r = 82
-          if (e.keyCode == 82) {
-            this.rewind()
-            return false
-          }
-          // spacebar = 32
-          if (e.keyCode == 32) {
-            this.togglePaused()
-            return false
-          }
-          // f = 70
-          if (e.keyCode == 70) {
-            this.toggleFullscreen()
-            return false
-          }
-          // escape = 27
-          if (e.keyCode == 27) {
-            this.fullscreen = false
-            return false
-          }
+      document.addEventListener('keydown', this.keydown)
+    },
+    unbindKeys() {
+      document.removeEventListener('keydown', this.keydown)
+    },
+    keydown(e) {
+      if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
+        // left = 37
+        if (e.keyCode == 37) {
+          this.prevHit()
+          return false
+        }
+        // right = 39
+        if (e.keyCode == 39) {
+          this.nextHit()
+          return false
+        }
+        // up = 38
+        if (e.keyCode == 38) {
+          this.previousLine()
+          return false
+        }
+        // down = 40
+        if (e.keyCode == 40) {
+          this.nextLine()
+          return false
+        }
+        // r = 82
+        if (e.keyCode == 82) {
+          this.rewind()
+          return false
+        }
+        // spacebar = 32
+        if (e.keyCode == 32) {
+          this.togglePaused()
+          return false
+        }
+        // f = 70
+        if (e.keyCode == 70) {
+          this.toggleFullscreen()
+          return false
+        }
+        // escape = 27
+        if (e.keyCode == 27) {
+          this.fullscreen = false
+          return false
         }
       }
     },
