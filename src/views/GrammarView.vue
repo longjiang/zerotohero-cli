@@ -108,9 +108,54 @@ export default {
           Math.min(Grammar._grammarData.length - 1, parseInt(this.id) + 1),
       })
     },
+    keydown(e) {
+      if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
+        // home
+        if (e.keyCode == 36) {
+          document
+            .getElementById('main')
+            .scrollIntoView({ behavior: 'smooth' })
+          // this.$refs.searchCompare.focusOnSearch()
+          return false
+        }
+        // end
+        if (e.keyCode == 35) {
+          document
+            .getElementById('search-subs')
+            .scrollIntoView({ behavior: 'smooth' })
+          return false
+        }
+        // n = 78
+        if (e.keyCode == 78) {
+          this.nextClick()
+          document
+            .getElementById('main')
+            .scrollIntoView({ behavior: 'smooth' })
+          return false
+        }
+        // p = 80
+        if (e.keyCode == 80) {
+          this.prevClick()
+          document
+            .getElementById('main')
+            .scrollIntoView({ behavior: 'smooth' })
+          return false
+        }
+      }
+    },
+    bindKeys() {
+      window.addEventListener('keydown', this.keydown)
+    },
+    unbindKeys() {
+      window.removeEventListener('keydown', this.keydown)
+    },
   },
   mounted() {
+    this.bindKeys()
     this.loadGrammar()
+  },
+  unmounted() {
+    this.unbindKeys()
   },
   watch: {
     id() {
