@@ -348,6 +348,7 @@ export default {
             .getElementById('main')
             .scrollIntoView({ behavior: 'smooth' })
           // this.$refs.searchCompare.focusOnSearch()
+          e.preventDefault()
           return false
         }
         // end
@@ -355,6 +356,7 @@ export default {
           document
             .getElementById('search-subs')
             .scrollIntoView({ behavior: 'smooth' })
+          e.preventDefault()
           return false
         }
         // n = 78
@@ -363,6 +365,7 @@ export default {
           document
             .getElementById('main')
             .scrollIntoView({ behavior: 'smooth' })
+          e.preventDefault()
           return false
         }
         // p = 80
@@ -371,6 +374,7 @@ export default {
           document
             .getElementById('main')
             .scrollIntoView({ behavior: 'smooth' })
+          e.preventDefault()
           return false
         }
       }

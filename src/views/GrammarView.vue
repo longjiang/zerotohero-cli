@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5 mb-5 main">
+  <div class="container mt-5 mb-5 main" id="main">
     <div class="row">
       <div class="col-sm-12 text-center" v-if="grammar">
         <h5 class="mb-4">
@@ -112,10 +112,13 @@ export default {
       if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
         // home
         if (e.keyCode == 36) {
-          document
-            .getElementById('main')
-            .scrollIntoView({ behavior: 'smooth' })
-          // this.$refs.searchCompare.focusOnSearch()
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' })
+          console.log(
+            document
+              .getElementById('main')
+              .scrollIntoView({ behavior: 'smooth' })
+          )
+          e.preventDefault()
           return false
         }
         // end
@@ -123,31 +126,30 @@ export default {
           document
             .getElementById('search-subs')
             .scrollIntoView({ behavior: 'smooth' })
+          e.preventDefault()
           return false
         }
         // n = 78
         if (e.keyCode == 78) {
           this.nextClick()
-          document
-            .getElementById('main')
-            .scrollIntoView({ behavior: 'smooth' })
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' })
+          e.preventDefault()
           return false
         }
         // p = 80
         if (e.keyCode == 80) {
           this.prevClick()
-          document
-            .getElementById('main')
-            .scrollIntoView({ behavior: 'smooth' })
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' })
+          e.preventDefault()
           return false
         }
       }
     },
     bindKeys() {
-      window.addEventListener('keydown', this.keydown)
+      document.addEventListener('keydown', this.keydown)
     },
     unbindKeys() {
-      window.removeEventListener('keydown', this.keydown)
+      document.removeEventListener('keydown', this.keydown)
     },
   },
   mounted() {
