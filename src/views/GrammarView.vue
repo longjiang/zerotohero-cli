@@ -157,6 +157,12 @@ export default {
   unmounted() {
     this.unbindKeys()
   },
+  activated() {
+    this.bindKeys()
+  },
+  deactivated() {
+    this.unbindKeys()
+  },
   watch: {
     id() {
       this.loadGrammar()

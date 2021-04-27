@@ -334,43 +334,44 @@ export default {
         })
       )
     },
-    unbindKeys() {
-      window.onkeydown = null
-    },
     bindKeys() {
-      window.onkeydown = (e) => {
-        if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
-          // home
-          if (e.keyCode == 36) {
-            document
-              .getElementById('main')
-              .scrollIntoView({ behavior: 'smooth' })
-            // this.$refs.searchCompare.focusOnSearch()
-            return false
-          }
-          // end
-          if (e.keyCode == 35) {
-            document
-              .getElementById('search-subs')
-              .scrollIntoView({ behavior: 'smooth' })
-            return false
-          }
-          // n = 78
-          if (e.keyCode == 78) {
-            this.nextWord()
-            document
-              .getElementById('main')
-              .scrollIntoView({ behavior: 'smooth' })
-            return false
-          }
-          // p = 80
-          if (e.keyCode == 80) {
-            this.prevWord()
-            document
-              .getElementById('main')
-              .scrollIntoView({ behavior: 'smooth' })
-            return false
-          }
+      window.addEventListener('keydown', this.keydown)
+    },
+    unbindKeys() {
+      window.removeEventListener('keydown', this.keydown)
+    },
+    keydown(e) {
+      if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
+        // home
+        if (e.keyCode == 36) {
+          document
+            .getElementById('main')
+            .scrollIntoView({ behavior: 'smooth' })
+          // this.$refs.searchCompare.focusOnSearch()
+          return false
+        }
+        // end
+        if (e.keyCode == 35) {
+          document
+            .getElementById('search-subs')
+            .scrollIntoView({ behavior: 'smooth' })
+          return false
+        }
+        // n = 78
+        if (e.keyCode == 78) {
+          this.nextWord()
+          document
+            .getElementById('main')
+            .scrollIntoView({ behavior: 'smooth' })
+          return false
+        }
+        // p = 80
+        if (e.keyCode == 80) {
+          this.prevWord()
+          document
+            .getElementById('main')
+            .scrollIntoView({ behavior: 'smooth' })
+          return false
         }
       }
     },
