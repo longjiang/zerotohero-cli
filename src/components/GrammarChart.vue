@@ -50,7 +50,8 @@
       </button>
       <div
         style="height: 0.5rem"
-        :class="level ? `bg-hsk${level}` : `bg-dark`"
+        :data-bg-level="level"
+        :class="{'bg-dark': level ? false : true}"
       ></div>
     </div>
     <table

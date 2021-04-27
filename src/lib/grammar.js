@@ -3,15 +3,6 @@ import Helper from './helper'
 export default {
   _grammarData: [],
   _grammarCSV: 'https://server.chinesezerotohero.com/data/zh-grammar/zh-grammar.csv.txt',
-  _grammarCSVFields: {
-    id: 'ID',
-    code: 'Code',
-    url: 'URL',
-    structure: 'Structure',
-    english: 'English Equivalent',
-    example: 'Example',
-    exampleTranslation: 'Example Translation',
-  },
 
   isChinese(text) {
     if (this.matchChinese(text)) return true
@@ -26,15 +17,13 @@ export default {
   load() {
     return new Promise(resolve => {
       var grammar = this
+      
       Papa.parse(grammar._grammarCSV, {
         download: true,
         header: true,
         complete: results => {
           for (let row of results.data) {
-            var result = {}
-            for (var index in grammar._grammarCSVFields) {
-              result[index] = row[grammar._grammarCSVFields[index]]
-            }
+            var result = row
             result.book = result.code.replace(/^([^.]+).*/, '$1')
             result.lesson = parseInt(
               result.code.replace(/^(\d)\.(\d+).*/, '$2')

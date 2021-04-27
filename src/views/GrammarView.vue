@@ -2,24 +2,45 @@
   <div class="container mt-5 mb-5 main">
     <div class="row">
       <div class="col-sm-12 text-center" v-if="grammar">
-        <h3 class="mb-4">Grammar Note {{ grammar.code }}</h3>
-        <button
-          @click="prevClick"
-          v-if="id > 1"
-          class="btn btn-medium bg-light mr-2"
+        <h5 class="mb-4">
+          <button
+            @click="prevClick"
+            v-if="id > 1"
+            class="btn btn-medium bg-light mr-3"
+          >
+            <i class="fa fa-chevron-left" title="previous" /></button
+          >Grammar HSK{{ grammar.code }}
+          <button @click="nextClick" class="ml-3 btn btn-medium bg-light">
+            <i class="fa fa-chevron-right" title="next" />
+          </button>
+        </h5>
+
+        <GrammarPoint :grammar="grammar" :key="id" />
+
+        <div
+          class="widget mt-5"
+          id="search-subs"
+          v-if="grammar.pattern && delayed"
+          :key="`subs-search-${grammar.pattern}`"
         >
-          <i class="fa fa-chevron-left" title="previous" />
-        </button>
-        <button @click="nextClick" class="btn btn-medium bg-light">
-          <i class="fa fa-chevron-right" title="next" />
-        </button>
-        <div class="shadow rounded p-4 mt-4 mb-5">
-          <GrammarPoint :grammar="grammar" :key="id" />
-          <hr />
-          <div class="text-left mt-5" v-if="drills && drills.length > 0">
-            <h4 class="text-center">Practice Drills</h4>
-            <Drill v-for="drill in drills" :drill="drill" />
+          <div class="widget-title">“{{ grammar.pattern }}” in TV Shows</div>
+          <div class="widget-body">
+            <SearchSubsComp
+              v-if="grammar.pattern"
+              ref="searchSubs"
+              :level="grammar.level"
+              :terms="[grammar.pattern]"
+            />
           </div>
+        </div>
+        <div class="text-left mt-5" v-if="drills && drills.length > 0">
+          <hr />
+          <h4 class="text-center">Practice Drills</h4>
+          <Drill
+            v-for="drill in drills"
+            :drill="drill"
+            :key="`drill-${grammar.id}-${drill.id}`"
+          />
         </div>
       </div>
     </div>
@@ -30,21 +51,29 @@
 import GrammarPoint from '@/components/GrammarPoint'
 import Grammar from '@/lib/grammar'
 import Drill from '@/components/Drill'
+import SearchSubsComp from '@/components/SearchSubsComp'
 import Config from '@/lib/config'
 
 export default {
   components: {
     GrammarPoint,
     Drill,
+    SearchSubsComp,
   },
   props: {
     id: {
       type: String,
     },
   },
+  data() {
+    return {
+      grammar: undefined,
+      drills: [],
+      delayed: false,
+    }
+  },
   methods: {
     async getDrill(grammarID) {
-      console.log('geting drills')
       let response = await $.getJSON(
         `${Config.wiki}items/drills?filter[grammar_id][eq]=${grammarID}&fields=*,file.*`
       )
@@ -54,10 +83,16 @@ export default {
     },
     async loadGrammar() {
       this.drills = []
-      this.grammar = (await this.$grammar)._grammarData.find(
+      let grammar = (await this.$grammar)._grammarData.find(
         (row) => row.id === this.id
       )
+      if (!this.grammar || grammar.pattern !== this.grammar.pattern)
+        this.delayed = false
+      this.grammar = grammar
       this.getDrill(this.grammar.id)
+      setTimeout(() => {
+        if (this.id === this.grammar.id) this.delayed = true
+      }, 1000)
     },
     prevClick() {
       this.$router.push({
@@ -73,12 +108,6 @@ export default {
           Math.min(Grammar._grammarData.length - 1, parseInt(this.id) + 1),
       })
     },
-  },
-  data() {
-    return {
-      grammar: undefined,
-      drills: [],
-    }
   },
   mounted() {
     this.loadGrammar()

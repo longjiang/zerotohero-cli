@@ -378,9 +378,9 @@ export default {
           )
           for (let index in video.subs_l2) {
             if (
-              new RegExp(this.terms.join('|').replace(/\*/g, '.+')).test(
+              new RegExp(this.terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')).test(
                 video.subs_l2[index].line +
-                  (this.terms[0].includes('*') &&
+                  (this.terms[0].replace('*', '').includes('*') &&
                   video.subs_l2[Number(index) + 1]
                     ? ' ' + video.subs_l2[Number(index) + 1].line
                     : '')
@@ -406,14 +406,14 @@ export default {
               ? hit.video.subs_l2[hit.lineIndex - 1].line
               : '') + hit.video.subs_l2[hit.lineIndex].line
           let regex = new RegExp(
-            `(${this.terms.join('|').replace(/\*/g, '.+')}).*`
+            `(${this.terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')}).*`
           )
           hit.leftContext = line.replace(regex, '').split('').reverse().join('')
         }
         if (!hit.rightContext) {
           let line = hit.video.subs_l2[hit.lineIndex].line
           let regex = new RegExp(
-            `.*(${this.terms.join('|').replace(/\*/g, '.+')})`
+            `.*(${this.terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')})`
           )
           hit.rightContext = line.replace(regex, '')
         }
