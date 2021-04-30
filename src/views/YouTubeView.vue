@@ -28,7 +28,7 @@
             </Annotate>
           </h5>
           <div>
-            <template v-if="!loading && hasSubtitles">
+            <template v-if="!loading && (hasSubtitles || $settings.adminMode)">
               <b-button v-if="!saved" @click="save"
                 ><i class="fas fa-plus mr-2"></i>Add to Library</b-button
               >
@@ -63,9 +63,31 @@
                 >
               </b-dropdown>
 
-              <b-button v-if="$settings.adminMode" variant="danger" @click="remove" class="ml-1"
+              <b-button
+                v-if="$settings.adminMode"
+                variant="danger"
+                @click="remove"
+                class="ml-1"
                 ><i class="fas fa-trash-alt"></i
               ></b-button>
+
+              <drop
+                v-if="$settings.adminMode"
+                @drop="handleDrop"
+                :class="{
+                  over: over,
+                  'subs-drop': true,
+                  drop: true,
+                  'ml-1': true,
+                  'text-dark': true,
+                  btn: true,
+                  'btn-light': true,
+                }"
+                :key="`drop-${transcriptKey}`"
+                @dragover="over = true"
+                @dragleave="over = false"
+                >Drop Subs Here</drop
+              >
             </template>
           </div>
           <div v-if="$settings.adminMode && saved" class="mt-2">
@@ -154,6 +176,8 @@ import YouTubeSearchResults from '@/components/YouTubeSearchResults'
 import YouTube from '@/lib/youtube'
 import Helper from '@/lib/helper'
 import Config from '@/lib/config'
+import { Drag, Drop } from 'vue-drag-drop'
+import { parseSync } from 'subtitle'
 
 export default {
   components: {
@@ -161,6 +185,8 @@ export default {
     SimpleSearch,
     YouTubeChannelCard,
     YouTubeWithTranscript,
+    Drag,
+    Drop,
   },
   props: {
     args: {
@@ -203,9 +229,29 @@ export default {
       transcriptKey: 0,
       firstLineTime: 0,
       subsUpdated: false,
+      over: false,
     }
   },
   methods: {
+    handleDrop(data, event) {
+      event.preventDefault()
+      let file = event.dataTransfer.files[0]
+      let reader = new FileReader()
+      reader.readAsText(file)
+      reader.onload = (event) => {
+        let srt = event.target.result
+        this.l2Lines = parseSync(srt).map((cue) => {
+          return {
+            starttime: cue.data.start / 1000,
+            line: cue.data.text,
+          }
+        })
+        console.log('loaded')
+        this.firstLineTime = this.l2_lines[0].starttime
+        this.hasSubtitles = true
+        this.transcriptKey++
+      }
+    },
     async mountOrUpdate() {
       this.l2LinesUnshifted = []
       this.l2Lines = []
@@ -337,7 +383,9 @@ export default {
     async getTranscript() {
       this.l1Lines = []
       let l2Subs = this.saved
-        ? (this.l2Lines = JSON.parse(this.saved.subs_l2)).filter(line => line.starttime)
+        ? (this.l2Lines = JSON.parse(this.saved.subs_l2)).filter(
+            (line) => line.starttime
+          )
         : false
       this.l2Lines = l2Subs ? l2Subs : []
       this.hasSubtitles = false
@@ -395,7 +443,9 @@ export default {
           this.args
         }&filter[l2][eq]=${
           this.$l2.id
-        }&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
+        }&fields=id,youtube_id,channel_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
+          this.$settings.adminMode ? Date.now() : 0
+        }`
       )
       if (response && response.data && response.data.length > 0) {
         this.saved = response.data[0]
@@ -497,6 +547,9 @@ export default {
 }
 </script>
 <style lang="scss">
+.subs-drop.drop.over {
+  border: 2px dashed #ccc;
+}
 .play-pause-wrapper {
   position: sticky;
   bottom: 1rem;
