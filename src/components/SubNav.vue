@@ -138,7 +138,7 @@
             $route.name === 'lesson-videos')
       "
     >
-      <router-link class="secondary-menu-item" :to="{ name: 'tv-shows' }" v-if="$l2.code === 'zh'">
+      <router-link class="secondary-menu-item" :to="{ name: 'tv-shows' }" v-if="['zh', 'ja'].includes($l2.code)">
         <i class="fa fa-tv" />
         {{ $t('TV Shows') }}
       </router-link>
