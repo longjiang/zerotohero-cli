@@ -13,15 +13,6 @@
         <strong :data-level="level">{{ terms[0] }}</strong>
         <small class="ml-1 d-none" style="color: #999">in TV shows</small>
       </span>
-      <b-button @click="previousLine" class="btn btn-small"
-        ><i class="fa fa-backward"
-      /></b-button>
-      <b-button @click="rewind" class="btn btn-small"
-        ><i class="fa fa-undo"
-      /></b-button>
-      <b-button @click="nextLine" class="btn btn-small"
-        ><i class="fa fa-forward"
-      /></b-button>
       <button
         :disabled="hitIndex === 0"
         @click="prevHit"
@@ -92,6 +83,15 @@
           ></b-dropdown-item>
         </template>
       </b-dropdown>
+      <b-button @click="previousLine" class="btn btn-small"
+        ><i class="fa fa-backward"
+      /></b-button>
+      <b-button @click="rewind" class="btn btn-small"
+        ><i class="fa fa-undo"
+      /></b-button>
+      <b-button @click="nextLine" class="btn btn-small"
+        ><i class="fa fa-forward"
+      /></b-button>
       <input
         type="text"
         v-model.lazy="excludeStr"
@@ -479,41 +479,49 @@ export default {
         // left = 37
         if (e.keyCode == 37) {
           this.prevHit()
+          e.preventDefault()
           return false
         }
         // right = 39
         if (e.keyCode == 39) {
           this.nextHit()
+          e.preventDefault()
           return false
         }
         // up = 38
         if (e.keyCode == 38) {
           this.previousLine()
+          e.preventDefault()
           return false
         }
         // down = 40
         if (e.keyCode == 40) {
           this.nextLine()
+          e.preventDefault()
           return false
         }
         // r = 82
         if (e.keyCode == 82) {
           this.rewind()
+          e.preventDefault()
           return false
         }
         // spacebar = 32
         if (e.keyCode == 32) {
           this.togglePaused()
+          e.preventDefault()
           return false
         }
         // f = 70
         if (e.keyCode == 70) {
           this.toggleFullscreen()
+          e.preventDefault()
           return false
         }
         // escape = 27
         if (e.keyCode == 27) {
           this.fullscreen = false
+          e.preventDefault()
           return false
         }
       }
@@ -534,6 +542,7 @@ export default {
   background: white;
   z-index: 10;
   overflow: scroll;
+  margin-top: 0 !important;
 }
 .search-subs >>> .playlist-dropdown {
   .playlist-dropdown-toggle {

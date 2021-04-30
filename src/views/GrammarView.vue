@@ -2,7 +2,7 @@
   <div class="container mt-5 mb-5 pt-4 main" id="main">
     <div class="row">
       <div class="col-sm-12 text-center" v-if="grammar">
-        <h5 class="mb-4">
+        <h6 class="mb-2">
           <button
             @click="prevClick"
             v-if="id > 1"
@@ -13,7 +13,7 @@
           <button @click="nextClick" class="ml-3 btn btn-medium bg-light">
             <i class="fa fa-chevron-right" title="next" />
           </button>
-        </h5>
+        </h6>
 
         <GrammarPoint :grammar="grammar" :key="id" style="min-height: 20rem" />
 
