@@ -153,8 +153,8 @@ import YouTubeWithTranscript from '@/components/YouTubeWithTranscript'
 import SyncedTranscript from '@/components/SyncedTranscript'
 import SimpleSearch from '@/components/SimpleSearch'
 import Config from '@/lib/config'
-import shuffle from 'shuffle-array'
 import Helper from '@/lib/helper'
+import YouTube from '@/lib/youtube'
 
 export default {
   components: {
@@ -201,13 +201,25 @@ export default {
       },
     }
   },
-  mounted() {
-    this.searchSubs()
+  async mounted() {
+    this.checking
+    if (this.$l2.code === 'zh' && this.terms[0].length === 1) {
+      this.excludeTerms = await (await this.$dictionary).getWordsWithCharacter(this.terms[0])
+    }
+    this.hits = await YouTube.searchSubs(
+      this.terms,
+      this.excludeTerms,
+      this.$l2.code,
+      this.$l2.id,
+      this.$settings.adminMode
+    )
+    this.$emit('loaded', this.hits)
+    this.checking = false
     this.bindKeys()
   },
   activated() {
     setTimeout(() => {
-      this.$refs.youtube.pause()
+      if (this.$refs.youtube) this.$refs.youtube.pause()
     }, 800)
   },
   unmounted() {
@@ -299,174 +311,6 @@ export default {
     },
     toggleFullscreen() {
       if (this.hits.length > 0) this.fullscreen = !this.fullscreen
-    },
-    async searchSubs() {
-      this.hits = []
-      this.videos = []
-      this.checking = true
-      if (this.$l2.code === 'zh' && this.terms[0].length === 1) {
-        let words = await (await this.$dictionary).lookupFuzzySimple(
-          this.terms[0]
-        )
-        let excludedWords = words.filter((word) => word.simplified.length > 1)
-        this.excludeTerms = Helper.unique(
-          excludedWords
-            .map((word) => word.simplified)
-            .concat(excludedWords.map((word) => word.traditional))
-        )
-      }
-      let channelFilter = ''
-      let approvedChannels = Config.approvedChannels[this.$l2.code]
-      if (approvedChannels) {
-        channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
-      }
-      let promises = []
-      for (let term of this.terms) {
-        promises.push(
-          $.getJSON(
-            `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${
-              '%' + term.replace(/\*/g, '%') + '%'
-            }${channelFilter}&filter[l2][eq]=${
-              this.$l2.id
-            }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
-              this.$settings.adminMode ? Date.now() : 0
-            }`
-          ).then((response) => {
-            if (response && response.data && response.data.length > 0) {
-              this.videos = this.videos.concat(response.data)
-            }
-          })
-        )
-      }
-      await Promise.all(promises)
-      if (approvedChannels && this.videos.length < 3) {
-        promises = []
-        channelFilter = `&filter[channel_id][in]=${Config.talkChannels[
-          this.$l2.code
-        ].join(',')}`
-        for (let term of this.terms) {
-          promises.push(
-            $.getJSON(
-              `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${
-                '%' + term.replace(/\*/g, '%') + '%'
-              }${channelFilter}&filter[l2][eq]=${
-                this.$l2.id
-              }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
-                this.$settings.adminMode ? Date.now() : 0
-              }`
-            ).then((response) => {
-              if (response && response.data && response.data.length > 0) {
-                this.videos = this.videos.concat(response.data)
-              }
-            })
-          )
-        }
-        await Promise.all(promises)
-      }
-      this.hits = this.getHits()
-      this.$emit('loaded', this.hits)
-      this.checking = false
-    },
-    getHits() {
-      let seenYouTubeIds = []
-      let hits = []
-      for (let video of this.videos) {
-        if (!seenYouTubeIds.includes(video.youtube_id)) {
-          seenYouTubeIds.push(video.youtube_id)
-          video.subs_l2 = JSON.parse(video.subs_l2).filter(
-            (line) => line.starttime
-          )
-          for (let index in video.subs_l2) {
-            if (
-              new RegExp(
-                this.terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')
-              ).test(
-                video.subs_l2[index].line +
-                  (this.terms[0].replace('*', '').includes('*') &&
-                  video.subs_l2[Number(index) + 1]
-                    ? ' ' + video.subs_l2[Number(index) + 1].line
-                    : '')
-              ) &&
-              (this.excludeTerms.length === 0 ||
-                !new RegExp(this.excludeTerms.join('|')).test(
-                  video.subs_l2[index].line
-                ))
-            ) {
-              hits.push({
-                video: video,
-                lineIndex: index,
-              })
-            }
-          }
-        }
-      }
-      // hits = this.mergeLines(hits) // merge previous line or next line if very short
-      for (let hit of hits) {
-        if (!hit.leftContext) {
-          let line =
-            (hit.lineIndex > 0
-              ? hit.video.subs_l2[hit.lineIndex - 1].line
-              : '') + hit.video.subs_l2[hit.lineIndex].line
-          let regex = new RegExp(
-            `(${this.terms
-              .join('|')
-              .replace(/[*]/g, '.+')
-              .replace(/[_]/g, '.')}).*`
-          )
-          hit.leftContext = line.replace(regex, '').split('').reverse().join('')
-        }
-        if (!hit.rightContext) {
-          let line = hit.video.subs_l2[hit.lineIndex].line
-          let regex = new RegExp(
-            `.*(${this.terms
-              .join('|')
-              .replace(/[*]/g, '.+')
-              .replace(/[_]/g, '.')})`
-          )
-          hit.rightContext = line.replace(regex, '')
-        }
-      }
-      return hits.sort((a, b) =>
-        a.rightContext.localeCompare(b.rightContext, 'zh-CN')
-      )
-    },
-    mergeLines(hits) {
-      for (let hit of hits) {
-        if (
-          hit.video.subs_l2[hit.lineIndex] &&
-          hit.video.subs_l2[hit.lineIndex - 1]
-        ) {
-          if (
-            hit.video.subs_l2[hit.lineIndex].starttime -
-              hit.video.subs_l2[hit.lineIndex - 1].starttime <
-            5
-          ) {
-            hit.video.subs_l2[hit.lineIndex - 1].line =
-              hit.video.subs_l2[hit.lineIndex - 1].line +
-              ' ' +
-              hit.video.subs_l2[hit.lineIndex].line
-            hit.video.subs_l2.splice(hit.lineIndex - 1, 1)
-            hit.lineIndex = hit.lineIndex - 1
-          }
-        }
-        if (
-          hit.video.subs_l2[hit.lineIndex] &&
-          hit.video.subs_l2[hit.lineIndex + 1]
-        ) {
-          if (
-            hit.video.subs_l2[hit.lineIndex + 1].starttime -
-              hit.video.subs_l2[hit.lineIndex].starttime <
-            5
-          ) {
-            hit.video.subs_l2[hit.lineIndex].line =
-              hit.video.subs_l2[hit.lineIndex].line +
-              ' ' +
-              hit.video.subs_l2[hit.lineIndex + 1].line
-            hit.video.subs_l2.splice(hit.lineIndex + 1, 1)
-          }
-        }
-      }
-      return hits
     },
     bindKeys() {
       document.addEventListener('keydown', this.keydown)

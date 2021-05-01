@@ -49,6 +49,15 @@ const Dictionary = {
       Promise.all([wordsPromise, characterPromise, newHSKPromise]).then(() => resolve())
     })
   },
+  getWordsWithCharacter(term) {
+    let words = this.lookupFuzzySimple(term)
+    words = words.filter((word) => word.simplified.length > 1)
+    return this.unique(
+      words
+        .map((word) => word.simplified)
+        .concat(words.map((word) => word.traditional))
+    )
+  },
   wordForms(word) {
     let forms = [
       {

@@ -304,5 +304,119 @@ export default {
       }
       callback(playlists)
     })
-  }
+  },
+  async searchSubs(terms, excludeTerms, lang = 'en', langId = 1824, adminMode) {
+    let videos = []
+    let channelFilter = ''
+    let approvedChannels = Config.approvedChannels[lang]
+    if (approvedChannels) {
+      channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
+    }
+    let promises = []
+    for (let term of terms) {
+      promises.push(
+        $.getJSON(
+          `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${
+            '%' + term.replace(/\*/g, '%') + '%'
+          }${channelFilter}&filter[l2][eq]=${
+            langId
+          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
+            adminMode ? Date.now() : 0
+          }`
+        ).then((response) => {
+          if (response && response.data && response.data.length > 0) {
+            videos = videos.concat(response.data)
+          }
+        })
+      )
+    }
+    await Promise.all(promises)
+    if (approvedChannels && videos.length < 3) {
+      promises = []
+      channelFilter = `&filter[channel_id][in]=${Config.talkChannels[
+        lang
+      ].join(',')}`
+      for (let term of terms) {
+        promises.push(
+          $.getJSON(
+            `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${
+              '%' + term.replace(/\*/g, '%') + '%'
+            }${channelFilter}&filter[l2][eq]=${
+              langId
+            }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
+              adminMode ? Date.now() : 0
+            }`
+          ).then((response) => {
+            if (response && response.data && response.data.length > 0) {
+              videos = videos.concat(response.data)
+            }
+          })
+        )
+      }
+      await Promise.all(promises)
+    }
+    return this.getHits(videos, terms, excludeTerms)
+  },
+  getHits(videos, terms, excludeTerms) {
+    let seenYouTubeIds = []
+    let hits = []
+    for (let video of videos) {
+      if (!seenYouTubeIds.includes(video.youtube_id)) {
+        seenYouTubeIds.push(video.youtube_id)
+        video.subs_l2 = JSON.parse(video.subs_l2).filter(
+          (line) => line.starttime
+        )
+        for (let index in video.subs_l2) {
+          if (
+            new RegExp(
+              terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')
+            ).test(
+              video.subs_l2[index].line +
+                (terms[0].replace('*', '').includes('*') &&
+                video.subs_l2[Number(index) + 1]
+                  ? ' ' + video.subs_l2[Number(index) + 1].line
+                  : '')
+            ) &&
+            (excludeTerms.length === 0 ||
+              !new RegExp(excludeTerms.join('|')).test(
+                video.subs_l2[index].line
+              ))
+          ) {
+            hits.push({
+              video: video,
+              lineIndex: index,
+            })
+          }
+        }
+      }
+    }
+    for (let hit of hits) {
+      if (!hit.leftContext) {
+        let line =
+          (hit.lineIndex > 0
+            ? hit.video.subs_l2[hit.lineIndex - 1].line
+            : '') + hit.video.subs_l2[hit.lineIndex].line
+        let regex = new RegExp(
+          `(${terms
+            .join('|')
+            .replace(/[*]/g, '.+')
+            .replace(/[_]/g, '.')}).*`
+        )
+        hit.leftContext = line.replace(regex, '').split('').reverse().join('')
+      }
+      if (!hit.rightContext) {
+        let line = hit.video.subs_l2[hit.lineIndex].line
+        let regex = new RegExp(
+          `.*(${terms
+            .join('|')
+            .replace(/[*]/g, '.+')
+            .replace(/[_]/g, '.')})`
+        )
+        hit.rightContext = line.replace(regex, '')
+      }
+    }
+    return hits.sort((a, b) =>
+      a.rightContext.localeCompare(b.rightContext, 'zh-CN')
+    )
+  },
 }
