@@ -567,9 +567,9 @@ export default {
   cursor: pointer;
 }
 .youtube-video-column.sticky {
-  top: 2.5rem;
+  top: 0;
 }
 .youtube-video-wrapper.sticky {
-  top: 2.5rem;
+  top: 0;
 }
 </style>
