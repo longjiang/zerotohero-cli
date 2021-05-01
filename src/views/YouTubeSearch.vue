@@ -42,6 +42,7 @@
       :start="start"
       :captions="captions"
       class="mt-5"
+      :checkSaved="true"
       :key="searchResultKey"
       ref="youtubeSearchResults"
     />

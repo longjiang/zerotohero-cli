@@ -148,6 +148,7 @@
           </h4>
           <YouTubeSearchResults
             :term="channel ? channel.title : title"
+            :checkSaved="false"
             :start="0"
           />
         </div>
