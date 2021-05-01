@@ -260,7 +260,6 @@ export default {
             line: cue.data.text,
           }
         })
-        console.log('loaded')
         this.firstLineTime = this.video.subs_l2[0].starttime
         this.video.hasSubs = true
         this.videoInfoKey++

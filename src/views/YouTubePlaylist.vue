@@ -9,7 +9,7 @@
         <p class="text-center mb-5">
           <b>Note:</b> Videos may not have subtitles.
         </p>
-        <YouTubeVideoList :videos="videos" />
+        <YouTubeVideoList :videos="videos" :checkSubs="true" :checkSaved="true" />
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@ export default {
     YouTubeVideoList
   },
   props: {
-    args: {
+    playlist_id: {
       type: String
     }
   },
@@ -39,21 +39,14 @@ export default {
     this.update()
   },
   methods: {
-    update() {
+    async update() {
       this.title = undefined
       this.videos = []
-      YouTube.playlist(
-        this.args,
-        playlist => {
-          this.title = playlist.title
-          this.videos = playlist.videos
-        },
-        3600
-      )
+      this.videos = await YouTube.playlistByApi(this.playlist_id)
     }
   },
   watch: {
-    args() {
+    playlist_id() {
       if (this.$route.name === 'youtube-playlist') {
         this.update()
       }

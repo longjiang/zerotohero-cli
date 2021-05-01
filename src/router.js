@@ -645,7 +645,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/youtube/playlist/:args?',
+      path: '/:l1/:l2/youtube/playlist/:playlist_id?',
       name: 'youtube-playlist',
       component: () => import('./views/YouTubePlaylist.vue'),
       props: true,

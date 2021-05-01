@@ -1,5 +1,5 @@
-// const dictionaryServer = 'http://hsk-server.local:8888/'
-const dictionaryServer = 'https://server.chinesezerotohero.com/'
+const dictionaryServer = 'http://hsk-server.local:8888/'
+// const dictionaryServer = 'https://server.chinesezerotohero.com/'
 
 // const lrcServer = 'http://lyrics-search.local:8888/'
 const lrcServer = 'https://lyrics-search.chinesezerotohero.com/'
@@ -17,6 +17,7 @@ export default {
   savePhoto: dictionaryServer + 'save-photo.php',
   youtubeVideo: dictionaryServer + 'youtube-video.php',
   youtubePlaylist: dictionaryServer + 'youtube-playlist.php',
+  youtubeChannelPlaylists: dictionaryServer + 'youtube-channel-playlists.php',
   imageUrl: dictionaryServer + 'img/words/',
   animatedSvgUrl: dictionaryServer + 'data/svgs/',
   lrcSearch: lrcServer + 'lrc/search/',

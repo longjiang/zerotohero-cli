@@ -231,7 +231,6 @@ export default {
     removeLine(lineIndex) {
       this.lines.splice(lineIndex, 1)
       this.reviewKey++
-      console.log('rem')
     },
     answerClick(e) {
       $(e.target).addClass('checked')

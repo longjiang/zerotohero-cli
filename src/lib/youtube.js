@@ -153,10 +153,10 @@ export default {
     }
   },
   channelPlayListsByAPI(channelID, cacheLife = -1) {
-    
+
     return new Promise(resolve => {
       $.getJSON(
-        `${Config.youtubePlaylist}?channel=${channelID}&cache_life=${cacheLife}`
+        `${Config.youtubeChannelPlaylists}?channel=${channelID}&cache_life=${cacheLife}`
       ).then(response => {
         let playlists = []
         if (response.data.items) {
@@ -166,7 +166,7 @@ export default {
         let nextPageToken = response.data.nextPageToken
         if (nextPageToken) {
           $.getJSON(
-            `https://server.chinesezerotohero.com/youtube-playlist.php?channel=${channelID}&page_token=${nextPageToken}&cache_life=${cacheLife}`
+            `${Config.youtubeChannelPlaylists}?channel=${channelID}&page_token=${nextPageToken}&cache_life=${cacheLife}`
           ).then(response => {
             if (response.data.items) {
               playlists = playlists.concat(
@@ -180,6 +180,30 @@ export default {
         }
       })
     })
+  },
+  async playlistByApi(id, pageToken = false, cacheLife = -1) {
+    let pageTokenQS = pageToken ? `&page_token=${pageToken}` : ''
+    let response = await $.getJSON(
+      `${Config.youtubePlaylist}?playlist_id=${id}${pageTokenQS}&cache_life=${cacheLife}`
+    )
+    let playlistItems = []
+    if (response.data) {
+      if (response.data.items) {
+        playlistItems = response.data.items.map(item => {
+          return {
+            youtube_id: item.snippet.resourceId.videoId,
+            title: item.snippet.title,
+            channel_id: item.snippet.channelId
+          }
+        })
+      }
+      let nextPageToken = response.data.nextPageToken
+      if (nextPageToken) {
+        let moreItems = await this.playlistByApi(id, nextPageToken)
+        return playlistItems.concat(moreItems)
+      }
+    }
+    return playlistItems
   },
   playlist(playlistID, callback, cacheLife = -1) {
     Helper.scrape2(
