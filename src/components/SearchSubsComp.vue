@@ -6,12 +6,10 @@
     </div>
     <div class="mt-3 text-center" v-if="hits.length > 0">
       <span
-        v-if="fullscreen"
         class="mr-2 d-inline-block"
         style="position: relative; bottom: 3px"
       >
         <strong :data-level="level">{{ terms[0] }}</strong>
-        <small class="ml-1 d-none" style="color: #999">in TV shows</small>
       </span>
       <button
         :disabled="hitIndex === 0"

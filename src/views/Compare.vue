@@ -101,29 +101,19 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-12 col-lg-6 mt-5">
-          <div class="widget" v-if="a" :key="`${a.id}-subs`" id="search-subs">
-            <div class="widget-title">“{{ a.bare }}” in TV Shows</div>
+        <div class="col-md-12 mt-5">
+          <div class="widget" v-if="a && b" :key="`${a.id}-subs`" id="search-subs">
+            <div class="widget-title">“{{ a.bare }}” and “{{ b.bare }}” in TV Shows</div>
             <div class="widget-body">
-              <SearchSubsComp
-                :level="a.hsk"
-                :terms="
+              <CompareSearchSubs
+                :levelA="a.hsk"
+                :termsA="
                   a.simplified === a.traditional
                     ? [a.simplified]
                     : [a.simplified, a.traditional]
                 "
-                class="mt-4 mb-4"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12 col-lg-6 mt-5">
-          <div class="widget" v-if="b" :key="`${b.id}-subs`">
-            <div class="widget-title">“{{ b.bare }}” in TV Shows</div>
-            <div class="widget-body">
-              <SearchSubsComp
-                :level="b.hsk"
-                :terms="
+                :levelB="b.hsk"
+                :termsB="
                   b.simplified === b.traditional
                     ? [b.simplified]
                     : [b.simplified, b.traditional]
@@ -270,7 +260,7 @@ import Korean from '@/components/Korean'
 import Japanese from '@/components/Japanese'
 import Chinese from '@/components/Chinese'
 import EntryRelated from '@/components/EntryRelated'
-import SearchSubsComp from '@/components/SearchSubsComp'
+import CompareSearchSubs from '@/components/CompareSearchSubs'
 
 export default {
   components: {
@@ -289,7 +279,7 @@ export default {
     Chinese,
     CompareDefs,
     EntryRelated,
-    SearchSubsComp
+    CompareSearchSubs
   },
   data() {
     return {
