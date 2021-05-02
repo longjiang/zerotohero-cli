@@ -382,7 +382,7 @@ export default {
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
       let savedWord = false
-      if (this.token) {
+      if (this.token && this.token.candidates && this.token.candidates.length > 0) {
         for (let word of this.token.candidates) {
           savedWord = this.$store.getters.hasSavedWord({
             l2: this.$l2.code,
