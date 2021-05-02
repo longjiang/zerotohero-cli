@@ -41,17 +41,13 @@
       >
         HSK {{ n }}
       </button>
-      <button
-        class="tab text-dark"
-        data-bg-level="7-9"
-        @click="level = '7-9'"
-      >
+      <button class="tab text-dark" data-bg-level="7-9" @click="level = '7-9'">
         新 HSK 7-9
       </button>
       <div
         style="height: 0.5rem"
         :data-bg-level="level"
-        :class="{'bg-dark': level ? false : true}"
+        :class="{ 'bg-dark': level ? false : true }"
       ></div>
     </div>
     <table
@@ -63,7 +59,7 @@
           <th class="text-center">Lesson</th>
           <th>Structure</th>
           <th>English</th>
-          <th>Example</th>
+          <th style="min-width: 20rem">Example</th>
           <th>Example Translation</th>
         </tr>
       </thead>
@@ -76,9 +72,8 @@
               (!search ||
                 row.structure.includes(search) ||
                 row.english.includes(search)) &&
-              (level === undefined ||
-                row.book === String(level))
-            )
+              (level === undefined || row.book === String(level))
+            ),
           }"
           @click="grammarRowClick(row)"
         >
@@ -87,7 +82,7 @@
               ><a
                 :href="`${row.url}`"
                 class="btn btn-secondary"
-                style="white-space: nowrap;"
+                style="white-space: nowrap"
                 ><i class="glyphicon glyphicon-facetime-video"></i>
                 {{ row.code }}</a
               >
@@ -95,22 +90,22 @@
           </td>
           <td class="align-middle">
             <Annotate
-              v-html="
-                Helper.highlightMultiple(row.structure, row.words, row.book)
-              "
-              :showTranslate="true"
-            ></Annotate>
+              ><span
+                v-html="
+                  Helper.highlightMultiple(row.structure, row.words, row.book)
+                "
+            /></Annotate>
           </td>
           <td class="align-middle">
             <span>{{ row.english }}</span>
           </td>
           <td class="align-middle">
             <Annotate
-              v-html="
-                Helper.highlightMultiple(row.example, row.words, row.book)
-              "
-              :showTranslate="true"
-            ></Annotate>
+              ><span
+                v-html="
+                  Helper.highlightMultiple(row.example, row.words, row.book)
+                "
+            /></Annotate>
           </td>
           <td class="align-middle">
             <span>{{ row.exampleTranslation }}</span>
@@ -129,19 +124,21 @@ export default {
       Helper,
       search: '',
       level: undefined,
-      grammar: []
+      grammar: [],
     }
   },
   methods: {
     grammarRowClick(row) {
-      this.$router.push({path: `/${this.$l1.code}/${this.$l2.code}/grammar/view/${row.id}`})
-    }
+      this.$router.push({
+        path: `/${this.$l1.code}/${this.$l2.code}/grammar/view/${row.id}`,
+      })
+    },
   },
   async mounted() {
-    this.$grammar.then(grammar => {
+    this.$grammar.then((grammar) => {
       this.grammar = grammar._grammarData
     })
-  }
+  },
 }
 </script>
 

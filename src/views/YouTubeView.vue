@@ -129,11 +129,6 @@
     />
     <div class="play-pause-wrapper">
       <span
-        class="play-pause shadow btn-secondary d-inline-block mb-2 text-center"
-        @click="scrollToComments"
-        ><i class="fas fa-comment"></i></span
-      ><br />
-      <span
         class="play-pause shadow btn-primary d-inline-block text-center"
         @click="togglePaused"
         ><i v-if="paused" class="fas fa-play"></i
@@ -510,6 +505,7 @@ export default {
     },
     togglePaused() {
       this.$refs.youtube.togglePaused()
+      this.paused = !this.paused
     },
     bindKeys() {
       window.onkeydown = (e) => {
