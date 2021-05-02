@@ -1,22 +1,22 @@
 <template>
   <div class="paginator">
-    <a
+    <router-link
       class="paginator-previous mr-3 btn btn-dark"
-      :href="url(previous)"
+      :to="url(previous)"
       title="Previous word"
       v-if="previous"
     >
       <i class="fas fa-chevron-left"></i>
-    </a>
+    </router-link>
     {{ title }} <b>{{ currentIndex + 1 }}</b> of {{ items.length }}
-    <a
+    <router-link
       class="paginator-next ml-3 btn btn-dark"
-      :href="url(next)"
+      :to="url(next)"
       title="Next word"
       v-if="next"
     >
       <i class="fas fa-chevron-right"></i>
-    </a>
+    </router-link>
   </div>
 </template>
 
