@@ -21,7 +21,7 @@
     >
       <b-button
         class="mr-2 btn btn-small"
-        :data-bg-level="levelA"
+        :data-bg-level="hitAB === 'A' ? levelA : false"
         @click="hitAB = 'A'"
         >{{ termsA[0] }}</b-button
       >
@@ -135,7 +135,7 @@
       </b-dropdown>
       <b-button
         class="btn btn-small"
-        :data-bg-level="levelB"
+        :data-bg-level="hitAB === 'B' ? levelB : false"
         @click="hitAB = 'B'"
         >{{ termsB[0] }}</b-button
       >
@@ -301,5 +301,9 @@ export default {
   z-index: 10;
   overflow: scroll;
   margin-top: 0 !important;
+}
+.compare-search-subs.fullscreen >>> .youtube-video-wrapper {
+  max-width: calc((100vh - 9rem) * 16 / 9);
+  margin: 0 auto;
 }
 </style>

@@ -4,7 +4,7 @@
     <div class="text-center mt-3 mb-3" v-if="!checking && hits.length === 0">
       No hits.
     </div>
-    <div class="text-center" v-if="hits.length > 0">
+    <div class="text-center mt-2" v-if="hits.length > 0">
       <span
         class="mr-2 d-inline-block"
         style="position: relative; bottom: 3px"
