@@ -316,12 +316,9 @@ export default {
     for (let term of terms) {
       promises.push(
         $.getJSON(
-          `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${
-            '%' + term.replace(/\*/g, '%') + '%'
-          }${channelFilter}&filter[l2][eq]=${
-            langId
-          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
-            adminMode ? Date.now() : 0
+          `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'
+          }${channelFilter}&filter[l2][eq]=${langId
+          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${adminMode ? Date.now() : 0
           }`
         ).then((response) => {
           if (response && response.data && response.data.length > 0) {
@@ -339,12 +336,9 @@ export default {
       for (let term of terms) {
         promises.push(
           $.getJSON(
-            `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${
-              '%' + term.replace(/\*/g, '%') + '%'
-            }${channelFilter}&filter[l2][eq]=${
-              langId
-            }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${
-              adminMode ? Date.now() : 0
+            `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'
+            }${channelFilter}&filter[l2][eq]=${langId
+            }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${adminMode ? Date.now() : 0
             }`
           ).then((response) => {
             if (response && response.data && response.data.length > 0) {
@@ -372,10 +366,10 @@ export default {
               terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')
             ).test(
               video.subs_l2[index].line +
-                (terms[0].replace('*', '').includes('*') &&
+              (terms[0].replace('*', '').includes('*') &&
                 video.subs_l2[Number(index) + 1]
-                  ? ' ' + video.subs_l2[Number(index) + 1].line
-                  : '')
+                ? ' ' + video.subs_l2[Number(index) + 1].line
+                : '')
             ) &&
             (excludeTerms.length === 0 ||
               !new RegExp(excludeTerms.join('|')).test(
@@ -394,25 +388,27 @@ export default {
       if (!hit.leftContext) {
         let line =
           (hit.lineIndex > 0
-            ? hit.video.subs_l2[hit.lineIndex - 1].line
-            : '') + hit.video.subs_l2[hit.lineIndex].line
+            ? hit.video.subs_l2[hit.lineIndex - 1].line.trim()
+            : '') + hit.video.subs_l2[hit.lineIndex].line.trim()
         let regex = new RegExp(
           `(${terms
             .join('|')
             .replace(/[*]/g, '.+')
             .replace(/[_]/g, '.')}).*`
         )
-        hit.leftContext = line.replace(regex, '').split('').reverse().join('')
+        hit.leftContext = line.replace(regex, '').split('').reverse().join('').trim()
       }
       if (!hit.rightContext) {
-        let line = hit.video.subs_l2[hit.lineIndex].line
+        let line = hit.video.subs_l2[hit.lineIndex].line.trim() 
+        let next = hit.video.subs_l2[Number(hit.lineIndex) + 1]
+        if (next) line = line + next.line.trim()
         let regex = new RegExp(
           `.*(${terms
             .join('|')
             .replace(/[*]/g, '.+')
             .replace(/[_]/g, '.')})`
         )
-        hit.rightContext = line.replace(regex, '')
+        hit.rightContext = line.replace(regex, '').trim()
       }
     }
     return hits.sort((a, b) =>

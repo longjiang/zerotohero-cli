@@ -170,8 +170,8 @@
       </div>
     </div>
 
+    <!--
     <div class="container focus">
-      <!--
       <div class="row">
         <div class="col-sm-6">
           <Mistakes v-if="a" :text="a.bare" :key="aKey"></Mistakes>
@@ -181,7 +181,7 @@
         </div>
       </div>
       -->
-
+      <!--
       <div class="row" v-if="['ja', 'ko'].includes($l2.code)">
         <div class="col-sm-6">
           <Chinese
@@ -235,6 +235,7 @@
         </div>
       </div>
     </div>
+    -->
 
     <EntryCourseAd
       v-if="$l2 === 'zh' && a && b"

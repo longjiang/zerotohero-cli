@@ -176,6 +176,8 @@ export default {
       navigated: false,
       checking: true,
       videos: [],
+      contextLeft: [],
+      contextRight: [],
       Helper,
       fullscreen: false,
       excludeStr: '',
@@ -211,6 +213,7 @@ export default {
       this.$l2.id,
       this.$settings.adminMode
     )
+    this.collectContext()
     this.$emit('loaded', this.hits)
     this.checking = false
     this.bindKeys()
@@ -243,6 +246,20 @@ export default {
   methods: {
     startLineIndex(hit) {
       return hit.lineIndex
+    },
+    collectContext() {
+      let contextLeft = []
+      let contextRight = []
+      for (let hit of this.hits) {
+        contextLeft.push(hit.leftContext)
+        contextRight.push(hit.rightContext)
+      }
+      this.contextLeft = Helper.unique(contextLeft).sort((a, b) =>
+        a.localeCompare(b, 'zh-CN')
+      )
+      this.contextRight = Helper.unique(contextRight).sort((a, b) =>
+        a.localeCompare(b, 'zh-CN')
+      )
     },
     sortContextLeft() {
       this.hits = this.hits.sort((a, b) =>
@@ -371,8 +388,8 @@ export default {
   },
 }
 </script>
-<style scoped lang="scss">
-.fullscreen >>> .video-area {
+<style lang="scss">
+.search-subs.fullscreen .video-area {
   background: black;
 }
 .search-subs.fullscreen {
@@ -386,7 +403,7 @@ export default {
   overflow: scroll;
   margin-top: 0 !important;
 }
-.search-subs >>> .playlist-dropdown {
+.search-subs .playlist-dropdown {
   .playlist-dropdown-toggle {
     color: #a7a7a7;
     font-size: 0.8rem;
