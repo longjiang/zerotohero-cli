@@ -3,40 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <Loader class="mb-5" />
-          <p v-if="text.length > 0" class="mt-2 mb-5 hide-for-present">👇 Now, hover or tap on words 👇</p>
-          <div
-            v-if="text.length > 0"
-            :key="readerKey"
-            id="reader-annotated"
-            :class="{focus: true, present: presentMode}"
-            :style="`font-size: ${fontSize}rem; margin-bottom: 3rem;`"
-          >
-            <template 
-              v-for="line of marked
-                .trim()
-                .replace(/<(div|p|li|h1|h2|h3|h4|h5|h6)/g, '\n<$1')
-                .split('\n')">
-              <Annotate v-if="line.trim().length > 0" class="mb-3" tag="div" :showTranslate="true">
-                <span v-html="line.trim()" />
-              </Annotate>
-            </template>
-          </div>
-          <div class="text-right">
-            <button @click="smaller" class="btn btn-unstyled"><small>A</small></button>
-            <button @click="bigger" class="btn btn-unstyled" style="font-size:1.25rem;">A</button>
-            <button @click="togglePresentMode" class="btn btn-unstyled">Present Mode</button>
-          </div>
-          <div>
-            <textarea
-              id="reader-textarea"
-              class="form-control"
-              cols="30"
-              rows="5"
-              :placeholder="$t('Paste {l2} text here', {l2: $l2.name})"
-              v-model="text"
-            ></textarea>
-          </div>
+          <ReaderComp ref="reader" @readerTextChanged="save(text)"/>
         </div>
       </div>
       <h5 class="mt-5">Usage tips</h5>
@@ -56,7 +23,6 @@
       </div>
     </div>
     <!-- .container -->
-
     <!-- ANCHOR img/anchors/learn-this.png -->
     <div class="container-fluid learn-this-bar">
       <div class="container">
@@ -70,27 +36,18 @@
 </template>
 
 <script>
+import ReaderComp from '@/components/ReaderComp'
 import Helper from '@/lib/helper'
-import Marked from 'marked'
 
 
 export default {
   template: '#reader-template',
+  components: {
+    ReaderComp
+  },
   data() {
     return {
-      text: '',
-      annotated: false,
-      readerKey: 0, // used to force re-render this component
-      savedWordsKey: 0,
-      fontSize: 1,
-      presentMode: false,
-    }
-  },
-  computed: {
-    marked() {
-      return (
-        Marked(this.text.replace(/^ {4,}/gm, '')) || this.text // 4 spaces in a row would emit <code>!
-      )
+      text: ''
     }
   },
   watch: {
@@ -101,13 +58,11 @@ export default {
       }
     },
     text() {
-      this.readerKey++
-      this.save(this.text)
-    }
+      this.$refs.reader.text = this.text
+    },
   },
   mounted() {
     if (this.$route.name === 'reader') {
-      this.$store.dispatch('updateSavedWordsDisplay')
       this.route()
     }
   },
@@ -136,33 +91,6 @@ export default {
       saved[this.$l2.code] = text
       localStorage.setItem('zthReaderText', JSON.stringify(saved))
       localStorage.removeItem('fzhReaderText')
-    },
-    togglePresentMode() {
-      this.presentMode = !this.presentMode 
-    },
-    toggleButtons() {
-      this.buttons = !this.buttons 
-    },
-    smaller() {
-      this.fontSize = this.fontSize * 0.8
-    },
-    bigger() {
-      this.fontSize = this.fontSize * 1.25
-    },
-    reset() {
-      this.fontSize = 1
-    },
-    startClick() {
-      if (this.text) {
-        this.save(this.text)
-        this.readerKey++
-      }
-    },
-    show() {
-      const marked = Marked(this.text) || this.text
-      if (marked) {
-        $('#reader-annotated').html(marked)
-      }
     },
     async route() {
       let method = this.$route.params.method
