@@ -58,13 +58,8 @@
               </div>
             </div>
           </div>
-          <div class="container-fluid sticky" style="z-index: 3">
-            <div class="row">
-              <Nav />
-            </div>
-          </div>
+          <Nav />
         </div>
-        <SubNav class="pt-4" />
 
         <keep-alive>
           <router-view ref="routerView" id="main" />

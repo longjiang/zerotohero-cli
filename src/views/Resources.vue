@@ -66,7 +66,14 @@ export default {
   components: {
     ResourceList
   },
-  props: ['topic', 'type'],
+  props: {
+    topic: {
+      default: 'all'
+    },
+    type: {
+      default: 'all'
+    }
+  },
   data() {
     return {
       Config,
@@ -103,20 +110,25 @@ export default {
   },
   methods: {
     async route() {
+      let canonical = `/${this.$l1.code}/${this.$l2.code}/resource/list/${this.topic}/${this.type}`
       let filters = ''
-      if (this.topic !== 'all') {
-        filters += '&filter[topic][eq]=' + this.topic
+      if (this.$router.currentRoute.path !== canonical) {
+        this.$router.push({ path: canonical })
+      } else {
+        if (this.topic !== 'all') {
+          filters += '&filter[topic][eq]=' + this.topic
+        }
+        if (this.type !== 'all') {
+          filters += '&filter[type][eq]=' + this.type
+        }
+        let response = await $.getJSON(
+          `${Config.wiki}items/resources?filter[l2][eq]=${this.$l2.id}${filters}&fields=*,thumbnail.*`
+        )
+        this.resources = response.data.map(resource => {
+          resource.thumbnail = resource.thumbnail.data.full_url
+          return resource
+        }) || []
       }
-      if (this.type !== 'all') {
-        filters += '&filter[type][eq]=' + this.type
-      }
-      let response = await $.getJSON(
-        `${Config.wiki}items/resources?filter[l2][eq]=${this.$l2.id}${filters}&fields=*,thumbnail.*`
-      )
-      this.resources = response.data.map(resource => {
-        resource.thumbnail = resource.thumbnail.data.full_url
-        return resource
-      }) || []
     }
   },
   created() {

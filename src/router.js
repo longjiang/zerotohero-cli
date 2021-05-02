@@ -10,7 +10,7 @@ export default new Router({
         selector: to.hash
       }
     }
-    if (from.name === to.name || (['dictionary', 'compare'].includes(from.name) && ['dictionary', 'compare'].includes(to.name)) ) {
+    if ((from.name === to.name || (['dictionary', 'compare'].includes(from.name) && ['dictionary', 'compare'].includes(to.name))) && !from.path.endsWith('youtube/browse')) {
       return {
         selector: '.main'
       }
@@ -700,7 +700,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/resource/list/:topic/:type',
+      path: '/:l1/:l2/resource/list/:topic?/:type?',
       name: 'resources',
       component: () => import('./views/Resources.vue'),
       props: true,
