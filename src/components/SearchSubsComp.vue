@@ -4,7 +4,7 @@
     <div class="text-center mt-3 mb-3" v-if="!checking && hits.length === 0">
       No hits.
     </div>
-    <div class="mt-3 text-center" v-if="hits.length > 0">
+    <div class="mt-3 text-center mb-2" v-if="hits.length > 0">
       <span
         class="mr-2 d-inline-block"
         style="position: relative; bottom: 3px"
@@ -16,24 +16,19 @@
         @click="prevHit"
         :class="{ btn: true, 'btn-small': true, invisible: hitIndex === 0 }"
       >
-        <i class="fa fa-chevron-left" />
+        <i class="fas fa-step-backward" />
       </button>
+      <b-button @click="previousLine" class="btn btn-small"
+        ><i class="fa fa-chevron-left"
+      /></b-button>
+      <b-button @click="rewind" class="btn btn-small"
+        ><i class="fa fa-undo"
+      /></b-button>
       <span class="ml-0 btn-small mr-0" style="background: none"
         >{{ hitIndex + 1 }} of {{ hits.length }}</span
       >
-      <button
-        :disabled="hitIndex >= hits.length - 1"
-        @click="nextHit"
-        :class="{
-          btn: true,
-          'btn-small': true,
-          invisible: hitIndex >= hits.length - 1,
-        }"
-      >
-        <i class="fa fa-chevron-right" />
-      </button>
       <b-dropdown
-        class="m-md-2 primary playlist-dropdown"
+        class="primary playlist-dropdown"
         toggle-class="playlist-dropdown-toggle"
         boundary="viewport"
         no-caret
@@ -81,15 +76,20 @@
           ></b-dropdown-item>
         </template>
       </b-dropdown>
-      <b-button @click="previousLine" class="btn btn-small"
-        ><i class="fa fa-backward"
-      /></b-button>
-      <b-button @click="rewind" class="btn btn-small"
-        ><i class="fa fa-undo"
-      /></b-button>
       <b-button @click="nextLine" class="btn btn-small"
-        ><i class="fa fa-forward"
+        ><i class="fa fa-chevron-right"
       /></b-button>
+      <button
+        :disabled="hitIndex >= hits.length - 1"
+        @click="nextHit"
+        :class="{
+          btn: true,
+          'btn-small': true,
+          invisible: hitIndex >= hits.length - 1,
+        }"
+      >
+        <i class="fas fa-step-forward" />
+      </button>
       <input
         type="text"
         v-model.lazy="excludeStr"
@@ -167,6 +167,9 @@ export default {
     level: {
       type: String,
     },
+    keyboard: {
+      default: true
+    }
   },
   data() {
     return {
@@ -216,7 +219,7 @@ export default {
     this.collectContext()
     this.$emit('loaded', this.hits)
     this.checking = false
-    this.bindKeys()
+    if (this.keyboard) this.bindKeys()
   },
   activated() {
     setTimeout(() => {
@@ -224,7 +227,7 @@ export default {
     }, 800)
   },
   unmounted() {
-    this.unbindKeys()
+    if (this.keyboard) this.unbindKeys()
   },
   watch: {
     excludeStr() {
@@ -341,25 +344,25 @@ export default {
     keydown(e) {
       if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
         // left = 37
-        if (e.keyCode == 37) {
+        if (e.keyCode == 37 && e.shiftKey) {
           this.prevHit()
           e.preventDefault()
           return false
         }
         // right = 39
-        if (e.keyCode == 39) {
+        if (e.keyCode == 39 && e.shiftKey) {
           this.nextHit()
           e.preventDefault()
           return false
         }
-        // up = 38
-        if (e.keyCode == 38) {
+        // up = 38, left = 37
+        if (e.keyCode == 38 || e.keyCode == 37 && !e.shiftKey) {
           this.previousLine()
           e.preventDefault()
           return false
         }
-        // down = 40
-        if (e.keyCode == 40) {
+        // down = 40, right = 39
+        if (e.keyCode == 40 || e.keyCode == 39 && !e.shiftKey) {
           this.nextLine()
           e.preventDefault()
           return false

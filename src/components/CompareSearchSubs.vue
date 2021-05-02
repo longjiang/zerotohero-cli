@@ -114,6 +114,7 @@
       :terms="termsA"
       :key="`subs-search-${termsA[0]}`"
       @loaded="searchSubsALoaded"
+      :keyboard="false"
     />
     <SearchSubsComp
       :class="{ 'd-none': hitAB === 'A' }"
@@ -122,6 +123,7 @@
       :terms="termsB"
       :key="`subs-search-${termsB[0]}`"
       @loaded="searchSubsBLoaded"
+      :keyboard="false"
     />
 
   </div>
