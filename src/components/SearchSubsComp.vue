@@ -4,7 +4,7 @@
     <div class="text-center mt-3 mb-3" v-if="!checking && hits.length === 0">
       No hits.
     </div>
-    <div class="mt-3 text-center mb-2" v-if="hits.length > 0">
+    <div class="text-center" v-if="hits.length > 0">
       <span
         class="mr-2 d-inline-block"
         style="position: relative; bottom: 3px"
@@ -99,20 +99,20 @@
       />
       <router-link
         :to="`/${$l1.code}/${$l2.code}/youtube/view/${hits[hitIndex].video.youtube_id}/`"
-        class="btn btn-small"
+        class="btn btn-small pr-0"
         ><i class="fa fa-window-restore"
       /></router-link>
       <b-button
         class="btn btn-small search-subs-fullscreen"
         @click="toggleFullscreen"
-        v-if="!fullscreen"
+        v-if="!fullscreen && fullscreenToggle"
       >
         <i class="fas fa-expand"></i>
       </b-button>
       <b-button
         class="btn btn-small search-subs-close"
         @click="toggleFullscreen"
-        v-if="fullscreen"
+        v-if="fullscreen && fullscreenToggle"
       >
         <i class="fas fa-times" />
       </b-button>
@@ -168,6 +168,9 @@ export default {
       type: String,
     },
     keyboard: {
+      default: true
+    },
+    fullscreenToggle: {
       default: true
     }
   },

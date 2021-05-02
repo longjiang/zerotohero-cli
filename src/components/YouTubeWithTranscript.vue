@@ -22,7 +22,7 @@
     </div>
     <template v-if="layout === 'vertical'">
       <div  class="row video-area">
-        <div class="col-sm-12">
+        <div style="width: 100%">
           <div class="youtube-video-wrapper">
             <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="this.l2Lines.length > 0 ? this.l2Lines[startLineIndex].starttime : 0" :autoload="autoload" :autoplay="autoplay" />  
           </div>

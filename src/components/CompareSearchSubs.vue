@@ -1,8 +1,24 @@
 <template>
-  <div>
-    <div v-if="checkingA || checkingB" class="text-center mb-3 mt-3">Searching...</div>
-    <div v-if="!checkingA && !checkingB && hitsA.length === 0 && hitsB.length === 0" class="text-center mb-3 mt-3">No hits.</div>
-    <div :class="{ 'text-center' : true, 'search-subs' : true, 'd-none': checkingA || checkingB }">
+  <div :class="{ 'compare-search-subs': true, fullscreen }">
+    <div v-if="checkingA || checkingB" class="text-center mb-3 mt-3">
+      Searching...
+    </div>
+    <div
+      v-if="
+        !checkingA && !checkingB && hitsA.length === 0 && hitsB.length === 0
+      "
+      class="text-center mb-3 mt-3"
+    >
+      No hits.
+    </div>
+    <div
+      :class="{
+        'mt-2': true,
+        'text-center': true,
+        'search-subs': true,
+        'd-none': checkingA || checkingB,
+      }"
+    >
       <b-button
         class="mr-2 btn btn-small"
         :data-bg-level="levelA"
@@ -11,7 +27,7 @@
       >
 
       <b-dropdown
-        class="m-md-2 primary playlist-dropdown"
+        class="primary playlist-dropdown"
         toggle-class="playlist-dropdown-toggle"
         boundary="viewport"
         no-caret
@@ -19,14 +35,30 @@
         <template #button-content
           ><i class="fa fa-stream" /> Compare Hits</template
         >
-        <b-dropdown-item
-          ><button class="btn btn-small" @click.stop="sortContextLeft">
+        <b-dropdown-item class="text-center"
+          ><button
+            :class="{
+              btn: true,
+              'btn-small': true,
+              'bg-dark': sort === 'left',
+              'text-white': sort === 'left',
+            }"
+            @click.stop="sort = 'left'"
+          >
             Sort Left</button
-          ><button class="btn btn-small" @click.stop="sortContextRight">
+          ><button
+            :class="{
+              btn: true,
+              'btn-small': true,
+              'bg-dark': sort === 'right',
+              'text-white': sort === 'right',
+            }"
+            @click.stop="sort = 'right'"
+          >
             Sort Right
           </button></b-dropdown-item
         >
-        <template v-for="(hits, c) in hitsRight">
+        <template v-for="(hits, c) in sort === 'right' ? hitsRight : hitsLeft">
           <!--
           <b-dropdown-text
             :key="`comp-subs-dropdown-group-header-${c}`"
@@ -54,7 +86,7 @@
                   :key="`comp-subs-grouping-${c}-${index}-${ab}-1`"
                 >
                   <span
-                    v-if="hits[ab][index - 1].lineIndex > 0"
+                    v-if="sort === 'left' && hits[ab][index - 1].lineIndex > 0"
                     v-html="
                       hits[ab][index - 1].video.subs_l2[
                         Number(hits[ab][index - 1].lineIndex) - 1
@@ -77,8 +109,9 @@
                   />
                   <span
                     v-if="
+                      sort === 'right' &&
                       hits[ab][index - 1].lineIndex <
-                      hits[ab][index - 1].video.subs_l2.length - 1
+                        hits[ab][index - 1].video.subs_l2.length - 1
                     "
                     v-html="
                       hits[ab][index - 1].video.subs_l2[
@@ -106,6 +139,20 @@
         @click="hitAB = 'B'"
         >{{ termsB[0] }}</b-button
       >
+      <b-button
+        class="btn btn-small search-subs-fullscreen"
+        @click="toggleFullscreen"
+        v-if="!fullscreen"
+      >
+        <i class="fas fa-expand"></i>
+      </b-button>
+      <b-button
+        class="btn btn-small search-subs-close"
+        @click="toggleFullscreen"
+        v-if="fullscreen"
+      >
+        <i class="fas fa-times" />
+      </b-button>
     </div>
     <SearchSubsComp
       :class="{ 'd-none': hitAB === 'B' }"
@@ -115,6 +162,7 @@
       :key="`subs-search-${termsA[0]}`"
       @loaded="searchSubsALoaded"
       :keyboard="false"
+      :fullscreenToggle="false"
     />
     <SearchSubsComp
       :class="{ 'd-none': hitAB === 'A' }"
@@ -124,8 +172,8 @@
       :key="`subs-search-${termsB[0]}`"
       @loaded="searchSubsBLoaded"
       :keyboard="false"
+      :fullscreenToggle="false"
     />
-
   </div>
 </template>
 
@@ -165,9 +213,15 @@ export default {
       contextRight: [],
       contextLeft: [],
       Helper,
+      sort: 'right',
+      fullscreen: false,
     }
   },
   methods: {
+    toggleFullscreen() {
+      if (this.hitsA.length > 0 || this.hitsB.length > 0)
+        this.fullscreen = !this.fullscreen
+    },
     sortContextLeft() {},
     sortContextRight() {},
     goToHit(hitAB, hit) {
@@ -205,6 +259,16 @@ export default {
             : hit.rightContext === ''
         )
       }
+
+      for (let c of this.contextLeft) {
+        if (!this.hitsLeft[c.charAt(0)]) this.hitsLeft[c.charAt(0)] = {}
+        this.hitsLeft[c.charAt(0)].A = this.hitsA.filter((hit) =>
+          c.length > 0 ? hit.leftContext.startsWith(c) : hit.leftContext === ''
+        )
+        this.hitsLeft[c.charAt(0)].B = this.hitsB.filter((hit) =>
+          c.length > 0 ? hit.leftContext.startsWith(c) : hit.leftContext === ''
+        )
+      }
     },
     searchSubsALoaded() {
       this.hitsA = this.$refs.searchSubsA.hits
@@ -223,3 +287,19 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+.compare-search-subs.fullscreen >>> .search-subs .video-area {
+  background: black;
+}
+.compare-search-subs.fullscreen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 10;
+  overflow: scroll;
+  margin-top: 0 !important;
+}
+</style>

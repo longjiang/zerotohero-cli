@@ -146,6 +146,10 @@ export default {
               show: this.$hasFeature('dictionary'),
             },
             {
+              name: 'compare',
+              show: false
+            },
+            {
               name: 'saved-words',
               icon: 'fas fa-star',
               title: 'Saved',
