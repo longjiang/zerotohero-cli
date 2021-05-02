@@ -106,13 +106,13 @@
             <div class="widget-title">“{{ a.bare }}” and “{{ b.bare }}” in TV Shows</div>
             <div class="widget-body">
               <CompareSearchSubs
-                :levelA="a.hsk"
+                :levelA="a.newHSK && a.newHSK === '7-9' ? '7-9' : a.hsk"
                 :termsA="
                   a.simplified === a.traditional
                     ? [a.simplified]
                     : [a.simplified, a.traditional]
                 "
-                :levelB="b.hsk"
+                :levelB="b.newHSK && b.newHSK === '7-9' ? '7-9' : b.hsk"
                 :termsB="
                   b.simplified === b.traditional
                     ? [b.simplified]

@@ -48,7 +48,7 @@
         >
         <template v-for="(hit, index) in hits">
           <b-dropdown-item
-            @click.stop="goToHit(index)"
+            @click.stop="goToHitIndex(index)"
             :class="{ current: index === hitIndex }"
             :key="`dropdown-line-${index}`"
           >
@@ -305,7 +305,12 @@ export default {
       this.hitIndex = Math.min(this.hitIndex + 1, this.hits.length - 1)
       this.navigated = true
     },
-    goToHit(hitIndex) {
+    goToHit(hit) {
+      let index = this.hits.findIndex(h => h === hit)
+      this.hitIndex = index
+      this.navigated = true
+    },
+    goToHitIndex(hitIndex) {
       this.hitIndex = hitIndex
       this.navigated = true
       setTimeout(() => {

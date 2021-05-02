@@ -318,7 +318,7 @@ export default {
         $.getJSON(
           `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'
           }${channelFilter}&filter[l2][eq]=${langId
-          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${adminMode ? Date.now() : 0
+          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&limit=100&timestamp=${adminMode ? Date.now() : 0
           }`
         ).then((response) => {
           if (response && response.data && response.data.length > 0) {

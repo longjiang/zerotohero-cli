@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="text-center search-subs">
+    <div v-if="checkingA || checkingB" class="text-center mb-3 mt-3">Searching...</div>
+    <div v-if="!checkingA && !checkingB && hitsA.length === 0 && hitsB.length === 0" class="text-center mb-3 mt-3">No hits.</div>
+    <div :class="{ 'text-center' : true, 'search-subs' : true, 'd-none': checkingA || checkingB }">
       <b-button
         class="mr-2 btn btn-small"
         :data-bg-level="levelA"
@@ -24,7 +26,8 @@
             Sort Right
           </button></b-dropdown-item
         >
-        <template v-for="c in contextRight">
+        <template v-for="(hits, c) in hitsRight">
+          <!--
           <b-dropdown-text
             :key="`comp-subs-dropdown-group-header-${c}`"
             class="bg-dark text-white font-weight-bold"
@@ -36,77 +39,65 @@
               >
             </div>
           </b-dropdown-text>
-          <div
-            :set="
-              (hits = [
-                hitsA.filter((hit) =>
-                  c.length > 0
-                    ? hit.rightContext.startsWith(c)
-                    : hit.rightContext === ''
-                ),
-                hitsB.filter((hit) =>
-                  c.length > 0
-                    ? hit.rightContext.startsWith(c)
-                    : hit.rightContext === ''
-                ),
-              ])
-            "
+          -->
+          <b-dropdown-divider :key="`comp-subs-grouping-${c}-divider`" />
+          <b-dropdown-item
+            v-for="index in Math.max(hits.A.length, hits.B.length)"
+            :key="`comp-subs-grouping-${c}-${index}`"
           >
-            <b-dropdown-item
-              v-for="index in Math.max(hits[0].length, hits[1].length)"
-            >
-              <div style="display: flex">
-                <div style="flex: 1" v-if="hits[0][index - 1]">
+            <div style="display: flex">
+              <template v-for="ab in ['A', 'B']">
+                <div
+                  style="flex: 1"
+                  v-if="hits[ab][index - 1]"
+                  @click="goToHit(ab, hits[ab][index - 1])"
+                  :key="`comp-subs-grouping-${c}-${index}-${ab}-1`"
+                >
                   <span
-                    v-if="hits[0][index - 1].lineIndex > 0"
-                    v-html="hits[0][index - 1].video.subs_l2[Number(hits[0][index - 1].lineIndex) - 1].line"
+                    v-if="hits[ab][index - 1].lineIndex > 0"
+                    v-html="
+                      hits[ab][index - 1].video.subs_l2[
+                        Number(hits[ab][index - 1].lineIndex) - 1
+                      ].line
+                    "
                     style="margin-right: 0.5em; opacity: 0.5"
                   />
                   <span
                     v-html="
                       Helper.highlightMultiple(
-                        hits[0][index - 1].video.subs_l2[
-                              Number(hits[0][index - 1].lineIndex)
-                            ].line,
-                        termsA.map((term) => term),
-                        levelA
+                        hits[ab][index - 1].video.subs_l2[
+                          Number(hits[ab][index - 1].lineIndex)
+                        ].line,
+                        ab === 'A'
+                          ? termsA.map((term) => term)
+                          : termsB.map((term) => term),
+                        ab === 'A' ? levelA : levelB
                       )
                     "
                   />
                   <span
-                    v-if="hits[0][index - 1].lineIndex < hits[0][index - 1].video.subs_l2.length - 1"
-                    v-html="hits[0][index - 1].video.subs_l2[Number(hits[0][index - 1].lineIndex) + 1].line"
-                    style="margin-left: 0.5em; opacity: 0.5"
-                  ></span>
-                </div>
-                <div v-if="!hits[0][index - 1]" style="flex: 1">&nbsp;</div>
-                <div style="flex: 1" v-if="hits[1][index - 1]">
-                  <span
-                    v-if="hits[1][index - 1].lineIndex > 0"
-                    v-html="hits[1][index - 1].video.subs_l2[Number(hits[1][index - 1].lineIndex) - 1].line"
-                    style="margin-right: 0.5em; opacity: 0.5"
-                  />
-                  <span
+                    v-if="
+                      hits[ab][index - 1].lineIndex <
+                      hits[ab][index - 1].video.subs_l2.length - 1
+                    "
                     v-html="
-                      Helper.highlightMultiple(
-                        hits[1][index - 1].video.subs_l2[
-                              Number(hits[1][index - 1].lineIndex)
-                            ].line,
-                        termsB.map((term) => term),
-                        levelB
-                      )
+                      hits[ab][index - 1].video.subs_l2[
+                        Number(hits[ab][index - 1].lineIndex) + 1
+                      ].line
                     "
-                  />
-                  <span
-                    v-if="hits[1][index - 1].lineIndex < hits[1][index - 1].video.subs_l2.length - 1"
-                    v-html="hits[1][index - 1].video.subs_l2[Number(hits[1][index - 1].lineIndex) + 1].line"
                     style="margin-left: 0.5em; opacity: 0.5"
                   ></span>
                 </div>
-                <div v-if="!hits[1][index - 1]" style="flex: 1">&nbsp;</div>
-              </div>
-            </b-dropdown-item>
-          </div>
+                <div
+                  v-if="!hits[ab][index - 1]"
+                  style="flex: 1"
+                  :key="`comp-subs-grouping-${c}-${index}-${ab}-2`"
+                >
+                  &nbsp;
+                </div>
+              </template>
+            </div>
+          </b-dropdown-item>
         </template>
       </b-dropdown>
       <b-button
@@ -132,6 +123,7 @@
       :key="`subs-search-${termsB[0]}`"
       @loaded="searchSubsBLoaded"
     />
+
   </div>
 </template>
 
@@ -164,6 +156,8 @@ export default {
       hitIndexB: 0,
       hitsA: [],
       hitsB: [],
+      hitsRight: {},
+      hitsLeft: {},
       checkingA: true,
       checkingB: true,
       contextRight: [],
@@ -174,6 +168,14 @@ export default {
   methods: {
     sortContextLeft() {},
     sortContextRight() {},
+    goToHit(hitAB, hit) {
+      this.hitAB = hitAB
+      if (hitAB === 'A') this.$refs.searchSubsA.goToHit(hit)
+      if (hitAB === 'B') this.$refs.searchSubsB.goToHit(hit)
+      setTimeout(() => {
+        document.activeElement.blur()
+      }, 100)
+    },
     collectContext() {
       let contextLeft = this.$refs.searchSubsA.contextLeft
         .concat(this.$refs.searchSubsB.contextLeft)
@@ -187,6 +189,20 @@ export default {
       this.contextRight = Helper.unique(contextRight).sort((a, b) =>
         a.localeCompare(b, 'zh-CN')
       )
+
+      for (let c of this.contextRight) {
+        if (!this.hitsRight[c.charAt(0)]) this.hitsRight[c.charAt(0)] = {}
+        this.hitsRight[c.charAt(0)].A = this.hitsA.filter((hit) =>
+          c.length > 0
+            ? hit.rightContext.startsWith(c)
+            : hit.rightContext === ''
+        )
+        this.hitsRight[c.charAt(0)].B = this.hitsB.filter((hit) =>
+          c.length > 0
+            ? hit.rightContext.startsWith(c)
+            : hit.rightContext === ''
+        )
+      }
     },
     searchSubsALoaded() {
       this.hitsA = this.$refs.searchSubsA.hits
