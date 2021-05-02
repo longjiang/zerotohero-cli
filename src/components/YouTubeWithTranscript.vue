@@ -2,8 +2,11 @@
   <div class="container-fluid">
     <div v-if="layout === 'horizontal'" class="row">
       <div class="youtube-video-column col-md-6 sticky">
-        <div class="youtube-video-wrapper sticky pt-3 pb-3 bg-white" :key="'youtube-' + youtube">
-          <YouTubeVideo ref="youtube" :youtube="youtube"/>
+        <div
+          class="youtube-video-wrapper sticky pt-3 pb-3 bg-white"
+          :key="'youtube-' + youtube"
+        >
+          <YouTubeVideo ref="youtube" :youtube="youtube" :speed="speed" />
         </div>
       </div>
       <div class="col-md-6" :key="'transcript-' + youtube">
@@ -21,10 +24,21 @@
       </div>
     </div>
     <template v-if="layout === 'vertical'">
-      <div  class="row video-area">
+      <div class="row video-area">
         <div style="width: 100%">
           <div class="youtube-video-wrapper">
-            <YouTubeVideo ref="youtube" :youtube="youtube" :starttime="this.l2Lines.length > 0 ? this.l2Lines[startLineIndex].starttime : 0" :autoload="autoload" :autoplay="autoplay" />  
+            <YouTubeVideo
+              ref="youtube"
+              :speed="speed"
+              :youtube="youtube"
+              :starttime="
+                this.l2Lines.length > 0
+                  ? this.l2Lines[startLineIndex].starttime
+                  : 0
+              "
+              :autoload="autoload"
+              :autoplay="autoplay"
+            />
           </div>
         </div>
       </div>
@@ -60,50 +74,53 @@ import SyncedTranscript from '@/components/SyncedTranscript'
 export default {
   props: {
     youtube: {
-      type: String
+      type: String,
     },
     l1Lines: {
-      type: Array
+      type: Array,
     },
     l2Lines: {
-      type: Array
+      type: Array,
     },
     sticky: {
-      default: false
+      default: false,
     },
     layout: {
       type: String,
-      default: 'horizontal' // or 'vertical'
+      default: 'horizontal', // or 'vertical'
+    },
+    speed: {
+      type: Number,
+      default: 1,
     },
     highlight: {
-      type: Array
+      type: Array,
     },
     quiz: {
-      default: false
+      default: false,
     },
     hsk: {
-      default: 'outside'
+      default: 'outside',
     },
     autoload: {
-      default: false
+      default: false,
     },
     autoplay: {
-      default: false
+      default: false,
     },
     startLineIndex: {
-      default: 0
+      default: 0,
     },
     stopLineIndex: {
-      default: -1
-    }
+      default: -1,
+    },
   },
   data() {
-    return {
-    }
+    return {}
   },
   components: {
     YouTubeVideo,
-    SyncedTranscript
+    SyncedTranscript,
   },
   methods: {
     previousLine() {
@@ -122,13 +139,13 @@ export default {
       this.$refs.youtube.play()
     },
     getHighlightStartTime(term) {
-      let matchedLines = this.l2Lines.filter(line => line.line.includes(term))
+      let matchedLines = this.l2Lines.filter((line) => line.line.includes(term))
       if (matchedLines.length > 0) {
         return matchedLines[0].starttime
       }
     },
     getHighlightLineIndex(term) {
-      return this.l2Lines.findIndex(line => line.line.includes(term))
+      return this.l2Lines.findIndex((line) => line.line.includes(term))
     },
     seekYouTube(starttime) {
       this.$refs.youtube.seek(starttime)
@@ -159,8 +176,7 @@ export default {
         this.paused = this.$refs.youtube.paused
       }
     }, 100)
-  }
-
+  },
 }
 </script>
 

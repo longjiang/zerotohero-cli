@@ -90,6 +90,12 @@
       >
         <i class="fas fa-step-forward" />
       </button>
+      <b-button
+        :class="{'btn': true, 'btn-small': true, 'bg-secondary text-white': speed === 0.75, 'bg-dark text-white': speed === 0.5, }"
+        @click="speed = speed === 1 ? 0.75 : speed === 0.75 ? 0.5 : 1"
+      >
+        {{speed === 1 ? '慢' : speed + 'x'}}
+      </b-button>
       <input
         type="text"
         v-model.lazy="excludeStr"
@@ -125,6 +131,7 @@
         layout="vertical"
         :highlight="terms"
         :hsk="level"
+        :speed="speed"
         :startLineIndex="startLineIndex(hit)"
         :stopLineIndex="Number(hit.lineIndex)"
         :autoload="Helper.iOS() || navigated"
@@ -188,6 +195,7 @@ export default {
       fullscreen: false,
       excludeStr: '',
       excludeArr: [],
+      speed: 1,
       youglishLang: {
         zh: 'chinese',
         en: 'english',

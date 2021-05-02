@@ -3,7 +3,7 @@
     <div
       v-bind:style="{
         backgroundImage:
-          'url(' + '//img.youtube.com/vi/' + youtube + '/hqdefault.jpg' + ')'
+          'url(' + '//img.youtube.com/vi/' + youtube + '/hqdefault.jpg' + ')',
       }"
       class="youtube-screen"
       v-on:click="loadYouTubeiFrame()"
@@ -23,37 +23,41 @@ export default {
       time: this.starttime,
       paused: true,
       neverPlayed: true,
-      player: undefined
+      player: undefined,
     }
   },
   props: {
     youtube: {
-      type: String
+      type: String,
     },
     starttime: {
       type: Number,
-      default: 0
+      default: 0,
     },
     stoptime: {
       type: Number,
-      default: -1
+      default: -1,
     },
     autoload: {
-      default: false
+      default: false,
     },
     autoplay: {
-      default: false
-    }
+      default: false,
+    },
+    speed: {
+      type: Number,
+      default: 1,
+    },
   },
   mounted() {
     // eslint-disable-next-line no-unused-vars
-    window.onYouTubePlayerAPIReady = function() {
+    window.onYouTubePlayerAPIReady = function () {
       // This needs to be in global scope as YouTube api will call it
       // This function is overwridden from the app.loadYouTubeiFrame() function
     }
 
     // eslint-disable-next-line no-unused-vars
-    window.onPlayerReady = function(evt) {
+    window.onPlayerReady = function (evt) {
       // Required by YouTube API
     }
     if (this.autoload) {
@@ -79,7 +83,6 @@ export default {
       // $('.youtube iframe').remove();
       this.removeYouTubeAPIVars()
       window.onYouTubePlayerAPIReady = () => {
-        
         // eslint-disable-next-line no-undef
         that.player = new YT.Player(this.youtubeIframeID, {
           height: '390',
@@ -91,22 +94,26 @@ export default {
             controls: 1,
             showinfo: 0,
             playsinline: 1,
-            rel: 0
+            rel: 0,
           },
-          onReady: () => {
-          },
+          onReady: () => {},
           events: {
-            'onStateChange': () => {
+            onStateChange: () => {
               if (this.player && this.player.getPlayerState) {
                 this.paused = this.player.getPlayerState() !== 1
               }
-              
-              if (!Helper.iOS() && !this.autoplay && this.autoload && this.neverPlayed) {
+              this.player.setPlaybackRate(this.speed)
+              if (
+                !Helper.iOS() &&
+                !this.autoplay &&
+                this.autoload &&
+                this.neverPlayed
+              ) {
                 this.pause()
                 this.neverPlayed = false
               }
             },
-            'onError': async (event) => {
+            onError: async (event) => {
               /*
               if ([100, 150].includes(event.data)) {
                 window.removedIDs = window.removedIDs || []
@@ -144,7 +151,7 @@ export default {
               }
               */
             },
-          }
+          },
         })
       }
       $.getScript('//www.youtube.com/iframe_api')
@@ -158,9 +165,9 @@ export default {
           'yt',
           'ytDomDomGetNextId',
           'ytEventsEventsListeners',
-          'ytEventsEventsCounter'
+          'ytEventsEventsCounter',
         ]
-        vars.forEach(function(key) {
+        vars.forEach(function (key) {
           window[key] = undefined
         })
       }
@@ -183,13 +190,24 @@ export default {
         this.paused = this.player.getPlayerState() !== 1
       }
     },
+    setSpeed(speed) {
+      this.speed = speed
+      if (this.player) this.player.setPlaybackRate(this.speed)
+    },
     togglePaused() {
       if (this.player && this.player.getPlayerState) {
-        this.player.getPlayerState() !== 1 ? this.player.playVideo() : this.player.pauseVideo()
+        this.player.getPlayerState() !== 1
+          ? this.player.playVideo()
+          : this.player.pauseVideo()
         this.paused = this.player.getPlayerState() !== 1
       } else {
         this.loadYouTubeiFrame()
       }
+    },
+  },
+  watch: {
+    speed() {
+      this.setSpeed(this.speed)
     }
   }
 }
