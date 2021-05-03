@@ -54,11 +54,12 @@
             Sort Right
           </button></b-dropdown-item
         >
-        <template v-for="(hits, c) in sort === 'right' ? hitsRight : hitsLeft">
+        <template v-for="(theseHits, c) in sort === 'right' ? hitsRight : hitsLeft">
           <b-dropdown-divider :key="`comp-subs-grouping-${c}-divider`" />
-          <template v-for="(hit, index) in hits">
+          <template v-for="(hit, index) in theseHits">
             <b-dropdown-item
               @click.stop="goToHit(hit)"
+              :class="{current: hit === hits[hitIndex]}"
               :key="`dropdown-line-${c}-${index}`"
             >
               <img
