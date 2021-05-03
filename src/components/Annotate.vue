@@ -162,7 +162,7 @@ export default {
       }
     },
     async annotateRecursive(node) {
-      if (node.classList.contains('sentence')) {
+      if (node && node.classList && node.classList.contains('sentence')) {
         // .sentence node
         let sentence = node.innerText
         let html = await this.tokenize(sentence, this.batchId)

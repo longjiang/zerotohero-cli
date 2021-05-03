@@ -43,7 +43,7 @@
               'bg-dark': sort === 'left',
               'text-white': sort === 'left',
             }"
-            @click.stop="sort = 'left'"
+            @click.stop="sortContextLeft"
           >
             Sort Left</button
           ><button
@@ -53,7 +53,7 @@
               'bg-dark': sort === 'right',
               'text-white': sort === 'right',
             }"
-            @click.stop="sort = 'right'"
+            @click.stop="sortContextRight"
           >
             Sort Right
           </button></b-dropdown-item
@@ -222,8 +222,14 @@ export default {
       if (this.hitsA.length > 0 || this.hitsB.length > 0)
         this.fullscreen = !this.fullscreen
     },
-    sortContextLeft() {},
-    sortContextRight() {},
+    sortContextLeft(e) {
+      this.sort = 'left'
+      e.preventDefault()
+    },
+    sortContextRight(e) {
+      this.sort = 'right'
+      e.preventDefault()
+    },
     goToHit(hitAB, hit) {
       this.hitAB = hitAB
       if (hitAB === 'A') this.$refs.searchSubsA.goToHit(hit)

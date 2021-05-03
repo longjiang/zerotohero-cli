@@ -5,10 +5,7 @@
       No hits.
     </div>
     <div class="text-center mt-2" v-if="hits.length > 0">
-      <span
-        class="mr-2 d-inline-block"
-        style="position: relative; bottom: 3px"
-      >
+      <span class="mr-2 d-inline-block" style="position: relative; bottom: 3px">
         <strong :data-level="level">{{ terms[0] }}</strong>
       </span>
       <button
@@ -35,45 +32,63 @@
       >
         <template #button-content><i class="fa fa-stream" /></template>
         <b-dropdown-item
-          ><button class="btn btn-small" @click.stop="sortContextLeft">
+          ><button
+            :class="{
+              btn: true,
+              'btn-small': true,
+              'bg-dark': sort === 'left',
+              'text-white': sort === 'left',
+            }"
+            @click.stop="sortContextLeft"
+          >
             Sort Left</button
-          ><button class="btn btn-small" @click.stop="sortContextRight">
+          ><button
+            :class="{
+              btn: true,
+              'btn-small': true,
+              'bg-dark': sort === 'right',
+              'text-white': sort === 'right',
+            }"
+            @click.stop="sortContextRight"
+          >
             Sort Right
           </button></b-dropdown-item
         >
-        <template v-for="(hit, index) in hits">
-          <b-dropdown-item
-            @click.stop="goToHitIndex(index)"
-            :class="{ current: index === hitIndex }"
-            :key="`dropdown-line-${index}`"
-          >
-            <Annotate
-              :phonetics="false"
-              :popup="false"
-              :key="`dropdown-line-${index}-annotate-${
-                hit.video.subs_l2[Number(hit.lineIndex)].line
-              }`"
-              ><span
-                v-if="hit.lineIndex > 0"
-                v-html="hit.video.subs_l2[Number(hit.lineIndex) - 1].line"
-                style="margin-right: 0.5em; opacity: 0.5"
-              ></span
-              ><span
-                v-html="
-                  Helper.highlightMultiple(
-                    hit.video.subs_l2[Number(hit.lineIndex)].line,
-                    terms.map((term) => term),
-                    level
-                  )
-                "
-                class="font-weight-bold"
-              ></span
-              ><span
-                v-if="hit.lineIndex < hit.video.subs_l2.length - 1"
-                v-html="hit.video.subs_l2[Number(hit.lineIndex) + 1].line"
-                style="margin-left: 0.5em; opacity: 0.5"
-              ></span></Annotate
-          ></b-dropdown-item>
+        <template v-for="(hits, c) in sort === 'right' ? hitsRight : hitsLeft">
+          <b-dropdown-divider :key="`comp-subs-grouping-${c}-divider`" />
+          <template v-for="(hit, index) in hits">
+            <b-dropdown-item
+              @click.stop="goToHit(hit)"
+              :key="`dropdown-line-${c}-${index}`"
+            >
+              <Annotate
+                :phonetics="false"
+                :popup="false"
+                :key="`dropdown-line-${index}-annotate-${
+                  hit.video.subs_l2[Number(hit.lineIndex)].line
+                }`"
+                ><span
+                  v-if="sort === 'left' && hit.lineIndex > 0"
+                  v-html="hit.video.subs_l2[Number(hit.lineIndex) - 1].line"
+                  style="margin-right: 0.5em; opacity: 0.5"
+                ></span
+                ><span
+                  v-html="
+                    Helper.highlightMultiple(
+                      hit.video.subs_l2[Number(hit.lineIndex)].line,
+                      terms.map((term) => term),
+                      level
+                    )
+                  "
+                  class="font-weight-bold"
+                ></span
+                ><span
+                  v-if="sort === 'right' && hit.lineIndex < hit.video.subs_l2.length - 1"
+                  v-html="hit.video.subs_l2[Number(hit.lineIndex) + 1].line"
+                  style="margin-left: 0.5em; opacity: 0.5"
+                ></span></Annotate
+            ></b-dropdown-item>
+          </template>
         </template>
       </b-dropdown>
       <b-button @click="nextLine" class="btn btn-small"
@@ -91,10 +106,15 @@
         <i class="fas fa-step-forward" />
       </button>
       <b-button
-        :class="{'btn': true, 'btn-small': true, 'bg-secondary text-white': speed === 0.75, 'bg-dark text-white': speed === 0.5, }"
+        :class="{
+          btn: true,
+          'btn-small': true,
+          'bg-secondary text-white': speed === 0.75,
+          'bg-dark text-white': speed === 0.5,
+        }"
         @click="speed = speed === 1 ? 0.75 : speed === 0.75 ? 0.5 : 1"
       >
-        {{speed === 1 ? '慢' : speed + 'x'}}
+        {{ speed === 1 ? '慢' : speed + 'x' }}
       </b-button>
       <input
         type="text"
@@ -175,15 +195,17 @@ export default {
       type: String,
     },
     keyboard: {
-      default: true
+      default: true,
     },
     fullscreenToggle: {
-      default: true
-    }
+      default: true,
+    },
   },
   data() {
     return {
       hits: [],
+      hitsRight: {},
+      hitsLeft: {},
       excludeTerms: [],
       hitIndex: 0,
       navigated: false,
@@ -196,6 +218,7 @@ export default {
       excludeStr: '',
       excludeArr: [],
       speed: 1,
+      sort: 'right',
       youglishLang: {
         zh: 'chinese',
         en: 'english',
@@ -218,7 +241,9 @@ export default {
   async mounted() {
     this.checking
     if (this.$l2.code === 'zh' && this.terms[0].length === 1) {
-      this.excludeTerms = await (await this.$dictionary).getWordsWithCharacter(this.terms[0])
+      this.excludeTerms = await (await this.$dictionary).getWordsWithCharacter(
+        this.terms[0]
+      )
     }
     this.hits = await YouTube.searchSubs(
       this.terms,
@@ -255,6 +280,8 @@ export default {
       }
       this.hitIndex = 0
       this.hits = hits
+      this.collectContext()
+      this.$emit('updated', this.hits)
     },
   },
   methods: {
@@ -274,16 +301,36 @@ export default {
       this.contextRight = Helper.unique(contextRight).sort((a, b) =>
         a.localeCompare(b, 'zh-CN')
       )
+
+      for (let c of this.contextRight.map((s) => s.charAt(0))) {
+        if (!this.hitsRight[c.charAt(0)]) this.hitsRight[c.charAt(0)] = {}
+        this.hitsRight[c.charAt(0)] = this.hits.filter((hit) =>
+          c.length > 0
+            ? hit.rightContext.startsWith(c)
+            : hit.rightContext === ''
+        )
+      }
+
+      for (let c of this.contextLeft.map((s) => s.charAt(0))) {
+        if (!this.hitsLeft[c.charAt(0)]) this.hitsLeft[c.charAt(0)] = {}
+        this.hitsLeft[c.charAt(0)] = this.hits.filter((hit) =>
+          c.length > 0 ? hit.leftContext.startsWith(c) : hit.leftContext === ''
+        )
+      }
     },
-    sortContextLeft() {
+    sortContextLeft(e) {
       this.hits = this.hits.sort((a, b) =>
         a.leftContext.localeCompare(b.leftContext, 'zh-CN')
       )
+      this.sort = 'left'
+      e.preventDefault()
     },
-    sortContextRight() {
+    sortContextRight(e) {
       this.hits = this.hits.sort((a, b) =>
         a.rightContext.localeCompare(b.rightContext, 'zh-CN')
       )
+      this.sort = 'right'
+      e.preventDefault()
     },
     previousLine() {
       this.$refs.youtube.previousLine()
@@ -320,9 +367,12 @@ export default {
       this.navigated = true
     },
     goToHit(hit) {
-      let index = this.hits.findIndex(h => h === hit)
+      let index = this.hits.findIndex((h) => h === hit)
       this.hitIndex = index
       this.navigated = true
+      setTimeout(() => {
+        document.activeElement.blur()
+      }, 100)
     },
     goToHitIndex(hitIndex) {
       this.hitIndex = hitIndex
@@ -353,7 +403,10 @@ export default {
       document.removeEventListener('keydown', this.keydown)
     },
     keydown(e) {
-      if (!['INPUT', 'TEXTAREA'].includes(e.target.tagName.toUpperCase()) && !e.metaKey) {
+      if (
+        !['INPUT', 'TEXTAREA'].includes(e.target.tagName.toUpperCase()) &&
+        !e.metaKey
+      ) {
         // left = 37
         if (e.keyCode == 37 && e.shiftKey) {
           this.prevHit()
@@ -367,13 +420,13 @@ export default {
           return false
         }
         // up = 38, left = 37
-        if (e.keyCode == 38 || e.keyCode == 37 && !e.shiftKey) {
+        if (e.keyCode == 38 || (e.keyCode == 37 && !e.shiftKey)) {
           this.previousLine()
           e.preventDefault()
           return false
         }
         // down = 40, right = 39
-        if (e.keyCode == 40 || e.keyCode == 39 && !e.shiftKey) {
+        if (e.keyCode == 40 || (e.keyCode == 39 && !e.shiftKey)) {
           this.nextLine()
           e.preventDefault()
           return false

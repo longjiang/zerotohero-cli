@@ -5,7 +5,7 @@ Vue.use(Router)
 
 export default new Router({
   scrollBehavior(to, from, savedPosition) {
-    if (to.hash) {
+    if (to.hash && to.hash !== '#') {
       return {
         selector: to.hash
       }
