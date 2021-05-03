@@ -30,6 +30,7 @@
         class="primary playlist-dropdown"
         toggle-class="playlist-dropdown-toggle"
         boundary="viewport"
+        ref="dropdown"
         no-caret
       >
         <template #button-content
@@ -76,54 +77,67 @@
           <b-dropdown-item
             v-for="index in Math.max(hits.A.length, hits.B.length)"
             :key="`comp-subs-grouping-${c}-${index}`"
+            @click="hits.A[index - 1] ? goToHit('A', hits.A[index - 1]) : hits.B[index - 1] ? goToHit('B', hits.B[index - 1]) : false"
           >
             <div style="display: flex">
               <template v-for="ab in ['A', 'B']">
                 <div
-                  style="flex: 1"
+                  :style="`flex: 1; margin-right: ${
+                    ab === 'A' ? '1rem' : 0
+                  }; display: flex;`"
                   v-if="hits[ab][index - 1]"
-                  @click="goToHit(ab, hits[ab][index - 1])"
+                  @click.stop.prevent="goToHit(ab, hits[ab][index - 1])"
+                  :set="(hit = hits[ab][index - 1])"
                   :key="`comp-subs-grouping-${c}-${index}-${ab}-1`"
                 >
-                  <span
-                    v-if="sort === 'left' && hits[ab][index - 1].lineIndex > 0"
-                    v-html="
-                      hits[ab][index - 1].video.subs_l2[
-                        Number(hits[ab][index - 1].lineIndex) - 1
-                      ].line
-                    "
-                    style="margin-right: 0.5em; opacity: 0.5"
-                  />
-                  <span
-                    v-html="
-                      Helper.highlightMultiple(
-                        hits[ab][index - 1].video.subs_l2[
-                          Number(hits[ab][index - 1].lineIndex)
-                        ].line,
-                        ab === 'A'
-                          ? termsA.map((term) => term)
-                          : termsB.map((term) => term),
-                        ab === 'A' ? levelA : levelB
-                      )
-                    "
-                  />
-                  <span
-                    v-if="
-                      sort === 'right' &&
-                      hits[ab][index - 1].lineIndex <
-                        hits[ab][index - 1].video.subs_l2.length - 1
-                    "
-                    v-html="
-                      hits[ab][index - 1].video.subs_l2[
-                        Number(hits[ab][index - 1].lineIndex) + 1
-                      ].line
-                    "
-                    style="margin-left: 0.5em; opacity: 0.5"
-                  ></span>
+                  <div>
+                    <img
+                      class="hit-thumb"
+                      style="margin-top: 0.2rem"
+                      v-if="ab === 'A' && hit"
+                      :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
+                      :alt="hit.video.title"
+                    />
+                  </div>
+                  <div style="flex: 1">
+                    <span
+                      v-if="sort === 'left' && hit.lineIndex > 0"
+                      v-html="hit.video.subs_l2[Number(hit.lineIndex) - 1].line"
+                      style="margin-right: 0.5em; opacity: 0.5"
+                    />
+                    <span
+                      v-html="
+                        Helper.highlightMultiple(
+                          hit.video.subs_l2[Number(hit.lineIndex)].line,
+                          ab === 'A'
+                            ? termsA.map((term) => term)
+                            : termsB.map((term) => term),
+                          ab === 'A' ? levelA : levelB
+                        )
+                      "
+                    />
+                    <span
+                      v-if="
+                        sort === 'right' &&
+                        hit.lineIndex < hit.video.subs_l2.length - 1
+                      "
+                      v-html="hit.video.subs_l2[Number(hit.lineIndex) + 1].line"
+                      style="margin-left: 0.5em; opacity: 0.5"
+                    ></span>
+                  </div>
+                  <div style="margin-left: 1rem;">
+                    <img
+                      class="hit-thumb"
+                      style="margin-top: 0.2rem"
+                      v-if="ab === 'B' && hit"
+                      :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
+                      :alt="hit.video.title"
+                    />
+                  </div>
                 </div>
                 <div
                   v-if="!hits[ab][index - 1]"
-                  style="flex: 1"
+                  style="flex: 1; margin-right: 1rem;"
                   :key="`comp-subs-grouping-${c}-${index}-${ab}-2`"
                 >
                   &nbsp;
@@ -230,10 +244,11 @@ export default {
       this.sort = 'right'
       e.preventDefault()
     },
-    goToHit(hitAB, hit) {
+    goToHit(hitAB, hit, e = false) {
       this.hitAB = hitAB
       if (hitAB === 'A') this.$refs.searchSubsA.goToHit(hit)
       if (hitAB === 'B') this.$refs.searchSubsB.goToHit(hit)
+      this.$refs.dropdown.hide()
       setTimeout(() => {
         document.activeElement.blur()
       }, 100)
