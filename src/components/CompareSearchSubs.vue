@@ -60,14 +60,9 @@
           </button></b-dropdown-item
         >
         <template
-          v-for="c in sort === 'right' ? groupIndexRight : groupIndexLeft"
+          v-for="group in sort === 'right' ? groupIndexRight : groupIndexLeft"
         >
-          <div
-            :set="
-              (theseHits = sort === 'right' ? groupsRight[c] : groupsLeft[c])
-            "
-            :key="`compare-subs-grouping-${sort}-${c}`"
-          >
+          <div :key="`compare-subs-grouping-${sort}-${group.c}`">
             <!--
           <b-dropdown-text
             :key="`comp-subs-dropdown-group-header-${c}`"
@@ -81,15 +76,20 @@
             </div>
           </b-dropdown-text>
           -->
-            <b-dropdown-divider :key="`comp-subs-grouping-${c}-divider`" />
+            <b-dropdown-divider
+              :key="`comp-subs-grouping-${group.c}-divider`"
+            />
             <b-dropdown-item
-              v-for="index in Math.max(theseHits.A.length, theseHits.B.length)"
-              :key="`comp-subs-grouping-${c}-${index}`"
+              v-for="index in Math.max(
+                group.hits.A.length,
+                group.hits.B.length
+              )"
+              :key="`comp-subs-grouping-${group.c}-${index}`"
               @click="
-                theseHits.A[index - 1]
-                  ? goToHit('A', theseHits.A[index - 1])
-                  : theseHits.B[index - 1]
-                  ? goToHit('B', theseHits.B[index - 1])
+                group.hits.A[index - 1]
+                  ? goToHit('A', group.hits.A[index - 1])
+                  : group.hits.B[index - 1]
+                  ? goToHit('B', group.hits.B[index - 1])
                   : false
               "
             >
@@ -99,17 +99,17 @@
                     :style="`flex: 1; margin-right: ${
                       ab === 'A' ? '1rem' : 0
                     }; display: flex;`"
-                    v-if="theseHits[ab][index - 1]"
+                    v-if="group.hits[ab][index - 1]"
                     @click.stop.prevent="
                       goToHit(
                         ab,
                         sort === 'right'
-                          ? groupsRight[c][ab][index - 1]
-                          : groupsLeft[c][ab][index - 1]
+                          ? group.hits[ab][index - 1]
+                          : group.hits[ab][index - 1]
                       )
                     "
-                    :set="(hit = theseHits[ab][index - 1])"
-                    :key="`comp-subs-grouping-${c}-${index}-${ab}-1`"
+                    :set="(hit = group.hits[ab][index - 1])"
+                    :key="`comp-subs-grouping-${group.c}-${index}-${ab}-1`"
                   >
                     <div>
                       <img
@@ -169,9 +169,9 @@
                     </div>
                   </div>
                   <div
-                    v-if="!theseHits[ab][index - 1]"
+                    v-if="!group.hits[ab][index - 1]"
                     style="flex: 1; margin-right: 1rem"
-                    :key="`comp-subs-grouping-${c}-${index}-${ab}-2`"
+                    :key="`comp-subs-grouping-${group.c}-${index}-${ab}-2`"
                   >
                     &nbsp;
                   </div>
@@ -351,10 +351,15 @@ export default {
     sortGroupIndex(group) {
       let index = []
       for (let c in group) {
-        index.push({ c, length: group[c].A.length + group[c].B.length })
+        index.push({ c, hits: group[c] })
       }
-      index = index.sort((a, b) => b.length - a.length)
-      return index.map((i) => i.c)
+      index = index.sort(
+        (a, b) =>
+          b.hits.A.length +
+          b.hits.B.length -
+          (a.hits.A.length + a.hits.B.length)
+      )
+      return index
     },
     groupContext(context, leftOrRight) {
       let groups = {}
