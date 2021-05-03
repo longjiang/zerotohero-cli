@@ -4,7 +4,7 @@
       v-for="playlist of playlists"
       class="youtube-playlist media rounded shadow"
     >
-      <a :href="`/${$l1.code}/${$l2.code}/youtube/playlist/${playlist.id}`" class="playlist-link">
+      <router-link :to="`/${$l1.code}/${$l2.code}/youtube/playlist/${playlist.id}`" class="playlist-link">
         <div class="youtube-thumbnail-wrapper aspect-wrapper">
           <img :src="playlist.thumbnail" class="youtube-thumbnail aspect" />
         </div>
@@ -14,7 +14,7 @@
             {{ playlist.count }} video{{ playlist.count > 1 ? 's' : '' }}
           </div>
         </div>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>

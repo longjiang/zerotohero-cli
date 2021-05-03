@@ -2,13 +2,9 @@
   <div class="youtube-browse container mt-5 mb-5 main">
     <div class="row">
       <div class="col-sm-12">
-        <h3 v-if="title" class="text-center">
-          Playlist: <Annotate><span>{{ title }}</span></Annotate>
+        <h3 class="text-center">
+          Playlist: {{ playlist_id }}
         </h3>
-        <hr />
-        <p class="text-center mb-5">
-          <b>Note:</b> Videos may not have subtitles.
-        </p>
         <YouTubeVideoList :videos="videos" :checkSubs="true" :checkSaved="true" />
       </div>
     </div>

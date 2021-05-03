@@ -152,34 +152,20 @@ export default {
       data: item
     }
   },
-  channelPlayListsByAPI(channelID, cacheLife = -1) {
-
-    return new Promise(resolve => {
-      $.getJSON(
-        `${Config.youtubeChannelPlaylists}?channel=${channelID}&cache_life=${cacheLife}`
-      ).then(response => {
-        let playlists = []
-        if (response.data.items) {
-          playlists = response.data.items.map(this.mapChannelPlaylistsData)
-        }
-
-        let nextPageToken = response.data.nextPageToken
-        if (nextPageToken) {
-          $.getJSON(
-            `${Config.youtubeChannelPlaylists}?channel=${channelID}&page_token=${nextPageToken}&cache_life=${cacheLife}`
-          ).then(response => {
-            if (response.data.items) {
-              playlists = playlists.concat(
-                response.data.items.map(this.mapChannelPlaylistsData)
-              )
-              resolve(playlists)
-            }
-          })
-        } else {
-          resolve(playlists)
-        }
-      })
-    })
+  async channelPlayListsByAPI(channelID, cacheLife = -1, nextPageToken = false) {
+    let nextPageTokenVar = nextPageToken ? `&page_token=${nextPageToken}` : ''
+    let response = await $.getJSON(
+      `${Config.youtubeChannelPlaylists}?channel=${channelID}${nextPageTokenVar}&cache_life=${cacheLife}`
+    )
+    let playlists = []
+    if (response.data && response.data.items) {
+      playlists = response.data.items.map(this.mapChannelPlaylistsData)
+    }
+    nextPageToken = response.data.nextPageToken
+    if (nextPageToken) {
+      playlists = playlists.concat(await this.channelPlayListsByAPI(channelID, cacheLife, nextPageToken))
+    }
+    return playlists
   },
   async playlistByApi(id, pageToken = false, cacheLife = -1) {
     let pageTokenQS = pageToken ? `&page_token=${pageToken}` : ''
@@ -399,7 +385,7 @@ export default {
         hit.leftContext = line.replace(regex, '').split('').reverse().join('').trim()
       }
       if (!hit.rightContext) {
-        let line = hit.video.subs_l2[hit.lineIndex].line.trim() 
+        let line = hit.video.subs_l2[hit.lineIndex].line.trim()
         let next = hit.video.subs_l2[Number(hit.lineIndex) + 1]
         if (next) line = line + next.line.trim()
         let regex = new RegExp(

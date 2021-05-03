@@ -630,7 +630,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/youtube/channel/:args?',
+      path: '/:l1/:l2/youtube/channel/:channel_id?',
       name: 'youtube-channel',
       component: () => import('./views/YouTubeChannel.vue'),
       props: true,
