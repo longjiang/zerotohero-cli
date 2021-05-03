@@ -85,7 +85,6 @@
                       level
                     )
                   "
-                  class="font-weight-bold"
                 ></span
                 ><span
                   v-if="

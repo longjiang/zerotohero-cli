@@ -77,7 +77,13 @@
           <b-dropdown-item
             v-for="index in Math.max(hits.A.length, hits.B.length)"
             :key="`comp-subs-grouping-${c}-${index}`"
-            @click="hits.A[index - 1] ? goToHit('A', hits.A[index - 1]) : hits.B[index - 1] ? goToHit('B', hits.B[index - 1]) : false"
+            @click="
+              hits.A[index - 1]
+                ? goToHit('A', hits.A[index - 1])
+                : hits.B[index - 1]
+                ? goToHit('B', hits.B[index - 1])
+                : false
+            "
           >
             <div style="display: flex">
               <template v-for="ab in ['A', 'B']">
@@ -100,32 +106,44 @@
                     />
                   </div>
                   <div style="flex: 1">
-                    <span
-                      v-if="sort === 'left' && hit.lineIndex > 0"
-                      v-html="hit.video.subs_l2[Number(hit.lineIndex) - 1].line"
-                      style="margin-right: 0.5em; opacity: 0.5"
-                    />
-                    <span
-                      v-html="
-                        Helper.highlightMultiple(
-                          hit.video.subs_l2[Number(hit.lineIndex)].line,
-                          ab === 'A'
-                            ? termsA.map((term) => term)
-                            : termsB.map((term) => term),
-                          ab === 'A' ? levelA : levelB
-                        )
-                      "
-                    />
-                    <span
-                      v-if="
-                        sort === 'right' &&
-                        hit.lineIndex < hit.video.subs_l2.length - 1
-                      "
-                      v-html="hit.video.subs_l2[Number(hit.lineIndex) + 1].line"
-                      style="margin-left: 0.5em; opacity: 0.5"
-                    ></span>
+                    <Annotate
+                      :phonetics="false"
+                      :popup="false"
+                      :key="`dropdown-line-${index}-annotate-${
+                        hit.video.subs_l2[Number(hit.lineIndex)].line
+                      }`"
+                    >
+                      <span
+                        v-if="sort === 'left' && hit.lineIndex > 0"
+                        v-html="
+                          hit.video.subs_l2[Number(hit.lineIndex) - 1].line
+                        "
+                        style="margin-right: 0.5em; opacity: 0.5"
+                      />
+                      <span
+                        v-html="
+                          Helper.highlightMultiple(
+                            hit.video.subs_l2[Number(hit.lineIndex)].line,
+                            ab === 'A'
+                              ? termsA.map((term) => term)
+                              : termsB.map((term) => term),
+                            ab === 'A' ? levelA : levelB
+                          )
+                        "
+                      />
+                      <span
+                        v-if="
+                          sort === 'right' &&
+                          hit.lineIndex < hit.video.subs_l2.length - 1
+                        "
+                        v-html="
+                          hit.video.subs_l2[Number(hit.lineIndex) + 1].line
+                        "
+                        style="margin-left: 0.5em; opacity: 0.5"
+                      ></span>
+                    </Annotate>
                   </div>
-                  <div style="margin-left: 1rem;">
+                  <div style="margin-left: 1rem">
                     <img
                       class="hit-thumb"
                       style="margin-top: 0.2rem"
@@ -137,7 +155,7 @@
                 </div>
                 <div
                   v-if="!hits[ab][index - 1]"
-                  style="flex: 1; margin-right: 1rem;"
+                  style="flex: 1; margin-right: 1rem"
                   :key="`comp-subs-grouping-${c}-${index}-${ab}-2`"
                 >
                   &nbsp;
