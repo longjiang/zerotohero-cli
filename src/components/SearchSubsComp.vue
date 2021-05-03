@@ -353,7 +353,7 @@ export default {
       document.removeEventListener('keydown', this.keydown)
     },
     keydown(e) {
-      if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
+      if (!['INPUT', 'TEXTAREA'].includes(e.target.tagName.toUpperCase()) && !e.metaKey) {
         // left = 37
         if (e.keyCode == 37 && e.shiftKey) {
           this.prevHit()

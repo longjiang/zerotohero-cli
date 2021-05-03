@@ -132,16 +132,4 @@ export default {
 
 <style lang="scss">
 
-#reader-annotated.present {
-  height: 40rem;
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .hide-for-present {
-    display: none;
-  }
-}
-
 </style>

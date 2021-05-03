@@ -323,7 +323,6 @@ export default {
   font-size: 3rem;
   padding: 3rem;
   .speak,
-  .annotator-copy,
   .annotator-show-translate,
   .annotator-fullscreen {
     display: none;

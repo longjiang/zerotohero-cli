@@ -341,7 +341,7 @@ export default {
       window.removeEventListener('keydown', this.keydown)
     },
     keydown(e) {
-      if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
+      if (!['INPUT', 'TEXTAREA'].includes(e.target.tagName.toUpperCase()) && !e.metaKey) {
         // home
         if (e.keyCode == 36) {
           document

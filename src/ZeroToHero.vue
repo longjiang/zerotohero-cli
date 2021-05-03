@@ -65,6 +65,8 @@
           <router-view ref="routerView" id="main" />
         </keep-alive>
 
+        <ReaderComp :iconMode="true" />
+
         <footer class="container-fluid bg-dark text-light pt-4 pb-4">
           <div class="container">
             <div class="row mb-5">
@@ -222,13 +224,15 @@ import Config from '@/lib/config'
 import Vue from 'vue'
 import Dict from '@/lib/dict'
 import LanguageSwitch from '@/components/LanguageSwitch'
+import ReaderComp from '@/components/ReaderComp'
 
 export default {
   components: {
     Nav,
     Choose,
     LanguageLogo,
-    LanguageSwitch
+    LanguageSwitch,
+    ReaderComp
   },
   data() {
     return {
