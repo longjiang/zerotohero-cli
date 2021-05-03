@@ -61,6 +61,10 @@
               @click.stop="goToHit(hit)"
               :key="`dropdown-line-${c}-${index}`"
             >
+              <img
+                class="hit-thumb"
+                :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
+                :alt="hit.video.title" />
               <Annotate
                 :phonetics="false"
                 :popup="false"
@@ -83,7 +87,10 @@
                   class="font-weight-bold"
                 ></span
                 ><span
-                  v-if="sort === 'right' && hit.lineIndex < hit.video.subs_l2.length - 1"
+                  v-if="
+                    sort === 'right' &&
+                    hit.lineIndex < hit.video.subs_l2.length - 1
+                  "
                   v-html="hit.video.subs_l2[Number(hit.lineIndex) + 1].line"
                   style="margin-left: 0.5em; opacity: 0.5"
                 ></span></Annotate
@@ -461,6 +468,12 @@ export default {
 }
 </script>
 <style lang="scss">
+.hit-thumb {
+  width: calc(0.2rem * 16);
+  height: calc(0.2rem * 9);
+  object-fit: cover;
+  margin-right: 1rem;
+}
 .search-subs.fullscreen .video-area {
   background: black;
 }
