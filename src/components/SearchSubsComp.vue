@@ -55,49 +55,56 @@
           </button></b-dropdown-item
         >
         <template
-          v-for="(theseHits, c) in sort === 'right' ? hitsRight : hitsLeft"
+          v-for="c in sort === 'right' ? groupIndexRight : groupIndexLeft"
         >
-          <b-dropdown-divider :key="`comp-subs-grouping-${c}-divider`" />
-          <template v-for="(hit, index) in theseHits">
-            <b-dropdown-item
-              @click.stop="goToHit(hit)"
-              :class="{ current: hit === hits[hitIndex] }"
-              :key="`dropdown-line-${c}-${index}`"
-            >
-              <img
-                class="hit-thumb"
-                :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
-                :alt="hit.video.title" />
-              <Annotate
-                :phonetics="false"
-                :popup="false"
-                :key="`dropdown-line-${index}-annotate-${
-                  hit.video.subs_l2[Number(hit.lineIndex)].line
-                }`"
-                ><span
-                  v-if="sort === 'left' && hit.lineIndex > 0"
-                  v-html="hit.video.subs_l2[Number(hit.lineIndex) - 1].line"
-                  style="margin-right: 0.5em; opacity: 0.5"
-                ></span
-                ><span
-                  v-html="
-                    Helper.highlightMultiple(
-                      hit.video.subs_l2[Number(hit.lineIndex)].line,
-                      terms.map((term) => term),
-                      level
-                    )
-                  "
-                ></span
-                ><span
-                  v-if="
-                    sort === 'right' &&
-                    hit.lineIndex < hit.video.subs_l2.length - 1
-                  "
-                  v-html="hit.video.subs_l2[Number(hit.lineIndex) + 1].line"
-                  style="margin-left: 0.5em; opacity: 0.5"
-                ></span></Annotate
-            ></b-dropdown-item>
-          </template>
+          <div
+            :set="
+              (theseHits = sort === 'right' ? groupsRight[c] : groupsLeft[c])
+            "
+            :key="`comp-subs-grouping-${sort}-${c}`"
+          >
+            <b-dropdown-divider :key="`comp-subs-grouping-${c}-divider`" />
+            <template v-for="(hit, index) in theseHits">
+              <b-dropdown-item
+                @click.stop="goToHit(hit)"
+                :class="{ current: hit === hits[hitIndex] }"
+                :key="`dropdown-line-${c}-${index}`"
+              >
+                <img
+                  class="hit-thumb"
+                  :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
+                  :alt="hit.video.title" />
+                <Annotate
+                  :phonetics="false"
+                  :popup="false"
+                  :key="`dropdown-line-${index}-annotate-${
+                    hit.video.subs_l2[Number(hit.lineIndex)].line
+                  }`"
+                  ><span
+                    v-if="sort === 'left' && hit.lineIndex > 0"
+                    v-html="hit.video.subs_l2[Number(hit.lineIndex) - 1].line"
+                    style="margin-right: 0.5em; opacity: 0.5"
+                  ></span
+                  ><span
+                    v-html="
+                      Helper.highlightMultiple(
+                        hit.video.subs_l2[Number(hit.lineIndex)].line,
+                        terms.map((term) => term),
+                        level
+                      )
+                    "
+                  ></span
+                  ><span
+                    v-if="
+                      sort === 'right' &&
+                      hit.lineIndex < hit.video.subs_l2.length - 1
+                    "
+                    v-html="hit.video.subs_l2[Number(hit.lineIndex) + 1].line"
+                    style="margin-left: 0.5em; opacity: 0.5"
+                  ></span></Annotate
+              ></b-dropdown-item>
+            </template>
+          </div>
         </template>
       </b-dropdown>
       <b-button @click="nextLine" class="btn btn-small"
@@ -213,8 +220,8 @@ export default {
   data() {
     return {
       hits: [],
-      hitsRight: {},
-      hitsLeft: {},
+      groupsRight: {},
+      groupsLeft: {},
       excludeTerms: [],
       hitIndex: 0,
       navigated: false,
@@ -222,6 +229,8 @@ export default {
       videos: [],
       contextLeft: [],
       contextRight: [],
+      groupIndexLeft: [],
+      groupIndexRight: [],
       Helper,
       fullscreen: false,
       excludeStr: '',
@@ -310,22 +319,30 @@ export default {
       this.contextRight = Helper.unique(contextRight).sort((a, b) =>
         a.localeCompare(b, 'zh-CN')
       )
-
-      for (let c of this.contextRight.map((s) => s.charAt(0))) {
-        if (!this.hitsRight[c.charAt(0)]) this.hitsRight[c.charAt(0)] = {}
-        this.hitsRight[c.charAt(0)] = this.hits.filter((hit) =>
+      this.groupsLeft = this.groupContext(this.contextLeft, 'left')
+      this.groupsRight = this.groupContext(this.contextRight, 'right')
+      this.groupIndexLeft = this.sortGroupIndex(this.groupsLeft)
+      this.groupIndexRight = this.sortGroupIndex(this.groupsRight)
+    },
+    sortGroupIndex(group) {
+      let index = []
+      for (let c in group) {
+        index.push({ c, length: group[c].length })
+      }
+      index = index.sort((a, b) => b.length - a.length)
+      return index.map((i) => i.c)
+    },
+    groupContext(context, leftOrRight) {
+      let hitGroups = {}
+      for (let c of context.map((s) => s.charAt(0))) {
+        if (!hitGroups[c.charAt(0)]) hitGroups[c.charAt(0)] = {}
+        hitGroups[c.charAt(0)] = this.hits.filter((hit) =>
           c.length > 0
-            ? hit.rightContext.startsWith(c)
-            : hit.rightContext === ''
+            ? hit[`${leftOrRight}Context`].startsWith(c)
+            : hit[`${leftOrRight}Context`] === ''
         )
       }
-
-      for (let c of this.contextLeft.map((s) => s.charAt(0))) {
-        if (!this.hitsLeft[c.charAt(0)]) this.hitsLeft[c.charAt(0)] = {}
-        this.hitsLeft[c.charAt(0)] = this.hits.filter((hit) =>
-          c.length > 0 ? hit.leftContext.startsWith(c) : hit.leftContext === ''
-        )
-      }
+      return hitGroups
     },
     sortContextLeft(e) {
       this.hits = this.hits.sort((a, b) =>
