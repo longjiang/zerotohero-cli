@@ -249,7 +249,47 @@ export default {
       fullscreen: false,
     }
   },
+  mounted() {
+    this.bindKeys()
+  },
+  unmounted() {
+    this.unbindKeys()
+  },
+  watch: {
+    hitAB() {
+      this.bindKeys()
+    }
+  },
   methods: {
+    bindKeys() {
+      document.addEventListener('keydown', this.keydown)
+      this.$refs.searchSubsA.unbindKeys()
+      this.$refs.searchSubsB.unbindKeys()
+      if (this.hitAB === 'A') this.$refs.searchSubsA.bindKeys()
+      if (this.hitAB === 'B') this.$refs.searchSubsB.bindKeys()
+    },
+    unbindKeys() {
+      document.removeEventListener('keydown', this.keydown)
+    },
+    keydown(e) {
+      if (
+        !['INPUT', 'TEXTAREA'].includes(e.target.tagName.toUpperCase()) &&
+        !e.metaKey
+      ) {
+        // f = 70
+        if (e.keyCode == 70) {
+          this.toggleFullscreen()
+          e.preventDefault()
+          return false
+        }
+        // escape = 27
+        if (e.keyCode == 27) {
+          this.fullscreen = false
+          e.preventDefault()
+          return false
+        }
+      }
+    },
     toggleFullscreen() {
       if (this.hitsA.length > 0 || this.hitsB.length > 0)
         this.fullscreen = !this.fullscreen
@@ -323,7 +363,7 @@ export default {
         this.collectContext()
       }
     },
-  },
+  }
 }
 </script>
 <style lang="scss" scoped>

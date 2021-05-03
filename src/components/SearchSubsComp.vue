@@ -54,12 +54,14 @@
             Sort Right
           </button></b-dropdown-item
         >
-        <template v-for="(theseHits, c) in sort === 'right' ? hitsRight : hitsLeft">
+        <template
+          v-for="(theseHits, c) in sort === 'right' ? hitsRight : hitsLeft"
+        >
           <b-dropdown-divider :key="`comp-subs-grouping-${c}-divider`" />
           <template v-for="(hit, index) in theseHits">
             <b-dropdown-item
               @click.stop="goToHit(hit)"
-              :class="{current: hit === hits[hitIndex]}"
+              :class="{ current: hit === hits[hitIndex] }"
               :key="`dropdown-line-${c}-${index}`"
             >
               <img
@@ -452,13 +454,13 @@ export default {
         }
         // f = 70
         if (e.keyCode == 70) {
-          this.toggleFullscreen()
+          if (this.fullscreenToggle) this.toggleFullscreen()
           e.preventDefault()
           return false
         }
         // escape = 27
         if (e.keyCode == 27) {
-          this.fullscreen = false
+          if (this.fullscreenToggle) this.fullscreen = false
           e.preventDefault()
           return false
         }
