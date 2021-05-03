@@ -59,8 +59,16 @@
             Sort Right
           </button></b-dropdown-item
         >
-        <template v-for="(hits, c) in sort === 'right' ? hitsRight : hitsLeft">
-          <!--
+        <template
+          v-for="c in sort === 'right' ? groupIndexRight : groupIndexLeft"
+        >
+          <div
+            :set="
+              (theseHits = sort === 'right' ? groupsRight[c] : groupsLeft[c])
+            "
+            :key="`compare-subs-grouping-${sort}-${c}`"
+          >
+            <!--
           <b-dropdown-text
             :key="`comp-subs-dropdown-group-header-${c}`"
             class="bg-dark text-white font-weight-bold"
@@ -73,96 +81,104 @@
             </div>
           </b-dropdown-text>
           -->
-          <b-dropdown-divider :key="`comp-subs-grouping-${c}-divider`" />
-          <b-dropdown-item
-            v-for="index in Math.max(hits.A.length, hits.B.length)"
-            :key="`comp-subs-grouping-${c}-${index}`"
-            @click="
-              hits.A[index - 1]
-                ? goToHit('A', hits.A[index - 1])
-                : hits.B[index - 1]
-                ? goToHit('B', hits.B[index - 1])
-                : false
-            "
-          >
-            <div style="display: flex">
-              <template v-for="ab in ['A', 'B']">
-                <div
-                  :style="`flex: 1; margin-right: ${
-                    ab === 'A' ? '1rem' : 0
-                  }; display: flex;`"
-                  v-if="hits[ab][index - 1]"
-                  @click.stop.prevent="goToHit(ab, hits[ab][index - 1])"
-                  :set="(hit = hits[ab][index - 1])"
-                  :key="`comp-subs-grouping-${c}-${index}-${ab}-1`"
-                >
-                  <div>
-                    <img
-                      class="hit-thumb"
-                      style="margin-top: 0.2rem"
-                      v-if="ab === 'A' && hit"
-                      :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
-                      :alt="hit.video.title"
-                    />
-                  </div>
-                  <div style="flex: 1">
-                    <Annotate
-                      :phonetics="false"
-                      :popup="false"
-                      :key="`dropdown-line-${index}-annotate-${
-                        hit.video.subs_l2[Number(hit.lineIndex)].line
-                      }`"
-                    >
-                      <span
-                        v-if="sort === 'left' && hit.lineIndex > 0"
-                        v-html="
-                          hit.video.subs_l2[Number(hit.lineIndex) - 1].line
-                        "
-                        style="margin-right: 0.5em; opacity: 0.5"
+            <b-dropdown-divider :key="`comp-subs-grouping-${c}-divider`" />
+            <b-dropdown-item
+              v-for="index in Math.max(theseHits.A.length, theseHits.B.length)"
+              :key="`comp-subs-grouping-${c}-${index}`"
+              @click="
+                theseHits.A[index - 1]
+                  ? goToHit('A', theseHits.A[index - 1])
+                  : theseHits.B[index - 1]
+                  ? goToHit('B', theseHits.B[index - 1])
+                  : false
+              "
+            >
+              <div style="display: flex">
+                <template v-for="ab in ['A', 'B']">
+                  <div
+                    :style="`flex: 1; margin-right: ${
+                      ab === 'A' ? '1rem' : 0
+                    }; display: flex;`"
+                    v-if="theseHits[ab][index - 1]"
+                    @click.stop.prevent="
+                      goToHit(
+                        ab,
+                        sort === 'right'
+                          ? groupsRight[c][ab][index - 1]
+                          : groupsLeft[c][ab][index - 1]
+                      )
+                    "
+                    :set="(hit = theseHits[ab][index - 1])"
+                    :key="`comp-subs-grouping-${c}-${index}-${ab}-1`"
+                  >
+                    <div>
+                      <img
+                        class="hit-thumb"
+                        style="margin-top: 0.2rem"
+                        v-if="ab === 'A' && hit"
+                        :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
+                        :alt="hit.video.title"
                       />
-                      <span
-                        v-html="
-                          Helper.highlightMultiple(
-                            hit.video.subs_l2[Number(hit.lineIndex)].line,
-                            ab === 'A'
-                              ? termsA.map((term) => term)
-                              : termsB.map((term) => term),
-                            ab === 'A' ? levelA : levelB
-                          )
-                        "
+                    </div>
+                    <div style="flex: 1">
+                      <Annotate
+                        :phonetics="false"
+                        :popup="false"
+                        :key="`dropdown-line-${index}-annotate-${
+                          hit.video.subs_l2[Number(hit.lineIndex)].line
+                        }`"
+                      >
+                        <span
+                          v-if="sort === 'left' && hit.lineIndex > 0"
+                          v-html="
+                            hit.video.subs_l2[Number(hit.lineIndex) - 1].line
+                          "
+                          style="margin-right: 0.5em; opacity: 0.5"
+                        />
+                        <span
+                          v-html="
+                            Helper.highlightMultiple(
+                              hit.video.subs_l2[Number(hit.lineIndex)].line,
+                              ab === 'A'
+                                ? termsA.map((term) => term)
+                                : termsB.map((term) => term),
+                              ab === 'A' ? levelA : levelB
+                            )
+                          "
+                        />
+                        <span
+                          v-if="
+                            sort === 'right' &&
+                            hit.lineIndex < hit.video.subs_l2.length - 1
+                          "
+                          v-html="
+                            hit.video.subs_l2[Number(hit.lineIndex) + 1].line
+                          "
+                          style="margin-left: 0.5em; opacity: 0.5"
+                        ></span>
+                      </Annotate>
+                    </div>
+                    <div style="margin-left: 1rem">
+                      <img
+                        class="hit-thumb"
+                        style="margin-top: 0.2rem"
+                        v-if="ab === 'B' && hit"
+                        :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
+                        :alt="hit.video.title"
                       />
-                      <span
-                        v-if="
-                          sort === 'right' &&
-                          hit.lineIndex < hit.video.subs_l2.length - 1
-                        "
-                        v-html="
-                          hit.video.subs_l2[Number(hit.lineIndex) + 1].line
-                        "
-                        style="margin-left: 0.5em; opacity: 0.5"
-                      ></span>
-                    </Annotate>
+                    </div>
                   </div>
-                  <div style="margin-left: 1rem">
-                    <img
-                      class="hit-thumb"
-                      style="margin-top: 0.2rem"
-                      v-if="ab === 'B' && hit"
-                      :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
-                      :alt="hit.video.title"
-                    />
+                  <div
+                    v-if="!theseHits[ab][index - 1]"
+                    style="flex: 1; margin-right: 1rem"
+                    :key="`comp-subs-grouping-${c}-${index}-${ab}-2`"
+                  >
+                    &nbsp;
                   </div>
-                </div>
-                <div
-                  v-if="!hits[ab][index - 1]"
-                  style="flex: 1; margin-right: 1rem"
-                  :key="`comp-subs-grouping-${c}-${index}-${ab}-2`"
-                >
-                  &nbsp;
-                </div>
-              </template>
-            </div>
-          </b-dropdown-item>
+                </template>
+              </div>
+            </b-dropdown-item>
+          </div>
         </template>
       </b-dropdown>
       <b-button
@@ -238,12 +254,14 @@ export default {
       hitIndexB: 0,
       hitsA: [],
       hitsB: [],
-      hitsRight: {},
-      hitsLeft: {},
+      groupsRight: {},
+      groupsLeft: {},
       checkingA: true,
       checkingB: true,
       contextRight: [],
       contextLeft: [],
+      groupIndexLeft: [],
+      groupIndexRight: [],
       Helper,
       sort: 'right',
       fullscreen: false,
@@ -258,7 +276,7 @@ export default {
   watch: {
     hitAB() {
       this.bindKeys()
-    }
+    },
   },
   methods: {
     bindKeys() {
@@ -302,7 +320,8 @@ export default {
       this.sort = 'right'
       e.preventDefault()
     },
-    goToHit(hitAB, hit, e = false) {
+    goToHit(hitAB, hit) {
+      console.log(hit)
       this.hitAB = hitAB
       if (hitAB === 'A') this.$refs.searchSubsA.goToHit(hit)
       if (hitAB === 'B') this.$refs.searchSubsB.goToHit(hit)
@@ -324,30 +343,32 @@ export default {
       this.contextRight = Helper.unique(contextRight).sort((a, b) =>
         a.localeCompare(b, 'zh-CN')
       )
-
-      for (let c of this.contextRight) {
-        if (!this.hitsRight[c.charAt(0)]) this.hitsRight[c.charAt(0)] = {}
-        this.hitsRight[c.charAt(0)].A = this.hitsA.filter((hit) =>
-          c.length > 0
-            ? hit.rightContext.startsWith(c)
-            : hit.rightContext === ''
-        )
-        this.hitsRight[c.charAt(0)].B = this.hitsB.filter((hit) =>
-          c.length > 0
-            ? hit.rightContext.startsWith(c)
-            : hit.rightContext === ''
-        )
+      this.groupsRight = this.groupContext(this.contextRight, 'right')
+      this.groupsLeft = this.groupContext(this.contextLeft, 'left')
+      this.groupIndexLeft = this.sortGroupIndex(this.groupsLeft)
+      this.groupIndexRight = this.sortGroupIndex(this.groupsRight)
+    },
+    sortGroupIndex(group) {
+      let index = []
+      for (let c in group) {
+        index.push({ c, length: group[c].A.length + group[c].B.length })
       }
-
-      for (let c of this.contextLeft) {
-        if (!this.hitsLeft[c.charAt(0)]) this.hitsLeft[c.charAt(0)] = {}
-        this.hitsLeft[c.charAt(0)].A = this.hitsA.filter((hit) =>
-          c.length > 0 ? hit.leftContext.startsWith(c) : hit.leftContext === ''
-        )
-        this.hitsLeft[c.charAt(0)].B = this.hitsB.filter((hit) =>
-          c.length > 0 ? hit.leftContext.startsWith(c) : hit.leftContext === ''
-        )
+      index = index.sort((a, b) => b.length - a.length)
+      return index.map((i) => i.c)
+    },
+    groupContext(context, leftOrRight) {
+      let groups = {}
+      for (let ab of ['A', 'B']) {
+        for (let c of context) {
+          if (!groups[c.charAt(0)]) groups[c.charAt(0)] = {}
+          groups[c.charAt(0)][ab] = this[`hits${ab}`].filter((hit) =>
+            c.length > 0
+              ? hit[`${leftOrRight}Context`].startsWith(c)
+              : hit[`${leftOrRight}Context`] === ''
+          )
+        }
       }
+      return groups
     },
     searchSubsALoaded() {
       this.hitsA = this.$refs.searchSubsA.hits
@@ -363,7 +384,7 @@ export default {
         this.collectContext()
       }
     },
-  }
+  },
 }
 </script>
 <style lang="scss" scoped>
