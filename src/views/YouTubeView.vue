@@ -126,15 +126,24 @@
       :l1Lines="this.l1Lines"
       :quiz="true"
       :key="`transcript-${args}-${transcriptKey}`"
+      :speed="speed"
       @paused="updatePaused"
     />
     <div class="play-pause-wrapper">
       <span
+        class="speed shadow btn-secondary d-inline-block text-center"
+        @click="speed = speed === 1 ? 0.75 : speed === 0.75 ? 0.5 : 1"
+      >
+        <i v-if="speed === 1" class="fas fa-tachometer-alt"></i
+        ><span v-else style="font-size: 0.8em">{{ speed }}x</span>
+      </span>
+      <span
         class="play-pause shadow btn-primary d-inline-block text-center"
         @click="togglePaused"
-        ><i v-if="paused" class="fas fa-play"></i
-        ><i v-else class="fas fa-pause"></i
-      ></span>
+      >
+        <i v-if="paused" class="fas fa-play"></i
+        ><i v-else class="fas fa-pause"></i>
+      </span>
     </div>
     <div class="container-fluid">
       <div class="row">
@@ -227,13 +236,14 @@ export default {
       subsUpdated: false,
       over: false,
       paused: false,
+      speed: 1,
     }
   },
   methods: {
     updatePaused(paused) {
       if (paused !== this.paused) {
         this.paused = paused
-      }      
+      }
     },
     handleDrop(data, event) {
       event.preventDefault()
@@ -557,6 +567,7 @@ export default {
   bottom: 1rem;
   left: calc(100% - 4rem);
   width: 3.2rem;
+  z-index: 9;
 }
 .play-pause {
   border-radius: 100%;
@@ -566,6 +577,16 @@ export default {
   border: none;
   font-size: 1.3em;
   cursor: pointer;
+}
+.speed {
+  border-radius: 100%;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3rem;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  margin-bottom: 0.2rem;
 }
 .youtube-video-column.sticky {
   top: 0;
