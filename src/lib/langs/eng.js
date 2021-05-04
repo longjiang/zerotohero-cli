@@ -24,6 +24,7 @@ export default {
     'PP_对': '对 N {word}',
     'PP_因': '因 N {word}',
     'PP_给': '给 N {word}',
+    'PP_就': '就 N {word}',
     'SentObject_of': 'N {word}',
     'SentObject': '{word} CLAUSE',
     'Subject': 'N {word}',

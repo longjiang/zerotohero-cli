@@ -1,5 +1,5 @@
 <template>
-  <div class="grammar-notes-item">
+  <div class="grammar-notes-item text-center">
     <Annotate tag="div" :copy="false" class="grammar-structure">
       <h5
         v-html="

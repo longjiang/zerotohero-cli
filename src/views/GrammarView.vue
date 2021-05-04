@@ -1,26 +1,22 @@
 <template>
   <div class="container mt-5 mb-5 pt-4 main" id="main">
     <div class="row">
-      <div class="col-sm-12 text-center" v-if="grammar">
-        <h6 class="mb-2">
-          <button
-            @click="prevClick"
-            v-if="id > 1"
-            class="btn btn-medium bg-light mr-3"
-          >
-            <i class="fa fa-chevron-left" title="previous" /></button
-          >Grammar HSK{{ grammar.code }}
-          <button @click="nextClick" class="ml-3 btn btn-medium bg-light">
-            <i class="fa fa-chevron-right" title="next" />
+      <div class="col-sm-12" v-if="grammar">
+        <h6 class="mb-2 text-center">
+          <button class="btn btn-small mr-1" v-if="id > 1" @click="prevClick">
+            <i class="fa fa-caret-left" />
+          </button>Grammar HSK{{ grammar.code }}
+          <button class="btn btn-small" @click="nextClick">
+            <i class="fa fa-caret-right" />
           </button>
         </h6>
 
-        <GrammarPoint :grammar="grammar" :key="id" style="min-height: 20rem" />
+        <GrammarPoint :grammar="grammar" :key="id" class="mb-5" />
 
         <div
-          class="widget mt-5"
+          class="widget mt-5 mb-5"
           id="search-subs"
-          v-if="grammar.pattern && delayed"
+          v-if="grammar.pattern && delayed && (!entry || grammar.pattern !== entry.simplified)"
           :key="`subs-search-${grammar.pattern}`"
         >
           <div class="widget-title">“{{ grammar.pattern }}” in TV Shows</div>
@@ -33,6 +29,18 @@
             />
           </div>
         </div>
+        <div v-if="entry">
+          <hr />
+          <DictionaryEntry
+            v
+            :entry="entry"
+            :showSearchSubs="!(grammar.pattern && delayed && (!entry || grammar.pattern !== entry.simplified))"
+            :showImages="false"
+            ref="dictionaryEntry"
+            :key="`dictionary-entry-${entry.id}`"
+          />
+        </div>
+
         <div class="text-left mt-5" v-if="drills && drills.length > 0">
           <hr />
           <h4 class="text-center">Practice Drills</h4>
@@ -52,10 +60,13 @@ import GrammarPoint from '@/components/GrammarPoint'
 import Grammar from '@/lib/grammar'
 import Drill from '@/components/Drill'
 import SearchSubsComp from '@/components/SearchSubsComp'
+import DictionaryEntry from '@/components/DictionaryEntry'
 import Config from '@/lib/config'
+import Helper from '@/lib/helper'
 
 export default {
   components: {
+    DictionaryEntry,
     GrammarPoint,
     Drill,
     SearchSubsComp,
@@ -70,6 +81,7 @@ export default {
       grammar: undefined,
       drills: [],
       delayed: false,
+      entry: false,
     }
   },
   methods: {
@@ -89,6 +101,11 @@ export default {
       if (!this.grammar || grammar.pattern !== this.grammar.pattern)
         this.delayed = false
       this.grammar = grammar
+      let entry = await (await this.$dictionary).lookup(
+        this.grammar.structure.replace(/…….*/, '').replace(Helper.nonCjk, '')
+      )
+      this.entry =
+        entry || (await (await this.$dictionary).lookup(this.grammar.pattern.replace(/\*.*/, '')))
       this.getDrill(this.grammar.id)
       setTimeout(() => {
         if (this.id === this.grammar.id) this.delayed = true

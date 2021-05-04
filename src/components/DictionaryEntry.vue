@@ -88,6 +88,18 @@
                   "
                   >Naver</b-button
                 >
+                <b-button
+                  @click="setExtDict('grammar-wiki')"
+                  class="mr-2 btn btn-small"
+                  :data-bg-level="
+                    extDict === 'grammar-wiki'
+                      ? entry.newHSK && entry.newHSK === '7-9'
+                        ? '7-9'
+                        : entry.hsk
+                      : false
+                  "
+                  >Grammar Wiki</b-button
+                >
               </div>
               <div class="mb-4 pl-2 pr-2">
                 <iframe
@@ -115,6 +127,11 @@
                   :src="`https://korean.dict.naver.com/kozhdict/chinese/#/search?query=${entry.simplified}`"
                   class="ext-dictinoary-iframe"
                 ></iframe>
+                <iframe
+                  v-if="extDict === 'grammar-wiki'"
+                  :src="`https://resources.allsetlearning.com/gramwiki/?search=${entry.simplified}`"
+                  class="ext-dictinoary-iframe"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -129,6 +146,7 @@
       <div class="row">
         <div class="col-sm-12">
           <WebImages
+            v-if="showImages"
             class="mt-5"
             :text="entry.bare"
             :entry="entry"
@@ -152,12 +170,12 @@
           <div
             class="widget mt-5"
             id="search-subs"
+            v-if="entry && showSearchSubs"
             :key="`subs-search-${entry.id}`"
           >
             <div class="widget-title">“{{ entry.bare }}” in TV Shows</div>
             <div class="widget-body">
               <SearchSubsComp
-                v-if="entry"
                 ref="searchSubs"
                 :level="
                   entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.hsk
@@ -171,6 +189,11 @@
               />
             </div>
           </div>
+          <Mistakes
+            class="mt-5 mb-5"
+            v-if="$l2.code === 'zh'"
+            :text="entry.simplified"
+          ></Mistakes>
         </div>
       </div>
     </div>
@@ -188,16 +211,6 @@
           class="m-3"
           style="flex: 1; min-width: 20rem"
         ></EntryDisambiguation>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-12">
-          <Mistakes
-            class="mt-5 mb-5"
-            v-if="$l2.code === 'zh'"
-            :text="entry.simplified"
-          ></Mistakes>
-        </div>
       </div>
       <div
         class="row"
@@ -317,6 +330,12 @@ export default {
     entry: {
       type: Object,
     },
+    showImages: {
+      default: true
+    },
+    showSearchSubs: {
+      default: true
+    }
   },
   data() {
     return {

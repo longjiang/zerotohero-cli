@@ -40,6 +40,8 @@ export default {
     science: 'Science',
     society: 'Society'
   },
+  cjk: /[\u4E00-\u9FCC\u3400-\u4DB5\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]+/gi,
+  nonCjk: /[^\u4E00-\u9FCC\u3400-\u4DB5\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]+/gi,
   levels(l2 = undefined) {
     if(l2 && l2.code === 'zh') {
       return {
