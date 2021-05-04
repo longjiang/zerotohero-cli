@@ -126,6 +126,7 @@
       :l1Lines="this.l1Lines"
       :quiz="true"
       :key="`transcript-${args}-${transcriptKey}`"
+      @paused="updatePaused"
     />
     <div class="play-pause-wrapper">
       <span
@@ -215,7 +216,6 @@ export default {
       channel: undefined,
       l2Locale: undefined,
       saved: undefined,
-      paused: true,
       loading: true,
       hasSubtitles: false,
       levels: Helper.levels(this.$l2),
@@ -226,9 +226,15 @@ export default {
       firstLineTime: 0,
       subsUpdated: false,
       over: false,
+      paused: false,
     }
   },
   methods: {
+    updatePaused(paused) {
+      if (paused !== this.paused) {
+        this.paused = paused
+      }      
+    },
     handleDrop(data, event) {
       event.preventDefault()
       let file = event.dataTransfer.files[0]
@@ -505,7 +511,6 @@ export default {
     },
     togglePaused() {
       this.$refs.youtube.togglePaused()
-      this.paused = !this.paused
     },
     bindKeys() {
       window.onkeydown = (e) => {

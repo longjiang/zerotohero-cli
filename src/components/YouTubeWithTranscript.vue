@@ -6,7 +6,7 @@
           class="youtube-video-wrapper sticky pt-3 pb-3 bg-white"
           :key="'youtube-' + youtube"
         >
-          <YouTubeVideo ref="youtube" :youtube="youtube" :speed="speed" />
+          <YouTubeVideo ref="youtube" :youtube="youtube" :speed="speed" @paused="updatePaused" />
         </div>
       </div>
       <div class="col-md-6" :key="'transcript-' + youtube">
@@ -29,6 +29,7 @@
           <div class="youtube-video-wrapper">
             <YouTubeVideo
               ref="youtube"
+              @paused="updatePaused" 
               :speed="speed"
               :youtube="youtube"
               :starttime="
@@ -116,13 +117,21 @@ export default {
     },
   },
   data() {
-    return {}
+    return {
+      paused: true
+    }
   },
   components: {
     YouTubeVideo,
     SyncedTranscript,
   },
   methods: {
+    updatePaused(paused) {
+      if (paused !== this.paused) {
+        this.paused = paused
+        this.$emit('paused', paused)
+      }      
+    },
     previousLine() {
       this.$refs.transcript.previousLine()
     },
@@ -171,9 +180,6 @@ export default {
         this.$refs.transcript.currentTime = this.$refs.youtube
           ? this.$refs.youtube.currentTime()
           : 0
-      }
-      if (this.$refs.youtube) {
-        this.paused = this.$refs.youtube.paused
       }
     }, 100)
   },

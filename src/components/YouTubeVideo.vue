@@ -70,9 +70,16 @@ export default {
     }
   },
   methods: {
+    updatePaused(paused) {
+      if (this.paused !== paused) {
+        this.paused = paused
+        this.$emit('paused', this.paused)
+      }
+    },
     currentTime() {
       if (this.player && this.player.getPlayerState) {
-        this.paused = this.player.getPlayerState() !== 1
+        let paused = this.player.getPlayerState() !== 1
+        this.updatePaused(paused)
       }
       return this.player && this.player.getCurrentTime
         ? this.player.getCurrentTime()
@@ -100,7 +107,7 @@ export default {
           events: {
             onStateChange: () => {
               if (this.player && this.player.getPlayerState) {
-                this.paused = this.player.getPlayerState() !== 1
+                this.updatePaused(this.player.getPlayerState() !== 1)
               }
               this.player.setPlaybackRate(this.speed)
               if (
@@ -175,19 +182,19 @@ export default {
     seek(starttime) {
       if (this.player && this.player.seekTo) {
         this.player.seekTo(starttime)
-        this.paused = this.player.getPlayerState() !== 1
+        this.updatePaused(this.player.getPlayerState() !== 1)
       }
     },
     play() {
       if (this.player && this.player.playVideo) {
         this.player.playVideo()
-        this.paused = this.player.getPlayerState() !== 1
+        this.updatePaused(this.player.getPlayerState() !== 1)
       }
     },
     pause() {
       if (this.player && this.player.pauseVideo) {
         this.player.pauseVideo()
-        this.paused = this.player.getPlayerState() !== 1
+        this.updatePaused(this.player.getPlayerState() !== 1)
       }
     },
     setSpeed(speed) {
@@ -199,7 +206,7 @@ export default {
         this.player.getPlayerState() !== 1
           ? this.player.playVideo()
           : this.player.pauseVideo()
-        this.paused = this.player.getPlayerState() !== 1
+        this.updatePaused(this.player.getPlayerState() !== 1)
       } else {
         this.loadYouTubeiFrame()
       }
@@ -208,8 +215,8 @@ export default {
   watch: {
     speed() {
       this.setSpeed(this.speed)
-    }
-  }
+    },
+  },
 }
 </script>
 

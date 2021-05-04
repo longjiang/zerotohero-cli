@@ -159,6 +159,7 @@ export default {
               name: 'phrase',
               icon: 'fas fa-quote-left',
               title: 'Phrase',
+              show: true,
             },
             {
               name: 'levels',
