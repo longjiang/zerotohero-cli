@@ -24,11 +24,11 @@
       v-if="grammar.url !== ''"
       :href="grammar.url"
       :data-bg-level="grammar.book"
-      class="btn-medium btn-gray mt-3 pl-3 pr-3"
+      class="btn-medium btn-gray mt-5 pl-3 pr-3"
       target="_blank"
     >
-      <i class="glyphicon glyphicon-facetime-video mr-2"></i>
-      <b>Grammar Lesson</b>
+      <i class="fas fa-play mr-2"></i>
+      <b>Watch Grammar Lesson</b>
       {{ grammar.book }}.{{ grammar.lesson }}.{{ grammar.number }}
     </a>
   </div>

@@ -80,12 +80,14 @@
           <td class="text-center align-middle">
             <span
               ><a
+                v-if="row.url !== ''"
                 :href="`${row.url}`"
                 class="btn btn-secondary"
                 style="white-space: nowrap"
                 ><i class="glyphicon glyphicon-facetime-video"></i>
                 {{ row.code }}</a
               >
+              <span v-else>{{ row.code }}</span>
             </span>
           </td>
           <td class="align-middle">
