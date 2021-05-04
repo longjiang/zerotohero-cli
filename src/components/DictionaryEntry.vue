@@ -1,0 +1,406 @@
+<template>
+  <div>
+    <div class="text-center">
+      <!-- <Loader class="mt-5" /> -->
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <div>
+            <div class="p-4">
+              <EntryHeader
+                :entry="entry"
+                :key="`header-${entry.id}`"
+                @prevWord="prevWord()"
+                @nextWord="nextWord()"
+              ></EntryHeader>
+              <DefinitionsList
+                :key="`def-list-${entry.id}`"
+                v-if="entry.definitions"
+                class="mt-4"
+                :definitions="entry.definitions"
+              ></DefinitionsList>
+            </div>
+            <EntryExample
+              :entry="entry"
+              class="mb-4"
+              :key="`${entry.id}-example`"
+            ></EntryExample>
+            <div v-if="$l2.code === 'zh'">
+              <div class="ext-dictionary-buttons p-2 bg-white">
+                <b-button
+                  @click="setExtDict('zdic')"
+                  class="mr-2 btn btn-small"
+                  :data-bg-level="
+                    extDict === 'zdic'
+                      ? entry.newHSK && entry.newHSK === '7-9'
+                        ? '7-9'
+                        : entry.hsk
+                      : false
+                  "
+                  >汉典</b-button
+                >
+                <b-button
+                  @click="setExtDict('wiktionary')"
+                  class="mr-2 btn btn-small"
+                  :data-bg-level="
+                    extDict === 'wiktionary'
+                      ? entry.newHSK && entry.newHSK === '7-9'
+                        ? '7-9'
+                        : entry.hsk
+                      : false
+                  "
+                  >Wiktionary</b-button
+                >
+                <b-button
+                  @click="setExtDict('moedict')"
+                  class="mr-2 btn btn-small"
+                  :data-bg-level="
+                    extDict === 'moedict'
+                      ? entry.newHSK && entry.newHSK === '7-9'
+                        ? '7-9'
+                        : entry.hsk
+                      : false
+                  "
+                  >萌典</b-button
+                >
+                <b-button
+                  @click="setExtDict('baidu-baike')"
+                  class="mr-2 btn btn-small"
+                  :data-bg-level="
+                    extDict === 'baidu-baike'
+                      ? entry.newHSK && entry.newHSK === '7-9'
+                        ? '7-9'
+                        : entry.hsk
+                      : false
+                  "
+                  >百度百科</b-button
+                >
+                <b-button
+                  @click="setExtDict('naver')"
+                  class="mr-2 btn btn-small"
+                  :data-bg-level="
+                    extDict === 'naver'
+                      ? entry.newHSK && entry.newHSK === '7-9'
+                        ? '7-9'
+                        : entry.hsk
+                      : false
+                  "
+                  >Naver</b-button
+                >
+              </div>
+              <div class="mb-4 pl-2 pr-2">
+                <iframe
+                  v-if="extDict === 'zdic'"
+                  :src="`https://www.zdic.net/hans/${entry.simplified}`"
+                  class="ext-dictinoary-iframe"
+                ></iframe>
+                <iframe
+                  v-if="extDict === 'wiktionary'"
+                  :src="`https://en.wiktionary.org/wiki/${entry.simplified}`"
+                  class="ext-dictinoary-iframe"
+                ></iframe>
+                <iframe
+                  v-if="extDict === 'moedict'"
+                  :src="`https://www.moedict.tw/${entry.traditional}`"
+                  class="ext-dictinoary-iframe"
+                ></iframe>
+                <iframe
+                  v-if="extDict === 'baidu-baike'"
+                  :src="`https://baike.baidu.com/item/${entry.simplified}`"
+                  class="ext-dictinoary-iframe"
+                ></iframe>
+                <iframe
+                  v-if="extDict === 'naver'"
+                  :src="`https://korean.dict.naver.com/kozhdict/chinese/#/search?query=${entry.simplified}`"
+                  class="ext-dictinoary-iframe"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <EntryDisambiguation> already finds some pretty good suggestions. -->
+    <!-- <EntryRelated class="mb-5" :entry="entry"></EntryRelated> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <WebImages
+            class="mt-5"
+            :text="entry.bare"
+            :entry="entry"
+            limit="10"
+            ref="images"
+            @loaded="webImagesLoaded"
+          />
+          <EntryRelated
+            :entry="entry"
+            class="mt-5"
+            :key="`related-${entry.id}`"
+          />
+          <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
+          <Collocations
+            class="mt-5 mb-5"
+            :word="entry"
+            :level="
+              entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.level
+            "
+          />
+          <div
+            class="widget mt-5"
+            id="search-subs"
+            :key="`subs-search-${entry.id}`"
+          >
+            <div class="widget-title">“{{ entry.bare }}” in TV Shows</div>
+            <div class="widget-body">
+              <SearchSubsComp
+                v-if="entry"
+                ref="searchSubs"
+                :level="
+                  entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.hsk
+                "
+                :terms="
+                  entry.simplified === entry.traditional
+                    ? [entry.simplified]
+                    : [entry.simplified, entry.traditional]
+                "
+                @loaded="searchSubsLoaded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <Concordance class="mt-5 mb-5" :word="entry" :level="entry.level" />
+        </div>
+      </div>
+
+      <div class="row d-flex" style="flex-wrap: wrap">
+        <EntryDifficulty :entry="entry" style="flex: 1" class="m-3" />
+        <EntryDisambiguation
+          :entry="entry"
+          class="m-3"
+          style="flex: 1; min-width: 20rem"
+        ></EntryDisambiguation>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <Mistakes
+            class="mt-5 mb-5"
+            v-if="$l2.code === 'zh'"
+            :text="entry.simplified"
+          ></Mistakes>
+        </div>
+      </div>
+      <div
+        class="row"
+        v-if="['zh', 'ja', 'ko'].includes($l2.code)"
+        :key="`${entry.id}-characters`"
+      >
+        <div class="col-sm-12" v-if="$l2.code !== 'zh'">
+          <EntryCharacters
+            v-if="entry.cjk && entry.cjk.canonical"
+            class="mb-4"
+            :text="entry.cjk.canonical"
+            :pinyin="entry.cjk.phonetics ? entry.cjk.phonetics : undefined"
+          ></EntryCharacters>
+        </div>
+        <div class="col-sm-12" v-else>
+          <EntryCharacters
+            class="mb-4 simplified"
+            :text="entry.simplified"
+            :pinyin="entry.pinyin"
+          ></EntryCharacters>
+          <EntryCharacters
+            class="mb-4 traditional"
+            :text="entry.traditional"
+            :pinyin="entry.pinyin"
+          ></EntryCharacters>
+        </div>
+        <div class="col-sm-6" v-if="$l2.code !== 'zh'">
+          <Chinese
+            v-if="
+              delayed &&
+              entry.cjk &&
+              entry.cjk.canonical &&
+              entry.cjk.canonical !== 'NULL'
+            "
+            class="mt-5 mb-5"
+            :text="entry.cjk.canonical"
+          />
+        </div>
+        <div class="col-sm-6" v-if="$l2.code !== 'ja'">
+          <Japanese
+            v-if="
+              delayed &&
+              entry.cjk &&
+              entry.cjk.canonical &&
+              entry.cjk.canonical !== 'NULL'
+            "
+            class="mt-5 mb-5"
+            :text="entry.cjk.canonical"
+          />
+        </div>
+        <div class="col-sm-6" v-if="$l2.code !== 'ko'">
+          <Korean
+            v-if="
+              delayed &&
+              entry.cjk &&
+              entry.cjk.canonical &&
+              entry.cjk.canonical !== 'NULL'
+            "
+            class="mt-5 mb-5"
+            :text="entry.cjk.canonical"
+          />
+        </div>
+      </div>
+    </div>
+    <EntryCourseAd
+      v-if="$l2.code === 'zh'"
+      :entry="entry"
+      class="focus-exclude"
+    ></EntryCourseAd>
+  </div>
+</template>
+<script>
+import Concordance from '@/components/Concordance.vue'
+import Collocations from '@/components/Collocations.vue'
+import EntryHeader from '@/components/EntryHeader.vue'
+import WebImages from '@/components/WebImages.vue'
+import DefinitionsList from '@/components/DefinitionsList'
+import EntryYouTube from '@/components/EntryYouTube.vue'
+import EntryForms from '@/components/EntryForms'
+import EntryCharacters from '@/components/EntryCharacters'
+import Chinese from '@/components/Chinese'
+import Japanese from '@/components/Japanese'
+import Korean from '@/components/Korean'
+import Mistakes from '@/components/Mistakes'
+import EntryCourseAd from '@/components/EntryCourseAd'
+import EntryLyrics from '@/components/EntryLyrics'
+import InstagramButton from '@/components/InstagramButton'
+import EntryRelated from '@/components/EntryRelated'
+import EntryExample from '@/components/EntryExample'
+import EntryDifficulty from '@/components/EntryDifficulty'
+import EntryDisambiguation from '@/components/EntryDisambiguation'
+import SearchSubsComp from '@/components/SearchSubsComp'
+export default {
+  components: {
+    EntryExample,
+    EntryDifficulty,
+    EntryDisambiguation,
+    Chinese,
+    Japanese,
+    Korean,
+    EntryForms,
+    Collocations,
+    SearchSubsComp,
+    Concordance,
+    EntryHeader,
+    DefinitionsList,
+    WebImages,
+    EntryYouTube,
+    EntryCharacters,
+    Mistakes,
+    EntryCourseAd,
+    EntryLyrics,
+    InstagramButton,
+    EntryRelated,
+  },
+  props: {
+    entry: {
+      type: Object,
+    },
+  },
+  data() {
+    return {
+      characters: [],
+      character: {},
+      unsplashSrcs: [],
+      unsplashSearchTerm: '',
+      extDict: '',
+      searchSubsImage: undefined,
+      webImage: undefined,
+      searchSubsExample: '',
+      delayed: false,
+    }
+  },
+  mounted() {
+  },
+  updated() {
+  },
+  methods: {
+    async nextWord() {
+      if (this.entry.newHSK && this.entry.newHSK.includes('7-9')) {
+        let match = this.entry.newHSKMatches.find(
+          (match) => match.level === '7-9'
+        )
+        let newEntry = await (await this.$dictionary).getByNewHSK(
+          '7-9',
+          Math.min(Number(match.num) + 1),
+          5635
+        )
+        this.$router.push({
+          path: `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${newEntry.id}`,
+        })
+      }
+    },
+    async prevWord() {
+      if (this.entry.newHSK && this.entry.newHSK.includes('7-9')) {
+        let match = this.entry.newHSKMatches.find(
+          (match) => match.level === '7-9'
+        )
+        let newEntry = await (await this.$dictionary).getByNewHSK(
+          '7-9',
+          Math.max(0, Number(match.num) - 1)
+        )
+        this.$router.push({
+          path: `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${newEntry.id}`,
+        })
+      }
+    },
+    setExtDict(dict) {
+      if (this.extDict === dict) {
+        this.extDict = ''
+      } else {
+        this.extDict = dict
+      }
+    },
+    searchSubsLoaded(hits) {
+      if (hits.length > 0) {
+        this.searchSubsImage = `https://img.youtube.com/vi/${hits[0].video.youtube_id}/hqdefault.jpg`
+        this.searchSubsExample =
+          hits[0].lineIndex > 0
+            ? hits[0].video.subs_l2[hits[0].lineIndex - 1].line
+            : '' + ' ' + hits[0].video.subs_l2[hits[0].lineIndex].line
+      }
+    },
+    webImagesLoaded(images) {
+      if (images.length > 0) {
+        this.webImage = images[0].src
+      }
+    },
+  },
+}
+</script>
+<style lang="scss" scoped>
+.ext-dictionary-buttons {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.ext-dictinoary-iframe {
+  width: 100%;
+  border: 1px solid #eee;
+  height: calc(100vh - 4rem);
+  border-radius: 0.5rem;
+  background: #ccc;
+}
+</style>
