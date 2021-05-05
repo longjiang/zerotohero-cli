@@ -9,6 +9,7 @@
             </div>
             <SearchCompare
               :searchEntry="entry"
+              :random="true"
               ref="searchCompare"
               :key="`search-${args}`"
               id="search-compare-bar"

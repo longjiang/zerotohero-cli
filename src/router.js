@@ -163,7 +163,7 @@ export default new Router({
       }
     },
     {
-      path: '/:l1/:l2/phrase/:method?/:term?',
+      path: '/:l1/:l2/phrase/search/:term?',
       name: 'phrase',
       component: () => import('./views/Phrase.vue'),
       props: true,
@@ -173,6 +173,21 @@ export default new Router({
           {
             name: 'description',
             content: 'See how phrases are used in real context..'
+          }
+        ]
+      }
+    },
+    {
+      path: '/:l1/:l2/phrase/compare/:term/:compareTerm',
+      name: 'compare-phrases',
+      component: () => import('./views/ComparePhrases.vue'),
+      props: true,
+      meta: {
+        title: 'Compare Two Phrases | Zero to Hero',
+        metaTags: [
+          {
+            name: 'description',
+            content: 'See how two phrases are different.'
           }
         ]
       }

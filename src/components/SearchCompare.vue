@@ -1,16 +1,19 @@
 <template>
   <div class="search-compare-wrapper" v-if="!loading">
-    <Search ref="search" random="true" :entry="searchEntry" :placeholder="$t('Look up words here...')"></Search>
+    <Search ref="search" :defaultURL="urlFunc" :random="random" :type="type" :entry="searchEntry" :term="term" :placeholder="$t('Look up words here...')"></Search>
     <Search
-      :class="{ 'ml-2': true, hidden: !dCompare }"
+      :class="{ 'ml-2': true, hidden: !showCompare }"
       :entry="compareEntry"
+      :term="compareTerm"
       ref="compare"
+      :type="type"
       placeholder="Compare with..."
+      :defaultURL="compareUrlFunc"
       :hrefFunc="compareHrefFunc"
     ></Search>
     <button class="btn btn-compare ml-2" @click="compareClick">
-      <span v-if="dCompare"><i class="fas fa-times"></i></span
-      ><span v-if="!dCompare"
+      <span v-if="showCompare"><i class="fas fa-times"></i></span
+      ><span v-if="!showCompare"
         ><i class="fas fa-adjust"></i>
         <span class="compare-btn-text ml-1">Compare</span></span
       >
@@ -25,13 +28,29 @@ import Search from '@/components/Search'
 export default {
   props: {
     searchEntry: {
-      default: undefined
+      type: Object,
+      default: undefined,
     },
     compareEntry: {
-      default: undefined
+      type: Object,
+      default: undefined,
+    },
+    term: '',
+    compareTerm: '',
+    random: {
+      default: false
     },
     compare: {
       default: false
+    },
+    urlFunc: {
+      type: Function
+    },
+    compareUrlFunc: {
+      type: Function,
+    },
+    type: {
+      default: 'dictionary', // can also be 'generic'
     }
   },
   components: {
@@ -41,12 +60,8 @@ export default {
     return {
       Helper,
       Search,
-      loading: true,
-      dCompare: this.compare,
-      compareHrefFunc: compareEntry => {
-        const entry = this.$refs.search.entry || this.entry
-        return `/${this.$l1.code}/${this.$l2.code}/compare/${this.$dictionaryName}/${entry.id},${compareEntry.id}`
-      }
+      loading: this.type !== 'generic',
+      showCompare: this.compare
     }
   },
   async mounted() {
@@ -54,12 +69,18 @@ export default {
     this.loading = false
   },
   methods: {
+    compareHrefFunc(compareEntry) {
+      compareEntry => {
+        const entry = this.$refs.search.entry || this.entry
+        return `/${this.$l1.code}/${this.$l2.code}/compare/${this.$dictionaryName}/${entry.id},${compareEntry.id}`
+      }
+    },
     focusOnSearch() {
       console.log('focus on seach')
       this.$refs.search.focusOnInput()
     },
     compareClick() {
-      this.dCompare = this.dCompare ? false : true
+      this.showCompare = this.showCompare ? false : true
     }
   }
 }

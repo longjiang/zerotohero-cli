@@ -12,19 +12,23 @@
               placeholder="Enter a word or phrase"
               type="generic"
               :term="term"
+              :compare="true"
               :compareTerm="compareTerm"
               :random="false"
               :key="`${term}-${compareTerm}-search`"
               style="width: 100%"
               :urlFunc="
-                (text) => `/${$l1.code}/${$l2.code}/phrase/search/${text}`
+                (text) => `/${$l1.code}/${$l2.code}/phrase/${compareTerm ? 'compare' : 'search'}/${text}/${compareTerm ? compareTerm : '' }`
               "
               :compareUrlFunc="
                 (text) => `/${$l1.code}/${$l2.code}/phrase/compare/${term}/${text}`
               "
             />
           </div>
-          <div class="focus">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
             <WebImages
               v-if="term"
               :text="term"
@@ -32,38 +36,63 @@
               class="mt-5"
               :key="`${term}-images`"
             />
-            <Collocations
-              v-if="term"
-              :text="term"
+        </div>
+        <div class="col-md-6">
+            <WebImages
+              v-if="compareTerm"
+              :text="compareTerm"
+              limit="10"
               class="mt-5"
-              :key="`${term}-col`"
+              :key="`${compareTerm}-images`"
+            />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="focus">
+            <CompareCollocations
+              v-if="term && compareTerm"
+              :term="term"
+              :compareTerm="compareTerm"
+              class="mt-5"
+              :key="`${term}-${compareTerm}-col`"
             />
           </div>
           <div
             class="widget mt-5"
             id="search-subs"
-            v-if="term"
+            v-if="term && compareTerm && delayed"
             :key="`subs-search-${term}`"
           >
             <div class="widget-title">“{{ term }}” in TV Shows</div>
             <div class="widget-body">
-              <SearchSubsComp
-                v-if="term && delayed"
+              <CompareSearchSubs
                 ref="searchSubs"
                 level="outside"
-                :key="`${term}-search-subs`"
-                :terms="[term]"
+                :key="`${term}-${compareTerm}-compare-search-subs`"
+                :termsA="[term]"
+                :termsB="[compareTerm]"
               />
             </div>
           </div>
-          <div :key="term" class="focus">
-            <Concordance
-              v-if="term"
-              :text="term"
-              class="mt-5"
-              :key="`${term}-concordance`"
-            />
-          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <Concordance
+            v-if="term"
+            :text="term"
+            class="mt-5"
+            :key="`${term}-concordance`"
+          />
+        </div>
+        <div class="col-md-6">
+          <Concordance
+            v-if="compareTerm"
+            :text="compareTerm"
+            class="mt-5"
+            :key="`${compareTerm}-concordance`"
+          />
         </div>
       </div>
     </div>
@@ -72,18 +101,18 @@
 
 <script>
 import Concordance from '@/components/Concordance'
-import Collocations from '@/components/Collocations'
+import CompareCollocations from '@/components/CompareCollocations'
 import SearchCompare from '@/components/SearchCompare'
 import WebImages from '@/components/WebImages'
-import SearchSubsComp from '@/components/SearchSubsComp'
+import CompareSearchSubs from '@/components/CompareSearchSubs'
 
 export default {
   components: {
     SearchCompare,
-    Collocations,
+    CompareCollocations,
     WebImages,
     Concordance,
-    SearchSubsComp,
+    CompareSearchSubs,
   },
   props: {
     method: {

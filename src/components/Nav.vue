@@ -162,6 +162,10 @@ export default {
               show: true,
             },
             {
+              name: 'compare-phrases',
+              show: false
+            },
+            {
               name: 'levels',
               icon: 'fa fa-signal',
               title: 'HSK',
