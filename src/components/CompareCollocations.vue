@@ -7,37 +7,46 @@
       <div
         class="row"
         v-for="(description, name) in colDesc"
-        v-bind:key="'collocation-' + name"
-        v-if="
-          (aSketch &&
-            aSketch.Gramrels &&
-            getGramrelsByName(aSketch.Gramrels, name) &&
-            getGramrelsByName(aSketch.Gramrels, name).Words.length > 0) ||
-          (bSketch &&
-            bSketch.Gramrels &&
-            getGramrelsByName(bSketch.Gramrels, name) &&
-            getGramrelsByName(bSketch.Gramrels, name).Words.length > 0)
-        "
+        :key="`collocation-${name}-${term}-${compareTerm}`"
+          v-if="
+            (aSketch &&
+              aSketch.Gramrels &&
+              getGramrelsByName(aSketch.Gramrels, name) &&
+              getGramrelsByName(aSketch.Gramrels, name).Words.length > 0) ||
+            (bSketch &&
+              bSketch.Gramrels &&
+              getGramrelsByName(bSketch.Gramrels, name) &&
+              getGramrelsByName(bSketch.Gramrels, name).Words.length > 0)
+          "
       >
-        <div class="col-sm-6 mb-5">
-          <Collocation
-            :text="term"
-            :level="level"
-            :title="colDesc[name]"
-            :type="name"
-            :id="`collocation-a-${name}`"
-            :collocation="aSketch.Gramrels ? getGramrelsByName(aSketch.Gramrels, name) : undefined"
-          ></Collocation>
-        </div>
-        <div class="col-sm-6 mb-5">
-          <Collocation
-            :text="compareTerm"
-            :level="compareLevel"
-            :title="colDesc[name]"
-            :type="name"
-            :id="`collocation-a-${name}`"
-            :collocation="bSketch.Gramrels ? getGramrelsByName(bSketch.Gramrels, name) : undefined"
-          ></Collocation>
+          <div class="col-sm-6 mb-5">
+            <Collocation
+              :text="term"
+              :level="level"
+              :title="colDesc[name]"
+              :type="name"
+              :key="`collocation-${compareTerm}-${name}`"
+              :collocation="
+                aSketch && aSketch.Gramrels
+                  ? getGramrelsByName(aSketch.Gramrels, name)
+                  : undefined
+              "
+            ></Collocation>
+          </div>
+          <div class="col-sm-6 mb-5">
+            <Collocation
+              :text="compareTerm"
+              :level="compareLevel"
+              :title="colDesc[name]"
+              :type="name"
+              :key="`collocation-${compareTerm}-${name}`"
+              :collocation="
+                bSketch && bSketch.Gramrels
+                  ? getGramrelsByName(bSketch.Gramrels, name)
+                  : undefined
+              "
+            ></Collocation>
+
         </div>
       </div>
       <div
@@ -112,10 +121,10 @@ export default {
     },
   },
   watch: {
-    a() {
+    term() {
       this.update()
     },
-    b() {
+    compareTerm() {
       this.update()
     },
   },

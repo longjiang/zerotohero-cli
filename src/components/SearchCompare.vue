@@ -1,6 +1,6 @@
 <template>
   <div class="search-compare-wrapper" v-if="!loading">
-    <Search ref="search" :defaultURL="urlFunc" :random="random" :type="type" :entry="searchEntry" :term="term" :placeholder="$t('Look up words here...')"></Search>
+    <Search ref="search" :defaultURL="urlFunc" :hrefFunc="compareEntry ? compareHrefFuncFirst : undefined" :random="random" :type="type" :entry="searchEntry" :term="term" :placeholder="$t('Look up words here...')"></Search>
     <Search
       :class="{ 'ml-2': true, hidden: !showCompare }"
       :entry="compareEntry"
@@ -70,10 +70,11 @@ export default {
   },
   methods: {
     compareHrefFunc(compareEntry) {
-      compareEntry => {
-        const entry = this.$refs.search.entry || this.entry
-        return `/${this.$l1.code}/${this.$l2.code}/compare/${this.$dictionaryName}/${entry.id},${compareEntry.id}`
-      }
+      const entry = this.$refs.search.entry || this.entry
+      return `/${this.$l1.code}/${this.$l2.code}/compare/${this.$dictionaryName}/${entry.id},${compareEntry.id}`
+    },
+    compareHrefFuncFirst(entry) {
+      return `/${this.$l1.code}/${this.$l2.code}/compare/${this.$dictionaryName}/${entry.id},${this.compareEntry.id}`
     },
     focusOnSearch() {
       console.log('focus on seach')

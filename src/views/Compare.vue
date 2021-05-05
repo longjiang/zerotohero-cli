@@ -92,8 +92,10 @@
           <CompareCollocations
             class="mt-5 focus"
             v-if="a && b"
-            :a="a"
-            :b="b"
+            :term="a.bare"
+            :compareTerm="b.bare"
+            :level="a.level"
+            :compareLevel="b.level"
           ></CompareCollocations>
         </div>
       </div>
@@ -138,7 +140,7 @@
     </div>
 
     <!-- <EntryCharacters :entry="entry"></EntryCharacters> -->
-    <div class="container mt-5 focus">
+    <div class="container mt-5 mb-5 focus">
       <div class="row">
         <div class="col-sm-6">
           <Concordance
