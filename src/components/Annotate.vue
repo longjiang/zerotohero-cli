@@ -23,25 +23,29 @@
     }"
   >
     <div class="annotator-buttons" v-if="!empty()">
-      <Speak
-        v-if="speak"
-        :text="text"
-        style="position: relative; top: 0.08rem; position: relative"
-      />
-      <span
-        class="annotator-show-translate ml-2 focus-exclude"
-        @click="translateClick"
-        v-if="showTranslate"
-      >
-        <i class="fas fa-language"></i>
-      </span>
-      <span
-        class="annotator-fullscreen ml-2 focus-exclude"
-        @click="fullscreenClick"
-        v-if="fullscreen"
-      >
-        <i class="fas fa-expand"></i>
-      </span>
+      <b-dropdown no-caret toggle-class="annotator-menu-toggle" dropleft>
+        <template #button-content><i class="fas fa-ellipsis-h"></i></template>
+        <b-dropdown-item
+          ><Speak
+            :text="text"
+            style="position: relative; top: 0.08rem; position: relative" /><span
+            class="annotator-show-translate ml-2 focus-exclude"
+            @click="translateClick"
+          >
+            <i class="fas fa-language"></i> </span
+          ><span
+            class="annotator-fullscreen ml-2 focus-exclude"
+            @click="fullscreenClick"
+          >
+            <i class="fas fa-expand"></i>
+          </span>
+          <span
+            @click="copyClick"
+            class="annotator-copy ml-2 focus-exclude"
+          >
+            <i class="fas fa-copy"></i> </span
+        ></b-dropdown-item>
+      </b-dropdown>
     </div>
     <span
       class="annotator-close ml-2 focus-exclude"
@@ -141,6 +145,16 @@ export default {
     fullscreenClick() {
       this.fullscreenMode = !this.fullscreenMode
     },
+    copyClick() {
+      let text = this.$l2.continua ? this.text.replace(/ /g, '') : this.text
+      var tempInput = document.createElement("input");
+      tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+    },
     async visibilityChanged(isVisible) {
       if (isVisible && !this.annotated) {
         if (this.$hasFeature('dictionary') || this.nonLatin()) {
@@ -152,7 +166,9 @@ export default {
             for (let slot of this.$slots.default) {
               let $slotElems = $(slot.elm)
               this.annotatedSlots.push(
-                $(await this.annotateRecursive($slotElems[0].cloneNode(true)))[0].outerHTML
+                $(
+                  await this.annotateRecursive($slotElems[0].cloneNode(true))
+                )[0].outerHTML
               )
             }
             // await Helper.delay(1000)
@@ -180,8 +196,7 @@ export default {
           await this.annotateRecursive(n)
         }
       }
-      
-      
+
       return node
     },
     breakSentences(text) {
@@ -231,12 +246,10 @@ export default {
       return html
     },
     convertBurmese(text) {
-      console.log('converting burmese ' + text)
       const detector = new MyanmarTools.ZawgyiDetector()
       const score = detector.getZawgyiProbability(text)
       if (score > 0.5) {
         const converter = new MyanmarTools.ZawgyiConverter()
-        console.log('Zawgyi detected')
         return converter.zawgyiToUnicode(text)
       } else {
         return text
@@ -251,9 +264,7 @@ export default {
         let sentences = this.breakSentences(text)
         for (let sentence of sentences) {
           // $(node).before(`<span id="sentence-placeholder-${this.batchId}">${sentence}</span>`)
-          let sentenceSpan = $(
-            `<span class="sentence">${sentence}</span>`
-          )
+          let sentenceSpan = $(`<span class="sentence">${sentence}</span>`)
           $(node).before(sentenceSpan)
         }
         $(node).remove()
@@ -274,7 +285,7 @@ export default {
 </script>
 
 <style lang="scss">
-.show-pinyin-for-saved  .add-pinyin.phonetics .sentence,
+.show-pinyin-for-saved .add-pinyin.phonetics .sentence,
 .show-pinyin .add-pinyin.phonetics:not(.annotated) .sentence {
   line-height: 2.6;
 }
@@ -322,11 +333,7 @@ export default {
   overflow: scroll;
   font-size: 3rem;
   padding: 3rem;
-  .speak,
-  .annotator-show-translate,
-  .annotator-fullscreen {
-    display: none;
-  }
+  flex-direction: row-reverse;
   .annotator-close {
     opacity: 0;
     position: absolute;
@@ -339,21 +346,38 @@ export default {
   }
 }
 
+.annotated:hover .annotator-buttons {
+  visibility: visible;
+}
+
 .annotator-buttons {
   float: right;
   padding: 0 0 0 0.5rem;
+  visibility: hidden;
 }
 
 [dir='rtl'] .annotator-buttons {
   float: left;
   padding: 0 0.5rem 0 0;
 }
+.annotator-menu-toggle {
+  font-size: 0.8rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.2rem;
+  background: none;
+  border: none;
+  color: #aaa;
+}
 
-.annotator-buttons > *:not(.speak) {
-  cursor: pointer;
-  opacity: 0.3;
+.annotator-buttons .dropdown-item {
   &:hover {
-    opacity: 1;
+    background: none;
+  }
+  span {
+    color: #888;
+    &:hover {
+      color: #666;
+    }
   }
 }
 </style>
