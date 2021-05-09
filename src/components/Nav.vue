@@ -5,8 +5,8 @@
     :set="
       (parent = menu.find(
         (item) =>
-          $route.name === item.name ||
-          $route.path.includes($router.resolve({ name: item.name }).href) ||
+          $route.name === nameOfSelfOrFirstChild(item) ||
+          $route.path.includes($router.resolve({ name: nameOfSelfOrFirstChild(item) }).href) ||
           (item.children &&
             item.children.map((child) => child.name).includes($route.name))
       ))
@@ -15,14 +15,14 @@
     <div class="row">
       <nav class="site-nav tabs">
         <router-link
-          v-for="item in menu.filter((item) => item.show)"
+          v-for="(item, index) in menu.filter((item) => item.show)"
           :class="{
             tab: true,
-            'router-link-active': parent && parent.name === item.name,
+            'router-link-active': parent && parent.name === nameOfSelfOrFirstChild(item),
           }"
-          :to="last(item) || { name: item.name }"
+          :to="last(item) || { name: nameOfSelfOrFirstChild(item) }"
           :title="item.title"
-          :key="`nav-${item.name}`"
+          :key="`nav-${index}`"
         >
           <i :class="item.icon"></i>
           {{ $t(item.title) }}
@@ -31,7 +31,7 @@
     </div>
 
     <div class="row">
-      <nav class="secondary-menu text-center bg-white pt-3" v-if="parent">
+      <nav class="secondary-menu text-center bg-white pt-3" v-if="parent && parent.children">
         <router-link
           class="secondary-menu-item"
           v-for="child in parent.children.filter((child) => child.show)"
@@ -57,9 +57,9 @@ export default {
   data() {
     return {
       l2: this.$l2,
+      shortcuts: [],
       menu: [
         {
-          name: 'courses',
           icon: 'fas fa-graduation-cap',
           title: 'Courses',
           show: this.$hasFeature('courses'),
@@ -101,10 +101,8 @@ export default {
           icon: 'fa fa-trophy',
           title: 'Heroes',
           show: this.$l1.code === 'en' && this.$l2.code === 'zh',
-          children: [],
         },
         {
-          name: 'youtube-browse',
           icon: 'fas fa-video',
           title: 'Audio-Visual',
           show: this.$hasFeature('youtube'),
@@ -134,7 +132,6 @@ export default {
           ],
         },
         {
-          name: 'dictionary',
           icon: 'fas fa-book',
           title: 'Dictionary',
           show: this.$hasFeature('dictionary'),
@@ -144,26 +141,28 @@ export default {
               icon: 'fas fa-font',
               title: 'Look Up',
               show: this.$hasFeature('dictionary'),
+              shortcut: (e) => e.code === 'KeyD' && e.metaKey && e.shiftKey,
             },
             {
               name: 'compare',
-              show: false
+              show: false,
             },
             {
               name: 'saved-words',
               icon: 'fas fa-star',
               title: 'Saved',
-              show: true
+              show: true,
             },
             {
               name: 'phrase',
               icon: 'fas fa-quote-left',
               title: 'Phrase',
               show: true,
+              shortcut: (e) => e.code === 'KeyP' && e.metaKey && e.shiftKey,
             },
             {
               name: 'compare-phrases',
-              show: false
+              show: false,
             },
             {
               name: 'levels',
@@ -228,7 +227,6 @@ export default {
           ],
         },
         {
-          name: 'reader',
           icon: 'fas fa-book-open',
           title: 'Reading',
           show:
@@ -256,10 +254,10 @@ export default {
           ],
         },
         {
-          name: 'grammar',
           icon: 'fas fa-list-ul',
           title: 'Grammar',
           show: this.$hasFeature('grammar'),
+          shortcut: (e) => e.code === 'KeyG' && e.metaKey && e.shiftKey,
           children: [
             {
               name: 'grammar',
@@ -278,24 +276,20 @@ export default {
           icon: 'fas fa-list-ul',
           title: 'Grammar Tools',
           show: this.$hasFeature('noun-cases'),
-          children: [],
         },
         {
           name: 'keyboard',
           icon: 'fas fa-keyboard',
           title: 'Keyboard',
           show: this.$hasFeature('keyboard'),
-          children: [],
         },
         {
           name: 'bookmarklet',
           icon: 'fas fa-bookmark',
           title: 'Bookmarklet',
           show: this.$hasFeature('bookmarklet'),
-          children: [],
         },
         {
-          name: 'resources',
           icon: 'fas fa-gem',
           title: 'Resources',
           show: true,
@@ -337,20 +331,24 @@ export default {
           icon: 'fas fa-id-card',
           title: 'Contact',
           show: ['en', 'zh'].includes(this.$l2.code),
-          children: [],
         },
         {
           name: 'settings',
           icon: 'fas fa-cog',
           title: 'Settings',
+          shortcut: (e) => e.code === 'KeyS' && e.metaKey && e.shiftKey,
           show: true,
-          children: [],
         },
       ],
       history: [],
     }
   },
   methods: {
+    nameOfSelfOrFirstChild(item) {
+      if (item) {
+        return item.name || (item.children && item.children.length > 0 ? item.children[0].name : '')
+      }
+    },
     last(item) {
       if (item) {
         let historyMatches = this.history.filter((path) => {
@@ -359,7 +357,7 @@ export default {
             if (r && r.route) {
               let childNames = item.children
                 ? item.children.map((child) => child.name)
-                : []
+                : [item.name]
               return childNames.includes(r.route.name)
             }
           }
@@ -375,6 +373,45 @@ export default {
       // eslint-disable-next-line vue/no-parsing-error
       return count < 100 ? count : '99+'
     },
+    bindKeys() {
+      window.addEventListener('keydown', this.keydown)
+      for (let item of this.menu) {
+        if (item.shortcut) this.shortcuts.push(item)
+        if (item.children) {
+          for (let child of item.children) {
+            if (child.shortcut) this.shortcuts.push(child)
+          }
+        }
+      }
+    },
+    unbindKeys() {
+      window.removeEventListener('keydown', this.keydown)
+    },
+
+    keydown(e) {
+      if (!['INPUT', 'TEXTAREA'].includes(e.target.tagName.toUpperCase())) {
+        for (let shortcutItem of this.shortcuts) {
+          if (shortcutItem.shortcut(e)) {
+            let last = this.last(shortcutItem)
+            this.$router.push(
+              last
+                ? {
+                    path: last,
+                  }
+                : { name: this.nameOfSelfOrFirstChild(shortcutItem) }
+            )
+            e.preventDefault()
+            return false
+          }
+        }
+      }
+    },
+  },
+  mounted() {
+    this.bindKeys()
+  },
+  unmounted() {
+    this.unbindKeys()
   },
   watch: {
     $route() {
