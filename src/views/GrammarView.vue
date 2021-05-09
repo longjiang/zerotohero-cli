@@ -126,7 +126,7 @@ export default {
       })
     },
     keydown(e) {
-      if (e.target.tagName.toUpperCase() !== 'INPUT' && !e.metaKey) {
+      if (!['INPUT', 'TEXTAREA'].includes(e.target.tagName.toUpperCase()) && !e.metaKey) {
         // home
         if (e.keyCode == 36) {
           document.getElementById('main').scrollIntoView({ behavior: 'smooth' })

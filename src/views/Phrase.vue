@@ -111,6 +111,41 @@ export default {
         this.delayed = true
       }, 1000)
     },
+
+    bindKeys() {
+      window.addEventListener('keydown', this.keydown)
+    },
+    unbindKeys() {
+      window.removeEventListener('keydown', this.keydown)
+    },
+
+    keydown(e) {
+      if (!['INPUT', 'TEXTAREA'].includes(e.target.tagName.toUpperCase()) && !e.metaKey) {
+        // home
+        if (e.keyCode == 36) {
+          document
+            .getElementById('main')
+            .scrollIntoView({ behavior: 'smooth' })
+          // this.$refs.searchCompare.focusOnSearch()
+          e.preventDefault()
+          return false
+        }
+        // end
+        if (e.keyCode == 35) {
+          document
+            .getElementById('search-subs')
+            .scrollIntoView({ behavior: 'smooth' })
+          e.preventDefault()
+          return false
+        }
+      }
+    },
+  },
+  activated() {
+    this.bindKeys()
+  },
+  deactivated() {
+    this.unbindKeys()
   },
   mounted() {
     this.route()
