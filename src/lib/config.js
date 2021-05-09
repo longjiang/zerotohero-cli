@@ -56,6 +56,9 @@ export default {
       'UCPIRD4yr1hlAEovBCSNlAKg', // Croton MEGA HIT
       'UC7VY0GWLswq_Z48nkETL-yA', // Chinese Drama
       'UC3cbVxXQ-p-auBRVhGCmUmQ', // 华录百納熱播劇場
+      'UCMVaFMIJmL3kZ_RKYKd-aUg', // YoYo Television Series
+      'UCyNIsMH1AhDFTnwIM9E92rQ', // 山河令
+      'UC_U4WI3M0edEV5u1EHKcrsg', // YoYo Fun
       'UCVm75cj78njo38Izz_suQQA',
       'UCWiS6QxFGFK-LKwwHzSsmHQ',
       'UCAMrnDQlsPnrScHun5PgrXw',
@@ -78,7 +81,7 @@ export default {
       'UCUuZe7OB0yHSYAfu8annGKQ',
       'UCstdo3fo9H04nFVyaj2Bkew',
       'UClpQ52tidfcwbFhwjuzrWLg',
-      'UCU1QlsCKFBmE_wf6CGU5tvg'
+      'UCU1QlsCKFBmE_wf6CGU5tvg',
     ]
   },
   talkChannels: {

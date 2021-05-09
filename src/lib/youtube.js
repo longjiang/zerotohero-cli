@@ -15,6 +15,24 @@ export default {
   thumbnail(id) {
     return `//img.youtube.com/vi/${id}/hqdefault.jpg`
   },
+  async checkShows(videos, langId) {
+    let response = await $.getJSON(
+      `${Config.wiki}items/tv_shows?sort=title&filter[l2][eq]=${
+        langId
+      }&timestamp=${Date.now()}`
+    )
+    let shows = response.data || []
+    let showTitles = shows.map((show) => show.title)
+    let regex = new RegExp(showTitles.join('|'))
+    for (let video of videos) {
+      if (regex.test(video.title)) {
+        video.show = shows.find((show) =>
+          video.title.includes(show.title)
+        )
+      }
+    }
+    return videos
+  },
   searchYouTubeByProxy(searchTerm, callback) {
     $.ajax(
       Config.lrcServer +

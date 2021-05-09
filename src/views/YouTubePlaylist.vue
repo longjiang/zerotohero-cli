@@ -5,7 +5,15 @@
         <h3 class="text-center">
           Playlist: {{ playlist_id }}
         </h3>
-        <YouTubeVideoList :videos="videos" :checkSubs="true" :checkSaved="true" />
+        <div>
+          <b-button
+            v-if="$settings.adminMode"
+            class="btn btn-small mt-2 ml-3"
+            @click="addAll()"
+            ><i class="fas fa-plus mr-2"></i>Add All</b-button
+          >
+        </div>
+        <YouTubeVideoList :videos="videos" :checkSubs="true" :checkSaved="true" ref="youtubeVideoList" />
       </div>
     </div>
   </div>
@@ -35,10 +43,16 @@ export default {
     this.update()
   },
   methods: {
+    addAll() {
+      this.$refs.youtubeVideoList.addAll()
+    },
     async update() {
       this.title = undefined
       this.videos = []
-      this.videos = await YouTube.playlistByApi(this.playlist_id)
+      let videos = await YouTube.playlistByApi(this.playlist_id)
+      if (videos && videos.length > 0) {
+        this.videos = await YouTube.checkShows(videos, this.$l2.id)
+      }
     }
   },
   watch: {

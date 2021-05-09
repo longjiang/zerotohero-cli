@@ -336,10 +336,13 @@ export default {
         }&filter[l2][eq]=${this.$l2.id}&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
       )
       if (response && response.data.length > 0) {
-        video = Object.assign(video, response.data[0])
-        video.subs_l2 = JSON.parse(video.subs_l2)
-        this.firstLineTime = video.subs_l2[0].starttime
-        this.videoInfoKey++
+        let subs_l2 = JSON.parse(response.data[0].subs_l2)
+        if (subs_l2[0]) {
+          video = Object.assign(video, response.data[0])
+          video.subs_l2 = subs_l2
+          this.firstLineTime = video.subs_l2[0].starttime
+          this.videoInfoKey++
+        }
       }
     },
     async checkSubsFunc(video) {
@@ -363,7 +366,7 @@ export default {
       this.videoInfoKey++
     },
     async getYouTubeSubsList(video) {
-      let l2Locales = this.$l2.code === 'zh' ? [] : [this.$l2.code]
+      let l2Locales = [this.$l2.code]
       if (this.$l2.locales) {
         l2Locales = l2Locales.concat(this.$l2.locales)
       }

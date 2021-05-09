@@ -42,7 +42,9 @@
               this.$router.push({
                 path: `/${$l1.code}/${
                   $l2.code
-                }/youtube/browse/${topic}/${level}/0/${encodeURIComponent(url)}`,
+                }/youtube/browse/${topic}/${level}/0/${encodeURIComponent(
+                  url
+                )}`,
               })
             }
           "
@@ -135,6 +137,7 @@ import YouTubeChannelCard from '@/components/YouTubeChannelCard'
 import SimpleSearch from '@/components/SimpleSearch'
 import Config from '@/lib/config'
 import Helper from '@/lib/helper'
+import YouTube from '@/lib/youtube'
 
 export default {
   components: {
@@ -151,7 +154,7 @@ export default {
       default: 'all',
     },
     keyword: {
-      default: ''
+      default: '',
     },
     start: {
       default: 0,
@@ -164,19 +167,10 @@ export default {
       videos: [],
       levels: Helper.levels(this.$l2),
       topics: Helper.topics,
-      shows: []
     }
   },
   methods: {
     async getVideos() {
-      if (this.$settings.adminMode) {
-        let response = await $.getJSON(
-          `${Config.wiki}items/tv_shows?sort=title&filter[l2][eq]=${
-            this.$l2.id
-          }&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
-        )
-        this.shows = response.data || []
-      }
       let filters = ''
       if (this.topic !== 'all') {
         filters += '&filter[topic][eq]=' + this.topic
@@ -190,15 +184,13 @@ export default {
       let response = await $.getJSON(
         `${Config.wiki}items/youtube_videos?sort=-id&filter[l2][eq]=${
           this.$l2.id
-        }${filters}&limit=10&offset=${this.start}&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
+        }${filters}&limit=10&offset=${this.start}&timestamp=${
+          this.$settings.adminMode ? Date.now() : 0
+        }`
       )
       let videos = response.data || []
-      let showTitles = this.shows.map(show => show.title)
-      let regex = new RegExp(showTitles.join('|'))
-      for (let video of videos) {
-        if (regex.test(video.title)) {
-          video.show = this.shows.find(show => video.title.includes(show.title))
-        }
+      if (videos && this.$settings.adminMode) {
+        videos = await YouTube.checkShows(videos, this.$l2.id)
       }
       this.videos = Helper.uniqueByValue(videos, 'youtube_id')
     },
@@ -225,7 +217,7 @@ export default {
     route() {
       let canonical = `/${this.$l1.code}/${this.$l2.code}/youtube/browse/${this.topic}/${this.level}/${this.start}`
       if (this.keyword) {
-        canonical = canonical +  '/' + this.keyword
+        canonical = canonical + '/' + this.keyword
       }
       if (this.$router.currentRoute.path !== canonical) {
         this.$router.push({ path: canonical })
