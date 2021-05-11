@@ -321,7 +321,7 @@ export default {
       promises.push(
         $.getJSON(
           `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'
-          }${channelFilter}&filter[l2][eq]=${langId
+          }${channelFilter}&filter[title][ncontains]=Clip&filter[l2][eq]=${langId
           }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&limit=100&timestamp=${adminMode ? Date.now() : 0
           }`
         ).then((response) => {

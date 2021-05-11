@@ -98,10 +98,16 @@ export default {
           playerVars: {
             start: parseInt(this.starttime),
             autoplay: 1,
-            controls: 1,
+            cc_load_policy: 1,
+            cc_lang_pref: this.$l1.code,
             showinfo: 0,
             playsinline: 1,
             rel: 0,
+            disablekb: 1,
+            fs: 0,
+            hl: this.$l1.code,
+            iv_load_policy: 3,
+            modestbranding: 1,
           },
           onReady: () => {},
           events: {

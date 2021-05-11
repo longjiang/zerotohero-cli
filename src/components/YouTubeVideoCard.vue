@@ -326,6 +326,7 @@ export default {
       })
       if (response && response.data) {
         video.id = response.data.id
+        this.videoInfoKey++
         return true
       }
     },
