@@ -21,8 +21,8 @@ export default {
   imageUrl: dictionaryServer + 'img/words/',
   animatedSvgUrl: dictionaryServer + 'data/svgs/',
   lrcSearch: lrcServer + 'lrc/search/',
-  wiki: 'https://directus.chinesezerotohero.com/_/',
-  wikiAdmin: 'https://directus.chinesezerotohero.com/admin/#/',
+  wiki: 'https://db.zerotohero.ca/_/',
+  wikiAdmin: 'https://db.zerotohero.ca/admin/#/',
   approvedChannels: {
     zh: [
       'UCUhpu5MJQ_bjPkXO00jyxsw', // iQiyi
