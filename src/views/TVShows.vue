@@ -2,7 +2,7 @@
   <div class="main container" id="main">
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="text-center mt-5 mb-5">TV Shows</h1>
+        <h1 class="text-center mt-5 mb-5">{{ shows.length }} TV Shows</h1>
         <div class="tv-shows mb-5">
           <div class="tv-show media rounded shadow" v-for="show of shows">
             <router-link
@@ -34,12 +34,7 @@
 </template>
 
 <script>
-import YouTubeNav from '@/components/YouTubeNav'
-import YouTubeVideoList from '@/components/YouTubeVideoList'
-import YouTubeChannelCard from '@/components/YouTubeChannelCard'
-import SimpleSearch from '@/components/SimpleSearch'
 import Config from '@/lib/config'
-import Helper from '@/lib/helper'
 
 export default {
   data() {
