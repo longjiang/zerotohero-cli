@@ -42,6 +42,11 @@ export default {
       for(let videoIndex in this.videos) {
         this.$refs.youTubeVideoCard[videoIndex].getSubsAndSave()
       }
+    },
+    removeAll() {
+      for(let videoIndex in this.videos) {
+        this.$refs.youTubeVideoCard[videoIndex].remove()
+      }
     }
   }
 }

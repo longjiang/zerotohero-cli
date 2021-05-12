@@ -50,7 +50,7 @@ export default {
       let response = await $.getJSON(
         `${Config.wiki}items/tv_shows?sort=title&filter[l2][eq]=${
           this.$l2.id
-        }&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
+        }&limit=500&timestamp=${this.$settings.adminMode ? Date.now() : 0}`
       )
       this.shows = response.data.sort((x,y)=>x.title.localeCompare(y.title, 'zh-CN')) || []
     },

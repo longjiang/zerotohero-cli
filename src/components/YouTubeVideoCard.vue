@@ -96,7 +96,7 @@
         <b-button
           v-if="$settings.adminMode && video.id"
           class="btn btn-small bg-danger text-white mt-2 ml-0"
-          @click="remove(video)"
+          @click="remove()"
           ><i class="fa fa-trash"></i></b-button
         >
         <div
@@ -213,9 +213,9 @@ export default {
         }
       }
     },
-    async remove(video) {
+    async remove() {
       let response = await $.ajax({
-        url: `${Config.wiki}items/youtube_videos/${video.id}`,
+        url: `${Config.wiki}items/youtube_videos/${this.video.id}`,
         type: 'DELETE',
         contentType: 'application/json',
         xhr: function () {
@@ -226,7 +226,7 @@ export default {
         },
       })
       if (response) {
-        video.id = undefined
+        this.video.id = undefined
         this.videoInfoKey++
       }
     },

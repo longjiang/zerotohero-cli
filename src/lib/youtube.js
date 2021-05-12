@@ -15,11 +15,11 @@ export default {
   thumbnail(id) {
     return `//img.youtube.com/vi/${id}/hqdefault.jpg`
   },
-  async checkShows(videos, langId) {
+  async checkShows(videos, langId, adminMode = false) {
     let response = await $.getJSON(
       `${Config.wiki}items/tv_shows?sort=title&filter[l2][eq]=${
         langId
-      }&timestamp=${Date.now()}`
+      }&limit=500&timestamp=${adminMode ? Date.now() : 0}`
     )
     let shows = response.data || []
     let showTitles = shows.map((show) => show.title)
