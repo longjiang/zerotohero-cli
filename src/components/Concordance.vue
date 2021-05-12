@@ -19,6 +19,7 @@
               />
             </Annotate>
             <div v-if="example.l1">{{ example.l1 }}</div>
+            <div v-if="example.ref" class="concordance-ref">{{ example.ref }}</div>
             <hr />
           </li>
         </ul>
@@ -137,3 +138,9 @@ export default {
   },
 }
 </script>
+<style scoped>
+.concordance-ref {
+  color: #ccc;
+  font-size: 0.8em;
+}
+</style>

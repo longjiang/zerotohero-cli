@@ -333,7 +333,7 @@ export default {
       )
     }
     await Promise.all(promises)
-    if (approvedChannels && videos.length < 3) {
+    if (approvedChannels && videos.length < 3 && Config.talkChannels[lang]) {
       promises = []
       channelFilter = `&filter[channel_id][in]=${Config.talkChannels[
         lang

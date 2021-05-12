@@ -51,7 +51,7 @@
           >{{ token.candidates[0].traditional }}</span
         >
         <span v-else class="word-block-text" @click="wordBlockClick()">{{
-          token.candidates[0].head
+          token.text
         }}</span>
       </template>
       <template v-else>

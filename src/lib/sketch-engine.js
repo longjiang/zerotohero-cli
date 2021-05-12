@@ -191,7 +191,8 @@ export default {
               line = line.replace(/ ([,.])/g, '$1')
               if (line.length > options.term.length + 4) {
                 let parallelLine = {
-                  l2: line
+                  l2: line,
+                  ref: Line.Refs ? Line.Refs[0] : undefined
                 }
                 if (Line.Align && Line.Align[0].Kwic) {
                   parallelLine.l1 = Line.Align[0].Kwic.map(
