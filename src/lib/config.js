@@ -23,7 +23,13 @@ export default {
   lrcSearch: lrcServer + 'lrc/search/',
   wiki: 'https://db.zerotohero.ca/_/',
   wikiAdmin: 'https://db.zerotohero.ca/admin/#/',
+  reject: {
+    en: ['m', 's', 't', 'll', 'd', 're', 'ain', 'don']
+  },
   approvedChannels: {
+    en: [
+      'UC6ZFN9Tx6xh-skXCuRHCDpQ', // PBS News Hour
+    ],
     zh: [
       'UCUhpu5MJQ_bjPkXO00jyxsw', // iQiyi
       'UCYQPTeY3HOk0BprrGuCWCaA', // YouKu

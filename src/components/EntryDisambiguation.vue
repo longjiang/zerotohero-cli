@@ -7,7 +7,7 @@
         :words="similarWords"
         :compareWith="entry"
         :key="wordsKey"
-        :traditional="entry.simplified.length === 1"
+        :traditional="entry.simplified && entry.simplified.length === 1"
       ></WordList>
     </div>
   </div>
@@ -22,7 +22,7 @@ export default {
   },
   props: ['entry'],
   mounted() {
-    if (this.entry.simplified.length > 1) {
+    if (this.entry.simplified && this.entry.simplified.length > 1) {
       this.getReverse()
       this.getHomonyms()
     } else {
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     async getOtherPronunciations() {
-      let words = await (await this.$dictionary).lookupSimplified(this.entry.simplified)
+      let words = this.$l2.code === 'zh' ? await (await this.$dictionary).lookupSimplified(this.entry.simplified) : await (await this.$dictionary).lookup(this.entry.bare)
       for (let word of words) {
         if (word.id !== this.entry.id) {
           this.similarWords.push(word)

@@ -19,7 +19,7 @@
         seen: seen,
         saved: saved,
       }"
-      :data-level="getLevel()"
+      :data-level="sticky ? getLevel() : false"
       v-bind="attributes"
       @mouseover="mouseover"
       @mouseout="mouseout"

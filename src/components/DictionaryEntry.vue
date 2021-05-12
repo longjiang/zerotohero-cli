@@ -181,9 +181,13 @@
                   entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.hsk
                 "
                 :terms="
-                  entry.simplified === entry.traditional
-                    ? [entry.simplified]
-                    : [entry.simplified, entry.traditional]
+                  $l2.code === 'zh'
+                    ? entry.simplified === entry.traditional
+                      ? [entry.simplified]
+                      : [entry.simplified, entry.traditional]
+                    : entry.forms && entry.forms.length > 0
+                    ? entry.forms
+                    : [entry.bare]
                 "
                 @loaded="searchSubsLoaded"
               />
@@ -207,6 +211,7 @@
       <div class="row d-flex" style="flex-wrap: wrap">
         <EntryDifficulty :entry="entry" style="flex: 1" class="m-3" />
         <EntryDisambiguation
+          v-if="['zh', 'yue'].includes($l2.code)"
           :entry="entry"
           class="m-3"
           style="flex: 1; min-width: 20rem"
@@ -331,11 +336,11 @@ export default {
       type: Object,
     },
     showImages: {
-      default: true
+      default: true,
     },
     showSearchSubs: {
-      default: true
-    }
+      default: true,
+    },
   },
   data() {
     return {
@@ -350,10 +355,8 @@ export default {
       delayed: false,
     }
   },
-  mounted() {
-  },
-  updated() {
-  },
+  mounted() {},
+  updated() {},
   methods: {
     async nextWord() {
       if (this.entry.newHSK && this.entry.newHSK.includes('7-9')) {

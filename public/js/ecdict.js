@@ -204,8 +204,8 @@ const Dictionary = {
     return word
   },
   lookupMultiple(text) {
-    let word = this.words.filter(word => word && word.bare.toLowerCase() === text.toLowerCase())
-    return word
+    let words = this.words.filter(word => word && word.bare.toLowerCase() === text.toLowerCase())
+    return words
   },
   formTable() {
     return this.tables

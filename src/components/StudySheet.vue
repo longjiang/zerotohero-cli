@@ -51,6 +51,7 @@ import WordBlock from '@/components/WordBlock'
 import WordBlockDictionary from '@/components/WordBlockDictionary'
 import VRuntimeTemplate from 'v-runtime-template'
 import Helper from '@/lib/helper'
+import Config from '@/lib/config'
 
 export default {
   components: {
@@ -80,8 +81,7 @@ export default {
       batchId: 0,
       tokenized: [],
       phrases: [],
-      seen: [],
-      reject: ['m', 's', 't', 'll', 'd', 're', 'ain', 'don']
+      seen: []
     }
   },
   computed: {
@@ -149,11 +149,11 @@ export default {
         dictionaryTemplate = ''
         text = text.normalize('NFD').replace(/[\u0300-\u036f]/g, '') // strip accents e.g. résumé -> resume
         this.tokenized[batchId] = []
-        let segs = this.splitByReg(text, /([a-zA-Z0-9]+)/gi)
+        let segs = Helper.splitByReg(text, /([a-zA-Z0-9]+)/gi)
         var lemmatizer = new Lemmatizer()
         for (let seg of segs) {
           let word = seg.toLowerCase()
-          if (/.*([a-z0-9]+).*/.test(word) && !this.reject.includes(word)) {
+          if (/.*([a-z0-9]+).*/.test(word) && (!Config.reject[this.$l2.code] || !Config.reject[this.$l2.code].includes(word))) {
             let lemmas = lemmatizer.lemmas(word)
             lemmas = [[word, 'inflected']].concat(lemmas)
             let found = false
@@ -202,10 +202,6 @@ export default {
         dictionaryTemplate
       }
     },
-    splitByReg(text, reg) {
-      let words = text.replace(reg, '!!!BREAKWORKD!!!$1!!!BREAKWORKD!!!').replace(/^!!!BREAKWORKD!!!/, '').replace(/!!!BREAKWORKD!!!$/, '')
-      return words.split('!!!BREAKWORKD!!!')
-    }
   }
 }
 </script>
