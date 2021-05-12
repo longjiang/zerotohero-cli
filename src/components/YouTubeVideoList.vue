@@ -1,7 +1,7 @@
 <template>
   <div class="youtube-videos">
     <YouTubeVideoCard
-      v-for="(video, videoIndex) in videos"
+      v-for="(video, videoIndex) in videos.filter(video => video.title !== 'Private video')"
       :video="video"
       :checkSaved="checkSaved"
       :checkSubs="checkSubs"

@@ -288,10 +288,12 @@ export default {
       if (this.checkSaved && !video.id && video.hasSubs) {
         if (!video.subs_l2 && video.l2Locale) {
           video.subs_l2 = await this.getTranscript(video, video.l2Locale)
-          this.firstLineTime = video.subs_l2[0].starttime
         }
-        if (!video.channel_id) await this.getChannelID(video)
-        await this.save(video)
+        if(video.subs_l2[0]) {
+          this.firstLineTime = video.subs_l2[0].starttime
+          if (!video.channel_id) await this.getChannelID(video)
+          await this.save(video)
+        }
       }
     },
     async getChannelID(video) {

@@ -17,8 +17,7 @@ export default {
   },
   async checkShows(videos, langId, adminMode = false) {
     let response = await $.getJSON(
-      `${Config.wiki}items/tv_shows?sort=title&filter[l2][eq]=${
-        langId
+      `${Config.wiki}items/tv_shows?sort=title&filter[l2][eq]=${langId
       }&limit=500&timestamp=${adminMode ? Date.now() : 0}`
     )
     let shows = response.data || []
@@ -318,10 +317,12 @@ export default {
     }
     let promises = []
     for (let term of terms) {
+      let subsFilter = lang === 'zh' ? `filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'
+        }` : `filter[subs_l2][contains]=${term.replace(/\*/g, '%')
+        }`
       promises.push(
         $.getJSON(
-          `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'
-          }${channelFilter}&filter[title][ncontains]=Clip&filter[l2][eq]=${langId
+          `${Config.wiki}items/youtube_videos?${subsFilter}${channelFilter}&filter[title][ncontains]=Clip&filter[l2][eq]=${langId
           }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&limit=100&timestamp=${adminMode ? Date.now() : 0
           }`
         ).then((response) => {
