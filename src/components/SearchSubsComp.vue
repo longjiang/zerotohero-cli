@@ -129,7 +129,7 @@
           'bg-secondary text-white': speed === 0.75,
           'bg-dark text-white': speed === 0.5,
         }"
-        @click="speed = speed === 1 ? 0.75 : speed === 0.75 ? 0.5 : 1"
+        @click="toggleSpeed()"
       >
         {{ speed === 1 ? '慢' : speed + 'x' }}
       </b-button>
@@ -305,6 +305,9 @@ export default {
     },
   },
   methods: {
+    toggleSpeed() {
+      this.speed = this.speed === 1 ? 0.75 : this.speed === 0.75 ? 0.5 : 1
+    },
     startLineIndex(hit) {
       return hit.lineIndex
     },
@@ -438,6 +441,12 @@ export default {
         // left = 37
         if (e.keyCode == 37 && e.shiftKey) {
           this.prevHit()
+          e.preventDefault()
+          return false
+        }
+        // left = 37
+        if (e.code == 'KeyM') {
+          this.toggleSpeed()
           e.preventDefault()
           return false
         }

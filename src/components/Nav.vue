@@ -238,6 +238,7 @@ export default {
               title: 'Text Reader',
               icon: 'fas fa-file-alt',
               show: true,
+              shortcut: (e) => e.code === 'KeyR' && e.metaKey && e.shiftKey,
             },
             {
               name: 'studysheet',
