@@ -26,77 +26,85 @@
               class="mb-4"
               :key="`${entry.id}-example`"
             ></EntryExample>
-            <div v-if="$l2.code === 'zh'">
+            <div>
               <div class="ext-dictionary-buttons p-2 bg-white">
                 <b-button
                   @click="setExtDict('zdic')"
+                  v-if="['zh', 'yue', 'nan', 'wuu', 'hak'].includes($l2.code)"
                   class="mr-2 btn btn-small"
                   :data-bg-level="
                     extDict === 'zdic'
-                      ? entry.newHSK && entry.newHSK === '7-9'
-                        ? '7-9'
-                        : entry.hsk
-                      : false
+                      ? entry.level : false
                   "
                   >汉典</b-button
                 >
                 <b-button
                   @click="setExtDict('wiktionary')"
+
                   class="mr-2 btn btn-small"
                   :data-bg-level="
                     extDict === 'wiktionary'
-                      ? entry.newHSK && entry.newHSK === '7-9'
-                        ? '7-9'
-                        : entry.hsk
-                      : false
+                      ? entry.level : false
                   "
                   >Wiktionary</b-button
                 >
                 <b-button
+                  @click="setExtDict('etymology')"
+                  v-if="$l2.code === 'en'"
+                  class="mr-2 btn btn-small"
+                  :data-bg-level="
+                    extDict === 'etymology'
+                      ? entry.level : false
+                  "
+                  >Etymology</b-button
+                >
+                <b-button
+                  @click="setExtDict('cambridge')"
+                  v-if="$l2.code === 'en'"
+                  class="mr-2 btn btn-small"
+                  :data-bg-level="
+                    extDict === 'cambridge'
+                      ? entry.level : false
+                  "
+                  >Cambridge</b-button
+                >
+                <b-button
                   @click="setExtDict('moedict')"
+                  v-if="['zh', 'yue', 'nan', 'wuu', 'hak'].includes($l2.code)"
                   class="mr-2 btn btn-small"
                   :data-bg-level="
                     extDict === 'moedict'
-                      ? entry.newHSK && entry.newHSK === '7-9'
-                        ? '7-9'
-                        : entry.hsk
-                      : false
+                      ? entry.level : false
                   "
                   >萌典</b-button
                 >
                 <b-button
                   @click="setExtDict('baidu-baike')"
+                  v-if="$l2.code === 'zh'"
                   class="mr-2 btn btn-small"
                   :data-bg-level="
                     extDict === 'baidu-baike'
-                      ? entry.newHSK && entry.newHSK === '7-9'
-                        ? '7-9'
-                        : entry.hsk
-                      : false
+                      ? entry.level : false
                   "
                   >百度百科</b-button
                 >
                 <b-button
                   @click="setExtDict('naver')"
+                  v-if="['zh', 'ko', 'ja'].includes($l2.code)"
                   class="mr-2 btn btn-small"
                   :data-bg-level="
                     extDict === 'naver'
-                      ? entry.newHSK && entry.newHSK === '7-9'
-                        ? '7-9'
-                        : entry.hsk
-                      : false
+                      ? entry.level : false
                   "
                   >Naver</b-button
                 >
                 <b-button
                   @click="setExtDict('grammar-wiki')"
                   class="mr-2 btn btn-small"
+                  v-if="$l2.code === 'zh'"
                   :data-bg-level="
                     extDict === 'grammar-wiki'
-                      ? entry.newHSK && entry.newHSK === '7-9'
-                        ? '7-9'
-                        : entry.hsk
-                      : false
+                      ? entry.level : false
                   "
                   >Grammar Wiki</b-button
                 >
@@ -109,7 +117,17 @@
                 ></iframe>
                 <iframe
                   v-if="extDict === 'wiktionary'"
-                  :src="`https://en.wiktionary.org/wiki/${entry.simplified}`"
+                  :src="`https://en.wiktionary.org/wiki/${entry.bare}`"
+                  class="ext-dictinoary-iframe"
+                ></iframe>
+                <iframe
+                  v-if="extDict === 'etymology'"
+                  :src="`https://www.etymonline.com/word/${entry.bare}`"
+                  class="ext-dictinoary-iframe"
+                ></iframe>
+                <iframe
+                  v-if="extDict === 'cambridge'"
+                  :src="`https://dictionary.cambridge.org/dictionary/english-chinese-simplified/${entry.bare}`"
                   class="ext-dictinoary-iframe"
                 ></iframe>
                 <iframe
@@ -124,7 +142,7 @@
                 ></iframe>
                 <iframe
                   v-if="extDict === 'naver'"
-                  :src="`https://korean.dict.naver.com/kozhdict/chinese/#/search?query=${entry.simplified}`"
+                  :src="`https://korean.dict.naver.com/ko${$l2.code}dict/chinese/#/search?query=${entry.bare}`"
                   class="ext-dictinoary-iframe"
                 ></iframe>
                 <iframe
@@ -162,6 +180,7 @@
           <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
           <Collocations
             class="mt-5 mb-5"
+            v-if="$l2.code !== 'ja'"
             :word="entry"
             :level="
               entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.level
@@ -423,6 +442,6 @@ export default {
   border: 1px solid #eee;
   height: calc(100vh - 4rem);
   border-radius: 0.5rem;
-  background: #ccc;
+  background: #eee;
 }
 </style>

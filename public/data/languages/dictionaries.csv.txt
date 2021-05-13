@@ -64,7 +64,7 @@ fao,eng,wiktionary
 fas,eng,wiktionary
 fin,eng,wiktionary
 fij,eng,wiktionary
-fra,eng,wiktionary
+fra,eng,freedict
 frm,eng,wiktionary
 fro,eng,wiktionary
 fry,eng,wiktionary

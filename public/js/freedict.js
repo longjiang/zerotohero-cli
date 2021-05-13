@@ -104,6 +104,10 @@ const Dictionary = {
     let word = this.words.find(word => word && word.bare.toLowerCase() === text.toLowerCase())
     return word
   },
+  lookupMultiple(text) {
+    let words = this.words.filter(word => word && word.bare.toLowerCase() === text.toLowerCase())
+    return words
+  },
   formTable() {
     return this.tables
   },
