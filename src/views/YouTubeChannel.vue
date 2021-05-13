@@ -92,7 +92,7 @@ export default {
       // )
       let playlists = await YouTube.channelPlayListsByAPI(this.channel_id)
       if (playlists) {
-        this.playlists = playlists
+        this.playlists = playlists.sort((a,b) => b.count - a.count)
       }
       this.loading = false
     },

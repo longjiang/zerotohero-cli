@@ -19,7 +19,7 @@
             ><i class="fas fa-trash mr-2"></i>Remove All</b-button
           >
         </div>
-        <YouTubeVideoList :videos="videos" :checkSubs="true" :checkSaved="true" ref="youtubeVideoList" />
+        <YouTubeVideoList :videos="videos.filter(video => video.title !== 'Private video')" :checkSubs="true" :checkSaved="true" ref="youtubeVideoList" />
       </div>
     </div>
   </div>

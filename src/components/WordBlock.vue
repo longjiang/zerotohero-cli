@@ -19,7 +19,7 @@
         seen: seen,
         saved: saved,
       }"
-      :data-level="sticky ? getLevel() : false"
+      :data-level="getLevel()"
       v-bind="attributes"
       @mouseover="mouseover"
       @mouseout="mouseout"
@@ -345,8 +345,19 @@ export default {
         } else {
           return false
         }
+      } else if (
+        this.$l2.code === 'en' &&
+        this.token &&
+        this.token.candidates &&
+        this.token.candidates.length > 0
+      ) {
+        if (this.token.candidates[0].level === 'C2') {
+          return 'C2'
+        } else {
+          return false
+        }
       } else {
-        return this.token && this.token.candidates && this.token.candidates.length > 0 ? this.token.candidates[0].level : this.words && this.words.length > 0 ? this.words[0].level : false
+        return false
       }
     },
     wordBlockClick() {
@@ -382,7 +393,11 @@ export default {
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
       let savedWord = false
-      if (this.token && this.token.candidates && this.token.candidates.length > 0) {
+      if (
+        this.token &&
+        this.token.candidates &&
+        this.token.candidates.length > 0
+      ) {
         for (let word of this.token.candidates) {
           savedWord = this.$store.getters.hasSavedWord({
             l2: this.$l2.code,

@@ -105,6 +105,9 @@ export default {
     let words = text.replace(reg, '!!!BREAKWORKD!!!$1!!!BREAKWORKD!!!').replace(/^!!!BREAKWORKD!!!/, '').replace(/!!!BREAKWORKD!!!$/, '')
     return words.split('!!!BREAKWORKD!!!')
   },
+  timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  },
   uniqueByValue(array, key) {
     let flags = []
     let unique = []

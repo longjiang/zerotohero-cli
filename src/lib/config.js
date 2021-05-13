@@ -29,6 +29,27 @@ export default {
   approvedChannels: {
     en: [
       'UC6ZFN9Tx6xh-skXCuRHCDpQ', // PBS News Hour
+      'UCrNnk0wFBnCS1awGjq_ijGQ', // PBS Kids
+      'UCpVm7bg6pXKo1Pr6k5kxG9A', // National Geographic
+      'UCNIFiHaLZkYASaWDdkC1njg', // A&E
+      'UCLXo7UDZvByw2ixzpQCufnA', // Netflix
+      'UCWOA1ZGywLbqmigxE4Qlvuw', // Netflix
+      'UCKBnlTTgEnhIXv_c4LvvyMQ', // Own
+      'UC9MAhZQQd9egwWCxrwSIsJQ', // History
+      'UCe4TiRe3lU6kGVr9S3_2SCA', // Dance Moms
+      'UCpYF_3dMxbTukeCG2GsgPbA', // Lifetime
+      'UCf5CjDJvsFvtVIhkfmKAwAA', // MGM
+      'UCx-KWLTKlB83hDI6UKECtJQ', // HBO
+      'UCz_BJGTYrM4ntr7vsrsjfLw', // Filmrise
+      'UC8Y-jrV8oR3s2Ix4viDkZtA', // Food Network
+      'UCttMm3hHlDSqXGYmp7tqrEA', // Kitchen Nightmares
+      'UC9tPS5igk3NOyDP0XLX96bw', // Duck Dynasty
+      'UCw7SNYrYei7F5ttQO3o-rpA', // Disney
+      'UCqf2gzmKtH3PaAbt-qgFFsw', // TLC
+      'UCUsN5ZwHx2kILm84-jPDeXw', // Comedy Central
+      'UCktaw9L-f65LzUUdjmCFkbQ', // Disney XD
+      'UCUMZ7gohGI9HcU9VNsr2FJQ', // Bloomberg
+      'UCThv5tYUVaG4ZPA3p6EXZbQ', // GoldSilver (w/ Mike Maloney)
     ],
     zh: [
       'UCUhpu5MJQ_bjPkXO00jyxsw', // iQiyi

@@ -18,7 +18,7 @@
         $l2.scripts.length > 0 &&
         $l2.scripts[0].direction === 'rtl',
       'add-pinyin': $hasFeature('transliteration'),
-      phonetics,
+      phonetics: phonetics && $hasFeature('transliteration'),
       fullscreen: fullscreenMode,
     }"
   >
@@ -216,13 +216,13 @@ export default {
           if (typeof item === 'object') {
             let token = this.tokenized[batchId]
             if (token && typeof token === 'object') {
-              html += `<WordBlock :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="${explore}" :token="tokenized[${batchId}][${index}]"/>`
+              html += `<WordBlock :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="${this.explore}" :token="tokenized[${batchId}][${index}]"/>`
             }
           } else {
             item = item.trim().replace(/\s+/gi, ' ')
             if (item !== '') {
               for (let word of item.trim().split(/\s+/)) {
-                html += `<WordBlock :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="${explore}">${word}</WordBlock> `
+                html += `<WordBlock :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="${this.explore}">${word}</WordBlock> `
               }
               html = html.trim()
             }
@@ -266,7 +266,7 @@ export default {
           let item = this.tokenized[batchId][index]
           if (typeof item === 'object') {
             let text = item.text.toLowerCase()
-            html += `<WordBlock :sticky="${this.sticky}" :token="tokenized[${batchId}][${index}]">${item.text}</WordBlock>`
+            html += `<WordBlock :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="${this.explore}" :token="tokenized[${batchId}][${index}]">${item.text}</WordBlock>`
           } else {
             html += `<span>${item.replace(/\s/g, '&nbsp;')}</span>`
           }
@@ -320,6 +320,9 @@ export default {
 .show-pinyin-for-saved .add-pinyin.phonetics .sentence,
 .show-pinyin .add-pinyin.phonetics:not(.annotated) .sentence {
   line-height: 2.6;
+}
+.sentence {
+  word-break: break-word;
 }
 .sentence + .sentence {
   margin-left: 0.3em;

@@ -76,6 +76,7 @@
                   :alt="hit.video.title" />
                 <Annotate
                   :phonetics="false"
+                  :sticky="true"
                   :popup="false"
                   :key="`dropdown-line-${index}-annotate-${
                     hit.video.subs_l2[Number(hit.lineIndex)].line
@@ -268,7 +269,8 @@ export default {
       this.excludeTerms,
       this.$l2.code,
       this.$l2.id,
-      this.$settings.adminMode
+      this.$settings.adminMode,
+      this.$l2.continua
     )
     this.collectContext()
     this.$emit('loaded', this.hits)

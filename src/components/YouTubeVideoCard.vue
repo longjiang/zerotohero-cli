@@ -287,7 +287,7 @@ export default {
     async getSubsAndSave(video = this.video) {
       if (this.checkSaved && !video.id && video.hasSubs) {
         if (!video.subs_l2 && video.l2Locale) {
-          video.subs_l2 = await this.getTranscript(video, video.l2Locale)
+          video.subs_l2 = await YouTube.getTranscript(video, video.l2Locale, video.l2Name)
         }
         if(video.subs_l2[0]) {
           this.firstLineTime = video.subs_l2[0].starttime
@@ -300,23 +300,6 @@ export default {
       let details = await YouTube.videoByApi(video.youtube_id)
       video.channel_id = details.channel.id
       return details.channel.id
-    },
-    async getTranscript(video, locale) {
-      let lines = []
-      let $html = await Helper.scrape2(
-        `https://www.youtube.com/api/timedtext?v=${video.youtube_id}&lang=${locale}&fmt=srv3`
-      )
-      if ($html) {
-        for (let p of $html.find('p')) {
-          let line = {
-            line: $(p).text(),
-            starttime: parseInt($(p).attr('t')) / 1000,
-          }
-          lines.push(line)
-        }
-        lines = lines.filter((line) => line.line.trim() !== '')
-      }
-      return lines
     },
     async save(video) {
       let response = await $.post(`${Config.wiki}items/youtube_videos`, {
@@ -356,48 +339,17 @@ export default {
         video.checkingSubs = false
         this.videoInfoKey++
       } else {
-        await this.getYouTubeSubsList(video)
+        video = await YouTube.getYouTubeSubsList(video, this.$l1, this.$l2)
         if (this.checkSaved) {
           await this.checkSavedFunc(video)
         }
         video.checkingSubs = false
       }
       if(video.id) {
-        let subs_l1 = await this.getTranscript(video, video.l1Locale)
+        let subs_l1 = await YouTube.getTranscript(video, video.l1Locale, video.l2Name)
         this.video.subs_l1 = subs_l1.filter(line => !/^[♫♪]/.test(line.line))
       }
       this.videoInfoKey++
-    },
-    async getYouTubeSubsList(video) {
-      let l2Locales = [this.$l2.code]
-      if (this.$l2.locales) {
-        l2Locales = l2Locales.concat(this.$l2.locales)
-      }
-      let l1Locales = [this.$l1.code]
-      if (this.$l1.locales) {
-        l1Locales = l1Locales.concat(this.$l1.locales)
-      }
-      Helper.scrape2(
-        `https://www.youtube.com/api/timedtext?v=${video.youtube_id}&type=list`
-      ).then(($html) => {
-        for (let track of $html.find('track')) {
-          let locale = $(track).attr('lang_code')
-          if (l2Locales.includes(locale)) {
-            video.hasSubs = true
-            video.checkingSubs = false
-            video.l2Locale = locale
-            break
-          }
-        }
-        for (let track of $html.find('track')) {
-          let locale = $(track).attr('lang_code')
-          if (l1Locales.includes(locale)) {
-            video.l1Locale = locale
-            break
-          }
-        }
-        this.videoInfoKey++
-      })
     },
   },
 }

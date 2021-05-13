@@ -123,6 +123,7 @@
                     <div style="flex: 1">
                       <Annotate
                         :phonetics="false"
+                        :sticky="true"
                         :popup="false"
                         :key="`dropdown-line-${index}-annotate-${
                           hit.video.subs_l2[Number(hit.lineIndex)].line

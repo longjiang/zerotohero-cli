@@ -104,21 +104,32 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 mt-5">
-          <div class="widget" v-if="a && b" :key="`${a.id}-subs`" id="search-subs">
-            <div class="widget-title">“{{ a.bare }}” and “{{ b.bare }}” in TV Shows</div>
+          <div
+            class="widget"
+            v-if="a && b"
+            :key="`${a.id}-subs`"
+            id="search-subs"
+          >
+            <div class="widget-title">
+              “{{ a.bare }}” and “{{ b.bare }}” in TV Shows
+            </div>
             <div class="widget-body">
               <CompareSearchSubs
                 :levelA="a.newHSK && a.newHSK === '7-9' ? '7-9' : a.hsk"
                 :termsA="
-                  a.simplified === a.traditional
-                    ? [a.simplified]
-                    : [a.simplified, a.traditional]
+                  ['zh', 'yue'].includes($l2.code)
+                    ? a.simplified === a.traditional
+                      ? [a.simplified]
+                      : [a.simplified, a.traditional]
+                    : [a.bare]
                 "
                 :levelB="b.newHSK && b.newHSK === '7-9' ? '7-9' : b.hsk"
                 :termsB="
-                  b.simplified === b.traditional
-                    ? [b.simplified]
-                    : [b.simplified, b.traditional]
+                  ['zh', 'yue'].includes($l2.code)
+                    ? b.simplified === b.traditional
+                      ? [b.simplified]
+                      : [b.simplified, b.traditional]
+                    : [b.bare]
                 "
                 class="mt-4 mb-4"
               />
@@ -184,7 +195,7 @@
         </div>
       </div>
       -->
-      <!--
+    <!--
       <div class="row" v-if="['ja', 'ko'].includes($l2.code)">
         <div class="col-sm-6">
           <Chinese
@@ -283,14 +294,14 @@ export default {
     Chinese,
     CompareDefs,
     EntryRelated,
-    CompareSearchSubs
+    CompareSearchSubs,
   },
   data() {
     return {
       a: undefined,
       b: undefined,
       aKey: 0,
-      bKey: 100
+      bKey: 100,
     }
   },
   methods: {
@@ -299,13 +310,14 @@ export default {
       let args = this.$route.params.args.split(',')
       let aId = args[0]
       let bId = args[1]
-      if (args.length === 6) { // When we use hsk-cedict for chinese
+      if (args.length === 6) {
+        // When we use hsk-cedict for chinese
         aId = [args[0], args[1], args[2]].join(',')
         bId = [args[3], args[4], args[5]].join(',')
       }
       if (method && args) {
         if (method === 'hsk') {
-          this.a = await (await this.$dictionary).getByHSKId(aId) 
+          this.a = await (await this.$dictionary).getByHSKId(aId)
           this.b = await (await this.$dictionary).getByHSKId(bId)
         } else if (method === 'bare') {
           let resultsA = await (await this.$dictionary).lookupbare(aId)
@@ -313,14 +325,22 @@ export default {
           let resultsB = await (await this.$dictionary).lookupbare(bId)
           this.b = resultsB[0]
         } else if (method === 'simplified') {
-          let resultsA = await (await this.$dictionary).lookupSimplified(args[0])
+          let resultsA = await (await this.$dictionary).lookupSimplified(
+            args[0]
+          )
           this.a = resultsA[0]
-          let resultsB = await (await this.$dictionary).lookupSimplified(args[1])
+          let resultsB = await (await this.$dictionary).lookupSimplified(
+            args[1]
+          )
           this.b = resultsB[0]
         } else if (method === 'traditional') {
-          let resultsA = await (await this.$dictionary).lookupTraditional(args[0])
+          let resultsA = await (await this.$dictionary).lookupTraditional(
+            args[0]
+          )
           this.a = resultsA[0]
-          let resultsB = await (await this.$dictionary).lookupTraditional(args[1])
+          let resultsB = await (await this.$dictionary).lookupTraditional(
+            args[1]
+          )
           this.b = resultsB[0]
         } else {
           this.a = await (await this.$dictionary).get(aId)
@@ -336,39 +356,39 @@ export default {
         if (e.target.tagName.toUpperCase() !== 'INPUT') {
           if (e.keyCode == 36) {
             // home
-            document.getElementById("main").scrollIntoView({behavior: "smooth"});
+            document
+              .getElementById('main')
+              .scrollIntoView({ behavior: 'smooth' })
             // this.$refs.searchCompare.focusOnSearch()
             return false
           }
           if (e.keyCode == 35) {
             // end
-            document.getElementById("search-subs").scrollIntoView({behavior: "smooth"});
+            document
+              .getElementById('search-subs')
+              .scrollIntoView({ behavior: 'smooth' })
             return false
           }
         }
       }
-    }
+    },
   },
   watch: {
     a() {
       if (this.b)
-        document.title = `${this.a.bare} vs ${
-          this.b.bare
-        } | Zero to Hero`
+        document.title = `${this.a.bare} vs ${this.b.bare} | Zero to Hero`
       this.aKey++
     },
     b() {
       if (this.a)
-        document.title = `${this.a.bare} vs ${
-          this.b.bare
-        } | Zero to Hero`
+        document.title = `${this.a.bare} vs ${this.b.bare} | Zero to Hero`
       this.bKey++
     },
     $route() {
       if (this.$route.name === 'compare') {
         this.route()
       }
-    }
+    },
   },
   mounted() {
     if (this.$route.name === 'compare') {

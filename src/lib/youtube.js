@@ -32,6 +32,56 @@ export default {
     }
     return videos
   },
+  async getTranscript(video, locale, name) {
+    let lines = []
+    let nameQuery = name ? `&name=${name}` : ''
+    let $html = await Helper.scrape2(
+      `https://www.youtube.com/api/timedtext?v=${video.youtube_id}&lang=${locale}${nameQuery}&fmt=srv3`
+    )
+    if ($html) {
+      for (let p of $html.find('p')) {
+        let line = {
+          line: $(p).text(),
+          starttime: parseInt($(p).attr('t')) / 1000,
+        }
+        lines.push(line)
+      }
+      lines = lines.filter((line) => line.line.trim() !== '')
+    }
+    return lines
+  },
+  async getYouTubeSubsList(video, $l1, $l2) {
+    let l2Locales = [$l2.code]
+    if ($l2.locales) {
+      l2Locales = l2Locales.concat($l2.locales)
+    }
+    let l1Locales = [$l1.code]
+    if ($l1.locales) {
+      l1Locales = l1Locales.concat($l1.locales)
+    }
+    let $html = await Helper.scrape2(
+      `https://www.youtube.com/api/timedtext?v=${video.youtube_id}&type=list`
+    )
+    for (let track of $html.find('track')) {
+      let locale = $(track).attr('lang_code')
+      let name = $(track).attr('name')
+      if (l2Locales.includes(locale)) {
+        video.hasSubs = true
+        video.checkingSubs = false
+        video.l2Locale = locale
+        if (name) video.l2Name = name
+        break
+      }
+    }
+    for (let track of $html.find('track')) {
+      let locale = $(track).attr('lang_code')
+      if (l1Locales.includes(locale)) {
+        video.l1Locale = locale
+        break
+      }
+    }
+    return video
+  },
   searchYouTubeByProxy(searchTerm, callback) {
     $.ajax(
       Config.lrcServer +
@@ -308,7 +358,7 @@ export default {
       callback(playlists)
     })
   },
-  async searchSubs(terms, excludeTerms, lang = 'en', langId = 1824, adminMode) {
+  async searchSubs(terms, excludeTerms, lang = 'en', langId = 1824, adminMode = false, continua = true) {
     let videos = []
     let channelFilter = ''
     let approvedChannels = Config.approvedChannels[lang]
@@ -354,11 +404,12 @@ export default {
       }
       await Promise.all(promises)
     }
-    return this.getHits(videos, terms, excludeTerms)
+    return this.getHits(videos, terms, excludeTerms, continua)
   },
-  getHits(videos, terms, excludeTerms) {
+  getHits(videos, terms, excludeTerms, continua = true) {
     let seenYouTubeIds = []
     let hits = []
+    let boundary = continua ? '' : '[^A-Za-z]'
     for (let video of videos) {
       if (!seenYouTubeIds.includes(video.youtube_id)) {
         seenYouTubeIds.push(video.youtube_id)
@@ -368,7 +419,7 @@ export default {
         for (let index in video.subs_l2) {
           if (
             new RegExp(
-              terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.')
+              boundary + '(' + terms.join('|').replace(/[*]/g, '.+').replace(/[_]/g, '.') + ')', 'i'
             ).test(
               video.subs_l2[index].line +
               (terms[0].replace('*', '').includes('*') &&

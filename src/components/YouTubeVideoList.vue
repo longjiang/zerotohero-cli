@@ -1,7 +1,7 @@
 <template>
   <div class="youtube-videos">
     <YouTubeVideoCard
-      v-for="(video, videoIndex) in videos.filter(video => video.title !== 'Private video')"
+      v-for="(video, videoIndex) in videos"
       :video="video"
       :checkSaved="checkSaved"
       :checkSubs="checkSubs"
@@ -38,8 +38,9 @@ export default {
     }
   },
   methods: {
-    addAll() {
+    async addAll() {
       for(let videoIndex in this.videos) {
+        await Helper.timeout(500)
         this.$refs.youTubeVideoCard[videoIndex].getSubsAndSave()
       }
     },

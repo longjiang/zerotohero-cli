@@ -110,6 +110,7 @@
           <YouTubeChannelCard
             v-if="channel"
             :channel="channel"
+            :key="`channel-${channel.id}`"
             class="mb-4 d-inline-block"
           />
         </div>

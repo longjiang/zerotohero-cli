@@ -307,7 +307,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 [data-level='C2'],
 [data-hover-level='C2']:hover,
 [data-hover-level='C2'].saved {
-  color: #0f575c !important;
+  color: #005F58 !important;
 }
 
 .leveloutside,
@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .bg-levelC2,
 [data-bg-level='C2'] {
-  background-color: #035F57 !important;
+  background-color: #005F58 !important;
   color: white !important;
 }
 
