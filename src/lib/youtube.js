@@ -383,17 +383,21 @@ export default {
       )
     }
     await Promise.all(promises)
-    if (approvedChannels && videos.length < 3 && Config.talkChannels[lang]) {
+    let hits = this.getHits(videos, terms, excludeTerms, continua)
+    if (approvedChannels && hits.length < 5 && Config.talkChannels[lang]) {
       promises = []
       channelFilter = `&filter[channel_id][in]=${Config.talkChannels[
         lang
       ].join(',')}`
+
       for (let term of terms) {
+        let subsFilter = lang === 'zh' ? `filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'
+          }` : `filter[subs_l2][contains]=${term.replace(/\*/g, '%')
+          }`
         promises.push(
           $.getJSON(
-            `${Config.wiki}items/youtube_videos?filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'
-            }${channelFilter}&filter[l2][eq]=${langId
-            }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&timestamp=${adminMode ? Date.now() : 0
+            `${Config.wiki}items/youtube_videos?${subsFilter}${channelFilter}&filter[title][ncontains]=Clip&filter[l2][eq]=${langId
+            }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&limit=100&timestamp=${adminMode ? Date.now() : 0
             }`
           ).then((response) => {
             if (response && response.data && response.data.length > 0) {
@@ -403,8 +407,9 @@ export default {
         )
       }
       await Promise.all(promises)
+      hits = this.getHits(videos, terms, excludeTerms, continua)
     }
-    return this.getHits(videos, terms, excludeTerms, continua)
+    return hits
   },
   getHits(videos, terms, excludeTerms, continua = true) {
     let seenYouTubeIds = []
@@ -413,7 +418,13 @@ export default {
     for (let video of videos) {
       if (!seenYouTubeIds.includes(video.youtube_id)) {
         seenYouTubeIds.push(video.youtube_id)
-        video.subs_l2 = JSON.parse(video.subs_l2).filter(
+        let lines = []
+        try {
+          lines = Array.isArray(video.subs_l2) ? video.subs_l2 : JSON.parse(video.subs_l2)
+        } catch (err) {
+          console.log(err, video)
+        }
+        video.subs_l2 = lines.filter(
           (line) => line.starttime
         )
         for (let index in video.subs_l2) {

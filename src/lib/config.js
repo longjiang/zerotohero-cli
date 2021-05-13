@@ -50,6 +50,7 @@ export default {
       'UCktaw9L-f65LzUUdjmCFkbQ', // Disney XD
       'UCUMZ7gohGI9HcU9VNsr2FJQ', // Bloomberg
       'UCThv5tYUVaG4ZPA3p6EXZbQ', // GoldSilver (w/ Mike Maloney)
+      // 'UC0H7JADShpxWDjGQ4WhXPtQ', // Chicago Tonight (CC not matching)
     ],
     zh: [
       'UCUhpu5MJQ_bjPkXO00jyxsw', // iQiyi
@@ -112,6 +113,12 @@ export default {
     ]
   },
   talkChannels: {
+    en: [
+      'UC3R-xanNgtoa8b7gpVexVlA', // Smarthistory
+      'UC9HKTT8bRKKoWYvjajPWnzQ', // Mystic Books
+      'UCkZOdSgatxupQJfvWUz610g', // Audiobooks
+      'UCAuUUnT6oDeKwE6v1NGQxug', // TED
+    ],
     zh: [
       'UCKFB_rVEFEF3l-onQGvGx1A', // 一席
       'UC1pGI-x2n70SuOIIykOlT9A', // 食谱

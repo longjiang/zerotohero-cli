@@ -40,7 +40,7 @@ export default {
   methods: {
     async addAll() {
       for(let videoIndex in this.videos) {
-        await Helper.timeout(500)
+        // await Helper.timeout(500)
         this.$refs.youTubeVideoCard[videoIndex].getSubsAndSave()
       }
     },

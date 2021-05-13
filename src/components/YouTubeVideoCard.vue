@@ -161,6 +161,7 @@ export default {
     }
   },
   props: {
+    delay: 0,
     checkSaved: {
       default: false,
     },
@@ -171,8 +172,9 @@ export default {
       default: false,
     },
   },
-  mounted() {
+  async mounted() {
     if (this.checkSubs) {
+      await Helper.timeout(this.delay)
       this.checkSubsFunc(this.video)
     }
   },
