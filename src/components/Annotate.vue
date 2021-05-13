@@ -64,9 +64,9 @@
 <script>
 import wordblock from '@/components/WordBlock'
 import VRuntimeTemplate from 'v-runtime-template'
-import TinySegmenter from 'tiny-segmenter'
 import MyanmarTools from 'myanmar-tools'
 import Helper from '@/lib/helper'
+import Config from '@/lib/config'
 
 export default {
   components: {
