@@ -364,13 +364,13 @@ export default {
       e.preventDefault()
     },
     previousLine() {
-      this.$refs.youtube.previousLine()
+      if (this.$refs.youtube) this.$refs.youtube.previousLine()
     },
     nextLine() {
-      this.$refs.youtube.nextLine()
+      if (this.$refs.youtube) this.$refs.youtube.nextLine()
     },
     rewind() {
-      this.$refs.youtube.rewind()
+      if (this.$refs.youtube) this.$refs.youtube.rewind()
     },
     async remove() {
       let id = this.hits[this.hitIndex].video.id

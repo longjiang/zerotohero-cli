@@ -32,19 +32,14 @@
                   @click="setExtDict('zdic')"
                   v-if="['zh', 'yue', 'nan', 'wuu', 'hak'].includes($l2.code)"
                   class="mr-2 btn btn-small"
-                  :data-bg-level="
-                    extDict === 'zdic'
-                      ? entry.level : false
-                  "
+                  :data-bg-level="extDict === 'zdic' ? entry.level : false"
                   >汉典</b-button
                 >
                 <b-button
                   @click="setExtDict('wiktionary')"
-
                   class="mr-2 btn btn-small"
                   :data-bg-level="
-                    extDict === 'wiktionary'
-                      ? entry.level : false
+                    extDict === 'wiktionary' ? entry.level : false
                   "
                   >Wiktionary</b-button
                 >
@@ -52,30 +47,28 @@
                   @click="setExtDict('etymology')"
                   v-if="$l2.code === 'en'"
                   class="mr-2 btn btn-small"
-                  :data-bg-level="
-                    extDict === 'etymology'
-                      ? entry.level : false
-                  "
+                  :data-bg-level="extDict === 'etymology' ? entry.level : false"
                   >Etymology</b-button
+                >
+                <b-button
+                  @click="setExtDict('ngram')"
+                  v-if="$l2.code === 'en'"
+                  class="mr-2 btn btn-small"
+                  :data-bg-level="extDict === 'ngram' ? entry.level : false"
+                  >Ngram</b-button
                 >
                 <b-button
                   @click="setExtDict('cambridge')"
                   v-if="$l2.code === 'en'"
                   class="mr-2 btn btn-small"
-                  :data-bg-level="
-                    extDict === 'cambridge'
-                      ? entry.level : false
-                  "
+                  :data-bg-level="extDict === 'cambridge' ? entry.level : false"
                   >Cambridge</b-button
                 >
                 <b-button
                   @click="setExtDict('moedict')"
                   v-if="['zh', 'yue', 'nan', 'wuu', 'hak'].includes($l2.code)"
                   class="mr-2 btn btn-small"
-                  :data-bg-level="
-                    extDict === 'moedict'
-                      ? entry.level : false
-                  "
+                  :data-bg-level="extDict === 'moedict' ? entry.level : false"
                   >萌典</b-button
                 >
                 <b-button
@@ -83,8 +76,7 @@
                   v-if="$l2.code === 'zh'"
                   class="mr-2 btn btn-small"
                   :data-bg-level="
-                    extDict === 'baidu-baike'
-                      ? entry.level : false
+                    extDict === 'baidu-baike' ? entry.level : false
                   "
                   >百度百科</b-button
                 >
@@ -92,10 +84,7 @@
                   @click="setExtDict('naver')"
                   v-if="['zh', 'ko', 'ja'].includes($l2.code)"
                   class="mr-2 btn btn-small"
-                  :data-bg-level="
-                    extDict === 'naver'
-                      ? entry.level : false
-                  "
+                  :data-bg-level="extDict === 'naver' ? entry.level : false"
                   >Naver</b-button
                 >
                 <b-button
@@ -103,13 +92,17 @@
                   class="mr-2 btn btn-small"
                   v-if="$l2.code === 'zh'"
                   :data-bg-level="
-                    extDict === 'grammar-wiki'
-                      ? entry.level : false
+                    extDict === 'grammar-wiki' ? entry.level : false
                   "
                   >Grammar Wiki</b-button
                 >
               </div>
               <div class="mb-4 pl-2 pr-2">
+                <iframe
+                  v-if="extDict === 'ngram'"
+                  :src="`https://books.google.com/ngrams/graph?content=${entry.bare}&year_start=1800&year_end=2019&corpus=26&smoothing=3`"
+                  class="ext-dictinoary-iframe"
+                ></iframe>
                 <iframe
                   v-if="extDict === 'zdic'"
                   :src="`https://www.zdic.net/hans/${entry.simplified}`"
