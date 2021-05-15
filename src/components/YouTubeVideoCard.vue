@@ -44,6 +44,7 @@
         <div v-if="video.hasSubs || video.id" class="btn btn-small mt-2 ml-0">
           {{ $l2.name }} CC
           <span v-if="video.l2Locale">({{ video.l2Locale }})</span>
+          <span v-if="srt"> - {{ srt.name }}</span>
         </div>
         <div
           v-if="
@@ -111,21 +112,21 @@
         >
           {{ Helper.level(video.level, $l2) }}
         </div>
-        <!--
+
         <div v-if="$settings.adminMode && video.subs_l1 && video.subs_l1.length > 0">
           <div v-for="index in [0,1,2,3,4]"><b>{{ video.l1Locale }} </b><span @click="matchSubsAndUpdate(index)" :class="{'btn': true, 'btn-small': true, 'text-danger': video.subs_l2 && video.subs_l2.length > 0 && video.subs_l1[index].starttime !== video.subs_l2[0].starttime }">{{ video.subs_l1[index].starttime }}</span> {{ video.subs_l1[index].line }}</div>
         </div>
         <div v-if="$settings.adminMode && video.subs_l2 && video.subs_l2.length > 0">
           <b>{{ video.l2Locale || $l2.code }}</b> <input type="text" v-model.lazy="firstLineTime" :style="`width: ${String(firstLineTime).length}em`" class="ml-1 mr-1 btn btn-small" /> {{ video.subs_l2[0].line }}
 
-          <b-button v-if="!subsUpdated" @click="updateSubs" class="mt-2 btn btn-small"
+          <!-- <b-button v-if="!subsUpdated" @click="updateSubs" class="mt-2 btn btn-small"
             ><i class="fa fa-save mr-2"></i>Update Subs</b-button
           >
           <b-button v-else variant="success" class="mt-2 btn btn-small">
             <i class="fa fa-check mr-2"></i>Updated
-          </b-button>
+          </b-button> -->
         </div>
-        -->
+
         <div v-if="$settings.adminMode && video.channel_id && Config.approvedChannels[$l2.code] && !Config.approvedChannels[$l2.code].includes(video.channel_id)" class="small text-warning mt-1">
           {{ video.channel_id}}
         </div>
@@ -157,7 +158,8 @@ export default {
       makingShow: false,
       showTitle: this.video.title,
       showYear: '',
-      tvShow: this.video.show
+      tvShow: this.video.show,
+      srt: false
     }
   },
   props: {
@@ -182,6 +184,9 @@ export default {
     firstLineTime() {
       this.shiftSubs()
     },
+    checkSaved() {
+      if (!this.video.id && this.checkSaved) this.checkSubsFunc(this.video)
+    }
   },
   methods: {
     toggleMakingShow() {
@@ -249,9 +254,7 @@ export default {
         this.subsUpdated = true
       }
     },
-    handleDrop(data, event) {
-      event.preventDefault()
-      let file = event.dataTransfer.files[0]
+    importSrt(file) {
       let reader = new FileReader()
       reader.readAsText(file)
       reader.onload = (event) => {
@@ -264,8 +267,14 @@ export default {
         })
         this.firstLineTime = this.video.subs_l2[0].starttime
         this.video.hasSubs = true
+        this.srt = file
         this.videoInfoKey++
       }
+    },
+    handleDrop(data, event) {
+      event.preventDefault()
+      let file = event.dataTransfer.files[0]
+      this.importSrt(file)
     },
     async addChannelID(video) {
       let channelId = await this.getChannelID(video)
@@ -347,10 +356,8 @@ export default {
         }
         video.checkingSubs = false
       }
-      if(video.id) {
-        let subs_l1 = await YouTube.getTranscript(video, video.l1Locale, video.l2Name)
-        this.video.subs_l1 = subs_l1.filter(line => !/^[♫♪]/.test(line.line))
-      }
+      let subs_l1 = await YouTube.getTranscript(video, video.l1Locale, video.l2Name)
+      this.video.subs_l1 = subs_l1.filter(line => !/^[♫♪()]/.test(line.line))
       this.videoInfoKey++
     },
   },

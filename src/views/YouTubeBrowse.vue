@@ -5,10 +5,17 @@
         <h3 class="mb-5 text-center">YouTube Video Library</h3>
       </div>
       <div class="col-sm-12 col-md-8 col-lg-9 pr-4 mb-5">
+        <b-button
+          v-if="$settings.adminMode"
+          class="btn btn-small bg-danger text-white mt-2 ml-2"
+          @click="removeAll()"
+          ><i class="fas fa-trash mr-2"></i>Remove All</b-button
+        >
         <template v-if="videos && videos.length > 0">
           <YouTubeVideoList
             :videos="videos"
             :checkSubs="false"
+            ref="youtubeVideoList"
             :checkSaved="false"
           />
         </template>
@@ -170,6 +177,9 @@ export default {
     }
   },
   methods: {
+    removeAll() {
+      this.$refs.youtubeVideoList.removeAll()
+    },
     async getVideos() {
       let filters = ''
       if (this.topic !== 'all') {

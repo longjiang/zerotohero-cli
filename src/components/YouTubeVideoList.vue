@@ -48,6 +48,17 @@ export default {
       for(let videoIndex in this.videos) {
         this.$refs.youTubeVideoCard[videoIndex].remove()
       }
+    },
+    importSrtToAll(files) {
+      for(let videoIndex in this.videos) {
+        let card = this.$refs.youTubeVideoCard[videoIndex]
+        for (let file of files) {
+          if (card.video.title.includes(file.name.replace(/\..*/, ''))) {
+            card.importSrt(file)
+            break
+          }
+        }
+      }
     }
   }
 }

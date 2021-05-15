@@ -87,6 +87,7 @@ export default {
       'UCMVaFMIJmL3kZ_RKYKd-aUg', // YoYo Television Series
       'UCyNIsMH1AhDFTnwIM9E92rQ', // 山河令
       'UC_U4WI3M0edEV5u1EHKcrsg', // YoYo Fun
+      'UC3PKcYXUAhao3p4kuNS4_9w', // 腾讯经典剧场
       'UCVm75cj78njo38Izz_suQQA',
       'UCWiS6QxFGFK-LKwwHzSsmHQ',
       'UCAMrnDQlsPnrScHun5PgrXw',
@@ -110,6 +111,11 @@ export default {
       'UCstdo3fo9H04nFVyaj2Bkew',
       'UClpQ52tidfcwbFhwjuzrWLg',
       'UCU1QlsCKFBmE_wf6CGU5tvg',
+      'UC-Y1Dbb0wwmUrOc3nyvPlhA', // 鬼吹灯
+      'UCMa54YqvXp23R6onUCj5Sjg', // 脑海深处
+      'UCvprguYo0gxOHi5YzSk7t9g', // 花火
+      'UC3UUwfyntghfisq02q5v2tw', // YoYo English Channel
+      'UCjVzBodPWE3BOwHIfzTkirA', // YOUHUG MEDIA Official Channel
     ]
   },
   talkChannels: {
