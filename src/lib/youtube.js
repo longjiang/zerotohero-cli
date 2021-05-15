@@ -359,33 +359,29 @@ export default {
     })
   },
   async searchSubs(terms, excludeTerms, lang = 'en', langId = 1824, adminMode = false, continua = true) {
-    let videos = []
     let channelFilter = ''
     let approvedChannels = Config.approvedChannels[lang]
     if (approvedChannels) {
       channelFilter = `&filter[channel_id][in]=${approvedChannels.join(',')}`
     }
-    let promises = []
+    let hits = []
     for (let term of terms) {
       let subsFilter = lang === 'zh' ? `filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'
         }` : `filter[subs_l2][contains]=${term.replace(/\*/g, '%')
         }`
-      promises.push(
-        $.getJSON(
-          `${Config.wiki}items/youtube_videos?${subsFilter}${channelFilter}&filter[title][ncontains]=Clip&filter[l2][eq]=${langId
-          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&limit=100&timestamp=${adminMode ? Date.now() : 0
-          }`
-        ).then((response) => {
-          if (response && response.data && response.data.length > 0) {
-            videos = videos.concat(response.data)
-          }
-        })
+      let response = await $.getJSON(
+        `${Config.wiki}items/youtube_videos?${subsFilter}${channelFilter}&filter[title][ncontains]=Clip&filter[l2][eq]=${langId
+        }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&limit=100&timestamp=${adminMode ? Date.now() : 0
+        }`
       )
+      if (response && response.data && response.data.length > 0) {
+        let videos = response.data
+        hits = hits.concat(this.getHits(videos, terms, excludeTerms, continua))
+        if (hits.length > 50) break
+      }
     }
-    await Promise.all(promises)
-    let hits = this.getHits(videos, terms, excludeTerms, continua)
+
     if (approvedChannels && hits.length < 5 && Config.talkChannels[lang]) {
-      promises = []
       channelFilter = `&filter[channel_id][in]=${Config.talkChannels[
         lang
       ].join(',')}`
@@ -394,20 +390,17 @@ export default {
         let subsFilter = lang === 'zh' ? `filter[subs_l2][rlike]=${'%' + term.replace(/\*/g, '%') + '%'
           }` : `filter[subs_l2][contains]=${term.replace(/\*/g, '%')
           }`
-        promises.push(
-          $.getJSON(
-            `${Config.wiki}items/youtube_videos?${subsFilter}${channelFilter}&filter[title][ncontains]=Clip&filter[l2][eq]=${langId
-            }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&limit=100&timestamp=${adminMode ? Date.now() : 0
-            }`
-          ).then((response) => {
-            if (response && response.data && response.data.length > 0) {
-              videos = videos.concat(response.data)
-            }
-          })
+        let response = await $.getJSON(
+          `${Config.wiki}items/youtube_videos?${subsFilter}${channelFilter}&filter[title][ncontains]=Clip&filter[l2][eq]=${langId
+          }&fields=id,youtube_id,l2,title,level,topic,lesson,subs_l2&limit=100&timestamp=${adminMode ? Date.now() : 0
+          }`
         )
+        if (response && response.data && response.data.length > 0) {
+          let videos = response.data
+          hits = hits.concat(this.getHits(videos, terms, excludeTerms, continua))
+          if (hits.length > 50) break
+        }
       }
-      await Promise.all(promises)
-      hits = this.getHits(videos, terms, excludeTerms, continua)
     }
     return hits
   },
