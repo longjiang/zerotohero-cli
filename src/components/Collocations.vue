@@ -5,12 +5,10 @@
     </div>
     <div class="widget-body jumbotron-fluid p-4">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12" v-if="sC.length > 0">
           <ul class="list-unstyled mb-4 saved-collocations">
             <li
-              v-for="collocation of savedCollocations[$l2.code].filter(
-                (collocation) => collocation.term === term
-              )"
+              v-for="collocation of sC"
               :key="`collocation-${collocation.term}-${collocation.line}`"
               class="mb-2 text-center"
             >
@@ -35,11 +33,23 @@
               </Annotate>
             </li>
           </ul>
+          <button
+            class="btn-medium btn-secondary text-white mb-5 d-block"
+            :data-bg-level="collapsed ? level : false"
+            @click="collapsed = !collapsed"
+            v-if="sC.length > 0 && sketch && sketch.Gramrels"
+            style="margin: 0 auto; transform: translateX(-1.8rem);"
+          >
+            <span v-if="collapsed">More Collocations</span>
+
+            <span v-else>Hide Other Collocations</span>
+          </button>
         </div>
         <div
           class="col-sm-6 col-md-4 col-lg-3"
           v-for="(description, name) in colDesc"
           v-if="
+            !collapsed &&
             sketch &&
             sketch.Gramrels &&
             getGramrelsByName(sketch.Gramrels, name)
@@ -111,6 +121,7 @@ export default {
     return {
       colDesc: undefined,
       sketch: undefined,
+      collapsed: false,
       SketchEngine,
       Helper,
     }
@@ -142,6 +153,9 @@ export default {
     async update() {
       this.colDesc = undefined
       this.sketch = undefined
+      if (this.sC.length > 0) {
+        this.collapsed = true
+      }
       this.sketch = await SketchEngine.wsketch({
         term: this.term,
         l2: this.$l2,
@@ -156,6 +170,11 @@ export default {
   },
   computed: {
     ...mapState('savedCollocations', ['savedCollocations']),
+    sC() {
+      return this.savedCollocations[this.$l2.code].filter(
+        (collocation) => collocation.term === this.term
+      )
+    },
     term() {
       return this.word ? this.word.bare : this.text
     },
