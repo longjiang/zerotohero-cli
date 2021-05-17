@@ -5,8 +5,9 @@
     <div v-if="collocation">
       <ul class="collapsed gramrel pl-0 mb-0" data-collapse-target :key="collocation-{title}-{term}">
         <li v-for="(line, index) in lines" class="gramrel-item list-unstyled" :key="`${term}-collocation-${type}-${index}`">
-          <Annotate tag="div" :checkSaved="false">
-            <div v-html="Helper.highlight(line, word ? word.bare : text, level)" />
+          <SmallStar :item="line" :saved="saved" :save="saveLine" :remove="removeSavedLine" />
+          <Annotate tag="span" :checkSaved="false">
+            <span v-html="Helper.highlight(line, word ? word.bare : text, level)" />
           </Annotate>
         </li>
       </ul>
@@ -18,8 +19,12 @@
 
 <script>
 import Helper from '@/lib/helper'
+import SmallStar from '@/components/SmallStar'
 
 export default {
+  components: {
+    SmallStar
+  },
   props: {
     word: {
       type: Object
@@ -66,6 +71,30 @@ export default {
     this.update()
   },
   methods: {
+    saved(line) {
+      let saved = false
+      saved = this.$store.getters['savedCollocations/has']({
+        terms: this.term,
+        line,
+        l2: this.$l2.code
+      })
+      return saved
+    },
+    saveLine(line) {
+      this.$store.dispatch('savedCollocations/add', {
+        terms: this.term,
+        line,
+        l2: this.$l2.code
+      })
+
+    },
+    removeSavedLine(line) {
+      this.$store.dispatch('savedCollocations/remove', {
+        terms: this.term,
+        line,
+        l2: this.$l2.code
+      })
+    },
     update() {
       this.lines = []
       if (this.collocation && this.collocation.Words) {

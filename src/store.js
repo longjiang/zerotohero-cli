@@ -167,10 +167,10 @@ const savedCollocations = {
     savedCollocations: JSON.parse(localStorage.getItem('zthSavedCollocations')) || {}
   },
   mutations: {
-    ADD_SAVED_HIT(state, options) {
+    ADD_SAVED_COLLOCATION(state, options) {
       let CollocationToSave = {
         term: options.term,
-        line: options.collocation
+        line: options.line
       }
       if (!state.savedCollocations[options.l2]) {
         state.savedCollocations[options.l2] = []
@@ -184,10 +184,10 @@ const savedCollocations = {
         Vue.set(state, 'savedCollocations', savedCollocations)
       }
     },
-    REMOVE_SAVED_Collocation(state, options) {
+    REMOVE_SAVED_COLLOCATION(state, options) {
       let CollocationToRemove = {
         term: options.term,
-        line: options.collocation
+        line: options.line
       }
       if (state.savedCollocations[options.l2]) {
         const keepers = state.savedCollocations[options.l2].filter(
@@ -199,7 +199,7 @@ const savedCollocations = {
         Vue.set(state, 'savedCollocations', savedCollocations)
       }
     },
-    REMOVE_ALL_SAVED_Collocations(state, options) {
+    REMOVE_ALL_SAVED_COLLOCATIONS(state, options) {
       if (state.savedCollocations[options.l2]) {
         let savedCollocations = Object.assign({}, state.savedCollocations)
         savedCollocations[options.l2] = []
@@ -223,7 +223,7 @@ const savedCollocations = {
     has: state => options => {
       let collocationToTest = {
         term: options.term,
-        line: options.collocation
+        line: options.line
       }
       if (state.savedCollocations[options.l2]) {
         let savedCollocation = false

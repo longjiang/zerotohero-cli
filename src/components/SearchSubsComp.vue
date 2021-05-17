@@ -201,7 +201,6 @@ import SmallStar from '@/components/SmallStar'
 import Config from '@/lib/config'
 import Helper from '@/lib/helper'
 import YouTube from '@/lib/youtube'
-import { mapState } from 'vuex'
 
 export default {
   components: {
@@ -224,7 +223,6 @@ export default {
       default: true,
     },
   },
-  computed: mapState('savedHits', ['savedHits']),
   data() {
     return {
       hits: [],
