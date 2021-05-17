@@ -165,11 +165,6 @@
             ref="images"
             @loaded="webImagesLoaded"
           />
-          <EntryRelated
-            :entry="entry"
-            class="mt-5"
-            :key="`related-${entry.id}`"
-          />
           <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
           <Collocations
             class="mt-5 mb-5"
@@ -210,6 +205,11 @@
             v-if="$l2.code === 'zh'"
             :text="entry.simplified"
           ></Mistakes>
+          <EntryRelated
+            :entry="entry"
+            class="mt-5"
+            :key="`related-${entry.id}`"
+          />
         </div>
       </div>
     </div>
