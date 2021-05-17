@@ -405,6 +405,7 @@ export default {
               l2: this.$l2.code,
               text: word.bare,
             })
+            if (savedWord) break
           }
         } else {
           if (this.$slots.default) {
