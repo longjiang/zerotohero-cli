@@ -387,6 +387,8 @@ export default {
           c.length > 0
             ? hit[`${leftOrRight}Context`].startsWith(c)
             : hit[`${leftOrRight}Context`] === ''
+        ).sort((a, b) =>
+          a.leftContext.localeCompare(b[`${leftOrRight}Context`], 'zh-CN')
         )
       }
       hitGroups['zthSaved'] = this.hits.filter(hit => this.$store.getters['savedHits/has']({

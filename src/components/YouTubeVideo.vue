@@ -64,6 +64,12 @@ export default {
       this.loadYouTubeiFrame()
     }
   },
+  destroyed() {
+    if (this.player) {
+      this.player.destroy()
+      this.player = undefined
+    }
+  },
   updated() {
     if (this.autoload) {
       this.loadYouTubeiFrame()
