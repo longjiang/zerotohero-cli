@@ -136,6 +136,9 @@ export default {
       term: this.text,
     })
     this.mistakes = results
+    if (this.mistakes && this.mistakes.length > 0) {
+      this.$emit('mistakesReady')
+    }
   },
 }
 </script>

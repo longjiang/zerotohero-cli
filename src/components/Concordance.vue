@@ -29,7 +29,7 @@
           :data-bg-level="level"
         />
       </div>
-      <div v-if="examples && examples.length === 0">
+      <div v-if="!updating && (!examples || examples.length === 0)">
         Sorry, we could not find any “{{ term }}” examples. You can set a
         different corpus in
         <a :href="`/${$l1.code}/${$l2.code}/settings`">Settings</a>.
@@ -87,6 +87,7 @@ export default {
       concordanceKey: 0,
       words: [],
       SketchEngine,
+      updating: false
     }
   },
   computed: {
@@ -101,6 +102,7 @@ export default {
   },
   methods: {
     async update() {
+      this.updating = true
       this.examples = undefined
       let forms = this.word
         ? (await (await this.$dictionary).wordForms(this.word)).map((form) =>
@@ -130,6 +132,10 @@ export default {
         }
       }
       this.examples = examples
+      this.updating = false
+      if (this.examples && this.examples.length > 0) {
+        this.$emit('concordanceReady')
+      }
       this.concordanceKey += 1
     },
   },

@@ -122,6 +122,7 @@ export default {
       colDesc: undefined,
       sketch: undefined,
       collapsed: false,
+      updating: false,
       SketchEngine,
       Helper,
     }
@@ -151,16 +152,22 @@ export default {
       })
     },
     async update() {
+      this.updating = true
       this.colDesc = undefined
       this.sketch = undefined
-      if (this.sC.length > 0) {
+      if (this.sC && this.sC.length > 0) {
         this.collapsed = true
+        this.$emit('collocationsReady')
       }
       this.sketch = await SketchEngine.wsketch({
         term: this.term,
         l2: this.$l2,
       })
       this.colDesc = await SketchEngine.collocationDescription({ l2: this.$l2 })
+      if (this.sketch && this.sketch.Gramrels) {
+        this.$emit('collocationsReady')
+      }
+      this.updating = false
     },
     getGramrelsByName(gramrels, name) {
       return gramrels.find(
@@ -180,16 +187,20 @@ export default {
     },
   },
   mounted() {
-    if (!this.colDesc) {
+    if (!this.updating) {
       this.update()
     }
   },
   watch: {
     word() {
-      this.update()
+      if (!this.updating) {
+        this.update()
+      }
     },
     text() {
-      this.update()
+      if (this.colDesc) {
+        this.update()
+      }
     },
   },
 }

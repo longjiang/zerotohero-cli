@@ -150,9 +150,6 @@
       </div>
     </div>
 
-    <!-- <EntryDisambiguation> already finds some pretty good suggestions. -->
-    <!-- <EntryRelated class="mb-5" :entry="entry"></EntryRelated> -->
-
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -167,15 +164,16 @@
           />
           <EntryForms v-if="$l2.code === 'ru'" class="mt-5" :word="entry" />
           <Collocations
-            class="mt-5 mb-5"
             v-if="$l2.code !== 'ja'"
+            :class="{ 'mt-5 mb-5': true, hidden: !collocationsReady }"
             :word="entry"
+            @collocationsReady="collocationsReady = true"
             :level="
               entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.level
             "
           />
           <div
-            class="widget mt-5"
+            :class="{'widget mt-5': true, hidden: !searchSubsReady}"
             id="search-subs"
             v-if="entry && showSearchSubs"
             :key="`subs-search-${entry.id}`"
@@ -201,13 +199,15 @@
             </div>
           </div>
           <Mistakes
-            class="mt-5 mb-5"
+            :class="{ 'mt-5 mb-5': true, hidden: !mistakesReady }"
+            @mistakesReady="mistakesReady = true"
             v-if="$l2.code === 'zh'"
             :text="entry.simplified"
           ></Mistakes>
           <EntryRelated
+            :class="{ 'mt-5': true, hidden: !relatedReady }"
+            @relatedReady="relatedReady = true"
             :entry="entry"
-            class="mt-5"
             :key="`related-${entry.id}`"
           />
         </div>
@@ -216,12 +216,17 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <Concordance class="mt-5 mb-5" :word="entry" :level="entry.level" />
+          <Concordance
+            :class="{ 'mt-5 mb-5': true, hidden: !concordanceReady }"
+            @concordanceReady="concordanceReady = true"
+            :word="entry"
+            :level="entry.level"
+          />
         </div>
       </div>
 
       <div class="row d-flex" style="flex-wrap: wrap">
-        <EntryDifficulty :entry="entry" style="flex: 1" class="m-3" />
+        <!-- <EntryDifficulty :entry="entry" style="flex: 1" class="m-3" /> -->
         <EntryDisambiguation
           v-if="['zh', 'yue'].includes($l2.code)"
           :entry="entry"
@@ -230,7 +235,7 @@
         ></EntryDisambiguation>
       </div>
       <div
-        class="row"
+        class="row  mt-5"
         v-if="['zh', 'ja', 'ko'].includes($l2.code)"
         :key="`${entry.id}-characters`"
       >
@@ -365,6 +370,11 @@ export default {
       webImage: undefined,
       searchSubsExample: '',
       delayed: false,
+      collocationsReady: false,
+      mistakesReady: false,
+      relatedReady: false,
+      concordanceReady: false,
+      searchSubsReady: false
     }
   },
   mounted() {},
@@ -408,6 +418,7 @@ export default {
     },
     searchSubsLoaded(hits) {
       if (hits.length > 0) {
+        this.searchSubsReady = true
         this.searchSubsImage = `https://img.youtube.com/vi/${hits[0].video.youtube_id}/hqdefault.jpg`
         this.searchSubsExample =
           hits[0].lineIndex > 0

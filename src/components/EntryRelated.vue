@@ -53,7 +53,7 @@ export default {
       term: this.entry.simplified || this.entry.head
     })
     if (response && response.Words) {
-      this.words = []
+      let w = []
       for (let Word of response.Words) {
         let words =
           this.$l2.han && this.$l2.code !== 'ja'
@@ -61,10 +61,13 @@ export default {
             : [await (await this.$dictionary).lookup(Word.word)]
         if (words.length > 0 && words[0]) {
           let word = words[0]
-          this.words.push(word)
+          w.push(word)
         }
       }
-    } else {
+      this.words = w
+      if (this.words.length > 0) {
+        this.$emit('relatedReady')
+      }
     }
   }
 }

@@ -72,8 +72,7 @@ export default {
   gramrels(options) {
     return new Promise(resolve => {
       $.getJSON(
-        `${
-          Config.sketchEngineProxy
+        `${Config.sketchEngineProxy
         }?https://api.sketchengine.eu/bonito/run.cgi/corp_info?corpname=${this.corpname(
           options.l2
         )}&gramrels=1`,
@@ -138,8 +137,7 @@ export default {
   wsketch(options) {
     return new Promise(resolve => {
       $.getJSON(
-        `${
-          Config.sketchEngineProxy
+        `${Config.sketchEngineProxy
         }?https://api.sketchengine.eu/bonito/run.cgi/wsketch?corpname=${this.corpname(
           options.l2
         )}&lemma=${options.term}`,
@@ -161,63 +159,59 @@ export default {
       )
     })
   },
-  concordance(options) {
+  async concordance(options) {
     let corpus = this.corpora.find(corpus => corpus.corpname === this.corpname(options.l2))
     let parallel = corpus.aligned && corpus.aligned.length > 0
     let requestJSON = parallel
       ? `{"attrs":"word","structs":"s,g","refs":"=doc.subcorpus","ctxattrs":"word","viewmode":"align","usesubcorp":"","freqml":[{"attr":"word","ctx":"0","base":"kwic"}],"fromp":1,"pagesize":1000,"concordance_query":[{"queryselector":"iqueryrow","sel_aligned":["opus2_${options.l1}"],"cql":"","iquery":"${options.term}","queryselector_opus2_${options.l1}":"iqueryrow","iquery_opus2_${options.l1}":"","pcq_pos_neg_opus2_${options.l1}":"pos","filter_nonempty_opus2_${options.l1}":"on"}]}`
       : `{"lpos":"","wpos":"","default_attr":"word","attrs":"word","refs":"=doc.website","ctxattrs":"word","attr_allpos":"all","usesubcorp":"","viewmode":"kwic","cup_hl":"q","cup_err":"true","cup_corr":"","cup_err_code":"true","structs":"s,g","gdex_enabled":0,"fromp":1,"pagesize":50,"concordance_query":[{"queryselector":"iqueryrow","iquery":"${options.term}"}],"kwicleftctx":"100#","kwicrightctx":"100#"}`
-    return new Promise(resolve => {
-      $.post(
-        `${
-          Config.sketchEngineProxy
-        }?https://app.sketchengine.eu/bonito/run.cgi/concordance?corpname=${this.corpname(
-          options.l2
-        )}`,
-        {
-          json: requestJSON
-        },
-        function (response) {
-          try {
-            const data = JSON.parse(response).data
-            var result = []
-            for (let Line of data.Lines.slice(0, 500)) {
-              let line =
-                Line.Left.map(item => (item ? item.str : '')).join(' ') +
-                ' ' +
-                Line.Kwic[0].str +
-                ' ' +
-                Line.Right.map(item => (item ? item.str : '')).join(' ')
-              line = line.replace(/ ([,.])/g, '$1')
-              if (line.length > options.term.length + 4) {
-                let parallelLine = {
-                  l2: line,
-                  ref: Line.Refs ? Line.Refs[0] : undefined
-                }
-                if (Line.Align && Line.Align[0].Kwic) {
-                  parallelLine.l1 = Line.Align[0].Kwic.map(
-                    kwic => kwic.str
-                  ).reduce((text, kwic) => text + ' ' + kwic)
-                }
-                result.push(parallelLine)
-              }
-            }
-            result = result.sort(function (a, b) {
-              return a.l2.length - b.l2.length
-            })
-            resolve(Helper.unique(result))
-          } catch (err) {
-            throw 'Concordance did not return any data.'
+
+    let response = await $.post(
+      `${Config.sketchEngineProxy
+      }?https://app.sketchengine.eu/bonito/run.cgi/concordance?corpname=${this.corpname(
+        options.l2
+      )}`,
+      {
+        json: requestJSON
+      })
+
+    try {
+      const data = JSON.parse(response).data
+      var result = []
+      for (let Line of data.Lines.slice(0, 500)) {
+        let line =
+          Line.Left.map(item => (item ? item.str : '')).join(' ') +
+          ' ' +
+          Line.Kwic[0].str +
+          ' ' +
+          Line.Right.map(item => (item ? item.str : '')).join(' ')
+        line = line.replace(/ ([,.])/g, '$1')
+        if (line.length > options.term.length + 4) {
+          let parallelLine = {
+            l2: line,
+            ref: Line.Refs ? Line.Refs[0] : undefined
           }
+          if (Line.Align && Line.Align[0].Kwic) {
+            parallelLine.l1 = Line.Align[0].Kwic.map(
+              kwic => kwic.str
+            ).reduce((text, kwic) => text + ' ' + kwic)
+          }
+          result.push(parallelLine)
         }
-      )
-    })
+      }
+      result = result.sort(function (a, b) {
+        return a.l2.length - b.l2.length
+      })
+      return Helper.unique(result)
+    } catch (err) {
+      return []
+    }
+
   },
   thesaurus(options) {
     return new Promise(resolve => {
       $.post(
-        `${
-          Config.sketchEngineProxy
+        `${Config.sketchEngineProxy
         }?https://app.sketchengine.eu/bonito/run.cgi/thes?corpname=${this.corpname(options.l2)}`,
         {
           lemma: options.term,
