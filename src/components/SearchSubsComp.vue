@@ -252,7 +252,7 @@ export default {
       fullscreen: false,
       excludeStr: '',
       excludeArr: [],
-      speed: 1,
+      speed: 0.75,
       sort: 'right',
       youglishLang: {
         zh: 'chinese',
@@ -374,8 +374,9 @@ export default {
       for (let c in group) {
         index.push({ c, length: group[c].length })
       }
-      index = index.sort((a, b) => b.length - a.length)
-      return index.map((i) => i.c)
+      index = index.sort((a, b) => b.length - a.length).map((i) => i.c)
+      index.splice(index.indexOf('zthSaved'), 1)
+      return ['zthSaved'].concat(index)
     },
     groupContext(context, leftOrRight) {
       let hitGroups = {}
@@ -387,6 +388,11 @@ export default {
             : hit[`${leftOrRight}Context`] === ''
         )
       }
+      hitGroups['zthSaved'] = this.hits.filter(hit => this.$store.getters['savedHits/has']({
+        l2: this.$l2.code,
+        hit,
+        terms: this.terms
+      }))
       return hitGroups
     },
     sortContextLeft(e) {
