@@ -471,10 +471,6 @@ export default {
   color: white;
 }
 
-a svg,
-a i {
-  margin-right: 0.5rem;
-}
 .secondary-menu {
   white-space: nowrap;
   overflow: scroll;
@@ -482,6 +478,10 @@ a i {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100vw;
+  a svg,
+  a i {
+    margin-right: 0.5rem;
+  }
 }
 
 .saved-words-count {

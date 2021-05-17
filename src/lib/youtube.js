@@ -381,7 +381,7 @@ export default {
       }
     }
 
-    if (approvedChannels && hits.length < 5 && Config.talkChannels[lang]) {
+    if (approvedChannels && hits.length < 20 && Config.talkChannels[lang]) {
       channelFilter = `&filter[channel_id][in]=${Config.talkChannels[
         lang
       ].join(',')}`

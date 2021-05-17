@@ -480,4 +480,14 @@ export default {
     margin-bottom: 0.2rem;
   }
 }
+
+.small-star {
+  border: none;
+  background: none;
+  padding: 0;
+  display: inline-block;
+  color: #666;
+  font-size: 0.7rem;
+  margin: 0;
+}
 </style>

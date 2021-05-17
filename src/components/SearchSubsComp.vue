@@ -70,6 +70,19 @@
                 :class="{ current: hit === hits[hitIndex] }"
                 :key="`dropdown-line-${c}-${index}`"
               >
+                <div class="toggle-saved-hit d-inline-block focus-exclude">
+                  <button
+                    class="small-star remove-hit"
+                    v-if="saved(hit)"
+                    @click.stop.prevent="removeSavedHit(hit)"
+                    title="Remove Hit"
+                  >
+                    <i class="fas fa-star"></i>
+                  </button>
+                  <button class="small-star add-hit" v-if="!saved(hit)" @click.stop.prevent="saveHit(hit)" title="Add Hit">
+                    <i class="far fa-star"></i>
+                  </button>
+                </div>
                 <img
                   class="hit-thumb"
                   :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
@@ -198,6 +211,7 @@ import SimpleSearch from '@/components/SimpleSearch'
 import Config from '@/lib/config'
 import Helper from '@/lib/helper'
 import YouTube from '@/lib/youtube'
+import { mapState } from 'vuex'
 
 export default {
   components: {
@@ -219,6 +233,7 @@ export default {
       default: true,
     },
   },
+  computed: mapState('savedHits', ['savedHits']),
   data() {
     return {
       hits: [],
@@ -306,6 +321,30 @@ export default {
     },
   },
   methods: {
+    saved(hit) {
+      let saved = false
+      saved = this.$store.getters['savedHits/has']({
+        terms: this.terms,
+        hit: hit,
+        l2: this.$l2.code
+      })
+      return saved
+    },
+    saveHit(hit) {
+      this.$store.dispatch('savedHits/add', {
+        terms: this.terms,
+        hit: hit,
+        l2: this.$l2.code
+      })
+
+    },
+    removeSavedHit(hit) {
+      this.$store.dispatch('savedHits/remove', {
+        terms: this.terms,
+        hit: hit,
+        l2: this.$l2.code
+      })
+    },
     toggleSpeed() {
       this.speed = this.speed === 1 ? 0.75 : this.speed === 0.75 ? 0.5 : 1
     },
@@ -499,6 +538,9 @@ export default {
 }
 </script>
 <style lang="scss">
+.toggle-saved-hit {
+  margin-right: 0.5rem;
+}
 .hit-thumb {
   width: calc(0.2rem * 16);
   height: calc(0.2rem * 9);
