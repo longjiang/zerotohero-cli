@@ -1,5 +1,5 @@
 <template>
-  <div class="toggle-small-star d-inline-block focus-exclude">
+  <div class="toggle-small-star d-inline-block focus-exclude" >
     <button
       class="small-star remove-hit"
       v-if="saved(item)"
