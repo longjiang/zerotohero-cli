@@ -16,6 +16,7 @@ import Languages from '@/lib/languages'
 import VueAnalytics from 'vue-analytics'
 import VueDisqus from 'vue-disqus'
 import Meta from 'vue-meta'
+import { mapState } from 'vuex'
 
 Vue.config.productionTip = false
 
@@ -121,7 +122,7 @@ router.beforeEach((to, from, next) => {
 if (location.pathname === '/test') {
   new Vue({
     store,
-    render: h => h(Test)
+    render: h => h(Test),
   }).$mount('#test')
 } else {
   Languages.load().then(languages => {
@@ -137,6 +138,7 @@ if (location.pathname === '/test') {
       router,
       store,
       i18n,
+      computed: mapState('savedWords', ['savedWords']),
       render: h => h(ZeroToHero)
     }).$mount('#zerotohero')
   })

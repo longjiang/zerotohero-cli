@@ -53,7 +53,6 @@ export default {
   watch: {
     $route() {
       if (this.$route.name === 'reader') {
-        this.$store.dispatch('updateSavedWordsDisplay')
         this.route()
       }
     },

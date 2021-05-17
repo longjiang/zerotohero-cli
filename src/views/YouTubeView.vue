@@ -289,7 +289,7 @@ export default {
     wordSaved(word) {
       let saved = false
       if (word) {
-        saved = this.$store.getters.hasSavedWord({
+        saved = this.$store.getters['savedWords/has']({
           id: word.id,
           l2: this.$l2.code,
         })
@@ -315,7 +315,7 @@ export default {
       for (let word of words) {
         if (word && !this.wordSaved(word)) {
           let wordForms = await this.allForms(word)
-          this.$store.dispatch('addSavedWord', {
+          this.$store.dispatch('savedWords/add', {
             word: word,
             wordForms: wordForms,
             l2: this.$l2.code,

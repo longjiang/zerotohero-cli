@@ -282,7 +282,6 @@ export default {
       }
       return attributes
     },
-    ...mapState(['savedWords']),
   },
   mounted() {
     if (!this.transliteration && this.$hasFeature('transliteration')) {
@@ -318,11 +317,15 @@ export default {
       this.lookup()
     }
     this.update()
+    this.unsubscribe = this.$store.subscribe((mutation, state) => {
+      if (mutation.type.startsWith("savedWords")){
+        this.update()
+      }
+    })
   },
-  watch: {
-    savedWords() {
-      this.update()
-    },
+  beforeDestroy() {
+    // you may call unsubscribe to stop the subscription
+    this.unsubscribe()
   },
   methods: {
     getLevel() {
@@ -401,7 +404,7 @@ export default {
           this.token.candidates.length > 0
         ) {
           for (let word of this.token.candidates) {
-            savedWord = this.$store.getters.hasSavedWord({
+            savedWord = this.$store.getters['savedWords/has']({
               l2: this.$l2.code,
               text: word.bare,
             })
@@ -409,7 +412,7 @@ export default {
           }
         } else {
           if (this.$slots.default) {
-            savedWord = this.$store.getters.hasSavedWord({
+            savedWord = this.$store.getters['savedWords/has']({
               l2: this.$l2.code,
               text:
                 this.$slots.default &&

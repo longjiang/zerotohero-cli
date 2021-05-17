@@ -42,14 +42,18 @@
         />
       </div>
     </div>
-    <DictionaryEntry v-if="entry" :entry="entry" ref="dictionaryEntry" :key="`dictionary-entry-${entry.id}`" />
+    <DictionaryEntry
+      v-if="entry"
+      :entry="entry"
+      ref="dictionaryEntry"
+      :key="`dictionary-entry-${entry.id}`"
+    />
   </div>
 </template>
 
 <script>
 import SearchCompare from '@/components/SearchCompare.vue'
 import Paginator from '@/components/Paginator'
-import { mapState } from 'vuex'
 import DictionaryEntry from '@/components/DictionaryEntry'
 
 export default {
@@ -76,16 +80,12 @@ export default {
       description: '',
     }
   },
-  computed: mapState(['savedWords']),
   methods: {
     async updateWords() {
       this.sW = []
       this.savedTexts = []
-      if (
-        this.$store.state.savedWords &&
-        this.$store.state.savedWords[this.$l2.code]
-      ) {
-        for (let savedWord of this.$store.state.savedWords[this.$l2.code]) {
+      if (this.$root.savedWords && this.$root.savedWords[this.$l2.code]) {
+        for (let savedWord of this.$root.savedWords[this.$l2.code]) {
           let word = await (await this.$dictionary).get(savedWord.id)
           if (word) {
             this.sW.push(word)
@@ -97,7 +97,7 @@ export default {
     saved() {
       return (
         this.entry &&
-        this.$store.getters.hasSavedWord({
+        this.$store.getters['savedWords/has']({
           text: this.entry.bare.toLowerCase(),
           l2: this.$l2.code,
         })
@@ -142,12 +142,13 @@ export default {
     },
 
     keydown(e) {
-      if (!['INPUT', 'TEXTAREA'].includes(e.target.tagName.toUpperCase()) && !e.metaKey) {
+      if (
+        !['INPUT', 'TEXTAREA'].includes(e.target.tagName.toUpperCase()) &&
+        !e.metaKey
+      ) {
         // home
         if (e.keyCode == 36) {
-          document
-            .getElementById('main')
-            .scrollIntoView({ behavior: 'smooth' })
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' })
           // this.$refs.searchCompare.focusOnSearch()
           e.preventDefault()
           return false
@@ -163,18 +164,14 @@ export default {
         // n = 78
         if (e.keyCode == 78) {
           this.$refs.dictionaryEntry.nextWord()
-          document
-            .getElementById('main')
-            .scrollIntoView({ behavior: 'smooth' })
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' })
           e.preventDefault()
           return false
         }
         // p = 80
         if (e.keyCode == 80) {
           this.$refs.dictionaryEntry.prevWord()
-          document
-            .getElementById('main')
-            .scrollIntoView({ behavior: 'smooth' })
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' })
           e.preventDefault()
           return false
         }
@@ -211,9 +208,6 @@ export default {
         this.route()
       }
     },
-    savedWords() {
-      this.updateWords()
-    },
   },
   activated() {
     this.bindKeys()
@@ -225,7 +219,16 @@ export default {
     if (this.$route.name === 'dictionary') {
       this.route()
       this.updateWords()
+      this.unsubscribe = this.$store.subscribe((mutation, state) => {
+        if (mutation.type.startsWith('savedWords')) {
+          this.updateWords()
+        }
+      })
     }
+  },
+  beforeDestroy() {
+    // you may call unsubscribe to stop the subscription
+    this.unsubscribe()
   },
 }
 </script>

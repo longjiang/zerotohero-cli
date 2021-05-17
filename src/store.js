@@ -3,7 +3,8 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const savedWords = {
+  namespaced: true,
   state: {
     savedWords: JSON.parse(localStorage.getItem('zthSavedWords')) || {}
   },
@@ -45,30 +46,18 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    addSavedWord({ commit, dispatch }, options) {
+    add({ commit, dispatch }, options) {
       commit('ADD_SAVED_WORD', options)
-      dispatch('updateSavedWordsDisplay')
     },
-    removeSavedWord({ commit, dispatch }, options) {
+    remove({ commit, dispatch }, options) {
       commit('REMOVE_SAVED_WORD', options)
-      dispatch('updateSavedWordsDisplay')
     },
-    removeAllSavedWords({ commit, dispatch }, options) {
+    removeAll({ commit, dispatch }, options) {
       commit('REMOVE_ALL_SAVED_WORDS', options)
-      dispatch('updateSavedWordsDisplay')
-    },
-    blinkedSavedWordsButton() {
-      $('.tab-saved-words').removeClass('blink')
-      setTimeout(() => {
-        $('.tab-saved-words').addClass('blink')
-      }, 500)
-    },
-    updateSavedWordsDisplay({ dispatch, getters }) {
-      dispatch('blinkedSavedWordsButton')
     }
   },
   getters: {
-    hasSavedWord: state => options => {
+    has: state => options => {
       if (state.savedWords[options.l2]) {
         let savedWord = false
         if(options.id) {
@@ -83,12 +72,19 @@ export default new Vuex.Store({
         return savedWord
       }
     },
-    savedWordCount: state => options => {
+    count: state => options => {
       if (state.savedWords[options.l2]) {
         return state.savedWords[options.l2].length
       } else {
         return 0
       }
     }
+  }
+}
+
+
+export default new Vuex.Store({
+  modules: {
+    savedWords
   }
 })

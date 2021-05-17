@@ -370,7 +370,7 @@ export default {
       }
     },
     savedWordsCount() {
-      let count = this.$store.getters.savedWordCount({ l2: this.$l2.code })
+      let count = this.$store.getters['savedWords/count']({ l2: this.$l2.code })
       // eslint-disable-next-line vue/no-parsing-error
       return count < 100 ? count : '99+'
     },

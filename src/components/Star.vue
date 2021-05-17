@@ -47,12 +47,12 @@ export default {
     saved() {
       let saved = false
       if (this.word) {
-        saved = this.$store.getters.hasSavedWord({
+        saved = this.$store.getters['savedWords/has']({
           id: this.word.id,
           l2: this.$l2.code
         })
       } else {
-        saved = this.$store.getters.hasSavedWord({
+        saved = this.$store.getters['savedWords/has']({
           text: this.text.toLowerCase(),
           l2: this.$l2.code
         })
@@ -61,14 +61,14 @@ export default {
     },
     async saveWordClick() {
       let wordForms = this.word ? await this.allForms() : [this.text.toLowerCase()]
-      this.$store.dispatch('addSavedWord', {
+      this.$store.dispatch('savedWords/add', {
         word: this.word,
         wordForms: wordForms,
         l2: this.$l2.code
       })
     },
     removeWordClick() {
-      this.$store.dispatch('removeSavedWord', {
+      this.$store.dispatch('savedWords/remove', {
         word: this.word,
         l2: this.$l2.code
       })

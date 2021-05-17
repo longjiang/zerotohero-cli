@@ -76,7 +76,6 @@ export default {
     return {
       books: undefined,
       browseKey: 0, // used to force re-render this component
-      savedWordsKey: 0
     }
   },
   async mounted() {

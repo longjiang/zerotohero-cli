@@ -58,25 +58,28 @@ export default {
       if (this.$route.name === 'learn') {
         this.route()
       }
-    },
-    stateSavedWords() {
-      this.updateWords()
     }
   },
   beforeMount() {
     this.route()
   },
-  computed: {
-    stateSavedWords() {
-      return this.$store.state.savedWords[this.$l2.code]
-    }
+  mounted() {
+    this.unsubscribe = this.$store.subscribe((mutation, state) => {
+      if (mutation.type.startsWith("savedWords")){
+        this.updateWords()
+      }
+    })
+  },
+  beforeDestroy() {
+    // you may call unsubscribe to stop the subscription
+    this.unsubscribe()
   },
   methods: {
     async updateWords() {
       this.savedWords = []
       this.savedTexts = []
-      if(this.$store.state.savedWords && this.$store.state.savedWords[this.$l2.code]) {
-        for (let wordForms of this.$store.state.savedWords[this.$l2.code]) {
+      if(this.$root.savedWords && this.$root.savedWords[this.$l2.code]) {
+        for (let wordForms of this.$root.savedWords[this.$l2.code]) {
           let word = await (await this.$dictionary).lookup(wordForms[0])
           if (word) {
             this.savedWords.push(word)

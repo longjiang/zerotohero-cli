@@ -120,7 +120,6 @@ export default {
       text: '',
       annotated: false,
       readerKey: 0, // used to force re-render this component
-      savedWordsKey: 0,
       fontSize: this.iconMode ? 2 : 1,
       fullscreen: false,
       showTranslate: false,
@@ -188,9 +187,6 @@ export default {
       this.$emit('readerTextChanged', this.text)
       this.readerKey++
     },
-  },
-  mounted() {
-    this.$store.dispatch('updateSavedWordsDisplay')
   },
 }
 </script>

@@ -2,9 +2,9 @@
   <div class="synced-transcript">
     <div
       :class="{
-        'transcript': true,
+        transcript: true,
         collapsed: collapse,
-        'single-line': single
+        'single-line': single,
       }"
       data-collapse-target
       :key="reviewKey"
@@ -14,8 +14,12 @@
           :key="lineIndex"
           :class="{
             'transcript-line': true,
-            matched: !single && highlight && line && (new RegExp(highlight.join('|')).test(line.line)),
-            'transcript-line-current': currentLine === line
+            matched:
+              !single &&
+              highlight &&
+              line &&
+              new RegExp(highlight.join('|')).test(line.line),
+            'transcript-line-current': currentLine === line,
           }"
           @click="seekVideoTo(line.starttime)"
           :id="`transcript-line-${id}-${lineIndex}`"
@@ -26,8 +30,8 @@
             class="btn btn-small bg-danger text-white"
             @click="removeLine(lineIndex)"
             style="float: right"
-            ><i class="fa fa-trash"></i></b-button
-          >
+            ><i class="fa fa-trash"></i
+          ></b-button>
           <Annotate tag="div" :sticky="sticky" class="transcript-line-chinese">
             <span
               v-html="
@@ -48,12 +52,12 @@
               'text-right':
                 $l2.scripts &&
                 $l2.scripts.length > 0 &&
-                $l2.scripts[0].direction === 'rtl'
+                $l2.scripts[0].direction === 'rtl',
             }"
           >
             <template
               v-for="parallelLine in parallellines.filter(
-                l => l.starttime === line.starttime
+                (l) => l.starttime === line.starttime
               )"
             >
               <span v-html="parallelLine.line" />
@@ -71,12 +75,12 @@
                   'text-right':
                     $l2.scripts &&
                     $l2.scripts.length > 0 &&
-                    $l2.scripts[0].direction === 'rtl'
+                    $l2.scripts[0].direction === 'rtl',
                 }"
               >
                 <template
                   v-for="parallelLine in parallellines.filter(
-                    l => l.starttime === reviewItem.line.starttime
+                    (l) => l.starttime === reviewItem.line.starttime
                   )"
                 >
                   <span v-html="parallelLine.line" />
@@ -86,7 +90,14 @@
                 <span
                   v-if="$l2.han && $l2.code !== 'ja'"
                   v-html="
-                    Helper.highlightMultiple(reviewItem.line.line, Helper.unique([reviewItem.simplified, reviewItem.traditional]), hsk)
+                    Helper.highlightMultiple(
+                      reviewItem.line.line,
+                      Helper.unique([
+                        reviewItem.simplified,
+                        reviewItem.traditional,
+                      ]),
+                      hsk
+                    )
                   "
                 />
                 <span
@@ -106,13 +117,19 @@
                     'mr-2': true,
                     'review-answer': true,
                     checked: false,
-                    'review-answer-correct': answer.correct
+                    'review-answer-correct': answer.correct,
                   }"
                   @click="answerClick"
                 >
-                  <template v-if="$l2.code === 'ja' || !$l2.han">{{ answer.text }}</template>
-                  <template v-else-if="$l2.han && $settings.useTraditional">{{ answer.traditional || answer.simplified }}</template>
-                  <template v-else-if="$l2.han && !$settings.useTraditional">{{ answer.simplified || answer.traditional }}</template>
+                  <template v-if="$l2.code === 'ja' || !$l2.han">{{
+                    answer.text
+                  }}</template>
+                  <template v-else-if="$l2.han && $settings.useTraditional">{{
+                    answer.traditional || answer.simplified
+                  }}</template>
+                  <template v-else-if="$l2.han && !$settings.useTraditional">{{
+                    answer.simplified || answer.traditional
+                  }}</template>
                 </button>
               </div>
             </div>
@@ -128,7 +145,6 @@
 
 <script>
 import Helper from '@/lib/helper'
-import { mapState } from 'vuex'
 
 export default {
   props: {
@@ -142,37 +158,36 @@ export default {
       default: false,
     },
     lines: {
-      type: Array
+      type: Array,
     },
     parallellines: {
-      default: false
+      default: false,
     },
     collapse: {
-      default: false
+      default: false,
     },
     onSeek: {
-      default: false
+      default: false,
     },
     onPause: {
-      default: false
+      default: false,
     },
     highlight: {
-      type: Array
+      type: Array,
     },
     hsk: {
-      default: 'outside'
+      default: 'outside',
     },
     highlightSavedWords: {
-      default: true
+      default: true,
     },
     startLineIndex: {
-      default: 0
+      default: 0,
     },
     stopLineIndex: {
-      default: -1
-    }
+      default: -1,
+    },
   },
-  computed: mapState(['savedWords']),
   data() {
     return {
       sW: [],
@@ -183,18 +198,24 @@ export default {
       review: {},
       paused: {},
       reviewKey: 0,
-      neverPlayed: true
+      neverPlayed: true,
     }
   },
   mounted() {
-    if(this.highlightSavedWords) this.updateReview()
+    if (this.highlightSavedWords) this.updateReview()
+    this.unsubscribe = this.$store.subscribe((mutation, state) => {
+      if (mutation.type.startsWith("savedWords")){
+        this.updateReview()
+      }
+    })
+  },
+  beforeDestroy() {
+    // you may call unsubscribe to stop the subscription
+    this.unsubscribe()
   },
   watch: {
     $settings() {
-      if(this.highlightSavedWords) this.updateReview()
-    },
-    savedWords() {
-      if(this.highlightSavedWords) this.updateReview()
+      if (this.highlightSavedWords) this.updateReview()
     },
     currentTime() {
       for (let lineIndex = this.lines.length - 1; lineIndex >= 0; lineIndex--) {
@@ -204,8 +225,11 @@ export default {
           this.currentTime + 0.1 // current time marker passed the start time of the line
         ) {
           if (this.currentLine !== line) {
-            // Pause video if passed stopLineIndex 
-            if (this.stopLineIndex > 0 && lineIndex === this.stopLineIndex + 1) {
+            // Pause video if passed stopLineIndex
+            if (
+              this.stopLineIndex > 0 &&
+              lineIndex === this.stopLineIndex + 1
+            ) {
               if (this.neverPlayed) {
                 this.pauseVideo()
                 this.neverPlayed = false
@@ -225,7 +249,7 @@ export default {
           return
         }
       }
-    }
+    },
   },
   methods: {
     removeLine(lineIndex) {
@@ -235,20 +259,18 @@ export default {
     answerClick(e) {
       $(e.target).addClass('checked')
       if ($(e.target).hasClass('review-answer-correct')) {
-        $(e.target)
-          .parents('.review')
-          .addClass('show-answer')
+        $(e.target).parents('.review').addClass('show-answer')
       }
     },
     async findSimilarWords(text) {
       let words = await (await this.$dictionary).lookupFuzzy(text)
-      words = words.filter(word => word.head !== text)
+      words = words.filter((word) => word.head !== text)
       words = Helper.uniqueByValue(words, 'head')
-      return words
-        .sort(
-          (a, b) =>
-            Math.abs(a.head.length - text.length) - Math.abs(b.head.length - text.length)
-        )
+      return words.sort(
+        (a, b) =>
+          Math.abs(a.head.length - text.length) -
+          Math.abs(b.head.length - text.length)
+      )
     },
     async updateReview() {
       let review = {}
@@ -256,22 +278,24 @@ export default {
       if (
         this.quiz &&
         this.$settings.showQuiz &&
-        this.$store.state.savedWords &&
-        this.$store.state.savedWords[this.$l2.code]
+        this.$root.savedWords &&
+        this.$root.savedWords[this.$l2.code]
       ) {
-        for (let savedWord of this.$store.state.savedWords[this.$l2.code]) {
+        for (let savedWord of this.$root.savedWords[this.$l2.code]) {
           let word = await (await this.$dictionary).get(savedWord.id)
           if (word) {
             let seenLines = []
             for (let form of savedWord.forms
-              .filter(form => form && form !== '-')
+              .filter((form) => form && form !== '-')
               .sort((a, b) => b.length - a.length)) {
               for (let lineIndex in this.lines) {
                 if (!seenLines.includes(lineIndex)) {
                   let line = this.lines[lineIndex]
                   if (
                     (this.$l2.continua && line.line.includes(form)) ||
-                    (this.$l2.han && (line.line.includes(word.simplified) || line.line.includes(word.traditional))) ||
+                    (this.$l2.han &&
+                      (line.line.includes(word.simplified) ||
+                        line.line.includes(word.traditional))) ||
                     (!this.$l2.continua &&
                       (new RegExp(`[ .,:!?]${form}[ .,:!?]`, 'gi').test(
                         line.line
@@ -292,12 +316,12 @@ export default {
                       }
                     }
                     let answers = similarWords
-                      .map(similarWord => {
+                      .map((similarWord) => {
                         return {
                           text: similarWord.head,
                           simplified: similarWord.simplified,
                           traditional: similarWord.traditional,
-                          correct: false
+                          correct: false,
                         }
                       })
                       .slice(0, 2)
@@ -305,7 +329,7 @@ export default {
                       text: form,
                       simplified: word.simplified,
                       traditional: word.traditional,
-                      correct: true
+                      correct: true,
                     })
                     review[reviewIndex] = review[reviewIndex] || []
                     review[reviewIndex].push({
@@ -314,7 +338,7 @@ export default {
                       word: word,
                       simplified: word.simplified,
                       traditional: word.traditional,
-                      answers: Helper.shuffle(answers)
+                      answers: Helper.shuffle(answers),
                     })
                     seenLines.push(lineIndex)
                   }
@@ -338,12 +362,14 @@ export default {
       }
     },
     scrollTo(lineIndex) {
-      let el = document.getElementById(`transcript-line-${this.id}-${lineIndex}`)
+      let el = document.getElementById(
+        `transcript-line-${this.id}-${lineIndex}`
+      )
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
     },
     previousLine() {
       let currentLineIndex = this.lines.findIndex(
-        line => line === this.currentLine
+        (line) => line === this.currentLine
       )
       let previousLineIndex = Math.max(currentLineIndex - 1, 0)
       this.currentLine = this.lines[previousLineIndex]
@@ -352,19 +378,18 @@ export default {
     },
     nextLine() {
       let currentLineIndex = this.lines.findIndex(
-        line => line === this.currentLine
+        (line) => line === this.currentLine
       )
       let nextLineIndex = Math.min(currentLineIndex + 1, this.lines.length - 1)
       this.currentLine = this.lines[nextLineIndex]
       this.seekVideoTo(this.currentLine.starttime)
       this.scrollTo(nextLineIndex)
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style lang="scss">
-
 .transcript.collapsed .transcript-line:nth-child(n + 6) {
   display: none;
 }

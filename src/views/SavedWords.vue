@@ -68,7 +68,6 @@
 
 <script>
 import WordList from '@/components/WordList.vue'
-import { mapState } from 'vuex'
 
 export default {
   template: '#saved-words-template',
@@ -92,20 +91,25 @@ export default {
   watch: {
     async selectedCsvOptions() {
       this.csvText = await this.csv()
-    },
-    savedWords() {
-      this.updateWords()
     }
   },
   mounted() {
     this.updateWords()
+    this.unsubscribe = this.$store.subscribe((mutation, state) => {
+      if (mutation.type.startsWith("savedWords")){
+        this.updateWords()
+      }
+    })
   },
-  computed: mapState(['savedWords']),
+  beforeDestroy() {
+    // you may call unsubscribe to stop the subscription
+    this.unsubscribe()
+  },
   methods: {
     async updateWords() {
       this.sW = []
-      if(this.$store.state.savedWords && this.$store.state.savedWords[this.$l2.code]) {
-        for (let savedWord of this.$store.state.savedWords[this.$l2.code]) {
+      if(this.$root.savedWords && this.$root.savedWords[this.$l2.code]) {
+        for (let savedWord of this.$root.savedWords[this.$l2.code]) {
           let word = await (await this.$dictionary).get(savedWord.id)
           if (word) {
             this.sW.push(word)
@@ -150,7 +154,7 @@ export default {
         'Are you sure you want to remove all your saved words?'
       )
       if (confirmed) {
-        this.$store.dispatch('removeAllSavedWords', {
+        this.$store.dispatch('savedWords/removeAll', {
           l2: this.$l2.code
         })
         $('.export-wrapper').toggleClass('hidden', true)
