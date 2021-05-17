@@ -6,7 +6,7 @@
     <div class="widget-body jumbotron-fluid p-4">
       <div class="row">
         <div class="col-sm-12">
-          <ul class="list-unstyled mb-4">
+          <ul class="list-unstyled mb-4 saved-collocations">
             <li
               v-for="collocation of savedCollocations[$l2.code].filter(
                 (collocation) => collocation.term === term
@@ -175,3 +175,18 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+.saved-collocations {
+  li {
+    border-radius: 0.2rem;
+    padding-top: 0.5rem;
+    &:hover {
+      background: white;
+      z-index: 5;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: scale(1.05);
+      transition: 200ms all ease;
+    }
+  }
+}
+</style>
