@@ -185,8 +185,9 @@
         :speed="speed"
         :startLineIndex="startLineIndex(hit)"
         :stopLineIndex="Number(hit.lineIndex)"
-        :autoload="Helper.iOS() || navigated"
-        :autoplay="navigated"
+        :autoload="Helper.iOS()"
+        :autoplay="false"
+        :key="`youtube-with-transcript-${hit.video.youtube_id}`"
       />
     </div>
     <!--
@@ -490,7 +491,6 @@ export default {
           e.preventDefault()
           return false
         }
-        // left = 37
         if (e.code == 'KeyM') {
           this.toggleSpeed()
           e.preventDefault()

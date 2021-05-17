@@ -6,7 +6,12 @@
           class="youtube-video-wrapper sticky pt-3 pb-3 bg-white"
           :key="'youtube-' + youtube"
         >
-          <YouTubeVideo ref="youtube" :youtube="youtube" :speed="speed" @paused="updatePaused" />
+          <YouTubeVideo
+            ref="youtube"
+            :youtube="youtube"
+            :speed="speed"
+            @paused="updatePaused"
+          />
         </div>
       </div>
       <div class="col-md-6" :key="'transcript-' + youtube">
@@ -29,14 +34,10 @@
           <div class="youtube-video-wrapper">
             <YouTubeVideo
               ref="youtube"
-              @paused="updatePaused" 
+              @paused="updatePaused"
               :speed="speed"
               :youtube="youtube"
-              :starttime="
-                this.l2Lines.length > 0
-                  ? this.l2Lines[startLineIndex].starttime
-                  : 0
-              "
+              :starttime="starttime"
               :autoload="autoload"
               :autoplay="autoplay"
             />
@@ -118,7 +119,10 @@ export default {
   },
   data() {
     return {
-      paused: true
+      paused: true,
+      starttime: this.l2Lines.length > 0
+        ? this.l2Lines[this.startLineIndex].starttime
+        : 0
     }
   },
   components: {
@@ -130,7 +134,7 @@ export default {
       if (paused !== this.paused) {
         this.paused = paused
         this.$emit('paused', paused)
-      }      
+      }
     },
     previousLine() {
       this.$refs.transcript.previousLine()
@@ -157,7 +161,11 @@ export default {
       return this.l2Lines.findIndex((line) => line.line.includes(term))
     },
     seekYouTube(starttime) {
-      this.$refs.youtube.seek(starttime)
+      if (this.$refs.youtube.player) {
+        this.$refs.youtube.seek(starttime)
+      } else {
+        this.starttime = starttime
+      }
     },
     pauseYouTube() {
       this.$refs.youtube.pause()
@@ -171,7 +179,9 @@ export default {
   },
   watch: {
     startLineIndex() {
-      this.rewind()
+      if (this.$refs.youtube.player && this.$refs.youtube.player.seekTo) {
+        this.rewind()
+      }
     },
   },
   mounted() {
