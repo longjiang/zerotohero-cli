@@ -83,6 +83,9 @@ export default {
     speak: {
       default: false,
     },
+    checkSaved: {
+      default: true,
+    },
     popup: {
       default: true,
     },
@@ -213,13 +216,13 @@ export default {
           if (typeof item === 'object') {
             let token = this.tokenized[batchId]
             if (token && typeof token === 'object') {
-              html += `<WordBlock :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="explore" :token="tokenized[${batchId}][${index}]"/>`
+              html += `<WordBlock :checkSaved="${this.checkSaved}" :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="explore" :token="tokenized[${batchId}][${index}]"/>`
             }
           } else {
             item = item.trim().replace(/\s+/gi, ' ')
             if (item !== '') {
               for (let word of item.trim().split(/\s+/)) {
-                html += `<WordBlock :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="explore">${word}</WordBlock> `
+                html += `<WordBlock :checkSaved="${this.checkSaved}" :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="explore">${word}</WordBlock> `
               }
               html = html.trim()
             }
@@ -271,7 +274,7 @@ export default {
           let item = this.tokenized[batchId][index]
           if (typeof item === 'object') {
             let text = item.text.toLowerCase()
-            html += `<WordBlock :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="${this.explore}" :token="tokenized[${batchId}][${index}]">${item.text}</WordBlock>`
+            html += `<WordBlock :checkSaved="${this.checkSaved}" :phonetics="${this.phonetics}" :popup="${this.popup}" :sticky="${this.sticky}" :explore="${this.explore}" :token="tokenized[${batchId}][${index}]">${item.text}</WordBlock>`
           } else {
             html += `<span>${item
               .replace(/\s+([,.!?])/, '$1')

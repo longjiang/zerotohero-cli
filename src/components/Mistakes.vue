@@ -12,11 +12,15 @@
           >
             <i class="fas fa-times mistake-item-icon"></i>
             <span class="mistake-context collapsed" data-collapse-target>
-              <Annotate :showTranslate="true"
+              <Annotate :showTranslate="true" :checkSaved="false"
                 ><span>{{ mistake.leftContext }}</span></Annotate
               >
             </span>
-            <Annotate class="mistake-sentence" :showTranslate="true">
+            <Annotate
+              class="mistake-sentence"
+              :showTranslate="true"
+              :checkSaved="false"
+            >
               <span>
                 {{ mistake.left }}
                 <span class="mistake-word">{{ text }}</span>
@@ -27,6 +31,7 @@
               <Annotate
                 :speak="true"
                 :copy="true"
+                :checkSaved="false"
                 :fullscreen="true"
                 :showTranslate="true"
                 ><span>{{ mistake.rightContext }}</span></Annotate
@@ -97,9 +102,10 @@
             class="ml-4 mb-2 logo-small"
           />
         </a>
-        <br/>
+        <br />
         <small>
-          Corpus name: Guangwai - Lancaster Chinese Learner Corpus. Corpus code: <code>guangwai</code>
+          Corpus name: Guangwai - Lancaster Chinese Learner Corpus. Corpus code:
+          <code>guangwai</code>
         </small>
       </div>
     </div>

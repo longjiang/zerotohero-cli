@@ -11,7 +11,7 @@
           data-collapse-target
         >
           <li v-for="example in examples.filter(example => example.sentences.length > 0)">
-            <Annotate tag="div" class="pt-2 pb-2" :showTranslate="true">
+            <Annotate tag="div" class="pt-2 pb-2" :showTranslate="true" :checkSaved="false">
               <span
                 v-html="
                   Helper.highlightMultiple(example.sentences[0], words, level || 'outside')

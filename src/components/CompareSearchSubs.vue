@@ -123,6 +123,7 @@
                     <div style="flex: 1">
                       <Annotate
                         :phonetics="false"
+                        :checkSaved="false"
                         :sticky="true"
                         :popup="false"
                         :key="`dropdown-line-${index}-annotate-${

@@ -264,6 +264,7 @@ export default {
       classes: {
         'tooltip-entry': true,
       },
+      checkSaved: true,
       Config,
     }
   },
@@ -392,49 +393,51 @@ export default {
     async update() {
       if (this.$l1) this.classes[`l1-${this.$l1.code}`] = true
       if (this.$l2) this.classes[`l2-${this.$l2.code}`] = true
-      let savedWord = false
-      if (
-        this.token &&
-        this.token.candidates &&
-        this.token.candidates.length > 0
-      ) {
-        for (let word of this.token.candidates) {
-          savedWord = this.$store.getters.hasSavedWord({
-            l2: this.$l2.code,
-            text: word.bare,
-          })
+      if (this.checkSaved) {
+        let savedWord = false
+        if (
+          this.token &&
+          this.token.candidates &&
+          this.token.candidates.length > 0
+        ) {
+          for (let word of this.token.candidates) {
+            savedWord = this.$store.getters.hasSavedWord({
+              l2: this.$l2.code,
+              text: word.bare,
+            })
+          }
+        } else {
+          if (this.$slots.default) {
+            savedWord = this.$store.getters.hasSavedWord({
+              l2: this.$l2.code,
+              text:
+                this.$slots.default &&
+                this.$slots.default[0] &&
+                this.$slots.default[0].text
+                  ? this.$slots.default[0].text.toLowerCase()
+                  : '',
+            })
+          }
         }
-      } else {
-        if (this.$slots.default) {
-          savedWord = this.$store.getters.hasSavedWord({
-            l2: this.$l2.code,
-            text:
-              this.$slots.default &&
-              this.$slots.default[0] &&
-              this.$slots.default[0].text
-                ? this.$slots.default[0].text.toLowerCase()
-                : '',
-          })
+        if (
+          savedWord &&
+          savedWord.id &&
+          ['ja', 'zh', 'nan', 'hak'].includes(this.$l2.code)
+        ) {
+          let word = await (await this.$dictionary).get(savedWord.id)
+          let text =
+            this.text ||
+            (this.token && this.token.candidates.length > 0
+              ? this.token.candidates[0].head
+              : undefined)
+          if (word && word.head && word.head === text) {
+            this.savedTransliteration =
+              word.jyutping || word.pinyin || word.kana || this.transliteration
+          }
+          this.saved = word ? word : false
+        } else {
+          this.saved = savedWord ? savedWord : false
         }
-      }
-      if (
-        savedWord &&
-        savedWord.id &&
-        ['ja', 'zh', 'nan', 'hak'].includes(this.$l2.code)
-      ) {
-        let word = await (await this.$dictionary).get(savedWord.id)
-        let text =
-          this.text ||
-          (this.token && this.token.candidates.length > 0
-            ? this.token.candidates[0].head
-            : undefined)
-        if (word && word.head && word.head === text) {
-          this.savedTransliteration =
-            word.jyutping || word.pinyin || word.kana || this.transliteration
-        }
-        this.saved = word ? word : false
-      } else {
-        this.saved = savedWord ? savedWord : false
       }
     },
     matchCase(text) {
