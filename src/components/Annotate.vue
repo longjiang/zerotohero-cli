@@ -109,6 +109,7 @@ export default {
     return {
       annotatedSlots: [],
       annotated: false,
+      annotating: false,
       translate: false,
       translation: undefined,
       fullscreenMode: false,
@@ -156,7 +157,8 @@ export default {
       document.body.removeChild(tempInput)
     },
     async visibilityChanged(isVisible) {
-      if (isVisible && !this.annotated) {
+      if (isVisible && !this.annotating) {
+        this.annotating = true
         if (this.$hasFeature('dictionary') || this.nonLatin()) {
           if (this.$slots.default) {
             for (let slot of this.$slots.default) {
@@ -211,7 +213,7 @@ export default {
         html = ''
         let tokenized = await (await this.$dictionary).tokenize(text)
         this.tokenized[batchId] = tokenized
-        for (let index = 0; index < this.tokenized[batchId].length; index++) {
+        for (let index in this.tokenized[batchId]) {
           let item = this.tokenized[batchId][index]
           if (typeof item === 'object') {
             let token = this.tokenized[batchId]
@@ -270,7 +272,7 @@ export default {
             this.tokenized[batchId].push(seg)
           }
         }
-        for (let index = 0; index < this.tokenized[batchId].length; index++) {
+        for (let index in this.tokenized[batchId]) {
           let item = this.tokenized[batchId][index]
           if (typeof item === 'object') {
             let text = item.text.toLowerCase()

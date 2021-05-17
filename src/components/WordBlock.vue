@@ -488,7 +488,7 @@ export default {
     async lookup() {
       if (this.token && this.$l2.code !== 'ja') {
         this.words = this.token.candidates
-      } else {
+      } else if (this.text) {
         if (!this.text && this.token) this.text = this.token.candidates[0].head
         let words = await (await this.$dictionary).lookupFuzzy(this.text)
         if (words) {
