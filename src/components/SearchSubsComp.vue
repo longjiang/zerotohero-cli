@@ -21,7 +21,14 @@
       <b-button @click="rewind" class="btn btn-small"
         ><i class="fa fa-undo"
       /></b-button>
-      <SmallStar :item="hits[hitIndex]" :saved="saved" :save="saveHit" :remove="removeSavedHit" style="overflow: hidden; margin-bottom: -0.2rem;" class="ml-1 mr-0" />
+      <SmallStar
+        :item="currentHit"
+        :saved="hit => hit.saved"
+        :save="saveHit"
+        :remove="removeSavedHit"
+        style="overflow: hidden; margin-bottom: -0.2rem"
+        class="ml-1 mr-0"
+      />
       <span class="ml-0 btn-small mr-0" style="background: none"
         >{{ hitIndex + 1 }} of {{ hits.length }}</span
       >
@@ -40,7 +47,7 @@
               'bg-dark': sort === 'left',
               'text-white': sort === 'left',
             }"
-            @click.stop="sortContextLeft"
+            @click.stop="sort = 'left'"
           >
             Sort Left</button
           ><button
@@ -50,7 +57,7 @@
               'bg-dark': sort === 'right',
               'text-white': sort === 'right',
             }"
-            @click.stop="sortContextRight"
+            @click.stop="sort = 'right'"
           >
             Sort Right
           </button></b-dropdown-item
@@ -68,10 +75,14 @@
             <template v-for="(hit, index) in theseHits">
               <b-dropdown-item
                 @click.stop="goToHit(hit)"
-                :class="{ current: hit === hits[hitIndex] }"
+                :class="{ current: hit === currentHit }"
                 :key="`dropdown-line-${c}-${index}`"
               >
-                <SmallStar :item="hit" :saved="saved" :save="saveHit" :remove="removeSavedHit" />
+                <SmallStar
+                  :item="hit"
+                  :saved="hit => hit.saved"
+                  :save="saveHit"
+                  :remove="removeSavedHit" />
                 <img
                   class="hit-thumb"
                   :src="`//img.youtube.com/vi/${hit.video.youtube_id}/hqdefault.jpg`"
@@ -144,7 +155,7 @@
         class="ml-1 mr-1 btn-small"
       />
       <router-link
-        :to="`/${$l1.code}/${$l2.code}/youtube/view/${hits[hitIndex].video.youtube_id}/`"
+        :to="`/${$l1.code}/${$l2.code}/youtube/view/${currentHit.video.youtube_id}/`"
         class="btn btn-small pr-0"
         ><i class="fa fa-window-restore"
       /></router-link>
@@ -163,7 +174,7 @@
         <i class="fas fa-times" />
       </b-button>
     </div>
-    <div v-if="hits.length > 0" :set="(hit = hits[hitIndex])" class="mb-4">
+    <div v-if="hits.length > 0" :set="(hit = currentHit)" class="mb-4">
       <YouTubeWithTranscript
         :youtube="hit.video.youtube_id"
         ref="youtube"
@@ -207,7 +218,7 @@ export default {
     SimpleSearch,
     YouTubeWithTranscript,
     SyncedTranscript,
-    SmallStar
+    SmallStar,
   },
   props: {
     terms: {
@@ -225,11 +236,10 @@ export default {
   },
   data() {
     return {
-      hits: [],
+      currentHit: undefined,
       groupsRight: {},
       groupsLeft: {},
       excludeTerms: [],
-      hitIndex: 0,
       navigated: false,
       checking: true,
       videos: [],
@@ -269,7 +279,7 @@ export default {
         this.terms[0]
       )
     }
-    this.hits = await YouTube.searchSubs(
+    let hits = await YouTube.searchSubs(
       this.terms,
       this.excludeTerms,
       this.$l2.code,
@@ -277,8 +287,9 @@ export default {
       this.$settings.adminMode,
       this.$l2.continua
     )
-    this.collectContext()
-    this.$emit('loaded', this.hits)
+    hits = this.updateSaved(hits)
+    this.collectContext(hits)
+    this.$emit('loaded', hits)
     this.checking = false
     if (this.keyboard) this.bindKeys()
   },
@@ -303,50 +314,30 @@ export default {
           hits.push(hit)
         }
       }
-      this.hitIndex = 0
-      this.hits = hits
-      this.collectContext()
-      this.$emit('updated', this.hits)
+      this.collectContext(hits)
+      this.$emit('updated', hits)
+    },
+  },
+  computed: {
+    hitIndex() {
+      let hits = this.hits
+      return hits.findIndex((hit) => hit === this.currentHit)
+    },
+    hits() {
+      let hits = []
+      for (let index of this[`groupIndex${Helper.ucFirst(this.sort)}`]) {
+        for (let hit of this[`groups${Helper.ucFirst(this.sort)}`][index]) {
+          hits.push(hit)
+        }
+      }
+      return hits
     },
   },
   methods: {
-    saved(hit) {
-      let saved = false
-      saved = this.$store.getters['savedHits/has']({
-        terms: this.terms,
-        hit: hit,
-        l2: this.$l2.code
-      })
-      return saved
-    },
-    saveHit(hit) {
-      this.$store.dispatch('savedHits/add', {
-        terms: this.terms,
-        hit: hit,
-        l2: this.$l2.code
-      })
-      this.updateSaved(this.groupsRight)
-      this.updateSaved(this.groupsLeft)
-    },
-    removeSavedHit(hit) {
-      this.$store.dispatch('savedHits/remove', {
-        terms: this.terms,
-        hit: hit,
-        l2: this.$l2.code
-      })
-      this.updateSaved(this.groupsRight)
-      this.updateSaved(this.groupsLeft)
-    },
-    toggleSpeed() {
-      this.speed = this.speed === 1 ? 0.75 : this.speed === 0.75 ? 0.5 : 1
-    },
-    startLineIndex(hit) {
-      return hit.lineIndex
-    },
-    collectContext() {
+    collectContext(hits) {
       let contextLeft = []
       let contextRight = []
-      for (let hit of this.hits) {
+      for (let hit of hits) {
         contextLeft.push(hit.leftContext)
         contextRight.push(hit.rightContext)
       }
@@ -356,10 +347,40 @@ export default {
       this.contextRight = Helper.unique(contextRight).sort((a, b) =>
         a.localeCompare(b, 'zh-CN')
       )
-      this.groupsLeft = this.groupContext(this.contextLeft, 'left')
-      this.groupsRight = this.groupContext(this.contextRight, 'right')
+      this.groupsLeft = this.groupContext(this.contextLeft, hits, 'left')
+      this.groupsRight = this.groupContext(this.contextRight, hits, 'right')
       this.groupIndexLeft = this.sortGroupIndex(this.groupsLeft)
       this.groupIndexRight = this.sortGroupIndex(this.groupsRight)
+      this.currentHit = this.hits[0]
+    },
+    regroup(hits) {
+      this.groupsLeft = this.groupContext(this.contextLeft, hits, 'left')
+      this.groupsRight = this.groupContext(this.contextRight, hits, 'right')
+      this.groupIndexLeft = this.sortGroupIndex(this.groupsLeft)
+      this.groupIndexRight = this.sortGroupIndex(this.groupsRight)
+    },
+    groupContext(context, hits, leftOrRight) {
+      let hitGroups = {}
+      let savedHits = []
+      let unsavedHits = hits.filter((hit) => {
+        if (hit.saved) savedHits.push(hit)
+        return !hit.saved
+      })
+      for (let c of context.map((s) => s.charAt(0))) {
+        if (!hitGroups[c.charAt(0)]) hitGroups[c.charAt(0)] = {}
+        hitGroups[c.charAt(0)] = unsavedHits.filter((hit) =>
+          c.length > 0
+            ? hit[`${leftOrRight}Context`].startsWith(c)
+            : hit[`${leftOrRight}Context`] === ''
+        )
+      }
+      hitGroups = Object.assign({ zthSaved: savedHits }, hitGroups)
+      for (let key in hitGroups) {
+        hitGroups[key] = hitGroups[key].sort((a, b) =>
+          a.leftContext.localeCompare(b[`${leftOrRight}Context`], 'zh-CN')
+        )
+      }
+      return hitGroups
     },
     sortGroupIndex(group) {
       let index = []
@@ -370,41 +391,39 @@ export default {
       index.splice(index.indexOf('zthSaved'), 1)
       return ['zthSaved'].concat(index)
     },
-    groupContext(context, leftOrRight) {
-      let hitGroups = {}
-      for (let c of context.map((s) => s.charAt(0))) {
-        if (!hitGroups[c.charAt(0)]) hitGroups[c.charAt(0)] = {}
-        hitGroups[c.charAt(0)] = this.hits.filter((hit) =>
-          c.length > 0
-            ? hit[`${leftOrRight}Context`].startsWith(c)
-            : hit[`${leftOrRight}Context`] === ''
-        ).sort((a, b) =>
-          a.leftContext.localeCompare(b[`${leftOrRight}Context`], 'zh-CN')
-        )
+    updateSaved(hits) {
+      for(let hit of hits) {
+        hit.saved = this.$store.getters['savedHits/has']({
+          l2: this.$l2.code,
+          hit,
+          terms: this.terms,
+        })
       }
-      this.updateSaved(hitGroups)
-      return hitGroups
+      return hits
     },
-    updateSaved(hitGroups) {
-      hitGroups['zthSaved'] = this.hits.filter(hit => this.$store.getters['savedHits/has']({
+    saveHit(hit) {
+      this.$store.dispatch('savedHits/add', {
+        terms: this.terms,
+        hit: hit,
         l2: this.$l2.code,
-        hit,
-        terms: this.terms
-      }))
+      })
+      hit.saved = true
+      this.regroup(this.hits)
     },
-    sortContextLeft(e) {
-      this.hits = this.hits.sort((a, b) =>
-        a.leftContext.localeCompare(b.leftContext, 'zh-CN')
-      )
-      this.sort = 'left'
-      e.preventDefault()
+    removeSavedHit(hit) {
+      this.$store.dispatch('savedHits/remove', {
+        terms: this.terms,
+        hit: hit,
+        l2: this.$l2.code,
+      })
+      hit.saved = false
+      this.regroup(this.hits)
     },
-    sortContextRight(e) {
-      this.hits = this.hits.sort((a, b) =>
-        a.rightContext.localeCompare(b.rightContext, 'zh-CN')
-      )
-      this.sort = 'right'
-      e.preventDefault()
+    toggleSpeed() {
+      this.speed = this.speed === 1 ? 0.75 : this.speed === 0.75 ? 0.5 : 1
+    },
+    startLineIndex(hit) {
+      return hit.lineIndex
     },
     previousLine() {
       if (this.$refs.youtube) this.$refs.youtube.previousLine()
@@ -433,23 +452,17 @@ export default {
       }
     },
     prevHit() {
-      this.hitIndex = Math.max(this.hitIndex - 1, 0)
+      let index = Math.max(this.hitIndex - 1, 0)
+      this.currentHit = this.hits[index]
       this.navigated = true
     },
     nextHit() {
-      this.hitIndex = Math.min(this.hitIndex + 1, this.hits.length - 1)
+      let index = Math.min(this.hitIndex + 1, this.hits.length - 1)
+      this.currentHit = this.hits[index]
       this.navigated = true
     },
     goToHit(hit) {
-      let index = this.hits.findIndex((h) => h === hit)
-      this.hitIndex = index
-      this.navigated = true
-      setTimeout(() => {
-        document.activeElement.blur()
-      }, 100)
-    },
-    goToHitIndex(hitIndex) {
-      this.hitIndex = hitIndex
+      this.currentHit = hit
       this.navigated = true
       setTimeout(() => {
         document.activeElement.blur()
@@ -536,8 +549,9 @@ export default {
         }
         // escape = 27
         if (e.code == 'KeyS') {
-          let hit = this.hits[this.hitIndex]
-          if (this.saved(hit)) {
+          let hit = this.currentHit
+          this.nextHit()
+          if (hit.saved) {
             this.removeSavedHit(hit)
           } else {
             this.saveHit(hit)

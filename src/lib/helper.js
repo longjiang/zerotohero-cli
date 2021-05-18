@@ -43,7 +43,7 @@ export default {
   cjk: /[\u4E00-\u9FCC\u3400-\u4DB5\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]+/gi,
   nonCjk: /[^\u4E00-\u9FCC\u3400-\u4DB5\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]+/gi,
   levels(l2 = undefined) {
-    if(l2 && l2.code === 'zh') {
+    if (l2 && l2.code === 'zh') {
       return {
         1: 'HSK 1',
         2: 'HSK 2',
@@ -112,12 +112,15 @@ export default {
     let flags = []
     let unique = []
     let l = array.length
-    for(let i = 0; i<l; i++) {
-      if( flags[array[i][key]]) continue
+    for (let i = 0; i < l; i++) {
+      if (flags[array[i][key]]) continue
       flags[array[i][key]] = true
       unique.push(array[i])
     }
     return unique
+  },
+  flatten(object) {
+    return Object.keys(object).reduce((r, k) => { return r.concat(object[k]) }, [])
   },
   // json or plain text only, and returns object
   async proxy(url, cacheLife = -1, encoding = false) {
@@ -137,7 +140,7 @@ export default {
   },
   // html only, and returns html
   async scrape(url, callback) {
-    await $.ajax(Config.scrape + '?' + url).done(function(response) {
+    await $.ajax(Config.scrape + '?' + url).done(function (response) {
       // We use 'ownerDocument' so we don't load the images and scripts!
       // https://stackoverflow.com/questions/15113910/jquery-parse-html-without-loading-images
       var ownerDocument = document.implementation.createHTMLDocument('virtual')
@@ -197,7 +200,7 @@ export default {
   },
   unique(names) {
     var uniqueNames = []
-    $.each(names, function(i, el) {
+    $.each(names, function (i, el) {
       if ($.inArray(el, uniqueNames) === -1) uniqueNames.push(el)
     })
     return uniqueNames
@@ -211,7 +214,7 @@ export default {
   },
   // https://css-tricks.com/snippets/javascript/shuffle-array/
   shuffle(o) {
-    for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
   },
   randomInt(max) {
@@ -238,7 +241,7 @@ export default {
     return string.charAt(0).toUpperCase() + string.slice(1)
   },
   absoluteURL(base, relative) {
-    if(relative.startsWith('http') || relative.startsWith('//')) {
+    if (relative.startsWith('http') || relative.startsWith('//')) {
       return relative
     }
     if (relative.startsWith('#')) {

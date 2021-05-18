@@ -15,14 +15,14 @@
         >
           <SmallStar
             :item="line"
-            :saved="saved"
+            :saved="line => line.saved"
             :save="saveLine"
             :remove="removeSavedLine"
             style="overflow: hidden"
           />
           <Annotate tag="span" :checkSaved="false">
             <span
-              v-html="Helper.highlight(line, word ? word.bare : text, level)"
+              v-html="Helper.highlight(line.line, word ? word.bare : text, level)"
             />
           </Annotate>
         </li>
@@ -40,6 +40,7 @@
 <script>
 import Helper from '@/lib/helper'
 import SmallStar from '@/components/SmallStar'
+import { mapState } from 'vuex'
 
 export default {
   components: {
@@ -72,6 +73,15 @@ export default {
     }
   },
   computed: {
+    ...mapState('savedCollocations', ['savedCollocations']),
+    sC() {
+      return this.savedCollocations[this.$l2.code]
+        .filter((collocation) => collocation.term === this.term)
+        .map((collocation) => {
+          collocation.saved = true
+          return collocation
+        })
+    },
     term() {
       return this.word ? this.word.bare : this.text
     },
@@ -91,28 +101,21 @@ export default {
     this.update()
   },
   methods: {
-    saved(line) {
-      let saved = false
-      saved = this.$store.getters['savedCollocations/has']({
-        term: this.term,
-        line,
-        l2: this.$l2.code,
-      })
-      return saved
-    },
     saveLine(line) {
       this.$store.dispatch('savedCollocations/add', {
         term: this.term,
-        line,
+        line: line.line,
         l2: this.$l2.code,
       })
+      line.saved = true
     },
     removeSavedLine(line) {
       this.$store.dispatch('savedCollocations/remove', {
         term: this.term,
-        line,
+        line: line.line,
         l2: this.$l2.code,
       })
+      line.saved = false
     },
     update() {
       this.lines = []
@@ -127,7 +130,10 @@ export default {
         let lines = []
         for (let Word of this.collocation.Words) {
           if (Word.cm) {
-            lines.push(Word.cm)
+            lines.push({
+              line: Word.cm,
+              saved: this.sC.find(line => line.line === Word.cm)
+            })
           }
         }
         this.lines = lines

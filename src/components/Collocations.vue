@@ -13,8 +13,8 @@
               class="mb-2 text-center"
             >
               <SmallStar
-                :item="collocation.line"
-                :saved="saved"
+                :item="collocation"
+                :saved="(collocation) => collocation.saved"
                 :save="saveLine"
                 :remove="removeSavedLine"
                 style="overflow: hidden; margin-right: 1rem; float: right"
@@ -38,7 +38,7 @@
             :data-bg-level="collapsed ? level : false"
             @click="collapsed = !collapsed"
             v-if="sC.length > 0 && sketch && sketch.Gramrels"
-            style="margin: 0 auto; transform: translateX(-1.8rem);"
+            style="margin: 0 auto; transform: translateX(-1.8rem)"
           >
             <span v-if="collapsed">More Collocations</span>
 
@@ -128,28 +128,21 @@ export default {
     }
   },
   methods: {
-    saved(line) {
-      let saved = false
-      saved = this.$store.getters['savedCollocations/has']({
-        term: this.term,
-        line,
-        l2: this.$l2.code,
-      })
-      return saved
-    },
-    saveLine(line) {
+    saveLine(collocation) {
       this.$store.dispatch('savedCollocations/add', {
         term: this.term,
-        line,
+        line: collocation.line,
         l2: this.$l2.code,
       })
+      collocation.saved = true
     },
-    removeSavedLine(line) {
+    removeSavedLine(collocation) {
       this.$store.dispatch('savedCollocations/remove', {
         term: this.term,
-        line,
+        line: collocation.line,
         l2: this.$l2.code,
       })
+      collocation.saved = false
     },
     async update() {
       this.updating = true
@@ -178,9 +171,12 @@ export default {
   computed: {
     ...mapState('savedCollocations', ['savedCollocations']),
     sC() {
-      return this.savedCollocations[this.$l2.code].filter(
-        (collocation) => collocation.term === this.term
-      )
+      return this.savedCollocations[this.$l2.code]
+        .filter((collocation) => collocation.term === this.term)
+        .map((collocation) => {
+          collocation.saved = true
+          return collocation
+        })
     },
     term() {
       return this.word ? this.word.bare : this.text

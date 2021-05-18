@@ -98,14 +98,10 @@ const savedHits = {
       if (!state.savedHits[options.l2]) {
         state.savedHits[options.l2] = []
       }
-      if (
-        !state.savedHits[options.l2].find(hit => deepEqual(hit, hitToSave))
-      ) {
-        let savedHits = Object.assign({}, state.savedHits)
-        savedHits[options.l2].push(hitToSave)
-        localStorage.setItem('zthSavedHits', JSON.stringify(savedHits))
-        Vue.set(state, 'savedHits', savedHits)
-      }
+      let savedHits = Object.assign({}, state.savedHits)
+      savedHits[options.l2].push(hitToSave)
+      localStorage.setItem('zthSavedHits', JSON.stringify(savedHits))
+      Vue.set(state, 'savedHits', savedHits)
     },
     REMOVE_SAVED_HIT(state, options) {
       let hitToRemove = {
@@ -114,11 +110,11 @@ const savedHits = {
         lineIndex: options.hit.lineIndex
       }
       if (state.savedHits[options.l2]) {
-        const keepers = state.savedHits[options.l2].filter(
+        let savedHits = Object.assign({}, state.savedHits)
+        const index = savedHits[options.l2].findIndex(
           hit => !deepEqual(hit, hitToRemove)
         )
-        let savedHits = Object.assign({}, state.savedHits)
-        savedHits[options.l2] = keepers
+        savedHits[options.l2].splice(index, 1)
         localStorage.setItem('zthSavedHits', JSON.stringify(savedHits))
         Vue.set(state, 'savedHits', savedHits)
       }
@@ -185,16 +181,19 @@ const savedCollocations = {
       }
     },
     REMOVE_SAVED_COLLOCATION(state, options) {
+      console.log(options)
       let CollocationToRemove = {
         term: options.term,
         line: options.line
       }
-      if (state.savedCollocations[options.l2]) {
-        const keepers = state.savedCollocations[options.l2].filter(
-          Collocation => !deepEqual(Collocation, CollocationToRemove)
+      let cols = state.savedCollocations[options.l2]
+      if (cols) {
+        const index = cols.findIndex(
+          Collocation => Collocation.term === CollocationToRemove.term && Collocation.line === CollocationToRemove.line
         )
+        cols.splice(index, 1)
         let savedCollocations = Object.assign({}, state.savedCollocations)
-        savedCollocations[options.l2] = keepers
+        savedCollocations[options.l2] = cols
         localStorage.setItem('zthSavedCollocations', JSON.stringify(savedCollocations))
         Vue.set(state, 'savedCollocations', savedCollocations)
       }
