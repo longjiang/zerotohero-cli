@@ -21,6 +21,7 @@
       <b-button @click="rewind" class="btn btn-small"
         ><i class="fa fa-undo"
       /></b-button>
+      <SmallStar :item="hits[hitIndex]" :saved="saved" :save="saveHit" :remove="removeSavedHit" style="overflow: hidden; margin-bottom: -0.2rem;" class="ml-1 mr-0" />
       <span class="ml-0 btn-small mr-0" style="background: none"
         >{{ hitIndex + 1 }} of {{ hits.length }}</span
       >
@@ -172,7 +173,6 @@
         :hsk="level"
         :speed="speed"
         :startLineIndex="startLineIndex(hit)"
-        :stopLineIndex="Number(hit.lineIndex)"
         :autoload="Helper.iOS()"
         :autoplay="false"
         :key="`youtube-with-transcript-${hit.video.youtube_id}`"
@@ -325,7 +325,8 @@ export default {
         hit: hit,
         l2: this.$l2.code
       })
-
+      this.updateSaved(this.groupsRight)
+      this.updateSaved(this.groupsLeft)
     },
     removeSavedHit(hit) {
       this.$store.dispatch('savedHits/remove', {
@@ -333,6 +334,8 @@ export default {
         hit: hit,
         l2: this.$l2.code
       })
+      this.updateSaved(this.groupsRight)
+      this.updateSaved(this.groupsLeft)
     },
     toggleSpeed() {
       this.speed = this.speed === 1 ? 0.75 : this.speed === 0.75 ? 0.5 : 1
@@ -379,12 +382,15 @@ export default {
           a.leftContext.localeCompare(b[`${leftOrRight}Context`], 'zh-CN')
         )
       }
+      this.updateSaved(hitGroups)
+      return hitGroups
+    },
+    updateSaved(hitGroups) {
       hitGroups['zthSaved'] = this.hits.filter(hit => this.$store.getters['savedHits/has']({
         l2: this.$l2.code,
         hit,
         terms: this.terms
       }))
-      return hitGroups
     },
     sortContextLeft(e) {
       this.hits = this.hits.sort((a, b) =>
@@ -525,6 +531,17 @@ export default {
         // escape = 27
         if (e.keyCode == 27) {
           if (this.fullscreenToggle) this.fullscreen = false
+          e.preventDefault()
+          return false
+        }
+        // escape = 27
+        if (e.code == 'KeyS') {
+          let hit = this.hits[this.hitIndex]
+          if (this.saved(hit)) {
+            this.removeSavedHit(hit)
+          } else {
+            this.saveHit(hit)
+          }
           e.preventDefault()
           return false
         }

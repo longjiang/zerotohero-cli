@@ -151,6 +151,15 @@
     </div>
 
     <div class="container">
+      <div class="row d-flex" style="flex-wrap: wrap">
+        <!-- <EntryDifficulty :entry="entry" style="flex: 1" class="m-3" /> -->
+        <EntryDisambiguation
+          v-if="['zh', 'yue'].includes($l2.code)"
+          :entry="entry"
+          class="m-3"
+          style="flex: 1; min-width: 20rem"
+        ></EntryDisambiguation>
+      </div>
       <div class="row">
         <div class="col-sm-12">
           <WebImages
@@ -223,16 +232,6 @@
             :level="entry.level"
           />
         </div>
-      </div>
-
-      <div class="row d-flex" style="flex-wrap: wrap">
-        <!-- <EntryDifficulty :entry="entry" style="flex: 1" class="m-3" /> -->
-        <EntryDisambiguation
-          v-if="['zh', 'yue'].includes($l2.code)"
-          :entry="entry"
-          class="m-3"
-          style="flex: 1; min-width: 20rem"
-        ></EntryDisambiguation>
       </div>
       <div
         class="row  mt-5"
