@@ -181,7 +181,6 @@ const savedCollocations = {
       }
     },
     REMOVE_SAVED_COLLOCATION(state, options) {
-      console.log(options)
       let CollocationToRemove = {
         term: options.term,
         line: options.line

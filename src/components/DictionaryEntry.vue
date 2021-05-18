@@ -52,7 +52,11 @@
                 >
                 <b-button
                   @click="setExtDict('ngram')"
-                  v-if="$l2.code === 'en'"
+                  v-if="
+                    ['en', 'zh', 'fr', 'de', 'he', 'it', 'ru', 'es'].includes(
+                      $l2.code
+                    )
+                  "
                   class="mr-2 btn btn-small"
                   :data-bg-level="extDict === 'ngram' ? entry.level : false"
                   >Ngram</b-button
@@ -100,7 +104,22 @@
               <div class="mb-4 pl-2 pr-2">
                 <iframe
                   v-if="extDict === 'ngram'"
-                  :src="`https://books.google.com/ngrams/graph?content=${entry.bare}&year_start=1800&year_end=2019&corpus=26&smoothing=3`"
+                  :src="`https://books.google.com/ngrams/graph?content=${
+                    entry.bare
+                  }&year_start=${
+                    $l2.code === 'zh' ? 1900 : 1800
+                  }&year_end=2019&corpus=${
+                    {
+                      en: 26,
+                      zh: 34,
+                      fr: 30,
+                      de: 31,
+                      he: 35,
+                      it: 33,
+                      ru: 36,
+                      es: 32,
+                    }[$l2.code]
+                  }&smoothing=3`"
                   class="ext-dictinoary-iframe"
                 ></iframe>
                 <iframe
@@ -182,7 +201,7 @@
             "
           />
           <div
-            :class="{'widget mt-5': true, hidden: !searchSubsReady}"
+            :class="{ 'widget mt-5': true, hidden: !searchSubsReady }"
             id="search-subs"
             v-if="entry && showSearchSubs"
             :key="`subs-search-${entry.id}`"
@@ -234,7 +253,7 @@
         </div>
       </div>
       <div
-        class="row  mt-5"
+        class="row mt-5"
         v-if="['zh', 'ja', 'ko'].includes($l2.code)"
         :key="`${entry.id}-characters`"
       >
@@ -373,7 +392,7 @@ export default {
       mistakesReady: false,
       relatedReady: false,
       concordanceReady: false,
-      searchSubsReady: false
+      searchSubsReady: false,
     }
   },
   mounted() {},

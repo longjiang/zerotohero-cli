@@ -323,7 +323,6 @@ export default {
       e.preventDefault()
     },
     goToHit(hitAB, hit) {
-      console.log(hit)
       this.hitAB = hitAB
       if (hitAB === 'A') this.$refs.searchSubsA.goToHit(hit)
       if (hitAB === 'B') this.$refs.searchSubsB.goToHit(hit)
