@@ -204,7 +204,6 @@
             :class="{ 'widget mt-5': true, hidden: !searchSubsReady }"
             id="search-subs"
             v-if="entry && showSearchSubs"
-            :key="`subs-search-${entry.id}`"
           >
             <div class="widget-title">“{{ entry.bare }}” in TV Shows</div>
             <div class="widget-body">
@@ -213,6 +212,7 @@
                 :level="
                   entry.newHSK && entry.newHSK === '7-9' ? '7-9' : entry.hsk
                 "
+                :key="`subs-search-${entry.id}`"
                 :terms="
                   $l2.code === 'zh'
                     ? entry.simplified === entry.traditional
@@ -231,6 +231,7 @@
             @mistakesReady="mistakesReady = true"
             v-if="$l2.code === 'zh'"
             :text="entry.simplified"
+            :key="`mistakes-${entry.id}`"
           ></Mistakes>
           <EntryRelated
             :class="{ 'mt-5': true, hidden: !relatedReady }"
@@ -252,14 +253,11 @@
           />
         </div>
       </div>
-      <div
-        class="row mt-5"
-        v-if="['zh', 'ja', 'ko'].includes($l2.code)"
-        :key="`${entry.id}-characters`"
-      >
+      <div class="row mt-5" v-if="['zh', 'ja', 'ko'].includes($l2.code)">
         <div class="col-sm-12" v-if="$l2.code !== 'zh'">
           <EntryCharacters
             v-if="entry.cjk && entry.cjk.canonical"
+            :key="`${entry.id}-characters`"
             class="mb-4"
             :text="entry.cjk.canonical"
             :pinyin="entry.cjk.phonetics ? entry.cjk.phonetics : undefined"
@@ -270,11 +268,13 @@
             class="mb-4 simplified"
             :text="entry.simplified"
             :pinyin="entry.pinyin"
+            :key="`${entry.id}-characters-simplified`"
           ></EntryCharacters>
           <EntryCharacters
             class="mb-4 traditional"
             :text="entry.traditional"
             :pinyin="entry.pinyin"
+            :key="`${entry.id}-characters-traditional`"
           ></EntryCharacters>
         </div>
         <div class="col-sm-6" v-if="$l2.code !== 'zh'">
@@ -287,6 +287,7 @@
             "
             class="mt-5 mb-5"
             :text="entry.cjk.canonical"
+            :key="`${entry.id}-chinese`"
           />
         </div>
         <div class="col-sm-6" v-if="$l2.code !== 'ja'">
@@ -299,6 +300,7 @@
             "
             class="mt-5 mb-5"
             :text="entry.cjk.canonical"
+            :key="`${entry.id}-japanese`"
           />
         </div>
         <div class="col-sm-6" v-if="$l2.code !== 'ko'">
@@ -311,6 +313,7 @@
             "
             class="mt-5 mb-5"
             :text="entry.cjk.canonical"
+            :key="`${entry.id}-korean`"
           />
         </div>
       </div>
@@ -319,6 +322,7 @@
       v-if="$l2.code === 'zh'"
       :entry="entry"
       class="focus-exclude"
+      :key="`${entry.id}-course-ad`"
     ></EntryCourseAd>
   </div>
 </template>
@@ -395,8 +399,6 @@ export default {
       searchSubsReady: false,
     }
   },
-  mounted() {},
-  updated() {},
   methods: {
     async nextWord() {
       if (this.entry.newHSK && this.entry.newHSK.includes('7-9')) {

@@ -10,7 +10,8 @@
     <span
       :class="{
         'word-block': true,
-        sticky: sticky,
+        'with-popup': popup,
+        sticky,
         common:
           this.words &&
           this.words.length > 0 &&
@@ -272,10 +273,12 @@ export default {
     attributes() {
       let attributes = {}
       if (this.words && this.words.length > 0) {
-        attributes['data-hover-level'] =
-          this.words[0].newHSK && this.words[0].newHSK === '7-9'
-            ? '7-9'
-            : false || this.words[0].level || 'outside'
+        if (this.popup) {
+          attributes['data-hover-level'] =
+            this.words[0].newHSK && this.words[0].newHSK === '7-9'
+              ? '7-9'
+              : false || this.words[0].level || 'outside'
+        }
         if (this.words[0].rank) attributes['data-rank'] = this.words[0].rank
         if (this.words[0].weight)
           attributes['data-weight'] = this.words[0].weight
@@ -318,7 +321,7 @@ export default {
     }
     this.update()
     this.unsubscribe = this.$store.subscribe((mutation, state) => {
-      if (mutation.type.startsWith("savedWords")){
+      if (mutation.type.startsWith('savedWords')) {
         this.update()
       }
     })
@@ -542,7 +545,7 @@ export default {
 </script>
 
 <style lang="scss">
-.word-block {
+.word-block.with-popup {
   cursor: pointer;
   &.saved {
     font-weight: bold;
