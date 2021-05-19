@@ -439,6 +439,7 @@ export default {
             hits.push({
               video: video,
               lineIndex: index,
+              id: `${video.youtube_id}#${index}`,
             })
           }
         }

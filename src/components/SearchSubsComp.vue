@@ -405,6 +405,7 @@ export default {
       return hits
     },
     saveHit(hit) {
+      console.log('saving', hit)
       this.$store.dispatch('savedHits/add', {
         terms: this.terms,
         hit: hit,
@@ -417,6 +418,7 @@ export default {
       this.findAndRemoveHit(this.groupsRight, hit)
     },
     removeSavedHit(hit) {
+      console.log('removing', hit)
       this.$store.dispatch('savedHits/remove', {
         terms: this.terms,
         hit: hit,
@@ -580,10 +582,10 @@ export default {
           let hit = this.currentHit
           this.nextHit()
           if (hit.saved) {
-            console.log('removing hits', this.terms, hit)
+            console.log('key s - removing hit', this.terms, hit)
             this.removeSavedHit(hit)
           } else {
-            console.log('removing hits', this.terms, hit)
+            console.log('key s - saving hit', this.terms, hit)
             this.saveHit(hit)
           }
           e.preventDefault()

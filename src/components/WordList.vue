@@ -9,6 +9,7 @@
             matchedWords.map((word) => word.id).includes(word.id),
         }"
         v-for="word in words"
+        :key="`word-list-word-${word.id}`"
       >
         <Star v-if="word && star === true" :word="word" class="mr-1" style="overflow: hidden; height: 1.2rem"></Star>
         <router-link

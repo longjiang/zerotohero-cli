@@ -18,6 +18,7 @@
         'search-subs': true,
         'd-none': checkingA || checkingB,
       }"
+      v-if="this.$refs.searchSubsA && this.$refs.searchSubsB"
     >
       <b-button
         class="mr-2 btn btn-small"
@@ -44,7 +45,7 @@
               'bg-dark': sort === 'left',
               'text-white': sort === 'left',
             }"
-            @click.stop="sortContextLeft"
+            @click.stop.prevent="sort = 'left'"
           >
             Sort Left</button
           ><button
@@ -54,28 +55,13 @@
               'bg-dark': sort === 'right',
               'text-white': sort === 'right',
             }"
-            @click.stop="sortContextRight"
+            @click.stop.prevent="sort = 'right'"
           >
             Sort Right
           </button></b-dropdown-item
         >
-        <template
-          v-for="group in sort === 'right' ? groupIndexRight : groupIndexLeft"
-        >
-          <div :key="`compare-subs-grouping-${sort}-${group.c}`">
-            <!--
-          <b-dropdown-text
-            :key="`comp-subs-dropdown-group-header-${c}`"
-            class="bg-dark text-white font-weight-bold"
-          >
-            <div style="display: flex">
-              <span style="flex: 1">{{ termsA[0] }}{{ c + '……' }}</span>
-              <span style="flex: 1"
-                >{{ termsB[0] }}{{ c.length > 0 ? c + '……' : 'ø' }}</span
-              >
-            </div>
-          </b-dropdown-text>
-          -->
+        <template v-for="group in groups[sort]">
+          <div v-if="group" :key="`compare-subs-grouping-${sort}-${group.c}`">
             <b-dropdown-divider
               :key="`comp-subs-grouping-${group.c}-divider`"
             />
@@ -248,47 +234,90 @@ export default {
     levelB: {
       type: String,
     },
+    keyboard: {
+      default: true
+    }
   },
   data() {
     return {
       hitAB: 'A',
-      hitIndexA: 0,
-      hitIndexB: 0,
-      hitsA: [],
-      hitsB: [],
-      groupsRight: {},
-      groupsLeft: {},
       checkingA: true,
       checkingB: true,
-      contextRight: [],
-      contextLeft: [],
-      groupIndexLeft: [],
-      groupIndexRight: [],
       Helper,
       sort: 'right',
       fullscreen: false,
     }
   },
-  mounted() {
-    this.bindKeys()
+  destroyed() {
+    if (this.keyboard) this.unbindKeys()
   },
   unmounted() {
-    this.unbindKeys()
+    if (this.keyboard) this.unbindKeys()
+  },
+  deactivated() {
+    if (this.keyboard) this.unbindKeys()
+  },
+  updated() {
+    if (this.keyboard) this.unbindKeys()
+    if (this.keyboard) this.bindKeys()
+  },
+  computed: {
+    groups() {
+      return {
+        left: this.mergeGroups({
+          A: this.$refs.searchSubsA.groupsLeft,
+          B: this.$refs.searchSubsB.groupsLeft,
+        }),
+        right: this.mergeGroups({
+          A: this.$refs.searchSubsA.groupsRight,
+          B: this.$refs.searchSubsB.groupsRight,
+        }),
+      }
+    },
   },
   watch: {
     hitAB() {
+      this.unbindKeys()
       this.bindKeys()
     },
   },
   methods: {
+    mergeGroups(groups) {
+      let merged = []
+      for (let letter of ['A', 'B']) {
+        for (let key in groups[letter]) {
+          let hits = groups[letter][key]
+          let group = merged.find((g) => g.c === key)
+          if (!group) {
+            group = {
+              c: key,
+              hits: {
+                A: [],
+                B: [],
+              },
+            }
+            merged.push(group)
+          }
+          group.hits[letter] = hits
+        }
+      }
+      merged = merged.sort((a, b) => (b.hits.A.length + b.hits.B.length) - (a.hits.A.length + a.hits.B.length))
+      let zthSavedIndex = merged.findIndex(g => g.c === 'zthSaved')
+      let zthSaved = merged[zthSavedIndex]
+      merged.splice(zthSavedIndex, 1)
+      merged = [zthSaved].concat(merged)
+      return merged
+    },
     bindKeys() {
       document.addEventListener('keydown', this.keydown)
-      this.$refs.searchSubsA.unbindKeys()
-      this.$refs.searchSubsB.unbindKeys()
+      if (this.$refs.searchSubsA) this.$refs.searchSubsA.unbindKeys()
+      if (this.$refs.searchSubsB) this.$refs.searchSubsB.unbindKeys()
       if (this.hitAB === 'A') this.$refs.searchSubsA.bindKeys()
       if (this.hitAB === 'B') this.$refs.searchSubsB.bindKeys()
     },
     unbindKeys() {
+      if (this.$refs.searchSubsA) this.$refs.searchSubsA.unbindKeys()
+      if (this.$refs.searchSubsB) this.$refs.searchSubsB.unbindKeys()
       document.removeEventListener('keydown', this.keydown)
     },
     keydown(e) {
@@ -314,14 +343,6 @@ export default {
       if (this.hitsA.length > 0 || this.hitsB.length > 0)
         this.fullscreen = !this.fullscreen
     },
-    sortContextLeft(e) {
-      this.sort = 'left'
-      e.preventDefault()
-    },
-    sortContextRight(e) {
-      this.sort = 'right'
-      e.preventDefault()
-    },
     goToHit(hitAB, hit) {
       this.hitAB = hitAB
       if (hitAB === 'A') this.$refs.searchSubsA.goToHit(hit)
@@ -331,64 +352,13 @@ export default {
         document.activeElement.blur()
       }, 100)
     },
-    collectContext() {
-      let contextLeft = this.$refs.searchSubsA.contextLeft
-        .concat(this.$refs.searchSubsB.contextLeft)
-        .map((s) => s.charAt(0))
-      this.contextLeft = Helper.unique(contextLeft).sort((a, b) =>
-        a.localeCompare(b, 'zh-CN')
-      )
-      let contextRight = this.$refs.searchSubsA.contextRight
-        .concat(this.$refs.searchSubsB.contextRight)
-        .map((s) => s.charAt(0))
-      this.contextRight = Helper.unique(contextRight).sort((a, b) =>
-        a.localeCompare(b, 'zh-CN')
-      )
-      this.groupsRight = this.groupContext(this.contextRight, 'right')
-      this.groupsLeft = this.groupContext(this.contextLeft, 'left')
-      this.groupIndexLeft = this.sortGroupIndex(this.groupsLeft)
-      this.groupIndexRight = this.sortGroupIndex(this.groupsRight)
-    },
-    sortGroupIndex(group) {
-      let index = []
-      for (let c in group) {
-        index.push({ c, hits: group[c] })
-      }
-      index = index.sort(
-        (a, b) =>
-          b.hits.A.length +
-          b.hits.B.length -
-          (a.hits.A.length + a.hits.B.length)
-      )
-      return index
-    },
-    groupContext(context, leftOrRight) {
-      let groups = {}
-      for (let ab of ['A', 'B']) {
-        for (let c of context) {
-          if (!groups[c.charAt(0)]) groups[c.charAt(0)] = {}
-          groups[c.charAt(0)][ab] = this[`hits${ab}`].filter((hit) =>
-            c.length > 0
-              ? hit[`${leftOrRight}Context`].startsWith(c)
-              : hit[`${leftOrRight}Context`] === ''
-          )
-        }
-      }
-      return groups
-    },
     searchSubsALoaded() {
       this.hitsA = this.$refs.searchSubsA.hits
       this.checkingA = false
-      if (!this.checkingA && !this.checkingB) {
-        this.collectContext()
-      }
     },
     searchSubsBLoaded() {
       this.hitsB = this.$refs.searchSubsB.hits
       this.checkingB = false
-      if (!this.checkingA && !this.checkingB) {
-        this.collectContext()
-      }
     },
   },
 }

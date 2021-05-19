@@ -57,6 +57,7 @@ export default {
           l2: this.$l2.code
         })
       }
+      this.word.saved = saved
       return saved
     },
     async saveWordClick() {
@@ -66,12 +67,14 @@ export default {
         wordForms: wordForms,
         l2: this.$l2.code
       })
+      this.word.saved = true
     },
     removeWordClick() {
       this.$store.dispatch('savedWords/remove', {
         word: this.word,
         l2: this.$l2.code
       })
+      this.word.saved = false
     }
   }
 }

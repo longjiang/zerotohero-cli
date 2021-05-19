@@ -17,18 +17,19 @@
         collapse="10"
       />
       <div v-if="words && words.length === 0">
-        Sorry, we could not find words related to “{{ entry.head }}”. You can set a
-        different corpus in
+        Sorry, we could not find words related to “{{ entry.head }}”. You can
+        set a different corpus in
         <a :href="`/${$l1.code}/${$l2.code}/settings`">Settings</a>.
       </div>
       <hr v-if="words && words.length === 0" />
       <div class="mt-4">
         {{ $t('Related words provided by') }}
-        <a
-          href="https://www.sketchengine.eu/"
-          target="_blank"
-        >
-          <img src="/img/logo-sketch-engine.png" alt="Sketch Engine" class="ml-2 logo-small" />
+        <a href="https://www.sketchengine.eu/" target="_blank">
+          <img
+            src="/img/logo-sketch-engine.png"
+            alt="Sketch Engine"
+            class="ml-2 logo-small"
+          />
         </a>
       </div>
     </div>
@@ -44,13 +45,13 @@ export default {
     return {
       Helper,
       words: undefined,
-      relatedKey: 0
+      relatedKey: 0,
     }
   },
   async mounted() {
     let response = await SketchEngine.thesaurus({
       l2: this.$l2,
-      term: this.entry.simplified || this.entry.head
+      term: this.entry.simplified || this.entry.head,
     })
     if (response && response.Words) {
       let w = []
@@ -61,15 +62,21 @@ export default {
             : [await (await this.$dictionary).lookup(Word.word)]
         if (words.length > 0 && words[0]) {
           let word = words[0]
+          word.saved = this.$store.getters['savedWords/has']({
+            id: word.id,
+            l2: this.$l2.code,
+          })
           w.push(word)
         }
       }
-      this.words = w
+      this.words = w.sort((a, b) =>
+        a.saved === b.saved ? 0 : a.saved ? -1 : 1
+      )
       if (this.words.length > 0) {
         this.$emit('relatedReady')
       }
     }
-  }
+  },
 }
 </script>
 
