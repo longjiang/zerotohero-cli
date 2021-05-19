@@ -5,9 +5,6 @@
       No hits.
     </div>
     <div class="text-center mt-2" v-if="hits.length > 0">
-      <span class="mr-2 d-inline-block" style="position: relative; bottom: 3px">
-        <strong :data-level="level">{{ terms[0] }}</strong>
-      </span>
       <button
         :disabled="hitIndex === 0"
         @click="prevHit"
@@ -21,13 +18,16 @@
       <b-button @click="rewind" class="btn btn-small"
         ><i class="fa fa-undo"
       /></b-button>
+      <span class="ml-0 btn-small mr-0" style="background: none">{{
+        groupsRight['zthSaved'].length
+      }}</span>
       <SmallStar
         :item="currentHit"
-        :saved="hit => hit.saved"
+        :saved="(hit) => hit.saved"
         :save="saveHit"
         :remove="removeSavedHit"
         style="overflow: hidden; margin-bottom: -0.2rem"
-        class="ml-1 mr-0"
+        class="ml-0 mr-0"
       />
       <span class="ml-0 btn-small mr-0" style="background: none"
         >{{ hitIndex + 1 }} of {{ hits.length }}</span
@@ -47,7 +47,7 @@
               'bg-dark': sort === 'left',
               'text-white': sort === 'left',
             }"
-            @click.stop="sort = 'left'"
+            @click.stop.prevent="sort = 'left'"
           >
             Sort Left</button
           ><button
@@ -57,7 +57,7 @@
               'bg-dark': sort === 'right',
               'text-white': sort === 'right',
             }"
-            @click.stop="sort = 'right'"
+            @click.stop.prevent="sort = 'right'"
           >
             Sort Right
           </button></b-dropdown-item
@@ -80,7 +80,7 @@
               >
                 <SmallStar
                   :item="hit"
-                  :saved="hit => hit.saved"
+                  :saved="(hit) => hit.saved"
                   :save="saveHit"
                   :remove="removeSavedHit" />
                 <img
@@ -184,8 +184,8 @@
         :hsk="level"
         :speed="speed"
         :startLineIndex="startLineIndex(hit)"
-        :autoload="Helper.iOS()"
-        :autoplay="false"
+        :autoload="Helper.iOS() || (!hit.saved && navigated)"
+        :autoplay="!hit.saved && navigated"
         :key="`youtube-with-transcript-${hit.video.youtube_id}`"
       />
     </div>
@@ -291,15 +291,24 @@ export default {
     this.collectContext(hits)
     this.$emit('loaded', hits)
     this.checking = false
-    if (this.keyboard) this.bindKeys()
   },
   activated() {
     setTimeout(() => {
       if (this.$refs.youtube) this.$refs.youtube.pause()
     }, 800)
   },
+  destroyed() {
+    if (this.keyboard) this.unbindKeys()
+  },
   unmounted() {
     if (this.keyboard) this.unbindKeys()
+  },
+  deactivated() {
+    if (this.keyboard) this.unbindKeys()
+  },
+  updated() {
+    if (this.keyboard) this.unbindKeys()
+    if (this.keyboard) this.bindKeys()
   },
   watch: {
     excludeStr() {
@@ -353,12 +362,6 @@ export default {
       this.groupIndexRight = this.sortGroupIndex(this.groupsRight)
       this.currentHit = this.hits[0]
     },
-    regroup(hits) {
-      this.groupsLeft = this.groupContext(this.contextLeft, hits, 'left')
-      this.groupsRight = this.groupContext(this.contextRight, hits, 'right')
-      this.groupIndexLeft = this.sortGroupIndex(this.groupsLeft)
-      this.groupIndexRight = this.sortGroupIndex(this.groupsRight)
-    },
     groupContext(context, hits, leftOrRight) {
       let hitGroups = {}
       let savedHits = []
@@ -392,7 +395,7 @@ export default {
       return ['zthSaved'].concat(index)
     },
     updateSaved(hits) {
-      for(let hit of hits) {
+      for (let hit of hits) {
         hit.saved = this.$store.getters['savedHits/has']({
           l2: this.$l2.code,
           hit,
@@ -408,7 +411,10 @@ export default {
         l2: this.$l2.code,
       })
       hit.saved = true
-      this.regroup(this.hits)
+      this.groupsLeft['zthSaved'].push(hit)
+      this.groupsRight['zthSaved'].push(hit)
+      this.findAndRemoveHit(this.groupsLeft, hit)
+      this.findAndRemoveHit(this.groupsRight, hit)
     },
     removeSavedHit(hit) {
       this.$store.dispatch('savedHits/remove', {
@@ -417,7 +423,29 @@ export default {
         l2: this.$l2.code,
       })
       hit.saved = false
-      this.regroup(this.hits)
+      let index = this.groupsLeft['zthSaved'].findIndex((h) => h === hit)
+      if (index !== -1) this.groupsLeft['zthSaved'].splice(index, 1)
+      index = this.groupsRight['zthSaved'].findIndex((h) => h === hit)
+      if (index !== -1) this.groupsRight['zthSaved'].splice(index, 1)
+      this.putHitBack(this.groupsLeft, hit, 'left')
+      this.putHitBack(this.groupsRight, hit, 'right')
+    },
+    findAndRemoveHit(groups, hit) {
+      for (let c in groups) {
+        if (c !== 'zthSaved') {
+          let group = groups[c]
+          let index = group.findIndex((h) => h === hit)
+          if (index !== -1) group.splice(index, 1)
+        }
+      }
+    },
+    putHitBack(groups, hit, leftOrRight) {
+      for (let c in groups) {
+        if (hit[`${leftOrRight}Context`].startsWith(c)) {
+          groups[c].push(hit)
+          break
+        }
+      }
     },
     toggleSpeed() {
       this.speed = this.speed === 1 ? 0.75 : this.speed === 0.75 ? 0.5 : 1
@@ -552,8 +580,10 @@ export default {
           let hit = this.currentHit
           this.nextHit()
           if (hit.saved) {
+            console.log('removing hits', this.terms, hit)
             this.removeSavedHit(hit)
           } else {
+            console.log('removing hits', this.terms, hit)
             this.saveHit(hit)
           }
           e.preventDefault()

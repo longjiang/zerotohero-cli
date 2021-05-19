@@ -61,14 +61,14 @@ const savedWords = {
     has: state => options => {
       if (state.savedWords[options.l2]) {
         let savedWord = false
-        if(options.id) {
+        if (options.id) {
           savedWord = state.savedWords[options.l2].find(
             item => item.id && item.id === options.id
           )
         } else {
           savedWord = state.savedWords[options.l2].find(
             item => item.forms.map(form => form ? form.toLowerCase() : '').includes(options.text.toLowerCase())
-          ) 
+          )
         }
         return savedWord
       }
@@ -109,12 +109,15 @@ const savedHits = {
         videoId: options.hit.video.id,
         lineIndex: options.hit.lineIndex
       }
+      console.log(hitToRemove)
       if (state.savedHits[options.l2]) {
         let savedHits = Object.assign({}, state.savedHits)
-        const index = savedHits[options.l2].findIndex(
-          hit => !deepEqual(hit, hitToRemove)
+        savedHits[options.l2] = savedHits[options.l2].filter(
+          hit =>
+            !(hit.terms.join(',') === hitToRemove.terms.join(',')
+              && hit.videoId === hitToRemove.videoId
+              && hit.lineIndex === hitToRemove.lineIndex)
         )
-        savedHits[options.l2].splice(index, 1)
         localStorage.setItem('zthSavedHits', JSON.stringify(savedHits))
         Vue.set(state, 'savedHits', savedHits)
       }
@@ -190,11 +193,13 @@ const savedCollocations = {
         const index = cols.findIndex(
           Collocation => Collocation.term === CollocationToRemove.term && Collocation.line === CollocationToRemove.line
         )
-        cols.splice(index, 1)
-        let savedCollocations = Object.assign({}, state.savedCollocations)
-        savedCollocations[options.l2] = cols
-        localStorage.setItem('zthSavedCollocations', JSON.stringify(savedCollocations))
-        Vue.set(state, 'savedCollocations', savedCollocations)
+        if (index !== -1) {
+          cols.splice(index, 1)
+          let savedCollocations = Object.assign({}, state.savedCollocations)
+          savedCollocations[options.l2] = cols
+          localStorage.setItem('zthSavedCollocations', JSON.stringify(savedCollocations))
+          Vue.set(state, 'savedCollocations', savedCollocations)
+        }
       }
     },
     REMOVE_ALL_SAVED_COLLOCATIONS(state, options) {
