@@ -3,7 +3,7 @@
   <div class="entry-head-wrapper" v-if="entry">
     <div>
       <div>
-        <button class="btn btn-small" v-if="entry.newHSK" @click="$emit('prevWord')">
+        <button class="btn btn-small" v-if="entry.newHSK" @click="prevWord()">
           <i class="fa fa-caret-left" />
         </button>
         <span
@@ -26,7 +26,7 @@
             >#{{ entry.newHSKMatches[0].num }}</span
           ></span
         >
-        <button class="btn btn-small" v-if="entry.newHSK" @click="$emit('nextWord')">
+        <button class="btn btn-small" v-if="entry.newHSK" @click="nextWord()">
           <i class="fa fa-caret-right" />
         </button>
       </div>
@@ -134,6 +134,37 @@ export default {
       Helper,
     }
   },
+  methods: {
+    async nextWord() {
+      if (this.entry.newHSK && this.entry.newHSK.includes('7-9')) {
+        let match = this.entry.newHSKMatches.find(
+          (match) => match.level === '7-9'
+        )
+        let newEntry = await (await this.$dictionary).getByNewHSK(
+          '7-9',
+          Math.min(Number(match.num) + 1),
+          5635
+        )
+        this.$router.push({
+          path: `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${newEntry.id}`,
+        })
+      }
+    },
+    async prevWord() {
+      if (this.entry.newHSK && this.entry.newHSK.includes('7-9')) {
+        let match = this.entry.newHSKMatches.find(
+          (match) => match.level === '7-9'
+        )
+        let newEntry = await (await this.$dictionary).getByNewHSK(
+          '7-9',
+          Math.max(0, Number(match.num) - 1)
+        )
+        this.$router.push({
+          path: `/${this.$l1.code}/${this.$l2.code}/dictionary/${this.$dictionaryName}/${newEntry.id}`,
+        })
+      }
+    }
+  }
 }
 </script>
 

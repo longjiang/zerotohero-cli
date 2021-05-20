@@ -163,15 +163,28 @@ export default {
         }
         // n = 78
         if (e.keyCode == 78) {
-          this.$refs.dictionaryEntry.nextWord()
+          this.$refs.dictionaryEntry.$refs.entryHeader.nextWord()
           document.getElementById('main').scrollIntoView({ behavior: 'smooth' })
           e.preventDefault()
           return false
         }
         // p = 80
         if (e.keyCode == 80) {
-          this.$refs.dictionaryEntry.prevWord()
+          this.$refs.dictionaryEntry.$refs.entryHeader.prevWord()
           document.getElementById('main').scrollIntoView({ behavior: 'smooth' })
+          e.preventDefault()
+          return false
+        }
+        // escape = 27
+        if (e.code == 'KeyS') {
+          let hit = this.$refs.dictionaryEntry.$refs.searchSubs.currentHit
+          if (hit.saved) {
+            console.log('key s - removing hit', this.$refs.dictionaryEntry.$refs.searchSubs.terms, hit)
+            this.$refs.dictionaryEntry.$refs.searchSubs.removeSavedHit(hit)
+          } else {
+            console.log('key s - saving hit', this.$refs.dictionaryEntry.$refs.searchSubs.terms, hit)
+            this.$refs.dictionaryEntry.$refs.searchSubs.saveHit(hit)
+          }
           e.preventDefault()
           return false
         }

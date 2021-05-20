@@ -16,6 +16,8 @@
             :entry="a"
             class="text-center"
             :key="`${a.id}-header`"
+            @prevWord="prevWord()"
+            @nextWord="nextWord()"
           ></EntryHeader>
         </div>
         <div class="col-6">

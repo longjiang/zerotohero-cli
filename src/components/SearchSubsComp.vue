@@ -412,6 +412,7 @@ export default {
         l2: this.$l2.code,
       })
       hit.saved = true
+      if (this.currentHit === hit) this.nextHit()
       this.groupsLeft['zthSaved'].push(hit)
       this.groupsRight['zthSaved'].push(hit)
       this.findAndRemoveHit(this.groupsLeft, hit)
@@ -425,6 +426,7 @@ export default {
         l2: this.$l2.code,
       })
       hit.saved = false
+      if (this.currentHit === hit) this.nextHit()
       let index = this.groupsLeft['zthSaved'].findIndex((h) => h === hit)
       if (index !== -1) this.groupsLeft['zthSaved'].splice(index, 1)
       index = this.groupsRight['zthSaved'].findIndex((h) => h === hit)
@@ -574,20 +576,6 @@ export default {
         // escape = 27
         if (e.keyCode == 27) {
           if (this.fullscreenToggle) this.fullscreen = false
-          e.preventDefault()
-          return false
-        }
-        // escape = 27
-        if (e.code == 'KeyS') {
-          let hit = this.currentHit
-          this.nextHit()
-          if (hit.saved) {
-            console.log('key s - removing hit', this.terms, hit)
-            this.removeSavedHit(hit)
-          } else {
-            console.log('key s - saving hit', this.terms, hit)
-            this.saveHit(hit)
-          }
           e.preventDefault()
           return false
         }
